@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SETUP_SITE>
+	<SETUPSITE>
+		<LINK_NAME>Bakım Sonucu Ekleme - Güncelleme - Listeleme</LINK_NAME> 
+		<LINK_FILE>assetcare.form_add_asset_care,assetcare.popup_add_asset_care,assetcare.form_upd_asset_care,assetcare.list_asset_care</LINK_FILE> 
+		<LINK_DETAIL>Bakım Sonucu Ayarlarının Tanımlanması</LINK_DETAIL>
+	</SETUPSITE>		
+	<SETUPSITE>
+		<LINK_NAME>Ceza Ekleme - Güncelleme</LINK_NAME> 
+		<LINK_FILE>assetcare.form_add_punishment</LINK_FILE> 
+		<LINK_DETAIL>Ceza Ayarlarının Tanımlanması</LINK_DETAIL>
+	</SETUPSITE>		
+	<SETUPSITE>
+		<LINK_NAME>Fiziki Varlıkda boyut</LINK_NAME> 
+        <LINK_FILE>assetcare.form_add_assetp,assetcare.form_upd_assetp</LINK_FILE> 
+		<LINK_DETAIL>Fiziki Varlıklarda Boyut</LINK_DETAIL>
+	</SETUPSITE>	
+	<SETUPSITE>
+		<LINK_NAME>Fiziki Varlıklarda Bileşenler</LINK_NAME> 
+		<LINK_FILE>assetcare.popup_list_assetps</LINK_FILE> 
+		<LINK_DETAIL>Fiziki Varlık Popup'ında Bileşen Seçilebilsin</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>İstasyon Bilgisi Ekleme - Güncelleme</LINK_NAME> 
+		<LINK_FILE>assetcare.form_add_care_period,assetcare.form_upd_care_period,assetcare.list_assetp_period</LINK_FILE> 
+		<LINK_DETAIL>Fiziki Varlık İstasyon</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Araç Ekleme</LINK_NAME> 
+		<LINK_FILE>assetcare.form_add_assetp_vehicle</LINK_FILE> 
+		<LINK_DETAIL>Araçlarda Boyut</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Araç Bilgisi</LINK_NAME> 
+		<LINK_FILE>assetcare.vehicle_detail</LINK_FILE> 
+		<LINK_DETAIL>Araçlar Nakliye,Kullanım,Harcamanlar Tanımlanması</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>IT Varlık Ekleme</LINK_NAME> 
+		<LINK_FILE>assetcare.form_add_assetp_it</LINK_FILE> 
+		<LINK_DETAIL>IT Varlık Ekleme</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>KM Arama</LINK_NAME> 
+		<LINK_FILE>assetcare.form_search_km</LINK_FILE> 
+		<LINK_DETAIL>Kullanıcm Amacı,İş Grubu Tanımlanması</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Arıza Bildirimi</LINK_NAME> 
+		<LINK_FILE>assetcare.form_add_asset_failure</LINK_FILE> 
+		<LINK_DETAIL>Arıza Bildirimi</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Fiziki Varlık Listesi</LINK_NAME> 
+		<LINK_FILE>assetcare.list_assetp</LINK_FILE> 
+		<LINK_DETAIL>Fiziki Varlık Listesi</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Sayım Raporu</LINK_NAME> 
+		<LINK_FILE>assetcare.asset_counting_report</LINK_FILE> 
+		<LINK_DETAIL>Sayım Listesi</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Rezerve Saatler</LINK_NAME> 
+		<LINK_FILE>assetcare.assetp_reserve_clock</LINK_FILE> 
+		<LINK_DETAIL>Rezerve Saatler</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Günlük Bakım Planı</LINK_NAME> 
+		<LINK_FILE>assetcare.dsp_care_calender</LINK_FILE> 
+		<LINK_DETAIL>Günlük Bakım Planı</LINK_DETAIL>
+	</SETUPSITE>	
+</SETUP_SITE>

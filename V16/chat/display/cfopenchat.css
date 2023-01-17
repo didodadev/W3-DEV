@@ -1,0 +1,73 @@
+
+#cfopenchat td {
+	vertical-align: top;
+}
+#cfopenchat div.chatWindow {
+	font-family: Verdana, Trebuchet MS, Arial, Helvetica;
+	font-size: 11px;
+	border: solid thin #CCCCFF;
+	background-color: white;
+	overflow:auto;
+	display:block;
+	width:97%;
+	padding: 2px;
+}
+#cfopenchat div.roomUsers {
+	font-family: Trebuchet MS, Arial, Helvetica;
+	font-size: 11px;
+	border: solid thin #CCCCFF;
+	background-color: white;
+	overflow:auto;
+	width:97%;
+	padding: 0px;
+}
+#cfopenchat div.divUsersTitle {
+	background-color: navy;
+	color: white;
+	font-weight: bold;
+	padding: 2px;
+}
+#cfopenchat div.room_user {
+	padding: 2px;
+}
+#cfopenchat .chat_action {
+	font-weight: bold;
+}
+#cfopenchat .chat_join {
+	font-weight: bold;
+	color: navy;
+}
+#cfopenchat .chat_leave {
+	font-weight: bold;
+	color: navy;
+}
+#cfopenchat .chat_username {
+	font-weight: bold;
+}
+#cfopenchat div.roomUsersTitle {
+	font-weight: bold;
+	color: navy;
+	background-color: #cdd9de;
+	font-size: 1.1em;
+	padding-left: 2px;
+}
+#cfopenchat div.roomUser {
+	padding-left: 2px;
+	border-bottom: 1px solid #666666;
+}
+#cfopenchat span.privmsg {
+	background-color: #cccccc;
+	font-weight: bold;
+	display: block;
+	color: navy;
+	
+}
+#cfopenchat div.statusbar {
+	border-top: 1px solid #cccccc;
+	border-left: 1px solid #cccccc;
+	border-right: 1px solid #cccccc;
+	font-style: italic;
+	color: #666666;
+	font-size: 11px;
+	font-weight: normal;
+}

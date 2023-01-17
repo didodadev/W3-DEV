@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<SETUP_SITE>
+	<SETUPSITE>
+		<LINK_NAME>Dijital Varlık XML Setup</LINK_NAME>
+		<LINK_FILE>asset.form_add_asset</LINK_FILE>
+		<LINK_DETAIL>Dijital Varlık Gösterim Detayı</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Dijital Varlık Listesi XML Setup</LINK_NAME>
+		<LINK_FILE>asset.list_asset</LINK_FILE>
+		<LINK_DETAIL>Dijital Varlık Listesi</LINK_DETAIL>
+	</SETUPSITE>
+</SETUP_SITE>

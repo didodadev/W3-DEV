@@ -1,0 +1,4 @@
+INSERT INTO [SETUP_SCENARIO]([SCENARIO],[SCENARIO_DETAIL]) Values( 'İyimser','İyimser bir ortamda gerçekleşecek işlemler.');
+INSERT INTO [SETUP_SCENARIO]([SCENARIO],[SCENARIO_DETAIL]) Values( 'Kötümser','Kötümser ortamda gerçekleşecek işlemler.');
+INSERT INTO [SETUP_SCENARIO]([SCENARIO],[SCENARIO_DETAIL]) Values( 'Her Durumda','Her durumda ödenmesi gereken veya tahsil edilecek olan işlemler.');
+

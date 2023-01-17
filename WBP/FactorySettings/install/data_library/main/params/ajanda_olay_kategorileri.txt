@@ -1,0 +1,5 @@
+INSERT INTO [EVENT_CAT]([EVENTCAT],[COLOUR],[IS_VIP],[IS_RD_SSK]) Values( 'Toplantı','#ff99ff','0','0');
+INSERT INTO [EVENT_CAT]([EVENTCAT],[COLOUR],[IS_VIP],[IS_RD_SSK]) Values( 'Kişisel','#ffcc00','1','0');
+INSERT INTO [EVENT_CAT]([EVENTCAT],[COLOUR],[IS_VIP],[IS_RD_SSK]) Values( 'Seminer','#996666','0','0');
+INSERT INTO [EVENT_CAT]([EVENTCAT],[COLOUR],[IS_VIP],[IS_RD_SSK]) Values( 'Eğitim','#ffff00','0','0');
+INSERT INTO [EVENT_CAT]([EVENTCAT],[COLOUR],[IS_VIP],[IS_RD_SSK]) Values( 'Fuar-Etkinlik','#ff6666','0','0');

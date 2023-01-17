@@ -1,0 +1,17 @@
+<!-- Description : iş no için belge numarası GENERAL_PAPERS_MAIN tablosuna eklendi.
+Developer: Ceren Sarıaydın
+Company : Workcube
+Destination: Main -->
+<querytag>
+    IF NOT EXISTS (SELECT 'Y' FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME = 'GENERAL_PAPERS_MAIN' AND COLUMN_NAME = 'WORK_NO')
+    BEGIN
+        ALTER TABLE GENERAL_PAPERS_MAIN ADD 
+		WORK_NO nvarchar(40) NULL
+    END;
+
+    IF NOT EXISTS (SELECT 'Y' FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME = 'GENERAL_PAPERS_MAIN' AND COLUMN_NAME = 'WORK_NUMBER')
+    BEGIN
+        ALTER TABLE GENERAL_PAPERS_MAIN ADD 
+		WORK_NUMBER int NULL
+    END;
+</querytag>

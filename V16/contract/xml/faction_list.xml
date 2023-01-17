@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SETUP_SITE>
+	<SETUPSITE>
+		<LINK_NAME>Sözleşme XML Setup</LINK_NAME> 
+		<LINK_FILE>contract.popup_add_contract</LINK_FILE> 
+		<LINK_DETAIL>Sözleşme ekleme ve detay sayfalarının düzenlenmesi.</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Risk Bilgileri XML Setup</LINK_NAME> 
+		<LINK_FILE>contract.detail_contract_company</LINK_FILE> 
+		<LINK_DETAIL>Risk Bilgileri sayfalarının düzenlenmesi.</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Hakediş Ekleme XML Setup</LINK_NAME> 
+		<LINK_FILE>contract.add_progress_payment</LINK_FILE> 
+		<LINK_DETAIL>Hakediş eklerken gerekli XML parametreleri.</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Hakediş Listeleme XML Setup</LINK_NAME> 
+		<LINK_FILE>contract.list_progress</LINK_FILE> 
+		<LINK_DETAIL>Hakediş listelerken XML parametreleri.</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Hakediş Detay XML Setup</LINK_NAME> 
+		<LINK_FILE>contract.detail_progress</LINK_FILE> 
+		<LINK_DETAIL>Hakediş Detay XML parametreleri.</LINK_DETAIL>
+	</SETUPSITE>
+</SETUP_SITE>

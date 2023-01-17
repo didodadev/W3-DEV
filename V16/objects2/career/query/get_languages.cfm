@@ -1,0 +1,3 @@
+<cfquery name="GET_LANGUAGES" datasource="#DSN#">
+	SELECT LANGUAGE_ID,LANGUAGE_SET FROM SETUP_LANGUAGES
+</cfquery>

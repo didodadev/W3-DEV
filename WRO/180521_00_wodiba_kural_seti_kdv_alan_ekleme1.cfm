@@ -1,0 +1,15 @@
+<!-- Description : Wodiba kural seti tablosuna KDV alanları eklendi1.
+Developer: Mahmut Çifçi
+Company : Gramoni
+Destination: Main -->
+<querytag>
+  IF NOT EXISTS (SELECT 'Y' FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_SCHEMA = '@_dsn_main_@' AND TABLE_NAME = 'WODIBA_RULE_SET_ROWS' AND COLUMN_NAME = 'TAX')
+  BEGIN
+      ALTER TABLE WODIBA_RULE_SET_ROWS ADD TAX int NULL;
+  END;
+
+IF NOT EXISTS (SELECT 'Y' FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_SCHEMA = '@_dsn_main_@' AND TABLE_NAME = 'WODIBA_RULE_SET_ROWS' AND COLUMN_NAME = 'TAX_INCLUDE')
+  BEGIN
+      ALTER TABLE WODIBA_RULE_SET_ROWS ADD TAX_INCLUDE bit NULL;
+  END;
+</querytag>

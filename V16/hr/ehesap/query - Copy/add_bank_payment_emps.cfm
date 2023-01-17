@@ -1,0 +1,442 @@
+<!--- Maas Dosya Exportlari standart olarak bankalar tarafindan verilmektedir 
+workcube de 
+1- Yapı kredi
+2- Teb
+3- İs bank
+4- Denizbank
+5- Akbank
+6- HSCB
+7- Garanti
+8- VakıfBank
+9- HSCB2
+10- 
+11 - ING Bank
+--->
+<cfif len(attributes.pay_date)>
+	<cf_date tarih='attributes.pay_date'>
+</cfif>
+
+<cfif len(attributes.avans_startdate)>
+	<cf_date tarih='attributes.avans_startdate'>
+</cfif>
+
+<cfif len(attributes.avans_finishdate)>
+	<cf_date tarih='attributes.avans_finishdate'>
+</cfif>
+
+<cfset bu_ay_basi = createdate(attributes.pay_year,attributes.pay_mon, 1)>
+<cfset bu_ay_sonu = date_add('s',-1,date_add('m',1,bu_ay_basi))>
+
+<cfif isdefined("attributes.related_company") or len(attributes.branch_id)>
+	<cfquery name="get_offices" datasource="#dsn#">
+		SELECT 
+			BRANCH_ID,
+			COMPANY_ID
+		FROM 
+			BRANCH 
+		WHERE 
+			BRANCH_ID IS NOT NULL
+			<cfif isdefined("attributes.related_company")> AND RELATED_COMPANY IN ('#replace(attributes.related_company,",","','","all")#')</cfif>
+			<cfif len(attributes.branch_id)> AND BRANCH_ID = #attributes.branch_id#</cfif>
+	</cfquery>
+	<cfset branch_list = valuelist(get_offices.branch_id)>
+<cfelseif len(attributes.our_company_id)>
+	<cfquery name="get_offices" datasource="#dsn#">
+		SELECT 
+			BRANCH_ID,
+			COMPANY_ID
+		FROM 
+			BRANCH 
+		WHERE 
+			BRANCH_ID IS NOT NULL
+			AND COMPANY_ID = #attributes.our_company_id#
+	</cfquery>
+	<cfset branch_list = valuelist(get_offices.branch_id)>
+</cfif>
+<cfset comp_list = listsort(listdeleteduplicates(valuelist(get_offices.COMPANY_ID,',')),'numeric','ASC',',')>
+
+<cfif listlen(comp_list) gt 1 or listlen(comp_list) lt 1>
+	<script type="text/javascript">
+		alert('İlgili Şirket Birden Fazla Ana Şirketle Eşleşemez!');
+		history.back();
+	</script>
+	<cfabort>
+</cfif>
+
+<cfif attributes.firm_code eq 0>
+	<cfquery name="get_comp" datasource="#dsn#">
+		SELECT 
+			OBR.RELATION_NUMBER,
+			OBR.BANK_BRANCH_CODE,
+			OBR.BANK_ACCOUNT_CODE,
+			OBR.IBAN_NO,
+			SBT.BANK_CODE,
+			O.NICK_NAME
+		FROM 
+			OUR_COMPANY_BANK_RELATION OBR,
+			OUR_COMPANY O,
+			SETUP_BANK_TYPES SBT
+		WHERE 
+			OBR.OUR_COMPANY_ID = O.COMP_ID AND
+			OBR.OUR_COMPANY_ID IN (#comp_list#) AND 
+			OBR.BANK_ID = #listfirst(attributes.bank_id,';')# AND 
+			OBR.BANK_ID = SBT.BANK_ID AND
+			OBR.RELATION_NUMBER IS NOT NULL
+	</cfquery>
+<cfelse>
+	<cfquery name="get_comp" datasource="#dsn#">
+		SELECT 
+			OBR.RELATION_NUMBER,
+			OBR.BANK_BRANCH_CODE,
+			OBR.BANK_ACCOUNT_CODE,
+			OBR.IBAN_NO,
+			SBT.BANK_CODE,
+			B.BRANCH_NAME AS NICK_NAME
+		FROM 
+			OUR_COMPANY_BANK_RELATION OBR,
+			BRANCH B,
+			SETUP_BANK_TYPES SBT
+		WHERE 
+			OBR.BRANCH_ID = B.BRANCH_ID AND
+			B.BRANCH_ID = #attributes.branch_id# AND
+			OBR.BANK_ID = #listfirst(attributes.bank_id,';')# AND 
+			OBR.BANK_ID = SBT.BANK_ID AND 
+			OBR.RELATION_NUMBER IS NOT NULL
+	</cfquery>
+</cfif>
+
+<cfif not get_comp.recordcount>
+	<script type="text/javascript">
+		alert('Seçili Şirket ile Banka İlişkisi Kurulmamış! Firma Kodu Tanımlayınız!');
+		history.back();
+	</script>
+	<cfabort>
+</cfif>
+
+<cfset this_export_type_ = listlast(attributes.bank_id,';')>
+
+<cfif attributes.payment_type eq 1>
+	<cfquery name="get_puantajs" datasource="#dsn#">
+		SELECT
+			EMPLOYEES.EMPLOYEE_ID,
+			ISNULL(EMPLOYEES_BANK_ACCOUNTS.NAME,EMPLOYEES.EMPLOYEE_NAME) AS EMPLOYEE_NAME,
+			ISNULL(EMPLOYEES_BANK_ACCOUNTS.SURNAME,EMPLOYEES.EMPLOYEE_SURNAME) AS EMPLOYEE_SURNAME,
+            EMPLOYEES_BANK_ACCOUNTS.JOIN_ACCOUNT_NAME,
+            EMPLOYEES_BANK_ACCOUNTS.JOIN_ACCOUNT_SURNAME,
+			EMPLOYEES.EMPLOYEE_NO,
+			EMPLOYEES_BANK_ACCOUNTS.BANK_ACCOUNT_NO,
+			EMPLOYEES_BANK_ACCOUNTS.BANK_BRANCH_CODE,
+			EMPLOYEES_BANK_ACCOUNTS.IBAN_NO,
+			ISNULL(EMPLOYEES_BANK_ACCOUNTS.TC_IDENTY_NO,EMPLOYEES_IDENTY.TC_IDENTY_NO) AS TC_IDENTY_NO,
+			SBT.BANK_CODE,
+			SUM(EMPLOYEES_PUANTAJ_ROWS.NET_UCRET) NET_UCRET
+		FROM 
+			EMPLOYEES_BANK_ACCOUNTS,
+			EMPLOYEES,
+			EMPLOYEES_IN_OUT,
+			EMPLOYEES_IDENTY,
+			EMPLOYEES_PUANTAJ,
+			EMPLOYEES_PUANTAJ_ROWS,
+			SETUP_BANK_TYPES SBT,
+			BRANCH
+		WHERE
+			EMPLOYEES_IN_OUT.SABIT_PRIM = 0 AND 
+			EMPLOYEES_PUANTAJ_ROWS.PUANTAJ_ID = EMPLOYEES_PUANTAJ.PUANTAJ_ID AND 
+			EMPLOYEES.EMPLOYEE_ID = EMPLOYEES_BANK_ACCOUNTS.EMPLOYEE_ID AND 
+			EMPLOYEES.EMPLOYEE_ID = EMPLOYEES_IN_OUT.EMPLOYEE_ID AND 
+			EMPLOYEES.EMPLOYEE_ID = EMPLOYEES_IDENTY.EMPLOYEE_ID AND 
+			EMPLOYEES_IN_OUT.IN_OUT_ID = EMPLOYEES_PUANTAJ_ROWS.IN_OUT_ID AND 
+			EMPLOYEES_PUANTAJ.SAL_YEAR = #ATTRIBUTES.PAY_YEAR# AND 
+			EMPLOYEES_PUANTAJ.SAL_MON = #ATTRIBUTES.PAY_MON# AND 
+			EMPLOYEES_PUANTAJ.SSK_OFFICE = BRANCH.SSK_OFFICE AND 
+			EMPLOYEES_PUANTAJ.SSK_OFFICE_NO = BRANCH.SSK_NO AND 
+			EMPLOYEES_IN_OUT.BRANCH_ID = BRANCH.BRANCH_ID AND
+			EMPLOYEES_IN_OUT.START_DATE <= #bu_ay_sonu# AND 
+			( EMPLOYEES_IN_OUT.FINISH_DATE >= #bu_ay_basi# OR EMPLOYEES_IN_OUT.FINISH_DATE IS NULL ) AND
+			<cfif listlen(branch_list)>BRANCH.BRANCH_ID IN (#branch_list#) AND </cfif> 
+			EMPLOYEES_BANK_ACCOUNTS.BANK_ID = SBT.BANK_ID AND
+			EMPLOYEES_BANK_ACCOUNTS.BANK_ID = #listfirst(attributes.bank_id,';')# AND
+			EMPLOYEES_BANK_ACCOUNTS.DEFAULT_ACCOUNT = 1 AND
+			EMPLOYEES_BANK_ACCOUNTS.MONEY = 'TL' AND
+			EMPLOYEES_PUANTAJ_ROWS.NET_UCRET > 0
+		GROUP BY
+			EMPLOYEES.EMPLOYEE_ID,
+			ISNULL(EMPLOYEES_BANK_ACCOUNTS.NAME,EMPLOYEES.EMPLOYEE_NAME),
+			ISNULL(EMPLOYEES_BANK_ACCOUNTS.SURNAME,EMPLOYEES.EMPLOYEE_SURNAME),
+            EMPLOYEES_BANK_ACCOUNTS.JOIN_ACCOUNT_NAME,
+            EMPLOYEES_BANK_ACCOUNTS.JOIN_ACCOUNT_SURNAME,
+			EMPLOYEES.EMPLOYEE_NO,
+			EMPLOYEES_BANK_ACCOUNTS.BANK_ACCOUNT_NO,
+			EMPLOYEES_BANK_ACCOUNTS.BANK_BRANCH_CODE,
+			EMPLOYEES_BANK_ACCOUNTS.IBAN_NO,
+			ISNULL(EMPLOYEES_BANK_ACCOUNTS.TC_IDENTY_NO,EMPLOYEES_IDENTY.TC_IDENTY_NO),
+			SBT.BANK_CODE
+		ORDER BY 
+			ISNULL(EMPLOYEES_BANK_ACCOUNTS.NAME,EMPLOYEES.EMPLOYEE_NAME),
+			ISNULL(EMPLOYEES_BANK_ACCOUNTS.SURNAME,EMPLOYEES.EMPLOYEE_SURNAME)
+	</cfquery>
+<cfelseif attributes.payment_type eq 2>
+	<cfquery name="get_puantajs" datasource="#dsn#">
+		SELECT
+			EMPLOYEES.EMPLOYEE_ID,
+			ISNULL(EMPLOYEES_BANK_ACCOUNTS.NAME,EMPLOYEES.EMPLOYEE_NAME) AS EMPLOYEE_NAME,
+			ISNULL(EMPLOYEES_BANK_ACCOUNTS.SURNAME,EMPLOYEES.EMPLOYEE_SURNAME) AS EMPLOYEE_SURNAME,
+            EMPLOYEES_BANK_ACCOUNTS.NAME,
+            EMPLOYEES_BANK_ACCOUNTS.SURNAME,
+			EMPLOYEES.EMPLOYEE_NO,
+			EMPLOYEES_BANK_ACCOUNTS.BANK_ACCOUNT_NO,
+			EMPLOYEES_BANK_ACCOUNTS.BANK_BRANCH_CODE,
+			EMPLOYEES_BANK_ACCOUNTS.IBAN_NO,
+            ISNULL(EMPLOYEES_BANK_ACCOUNTS.TC_IDENTY_NO,EMPLOYEES_IDENTY.TC_IDENTY_NO) AS TC_IDENTY_NO,
+			SBT.BANK_CODE,
+			SUM(CORRESPONDENCE_PAYMENT.AMOUNT) NET_UCRET
+		FROM 
+			EMPLOYEES_BANK_ACCOUNTS,
+			EMPLOYEES,
+			EMPLOYEES_IN_OUT,
+			EMPLOYEES_IDENTY,
+			CORRESPONDENCE_PAYMENT,
+			SETUP_BANK_TYPES SBT,
+			BRANCH
+		WHERE			
+			EMPLOYEES.EMPLOYEE_ID = EMPLOYEES_BANK_ACCOUNTS.EMPLOYEE_ID AND 
+			EMPLOYEES.EMPLOYEE_ID = EMPLOYEES_IN_OUT.EMPLOYEE_ID AND 
+			EMPLOYEES.EMPLOYEE_ID = EMPLOYEES_IDENTY.EMPLOYEE_ID AND 
+			CORRESPONDENCE_PAYMENT.STATUS = 1 AND 
+			CORRESPONDENCE_PAYMENT.TO_EMPLOYEE_ID = EMPLOYEES_IN_OUT.EMPLOYEE_ID AND 
+			<cfif len(attributes.avans_startdate) and len(attributes.avans_finishdate)>
+			CORRESPONDENCE_PAYMENT.DUEDATE BETWEEN #attributes.avans_startdate# AND #attributes.avans_finishdate# AND
+			<cfelse>
+			CORRESPONDENCE_PAYMENT.DUEDATE BETWEEN #bu_ay_basi# AND #bu_ay_sonu# AND
+			</cfif>
+			EMPLOYEES_IN_OUT.BRANCH_ID = BRANCH.BRANCH_ID AND
+			EMPLOYEES_IN_OUT.START_DATE <= #bu_ay_sonu# AND 
+			( EMPLOYEES_IN_OUT.FINISH_DATE >= #bu_ay_basi# OR EMPLOYEES_IN_OUT.FINISH_DATE IS NULL ) AND
+			<cfif listlen(branch_list)>BRANCH.BRANCH_ID IN (#branch_list#) AND </cfif> 
+			EMPLOYEES_BANK_ACCOUNTS.BANK_ID = SBT.BANK_ID AND
+			EMPLOYEES_BANK_ACCOUNTS.BANK_ID = #listfirst(attributes.bank_id,';')# AND
+			EMPLOYEES_BANK_ACCOUNTS.DEFAULT_ACCOUNT = 1 AND
+			EMPLOYEES_BANK_ACCOUNTS.MONEY = 'TL'
+		GROUP BY
+			EMPLOYEES.EMPLOYEE_ID,
+			ISNULL(EMPLOYEES_BANK_ACCOUNTS.NAME,EMPLOYEES.EMPLOYEE_NAME),
+			ISNULL(EMPLOYEES_BANK_ACCOUNTS.SURNAME,EMPLOYEES.EMPLOYEE_SURNAME),
+            NAME,
+            SURNAME,
+			EMPLOYEES.EMPLOYEE_NO,
+			EMPLOYEES_BANK_ACCOUNTS.BANK_ACCOUNT_NO,
+			EMPLOYEES_BANK_ACCOUNTS.BANK_BRANCH_CODE,
+			EMPLOYEES_BANK_ACCOUNTS.IBAN_NO,
+			ISNULL(EMPLOYEES_BANK_ACCOUNTS.TC_IDENTY_NO,EMPLOYEES_IDENTY.TC_IDENTY_NO),
+			SBT.BANK_CODE
+		ORDER BY 
+			ISNULL(EMPLOYEES_BANK_ACCOUNTS.NAME,EMPLOYEES.EMPLOYEE_NAME),
+			ISNULL(EMPLOYEES_BANK_ACCOUNTS.SURNAME,EMPLOYEES.EMPLOYEE_SURNAME)
+	</cfquery>
+<cfelseif attributes.payment_type eq 3>
+	<cfquery name="get_puantajs" datasource="#dsn#">
+		SELECT
+			EMPLOYEES.EMPLOYEE_ID,
+			ISNULL(EMPLOYEES_BANK_ACCOUNTS.NAME,EMPLOYEES.EMPLOYEE_NAME) AS EMPLOYEE_NAME,
+			ISNULL(EMPLOYEES_BANK_ACCOUNTS.SURNAME,EMPLOYEES.EMPLOYEE_SURNAME) AS EMPLOYEE_SURNAME,
+            EMPLOYEES_BANK_ACCOUNTS.JOIN_ACCOUNT_NAME,
+            EMPLOYEES_BANK_ACCOUNTS.JOIN_ACCOUNT_SURNAME,
+			EMPLOYEES.EMPLOYEE_NO,
+			EMPLOYEES_BANK_ACCOUNTS.BANK_ACCOUNT_NO,
+			EMPLOYEES_BANK_ACCOUNTS.BANK_BRANCH_CODE,
+			EMPLOYEES_BANK_ACCOUNTS.IBAN_NO,
+			ISNULL(EMPLOYEES_BANK_ACCOUNTS.TC_IDENTY_NO,EMPLOYEES_IDENTY.TC_IDENTY_NO) AS TC_IDENTY_NO,
+			SBT.BANK_CODE,
+			SUM(EMPLOYEES_PUANTAJ_ROWS.NET_UCRET) NET_UCRET
+		FROM 
+			EMPLOYEES_BANK_ACCOUNTS,
+			EMPLOYEES,
+			EMPLOYEES_IN_OUT,
+			EMPLOYEES_IDENTY,
+			EMPLOYEES_PUANTAJ,
+			EMPLOYEES_PUANTAJ_ROWS,
+			SETUP_BANK_TYPES SBT,
+			BRANCH
+		WHERE
+			EMPLOYEES_IN_OUT.SABIT_PRIM = 1 AND 
+			EMPLOYEES_PUANTAJ_ROWS.PUANTAJ_ID = EMPLOYEES_PUANTAJ.PUANTAJ_ID AND 
+			EMPLOYEES.EMPLOYEE_ID = EMPLOYEES_BANK_ACCOUNTS.EMPLOYEE_ID AND 
+			EMPLOYEES.EMPLOYEE_ID = EMPLOYEES_IN_OUT.EMPLOYEE_ID AND 
+			EMPLOYEES.EMPLOYEE_ID = EMPLOYEES_IDENTY.EMPLOYEE_ID AND 
+			EMPLOYEES_IN_OUT.IN_OUT_ID = EMPLOYEES_PUANTAJ_ROWS.IN_OUT_ID AND
+			EMPLOYEES_PUANTAJ.SAL_YEAR = #ATTRIBUTES.PAY_YEAR# AND 
+			EMPLOYEES_PUANTAJ.SAL_MON = #ATTRIBUTES.PAY_MON# AND 
+			EMPLOYEES_PUANTAJ.SSK_OFFICE = BRANCH.SSK_OFFICE AND 
+			EMPLOYEES_PUANTAJ.SSK_OFFICE_NO = BRANCH.SSK_NO AND 
+			EMPLOYEES_IN_OUT.BRANCH_ID = BRANCH.BRANCH_ID AND
+			EMPLOYEES_IN_OUT.START_DATE <= #bu_ay_sonu# AND 
+			( EMPLOYEES_IN_OUT.FINISH_DATE >= #bu_ay_basi# OR EMPLOYEES_IN_OUT.FINISH_DATE IS NULL ) AND
+			<cfif listlen(branch_list)>BRANCH.BRANCH_ID IN (#branch_list#) AND </cfif> 
+			EMPLOYEES_BANK_ACCOUNTS.BANK_ID = SBT.BANK_ID AND
+			EMPLOYEES_BANK_ACCOUNTS.BANK_ID = #listfirst(attributes.bank_id,';')# AND
+			EMPLOYEES_BANK_ACCOUNTS.DEFAULT_ACCOUNT = 1 AND
+			EMPLOYEES_BANK_ACCOUNTS.MONEY = 'TL' AND
+			EMPLOYEES_PUANTAJ_ROWS.NET_UCRET > 0
+		GROUP BY
+			EMPLOYEES.EMPLOYEE_ID,
+			ISNULL(EMPLOYEES_BANK_ACCOUNTS.NAME,EMPLOYEES.EMPLOYEE_NAME),
+			ISNULL(EMPLOYEES_BANK_ACCOUNTS.SURNAME,EMPLOYEES.EMPLOYEE_SURNAME),
+            EMPLOYEES_BANK_ACCOUNTS.JOIN_ACCOUNT_NAME,
+            EMPLOYEES_BANK_ACCOUNTS.JOIN_ACCOUNT_SURNAME,
+			EMPLOYEES.EMPLOYEE_NO,
+			EMPLOYEES_BANK_ACCOUNTS.BANK_ACCOUNT_NO,
+			EMPLOYEES_BANK_ACCOUNTS.BANK_BRANCH_CODE,
+			EMPLOYEES_BANK_ACCOUNTS.IBAN_NO,
+			ISNULL(EMPLOYEES_BANK_ACCOUNTS.TC_IDENTY_NO,EMPLOYEES_IDENTY.TC_IDENTY_NO),
+			SBT.BANK_CODE
+		ORDER BY 
+			ISNULL(EMPLOYEES_BANK_ACCOUNTS.NAME,EMPLOYEES.EMPLOYEE_NAME),
+			ISNULL(EMPLOYEES_BANK_ACCOUNTS.SURNAME,EMPLOYEES.EMPLOYEE_SURNAME)
+	</cfquery>
+<cfelseif attributes.payment_type eq 4>
+	<cfquery name="get_puantajs" datasource="#dsn#">
+		SELECT
+			EMPLOYEES.EMPLOYEE_ID,
+			ISNULL(EMPLOYEES_BANK_ACCOUNTS.NAME,EMPLOYEES.EMPLOYEE_NAME) AS EMPLOYEE_NAME,
+			ISNULL(EMPLOYEES_BANK_ACCOUNTS.SURNAME,EMPLOYEES.EMPLOYEE_SURNAME) AS EMPLOYEE_SURNAME,
+            EMPLOYEES_BANK_ACCOUNTS.JOIN_ACCOUNT_NAME,
+            EMPLOYEES_BANK_ACCOUNTS.JOIN_ACCOUNT_SURNAME,
+			EMPLOYEES.EMPLOYEE_NO,
+			EMPLOYEES_BANK_ACCOUNTS.BANK_ACCOUNT_NO,
+			EMPLOYEES_BANK_ACCOUNTS.BANK_BRANCH_CODE,
+			EMPLOYEES_BANK_ACCOUNTS.IBAN_NO,
+			ISNULL(EMPLOYEES_BANK_ACCOUNTS.TC_IDENTY_NO,EMPLOYEES_IDENTY.TC_IDENTY_NO) AS TC_IDENTY_NO,
+			SBT.BANK_CODE,
+			SUM(EMPLOYEES_PUANTAJ_ROWS.NET_UCRET) NET_UCRET
+		FROM 
+			EMPLOYEES_BANK_ACCOUNTS,
+			EMPLOYEES,
+			EMPLOYEES_IN_OUT,
+			EMPLOYEES_IDENTY,
+			EMPLOYEES_PUANTAJ,
+			EMPLOYEES_PUANTAJ_ROWS,
+			SETUP_BANK_TYPES SBT,
+			BRANCH
+		WHERE
+			EMPLOYEES_PUANTAJ_ROWS.PUANTAJ_ID = EMPLOYEES_PUANTAJ.PUANTAJ_ID AND 
+			EMPLOYEES.EMPLOYEE_ID = EMPLOYEES_BANK_ACCOUNTS.EMPLOYEE_ID AND 
+			EMPLOYEES.EMPLOYEE_ID = EMPLOYEES_IN_OUT.EMPLOYEE_ID AND 
+			EMPLOYEES.EMPLOYEE_ID = EMPLOYEES_IDENTY.EMPLOYEE_ID AND 
+			EMPLOYEES_IN_OUT.IN_OUT_ID = EMPLOYEES_PUANTAJ_ROWS.IN_OUT_ID AND
+			EMPLOYEES_PUANTAJ.SAL_YEAR = #ATTRIBUTES.PAY_YEAR# AND 
+			EMPLOYEES_PUANTAJ.SAL_MON = #ATTRIBUTES.PAY_MON# AND 
+			EMPLOYEES_PUANTAJ.SSK_OFFICE = BRANCH.SSK_OFFICE AND 
+			EMPLOYEES_PUANTAJ.SSK_OFFICE_NO = BRANCH.SSK_NO AND 
+			EMPLOYEES_IN_OUT.BRANCH_ID = BRANCH.BRANCH_ID AND
+			EMPLOYEES_IN_OUT.START_DATE <= #bu_ay_sonu# AND 
+			( EMPLOYEES_IN_OUT.FINISH_DATE >= #bu_ay_basi# OR EMPLOYEES_IN_OUT.FINISH_DATE IS NULL ) AND
+			<cfif listlen(branch_list)>BRANCH.BRANCH_ID IN (#branch_list#) AND </cfif> 
+			EMPLOYEES_BANK_ACCOUNTS.BANK_ID = SBT.BANK_ID AND
+			EMPLOYEES_BANK_ACCOUNTS.BANK_ID = #listfirst(attributes.bank_id,';')# AND
+			EMPLOYEES_BANK_ACCOUNTS.DEFAULT_ACCOUNT = 1 AND
+			EMPLOYEES_BANK_ACCOUNTS.MONEY = 'TL' AND
+			EMPLOYEES_PUANTAJ_ROWS.NET_UCRET > 0
+		GROUP BY
+			EMPLOYEES.EMPLOYEE_ID,
+			ISNULL(EMPLOYEES_BANK_ACCOUNTS.NAME,EMPLOYEES.EMPLOYEE_NAME),
+			ISNULL(EMPLOYEES_BANK_ACCOUNTS.SURNAME,EMPLOYEES.EMPLOYEE_SURNAME),
+            EMPLOYEES_BANK_ACCOUNTS.JOIN_ACCOUNT_NAME,
+            EMPLOYEES_BANK_ACCOUNTS.JOIN_ACCOUNT_SURNAME,
+			EMPLOYEES.EMPLOYEE_NO,
+			EMPLOYEES_BANK_ACCOUNTS.BANK_ACCOUNT_NO,
+			EMPLOYEES_BANK_ACCOUNTS.BANK_BRANCH_CODE,
+			EMPLOYEES_BANK_ACCOUNTS.IBAN_NO,
+			ISNULL(EMPLOYEES_BANK_ACCOUNTS.TC_IDENTY_NO,EMPLOYEES_IDENTY.TC_IDENTY_NO),
+			SBT.BANK_CODE
+		ORDER BY 
+			ISNULL(EMPLOYEES_BANK_ACCOUNTS.NAME,EMPLOYEES.EMPLOYEE_NAME),
+			ISNULL(EMPLOYEES_BANK_ACCOUNTS.SURNAME,EMPLOYEES.EMPLOYEE_SURNAME)
+	</cfquery>
+</cfif>
+<cfif not get_puantajs.recordcount>
+	<script type="text/javascript">
+		alert('İlgili Şirketlerde Puantaj veya Banka İle İlişkili Çalışan Kaydı Bulunamadı!');
+		history.back();
+	</script>
+	<cfabort>
+</cfif>
+
+
+<cfset toplam_net_ = 0>
+<cfset toplam_kayit = 0>
+<cfif not directoryexists("#upload_folder#hr#dir_seperator#eislem")>
+    <cfdirectory action="create" directory="#upload_folder#hr#dir_seperator#eislem">
+</cfif>
+<cfif this_export_type_ eq 1>
+	<cfinclude template="add_bank_payment_emps_ykb.cfm">
+<cfelseif this_export_type_ eq 2>
+	<cfinclude template="add_bank_payment_emps_teb.cfm">
+<cfelseif this_export_type_ eq 3>
+	<cfinclude template="add_bank_payment_emps_isbank.cfm">
+<cfelseif this_export_type_ eq 4>
+	<cfinclude template="add_bank_payment_emps_deniz.cfm">
+<cfelseif this_export_type_ eq 5>
+	<cfinclude template="add_bank_payment_emps_akbank.cfm">
+<cfelseif this_export_type_ eq 6>
+	<cfinclude template="add_bank_payment_emps_hscb.cfm">
+<cfelseif this_export_type_ eq 7>
+	<cfinclude template="add_bank_payment_emps_garanti.cfm">
+<cfelseif this_export_type_ eq 8>
+	<cfinclude template="add_bank_payment_emps_vakif.cfm">
+<cfelseif this_export_type_ eq 9>
+	<cfinclude template="add_bank_payment_emps_hsbc2.cfm">
+<cfelseif this_export_type_ eq 11>
+	<cfinclude template="add_bank_payment_emps_ing.cfm">
+</cfif>
+	
+<cfquery name="add_bank_payment" datasource="#DSN#">
+	INSERT INTO
+		EMPLOYEES_BANK_PAYMENTS
+		(
+			XML_FILE_NAME,
+			XML_FILE_SERVER_ID,
+			PAYMENT_TYPE,
+			BANK_ID,
+			BANK_NAME,
+			OUR_COMPANY_ID,
+			RELATED_COMPANY,
+			BRANCH_ID,
+			PAY_YEAR,
+			PAY_MON,
+			PAY_DATE,
+			DETAIL,
+			TOTAL_ROWS,
+			TOTAL_AMOUNT,
+			TOTAL_AMOUNT_MONEY,
+			RECORD_EMP,
+			RECORD_IP,
+			RECORD_DATE
+		)
+	VALUES
+		(
+			'#file_name#',
+			#fusebox.server_machine#,
+			#attributes.PAYMENT_TYPE#,
+			#listfirst(attributes.bank_id,';')#,
+			'#listgetat(attributes.bank_id,2,';')#',
+			#comp_list#,
+			<cfif isdefined("branch_list") and listlen(branch_list) and isdefined("attributes.related_company")>'#attributes.related_company#'<cfelse>NULL</cfif>,
+			<cfif len(attributes.branch_id)>#attributes.branch_id#<cfelse>NULL</cfif>,
+			#attributes.pay_year#,
+			#attributes.pay_mon#,
+			#attributes.pay_date#,
+			<cfif len(attributes.detail)>'#left(attributes.detail,500)#'<cfelse>NULL</cfif>,
+			#toplam_kayit#,
+			#toplam_net_#,
+			'#session.ep.money#',
+			#SESSION.EP.USERID#,
+			'#CGI.REMOTE_ADDR#',
+			#NOW()#
+		)
+</cfquery>
+<script type="text/javascript">
+	alert('Dosya Başarı İle Oluşturuldu!');
+	location.href = document.referrer;
+	wrk_opener_reload();
+	window.close();
+</script>

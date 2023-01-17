@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<OBJECT_PROPERTIES>
+	<OBJECT_PROPERTY>
+		<PROPERTY>xml_stock_type</PROPERTY>
+		<PROPERTY_DETAIL>Aktarım Türü</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>select</PROPERTY_TYPE>
+		<PROPERTY_VALUES>1,2,3</PROPERTY_VALUES>
+		<PROPERTY_NAMES>Barkod,Stok Kodu,Özel Kod</PROPERTY_NAMES>
+		<PROPERTY_DEFAULT></PROPERTY_DEFAULT>
+		<PROPERTY_HELP></PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+	<OBJECT_PROPERTY>
+		<PROPERTY>xml_order_relation_location_control</PROPERTY>
+		<PROPERTY_DETAIL>Sipariş Bağlantılı Aktarımlarda Depo İlişkisi Kontrol Edilsin mi?</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>select</PROPERTY_TYPE>
+		<PROPERTY_VALUES>1,0</PROPERTY_VALUES>
+		<PROPERTY_NAMES>Evet,Hayır</PROPERTY_NAMES>
+		<PROPERTY_DEFAULT>0</PROPERTY_DEFAULT>
+		<PROPERTY_HELP>Sipariş bağlantılı aktarımlarda aktarım ekranında seçilen depo ile satınalma siparişi teslim depo i̇lişkisi kontrol edilir.</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+</OBJECT_PROPERTIES>

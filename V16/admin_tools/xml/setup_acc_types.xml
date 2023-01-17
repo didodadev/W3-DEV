@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SETUP_ACC_TYPES>
+	<SET>
+		<ACC_TYPE>Maaş</ACC_TYPE>
+		<ACC_TYPE_ID>-1</ACC_TYPE_ID>
+	</SET>
+	<SET>
+		<ACC_TYPE>Avans</ACC_TYPE>
+		<ACC_TYPE_ID>-2</ACC_TYPE_ID>
+	</SET>
+	<SET>
+		<ACC_TYPE>İş Avansı</ACC_TYPE>
+		<ACC_TYPE_ID>-3</ACC_TYPE_ID>
+	</SET>
+	<SET>
+		<ACC_TYPE>Diğer Borçlar</ACC_TYPE>
+		<ACC_TYPE_ID>-4</ACC_TYPE_ID>
+	</SET>
+</SETUP_ACC_TYPES>

@@ -1,0 +1,80 @@
+<cfquery name="upd_target_perf" datasource="#dsn#">
+	UPDATE 
+		EMPLOYEE_PERFORMANCE_TARGET 
+	SET
+	<cfif len(attributes.amir_id_1) and len(attributes.amir_code_1) and len(attributes.amir_name_1)>
+		FIRST_BOSS_ID=#attributes.amir_id_1#,
+		FIRST_BOSS_CODE=#attributes.amir_code_1#,
+	</cfif>
+	<cfif len(attributes.amir_id_2) and len(attributes.amir_code_2) and len(attributes.amir_name_2)>
+		SECOND_BOSS_ID = #attributes.amir_id_2#,
+		SECOND_BOSS_CODE = #attributes.amir_code_2#,
+	<cfelse>
+		SECOND_BOSS_ID = NULL,
+		SECOND_BOSS_CODE = NULL,
+	</cfif>
+	<cfif len(attributes.amir_id_3) and len(attributes.amir_code_3) and len(attributes.amir_name_3)>
+		THIRD_BOSS_ID = #attributes.amir_id_3#,
+		THIRD_BOSS_CODE = #attributes.amir_code_3#,
+	<cfelse>
+		THIRD_BOSS_ID = NULL,
+		THIRD_BOSS_CODE = NULL,
+	</cfif>
+	<cfif len(attributes.amir_id_4) and len(attributes.amir_code_4) and len(attributes.amir_name_4)>
+		FOURTH_BOSS_ID = #attributes.amir_id_4#,
+		FOURTH_BOSS_CODE = #attributes.amir_code_4#,
+	<cfelse>
+		FOURTH_BOSS_ID = NULL,
+		FOURTH_BOSS_CODE = NULL,
+	</cfif>
+	<cfif len(attributes.amir_id_5) and len(attributes.amir_code_5) and len(attributes.amir_name_5)>
+		FIFTH_BOSS_ID = #attributes.amir_id_5#,
+		FIFTH_BOSS_CODE = #attributes.amir_code_5#,
+	<cfelse>
+		FIFTH_BOSS_ID = NULL,
+		FIFTH_BOSS_CODE = NULL,
+	</cfif>
+		FIRST_BOSS_VALID=NULL,
+		FIRST_BOSS_VALID_DATE=NULL,
+		SECOND_BOSS_VALID=NULL,
+		SECOND_BOSS_VALID_DATE=NULL,
+		THIRD_BOSS_VALID=NULL,
+		THIRD_BOSS_VALID_DATE=NULL,
+		FOURTH_BOSS_VALID=NULL,
+		FOURTH_BOSS_VALID_DATE=NULL,
+		FIFTH_BOSS_VALID=NULL,
+		FIFTH_BOSS_VALID_DATE=NULL,
+		FIRST_BOSS_VALID_FORM=NULL,
+		FIRST_BOSS_VALID_DATE_FORM=NULL,
+		SECOND_BOSS_VALID_FORM=NULL,
+		SECOND_BOSS_VALID_DATE_FORM=NULL,
+		THIRD_BOSS_VALID_FORM=NULL,
+		THIRD_BOSS_VALID_DATE_FORM=NULL,
+		FOURTH_BOSS_VALID_FORM=NULL,
+		FOURTH_BOSS_VALID_DATE_FORM=NULL,
+		FIFTH_BOSS_VALID_FORM=NULL,
+		FIFTH_BOSS_VALID_DATE_FORM=NULL,		
+
+		UPDATE_DATE = #now()#,
+		UPDATE_IP = '#CGI.REMOTE_ADDR#',
+		UPDATE_EMP = #session.ep.userid#
+	WHERE
+		PER_ID=#attributes.per_id#
+</cfquery>
+<cfquery name="upd_valid" datasource="#dsn#">
+	UPDATE 
+		EMPLOYEE_PERFORMANCE
+	SET
+    	VALID_1=NULL,
+        VALID_2=NULL,
+        VALID_3=NULL,
+        VALID_4=NULL,
+        VALID_5=NULL
+    WHERE
+		PER_ID=#attributes.per_id#	
+</cfquery>
+<script type="text/javascript">
+	wrk_opener_reload();
+	window.close();
+</script>
+

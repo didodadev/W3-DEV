@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<OBJECT_PROPERTIES>
+	<OBJECT_PROPERTY>
+		<PROPERTY>x_branch_authority</PROPERTY>
+		<PROPERTY_DETAIL>Şubeye göre gelen e-faturaları listele</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>select</PROPERTY_TYPE>
+		<PROPERTY_VALUES>1,0</PROPERTY_VALUES>
+		<PROPERTY_NAMES>Evet,Hayır</PROPERTY_NAMES>
+		<PROPERTY_DEFAULT>0</PROPERTY_DEFAULT>
+		<PROPERTY_HELP>Evet olarak seçildiğinde e-fatura ekranına şube seçeneği seçilebilir şekilde gelmektedir.Şube seçenekleri sistemde bulunduğumuz şirketin şubeleri olarak gelmektedir.</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+	<OBJECT_PROPERTY>
+		<PROPERTY>x_department_authority</PROPERTY>
+		<PROPERTY_DETAIL>Departman yetkisine göre gelen e-faturaları listele</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>select</PROPERTY_TYPE>
+		<PROPERTY_VALUES>1,0</PROPERTY_VALUES>
+		<PROPERTY_NAMES>Evet,Hayır</PROPERTY_NAMES>
+		<PROPERTY_DEFAULT>0</PROPERTY_DEFAULT>
+		<PROPERTY_HELP>Evet olarak seçildiğinde e-fatura ekranına departman seçeneği seçilebilir şekilde gelmektedir.</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+	<OBJECT_PROPERTY>
+		<PROPERTY>x_show_all_invoice_positions</PROPERTY>
+		<PROPERTY_DETAIL>Tüm Faturaları Görüntüleyebilecek Pozisyonlar</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>input</PROPERTY_TYPE>
+		<PROPERTY_VALUES></PROPERTY_VALUES>
+		<PROPERTY_NAMES></PROPERTY_NAMES>
+		<PROPERTY_DEFAULT></PROPERTY_DEFAULT>
+		<PROPERTY_HELP>Şube ve Departman yetkisine göre fatura listeleme özelliği aktif olduğu durumda tüm faturaları görüntüleme yetkisine sahip olacak posizyonlar girilmelidir.</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+</OBJECT_PROPERTIES>

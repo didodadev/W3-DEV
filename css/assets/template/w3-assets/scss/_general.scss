@@ -1,0 +1,267 @@
+body {
+  font-weight: $body-font-weight;
+  background-color: $white;
+  font-weight: 400;
+  $font-family-base: "Roboto", sans-serif;
+  @include rem(font-size,14px);
+}
+
+a {
+  @include transition(all 0.2s ease-in-out);
+  text-decoration: none;
+}
+
+.navbar {
+  position: relative;
+  padding: 0.5rem 0;
+}
+
+.white {
+  background-color: $white;
+}
+
+.black {
+  background-color: $black;
+}
+
+.text-gray-dark {
+  color: $gray-dark
+}
+
+.gray-dark {
+  background-color: $gray-dark
+}
+
+.text-gray {
+  color: $gray
+}
+
+.gray {
+  background-color: $gray
+}
+
+.text-gray-light {
+  color: $gray-light
+}
+
+.gray-light {
+  background-color: $gray-light
+}
+
+.text-gray-lighter {
+  color: $gray-lighter
+}
+
+.gray-lighter {
+  background-color: $gray-lighter
+}
+
+.text-gray-lightest {
+  color: $gray-lightest
+}
+
+.gray-lightest {
+  background-color: $gray-lightest
+}
+
+.text-brand-primary {
+  color: $brand-primary
+}
+
+.brand-primary {
+  background-color: $brand-primary
+}
+
+.text-brand-success {
+  color: $brand-success
+}
+
+.brand-success {
+  background-color: $brand-success
+}
+
+.text-brand-info {
+  color: $brand-info
+}
+
+.brand-info {
+  background-color: $brand-info
+}
+
+.text-brand-warning {
+  color: $brand-warning
+}
+
+.brand-warning {
+  background-color: $brand-warning
+}
+
+.text-brand-danger {
+  color: $brand-danger
+}
+
+.brand-danger {
+  background-color: $brand-danger
+}
+
+.text-grayblue-dark {
+  color: $grayblue-dark;
+}
+
+.grayblue-dark {
+  background-color: $grayblue-dark;
+}
+
+.text-grayblue {
+  color: $grayblue;
+}
+
+.grayblue {
+  background-color: $grayblue;
+}
+
+.text-grayblue-light {
+  color: $grayblue-light;
+}
+
+.grayblue-light {
+  background-color: $grayblue-light;
+}
+
+.text-grayblue-lighter {
+  color: $grayblue-lighter;
+}
+
+.grayblue-lighter {
+  background-color: $grayblue-lighter;
+}
+
+.text-grayblue-lightest {
+  color: $grayblue-lightest;
+}
+
+.grayblue-lightest {
+  background-color: $grayblue-lightest;
+}
+
+.transparent {
+  background-color: transparent !important; 
+}
+.intr-red {
+  background-color: $intr-red;
+}
+.text-intr-red {
+  color: $intr-red;
+}
+.intr-purple {
+  background-color: $intr-purple;
+}
+.text-intr-purple {
+  color: $intr-purple;
+}
+.intr-blue {
+  background-color: $intr-blue;
+}
+.text-intr-blue {
+  color: $intr-blue;
+}
+.intr-green {
+  background-color: $intr-green;
+}
+.text-intr-green {
+  background-color: $intr-green;
+}
+.intr-yellow {
+  background-color: $intr-yellow;
+}
+.text-intr-yellow {
+  background-color: $intr-yellow;
+}
+.intr-orange {
+  background-color: $intr-orange;
+}
+.text-intr-orange {
+  color: $intr-orange;
+}
+.intr-bluedark {
+  background-color: $intr-bluedark;
+}
+.text-intr-bluedark {
+ color: $intr-bluedark;
+}
+.intr-greendark {
+  background-color: $intr-greendark;
+}
+.text-intr-greendark {
+  color: $intr-greendark;
+}
+.facebook{              
+background-color:$facebook-color;  
+}
+.twitter{
+background-color:$twitter-color;
+}
+.linkedin{
+background-color:$linkedin-color;
+}
+.instagram{
+ background-color:$instagram-color;
+}
+.googleplus{
+ background-color:$googleplus-color;
+}
+.pinterest{
+ background-color:$pinterest-color;
+}
+.whatsapp{
+ background-color:$whatsapp-color;
+}
+.pos-relative {
+  position: relative
+}
+
+.pos-absolute {
+  position: absolute
+}
+
+.pos-fixed {
+  position: fixed
+}
+
+.pos-static {
+  position: static;
+}
+
+.d-none-b:before, .d-none-a:after {
+  display: none;
+}
+
+hr {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border: 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  width: 100%;
+}
+
+.lhn {
+  line-height: normal;
+}
+
+.h300 {
+  height: 300px
+}
+
+.h400 {
+  height: 400px
+}
+
+.h500 {
+  height: 500px
+}
+
+.h600 {
+  height: 600px
+}
+
+

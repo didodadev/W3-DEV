@@ -1,0 +1,14 @@
+<!-- Description : Description : Puantaj ara tablosuna sgk durumu kolonu eklendi.
+Developer: Esma Uysal
+Company : Workcube
+Destination: Main -->
+<querytag>
+    IF EXISTS (SELECT 'Y' FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_SCHEMA = '@_dsn_main_@' AND TABLE_NAME = 'PAYROLL_JOB' AND COLUMN_NAME = 'STATUE')
+    BEGIN
+    UPDATE PAYROLL_JOB SET STATUE = 1 WHERE ISNULL(STATUE,0) = 0;
+    END;
+    IF EXISTS (SELECT 'Y' FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_SCHEMA = '@_dsn_main_@' AND TABLE_NAME = 'EMPLOYEES_PUANTAJ' AND COLUMN_NAME = 'STATUE')
+    BEGIN
+    UPDATE EMPLOYEES_PUANTAJ SET STATUE = 1 WHERE ISNULL(STATUE,0) = 0;
+    END;
+</querytag>

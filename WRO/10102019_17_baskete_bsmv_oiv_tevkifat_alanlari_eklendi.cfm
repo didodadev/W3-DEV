@@ -1,0 +1,127 @@
+<!-- Description : Baskete BSMV,OIV,TEVKİFAT,Abone,Fiziki Varlık,Aktivite Tipi alanları eklendi
+Developer: Uğur Hamurpet
+Company : Workcube
+Destination: Company -->
+<querytag>
+    DECLARE @basketId INT;
+    DECLARE CUR_BASKET CURSOR FAST_FORWARD FOR
+        SELECT BASKET_ID
+        FROM SETUP_BASKET
+        ORDER BY BASKET_ID;
+    
+    OPEN CUR_BASKET
+    FETCH NEXT FROM CUR_BASKET INTO @basketId
+    
+    WHILE @@FETCH_STATUS = 0
+    BEGIN
+    
+        IF NOT EXISTS( SELECT 'Y' FROM SETUP_BASKET_ROWS WHERE BASKET_ID = @basketId AND TITLE_NAME = 'bsmv' )
+        BEGIN
+            INSERT INTO SETUP_BASKET_ROWS(BASKET_ID,TITLE_NAME,IS_SELECTED,TITLE,B_TYPE,GENISLIK,IS_READONLY,IS_MOBILE,IS_REQUIRED)
+            VALUES (@basketId,'BSMV',0,'bsmv',1,100,0,0,0)
+        END;
+        
+        IF NOT EXISTS( SELECT 'Y' FROM SETUP_BASKET_ROWS WHERE BASKET_ID = @basketId AND TITLE_NAME = 'oiv' )
+        BEGIN
+            INSERT INTO SETUP_BASKET_ROWS(BASKET_ID,TITLE_NAME,IS_SELECTED,TITLE,B_TYPE,GENISLIK,IS_READONLY,IS_MOBILE,IS_REQUIRED)
+            VALUES (@basketId,'OIV',0,'oiv',1,100,0,0,0)
+        END;
+            
+        IF NOT EXISTS( SELECT 'Y' FROM SETUP_BASKET_ROWS WHERE BASKET_ID = @basketId AND TITLE_NAME = 'row_activity_id' )
+        BEGIN
+            INSERT INTO SETUP_BASKET_ROWS(BASKET_ID,TITLE_NAME,IS_SELECTED,TITLE,B_TYPE,GENISLIK,IS_READONLY,IS_MOBILE,IS_REQUIRED)
+            VALUES (@basketId,'Aktivite Tipi',0,'row_activity_id',1,100,0,0,0)
+        END;
+
+        IF NOT EXISTS( SELECT 'Y' FROM SETUP_BASKET_ROWS WHERE BASKET_ID = @basketId AND TITLE_NAME = 'row_subscription_name' )
+        BEGIN
+            INSERT INTO SETUP_BASKET_ROWS(BASKET_ID,TITLE_NAME,IS_SELECTED,TITLE,B_TYPE,GENISLIK,IS_READONLY,IS_MOBILE,IS_REQUIRED)
+            VALUES (@basketId,'Abone',0,'row_subscription_name',1,100,0,0,0)
+        END; 
+        
+        IF NOT EXISTS( SELECT 'Y' FROM SETUP_BASKET_ROWS WHERE BASKET_ID = @basketId AND TITLE_NAME = 'row_assetp_name' )
+        BEGIN
+            INSERT INTO SETUP_BASKET_ROWS(BASKET_ID,TITLE_NAME,IS_SELECTED,TITLE,B_TYPE,GENISLIK,IS_READONLY,IS_MOBILE,IS_REQUIRED)
+            VALUES (@basketId,'Fiziki Varlık',0,'row_assetp_name',1,100,0,0,0)
+        END;
+        
+        IF NOT EXISTS( SELECT 'Y' FROM SETUP_BASKET_ROWS WHERE BASKET_ID = @basketId AND TITLE_NAME = 'row_bsmv_rate' )
+        BEGIN
+            INSERT INTO SETUP_BASKET_ROWS(BASKET_ID,TITLE_NAME,IS_SELECTED,TITLE,B_TYPE,GENISLIK,IS_READONLY,IS_MOBILE,IS_REQUIRED)
+            VALUES (@basketId,'BSMV Oran',0,'row_bsmv_rate',1,100,0,0,0)
+        END;
+
+        IF NOT EXISTS( SELECT 'Y' FROM SETUP_BASKET_ROWS WHERE BASKET_ID = @basketId AND TITLE_NAME = 'row_bsmv_amount' )
+        BEGIN
+            INSERT INTO SETUP_BASKET_ROWS(BASKET_ID,TITLE_NAME,IS_SELECTED,TITLE,B_TYPE,GENISLIK,IS_READONLY,IS_MOBILE,IS_REQUIRED)
+            VALUES (@basketId,'BSMV Tutar',0,'row_bsmv_amount',1,100,0,0,0)
+        END;   
+        
+        IF NOT EXISTS( SELECT 'Y' FROM SETUP_BASKET_ROWS WHERE BASKET_ID = @basketId AND TITLE_NAME = 'row_bsmv_currency' )
+        BEGIN
+            INSERT INTO SETUP_BASKET_ROWS(BASKET_ID,TITLE_NAME,IS_SELECTED,TITLE,B_TYPE,GENISLIK,IS_READONLY,IS_MOBILE,IS_REQUIRED)
+            VALUES (@basketId,'BSMV Döviz',0,'row_bsmv_currency',1,100,0,0,0)
+        END;
+            
+        IF NOT EXISTS( SELECT 'Y' FROM SETUP_BASKET_ROWS WHERE BASKET_ID = @basketId AND TITLE_NAME = 'row_oiv_rate' )
+        BEGIN
+            INSERT INTO SETUP_BASKET_ROWS(BASKET_ID,TITLE_NAME,IS_SELECTED,TITLE,B_TYPE,GENISLIK,IS_READONLY,IS_MOBILE,IS_REQUIRED)
+            VALUES (@basketId,'OIV Oran',0,'row_oiv_rate',1,100,0,0,0)
+        END;    
+            
+        IF NOT EXISTS( SELECT 'Y' FROM SETUP_BASKET_ROWS WHERE BASKET_ID = @basketId AND TITLE_NAME = 'row_oiv_amount' )
+        BEGIN
+            INSERT INTO SETUP_BASKET_ROWS(BASKET_ID,TITLE_NAME,IS_SELECTED,TITLE,B_TYPE,GENISLIK,IS_READONLY,IS_MOBILE,IS_REQUIRED)
+            VALUES (@basketId,'OIV Tutar',0,'row_oiv_amount',1,100,0,0,0)
+        END;   
+
+        IF NOT EXISTS( SELECT 'Y' FROM SETUP_BASKET_ROWS WHERE BASKET_ID = @basketId AND TITLE_NAME = 'row_tevkifat_rate' )
+        BEGIN
+            INSERT INTO SETUP_BASKET_ROWS(BASKET_ID,TITLE_NAME,IS_SELECTED,TITLE,B_TYPE,GENISLIK,IS_READONLY,IS_MOBILE,IS_REQUIRED)
+            VALUES (@basketId,'Tevkifat Oran',0,'row_tevkifat_rate',1,100,0,0,0)
+        END;   
+
+        IF NOT EXISTS( SELECT 'Y' FROM SETUP_BASKET_ROWS WHERE BASKET_ID = @basketId AND TITLE_NAME = 'row_tevkifat_amount' )
+        BEGIN
+            INSERT INTO SETUP_BASKET_ROWS(BASKET_ID,TITLE_NAME,IS_SELECTED,TITLE,B_TYPE,GENISLIK,IS_READONLY,IS_MOBILE,IS_REQUIRED)
+            VALUES (@basketId,'Tevkifat Tutar',0,'row_tevkifat_amount',1,100,0,0,0)
+        END;   
+        
+        FETCH NEXT FROM CUR_BASKET INTO @basketId
+
+    END
+    CLOSE CUR_BASKET
+    DEALLOCATE CUR_BASKET
+
+
+
+/*
+
+DECLARE @basketId INT;
+    DECLARE CUR_BASKET CURSOR FAST_FORWARD FOR
+        SELECT BASKET_ID
+        FROM workcube_devcatalyst_1.SETUP_BASKET
+        ORDER BY BASKET_ID;
+    
+    OPEN CUR_BASKET
+    FETCH NEXT FROM CUR_BASKET INTO @basketId
+    
+    WHILE @@FETCH_STATUS = 0
+    BEGIN
+    
+        IF NOT EXISTS( SELECT BASKET_ID FROM workcube_devcatalyst_1.SETUP_BASKET_ROWS_ WHERE BASKET_ID = @basketId AND TITLE_NAME = 'BSMV' )
+        BEGIN
+            INSERT INTO workcube_devcatalyst_1.SETUP_BASKET_ROWS_(BASKET_ID,TITLE_NAME,IS_SELECTED,TITLE,B_TYPE,GENISLIK,IS_READONLY,IS_MOBILE,IS_REQUIRED)
+            VALUES (@basketId,'BSMV',0,'bsmv',1,100,0,0,0)
+        END
+
+        FETCH NEXT FROM CUR_BASKET INTO @basketId
+
+    END
+    CLOSE CUR_BASKET
+    DEALLOCATE CUR_BASKET
+
+*/
+
+
+</querytag>

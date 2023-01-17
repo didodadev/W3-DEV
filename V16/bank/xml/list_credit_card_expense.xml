@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<OBJECT_PROPERTIES>
+	<OBJECT_PROPERTY>
+		<PROPERTY>x_interim_payments</PROPERTY>
+		<PROPERTY_DETAIL>Ara Ödeme ve Otomatik Kapama Yapılabilsin?</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>select</PROPERTY_TYPE>
+		<PROPERTY_VALUES>1,0</PROPERTY_VALUES>
+		<PROPERTY_NAMES>Evet,Hayır</PROPERTY_NAMES>
+		<PROPERTY_DEFAULT>0</PROPERTY_DEFAULT>
+		<PROPERTY_HELP>Ara Ödeme Yapılabilsin seçeneği evet olarak seçilirse harcamalardan bağımsız olarak kredi kartı hesabına ara ödeme yapılır. Daha sonra bu ara ödemeler ödemesi yapılmamış harcamaları tarih sırasına göre kendisi otomatik kapatır. Ara ödeme ve kapama seçeneği aktif hale getirilir ise harcamalarda kısmi ödeme seçeneği kapatılır. Sistem kendisi otomatik kapamaları yapar.
+		</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+</OBJECT_PROPERTIES>

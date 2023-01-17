@@ -1,0 +1,218 @@
+﻿.designWrapper {
+	background: #D8D9DA;
+    overflow: auto;
+    text-align: center;
+    min-width: 640px;
+    -webkit-transition-property: left;
+    -webkit-transition-duration: .66s;
+    -webkit-transition-timing-function: cubic-bezier(0.25,1,.25,1);
+    -moz-transition-property: left;
+    -moz-transition-duration: .66s;
+    -moz-transition-timing-function: cubic-bezier(0.25,1,.25,1);
+    -ms-transition-property: left;
+    -ms-transition-duration: .66s;
+    -ms-transition-timing-function: cubic-bezier(0.25,1,.25,1);
+    -o-transition-property: left;
+    -o-transition-duration: .66s;
+    -o-transition-timing-function: cubic-bezier(0.25,1,.25,1);
+    transition-property: left;
+    transition-duration: .66s;
+    transition-timing-function: cubic-bezier(0.25,1,.25,1);
+	overflow:hidden;
+
+}
+.pageWrapper {padding: 30px; display: inline-block; }
+.pageBreak {page-break-after: always}
+.myCanvas { 
+	background-color: #FDFDFD;
+    border: 1px solid #22C39E;
+	position:relative;
+	background-size:cover;
+	box-sizing: border-box;
+}
+	.myCanvas table {  border:1px solid black;  width:100%; border-spacing: 0; border-collapse: collapse; position:absolute;  }
+	.myCanvas table thead tr > th { border:1px solid black;  padding:5px; vertical-align:top; } 
+	.myCanvas table tbody tr > td { border:1px solid black;  padding:5px; } 
+	.myCanvas textarea { width:100px;}
+
+.printBox { width:100% !important;  border-bottom: 1px solid #D8D9DA ; height:200px; min-height:50px; }
+	.printBox div.head { 
+		color: #D8D9DA;
+		font-size: 42px;
+		opacity: 0.3;
+		font-weight: 600;
+		text-transform: capitalize;
+		text-align: center;}
+
+.Designer-ruler-corner {
+    position: fixed;
+    width: 33px;
+    height: 16px;
+    border-right: 1px solid red;
+    border-bottom: 1px solid red;
+    margin: -24px 0px 0px -28px;
+    z-index: 9999;
+}
+
+.Designer-ruler-corner:after{
+	content: '';
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	border-style: solid;
+	border-width: 0px 0px 16px 28px;
+	border-color: transparent transparent rgba(177, 180, 181, 0.52) transparent;
+}
+
+.Designer-ruler-h-bg {
+    position: fixed;
+    top: 80px;
+    left: 200px;
+    right: 360px;
+    height: 20px;
+    z-index: 9;
+    border-bottom: 1px solid #BBB;
+}
+
+.Designer-ruler-v-bg {
+    position: fixed;
+    top: 0;
+    left: 200px;
+    width: 20px;
+    height: 100%;
+    z-index: 9;
+    border-right: 1px solid #BBB;
+    -webkit-transition-property: left;
+    -webkit-transition-duration: .66s;
+    -webkit-transition-timing-function: cubic-bezier(0.25,1,.25,1);
+    -moz-transition-property: left;
+    -moz-transition-duration: .66s;
+    -moz-transition-timing-function: cubic-bezier(0.25,1,.25,1);
+    -ms-transition-property: left;
+    -ms-transition-duration: .66s;
+    -ms-transition-timing-function: cubic-bezier(0.25,1,.25,1);
+    -o-transition-property: left;
+    -o-transition-duration: .66s;
+    -o-transition-timing-function: cubic-bezier(0.25,1,.25,1);
+    transition-property: left;
+    transition-duration: .66s;
+    transition-timing-function: cubic-bezier(0.25,1,.25,1);
+}
+
+.Designer-ruler-h-wrap {
+    height: 20px;
+    padding-top: 5px;
+    overflow: hidden;
+    z-index: 8;
+    top: 0;
+}
+.Designer-ruler {
+    position: absolute;
+    font-family: 'ubuntu mono',monospace,serif;
+    font-size: 9px;
+    line-height: 8px;
+    background: #d2d0cf;
+    z-index: 10;
+}
+
+.rullerTick-W{
+	float: left;
+    border-left: 1px solid #B7B7B7;
+    width: 37.7px;
+    height: 15px;
+    background: white;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 1px 0px 0px 3px;
+}
+
+.rullerW{
+	position: fixed;
+	margin-top: -24px;
+	z-index: 99999;
+	border: 1px solid #B7B7B7;
+	border-bottom: 1px solid red;
+}
+
+.rullerTickHalf-W{
+     border-left: 1px solid #B7B7B7;
+    height: 7px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 1px 0px 0px 3px;
+    margin: -6px 0px 0px 16px;
+	text-align: left;
+}
+
+.rullerH{	
+    margin-left: -27px;
+    width: 17px;
+	border: 1px solid #B7B7B7;
+	}
+
+.rullerTick-H{
+    float: left;
+    border-bottom: 1px solid #B7B7B7;
+    width: 17px;
+    height: 37.7px;
+    background: white;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 1px 0px 0px 3px;
+	display: table;
+}
+
+.rullerTickHalf-H{
+    border-bottom: 1px solid #B7B7B7;
+    height: 11px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 1px 0px 0px 3px;
+    margin: -5px 0px 0px 5px;
+}
+.position-ne{
+	position: absolute;
+    right: 3px;
+    top: 3px;
+	cursor: pointer;
+	font-size:11px;
+	}
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {
+    box-shadow: #000000 0px 2px 55px -19px !important;
+    background: #EFEFEF !important;
+}
+
+.ui-state-hover, .ui-widget-content .ui-state-hover, .ui-widget-header .ui-state-hover, .ui-state-focus, .ui-widget-content .ui-state-focus, .ui-widget-header .ui-state-focus {
+    background: #F1F1F1 !important;
+}
+.dragEl {
+	
+	position : absolute !important;
+	border : 1px solid #4DB3A2 ;
+	padding : 10px;
+	display : block;
+	width : 100px;
+	min-width : 50px;
+	text-transform:capitalize;
+	z-index :999999;
+	cursor:move;
+
+	}
+.dragEl  input { height:100%; width:50%;}	
+#bookSubpage { background:#FFF; position:relative;  margin: 0 auto; box-sizing: border-box; border:1px solid black;}
+#bookSubpage div{ border:1px solid green;}
+
+#bookSubpage #pageHeader div, #bookSubpage #pageBody div, #bookSubpage #pageFooter div {position:absolute !important; border:1px solid black; padding:10px; }
+#bookSubpage div > table {border:1px solid black; margin:0;  width:100%; border-spacing: 0; border-collapse: collapse; position:absolute; } 
+#bookSubpage div > table > thead tr > th { border:1px solid black; font-weight:bold; padding: 5px;} 
+#bookSubpage div > table > tbody tr > td { border:1px solid black; padding: 5px; } 
+
+#elements ul.hoverList li { text-transform:capitalize;} 
+#elements ul.hoverList li > i { padding-right:5px;} 
+.li-tree { text-decoration: none;  background-color: rgba(0, 0, 0, 0) !important;}
+.li-tree input[type=checkbox] { float: right ;} 
+.li-tree ul > li { text-transform: capitalize;} 

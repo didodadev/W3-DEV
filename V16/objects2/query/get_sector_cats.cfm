@@ -1,0 +1,11 @@
+<cfquery name="GET_SECTOR_CATS" datasource="#DSN#">
+	SELECT 
+		SECTOR_CAT_ID,
+		SECTOR_CAT
+	FROM 
+		SETUP_SECTOR_CATS
+	WHERE
+		IS_INTERNET = 1
+	ORDER BY 
+		SECTOR_CAT
+</cfquery>

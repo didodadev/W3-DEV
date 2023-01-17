@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OBJECT_PROPERTIES>
+	<OBJECT_PROPERTY>
+		<PROPERTY>xml_show_quality_value</PROPERTY>
+		<PROPERTY_DETAIL>Değer Gelsin</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>select</PROPERTY_TYPE>
+		<PROPERTY_VALUES>1,0</PROPERTY_VALUES>
+		<PROPERTY_NAMES>Evet,Hayır</PROPERTY_NAMES>
+		<PROPERTY_DEFAULT>1</PROPERTY_DEFAULT>
+		<PROPERTY_HELP>Evet seçildiğinde her kalite kontrol tipi içerisinde Değer textboxı açılır.</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+	<OBJECT_PROPERTY>
+		<PROPERTY>xml_show_tolerance</PROPERTY>
+		<PROPERTY_DETAIL>Tolerans Gelsin</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>select</PROPERTY_TYPE>
+		<PROPERTY_VALUES>1,0</PROPERTY_VALUES>
+		<PROPERTY_NAMES>Evet,Hayır</PROPERTY_NAMES>
+		<PROPERTY_DEFAULT>1</PROPERTY_DEFAULT>
+		<PROPERTY_HELP>Evet seçildiğinde her kalite kontrol tipi içerisinde Tolerans aralıkları açılır.</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+	<OBJECT_PROPERTY>
+		<PROPERTY>xml_show_detail</PROPERTY>
+		<PROPERTY_DETAIL>Açıklama Gelsin</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>select</PROPERTY_TYPE>
+		<PROPERTY_VALUES>1,0</PROPERTY_VALUES>
+		<PROPERTY_NAMES>Evet,Hayır</PROPERTY_NAMES>
+		<PROPERTY_DEFAULT>1</PROPERTY_DEFAULT>
+		<PROPERTY_HELP>Evet seçildiğinde her kalite kontrol tipi içerisinde Açıklama textboxı açılır.</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+	<OBJECT_PROPERTY>
+		<PROPERTY>xml_show_result</PROPERTY>
+		<PROPERTY_DETAIL>Sonuç Gelsin</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>select</PROPERTY_TYPE>
+		<PROPERTY_VALUES>1,0</PROPERTY_VALUES>
+		<PROPERTY_NAMES>Evet,Hayır</PROPERTY_NAMES>
+		<PROPERTY_DEFAULT>1</PROPERTY_DEFAULT>
+		<PROPERTY_HELP>Evet seçildiğinde her kalite kontrol tipi içerisinde Sonuç popupı açılır.</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+	<OBJECT_PROPERTY>
+		<PROPERTY>xml_show_brand</PROPERTY>
+		<PROPERTY_DETAIL>Marka Gelsin</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>select</PROPERTY_TYPE>
+		<PROPERTY_VALUES>1,0</PROPERTY_VALUES>
+		<PROPERTY_NAMES>Evet,Hayır</PROPERTY_NAMES>
+		<PROPERTY_DEFAULT>0</PROPERTY_DEFAULT>
+		<PROPERTY_HELP>Evet seçildiğinde her kalite kontrol tipi içerisinde Marka popupı açılır.</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+	<OBJECT_PROPERTY>
+		<PROPERTY>xml_show_model</PROPERTY>
+		<PROPERTY_DETAIL>Model Gelsin</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>select</PROPERTY_TYPE>
+		<PROPERTY_VALUES>1,0</PROPERTY_VALUES>
+		<PROPERTY_NAMES>Evet,Hayır</PROPERTY_NAMES>
+		<PROPERTY_DEFAULT>0</PROPERTY_DEFAULT>
+		<PROPERTY_HELP>Evet seçildiğinde her kalite kontrol tipi içerisinde Model popupı açılır.</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+	<OBJECT_PROPERTY>
+		<PROPERTY>xml_required_serial_number</PROPERTY>
+		<PROPERTY_DETAIL>Seri No Zorunlu olsun</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>select</PROPERTY_TYPE>
+		<PROPERTY_VALUES>3,2,1,0</PROPERTY_VALUES>
+		<PROPERTY_NAMES>Tümünde Zorunlu, Alışlarda Zorunlu, Üretimde Zorunlu,Hayır</PROPERTY_NAMES>
+		<PROPERTY_DEFAULT>0</PROPERTY_DEFAULT>
+		<PROPERTY_HELP>Evet olarak seçildiğinde kalite kontrol işleminin seri no girilmeden kaydedilmesine izin verilmez.</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+</OBJECT_PROPERTIES>
+	

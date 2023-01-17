@@ -1,0 +1,16 @@
+<cfquery name="COMPANY_NAME" datasource="#dsn#">
+	SELECT
+		NICKNAME,
+		COMPANY_ID,
+		FULLNAME,
+		COMPANY_ADDRESS,
+		COUNTY,
+		CITY,
+		COUNTRY,
+		TAXOFFICE,
+		TAXNO
+	FROM
+		COMPANY
+	WHERE
+		COMPANY_ID = #attributes.COMPANY_ID#
+</cfquery>

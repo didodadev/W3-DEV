@@ -1,0 +1,192 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Pda_Menu_Standart>
+	<Standart_Links>
+		<Order_No>1</Order_No>
+		<Object_Folder>form</Object_Folder>
+		<Object_File_Name>add_purchase.cfm</Object_File_Name>
+		<Selected_Link>pda.form_add_purchase</Selected_Link>
+		<Link_Name>Mal Alım İrsaliyesi Ekle</Link_Name>
+		<Link_Image>add_purchase.gif</Link_Image>
+		<Link_Image_Server_Id>1</Link_Image_Server_Id>
+		<Link_Name_Type>0</Link_Name_Type>
+		<Link_Type>-1</Link_Type>
+		<Link_Area>-2</Link_Area>
+		<Is_Session>0</Is_Session>
+		<Login_Control>0</Login_Control>
+		<Site_Layout_Info>
+			<Site_Layout_Select_Property>
+				<Property_Detail>İşlem Kategorisi</Property_Detail>
+				<Property_Name>xml_process_cat</Property_Name>
+				<Property_Value></Property_Value>
+			</Site_Layout_Select_Property>
+		</Site_Layout_Info>
+	</Standart_Links>
+	<Standart_Links>
+		<Order_No>2</Order_No>
+		<Object_Folder>form</Object_Folder>
+		<Object_File_Name>add_purchase.cfm</Object_File_Name>
+		<Selected_Link>pda.form_add_purchase_control</Selected_Link>
+		<Link_Name>Kontrollü Alım İrsaliyesi Ekle</Link_Name>
+		<Link_Image>add_purchase_control.gif</Link_Image>
+		<Link_Image_Server_Id>1</Link_Image_Server_Id>
+		<Link_Name_Type>0</Link_Name_Type>
+		<Link_Type>-1</Link_Type>
+		<Link_Area>-2</Link_Area>
+		<Is_Session>0</Is_Session>
+		<Login_Control>0</Login_Control>
+		<Site_Layout_Info>
+			<Site_Layout_Select_Property>
+				<Property_Detail>İşlem Kategorisi</Property_Detail>
+				<Property_Name>xml_process_cat</Property_Name>
+				<Property_Value></Property_Value>
+			</Site_Layout_Select_Property>
+		</Site_Layout_Info>
+	</Standart_Links>
+	<Standart_Links>
+		<Order_No>3</Order_No>
+		<Object_Folder>form</Object_Folder>
+		<Object_File_Name>add_ship_dispatch.cfm</Object_File_Name>
+		<Selected_Link>pda.form_add_ship_dispatch</Selected_Link>
+		<Link_Name>Depolararası Sevk İrsaliyesi Ekle</Link_Name>
+		<Link_Image>add_ship_dispatch.gif</Link_Image>
+		<Link_Image_Server_Id>1</Link_Image_Server_Id>
+		<Link_Name_Type>0</Link_Name_Type>
+		<Link_Type>-1</Link_Type>
+		<Link_Area>-2</Link_Area>
+		<Is_Session>0</Is_Session>
+		<Login_Control>0</Login_Control>
+		<Site_Layout_Info>
+			<Site_Layout_Select_Property>
+				<Property_Detail>İşlem Kategorisi</Property_Detail>
+				<Property_Name>xml_process_cat</Property_Name>
+				<Property_Value></Property_Value>
+			</Site_Layout_Select_Property>
+		</Site_Layout_Info>
+	</Standart_Links>
+	<Standart_Links>
+		<Order_No>4</Order_No>
+		<Object_Folder>form</Object_Folder>
+		<Object_File_Name>add_sale.cfm</Object_File_Name>
+		<Selected_Link>pda.form_add_purchase_return</Selected_Link>
+		<Link_Name>Alım İade İrsaliyesi Ekle</Link_Name>
+		<Link_Image>add_purchase_return.gif</Link_Image>
+		<Link_Image_Server_Id>1</Link_Image_Server_Id>
+		<Link_Name_Type>0</Link_Name_Type>
+		<Link_Type>-1</Link_Type>
+		<Link_Area>-2</Link_Area>
+		<Is_Session>0</Is_Session>
+		<Login_Control>0</Login_Control>
+		<Site_Layout_Info>
+			<Site_Layout_Select_Property>
+				<Property_Detail>İşlem Kategorisi</Property_Detail>
+				<Property_Name>xml_process_cat</Property_Name>
+				<Property_Value></Property_Value>
+			</Site_Layout_Select_Property>
+		</Site_Layout_Info>
+	</Standart_Links>
+	<Standart_Links>
+		<Order_No>5</Order_No>
+		<Object_Folder>form</Object_Folder>
+		<Object_File_Name>add_order_sale.cfm</Object_File_Name>
+		<Selected_Link>pda.form_add_order_sale</Selected_Link>
+		<Link_Name>Satış Siparişi Ekle</Link_Name>
+		<Link_Image>add_order_sale.gif</Link_Image>
+		<Link_Image_Server_Id>1</Link_Image_Server_Id>
+		<Link_Name_Type>0</Link_Name_Type>
+		<Link_Type>-1</Link_Type>
+		<Link_Area>-2</Link_Area>
+		<Is_Session>0</Is_Session>
+		<Login_Control>0</Login_Control>
+		<Site_Layout_Info></Site_Layout_Info>
+	</Standart_Links>
+	<Standart_Links>
+		<Order_No>6</Order_No>
+		<Object_Folder>form</Object_Folder>
+		<Object_File_Name>add_internaldemand.cfm</Object_File_Name>
+		<Selected_Link>pda.form_add_internaldemand</Selected_Link>
+		<Link_Name>İç Talep Ekle</Link_Name>
+		<Link_Image>add_internaldemand.gif</Link_Image>
+		<Link_Image_Server_Id>1</Link_Image_Server_Id>
+		<Link_Name_Type>0</Link_Name_Type>
+		<Link_Type>-1</Link_Type>
+		<Link_Area>-2</Link_Area>
+		<Is_Session>0</Is_Session>
+		<Login_Control>0</Login_Control>
+		<Site_Layout_Info></Site_Layout_Info>
+	</Standart_Links>
+	<Standart_Links>
+		<Order_No>7</Order_No>
+		<Object_Folder>display</Object_Folder>
+		<Object_File_Name>list_internaldemand.cfm</Object_File_Name>
+		<Selected_Link>pda.list_internaldemand</Selected_Link>
+		<Link_Name>İç Talep Listesi</Link_Name>
+		<Link_Image>list_internaldemand.gif</Link_Image>
+		<Link_Image_Server_Id>1</Link_Image_Server_Id>
+		<Link_Name_Type>0</Link_Name_Type>
+		<Link_Type>-1</Link_Type>
+		<Link_Area>-2</Link_Area>
+		<Is_Session>0</Is_Session>
+		<Login_Control>0</Login_Control>
+		<Site_Layout_Info></Site_Layout_Info>
+	</Standart_Links>
+	<Standart_Links>
+		<Order_No>8</Order_No>
+		<Object_Folder>form</Object_Folder>
+		<Object_File_Name>add_stock_count_file.cfm</Object_File_Name>
+		<Selected_Link>pda.form_add_stock_count_file</Selected_Link>
+		<Link_Name>Sayım Ekle</Link_Name>
+		<Link_Image>add_stock_count_file.gif</Link_Image>
+		<Link_Image_Server_Id>1</Link_Image_Server_Id>
+		<Link_Name_Type>0</Link_Name_Type>
+		<Link_Type>-1</Link_Type>
+		<Link_Area>-2</Link_Area>
+		<Is_Session>0</Is_Session>
+		<Login_Control>0</Login_Control>
+		<Site_Layout_Info></Site_Layout_Info>
+	</Standart_Links>
+	<Standart_Links>
+		<Order_No>9</Order_No>
+		<Object_Folder>display</Object_Folder>
+		<Object_File_Name>list_price.cfm</Object_File_Name>
+		<Selected_Link>pda.list_price</Selected_Link>
+		<Link_Name>Fiyat Gör</Link_Name>
+		<Link_Image>list_price.gif</Link_Image>
+		<Link_Image_Server_Id>1</Link_Image_Server_Id>
+		<Link_Name_Type>0</Link_Name_Type>
+		<Link_Type>-1</Link_Type>
+		<Link_Area>-2</Link_Area>
+		<Is_Session>0</Is_Session>
+		<Login_Control>0</Login_Control>
+		<Site_Layout_Info></Site_Layout_Info>
+	</Standart_Links>
+	<Standart_Links>
+		<Order_No>10</Order_No>
+		<Object_Folder>form</Object_Folder>
+		<Object_File_Name>add_label_print_file.cfm</Object_File_Name>
+		<Selected_Link>pda.form_add_label_print_file</Selected_Link>
+		<Link_Name>Etiket Bas</Link_Name>
+		<Link_Image>add_label_print_file.gif</Link_Image>
+		<Link_Image_Server_Id>1</Link_Image_Server_Id>
+		<Link_Name_Type>0</Link_Name_Type>
+		<Link_Type>-1</Link_Type>
+		<Link_Area>-2</Link_Area>
+		<Is_Session>0</Is_Session>
+		<Login_Control>0</Login_Control>
+		<Site_Layout_Info></Site_Layout_Info>
+	</Standart_Links>
+	<Standart_Links>
+		<Order_No>11</Order_No>
+		<Object_Folder>form</Object_Folder>
+		<Object_File_Name>add_sale.cfm</Object_File_Name>
+		<Selected_Link>pda.form_add_sale</Selected_Link>
+		<Link_Name>Satış İrsaliyesi Ekle</Link_Name>
+		<Link_Image>add_sale.gif</Link_Image>
+		<Link_Image_Server_Id>1</Link_Image_Server_Id>
+		<Link_Name_Type>0</Link_Name_Type>
+		<Link_Type>-1</Link_Type>
+		<Link_Area>-2</Link_Area>
+		<Is_Session>0</Is_Session>
+		<Login_Control>0</Login_Control>
+		<Site_Layout_Info></Site_Layout_Info>
+	</Standart_Links>
+</Pda_Menu_Standart>

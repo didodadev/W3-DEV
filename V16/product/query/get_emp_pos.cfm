@@ -1,0 +1,8 @@
+<cfquery name="GET_EMPLOYEES" datasource="#DSN#">
+SELECT
+	EMPLOYEE_NAME,EMPLOYEE_SURNAME
+FROM
+	EMPLOYEE_POSITIONS
+WHERE
+	POSITION_CODE=#attributes.pos_code#
+</cfquery>

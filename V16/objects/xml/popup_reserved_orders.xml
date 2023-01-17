@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<OBJECT_PROPERTIES>
+	<OBJECT_PROPERTY>
+		<PROPERTY>x_list_type</PROPERTY>
+		<PROPERTY_DETAIL>Default Listeleme Tipi</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>select</PROPERTY_TYPE>
+		<PROPERTY_VALUES>2,1</PROPERTY_VALUES>
+		<PROPERTY_NAMES>Satır Bazında,Belge Bazında</PROPERTY_NAMES>
+		<PROPERTY_DEFAULT>1</PROPERTY_DEFAULT>
+		<PROPERTY_HELP></PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+	<OBJECT_PROPERTY>
+        <PROPERTY>x_control_ims</PROPERTY>
+        <PROPERTY_DETAIL>Mikro Bölge Koduna Göre Listeleme Yapılsın mı?</PROPERTY_DETAIL>
+        <PROPERTY_TYPE>select</PROPERTY_TYPE>
+        <PROPERTY_VALUES>1,0</PROPERTY_VALUES>
+        <PROPERTY_NAMES>Evet,Hayır</PROPERTY_NAMES>
+        <PROPERTY_DEFAULT>0</PROPERTY_DEFAULT>
+        <PROPERTY_HELP>Şirket akış parametrelerinde 'Satış Bölgelerine Göre Müşteri Erişim Kontrolu Yapılsın mı?' Evet seçildiğinde listelemede mikro bölge koduna göre erişim kontrolünü aktif eder.</PROPERTY_HELP>
+    </OBJECT_PROPERTY>
+</OBJECT_PROPERTIES>

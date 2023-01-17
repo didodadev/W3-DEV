@@ -1,0 +1,1 @@
+Fiziki Varlık

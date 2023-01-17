@@ -1,0 +1,18 @@
+<!-- Description : OPERATION_TYPES tablosuna yeni kolon eklendi
+Developer: Fatih Kara
+Company : Workcube
+Destination: Company -->
+<querytag>
+
+    IF NOT EXISTS (SELECT 'Y' FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME = 'OPERATION_TYPES' AND TABLE_SCHEMA = '@_dsn_company_@' AND COLUMN_NAME = 'STOCK_ID')
+    BEGIN
+        ALTER TABLE OPERATION_TYPES ADD 
+		STOCK_ID int NULL
+    END;
+
+    IF NOT EXISTS (SELECT 'Y' FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME = 'OPERATION_TYPES' AND TABLE_SCHEMA = '@_dsn_company_@' AND COLUMN_NAME = 'PRODUCT_NAME')
+    BEGIN
+        ALTER TABLE OPERATION_TYPES ADD 
+		PRODUCT_NAME nvarchar(150) NULL
+    END;
+</querytag>

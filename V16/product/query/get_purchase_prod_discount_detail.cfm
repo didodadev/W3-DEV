@@ -1,0 +1,20 @@
+<cfquery name="GET_PURCHASE_PROD_DISCOUNT_DETAIL" datasource="#DSN3#" maxrows="15">
+	SELECT
+		COMPANY_ID,
+		START_DATE,
+		FINISH_DATE,
+		DISCOUNT1,
+		DISCOUNT2,
+		DISCOUNT3,
+		DISCOUNT4,
+		DISCOUNT5,
+		DELIVERY_DATENO,
+		PAYMETHOD_ID,
+		C_P_PROD_DISCOUNT_ID		 
+	FROM
+		CONTRACT_PURCHASE_PROD_DISCOUNT
+	WHERE
+		PRODUCT_ID = <cfqueryparam cfsqltype="cf_sql_integer" value="#attributes.pid#">
+	ORDER BY
+		RECORD_DATE DESC
+</cfquery>

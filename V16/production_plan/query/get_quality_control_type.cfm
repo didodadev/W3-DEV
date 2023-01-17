@@ -1,0 +1,8 @@
+<cfquery name="GET_QUALITY_CONTROL_TYPE" datasource="#dsn3#">
+	SELECT
+		*
+	FROM
+		QUALITY_CONTROL_TYPE
+	ORDER BY
+		QUALITY_CONTROL_TYPE
+</cfquery>

@@ -1,0 +1,16 @@
+<!-- Description :  INVOICE_ROW tablosuna OTV_TYPE ve OTV_DISOCUNT alanları eklendi
+Developer: Cemil Durgan
+Company : Durgan Bilişim
+Destination: Period -->
+<querytag>
+    IF NOT EXISTS( SELECT 'Y' FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME='INVOICE_ROW' AND TABLE_SCHEMA = '@_dsn_period_@' AND COLUMN_NAME='OTV_TYPE')
+    BEGIN
+        ALTER TABLE INVOICE_ROW
+        ADD OTV_TYPE float NULL
+    END;
+    IF NOT EXISTS( SELECT 'Y' FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME='INVOICE_ROW' AND TABLE_SCHEMA = '@_dsn_period_@' AND COLUMN_NAME='OTV_DISCOUNT')
+    BEGIN
+        ALTER TABLE INVOICE_ROW
+        ADD OTV_DISCOUNT float NULL
+    END;
+</querytag>

@@ -1,0 +1,12 @@
+<cfquery name="GET_CONSUMERS" datasource="#dsn#">
+	SELECT 
+		CONSUMER_ID,
+		CONSUMER_NAME,
+		CONSUMER_SURNAME
+	FROM 
+		CONSUMER
+	WHERE
+		CONSUMER_STATUS = 1 AND
+		CONSUMER_CAT_ID = #attributes.CONSUMER_CAT_ID#
+</cfquery>		
+

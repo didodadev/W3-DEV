@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<OBJECT_PROPERTIES>
+	<OBJECT_PROPERTY>
+		<PROPERTY>is_partner</PROPERTY>
+		<PROPERTY_DETAIL>Filtre Partnere göre mi çalışsın ?</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>select</PROPERTY_TYPE>
+		<PROPERTY_VALUES>0,1</PROPERTY_VALUES>
+		<PROPERTY_NAMES>Hayır,Evet</PROPERTY_NAMES>
+		<PROPERTY_DEFAULT>Hayır</PROPERTY_DEFAULT>
+		<PROPERTY_HELP>Evet seçilirse sadece kendi ihaleleri görünür, hayır ise tüm ihaleler</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+</OBJECT_PROPERTIES>

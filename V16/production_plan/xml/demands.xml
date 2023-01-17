@@ -1,0 +1,120 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<OBJECT_PROPERTIES>
+	<OBJECT_PROPERTY>
+		<PROPERTY>is_spec_code</PROPERTY>
+		<PROPERTY_DETAIL>Spec Göster</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>select</PROPERTY_TYPE>
+		<PROPERTY_VALUES>1,0</PROPERTY_VALUES>
+		<PROPERTY_NAMES>Evet,Hayır</PROPERTY_NAMES>
+		<PROPERTY_DEFAULT>1</PROPERTY_DEFAULT>
+		<PROPERTY_HELP>Üretim Planlama,Emirler Listeleme Sayfasında SpecID Gösterimi İçin Kullanılır!</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+	<OBJECT_PROPERTY>
+		<PROPERTY>is_show_lot_no</PROPERTY>
+		<PROPERTY_DETAIL>Lot No Gösterilsin mi?</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>select</PROPERTY_TYPE>
+		<PROPERTY_VALUES>1,0</PROPERTY_VALUES>
+		<PROPERTY_NAMES>Evet,Hayır</PROPERTY_NAMES>
+		<PROPERTY_DEFAULT>0</PROPERTY_DEFAULT>
+		<PROPERTY_HELP>Lot Numarasının Gösterilmesini Sağlar.</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+	<OBJECT_PROPERTY>
+		<PROPERTY>is_show_production_station</PROPERTY>
+		<PROPERTY_DETAIL>Üretim Aşaması Gösterilsin mi?</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>select</PROPERTY_TYPE>
+		<PROPERTY_VALUES>1,0</PROPERTY_VALUES>
+		<PROPERTY_NAMES>Evet,Hayır</PROPERTY_NAMES>
+		<PROPERTY_DEFAULT>0</PROPERTY_DEFAULT>
+		<PROPERTY_HELP>Filtreleme Sayfasındaki Aşamaların Gösterilip, Gösterilmeyeceği Seçilir.</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+	<OBJECT_PROPERTY>
+		<PROPERTY>is_show_process</PROPERTY>
+		<PROPERTY_DETAIL>Aşama Gösterilsin mi?</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>select</PROPERTY_TYPE>
+		<PROPERTY_VALUES>1,0</PROPERTY_VALUES>
+		<PROPERTY_NAMES>Evet,Hayır</PROPERTY_NAMES>
+		<PROPERTY_DEFAULT>0</PROPERTY_DEFAULT>
+		<PROPERTY_HELP>Evet Seçildiğinde İlgili Üretim Talebinin Hangi Süreçte Olduğu Bilgisini Gösterir.</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+	<OBJECT_PROPERTY>
+		<PROPERTY>is_upd_related_demands</PROPERTY>
+		<PROPERTY_DETAIL>İlişkili Üretim Taleplerinin Miktarları Güncellensin mi?</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>select</PROPERTY_TYPE>
+		<PROPERTY_VALUES>1,0</PROPERTY_VALUES>
+		<PROPERTY_NAMES>Evet,Hayır</PROPERTY_NAMES>
+		<PROPERTY_DEFAULT>0</PROPERTY_DEFAULT>
+		<PROPERTY_HELP>Eğer Bu Seçenek Seçilirse Listede Yapılan Güncelleme İşlemlerinde İlişkili Üretim Taleplerinin Miktarları da Değişim Oranına Göre Güncellenir.</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+	<OBJECT_PROPERTY>
+		<PROPERTY>is_show_spec_no</PROPERTY>
+		<PROPERTY_DETAIL>Spec Alanında Gösterilecek Bilgi</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>select</PROPERTY_TYPE>
+		<PROPERTY_VALUES>2,1,0</PROPERTY_VALUES>
+		<PROPERTY_NAMES>Spec No,Spec İsmi,Gelmesin</PROPERTY_NAMES>
+		<PROPERTY_DEFAULT>1</PROPERTY_DEFAULT>
+		<PROPERTY_HELP>Sipariş Listeleme Satırında Spec Gösterimi İçin Kullanılır!</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+	<OBJECT_PROPERTY>
+		<PROPERTY>is_show_multi_print</PROPERTY>
+		<PROPERTY_DETAIL>Toplu Print Yapılsın mı?</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>select</PROPERTY_TYPE>
+		<PROPERTY_VALUES>1,0</PROPERTY_VALUES>
+		<PROPERTY_NAMES>Evet,Hayır</PROPERTY_NAMES>
+		<PROPERTY_DEFAULT>1</PROPERTY_DEFAULT>
+		<PROPERTY_HELP>Evet Seçildiğinde Checkbox İşaretlerinin Olduğu Alanda Yeni Bir Print İkonu Çıkar ve Toplu Print Yapılmasını Sağlar.</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+	<OBJECT_PROPERTY>
+		<PROPERTY>is_show_order_no</PROPERTY>
+		<PROPERTY_DETAIL>Sipariş No Gösterilsin mi?</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>select</PROPERTY_TYPE>
+		<PROPERTY_VALUES>1,0</PROPERTY_VALUES>
+		<PROPERTY_NAMES>Evet,Hayır</PROPERTY_NAMES>
+		<PROPERTY_DEFAULT>1</PROPERTY_DEFAULT>
+		<PROPERTY_HELP>Üretim Talebi Sipariş ile İlişkiliyse, İlgili Sipariş Numarasının Gösterilmesini Sağlar.</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+	<OBJECT_PROPERTY>
+		<PROPERTY>is_show_detail</PROPERTY>
+		<PROPERTY_DETAIL>Açıklama Gösterilsin mi?</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>select</PROPERTY_TYPE>
+		<PROPERTY_VALUES>1,0</PROPERTY_VALUES>
+		<PROPERTY_NAMES>Evet,Hayır</PROPERTY_NAMES>
+		<PROPERTY_DEFAULT>0</PROPERTY_DEFAULT>
+		<PROPERTY_HELP>Talep Açıklamasının Gösterilmesini Sağlar.</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+	<OBJECT_PROPERTY>
+		<PROPERTY>is_show_project</PROPERTY>
+		<PROPERTY_DETAIL>Proje Gösterilsin mi?</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>select</PROPERTY_TYPE>
+		<PROPERTY_VALUES>1,0</PROPERTY_VALUES>
+		<PROPERTY_NAMES>Evet,Hayır</PROPERTY_NAMES>
+		<PROPERTY_DEFAULT>1</PROPERTY_DEFAULT>
+		<PROPERTY_HELP>Seçilen Proje Bilgisinin Gösterilmesini Sağlar.</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+	<OBJECT_PROPERTY>
+		<PROPERTY>is_show_temp_date</PROPERTY>
+		<PROPERTY_DETAIL>Hedef Başlangıç Ve Hedef Bitiş Tarihleri Gösterilsin mi?</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>select</PROPERTY_TYPE>
+		<PROPERTY_VALUES>1,0</PROPERTY_VALUES>
+		<PROPERTY_NAMES>Evet,Hayır</PROPERTY_NAMES>
+		<PROPERTY_DEFAULT>1</PROPERTY_DEFAULT>
+		<PROPERTY_HELP>Taleplerin Hedef Başlangıç ve Hedef Bitiş Tarihlerinin Gösterilmesini Sağlar.</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+	<OBJECT_PROPERTY>
+		<PROPERTY>is_show_demand_no_</PROPERTY>
+		<PROPERTY_DETAIL>İlişkili İç Talep Numarası Gösterilsin mi?</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>select</PROPERTY_TYPE>
+		<PROPERTY_VALUES>1,0</PROPERTY_VALUES>
+		<PROPERTY_NAMES>Evet,Hayır</PROPERTY_NAMES>
+		<PROPERTY_DEFAULT>0</PROPERTY_DEFAULT>
+		<PROPERTY_HELP>Eğer İlişkili Bir İç Talep Varsa, İç Talep Bilgisinin Gösterilmesini Sağlar.</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+	<OBJECT_PROPERTY>
+		<PROPERTY>is_workstation_order_</PROPERTY>
+		<PROPERTY_DETAIL>İstasyon Filtresi</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>select</PROPERTY_TYPE>
+		<PROPERTY_VALUES>1,0</PROPERTY_VALUES>
+		<PROPERTY_NAMES>İlişkiye Göre Sıralansın,İsme Göre Sıralansın</PROPERTY_NAMES>
+		<PROPERTY_DEFAULT>1</PROPERTY_DEFAULT>
+		<PROPERTY_HELP>İlişkiye Göre Sıralansın Seçildiğinde, İstasyon Filtresini Üst İstasyon Bazında Gruplar. İsme Göre Sıralansın Seçildiğinde, İstasyon Filtresini Alfabetik Sıraya Göre Getirir.</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+</OBJECT_PROPERTIES>

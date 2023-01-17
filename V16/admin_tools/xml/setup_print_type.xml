@@ -1,0 +1,995 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<workcube_print_types>
+	<print>
+		<print_type>10</print_type>
+		<print_name>Genel Fatura Baskı</print_name>
+		<print_module_id>20</print_module_id>
+		<print_module_name>Fatura</print_module_name>
+		<print_name_eng/>
+		<dictionary_id>49693</dictionary_id>
+	</print>
+	<print>
+		<print_type>30</print_type>
+		<print_name>Genel İrsaliye Baskı</print_name>
+		<print_module_id>13</print_module_id>
+		<print_module_name>Stok</print_module_name>
+		<print_name_eng/>
+		<dictionary_id>49694</dictionary_id>
+	</print>
+	<print>
+		<print_type>31</print_type>
+		<print_name>Stok Fişi</print_name>
+		<print_module_id>13</print_module_id>
+		<print_module_name>Stok</print_module_name>
+		<print_name_eng/>
+		<dictionary_id>56995</dictionary_id>
+	</print>
+	<print>
+		<print_type>32</print_type>
+		<print_name>Sevkiyat Etiketi</print_name>
+		<print_module_id>13</print_module_id>
+		<print_module_name>Stok</print_module_name>
+		<print_name_eng/>
+		<dictionary_id>49696</dictionary_id>
+	</print>
+	<print>
+		<print_type>33</print_type>
+		<print_name>Stok Virman</print_name>
+		<print_module_id>13</print_module_id>
+		<print_module_name>Stok</print_module_name>
+		<print_name_eng/>
+		<dictionary_id>49697</dictionary_id>
+	</print>
+	<print>
+		<print_type>34</print_type>
+		<print_name>Kalite</print_name>
+		<print_module_id>13</print_module_id>
+		<print_module_name>Stok</print_module_name>
+		<print_name_eng/>
+		<dictionary_id>59157</dictionary_id>
+	</print>
+	<print>
+		<print_type>50</print_type>
+		<print_name>Garanti Belgesi</print_name>
+		<print_module_id>14</print_module_id>
+		<print_module_name>Servis</print_module_name>
+		<print_name_eng/>
+		<dictionary_id>49736</dictionary_id>
+	</print>
+	<print>
+		<print_type>51</print_type>
+		<print_name>Servis Başvuru Belgesi</print_name>
+		<print_module_id>14</print_module_id>
+		<print_module_name>Servis</print_module_name>
+		<print_name_eng/>
+		<dictionary_id>49738</dictionary_id>
+	</print>
+	<print>
+		<print_type>70</print_type>
+		<print_name>Satış Teklifi</print_name>
+		<print_module_id>11</print_module_id>
+		<print_module_name>Satış</print_module_name>
+		<print_name_eng/>
+		<dictionary_id>49739</dictionary_id>
+	</print>
+	<print>
+		<print_type>72</print_type>
+		<print_name>Satış Fırsatları</print_name>
+		<print_module_id>11</print_module_id>
+		<print_module_name>Satış</print_module_name>
+		<print_name_eng/>
+		<dictionary_id>49740</dictionary_id>
+	</print>
+	<print>
+		<print_type>73</print_type>
+		<print_name>Satış Siparişi</print_name>
+		<print_module_id>11</print_module_id>
+		<print_module_name>Satış</print_module_name>
+		<print_name_eng/>
+		<dictionary_id>57232</dictionary_id>
+	</print>
+	<print>
+		<print_type>74</print_type>
+		<print_name>Sistem Hizmet Sözleşmesi</print_name>
+		<print_module_id>11</print_module_id>
+		<print_module_name>Satış</print_module_name>
+		<print_name_eng/>
+		<dictionary_id>49744</dictionary_id>
+	</print>
+	<print>
+		<print_type>75</print_type>
+		<print_name>Ziyaret Sonucu</print_name>
+		<print_module_id>11</print_module_id>
+		<print_module_name>Satış</print_module_name>
+		<print_name_eng/>
+		<dictionary_id>49745</dictionary_id>
+	</print>
+	<print>
+		<print_type>90</print_type>
+		<print_name>Satınalma Teklifi</print_name>
+		<print_module_id>12</print_module_id>
+		<print_module_name>Satınalma</print_module_name>
+		<print_name_eng/>
+		<dictionary_id>49749</dictionary_id>
+	</print>
+	<print>
+		<print_type>91</print_type>
+		<print_name>Satınalma Siparişi</print_name>
+		<print_module_id>12</print_module_id>
+		<print_module_name>Satınalma</print_module_name>
+		<print_name_eng/>
+		<dictionary_id>40830</dictionary_id>
+	</print>
+	<print>
+		<print_type>92</print_type>
+		<print_name>Satınalma Talebi</print_name>
+		<print_module_id>12</print_module_id>
+		<print_module_name>Satınalma</print_module_name>
+		<print_name_eng/>
+		<dictionary_id>49752</dictionary_id>
+	</print>
+	<print>
+		<print_type>110</print_type>
+		<print_name>Çek Yazdırma</print_name>
+		<print_module_id>21</print_module_id>
+		<print_module_name>Çek</print_module_name>
+		<print_name_eng/>
+		<dictionary_id>49753</dictionary_id>
+	</print>
+	<print>
+		<print_type>111</print_type>
+		<print_name>Çek Giriş</print_name>
+		<print_module_id>21</print_module_id>
+		<print_module_name>Çek</print_module_name>
+		<print_name_eng/>
+		<dictionary_id>49757</dictionary_id>
+	</print>
+	<print>
+		<print_type>112</print_type>
+		<print_name>Çek Çıkış</print_name>
+		<print_module_id>21</print_module_id>
+		<print_module_name>Çek</print_module_name>
+		<print_name_eng/>
+		<dictionary_id>49763</dictionary_id>
+	</print>
+	<print>
+		<print_type>113</print_type>
+		<print_name>Senet Giriş</print_name>
+		<print_module_id>21</print_module_id>
+		<print_module_name>Çek</print_module_name>
+		<print_name_eng/>
+		<dictionary_id>49765</dictionary_id>
+	</print>
+	<print>
+		<print_type>114</print_type>
+		<print_name>Senet Çıkış</print_name>
+		<print_module_id>21</print_module_id>
+		<print_module_name>Çek</print_module_name>
+		<print_name_eng/>
+		<dictionary_id>49769</dictionary_id>
+	</print>
+	<print>
+		<print_type>115</print_type>
+		<print_name>Senet Yazdırma</print_name>
+		<print_module_id>21</print_module_id>
+		<print_module_name>Çek</print_module_name>
+		<print_name_eng/>
+		<dictionary_id>49770</dictionary_id>
+	</print>
+	<print>
+		<print_type>130</print_type>
+		<print_name>Kasa Virman İşlemi</print_name>
+		<print_module_id>18</print_module_id>
+		<print_module_name>Kasa</print_module_name>
+		<print_name_eng/>
+		<dictionary_id>49771</dictionary_id>
+	</print>
+	<print>
+		<print_type>131</print_type>
+		<print_name>Kasa Döviz Alış Satış İşlemi</print_name>
+		<print_module_id>18</print_module_id>
+		<print_module_name>Kasa</print_module_name>
+		<print_name_eng/>
+		<dictionary_id>49772</dictionary_id>
+	</print>
+	<print>
+		<print_type>132</print_type>
+		<print_name>Kasa Ödeme İşlemi</print_name>
+		<print_module_id>18</print_module_id>
+		<print_module_name>Kasa</print_module_name>
+		<print_name_eng/>
+		<dictionary_id>49773</dictionary_id>
+	</print>
+	<print>
+		<print_type>133</print_type>
+		<print_name>Kasa Nakit Tahsilat</print_name>
+		<print_module_id>18</print_module_id>
+		<print_module_name>Kasa</print_module_name>
+		<print_name_eng/>
+		<dictionary_id>49779</dictionary_id>
+	</print>
+	<print>
+		<print_type>140</print_type>
+		<print_name>Z Raporu</print_name>
+		<print_module_id>16</print_module_id>
+		<print_module_name>Finans</print_module_name>
+		<print_name_eng/>
+		<dictionary_id>58438</dictionary_id>
+	</print>
+	<print>
+		<print_type>145</print_type>
+		<print_name>Ödeme Talebi</print_name>
+		<print_module_id>16</print_module_id>
+		<print_module_name>Finans</print_module_name>
+		<print_name_eng/>
+		<dictionary_id>49957</dictionary_id>
+	</print>
+	<print>
+		<print_type>146</print_type>
+		<print_name>Toplu Ödeme Talebi</print_name>
+		<print_module_id>16</print_module_id>
+		<print_module_name>Finans</print_module_name>
+		<print_name_eng/>
+		<dictionary_id>49789</dictionary_id>
+	</print>
+	<print>
+		<print_type>150</print_type>
+		<print_name>Banka Havale Emri</print_name>
+		<print_module_id>19</print_module_id>
+		<print_module_name>Banka</print_module_name>
+		<print_name_eng/>
+		<dictionary_id>49791</dictionary_id>
+	</print>
+	<print>
+		<print_type>151</print_type>
+		<print_name>Banka Döviz Alış Satış İşlemi</print_name>
+		<print_module_id>19</print_module_id>
+		<print_module_name>Banka</print_module_name>
+		<print_name_eng/>
+		<dictionary_id>49793</dictionary_id>
+	</print>
+	<print>
+		<print_type>152</print_type>
+		<print_name>Kredi Kartı Tahsilat</print_name>
+		<print_module_id>19</print_module_id>
+		<print_module_name>Banka</print_module_name>
+		<print_name_eng/>
+		<dictionary_id>57836</dictionary_id>
+	</print>
+	<print>
+		<print_type>153</print_type>
+		<print_name>Kredi Kartı Ödeme</print_name>
+		<print_module_id>19</print_module_id>
+		<print_module_name>Banka</print_module_name>
+		<print_name_eng/>
+		<dictionary_id>49812</dictionary_id>
+	</print>
+	<print>
+		<print_type>154</print_type>
+		<print_name>Gelen - Giden Havale</print_name>
+		<print_module_id>19</print_module_id>
+		<print_module_name>Banka</print_module_name>
+		<print_name_eng/>
+		<dictionary_id>49813</dictionary_id>
+	</print>
+	<print>
+		<print_type>155</print_type>
+		<print_name>Banka Virman İşlemi</print_name>
+		<print_module_id>19</print_module_id>
+		<print_module_name>Banka</print_module_name>
+		<print_name_eng/>
+		<dictionary_id>49815</dictionary_id>
+	</print>
+	<print>
+		<print_type>156</print_type>
+		<print_name>Kredi Kartı Borcu Ödeme</print_name>
+		<print_module_id>19</print_module_id>
+		<print_module_name>Banka</print_module_name>
+		<print_name_eng/>
+		<dictionary_id>29550</dictionary_id>
+	</print>
+	<print>
+		<print_type>157</print_type>
+		<print_name>Banka Talimat</print_name>
+		<print_module_id>19</print_module_id>
+		<print_module_name>Banka</print_module_name>
+		<print_name_eng/>
+		<dictionary_id>49819</dictionary_id>
+	</print>
+	<print>
+		<print_type>170</print_type>
+		<print_name>Özgeçmiş</print_name>
+		<print_module_id>3</print_module_id>
+		<print_module_name>İnsan Kaynakları</print_module_name>
+		<print_name_eng/>
+		<dictionary_id>49821</dictionary_id>
+	</print>
+	<print>
+		<print_type>171</print_type>
+		<print_name>İK Başvuru</print_name>
+		<print_module_id>3</print_module_id>
+		<print_module_name>İnsan Kaynakları</print_module_name>
+		<print_name_eng/>
+		<dictionary_id>49825</dictionary_id>
+	</print>
+	<print>
+		<print_type>172</print_type>
+		<print_name>İlân</print_name>
+		<print_module_id>3</print_module_id>
+		<print_module_name>İnsan Kaynakları</print_module_name>
+		<print_name_eng/>
+		<dictionary_id>49826</dictionary_id>
+	</print>
+	<print>
+		<print_type>173</print_type>
+		<print_name>Çalışan Detay</print_name>
+		<print_module_id>3</print_module_id>
+		<print_module_name>İnsan Kaynakları</print_module_name>
+		<print_name_eng/>
+		<dictionary_id>49836</dictionary_id>
+	</print>
+	<print>
+		<print_type>174</print_type>
+		<print_name>Performans Değerlendirme Mektubu</print_name>
+		<print_module_id>3</print_module_id>
+		<print_module_name>İnsan Kaynakları</print_module_name>
+		<print_name_eng/>
+		<dictionary_id>49837</dictionary_id>
+	</print>
+	<print>
+		<print_type>175</print_type>
+		<print_name>İzin Talep Formu</print_name>
+		<print_module_id>3</print_module_id>
+		<print_module_name>İnsan Kaynakları</print_module_name>
+		<print_name_eng/>
+		<dictionary_id>49838</dictionary_id>
+	</print>
+	<print>
+		<print_type>176</print_type>
+		<print_name>Performans Değerlendirme</print_name>
+		<print_module_id>3</print_module_id>
+		<print_module_name>İnsan Kaynakları</print_module_name>
+		<print_name_eng/>
+		<dictionary_id>49841</dictionary_id>
+	</print>
+	<print>
+		<print_type>177</print_type>
+		<print_name>Bordro</print_name>
+		<print_module_id>3</print_module_id>
+		<print_module_name>İnsan Kaynakları</print_module_name>
+		<print_name_eng/>
+		<dictionary_id>50206</dictionary_id>
+	</print>
+	<print>
+		<print_type>179</print_type>
+		<print_name>İşten Çıkarma</print_name>
+		<print_module_id>48</print_module_id>
+		<print_module_name>İnsan Kaynakları</print_module_name>
+		<print_name_eng/>
+		<dictionary_id>52993</dictionary_id>
+	</print>
+	<print>
+		<print_type>180</print_type>
+		<print_name>Puantaj Baskı</print_name>
+		<print_module_id>3</print_module_id>
+		<print_module_name>İnsan Kaynakları</print_module_name>
+		<print_name_eng/>
+		<dictionary_id>49848</dictionary_id>
+	</print>
+	<print>
+		<print_type>181</print_type>
+		<print_name>Yetki ve Sorumluluk</print_name>
+		<print_module_id>3</print_module_id>
+		<print_module_name>İnsan Kaynakları</print_module_name>
+		<print_name_eng/>
+		<dictionary_id>49851</dictionary_id>
+	</print>
+	<print>
+		<print_type>182</print_type>
+		<print_name>Sözleşme</print_name>
+		<print_module_id>3</print_module_id>
+		<print_module_name>İnsan Kaynakları</print_module_name>
+		<print_name_eng/>
+		<dictionary_id>29522</dictionary_id>
+	</print>
+	<print>
+		<print_type>183</print_type>
+		<print_name>Taksitli Avans Talebi</print_name>
+		<print_module_id>3</print_module_id>
+		<print_module_name>İnsan Kaynakları</print_module_name>
+		<print_name_eng/>
+		<dictionary_id>31574</dictionary_id>
+	</print>
+	<print>
+		<print_type>184</print_type>
+		<print_name>Avans Talebi</print_name>
+		<print_module_id>3</print_module_id>
+		<print_module_name>İnsan Kaynakları</print_module_name>
+		<print_name_eng/>
+		<dictionary_id>30914</dictionary_id>
+	</print>
+	<print>
+		<print_type>186</print_type>
+		<print_name>Varlık Talebi</print_name>
+		<print_module_id>3</print_module_id>
+		<print_module_name>İnsan Kaynakları</print_module_name>
+		<print_name_eng/>
+		<dictionary_id>51075</dictionary_id>
+	</print>
+	<print>
+		<print_type>190</print_type>
+		<print_name>Hesap Ekstresi Özel</print_name>
+		<print_module_id>47</print_module_id>
+		<print_module_name>Objects</print_module_name>
+		<print_name_eng/>
+		<dictionary_id>49858</dictionary_id>
+	</print>
+	<print>
+		<print_type>191</print_type>
+		<print_name>Garanti Belgesi</print_name>
+		<print_module_id>47</print_module_id>
+		<print_module_name>Objects</print_module_name>
+		<print_name_eng/>
+		<dictionary_id>49859</dictionary_id>
+	</print>
+	<print>
+		<print_type>192</print_type>
+		<print_name>Seri Print</print_name>
+		<print_module_id>47</print_module_id>
+		<print_module_name>Objects</print_module_name>
+		<print_name_eng/>
+		<dictionary_id>49860</dictionary_id>
+	</print>
+	<print>
+		<print_type>193</print_type>
+		<print_name>Barcod Baskı</print_name>
+		<print_module_id>47</print_module_id>
+		<print_module_name>Objects</print_module_name>
+		<print_name_eng/>
+		<dictionary_id>49864</dictionary_id>
+	</print>
+	<print>
+		<print_type>210</print_type>
+		<print_name>Mutabakat Mektubu</print_name>
+		<print_module_id>23</print_module_id>
+		<print_module_name>Cari Hesaplar</print_module_name>
+		<print_name_eng/>
+		<dictionary_id>49865</dictionary_id>
+	</print>
+	<print>
+		<print_type>211</print_type>
+		<print_name>Cari Virman</print_name>
+		<print_module_id>23</print_module_id>
+		<print_module_name>Cari Hesaplar</print_module_name>
+		<print_name_eng/>
+		<dictionary_id>29567</dictionary_id>
+	</print>
+	<print>
+		<print_type>212</print_type>
+		<print_name>Cari Dekont</print_name>
+		<print_module_id>23</print_module_id>
+		<print_module_name>Cari Hesaplar</print_module_name>
+		<print_name_eng/>
+		<dictionary_id>50015</dictionary_id>
+	</print>
+	<print>
+		<print_type>213</print_type>
+		<print_name>Borç Alacak Dekont</print_name>
+		<print_module_id>23</print_module_id>
+		<print_module_name>Cari Hesaplar</print_module_name>
+		<print_name_eng/>
+		<dictionary_id>49868</dictionary_id>
+	</print>
+	<print>
+		<print_type>214</print_type>
+		<print_name>Cari Hesap Ekstresi</print_name>
+		<print_module_id>23</print_module_id>
+		<print_module_name>Cari Hesap</print_module_name>
+		<print_name_eng/>
+		<dictionary_id>57787</dictionary_id>
+	</print>
+	<print>
+		<print_type>215</print_type>
+		<print_name>Toplu Borç Alacak Dökümü</print_name>
+		<print_module_id>23</print_module_id>
+		<print_module_name>Cari Hesap</print_module_name>
+		<print_name_eng/>
+		<dictionary_id>49870</dictionary_id>
+	</print>
+	<print>
+		<print_type>216</print_type>
+		<print_name>BA-BS Formu</print_name>
+		<print_module_id>33</print_module_id>
+		<print_module_name>Rapor</print_module_name>
+		<print_name_eng/>
+		<dictionary_id>49871</dictionary_id>
+	</print>
+	<print>
+		<print_type>217</print_type>
+		<print_name>Toplu Cari Virman Dökümü</print_name>
+		<print_module_id>33</print_module_id>
+		<print_module_name>Cari Hesap</print_module_name>
+		<print_name_eng/>
+		<dictionary_id>49873</dictionary_id>
+	</print>
+	<print>
+		<print_type>230</print_type>
+		<print_name>Masraf Fişi</print_name>
+		<print_module_id>49</print_module_id>
+		<print_module_name>Maliyet Hesapları</print_module_name>
+		<print_name_eng/>
+		<dictionary_id>58064</dictionary_id>
+	</print>
+	<print>
+		<print_type>231</print_type>
+		<print_name>Harcama Talebi</print_name>
+		<print_module_id>49</print_module_id>
+		<print_module_name>Maliyet Hesapları</print_module_name>
+		<print_name_eng/>
+		<dictionary_id>58987</dictionary_id>
+	</print>
+	<print>
+		<print_type>489</print_type>
+		<print_name>Sağlık Harcaması</print_name>
+		<print_module_id>70</print_module_id>
+		<print_module_name>Sağlık ve Güvenlik İşlemleri</print_module_name>
+		<print_name_eng/>
+		<dictionary_id>33706</dictionary_id>
+	</print>
+	<print>
+		<print_type>490</print_type>
+		<print_name>Sağlık Harcaması Toplu Ödeme</print_name>
+		<print_module_id>70</print_module_id>
+		<print_module_name>Sağlık ve Güvenlik İşlemleri</print_module_name>
+		<print_name_eng/>
+		<dictionary_id>59969</dictionary_id>
+	</print>
+	<print>
+		<print_type>250</print_type>
+		<print_name>Fiziki Varlık Etiketi</print_name>
+		<print_module_id>40</print_module_id>
+		<print_module_name>Fiziki Varlıklar</print_module_name>
+		<print_name_eng/>
+		<dictionary_id>49878</dictionary_id>
+	</print>
+	<print>
+		<print_type>251</print_type>
+		<print_name>Araç İşlem Baskı</print_name>
+		<print_module_id>40</print_module_id>
+		<print_module_name>Fiziki Varlıklar</print_module_name>
+		<print_name_eng/>
+		<dictionary_id>49879</dictionary_id>
+	</print>
+	<print>
+		<print_type>252</print_type>
+		<print_name>Zimmet Tutanağı</print_name>
+		<print_module_id>40</print_module_id>
+		<print_module_name>Fiziki Varlıklar</print_module_name>
+		<print_name_eng/>
+		<dictionary_id>48078</dictionary_id>
+	</print>
+	<print>
+		<print_type>253</print_type>
+		<print_name>Bakım Sonucu</print_name>
+		<print_module_id>40</print_module_id>
+		<print_module_name>Fiziki Varlıklar</print_module_name>
+		<print_name_eng/>
+		<dictionary_id>47743</dictionary_id>
+	</print>
+	<print>
+		<print_type>254</print_type>
+		<print_name>Arıza Bildirimi</print_name>
+		<print_module_id>40</print_module_id>
+		<print_module_name>Fiziki Varlıklar</print_module_name>
+		<print_name_eng/>
+		<dictionary_id>48658</dictionary_id>
+	</print>
+	<print>
+		<print_type>280</print_type>
+		<print_name>Üretim Sonucu</print_name>
+		<print_module_id>26</print_module_id>
+		<print_module_name>Üretim Planlama</print_module_name>
+		<print_name_eng/>
+		<dictionary_id>29651</dictionary_id>
+	</print>
+	<print>
+		<print_type>281</print_type>
+		<print_name>Üretim Emri</print_name>
+		<print_module_id>26</print_module_id>
+		<print_module_name>Üretim Planlama</print_module_name>
+		<print_name_eng/>
+		<dictionary_id>49884</dictionary_id>
+	</print>
+	<print>
+		<print_type>282</print_type>
+		<print_name>Üretim Talebi</print_name>
+		<print_module_id>26</print_module_id>
+		<print_module_name>Üretim Planlama</print_module_name>
+		<print_name_eng/>
+		<dictionary_id>33322</dictionary_id>
+	</print>
+	<print>
+		<print_type>290</print_type>
+		<print_name>Muhasebe Fişi</print_name>
+		<print_module_id>22</print_module_id>
+		<print_module_name>Muhasebe</print_module_name>
+		<print_name_eng/>
+		<dictionary_id>58215</dictionary_id>
+	</print>
+	<print>
+		<print_type>310</print_type>
+		<print_name>Proje</print_name>
+		<print_module_id>1</print_module_id>
+		<print_module_name>Projeler</print_module_name>
+		<print_name_eng/>
+		<dictionary_id>57416</dictionary_id>
+	</print>
+	<print>
+		<print_type>311</print_type>
+		<print_name>Proje İş</print_name>
+		<print_module_id>1</print_module_id>
+		<print_module_name>Projeler</print_module_name>
+		<print_name_eng/>
+		<dictionary_id>49888</dictionary_id>
+	</print>
+	<print>
+		<print_type>312</print_type>
+		<print_name>Malzeme/İşçilik Planı</print_name>
+		<print_module_id>1</print_module_id>
+		<print_module_name>Projeler</print_module_name>
+		<print_name_eng/>
+		<dictionary_id>49889</dictionary_id>
+	</print>
+	<print>
+		<print_type>320</print_type>
+		<print_name>Eğitim Yönetimi</print_name>
+		<print_module_id>34</print_module_id>
+		<print_module_name>Eğitim Yönetimi</print_module_name>
+		<print_name_eng/>
+		<dictionary_id>57440</dictionary_id>
+	</print>
+	<print>
+		<print_type>321</print_type>
+		<print_name>Eğitim Yönetimi Katılımcılar</print_name>
+		<print_module_id>34</print_module_id>
+		<print_module_name>Eğitim Yönetimi</print_module_name>
+		<print_name_eng/>
+		<dictionary_id>49890</dictionary_id>
+	</print>
+	<print>
+		<print_type>330</print_type>
+		<print_name>Bütçe</print_name>
+		<print_module_id>46</print_module_id>
+		<print_module_name>Bütçe</print_module_name>
+		<print_name_eng/>
+		<dictionary_id>57559</dictionary_id>
+	</print>
+	<print>
+		<print_type>331</print_type>
+		<print_name>Bütçe Plânı</print_name>
+		<print_module_id>46</print_module_id>
+		<print_module_name>Bütçe</print_module_name>
+		<print_name_eng/>
+		<dictionary_id>49174</dictionary_id>
+	</print>
+	<print>
+		<print_type>340</print_type>
+		<print_name>Satış Kotaları</print_name>
+		<print_module_id>41</print_module_id>
+		<print_module_name>Satış Planlama</print_module_name>
+		<print_name_eng/>
+		<dictionary_id>58189</dictionary_id>
+	</print>
+	<print>
+		<print_type>350</print_type>
+		<print_name>Sabit Kıymet Detay</print_name>
+		<print_module_id>31</print_module_id>
+		<print_module_name>Sabit Kiymetler(Demirbaş)</print_module_name>
+		<print_name_eng/>
+		<dictionary_id>49895</dictionary_id>
+	</print>
+	<print>
+		<print_type>370</print_type>
+		<print_name>Ürün Detay (Public)</print_name>
+		<print_module_id>47</print_module_id>
+		<print_module_name>Objects</print_module_name>
+		<print_name_eng/>
+		<dictionary_id>49896</dictionary_id>
+	</print>
+	<print>
+		<print_type>371</print_type>
+		<print_name>Ürün Detay (Ep)</print_name>
+		<print_module_id>5</print_module_id>
+		<print_module_name>Ürün Yönetimi</print_module_name>
+		<print_name_eng/>
+		<dictionary_id>49907</dictionary_id>
+	</print>
+	<print>
+		<print_type>420</print_type>
+		<print_name>Analiz</print_name>
+		<print_module_id>4</print_module_id>
+		<print_module_name>Üye Yönetimi</print_module_name>
+		<print_name_eng/>
+		<dictionary_id>57560</dictionary_id>
+	</print>
+	<print>
+		<print_type>421</print_type>
+		<print_name>Kurumsal Üye</print_name>
+		<print_module_id>4</print_module_id>
+		<print_module_name>Üye Yönetimi</print_module_name>
+		<print_name_eng/>
+		<dictionary_id>49909</dictionary_id>
+	</print>
+	<print>
+		<print_type>440</print_type>
+		<print_name>Ajanda Olay</print_name>
+		<print_module_id>6</print_module_id>
+		<print_module_name>Ajanda</print_module_name>
+		<print_name_eng/>
+		<dictionary_id>33730</dictionary_id>
+	</print>
+	<print>
+		<print_type>460</print_type>
+		<print_name>Rezervasyonlar</print_name>
+		<print_module_id>27</print_module_id>
+		<print_module_name>Call Center</print_module_name>
+		<print_name_eng/>
+		<dictionary_id>47678</dictionary_id>
+	</print>
+	<print>
+		<print_type>461</print_type>
+		<print_name>Başvuru</print_name>
+		<print_module_id>27</print_module_id>
+		<print_module_name>Call Center</print_module_name>
+		<print_name_eng/>
+		<dictionary_id>49302</dictionary_id>
+	</print>
+	<print>
+		<print_type>462</print_type>
+		<print_name>Arıza Bildirimi</print_name>
+		<print_module_id>40</print_module_id>
+		<print_module_name>Assetcare</print_module_name>
+		<print_name_eng/>
+		<dictionary_id>48658</dictionary_id>
+	</print>
+	<print>
+		<print_type>480</print_type>
+		<print_name>Sözleşmeler</print_name>
+		<print_module_id>17</print_module_id>
+		<print_module_name>Anlaşmalar</print_module_name>
+		<print_name_eng/>
+		<dictionary_id>49928</dictionary_id>
+	</print>
+	<print>
+		<print_type>481</print_type>
+		<print_name>Hakedişler</print_name>
+		<print_module_id>17</print_module_id>
+		<print_module_name>Anlaşmalar</print_module_name>
+		<print_name_eng/>
+		<dictionary_id>51044</dictionary_id>
+	</print>
+	<print>
+		<print_type>500</print_type>
+		<print_name>Mail Yazdırma</print_name>
+		<print_module_id>29</print_module_id>
+		<print_module_name>Correspondence</print_module_name>
+		<print_name_eng/>
+		<dictionary_id>49930</dictionary_id>
+	</print>
+	<print>
+		<print_type>185</print_type>
+		<print_name>Pozisyon Tipi</print_name>
+		<print_module_id>3</print_module_id>
+		<print_module_name>İnsan Kaynakları</print_module_name>
+		<print_name_eng/>
+		<dictionary_id>59004</dictionary_id>
+	</print>
+	<print>
+		<print_type>510</print_type>
+		<print_name>Forum Konuları</print_name>
+		<print_module_id>10</print_module_id>
+		<print_module_name>Forum</print_module_name>
+		<print_name_eng/>
+		<dictionary_id>49932</dictionary_id>
+	</print>
+	<print>
+		<print_type>530</print_type>
+		<print_name>Depolararası Sevk Talebi</print_name>
+		<print_module_id>13</print_module_id>
+		<print_module_name>Stok</print_module_name>
+		<print_name_eng/>
+		<dictionary_id>45414</dictionary_id>
+	</print>
+	<print>
+		<print_type>351</print_type>
+		<print_name>Sabit Kıymeti Fiziki Varlığa Dönüştür</print_name>
+		<print_module_id>31</print_module_id>
+		<print_module_name>Sabit Kiymetler(Demirbaş)</print_module_name>
+		<print_name_eng/>
+		<dictionary_id>56931</dictionary_id>
+	</print>
+	<print>
+		<print_type>147</print_type>
+		<print_name>Teminat İade</print_name>
+		<print_module_id>16</print_module_id>
+		<print_module_name>Finans</print_module_name>
+		<print_name_eng/>
+		<dictionary_id>29655</dictionary_id>
+	</print>
+	<print>
+		<print_type>531</print_type>
+		<print_name>Banka Para Yatırma-Para Çekme</print_name>
+		<print_module_id>19</print_module_id>
+		<print_module_name>Finans</print_module_name>
+		<print_name_eng/>
+		<dictionary_id>49936</dictionary_id>
+	</print>
+	<print>
+		<print_type>120</print_type>
+		<print_name>Harcırah Talebi</print_name>
+		<print_module_id>70</print_module_id>
+		<print_module_name>Sağlık</print_module_name>
+		<print_name_eng/>
+		<dictionary_id>47809</dictionary_id>
+	</print>
+	<print>
+		<print_type>121</print_type>
+		<print_name>Fazla Mesai</print_name>
+		<print_module_id>3</print_module_id>
+		<print_module_name>İnsan Kaynakları</print_module_name>
+		<print_name_eng/>
+		<dictionary_id>59208</dictionary_id>
+	</print>
+	<print>
+		<print_type>122</print_type>
+		<print_name>Esnek Çalışma</print_name>
+		<print_module_id>3</print_module_id>
+		<print_module_name>İnsan Kaynakları</print_module_name>
+		<print_name_eng/>
+		<dictionary_id>41800</dictionary_id>
+	</print>
+	<print>
+		<print_type>123</print_type>
+		<print_name>Ziyaret Defteri</print_name>
+		<print_module_id>27</print_module_id>
+		<print_module_name>Call Center</print_module_name>
+		<print_name_eng/>
+		<dictionary_id>61443</dictionary_id>
+	</print>
+	<print>
+		<print_type>124</print_type>
+		<print_name>Seyahat Talepleri</print_name>
+		<print_module_id>3</print_module_id>
+		<print_module_name>İnsan Kaynakları</print_module_name>
+		<print_name_eng/>
+		<dictionary_id>49729</dictionary_id>
+	</print>
+	<print>
+		<print_type>160</print_type>
+		<print_name>Promosyonlar Satış</print_name>
+		<print_module_id>11</print_module_id>
+		<print_module_name>Satış</print_module_name>
+		<print_name_eng/>
+		<dictionary_id>61563</dictionary_id>
+	</print>
+	<print>
+		<print_type>126</print_type>
+		<print_name>Bireysel Hesaplar</print_name>
+		<print_module_id>4</print_module_id>
+		<print_module_name>Müşteri-Tedarikçi</print_module_name>
+		<print_name_eng/>
+		<dictionary_id>47168</dictionary_id>
+	</print>
+	<print>
+		<print_type>127</print_type>
+		<print_name>Kurumsal Hesaplar</print_name>
+		<print_module_id>4</print_module_id>
+		<print_module_name>Müşteri-Tedarikçi</print_module_name>
+		<print_name_eng/>
+		<dictionary_id>47168</dictionary_id>
+	</print>
+	<print>
+		<print_type>218</print_type>
+		<print_name>Marka</print_name>
+		<print_module_id>5</print_module_id>
+		<print_module_name>Ürün ve Stoklar</print_module_name>
+		<print_name_eng/>
+		<dictionary_id>58847</dictionary_id>
+	</print>
+	<print>
+		<print_type>332</print_type>
+		<print_name>Bütçe Aktarım Talebi</print_name>
+		<print_module_id>46</print_module_id>
+		<print_module_name>Bütçe</print_module_name>
+		<print_name_eng/>
+		<dictionary_id>61325</dictionary_id>
+	</print>
+	<print>
+		<print_type>128</print_type>
+		<print_name>Eğitim Yönetimi Sınıf Katılımcıları</print_name>
+		<print_module_id>34</print_module_id>
+		<print_module_name>Eğitim Yönetimi</print_module_name>
+		<print_name_eng/>
+		<dictionary_id>62388</dictionary_id>
+	</print>
+	<print>
+		<print_type>318</print_type>
+		<print_name>PDKS Ödenek</print_name>
+		<print_module_id>3</print_module_id>
+		<print_module_name>İnsan Kaynakları</print_module_name>
+		<print_name_eng/>
+		<dictionary_id>63094</dictionary_id>
+	</print>
+	<print>
+		<print_type>319</print_type>
+		<print_name>Ödenek Hakediş Hesabı</print_name>
+		<print_module_id>3</print_module_id>
+		<print_module_name>İnsan Kaynakları</print_module_name>
+		<print_name_eng/>
+		<dictionary_id>63144</dictionary_id>
+	</print>
+	<print>
+        <print_type>125</print_type>
+        <print_name>Şube Finansal Günlük Durum Raporu</print_name>
+        <print_module_id>16</print_module_id>
+        <print_module_name>Finans</print_module_name>
+        <print_name_eng/>
+        <dictionary_id>54611</dictionary_id>
+    </print>
+	<print>
+        <print_type>354</print_type>
+        <print_name>Kampanyalar Sms İçeriği</print_name>
+        <print_module_id>15</print_module_id>
+        <print_module_name>Pazarlama</print_module_name>
+        <print_name_eng/>
+        <dictionary_id>29405</dictionary_id>
+    </print>
+	<print>
+        <print_type>368</print_type>
+        <print_name>Numune</print_name>
+        <print_module_id>5</print_module_id>
+        <print_module_name>Ürün ve Stoklar</print_module_name>
+        <print_name_eng/>
+        <dictionary_id>62603</dictionary_id>
+	</print>
+	<print>
+        <print_type>355</print_type>
+        <print_name>İzin Mutabakatları</print_name>
+        <print_module_id>3</print_module_id>
+        <print_module_name>İnsan Kaynakları</print_module_name>
+        <print_name_eng/>
+        <dictionary_id>56647</dictionary_id>
+    </print>
+	<print>
+        <print_type>256</print_type>
+        <print_name>Atama Terfi İşlemleri</print_name>
+        <print_module_id>81</print_module_id>
+        <print_module_name>İşe Alım</print_module_name>
+        <print_name_eng/>
+        <dictionary_id>47067</dictionary_id>
+    </print>
+	<print>
+        <print_type>368</print_type>
+        <print_name>Numune</print_name>
+        <print_module_id>5</print_module_id>
+        <print_module_name>Ürün ve Stoklar</print_module_name>
+        <print_name_eng/>
+        <dictionary_id>62603</dictionary_id>
+    </print>
+	<print>
+        <print_type>376</print_type>
+        <print_name>Laboratuvar İşlemleri</print_name>
+        <print_module_id>61</print_module_id>
+        <print_module_name>Kalite Kontrol- Garanti</print_module_name>
+        <print_name_eng/>
+        <dictionary_id>47136</dictionary_id>
+    </print>
+	<print>
+        <print_type>554</print_type>
+        <print_name>Satış Dışı Hedefler</print_name>
+        <print_module_id>41</print_module_id>
+        <print_module_name>Satış Gücü Planlama</print_module_name>
+        <print_name_eng/>
+        <dictionary_id>47200</dictionary_id>
+    </print>
+</workcube_print_types>

@@ -1,0 +1,20 @@
+
+<br/>1-  Eğer dönemden aktar seçerseniz; seçtiğiniz dönemin mevcut bakiyeleri seçtiğiniz koşullarla ilgili şirketin o dönemden sonraki ilk dönemine aktarılır.<br/>
+<br/>a-  Ödeme Peformansına Göre Hesapla seçerseniz; önceki dönemdeki açık işlemlerin vadeleri ödeme performansına göre hesaplanarak aktarılır. Seçilmez ise Vade olarak tüm borç ve alacak karakterli işlemlerin ortalama vadesini yazar. Borç Alacak Dökümündeki Ortalama Vade gibi çalışır. Seçilmesi önerilir. İşlemin tamamlanma süresi cari sayısına ve c,d,e,f,g maddelerinin seçimine göre değişir.
+<br/><br/>b-  Ödenmemiş Çek\Senetleri Aktarma seçerseniz; seçtiğiniz dönemdeki ödenmemiş çek senetler, dikkate alınmadan bakiyeler ve vadeler hesaplanır. Çek ve Senetleri devrederken carileştiren firmalar içindir.
+<br/><br/>c-  Kur Fiş Tarihinden Alınsın seçerseniz; aktarım İşlem Dövizli yapılıyorsa, seçtiğiniz dönemdeki dövizli bakiyelerin TL karşılıkları fiş tarihindeki kura göre tekrar hesaplanarak yeni döneme aktarılır.
+<br/><br/>d-  İşlem Dövizli Seçilirse; seçtiğiniz dönemdeki bakiyeler işlem dövizli olarak yeni döneme aktarılır. Seçilmez ise Sistem Para Biriminden aktarılır. Dövizli Borç/Alacak takip eden firmalar içindir.
+<br/><br/>e-  Proje Bazında; seçtiğiniz dönemdeki bakiyeler yeni döneme aktarılırken proje bazında aktarılır. Proje bazlı Borç / Alacak takibi yapan firmalar içindir.
+<br/><br/>f-  Şube Bazında; seçtiğiniz dönemdeki bakiyeler yeni döneme aktarılırken şube bazında aktarılır. Şube bazlı Borç / Alacak takibi yapan firmalar içindir.
+<br/><br/>g-  Satır Bazında; seçtiğiniz dönemdeki bakiyeler yeni döneme aktarılırken satır bazında aktarılır. Seçtiğiniz dönemde ödeme performansına göre ne kadar açık satır varsa olduğu gibi aktarılır. Ödeme Peformansına Göre Hesapla seçili olmalıdır.
+<br/><br/>h-  Abone Bazında; seçtiğiniz dönemdeki bakiyeler yeni döneme aktarılırken abone bazında aktarılır. Abone bazlı Borç / Alacak takibi yapan firmalar içindir.
+<br/><br/>i-  Hesap Tipi Bazında; seçtiğiniz dönemdeki bakiyeler yeni döneme aktarılırken hesap tipi bazında aktarılır. Hesap tipi bazlı Borç / Alacak takibi yapan firmalar içindir.
+<br/><br/>2-  Eğer dosyadan aktar seçerseniz; seçtiğiniz dönem için açılış fişi dosyanıza uygun olarak yeniden düzenlenecektir.Ayrıca, açılış fişlerini sil seçeneğini kaldırarak ve fiş tarihi girerek dönem açılışlarından sonra da açılış fişleri oluşturabilirsiniz. <br/>
+<br/>d,e,f,h,i maddeleri Dosyadan Aktarım için de geçerlidir. Satır bazında aktarak için aynı cari için birden fazla devir bakiyesi girilebilir.
+<br/><br/>
+<font class="txtboldblue">Dosya Satır Formatı:</font> <br/>"Üye Kodu,B/A,Sistem Para Birimi Karşılık Tutarı (float), Sistem İkinci Döviz Birimi,Sistem İkinci Döviz Tutarı(float), İşlem Döviz Tutarı (float), İşlem Döviz Birimi, Ödeme Tarihi(dd/mm/yyyy),Proje ID si,Şube ID si" şeklinde olmalıdır.<br/><br/> 
+Dosya satırlarında Sistem İkinci Dövizi ve Tutarı, İşlem Döviz Tutarı, İşlem Döviz Birimi veya Ödeme Tarihi bilgilerinden verilmeyecek olanların yerine 0(sıfır) yazılmalıdır. Proje ID ve Şube ID si kullanılmayacaksa boş bırakılabilir.<br/><br/>
+<font color=red> Örnek Format: </font><br/>
+45654,B,1000,USD,500,1000,YTL,28/02/2007,8--------------------YTL islem dövizi bakiye için <br/>
+B12255,B,1400 32,USD,500,1000,USD,28/02/2007,8-----------------USD islem dövizi bakiye için <br/>
+E-1256,B,1800 53,USD,500,1000,EURO,28/02/2007----------------Euro islem dövizi bakiye için <br/>

@@ -1,0 +1,11 @@
+<!-- Description :  SETUP_HEALTH_ASSURANCE_TYPE tablosuna IS_REQUESTED alanı eklendi
+Developer: Botan Kayğan
+Company : Workcube
+Destination: Main -->
+<querytag>
+    IF NOT EXISTS( SELECT 'Y' FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME='SETUP_HEALTH_ASSURANCE_TYPE' AND TABLE_SCHEMA = '@_dsn_main_@' AND COLUMN_NAME='IS_REQUESTED')
+    BEGIN
+        ALTER TABLE SETUP_HEALTH_ASSURANCE_TYPE
+        ADD IS_REQUESTED BIT NULL
+    END;
+</querytag>

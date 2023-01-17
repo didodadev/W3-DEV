@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SETUP_CORR>
+	<SETUPCORR>
+		<CORRCAT>İç Yazışma</CORRCAT>
+		<DETAIL>İç Yazışma</DETAIL>
+	</SETUPCORR>
+	<SETUPCORR>
+		<CORRCAT>Takip</CORRCAT>
+		<DETAIL>Takip</DETAIL>
+	</SETUPCORR>
+	<SETUPCORR>
+		<CORRCAT>Yönetimden</CORRCAT>
+		<DETAIL>Yönetimden</DETAIL>
+	</SETUPCORR>		 		 
+</SETUP_CORR>

@@ -1,0 +1,9 @@
+﻿<cfquery name="GET_RESOURCE" datasource="#DSN#">
+	SELECT 
+		RESOURCE_ID,
+		RESOURCE
+	FROM
+		COMPANY_PARTNER_RESOURCE
+	ORDER BY
+		RESOURCE
+</cfquery>

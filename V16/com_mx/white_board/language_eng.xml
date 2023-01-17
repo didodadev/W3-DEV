@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<language>
+	<errors>
+		<errorTitle>Error:</errorTitle>
+		<missedParameter>One or some of required parameters does not exist. Related parameters:</missedParameter>
+		<connectionError>Connection failed! Please be sure that a valid address is specified. Related parameter:</connectionError>
+		<connectionClose>Connection closed! Please close the application and try again later..</connectionClose>
+		<originalErrorCode>Technical error code:</originalErrorCode>
+		<alreadyLoggedIn>The user is already in system right now !</alreadyLoggedIn>
+		<componentError>A component error occured</componentError>
+		<notFoundError>Couldn 't reach the education informations. Please be sure that a valid ID is specified. Related parameter:</notFoundError>
+		<fileLoadError>An error occured when the file is loading !</fileLoadError>
+		<forbiddenFileType>Only SWF, JPG, PNG, GIF and FLV files can be shared on Presentation Area !</forbiddenFileType>
+		<validationError>Client could not validated!</validationError>
+	</errors>
+			
+	<messages>
+		<pleaseWait>please wait ..</pleaseWait>
+		<connecting>connecting to server</connecting>
+		<starting>application starting</starting>
+		<writeHere>Write here ..</writeHere>
+		<userJoined>joined to education.</userJoined>
+		<userLeft>left from education.</userLeft>
+		<writeHereNotes>Write your notes here..</writeHereNotes>
+		<downloaded>File download process completed.</downloaded>
+		<authorityChangedAsOwner>Your authorities was changed as "Host".</authorityChangedAsOwner>
+		<authorityChangedAsPresenter>Your authorities was changed as "Presenter".</authorityChangedAsPresenter>
+		<authorityChangedAsParticipant>Your authorities was changed as "Participant".</authorityChangedAsParticipant>
+		<cameraPublishReachedMax>Only 4 persons can make camera and microphone sharing. Please try again later !</cameraPublishReachedMax>
+	</messages>
+	
+	<titles>
+		<bar>WORKCUBE CLASS ROOM</bar>
+		<board>Presentation Area</board>
+		<view>Video and Audio</view>
+		<users>Participants</users>
+		<chat>Chat</chat>
+		<files>Files</files>
+		<note>Notes</note>
+	</titles>
+	
+	<words>
+		<sendTo>To everyone</sendTo>
+		<to>To</to>
+		<send>Send</send>
+		<cameraSettings>Camera settings</cameraSettings>
+		<microphoneSettings>Microphone settings</microphoneSettings>
+		<publish>Share my camera and microphone</publish>
+		<unpublish>Stop to share my camera and microphone</unpublish>
+		<clear>Clear</clear>
+		<tools>Drawing tools</tools>
+		<selectTool>Select tool</selectTool>
+		<penTool>Pen tool</penTool>
+		<markTool>Mark tool</markTool>
+		<lineTool>Line tool</lineTool>
+		<rectTool>Rectangle tool</rectTool>
+		<circleTool>Circle tool</circleTool>
+		<textTool>Text tool</textTool>
+		<stampTool>Stamp tool</stampTool>
+		<print>Print</print>
+		<previousPresentation>Previous presentation</previousPresentation>
+		<nextPresentation>Next presentation</nextPresentation>
+		<previousPage>Previous page</previousPage>
+		<nextPage>Next page</nextPage>
+		<shareOnPresentationArea>Share on presentation area</shareOnPresentationArea>
+		<authorityList>Set as host,Set as presenter,Set as participant</authorityList>
+		<userStatusList>Active,Busy,Away</userStatusList>
+		<myStatus>Status</myStatus>
+		<expressionList>Active,Raise hand,Agree,Disagree,Speak louder,Speak softer,Speed up,Slow down</expressionList>
+		<expression>Action</expression>
+		<userRoleAndAuthority>Assign the user role and authorities</userRoleAndAuthority>
+		<download>Download to my computer</download>
+		<downloading>Downloading</downloading>
+		<enlarge>Enlarge</enlarge>
+		<minimize>Minimize</minimize>
+		<contentLoading>content is loading, please wait ..</contentLoading>
+		<playVideo>Play video</playVideo>
+		<pauseVideo>Pause video</pauseVideo>
+		<file>file</file>
+		<shareHint>Select file and click to " Share on presentation area " button to share instantly.</shareHint>
+		<downloadHint>Click to " Download to my computer " button to download file.</downloadHint>
+		<refresh>Refresh the list</refresh>
+	</words>
+</language>

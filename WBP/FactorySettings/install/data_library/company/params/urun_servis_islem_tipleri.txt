@@ -1,0 +1,4 @@
+INSERT INTO [SERVICE_SPARE_PART]([SPARE_PART],[PRODUCT_CAT]) Values( 'Satınalma Talep Edildi',Null);
+INSERT INTO [SERVICE_SPARE_PART]([SPARE_PART],[PRODUCT_CAT]) Values( 'Tedarik Ediliyor',Null);
+INSERT INTO [SERVICE_SPARE_PART]([SPARE_PART],[PRODUCT_CAT]) Values( 'Depodan Bekleniyor',Null);
+INSERT INTO [SERVICE_SPARE_PART]([SPARE_PART],[PRODUCT_CAT]) Values( 'Kurulum',Null);

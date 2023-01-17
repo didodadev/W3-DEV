@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<SETUP_SITE>
+	<SETUPSITE>
+		<LINK_NAME>Süreç Aşamaları</LINK_NAME>
+		<LINK_FILE>process.process_rows,process.popup_form_add_process_rows,process.popup_form_upd_process_rows</LINK_FILE>
+		<LINK_DETAIL>Süreç Aşamaları</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Süreç Detayı</LINK_NAME>
+		<LINK_FILE>process.upd_process</LINK_FILE>
+		<LINK_DETAIL>Süreç Detayı</LINK_DETAIL>
+	</SETUPSITE>
+</SETUP_SITE>

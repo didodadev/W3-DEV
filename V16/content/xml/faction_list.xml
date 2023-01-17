@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SETUP_SITE>
+	<SETUPSITE>
+		<LINK_NAME>İçerik Düzenleme XML Setup</LINK_NAME> 
+		<LINK_FILE>content.view_content</LINK_FILE> 
+		<LINK_DETAIL>İçerik Detay ayarlarının düzenlenmesi</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>İçerik Listesi XML Setup</LINK_NAME> 
+		<LINK_FILE>content.list_content</LINK_FILE> 
+		<LINK_DETAIL>İçerik listesi ayarlarının düzenlenmesi</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>İçerik Ekleme XML Setup</LINK_NAME> 
+		<LINK_FILE>content.add_content</LINK_FILE> 
+		<LINK_DETAIL>İçerik eklerken dil seçeneğine göre kategorilerin listelenmesi</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>İçerik Ekleme XML Setup</LINK_NAME> 
+		<LINK_FILE>content.view_content</LINK_FILE> 
+		<LINK_DETAIL>İçerik eklerken dil seçeneğine göre kategorilerin listelenmesi</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>İçerik Ekleme XML Setup</LINK_NAME> 
+		<LINK_FILE>content.list_content</LINK_FILE> 
+		<LINK_DETAIL>İçerik eklerken dil seçeneğine göre kategorilerin listelenmesi</LINK_DETAIL>
+	</SETUPSITE>
+</SETUP_SITE>

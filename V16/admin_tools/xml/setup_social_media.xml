@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SOCIAL_MEDIA>
+	<SOCIALMEDIA>
+		<SM_CATEGORY>Facebook</SM_CATEGORY>
+		<SM_ICON>facebook_16.png</SM_ICON>
+		<SM_LINK>http://www.facebook.com/</SM_LINK>
+	</SOCIALMEDIA>
+	<SOCIALMEDIA>
+		<SM_CATEGORY>Twitter</SM_CATEGORY>
+		<SM_ICON>twitter_16.png</SM_ICON>
+		<SM_LINK>http://twitter.com/</SM_LINK>
+	</SOCIALMEDIA>
+	<SOCIALMEDIA>
+		<SM_CATEGORY>Google+</SM_CATEGORY>
+		<SM_ICON>googleplus_16.png</SM_ICON>
+		<SM_LINK>http://www.gmail.com/</SM_LINK>
+	</SOCIALMEDIA>
+	<SOCIALMEDIA>
+		<SM_CATEGORY>Linkedin</SM_CATEGORY>
+		<SM_ICON>linkedin_16.png</SM_ICON>
+		<SM_LINK>http://www.linkedin.com/</SM_LINK>
+	</SOCIALMEDIA>
+	<SOCIALMEDIA>
+		<SM_CATEGORY>Friendfeed</SM_CATEGORY>
+		<SM_ICON>friendfeed_16.png</SM_ICON>
+		<SM_LINK>http://friendfeed.com/</SM_LINK>
+	</SOCIALMEDIA>
+	<SOCIALMEDIA>
+		<SM_CATEGORY>Myspace</SM_CATEGORY>
+		<SM_ICON>myspace_16.png</SM_ICON>
+		<SM_LINK>http://tr.myspace.com/</SM_LINK>
+	</SOCIALMEDIA>
+</SOCIAL_MEDIA>

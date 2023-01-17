@@ -1,0 +1,55 @@
+<cfif isDefined("attributes.comp_id")>
+	<cfquery name="GET_CREDIT_CARD" datasource="#dsn#">
+		SELECT 
+			COMPANY_ID MEMBER_ID,
+			COMPANY_CC_TYPE CARD_TYPE,
+			COMPANY_CC_NUMBER CARD_NO,
+			COMPANY_BANK_TYPE BANK_TYPE,
+			COMPANY_CARD_OWNER CARD_OWNER,
+			COMPANY_EX_MONTH EX_MONTH,
+			COMPANY_EX_YEAR EX_YEAR,
+			COMP_CVS CVS,
+			IS_DEFAULT,
+			ACC_OFF_DAY,
+			RECORD_DATE,
+			RECORD_EMP,
+			'' AS RECORD_CONS,
+			RECORD_IP,
+			UPDATE_EMP,
+			'' AS UPDATE_CONS,
+			UPDATE_DATE,
+			UPDATE_IP,
+			RESP_CODE
+		FROM 
+			COMPANY_CC
+		WHERE 
+			COMPANY_CC_ID = <cfqueryparam cfsqltype="cf_sql_integer" value="#attributes.ccid#">
+	</cfquery>
+<cfelse>
+	<cfquery name="GET_CREDIT_CARD" datasource="#dsn#">
+		SELECT 
+			CONSUMER_ID MEMBER_ID,
+			CONSUMER_CC_TYPE CARD_TYPE,
+			CONSUMER_CC_NUMBER CARD_NO,
+			CONSUMER_BANK_TYPE BANK_TYPE,
+			CONSUMER_CARD_OWNER CARD_OWNER,
+			CONSUMER_EX_MONTH EX_MONTH,
+			CONSUMER_EX_YEAR EX_YEAR,
+			CONS_CVS CVS,
+			IS_DEFAULT,
+			ACC_OFF_DAY,
+			RECORD_DATE,
+			RECORD_EMP,
+			RECORD_CONS,
+			RECORD_IP,
+			UPDATE_EMP,
+			UPDATE_CONS,
+			UPDATE_DATE,
+			UPDATE_IP,
+			RESP_CODE
+		FROM 
+			CONSUMER_CC
+		WHERE 
+			CONSUMER_CC_ID = <cfqueryparam cfsqltype="cf_sql_integer" value="#attributes.ccid#">
+	</cfquery>
+</cfif>

@@ -1,0 +1,138 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SETUP_SITE>
+	<SETUPSITE>
+		<LINK_NAME>Personel Talep Formu Detayı XML Setup</LINK_NAME> 
+		<LINK_FILE>hr.from_upd_personel_requirement_form,myhome.from_upd_personel_requirement_form</LINK_FILE> 
+		<LINK_DETAIL>Personel Talep Formu Düzenlemesi</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Personel Atama Formu Detayı XML Setup</LINK_NAME> 
+		<LINK_FILE>hr.from_upd_personel_assign_form</LINK_FILE> 
+		<LINK_DETAIL>Personel Atama Formu Düzenlemesi</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Çalışan Detayı XML Setup</LINK_NAME> 
+		<LINK_FILE>hr.form_upd_emp_identy</LINK_FILE> 
+		<LINK_DETAIL>Çalışan Detayı Düzenlemesi</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Çalışan Detayı XML Setup</LINK_NAME> 
+		<LINK_FILE>hr.form_upd_emp,hr.form_add_emp</LINK_FILE> 
+		<LINK_DETAIL>Çalışan Detayı Düzenlemesi</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>CV Kayıt XML Setup</LINK_NAME> 
+		<LINK_FILE>hr.add_cv</LINK_FILE> 
+		<LINK_DETAIL>CV Kayıt XML Setup</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>CV Güncelleme XML Setup</LINK_NAME> 
+		<LINK_FILE>hr.upd_cv</LINK_FILE> 
+		<LINK_DETAIL>CV Güncelleme XML Setup</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Ucret Ödenek Listesinde Kıdem Tarihi</LINK_NAME> 
+		<LINK_FILE>hr.list_salary</LINK_FILE> 
+		<LINK_DETAIL>Kıdem Tarihi Olup Olmaması</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Bireysel Giriş - Çıkış Hareket Raporu Çoklu Kayıt Xml Setup</LINK_NAME> 
+		<LINK_FILE>hr.list_emp_pdks</LINK_FILE> 
+		<LINK_DETAIL>Çoklu Kayıt Olup Olmaması</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Tevzi Kayıt Xml Setup</LINK_NAME> 
+		<LINK_FILE>hr.distribution_entry</LINK_FILE> 
+		<LINK_DETAIL>Tevzi Kayıt Xml Setup</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>İşçi Sağlığı</LINK_NAME> 
+		<LINK_FILE>hr.popup_add_employee_healty,hr.popup_upd_employee_healty,hr.popup_upd_active_employee_healty</LINK_FILE> 
+		<LINK_DETAIL>İşçi Sağlığı</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Pozisyon Ekle Xml Setup</LINK_NAME> 
+		<LINK_FILE>hr.form_add_position</LINK_FILE> 
+		<LINK_DETAIL>Pozisyon Ekle Xml Setup</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Deneme Süresi Xml Setup</LINK_NAME> 
+		<LINK_FILE>hr.emp_test_time</LINK_FILE> 
+		<LINK_DETAIL>Deneme Süresi Xml Setup</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>E-profil Çalışanlar Xml Setup</LINK_NAME> 
+		<LINK_FILE>hr.list_hr</LINK_FILE> 
+		<LINK_DETAIL>E-profil Çalışanlar Xml Setup</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>E-profil Eğitimler Xml Setup</LINK_NAME> 
+		<LINK_FILE>hr.popup_list_emp_trainings</LINK_FILE> 
+		<LINK_DETAIL>E-profil Eğitimler Xml Setup</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Yeterlilik Tanımı Xml Setup</LINK_NAME> 
+		<LINK_FILE>hr.add_pos_req_type,hr.upd_pos_req_type</LINK_FILE> 
+		<LINK_DETAIL>Yeterlilik Tanımı Xml Setup</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Departman Xml Setup</LINK_NAME> 
+		<LINK_FILE>hr.form_upd_department</LINK_FILE> 
+		<LINK_DETAIL>Departman Xml Setup</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Muhasebe Kod Tanımları</LINK_NAME> 
+		<LINK_FILE>hr.popup_list_period</LINK_FILE> 
+		<LINK_DETAIL>Muhasebe Kod Tanımları</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Sağlık Harcaması XML Setup</LINK_NAME>
+		<LINK_FILE>hr.health_expense_approve</LINK_FILE>
+		<LINK_DETAIL>Sağlık Harcaması XML Setup</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Harcırah Talebi</LINK_NAME>
+		<LINK_FILE>hr.expense_allowance</LINK_FILE>
+		<LINK_DETAIL>Harcırah Talebi XML Setup</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Anlaşmalı Kurum Faturası</LINK_NAME>
+		<LINK_FILE>hr.expense_cost</LINK_FILE>
+		<LINK_DETAIL>Anlaşmalı Kurum XML Setup</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>E-profil Eğitim Deneyim XML Setup</LINK_NAME>
+		<LINK_FILE>hr.popup_form_upd_emp_training</LINK_FILE>
+		<LINK_DETAIL>E-profil Eğitim Deneyim XML Setup</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Pozisyonlar XML Setup</LINK_NAME>
+		<LINK_FILE>hr.list_positions</LINK_FILE>
+		<LINK_DETAIL>Pozisyonlar XML Setup</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Amirler ve Yedekler XML Setup</LINK_NAME>
+		<LINK_FILE>hr.list_standby</LINK_FILE>
+		<LINK_DETAIL>Amirler ve Yedekler XML Setup</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Personel Talepleri XML Setup</LINK_NAME>
+		<LINK_FILE>hr.list_personel_requirement_form</LINK_FILE>
+		<LINK_DETAIL>Personel Talepleri XML Setup</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+        <LINK_NAME>Organizasyon Planlama XML Setup</LINK_NAME>
+        <LINK_FILE>hr.organization_management</LINK_FILE>
+        <LINK_DETAIL>Organizasyon Planlama XML Setup</LINK_DETAIL>
+    </SETUPSITE>
+		<SETUPSITE>
+        <LINK_NAME>PAM kullanılsın mı?</LINK_NAME>
+        <LINK_FILE>hr.popup_add_inventory_zimmet</LINK_FILE>
+        <LINK_DETAIL>PAM kullanılsın mı?</LINK_DETAIL>
+    </SETUPSITE>
+		<SETUPSITE>
+        <LINK_NAME>PAM kullanılsın mı?</LINK_NAME>
+        <LINK_FILE>hr.popup_upd_inventory_zimmet</LINK_FILE>
+        <LINK_DETAIL>PAM kullanılsın mı?</LINK_DETAIL>
+    </SETUPSITE>
+</SETUP_SITE>

@@ -1,0 +1,14 @@
+<!-- Description : EMPLOYEES_EXECUTIONS tablosunda muhasebe ad kolonunun data tip değeri arttırıldı.
+Developer: İlker Altındal
+Company : Workcube
+Destination: Main -->
+<querytag>
+    IF EXISTS( SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_NAME='EMPLOYEES_EXECUTIONS' AND INFORMATION_SCHEMA.TABLES.TABLE_SCHEMA <> 'dbo' )
+    BEGIN
+        IF EXISTS (SELECT 'Y' FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME='EMPLOYEES_EXECUTIONS' AND COLUMN_NAME='ACCOUNT_NAME')
+        BEGIN
+        ALTER TABLE EMPLOYEES_EXECUTIONS ALTER 
+        COLUMN ACCOUNT_NAME nvarchar(300)
+        END
+    END
+</querytag>

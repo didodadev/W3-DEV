@@ -1,0 +1,10 @@
+INSERT INTO [SETUP_BANK_TYPE_GROUPS]([BANK_TYPE],[QUATA_RATE]) Values( 'Özel Sermayeli Mevduat Bankaları','30');
+INSERT INTO [SETUP_BANK_TYPE_GROUPS]([BANK_TYPE],[QUATA_RATE]) Values( 'TMSF Bankaları','0');
+INSERT INTO [SETUP_BANK_TYPE_GROUPS]([BANK_TYPE],[QUATA_RATE]) Values( 'Yabancı Sermayeli Bankalar','10');
+INSERT INTO [SETUP_BANK_TYPE_GROUPS]([BANK_TYPE],[QUATA_RATE]) Values( 'Türkiye´de Şube Açan Yabancı Sermayeli Bankalar','0');
+INSERT INTO [SETUP_BANK_TYPE_GROUPS]([BANK_TYPE],[QUATA_RATE]) Values( 'Kamu Sermayeli Kalkınma ve Yatırım Bankaları','0');
+INSERT INTO [SETUP_BANK_TYPE_GROUPS]([BANK_TYPE],[QUATA_RATE]) Values( 'Özel Sermayeli Kalkınma ve Yatırım Bankaları','0');
+INSERT INTO [SETUP_BANK_TYPE_GROUPS]([BANK_TYPE],[QUATA_RATE]) Values( 'Yabancı Sermayeli Kalkınma ve Yatırım Bankaları','0');
+INSERT INTO [SETUP_BANK_TYPE_GROUPS]([BANK_TYPE],[QUATA_RATE]) Values( 'Katılım Bankaları','20');
+INSERT INTO [SETUP_BANK_TYPE_GROUPS]([BANK_TYPE],[QUATA_RATE]) Values( 'Kamu Sermayeli Mevduat Bankaları','0');
+

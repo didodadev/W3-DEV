@@ -1,0 +1,7 @@
+<cfquery name="GET_COMPANY_SIZE_CATS" datasource="#DSN#">
+	SELECT 
+		COMPANY_SIZE_CAT_ID,
+		COMPANY_SIZE_CAT 
+	FROM 
+		SETUP_COMPANY_SIZE_CATS
+</cfquery>

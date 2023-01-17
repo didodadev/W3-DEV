@@ -1,0 +1,5 @@
+INSERT INTO [SETUP_FIRM_TYPE]([FIRM_TYPE],[FIRM_TYPE_DETAIL]) Values( 'Büyük Mükellefler','Büyük Mükellefler');
+INSERT INTO [SETUP_FIRM_TYPE]([FIRM_TYPE],[FIRM_TYPE_DETAIL]) Values( 'Tam Tasdik','Tam Tasdik');
+INSERT INTO [SETUP_FIRM_TYPE]([FIRM_TYPE],[FIRM_TYPE_DETAIL]) Values( 'Kurumsal Mükellef','Kurumsal Mükellef');
+INSERT INTO [SETUP_FIRM_TYPE]([FIRM_TYPE],[FIRM_TYPE_DETAIL]) Values( 'Gerçek Kişi','Şahıs');
+INSERT INTO [SETUP_FIRM_TYPE]([FIRM_TYPE],[FIRM_TYPE_DETAIL]) Values( 'Yurt Dışı','Yurt Dışı');

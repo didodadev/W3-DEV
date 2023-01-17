@@ -1,0 +1,4 @@
+INSERT INTO [SETUP_SUPPORT]([SUPPORT_CAT]) Values( '7/24 Full Servis');
+INSERT INTO [SETUP_SUPPORT]([SUPPORT_CAT]) Values( 'Gold Destek');
+INSERT INTO [SETUP_SUPPORT]([SUPPORT_CAT]) Values( 'Silver Destek');
+

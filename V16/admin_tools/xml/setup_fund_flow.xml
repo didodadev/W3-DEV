@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FUND_FLOW_TABLE>
+			  <FUND_FLOW>
+				    <FUND_FLOW_ID>1</FUND_FLOW_ID>
+			  		<CODE>A</CODE>
+					<NAME>FON KAYNAKLARI</NAME>
+					<ACCOUNT_CODE>bos</ACCOUNT_CODE>
+				    <SIGN>b</SIGN>
+			  		<BA>1</BA>
+					<VIEW_AMOUNT_TYPE>2</VIEW_AMOUNT_TYPE>
+			 </FUND_FLOW>
+			  <FUND_FLOW>
+				    <FUND_FLOW_ID>2</FUND_FLOW_ID>
+			  		<CODE>A.01</CODE>
+					<NAME>Faaliyetlerden Sağlanan Kaynaklar</NAME>
+					<ACCOUNT_CODE>bos</ACCOUNT_CODE>
+				    <SIGN>b</SIGN>
+			  		<BA>1</BA>
+					<VIEW_AMOUNT_TYPE>2</VIEW_AMOUNT_TYPE>
+			 </FUND_FLOW>
+			  <FUND_FLOW>
+				    <FUND_FLOW_ID>3</FUND_FLOW_ID>
+			  		<CODE>A.01.01</CODE>
+					<NAME>Olağan Kar</NAME>
+					<ACCOUNT_CODE>120</ACCOUNT_CODE>
+				    <SIGN>+</SIGN>
+			  		<BA>0</BA>
+					<VIEW_AMOUNT_TYPE>0</VIEW_AMOUNT_TYPE>
+			 </FUND_FLOW>
+		  
+			  <FUND_FLOW>
+				    <FUND_FLOW_ID>4</FUND_FLOW_ID>
+			  		<CODE>A.01.02</CODE>
+					<NAME>Amortismanlar</NAME>
+					<ACCOUNT_CODE>150</ACCOUNT_CODE>
+				    <SIGN>+</SIGN>
+			  		<BA>0</BA>
+					<VIEW_AMOUNT_TYPE>0</VIEW_AMOUNT_TYPE>
+			 </FUND_FLOW>
+		  
+			  <FUND_FLOW>
+				    <FUND_FLOW_ID>5</FUND_FLOW_ID>
+			  		<CODE>A.01.03</CODE>
+					<NAME>Fon Çıkışı Gerektirmeyen Diğer Giderler</NAME>
+					<ACCOUNT_CODE>140</ACCOUNT_CODE>
+				    <SIGN>+</SIGN>
+			  		<BA>0</BA>
+					<VIEW_AMOUNT_TYPE>0</VIEW_AMOUNT_TYPE>
+			 </FUND_FLOW>
+		  
+			  <FUND_FLOW>
+				    <FUND_FLOW_ID>6</FUND_FLOW_ID>
+			  		<CODE>A.01.04</CODE>
+					<NAME>Fon Girişi Sağlamayan Gelirler</NAME>
+					<ACCOUNT_CODE>150</ACCOUNT_CODE>
+				    <SIGN>-</SIGN>
+			  		<BA>0</BA>
+					<VIEW_AMOUNT_TYPE>0</VIEW_AMOUNT_TYPE>
+			 </FUND_FLOW>
+		  
+			  <FUND_FLOW>
+				    <FUND_FLOW_ID>7</FUND_FLOW_ID>
+			  		<CODE>A.02</CODE>
+					<NAME>Olağandışı Faaliyetlerden Sağlanan Kaynaklar</NAME>
+					<ACCOUNT_CODE>bos</ACCOUNT_CODE>
+				    <SIGN>b</SIGN>
+			  		<BA>1</BA>
+					<VIEW_AMOUNT_TYPE>2</VIEW_AMOUNT_TYPE>
+			 </FUND_FLOW>
+		  
+			  <FUND_FLOW>
+				    <FUND_FLOW_ID>8</FUND_FLOW_ID>
+			  		<CODE>A.02.01</CODE>
+					<NAME>Olağandışı Kar</NAME>
+					<ACCOUNT_CODE>180</ACCOUNT_CODE>
+				    <SIGN>+</SIGN>
+			  		<BA>0</BA>
+					<VIEW_AMOUNT_TYPE>0</VIEW_AMOUNT_TYPE>
+			 </FUND_FLOW>
+		  
+			  <FUND_FLOW>
+				    <FUND_FLOW_ID>9</FUND_FLOW_ID>
+			  		<CODE>A.02.02</CODE>
+					<NAME>Fon Çıkışı Gerektirmeyen Diğer Gelirler</NAME>
+					<ACCOUNT_CODE>140</ACCOUNT_CODE>
+				    <SIGN>+</SIGN>
+			  		<BA>0</BA>
+					<VIEW_AMOUNT_TYPE>0</VIEW_AMOUNT_TYPE>
+			 </FUND_FLOW>
+		  
+			  <FUND_FLOW>
+				    <FUND_FLOW_ID>10</FUND_FLOW_ID>
+			  		<CODE>A.02.03</CODE>
+					<NAME>Fon Girişi Sağlamayan Gelirler </NAME>
+					<ACCOUNT_CODE>150</ACCOUNT_CODE>
+				    <SIGN>-</SIGN>
+			  		<BA>1</BA>
+					<VIEW_AMOUNT_TYPE>0</VIEW_AMOUNT_TYPE>
+			 </FUND_FLOW>
+		  
+			  <FUND_FLOW>
+				    <FUND_FLOW_ID>11</FUND_FLOW_ID>
+			  		<CODE>A.03</CODE>
+					<NAME>Dönen Varlıklar Tutarındaki Azalışlar</NAME>
+					<ACCOUNT_CODE>120</ACCOUNT_CODE>
+				    <SIGN>+</SIGN>
+			  		<BA>1</BA>
+					<VIEW_AMOUNT_TYPE>0</VIEW_AMOUNT_TYPE>
+			 </FUND_FLOW>
+		  
+			  <FUND_FLOW>
+				    <FUND_FLOW_ID>12</FUND_FLOW_ID>
+			  		<CODE>A.04</CODE>
+					<NAME>Duran Varlıklar Tutarındaki Azalışlar</NAME>
+					<ACCOUNT_CODE>130</ACCOUNT_CODE>
+				    <SIGN>+</SIGN>
+			  		<BA>1</BA>
+					<VIEW_AMOUNT_TYPE>0</VIEW_AMOUNT_TYPE>
+			 </FUND_FLOW>
+		  
+			  <FUND_FLOW>
+				    <FUND_FLOW_ID>13</FUND_FLOW_ID>
+			  		<CODE>A.05</CODE>
+					<NAME>Kısa Vadeli Yabancı Kaynaklardaki Azalışlar</NAME>
+					<ACCOUNT_CODE>140</ACCOUNT_CODE>
+				    <SIGN>+</SIGN>
+			  		<BA>1</BA>
+					<VIEW_AMOUNT_TYPE>0</VIEW_AMOUNT_TYPE>
+			 </FUND_FLOW>
+		  
+			  <FUND_FLOW>
+				    <FUND_FLOW_ID>14</FUND_FLOW_ID>
+			  		<CODE>A.06</CODE>
+					<NAME>Uzun Vadeli Yabancı Kaynaklardaki Artışlar</NAME>
+					<ACCOUNT_CODE>140</ACCOUNT_CODE>
+				    <SIGN>+</SIGN>
+			  		<BA>1</BA>
+					<VIEW_AMOUNT_TYPE>0</VIEW_AMOUNT_TYPE>
+			 </FUND_FLOW>
+		  
+			  <FUND_FLOW>
+				    <FUND_FLOW_ID>15</FUND_FLOW_ID>
+			  		<CODE>A.07</CODE>
+					<NAME>Sermaye Arttırımı</NAME>
+					<ACCOUNT_CODE>140</ACCOUNT_CODE>
+				    <SIGN>+</SIGN>
+			  		<BA>0</BA>
+					<VIEW_AMOUNT_TYPE>0</VIEW_AMOUNT_TYPE>
+			 </FUND_FLOW>
+		  
+			  <FUND_FLOW>
+				    <FUND_FLOW_ID>16</FUND_FLOW_ID>
+			  		<CODE>B</CODE>
+					<NAME>FON KULLANIMLARI</NAME>
+					<ACCOUNT_CODE>bos</ACCOUNT_CODE>
+				    <SIGN>b</SIGN>
+			  		<BA>1</BA>
+					<VIEW_AMOUNT_TYPE>2</VIEW_AMOUNT_TYPE>
+			 </FUND_FLOW>
+		  
+			  <FUND_FLOW>
+				    <FUND_FLOW_ID>17</FUND_FLOW_ID>
+			  		<CODE>B.01</CODE>
+					<NAME>Faaliyetlerle İlgili Kullanımlar</NAME>
+					<ACCOUNT_CODE>bos</ACCOUNT_CODE>
+				    <SIGN>b</SIGN>
+			  		<BA>1</BA>
+					<VIEW_AMOUNT_TYPE>2</VIEW_AMOUNT_TYPE>
+			 </FUND_FLOW>
+		  
+			  <FUND_FLOW>
+				    <FUND_FLOW_ID>18</FUND_FLOW_ID>
+			  		<CODE>B.01.01</CODE>
+					<NAME>Olağan Zarar</NAME>
+					<ACCOUNT_CODE>150</ACCOUNT_CODE>
+				    <SIGN>+</SIGN>
+			  		<BA>0</BA>
+					<VIEW_AMOUNT_TYPE>0</VIEW_AMOUNT_TYPE>
+			 </FUND_FLOW>
+		  
+			  <FUND_FLOW>
+				    <FUND_FLOW_ID>19</FUND_FLOW_ID>
+			  		<CODE>B.01.02</CODE>
+					<NAME>Amortismanlar</NAME>
+					<ACCOUNT_CODE>150</ACCOUNT_CODE>
+				    <SIGN>+</SIGN>
+			  		<BA>0</BA>
+					<VIEW_AMOUNT_TYPE>0</VIEW_AMOUNT_TYPE>
+			 </FUND_FLOW>
+		  
+			  <FUND_FLOW>
+				    <FUND_FLOW_ID>20</FUND_FLOW_ID>
+			  		<CODE>B.01.03</CODE>
+					<NAME>Fon Akışı Gerektirmeyen Diğer Giderler</NAME>
+					<ACCOUNT_CODE>150</ACCOUNT_CODE>
+				    <SIGN>+</SIGN>
+			  		<BA>0</BA>
+					<VIEW_AMOUNT_TYPE>0</VIEW_AMOUNT_TYPE>
+			 </FUND_FLOW>
+		  
+			  <FUND_FLOW>
+				    <FUND_FLOW_ID>21</FUND_FLOW_ID>
+			  		<CODE>B.01.04</CODE>
+					<NAME>Fon Girişi Sağlamayan Diğer Gelirler</NAME>
+					<ACCOUNT_CODE>150</ACCOUNT_CODE>
+				    <SIGN>-</SIGN>
+			  		<BA>0</BA>
+					<VIEW_AMOUNT_TYPE>0</VIEW_AMOUNT_TYPE>
+			 </FUND_FLOW>
+		  
+			  <FUND_FLOW>
+				    <FUND_FLOW_ID>22</FUND_FLOW_ID>
+			  		<CODE>B.02</CODE>
+					<NAME>Olağandışı Faaliyetlerle İlgili Kullanımlar</NAME>
+					<ACCOUNT_CODE>bos</ACCOUNT_CODE>
+				    <SIGN>b</SIGN>
+			  		<BA>1</BA>
+					<VIEW_AMOUNT_TYPE>2</VIEW_AMOUNT_TYPE>
+			 </FUND_FLOW>
+		  
+			  <FUND_FLOW>
+				    <FUND_FLOW_ID>23</FUND_FLOW_ID>
+			  		<CODE>B.02.01</CODE>
+					<NAME>Olağandışı Zarar</NAME>
+					<ACCOUNT_CODE>170</ACCOUNT_CODE>
+				    <SIGN>+</SIGN>
+			  		<BA>0</BA>
+					<VIEW_AMOUNT_TYPE>0</VIEW_AMOUNT_TYPE>
+			 </FUND_FLOW>
+		  
+			  <FUND_FLOW>
+				    <FUND_FLOW_ID>24</FUND_FLOW_ID>
+			  		<CODE>B.02.02</CODE>
+					<NAME>Fon Çıkışı Gerektirmeyen Giderler</NAME>
+					<ACCOUNT_CODE>170</ACCOUNT_CODE>
+				    <SIGN>+</SIGN>
+			  		<BA>0</BA>
+					<VIEW_AMOUNT_TYPE>0</VIEW_AMOUNT_TYPE>
+			 </FUND_FLOW>
+		  
+			  <FUND_FLOW>
+				    <FUND_FLOW_ID>25</FUND_FLOW_ID>
+			  		<CODE>B.03</CODE>
+					<NAME>Fon Girişi Sağlamayan Gelirler</NAME>
+					<ACCOUNT_CODE>500</ACCOUNT_CODE>
+				    <SIGN>-</SIGN>
+			  		<BA>1</BA>
+					<VIEW_AMOUNT_TYPE>0</VIEW_AMOUNT_TYPE>
+			 </FUND_FLOW>
+		  
+			  <FUND_FLOW>
+				    <FUND_FLOW_ID>26</FUND_FLOW_ID>
+			  		<CODE>B.04</CODE>
+					<NAME>Ödenen Taahhütler</NAME>
+					<ACCOUNT_CODE>bos</ACCOUNT_CODE>
+				    <SIGN>b</SIGN>
+			  		<BA>1</BA>
+					<VIEW_AMOUNT_TYPE>2</VIEW_AMOUNT_TYPE>
+			 </FUND_FLOW>
+		  
+			  <FUND_FLOW>
+				    <FUND_FLOW_ID>27</FUND_FLOW_ID>
+			  		<CODE>B.04.01</CODE>
+					<NAME>Bir Önceki Dönem Karından Ödenen</NAME>
+					<ACCOUNT_CODE>150</ACCOUNT_CODE>
+				    <SIGN>+</SIGN>
+			  		<BA>0</BA>
+					<VIEW_AMOUNT_TYPE>0</VIEW_AMOUNT_TYPE>
+			 </FUND_FLOW>
+		  
+			  <FUND_FLOW>
+				    <FUND_FLOW_ID>28</FUND_FLOW_ID>
+			  		<CODE>B.04.02</CODE>
+					<NAME>Duran Varlıkların Tutarındaki Artışlar</NAME>
+					<ACCOUNT_CODE>140</ACCOUNT_CODE>
+				    <SIGN>+</SIGN>
+			  		<BA>0</BA>
+					<VIEW_AMOUNT_TYPE>0</VIEW_AMOUNT_TYPE>
+			 </FUND_FLOW>
+		  
+			  <FUND_FLOW>
+				    <FUND_FLOW_ID>29</FUND_FLOW_ID>
+			  		<CODE>B.05</CODE>
+					<NAME>Dönen Varlıkların Tutarındaki Artışlar</NAME>
+					<ACCOUNT_CODE>150</ACCOUNT_CODE>
+				    <SIGN>+</SIGN>
+			  		<BA>0</BA>
+					<VIEW_AMOUNT_TYPE>0</VIEW_AMOUNT_TYPE>
+			 </FUND_FLOW>
+		  
+			  <FUND_FLOW>
+				    <FUND_FLOW_ID>30</FUND_FLOW_ID>
+			  		<CODE>B.06</CODE>
+					<NAME>Duran Varlıkların Tutarındaki Artışlar</NAME>
+					<ACCOUNT_CODE>140</ACCOUNT_CODE>
+				    <SIGN>+</SIGN>
+			  		<BA>0</BA>
+					<VIEW_AMOUNT_TYPE>0</VIEW_AMOUNT_TYPE>
+			 </FUND_FLOW>
+		  
+			  <FUND_FLOW>
+				    <FUND_FLOW_ID>31</FUND_FLOW_ID>
+			  		<CODE>B.07</CODE>
+					<NAME>Kısa Vadeli Yabancı Kaynaklardaki Azalışlar</NAME>
+					<ACCOUNT_CODE>160</ACCOUNT_CODE>
+				    <SIGN>+</SIGN>
+			  		<BA>0</BA>
+					<VIEW_AMOUNT_TYPE>0</VIEW_AMOUNT_TYPE>
+			 </FUND_FLOW>
+		  
+			  <FUND_FLOW>
+				    <FUND_FLOW_ID>32</FUND_FLOW_ID>
+			  		<CODE>B.08</CODE>
+					<NAME>Uzun Vadeli Yabancı Kaynaklardaki Azalışlar</NAME>
+					<ACCOUNT_CODE>170</ACCOUNT_CODE>
+				    <SIGN>+</SIGN>
+			  		<BA>0</BA>
+					<VIEW_AMOUNT_TYPE>0</VIEW_AMOUNT_TYPE>
+			 </FUND_FLOW>
+		  
+			  <FUND_FLOW>
+				    <FUND_FLOW_ID>33</FUND_FLOW_ID>
+			  		<CODE>B.09</CODE>
+					<NAME>Sermayedeki Azalışlar</NAME>
+					<ACCOUNT_CODE>600</ACCOUNT_CODE>
+				    <SIGN>+</SIGN>
+			  		<BA>0</BA>
+					<VIEW_AMOUNT_TYPE>1</VIEW_AMOUNT_TYPE>
+			 </FUND_FLOW>
+		  
+	   </FUND_FLOW_TABLE>

@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<OBJECT_PROPERTIES>
+	<OBJECT_PROPERTY>
+		<PROPERTY>x_detail_acc_card</PROPERTY>
+		<PROPERTY_DETAIL>Muhasebe Fişi Satır Açıklamalarında Çek Bilgileri Yazsın</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>select</PROPERTY_TYPE>
+		<PROPERTY_VALUES>1,0</PROPERTY_VALUES>
+		<PROPERTY_NAMES>Evet,Hayır</PROPERTY_NAMES>
+		<PROPERTY_DEFAULT>0</PROPERTY_DEFAULT>
+		<PROPERTY_HELP>Bu seçenek seçilirse muhasebe hareketinde çekin olduğu satırın açıklama satırında Ç.G.B.B.T.: Bodro numarası: Banka Adı: Banka Şubesi: Banka Hesap No şeklinde açıklama yazar.</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+	<OBJECT_PROPERTY>
+		<PROPERTY>x_account_type</PROPERTY>
+		<PROPERTY_DETAIL>Kredili Hesaplar Gelsin</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>select</PROPERTY_TYPE>
+		<PROPERTY_VALUES>1,0</PROPERTY_VALUES>
+		<PROPERTY_NAMES>Evet,Hayır</PROPERTY_NAMES>
+		<PROPERTY_DEFAULT>0</PROPERTY_DEFAULT>
+		<PROPERTY_HELP>Sadece Kredili Hesapların Seçilmesini Sağlar.</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+</OBJECT_PROPERTIES>

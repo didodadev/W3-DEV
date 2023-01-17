@@ -1,0 +1,5 @@
+INSERT INTO [SETUP_VISIT_STAGES]([VISIT_STAGE],[DETAIL]) Values( 'Planlama',' ');
+INSERT INTO [SETUP_VISIT_STAGES]([VISIT_STAGE],[DETAIL]) Values( 'Randevu Bekleniyor',' ');
+INSERT INTO [SETUP_VISIT_STAGES]([VISIT_STAGE],[DETAIL]) Values( 'Kesinleşti',' ');
+INSERT INTO [SETUP_VISIT_STAGES]([VISIT_STAGE],[DETAIL]) Values( 'İptal Edildi',' ');
+

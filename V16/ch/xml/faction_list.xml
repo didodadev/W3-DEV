@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SETUP_SITE>
+	<SETUPSITE>
+		<LINK_NAME>Ödeme Talebi Oluştur XML Setup</LINK_NAME> 
+		<LINK_FILE>ch.add_payment_invoice</LINK_FILE> 
+		<LINK_DETAIL>Ödeme Talebi Oluştur sayfasının ayarlarının düzenlenmesi</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Ödeme Takip XML Setup</LINK_NAME> 
+		<LINK_FILE>ch.list_duty_claim</LINK_FILE> 
+		<LINK_DETAIL>Ödeme Takip sayfasının ayarlarının düzenlenmesi</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Ödeme Performansı XML Setup</LINK_NAME> 
+		<LINK_FILE>ch.list_company_extre,ch.list_comp_extre,ch.list_extre,ch.dsp_make_age</LINK_FILE> 
+		<LINK_DETAIL>Ödeme Performansı ayarlarının düzenlenmesi</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Prim Ödeme XML Setup</LINK_NAME> 
+		<LINK_FILE>ch.form_add_premium_payment</LINK_FILE> 
+		<LINK_DETAIL>Prim Ödeme ayarlarının düzenlenmesi</LINK_DETAIL>
+	</SETUPSITE>	
+	<SETUPSITE>
+		<LINK_NAME>Vade Farkı Hesaplama XML Setup</LINK_NAME> 
+		<LINK_FILE>ch.form_add_due_diff_action</LINK_FILE> 
+		<LINK_DETAIL>Vade Farkı Hesaplama düzenlenmesi</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Dekont Ekleme- Güncelleme XML Setup</LINK_NAME> 
+		<LINK_FILE>ch.popup_form_add_debit_claim_note,ch.form_add_debit_claim_note,ch.popup_form_upd_debit_claim_note,ch.form_upd_debit_claim_note</LINK_FILE> 
+		<LINK_DETAIL>Dekont Sayfalarının Düzenlenmesi</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Cari Hareketler XML Setup</LINK_NAME> 
+		<LINK_FILE>ch.list_caris</LINK_FILE> 
+		<LINK_DETAIL>Cari Hareketler Listesi</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Cari Virman XML Setup</LINK_NAME> 
+		<LINK_FILE>ch.add_cari_to_cari</LINK_FILE> 
+		<LINK_DETAIL>Cari Virman Ekleme/Güncelleme</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Cari Kur Değerleme XML Setup</LINK_NAME> 
+		<LINK_FILE>ch.form_add_cari_rate_valuation</LINK_FILE>
+		<LINK_DETAIL>Cari Kur Değerleme XML Setup</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Toplu Cari Virman XML Setup</LINK_NAME> 
+		<LINK_FILE>ch.form_collacted_cari_virman</LINK_FILE>
+		<LINK_DETAIL>Toplu Cari Virman Ekleme/Güncelleme</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Toplu Dekont XML Setup</LINK_NAME> 
+		<LINK_FILE>ch.add_collacted_dekont,ch.upd_collacted_dekont</LINK_FILE>
+		<LINK_DETAIL>Toplu Dekont Ekleme/Güncelleme</LINK_DETAIL>
+	</SETUPSITE>
+</SETUP_SITE>

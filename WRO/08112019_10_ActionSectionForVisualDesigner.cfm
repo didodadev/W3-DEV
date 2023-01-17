@@ -1,0 +1,17 @@
+
+<!-- Description : Action Section colomn for Visual Designer table
+Developer: Esma Uysal
+Company : Workcube
+Destination: Main -->
+<querytag>
+    IF NOT EXISTS (SELECT 'Y' FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME = 'VISUAL_DESIGNER' AND COLUMN_NAME = 'ACTION_SECTION')
+    BEGIN
+        ALTER TABLE VISUAL_DESIGNER ADD
+        ACTION_SECTION nvarchar(50) NULL
+    END;
+    IF NOT EXISTS (SELECT 'Y' FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME = 'VISUAL_DESIGNER' AND COLUMN_NAME = 'RELATIVE_ID')
+    BEGIN
+        ALTER TABLE VISUAL_DESIGNER ADD
+        RELATIVE_ID int NULL
+    END;
+</querytag>

@@ -1,0 +1,31 @@
+<!-- Description : AssetPSpace Tablosu oluşturuldu.
+Developer: Emine Yılmaz
+Company : Workcube
+Destination: main -->
+<querytag>
+    IF NOT EXISTS (SELECT 'Y' FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME = 'ASSET_P_SPACE' AND TABLE_SCHEMA = '@_dsn_main_@')
+    BEGIN
+    CREATE TABLE [ASSET_P_SPACE](
+	[ASSET_P_SPACE_ID] [int] IDENTITY(1,1) NOT NULL,
+	[SPACE_CODE] [nvarchar](100) NULL,
+	[SPACE_NAME] [nvarchar](250) NULL,
+	[SPACE_DETAIL] [nvarchar](500) NULL,
+	[SPACE_WIDTH] [float] NULL,
+	[SPACE_LENGTH] [float] NULL,
+	[SPACE_HEIGHT] [float] NULL,
+	[SPACE_MEASURE] [int] NULL,
+	[RECORD_EMP] [int] NULL,
+	[RECORD_IP] [nvarchar](43) NULL,
+	[UPDATE_DATE] [datetime] NULL,
+	[UPDATE_IP] [nvarchar](43) NULL,
+	[UPDATE_EMP] [int] NULL,
+	[RECORD_DATE] [datetime] NULL,
+ CONSTRAINT [PK__ASSET_P___C8A49B569F32159B] PRIMARY KEY CLUSTERED 
+(
+	[ASSET_P_SPACE_ID] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+    END
+</querytag>
+ 

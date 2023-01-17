@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<OBJECT_PROPERTIES>
+	<OBJECT_PROPERTY>
+		<PROPERTY>x_select_cost_info</PROPERTY>
+		<PROPERTY_DETAIL>Masraf\Gelir Merkezi Seçilebilsin</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>select</PROPERTY_TYPE>
+		<PROPERTY_VALUES>1,0</PROPERTY_VALUES>
+		<PROPERTY_NAMES>Evet,Hayır</PROPERTY_NAMES>
+		<PROPERTY_DEFAULT>0</PROPERTY_DEFAULT>
+		<PROPERTY_HELP>Evet seçilirse ' Masraf\Gelir Merkezi ' filtre seçeneği olarak gelir.</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+	<OBJECT_PROPERTY>
+		<PROPERTY>x_project_info</PROPERTY>
+		<PROPERTY_DETAIL>Proje Sütunu Görünsün</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>select</PROPERTY_TYPE>
+		<PROPERTY_VALUES>1,0</PROPERTY_VALUES>
+		<PROPERTY_NAMES>Evet,Hayır</PROPERTY_NAMES>
+		<PROPERTY_DEFAULT>0</PROPERTY_DEFAULT>
+		<PROPERTY_HELP>Proje sütunu görünsün:Evet ise proje sütunu listeleme sayfasında görülür.</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+	<OBJECT_PROPERTY>
+		<PROPERTY>x_branch_info</PROPERTY>
+		<PROPERTY_DETAIL>Şube Sütunu Görünsün</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>select</PROPERTY_TYPE>
+		<PROPERTY_VALUES>1,0</PROPERTY_VALUES>
+		<PROPERTY_NAMES>Evet,Hayır</PROPERTY_NAMES>
+		<PROPERTY_DEFAULT>0</PROPERTY_DEFAULT>
+		<PROPERTY_HELP>Şube sütunu görünsün:Evet ise şube sütunu listeleme sayfasında görülür.</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+	<OBJECT_PROPERTY>
+		<PROPERTY>x_manuel_close</PROPERTY>
+		<PROPERTY_DETAIL>Manuel Kapama İşlem Linki gelsin.</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>select</PROPERTY_TYPE>
+		<PROPERTY_VALUES>1,0</PROPERTY_VALUES>
+		<PROPERTY_NAMES>Evet,Hayır</PROPERTY_NAMES>
+		<PROPERTY_DEFAULT>0</PROPERTY_DEFAULT>
+		<PROPERTY_HELP></PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+	<OBJECT_PROPERTY>
+        <PROPERTY>x_control_ims</PROPERTY>
+        <PROPERTY_DETAIL>Mikro Bölge Koduna Göre Listeleme Yapılsın mı?</PROPERTY_DETAIL>
+        <PROPERTY_TYPE>select</PROPERTY_TYPE>
+        <PROPERTY_VALUES>1,0</PROPERTY_VALUES>
+        <PROPERTY_NAMES>Evet,Hayır</PROPERTY_NAMES>
+        <PROPERTY_DEFAULT>0</PROPERTY_DEFAULT>
+        <PROPERTY_HELP>Şirket akış parametrelerinde 'Satış Bölgelerine Göre Müşteri Erişim Kontrolu Yapılsın mı?' Evet seçildiğinde listelemede mikro bölge koduna göre erişim kontrolünü aktif eder.</PROPERTY_HELP>
+    </OBJECT_PROPERTY>
+</OBJECT_PROPERTIES>

@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<OBJECT_PROPERTIES>
+	<OBJECT_PROPERTY>
+		<PROPERTY>x_select_type_info</PROPERTY>
+		<PROPERTY_DETAIL>Tahsilat\Ödeme Tipi Seçilebilsin</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>select</PROPERTY_TYPE>
+		<PROPERTY_VALUES>1,0</PROPERTY_VALUES>
+		<PROPERTY_NAMES>Evet,Hayır</PROPERTY_NAMES>
+		<PROPERTY_DEFAULT>0</PROPERTY_DEFAULT>
+		<PROPERTY_HELP>Evet seçildiği takdirde filtreleme ekranına ödeme ve tahsilat tipleri gelmektedir. Ödeme ve tahsilat tipleri Sistem>Parametreler>Ek bilgi alanındaki özel tanımlar ekranından gelmektedir.</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+</OBJECT_PROPERTIES>

@@ -1,0 +1,16 @@
+<cfquery name="GET_PRIZE" datasource="#dsn#">
+	SELECT
+		EP.*,
+		E.EMPLOYEE_NAME,
+		E.EMPLOYEE_SURNAME,
+		E.EMPLOYEE_ID
+ 	FROM
+		EMPLOYEES_PRIZE EP,
+		EMPLOYEES E
+	WHERE 
+		E.EMPLOYEE_ID = EP.PRIZE_TO
+		AND
+		EP.PRIZE_ID = #attributes.PRIZE_ID#
+</cfquery>
+
+

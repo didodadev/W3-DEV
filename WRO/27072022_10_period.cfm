@@ -1,0 +1,17 @@
+<!-- Description : Holistic 22.2 sürümü tablolar ve kolon değişiklikleri
+Developer: Fatih Kara
+Company : Workcube
+Destination: Period-->
+<querytag>
+
+    IF NOT EXISTS (SELECT 'Y' FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_SCHEMA = '@_dsn_period_@' AND TABLE_NAME = 'BUDGET_TRANSFER_DEMAND' AND COLUMN_NAME = 'RESPONSIBLE_EMP')
+    BEGIN
+        ALTER TABLE BUDGET_TRANSFER_DEMAND ADD RESPONSIBLE_EMP int;
+    END;
+
+    IF NOT EXISTS (SELECT 'Y' FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_SCHEMA = '@_dsn_period_@' AND TABLE_NAME = 'BUDGET_TRANSFER_DEMAND' AND COLUMN_NAME = 'REFERENCE')
+    BEGIN
+        ALTER TABLE BUDGET_TRANSFER_DEMAND ADD REFERENCE nvarchar(50);
+    END;
+
+</querytag>

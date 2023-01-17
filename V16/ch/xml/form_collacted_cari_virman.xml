@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<OBJECT_PROPERTIES>
+	<OBJECT_PROPERTY>
+		<PROPERTY>x_show_branch</PROPERTY>
+		<PROPERTY_DETAIL>Borçlu/Alacaklı Şube Gösterilsin mi?</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>select</PROPERTY_TYPE>
+		<PROPERTY_VALUES>1,0</PROPERTY_VALUES>
+		<PROPERTY_NAMES>Evet,Hayır</PROPERTY_NAMES>
+		<PROPERTY_DEFAULT>0</PROPERTY_DEFAULT>
+		<PROPERTY_HELP>Borçlu ve Alacaklı Şube Seçilebilsin:Borçlu ve alacaklı şube filtrelerinin görülmesini sağlar.</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+	<OBJECT_PROPERTY>
+		<PROPERTY>x_imperative_proje</PROPERTY>
+		<PROPERTY_DETAIL>Borçlu/Alacaklı Proje Zorunlu Olsun mu?</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>select</PROPERTY_TYPE>
+		<PROPERTY_VALUES>1,0</PROPERTY_VALUES>
+		<PROPERTY_NAMES>Evet,Hayır</PROPERTY_NAMES>
+		<PROPERTY_DEFAULT>0</PROPERTY_DEFAULT>
+		<PROPERTY_HELP>Borçlu ve Alacaklı Proje Zorunlu Olsun mu?:Evet ise Borçlu ve alacaklı proje inputlarının zorunlu olmasını sağlar.</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+</OBJECT_PROPERTIES>

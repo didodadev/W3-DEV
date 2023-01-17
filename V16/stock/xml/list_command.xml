@@ -1,0 +1,203 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<OBJECT_PROPERTIES>
+	<OBJECT_PROPERTY>
+		<PROPERTY>x_is_date_diff_documentdate</PROPERTY>
+		<PROPERTY_DETAIL>İşlem Tarihi Aralığı 7 Günden Fazla Olamaz</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>select</PROPERTY_TYPE>
+		<PROPERTY_VALUES>1,0</PROPERTY_VALUES>
+		<PROPERTY_NAMES>Evet,Hayır</PROPERTY_NAMES>
+		<PROPERTY_DEFAULT>1</PROPERTY_DEFAULT>
+		<PROPERTY_HELP>Evet olarak seçilirse; İşlem Başlangıç Tarihi ve İşlem Bitiş Tarihi filtreleri arasında 7 günden fazla fark olamaz.</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+	<OBJECT_PROPERTY>
+		<PROPERTY>x_is_startdate_diff_period_documentdate</PROPERTY>
+		<PROPERTY_DETAIL>İşlem Başlangıç Tarihi Önceki Dönem Başı Olsun</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>select</PROPERTY_TYPE>
+		<PROPERTY_VALUES>1,0</PROPERTY_VALUES>
+		<PROPERTY_NAMES>Evet,Hayır</PROPERTY_NAMES>
+		<PROPERTY_DEFAULT>0</PROPERTY_DEFAULT>
+		<PROPERTY_HELP>Evet olarak seçildiğinde İşlem Başlangıç Tarihi, bir önceki dönemin ilk günü olarak default seçili gelir.</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+	<OBJECT_PROPERTY>
+		<PROPERTY>x_is_finishdate_diff_period_documentdate</PROPERTY>
+		<PROPERTY_DETAIL>İşlem Bitiş Tarihi Dönem Sonu Olsun</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>select</PROPERTY_TYPE>
+		<PROPERTY_VALUES>1,0</PROPERTY_VALUES>
+		<PROPERTY_NAMES>Evet,Hayır</PROPERTY_NAMES>
+		<PROPERTY_DEFAULT>0</PROPERTY_DEFAULT>
+		<PROPERTY_HELP>"İşlem Başlangıç Tarihi Önceki Dönem Başı Olsun" seçeneği Evet seçildiğinde çalışır.
+Bu seçenek Evet olarak seçildiğinde listeleme sayfasında İşlem Bitiş Tarihi default olarak içinde bulunulan dönemin son günü gelir.</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+	<OBJECT_PROPERTY>
+		<PROPERTY>x_is_date_diff</PROPERTY>
+		<PROPERTY_DETAIL>Teslim Tarih Aralığı 7 Günden Fazla Olamaz</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>select</PROPERTY_TYPE>
+		<PROPERTY_VALUES>1,0</PROPERTY_VALUES>
+		<PROPERTY_NAMES>Evet,Hayır</PROPERTY_NAMES>
+		<PROPERTY_DEFAULT>1</PROPERTY_DEFAULT>
+		<PROPERTY_HELP>Evet olarak seçilirse; Teslim Başlangıç Tarihi ve Teslim Bitiş Tarihi filtreleri arasında 7 günden fazla fark olamaz.</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+	<OBJECT_PROPERTY>
+		<PROPERTY>x_is_startdate_diff_period</PROPERTY>
+		<PROPERTY_DETAIL>Teslim Başlangıç Tarihi Önceki Dönem Başı Olsun</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>select</PROPERTY_TYPE>
+		<PROPERTY_VALUES>1,0</PROPERTY_VALUES>
+		<PROPERTY_NAMES>Evet,Hayır</PROPERTY_NAMES>
+		<PROPERTY_DEFAULT>0</PROPERTY_DEFAULT>
+		<PROPERTY_HELP>Evet olarak seçildiğinde Teslim Başlangıç Tarihi, bir önceki dönemin ilk günü olarak default seçili gelir.</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+	<OBJECT_PROPERTY>
+		<PROPERTY>x_is_finishdate_diff_period</PROPERTY>
+		<PROPERTY_DETAIL>Teslim Bitiş Tarihi Dönem Sonu Olsun</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>select</PROPERTY_TYPE>
+		<PROPERTY_VALUES>1,0</PROPERTY_VALUES>
+		<PROPERTY_NAMES>Evet,Hayır</PROPERTY_NAMES>
+		<PROPERTY_DEFAULT>0</PROPERTY_DEFAULT>
+		<PROPERTY_HELP>"Teslim Başlangıç Tarihi Önceki Dönem Başı Olsun" seçeneği Evet seçildiğinde çalışır.
+Bu seçenek Evet olarak seçildiğinde listeleme sayfasında Teslim Bitiş Tarihi default olarak içinde bulunulan dönemin son günü gelir.</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+	<OBJECT_PROPERTY>
+		<PROPERTY>x_currency_is_ship</PROPERTY>
+		<PROPERTY_DETAIL>Aşama Sevk Seçili Gelsin</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>select</PROPERTY_TYPE>
+		<PROPERTY_VALUES>1,0</PROPERTY_VALUES>
+		<PROPERTY_NAMES>Evet,Hayır</PROPERTY_NAMES>
+		<PROPERTY_DEFAULT>0</PROPERTY_DEFAULT>
+		<PROPERTY_HELP>Evet olarak seçildiğinde listeleme sayfasında Aşama  filtresi default olarak "Sevk" seçili gelir.</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+	<OBJECT_PROPERTY>
+		<PROPERTY>x_show_surplus_delivery</PROPERTY>
+		<PROPERTY_DETAIL>Fazla Teslimat Bilgileri Gelsin</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>select</PROPERTY_TYPE>
+		<PROPERTY_VALUES>1,0</PROPERTY_VALUES>
+		<PROPERTY_NAMES>Evet,Hayır</PROPERTY_NAMES>
+		<PROPERTY_DEFAULT>1</PROPERTY_DEFAULT>
+		<PROPERTY_HELP>Evet olarak seçildiğinde Aşama filtresine Fazla Teslimat seçeneği eklenir.</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+	<OBJECT_PROPERTY>
+		<PROPERTY>x_show_production_currency</PROPERTY>
+		<PROPERTY_DETAIL>Üretim Bilgileri Gelsin</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>select</PROPERTY_TYPE>
+		<PROPERTY_VALUES>1,0</PROPERTY_VALUES>
+		<PROPERTY_NAMES>Evet,Hayır</PROPERTY_NAMES>
+		<PROPERTY_DEFAULT>1</PROPERTY_DEFAULT>
+		<PROPERTY_HELP>Evet olarak seçildiğinde Aşama filtresine Üretim seçeneği eklenir.</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+	<OBJECT_PROPERTY>
+		<PROPERTY>x_show_open_currency</PROPERTY>
+		<PROPERTY_DETAIL>Açık Sipariş Satırları Gelsin</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>select</PROPERTY_TYPE>
+		<PROPERTY_VALUES>1,0</PROPERTY_VALUES>
+		<PROPERTY_NAMES>Evet,Hayır</PROPERTY_NAMES>
+		<PROPERTY_DEFAULT>0</PROPERTY_DEFAULT>
+		<PROPERTY_HELP>Evet seçildiğinde satır aşaması Açık olanların da listelenmesi sağlanır.</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+	<OBJECT_PROPERTY>
+		<PROPERTY>x_equipment_planning_info</PROPERTY>
+		<PROPERTY_DETAIL>Emirler Listesi Planlama Bazında Görünsün</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>select</PROPERTY_TYPE>
+		<PROPERTY_VALUES>1,0</PROPERTY_VALUES>
+		<PROPERTY_NAMES>Evet,Hayır</PROPERTY_NAMES>
+		<PROPERTY_DEFAULT>0</PROPERTY_DEFAULT>
+		<PROPERTY_HELP>Evet olarak seçildiğinde Belge Bazında/Satır Bazında filtresine "Sevkiyat Bazında" filtresi eklenir ve strateji bazında listeleme yapılması sağlanır.</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+	<OBJECT_PROPERTY>
+		<PROPERTY>x_equipment_planning_relation_member</PROPERTY>
+		<PROPERTY_DETAIL>Ekip Planlamada Cari Bazında İlişki Kurulsun</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>select</PROPERTY_TYPE>
+		<PROPERTY_VALUES>1,0</PROPERTY_VALUES>
+		<PROPERTY_NAMES>Evet,Hayır</PROPERTY_NAMES>
+		<PROPERTY_DEFAULT>0</PROPERTY_DEFAULT>
+		<PROPERTY_HELP>Evet olarak seçildiğinde; ekip planlarken eğer cari seçilmiş ise, Emirlerde de bu carilerin seçilip seçilmediğine göre kontrol yapılarak Sevk Planı girilmesi engellenir.</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+	<OBJECT_PROPERTY>
+		<PROPERTY>x_department_search</PROPERTY>
+		<PROPERTY_DETAIL>Depo Filtresi Satır Bazında Arasın</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>select</PROPERTY_TYPE>
+		<PROPERTY_VALUES>1,0</PROPERTY_VALUES>
+		<PROPERTY_NAMES>Evet,Hayır</PROPERTY_NAMES>
+		<PROPERTY_DEFAULT>0</PROPERTY_DEFAULT>
+		<PROPERTY_HELP>Evet olarak işaretlenirse; belgelerin satırlarında girilmiş olan depolara göre Satır Bazında filtreleme yapılır.</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+	<OBJECT_PROPERTY>
+		<PROPERTY>x_is_location_info</PROPERTY>
+		<PROPERTY_DETAIL>Lokasyonlar Görünsün</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>select</PROPERTY_TYPE>
+		<PROPERTY_VALUES>1,0</PROPERTY_VALUES>
+		<PROPERTY_NAMES>Evet,Hayır</PROPERTY_NAMES>
+		<PROPERTY_DEFAULT>0</PROPERTY_DEFAULT>
+		<PROPERTY_HELP>Evet olarak seçildiğinde listeleme sayfasında gelen Giriş Depo ve Çıkış Depo sütunlarında depolarla birlikte depoların işlem yapılan lokasyonları gösterilir.</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+	<OBJECT_PROPERTY>
+		<PROPERTY>x_is_row_amount</PROPERTY>
+		<PROPERTY_DETAIL>Satır Bazında Listelemede Miktar Görünsün</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>select</PROPERTY_TYPE>
+		<PROPERTY_VALUES>1,0</PROPERTY_VALUES>
+		<PROPERTY_NAMES>Evet,Hayır</PROPERTY_NAMES>
+		<PROPERTY_DEFAULT>0</PROPERTY_DEFAULT>
+		<PROPERTY_HELP>Evet olarak seçilirse "Satır Bazında" listeleme yapıldığında Miktar sütunu açılır. </PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+	<OBJECT_PROPERTY>
+		<PROPERTY>x_is_row_unit</PROPERTY>
+		<PROPERTY_DETAIL>Satır Bazında Listelemede Birim Görünsün</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>select</PROPERTY_TYPE>
+		<PROPERTY_VALUES>1,0</PROPERTY_VALUES>
+		<PROPERTY_NAMES>Evet,Hayır</PROPERTY_NAMES>
+		<PROPERTY_DEFAULT>0</PROPERTY_DEFAULT>
+		<PROPERTY_HELP>Evet olarak seçilirse Satır Bazında listeleme yapıldığında Birim sütunu açılır.</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+	<OBJECT_PROPERTY>
+		<PROPERTY>x_is_row_detail</PROPERTY>
+		<PROPERTY_DETAIL>Satır Bazında Listelemede Satır Açıklaması Görünsün</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>select</PROPERTY_TYPE>
+		<PROPERTY_VALUES>1,0</PROPERTY_VALUES>
+		<PROPERTY_NAMES>Evet,Hayır</PROPERTY_NAMES>
+		<PROPERTY_DEFAULT>0</PROPERTY_DEFAULT>
+		<PROPERTY_HELP>Evet olarak seçilirse Satır Bazında listeleme yapıldığında "Açıklama" sütunu açılır.</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+	<OBJECT_PROPERTY>
+		<PROPERTY>x_show_product_cat_list</PROPERTY>
+		<PROPERTY_DETAIL>Listede Görünecek Ürünlerin Kategori Idleri</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>input</PROPERTY_TYPE>
+		<PROPERTY_VALUES></PROPERTY_VALUES>
+		<PROPERTY_NAMES>Evet,Hayır</PROPERTY_NAMES>
+		<PROPERTY_DEFAULT></PROPERTY_DEFAULT>
+		<PROPERTY_HELP>Buraya İlgili Kategori Idleri Girilir, Birden Fazla Id Girilebilir, İfadeler Virgül İle Ayrılmalıdır. Nümerik Değerler Olmalıdır.</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+	<OBJECT_PROPERTY>
+		<PROPERTY>x_deliverdate_hide_company</PROPERTY>
+		<PROPERTY_DETAIL>Teslim Tarihi Görünmeyecek Şirket Idleri</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>input</PROPERTY_TYPE>
+		<PROPERTY_VALUES></PROPERTY_VALUES>
+		<PROPERTY_NAMES>Evet,Hayır</PROPERTY_NAMES>
+		<PROPERTY_DEFAULT></PROPERTY_DEFAULT>
+		<PROPERTY_HELP>Buraya İlgili Şirket Idleri Girilir, Birden Fazla Id Girilebilir, İfadeler Virgül İle Ayrılmalıdır. Nümerik Değerler Olmalıdır.</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+	<OBJECT_PROPERTY>
+		<PROPERTY>x_productiondate_hide_company</PROPERTY>
+		<PROPERTY_DETAIL>İş Emri Tarihi Görünmeyecek Şirket Idleri</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>input</PROPERTY_TYPE>
+		<PROPERTY_VALUES></PROPERTY_VALUES>
+		<PROPERTY_NAMES>Evet,Hayır</PROPERTY_NAMES>
+		<PROPERTY_DEFAULT></PROPERTY_DEFAULT>
+		<PROPERTY_HELP>Buraya İlgili Şirket Idleri Girilir, Birden Fazla Id Girilebilir, İfadeler Virgül İle Ayrılmalıdır. Nümerik Değerler Olmalıdır.</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+	<OBJECT_PROPERTY>
+		<PROPERTY>x_show_list_order_row_id</PROPERTY>
+		<PROPERTY_DETAIL>Listede Sipariş Aşama ID (ORDER_ROW_ID) si Gösterilsin</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>select</PROPERTY_TYPE>
+		<PROPERTY_VALUES>1,0</PROPERTY_VALUES>
+		<PROPERTY_NAMES>Evet,Hayır</PROPERTY_NAMES>
+		<PROPERTY_DEFAULT>0</PROPERTY_DEFAULT>
+		<PROPERTY_HELP>Sevkiyat Bazında Listelemede Sipariş Satır ID sinin Görüntülenmesini Sağlar.</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+	<OBJECT_PROPERTY>
+		<PROPERTY>xml_order_currency_id</PROPERTY>
+		<PROPERTY_DETAIL>Onaylanmış Sipariş Aşama Id</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>input</PROPERTY_TYPE>
+		<PROPERTY_VALUES></PROPERTY_VALUES>
+		<PROPERTY_NAMES>Evet,Hayır</PROPERTY_NAMES>
+		<PROPERTY_DEFAULT></PROPERTY_DEFAULT>
+		<PROPERTY_HELP>Buraya İlgili Onaylanmış Sipariş Aşaması Idleri Girilir, Birden Fazla Id Girilebilir, İfadeler Virgül İle Ayrılmalıdır. Nümerik Değerler Olmalıdır.</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+</OBJECT_PROPERTIES>

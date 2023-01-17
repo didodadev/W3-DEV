@@ -1,0 +1,16 @@
+<cfquery name="GET_ALL_QUIZ" datasource="#dsn#">
+	SELECT
+		EQU.QUIZ_HEAD,
+		EQU.QUIZ_ID,
+		IS_TRAINER,
+		COMMETHOD_ID,
+		IS_ACTIVE
+	FROM
+		EMPLOYEE_QUIZ EQU 
+	WHERE
+		IS_EDUCATION = 1 OR 
+		IS_TRAINER = 1
+	ORDER BY
+		EQU.QUIZ_HEAD
+</cfquery>
+

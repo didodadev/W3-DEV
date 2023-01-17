@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SETUP_SITE>
+	<SETUPSITE>
+		<LINK_NAME>Kurum İçi Wiki</LINK_NAME> 
+		<LINK_FILE>helpdesk.wiki</LINK_FILE> 
+		<LINK_DETAIL>Kurum içi wiki xml setup</LINK_DETAIL>
+	</SETUPSITE>
+</SETUP_SITE>

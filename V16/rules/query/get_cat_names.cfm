@@ -1,0 +1,12 @@
+﻿<cfquery name="GET_CAT_NAMES" datasource="#dsn#">
+	SELECT
+		CONTENTCAT,
+		CONTENTCAT_ID 
+	FROM
+		CONTENT_CAT
+	WHERE
+		IS_RULE <> 1 AND
+		LANGUAGE_ID = '#SESSION.EP.LANGUAGE#'
+	ORDER BY
+		CONTENTCAT
+</cfquery>

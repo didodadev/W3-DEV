@@ -1,0 +1,25 @@
+<mxEditor>
+	<include name="/JS/mxgraph/appprocmain/config/wfeditor-commons.xml"/>
+	<ui>
+		<add as="graph" element="graph"
+			style="left:70px;right:20px;top:20px;bottom:40px"/>
+		<add as="status" element="status"
+			style="height:20px;bottom:20px;left:20px;right:20px"/>
+		<add as="toolbar" x="56" y="70" width="50" style="padding:5px;padding-top:8px;padding-right:0px;"/>
+	</ui>
+	<Array as="templates">
+		<add as="mainprocess">
+			<Shape label="" href="" id="1" title="Process" kind="mainprocess" serverid="0">
+				<mxCell vertex="1" shape="mainprocess">
+					<mxGeometry as="geometry" width="150" height="80" />
+				</mxCell>
+			</Shape>
+		</add>
+	</Array>
+	<mxGraph as="graph">
+		<include name="/JS/mxgraph/appprocmain/config/wfgraph-commons.xml"/>
+	</mxGraph>
+	<mxDefaultToolbar as="toolbar">
+		<include name="/JS/mxgraph/appprocmain/config/wftoolbar-commons.xml"/>
+	</mxDefaultToolbar>
+</mxEditor>

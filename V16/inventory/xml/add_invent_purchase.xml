@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<OBJECT_PROPERTIES>
+	<OBJECT_PROPERTY>
+		<PROPERTY>xml_is_department</PROPERTY>
+		<PROPERTY_DETAIL>Muhasebe Fişi İçin Departman Seçilebilsin</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>select</PROPERTY_TYPE>
+		<PROPERTY_VALUES>0,1,2</PROPERTY_VALUES>
+		<PROPERTY_NAMES>Hayır,Evet,Zorunlu</PROPERTY_NAMES>
+		<PROPERTY_DEFAULT>0</PROPERTY_DEFAULT>
+		<PROPERTY_HELP>Faturada Muhasebe İşlemi için Departman Seçilebilir. Zorunlu Seçilirse Departman Bilgisi Boş Bırakılmaz.</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+	<OBJECT_PROPERTY>
+		<PROPERTY>xml_control_payment_plan_status</PROPERTY>
+		<PROPERTY_DETAIL>Ödeme Planı Otomatik Güncellensin</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>select</PROPERTY_TYPE>
+		<PROPERTY_VALUES>1,0</PROPERTY_VALUES>
+		<PROPERTY_NAMES>Evet,Hayır</PROPERTY_NAMES>
+		<PROPERTY_DEFAULT>0</PROPERTY_DEFAULT>
+		<PROPERTY_HELP>Hayır Seçilirse ve Fatura Güncellendiğinde Gelen 'Güncellediğiniz Faturanın Ödeme Planı Yeniden Oluşturucaktır' Uyarısında İptal Seçilirse, Ödeme Planı Güncellenmeden Fatura Güncellenir.</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+	<OBJECT_PROPERTY>
+		<PROPERTY>x_kdv_add_to_otv</PROPERTY>
+		<PROPERTY_DETAIL>ÖTV oranı, KDV Matrahına Eklensin</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>select</PROPERTY_TYPE>
+		<PROPERTY_VALUES>0,1</PROPERTY_VALUES>
+		<PROPERTY_NAMES>Hayır,Evet</PROPERTY_NAMES>
+		<PROPERTY_DEFAULT>0</PROPERTY_DEFAULT>
+		<PROPERTY_HELP>Belirtilen ÖTV oranının KDV matrahı üzerinden hesaplanmasını sağlar.</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+	<OBJECT_PROPERTY>
+		<PROPERTY>xml_project_require</PROPERTY>
+		<PROPERTY_DETAIL>Belgede Proje Alanı Zorunlu Olsun</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>select</PROPERTY_TYPE>
+		<PROPERTY_VALUES>1,0</PROPERTY_VALUES>
+		<PROPERTY_NAMES>Evet,Hayır</PROPERTY_NAMES>
+		<PROPERTY_DEFAULT>0</PROPERTY_DEFAULT>
+		<PROPERTY_HELP></PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+</OBJECT_PROPERTIES>

@@ -1,0 +1,9 @@
+<cfquery name="GET_VOCATION_TYPE" datasource="#DSN#">
+	SELECT
+		VOCATION_TYPE_ID,
+		VOCATION_TYPE
+	FROM
+		SETUP_VOCATION_TYPE
+	ORDER BY
+		VOCATION_TYPE
+</cfquery>

@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<OBJECT_PROPERTIES>
+  <OBJECT_PROPERTY>
+		<PROPERTY>x_show_visit_analyse_form</PROPERTY>
+		<PROPERTY_DETAIL>Ziyaret Formu Popup Olarak Açılsın</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>select</PROPERTY_TYPE>
+		<PROPERTY_VALUES>1,0</PROPERTY_VALUES>
+		<PROPERTY_NAMES>Evet,Hayır</PROPERTY_NAMES>
+		<PROPERTY_DEFAULT>0</PROPERTY_DEFAULT>
+		<PROPERTY_HELP>Ziyaret Bilgilerinde Analiz Formu Varsa Popup Olarak Açılmasını Sağlar.</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+	<OBJECT_PROPERTY>
+		<PROPERTY>xml_multiple_comp</PROPERTY>
+		<PROPERTY_DETAIL>Sadece Şirket Çalışanları Görsün Seçeneğinde Çoklu Şirket Seçeneği Gelsin mi?</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>select</PROPERTY_TYPE>
+		<PROPERTY_VALUES>1,0</PROPERTY_VALUES>
+		<PROPERTY_NAMES>Gelsin,Gelmesin</PROPERTY_NAMES>
+		<PROPERTY_DEFAULT>0</PROPERTY_DEFAULT>
+		<PROPERTY_HELP></PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+</OBJECT_PROPERTIES>

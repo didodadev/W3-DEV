@@ -1,0 +1,37 @@
+<!-- Description : Çalışan Eğitim bilgileri tablosuna Eğitim dili oranı alannı açıldı.
+Developer: Gülbahar Inan
+Company : Workcube
+Destination: Main -->
+<querytag>
+    IF NOT EXISTS ( SELECT 'Y' FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME='EMPLOYEES_APP_EDU_INFO' AND COLUMN_NAME='EDU_LANG_RATE')
+    BEGIN
+        ALTER TABLE EMPLOYEES_APP_EDU_INFO ADD
+        EDU_LANG_RATE float null
+    END  
+    IF NOT EXISTS ( SELECT 'Y' FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME='EMPLOYEES_APP_LANGUAGE' AND COLUMN_NAME='PAPER_FINISH_DATE')
+    BEGIN
+        ALTER TABLE EMPLOYEES_APP_LANGUAGE ADD
+        PAPER_FINISH_DATE datetime null
+    END  
+    IF NOT EXISTS ( SELECT 'Y' FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_NAME='SETUP_LANGUAGES_DOCUMENTS' AND INFORMATION_SCHEMA.TABLES.TABLE_SCHEMA <> 'dbo')
+    BEGIN
+            CREATE TABLE [SETUP_LANGUAGES_DOCUMENTS](
+            [DOCUMENT_ID] [int] IDENTITY(1,1) NOT NULL,
+            [DOCUMENT_NAME] [nvarchar](43) NULL,
+            [DOCUMENT_SHORT_NAME] [nvarchar](43) NULL,
+            [DOCUMENT_PERIOD_VALID] [nvarchar](50) NULL,
+            [DOCUMENT_PERIOD_VALID_TYPE] [nvarchar](50) NULL,
+            [IS_ACTIVE] [bit] NULL,
+            [RECORD_DATE] [datetime] NULL,
+            [RECORD_EMP] [int] NULL,
+            [RECORD_IP] [nvarchar](50) NULL,
+            [UPDATE_DATE] [datetime] NULL,
+            [UPDATE_EMP] [int] NULL,
+            [UPDATE_IP] [nvarchar](50) NULL,
+        CONSTRAINT [PK_SETUP_LANGUAGES_DOCUMENTS_DOCUMENT_ID] PRIMARY KEY CLUSTERED 
+        (
+            [DOCUMENT_ID] ASC
+        )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+        ) ON [PRIMARY]
+    END  
+</querytag>

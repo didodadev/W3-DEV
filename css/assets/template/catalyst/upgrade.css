@@ -1,0 +1,292 @@
+    .pdn-l-0{
+        padding-left:0 !important;
+    }
+    .pdn-r-0{
+        padding-right:0 !important;
+    }
+    .mrg-l-0{
+        margin-left:0 !important;
+    }
+    .mrg-r-0{
+        margin-right:0 !important;
+    }
+    .flt-l{
+        float:left !important;
+    }
+    .flt-r{
+        float:right !important;
+    }
+    .txt-l{
+        text-align: left !important;
+    }
+    .txt-r{
+        text-align: right !important;
+    }
+    #workcube_upgrade .header{
+        height: auto;
+    }
+    #workcube_upgrade .header img,
+    #workcube_upgrade .header h3{
+        float: left;
+    }
+
+    #workcube_upgrade .header h3{
+        padding: 13px;
+    }
+
+    .release_info > h4{
+        color: #333;
+        margin: 0 0 20px 0;
+        padding-bottom: 10px;
+        border-bottom: solid 1px #e0e0e0;
+    }
+    .release_info > h4 a{
+        float: right;
+        font-size: 15px;
+        color: #ff7400;
+    }
+    .release_info ol{
+        margin: 0;
+        padding: 30px;
+    }
+
+    .release_info ol li{
+        margin-top: 7px;    
+    }
+
+    .rd_title{
+        background-color: #f1f1f1;
+        border-radius: 10px;
+        padding: 7px;
+        color: #333;
+        font-size: 14px;
+        box-shadow: 0 0 2px #333;
+    }
+    .br_title{
+        padding: 7px;
+        color: #333;
+        font-size: 14px;
+    }
+    .release_notes{
+        line-height: 24px;
+        font-size : 15px;
+        padding:10px 0;
+    }
+
+    .warning{
+        margin-top:20px;
+    }
+
+        .warningTitle{
+            color: red;
+            font-weight: bold;
+            padding: 23px 0;
+            border-right: solid 1px #c7c7c7;
+        }
+
+        .warningContent{
+            padding:10px 0;
+        }
+
+            .warningContent ul{
+                margin:0;
+            }
+
+                .warningContent ul li{
+                    color: #656565;
+                    font-size:16px;
+                    margin-top:5px;
+                }
+/* Customize the label (the container) */
+label.container {
+    display: block;
+    position: relative;
+    padding: 4px 0 5px 27px;
+    cursor: pointer;
+    font-size: 13px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  
+  /* Hide the browser's default checkbox */
+  label.container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+  }
+  
+  /* Create a custom checkbox */
+  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 15px;
+    width: 15px;
+    border: solid 1px #848484;
+  }
+  
+  /* On mouse-over, add a grey background color */
+  label.container:hover input ~ .checkmark {
+    background-color: #ccc;
+  }
+  
+  /* When the checkbox is checked, add a blue background */
+  label.container input:checked ~ .checkmark {
+    /*background-color: #2196F3;*/
+  }
+  
+  /* Create the checkmark/indicator (hidden when not checked) */
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+  /* Show the checkmark when checked */
+  label.container input:checked ~ .checkmark:after {
+    display: block;
+  }
+  
+  /* Style the checkmark/indicator */
+  label.container .checkmark:after {
+    left: 5px;
+    top: 2px;
+    width: 5px;
+    height: 10px;
+    border: solid #333;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+
+
+.gitResultPanel{
+    background-color: #fff;
+    line-height: 20px;
+    height: 250px;
+    overflow: auto;
+}
+
+.loading{
+    float: left;
+    margin: -4px 10px;
+}
+
+.before-release{ 
+    background-color: #f7f7f7;
+    padding: 25px 14px;
+    font-size: 14px;
+    border: solid 1px #ffd3ae;
+}
+
+.before-release p{
+    margin-top: 7px;
+}
+
+.before-release p strong{
+    font-size: 18px;
+    color : #ff7400;
+}
+
+.before-release a{
+    color : #ff7400;
+}
+
+.before-release div.before-release-warning{
+    padding: 0;
+    margin: 30px 0;
+}
+
+.before-release div.before-release-warning div.before-release-warning-content{
+    width: 100%;
+    height: 100%;
+    background-color: #fbfbfb;
+    box-shadow: 0 0 2px #dcdcdc;
+    padding: 25px 25px;
+    text-align: center;
+    font-size: 16px;
+}
+
+.before-release div.before-release-warning div.before-release-warning-content h3{
+    margin-bottom: 25px;
+    border-radius: 30px;
+    border: solid 1px #d4d4d4;
+    padding: 8px;
+}
+
+ul.upgrade-bread-crumb{
+    background-color: #f7f7f7;
+    border: solid 1px #ffd3ae;
+    list-style: none;
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+
+ul.upgrade-bread-crumb li{
+    padding: 10px 0;
+    text-align: center;
+}
+
+ul.upgrade-bread-crumb li.active{
+    background-color: #ff9f12;
+    color: #fff;
+}
+
+@media only screen and (max-width:768px) {
+    .install_panel{
+        padding: 8px;
+    }
+
+    header h3{
+        font-size: 14px;
+    }
+
+
+    .step_area{
+        width: auto;
+        margin-left: 5px;
+    }
+    
+    .content{
+        display: none;
+    }
+    
+        .stepwizard {
+            width: 100%;
+            min-height: 50px;
+            float: left;
+            margin: 0 5px 25px 5px;
+        }
+        
+        .stepwizard:before {
+            display: none;
+        }
+
+    .warningTitle{
+        padding: 5px 0;
+        border-right: none;
+    }
+
+    #workcube_upgrade .header h3{
+        font-size: 16px;
+    }
+
+    .release_info > h4,.release_info > h4 a{
+        font-size: 14px;
+    }
+    .release_info > h4 a{
+        padding-top: 0;
+    }
+}
+
+@media only screen and (max-width:420px) {
+    .release_info > h4{
+        border-bottom:none;
+    }
+    .ul.upgrade-bread-crumb li{
+        margin-top: 15px;
+    }
+}

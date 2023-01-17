@@ -1,0 +1,27 @@
+<!-- Description : EXPENSE_CENTER tablosuna IS_ACCOUNTING_BUDGET alanı açıldı ve EXPENSE_CENTER_ROW tablosu eklendi. 
+Developer: Melek KOCABEY
+Company : Workcube
+Destination: Period -->
+<querytag>
+    IF NOT EXISTS (SELECT 'Y' FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME = 'EXPENSE_CENTER' AND TABLE_SCHEMA = '@_dsn_period_@' AND COLUMN_NAME = 'IS_ACCOUNTING_BUDGET')
+    BEGIN
+    ALTER TABLE EXPENSE_CENTER ADD IS_ACCOUNTING_BUDGET BIT NULL
+    END;
+    IF NOT EXISTS( SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_SCHEMA = '@_dsn_period_@' and TABLE_NAME='EXPENSE_CENTER_ROW')
+    BEGIN
+        CREATE TABLE [EXPENSE_CENTER_ROW](
+            [EXPENSE_CENTER_ROW_ID] [int] IDENTITY(1,1) NOT NULL,
+            [EXPENSE_ID] [int] NULL,
+            [EXPENSE_ITEM_ID] [int] NULL,
+            [ACCOUNT_ID] [int] NULL,
+            [ACCOUNT_CODE] [nvarchar](150) NULL,
+            [RECORD_EMP] [int] NULL,
+            [RECORD_DATE] [datetime] NULL,
+            [RECORD_IP] [nvarchar](50) NULL,
+        CONSTRAINT [PK_EXPENSE_CENTER_ROW] PRIMARY KEY CLUSTERED 
+        (
+            [EXPENSE_CENTER_ROW_ID] ASC
+        )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+        ) ON [PRIMARY]
+    END;
+</querytag>

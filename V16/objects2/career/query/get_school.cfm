@@ -1,0 +1,3 @@
+<cfquery name="GET_SCHOOL" datasource="#DSN#">
+	SELECT SCHOOL_ID, SCHOOL_NAME FROM SETUP_SCHOOL ORDER BY SCHOOL_NAME
+</cfquery>

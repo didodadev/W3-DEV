@@ -1,0 +1,170 @@
+
+.install_panel{
+    padding:50px 100px;
+}
+
+section{
+    margin-top:30px;
+}
+
+.paddingLess{
+    padding-left:0px !important;
+    padding-right:0px !important;
+}
+
+.step_area{
+    width:100%;
+    min-height:50px;
+    float:left;
+
+}
+
+.content{
+    float: left;
+    min-height: 50px;
+    width: 215px;
+    margin: 22px 0 0 10px;
+}
+
+.content .title{
+    font-size:16px;
+}
+
+.content .text{
+    margin-top:10px;
+    color:#8c8c8c;
+}
+
+.circle {
+    float: left;
+    width: 45px;
+    height: 45px;
+    text-align: center;
+    padding: 12px 0;
+    font-size: 18px;
+    margin-top: 10px;
+    border-radius: 50px;
+    font-weight: bold;
+    background-color: orange;
+    color: white;
+
+}
+
+.stepwizard {
+margin-left: 5px;
+margin-right: 5px;
+
+}
+
+.stepactive{
+    background-color: green!important;
+}
+
+.stepwizard:before {
+    top: 10px;
+    bottom: 10px;
+    margin-left: 22px;
+    position: absolute;
+    content: " ";
+    width: 3px;
+    height: 100%;
+    background-color: orange;
+    z-index: -1;
+    
+}
+
+
+.message_header {
+    display: block;
+    padding: 10px 5px;
+    font-weight: bold;
+    color: #fff;
+    text-align: center;
+    background-color: #7be85f;
+
+}
+
+.info_header {
+    display: block;
+    padding: 10px 5px;
+    font-weight: bold;
+    color: #6d6d6d;
+    text-align: center;
+    border: solid 3px #4bbfde;
+    border-radius: 15px;
+
+}
+
+html, body  {
+    
+    height:  100%;
+    padding: 0;
+    margin: 0;
+  
+}
+
+.warningicon{
+    text-align: center;
+}
+
+    .warningicon i{
+        color: #afafaf;
+        font-size: 40px;
+    }
+
+ol.warning{
+    padding:0;
+    margin:0 0 10px 0;
+}
+
+    ol.warning li{
+        padding-right: 15px;
+        margin-top: 15px;
+        border-right: solid 3px #ff7676;
+    }
+
+.button-panel{
+    text-align: right;
+}
+
+form .btn{
+    padding:6px 30px !important; 
+}
+
+    span.loading{
+        width: 40px;
+        height: 40px;
+        margin-right: 10px;
+    }
+
+@media only screen and (max-width:768px) {
+    .install_panel{
+        padding: 8px;
+    }
+
+    header h3{
+        font-size: 14px;
+    }
+
+
+    .step_area{
+        width: auto;
+        margin-left: 5px;
+    }
+    
+    .content{
+        display: none;
+    }
+    
+        .stepwizard {
+            width: 100%;
+            min-height: 50px;
+            float: left;
+            margin: 0 5px 25px 5px;
+        }
+        
+        .stepwizard:before {
+            display: none;
+        }
+
+}

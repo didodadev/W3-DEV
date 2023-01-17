@@ -1,0 +1,10 @@
+<cfquery name="GET_EMPLOYEE_NAME" datasource="#dsn#">
+	SELECT 
+		EMPLOYEE_ID,
+		EMPLOYEE_NAME ,
+		EMPLOYEE_SURNAME AS NAME
+	FROM 
+		EMPLOYEES
+	WHERE 
+		EMPLOYEE_ID IN (#LISTSORT(attributes.EMP_IDS,"NUMERIC")#)
+</cfquery>

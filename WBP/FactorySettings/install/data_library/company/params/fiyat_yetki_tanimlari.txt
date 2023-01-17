@@ -1,0 +1,6 @@
+INSERT INTO [PRODUCT_COMP]([COMPETITIVE],[DETAIL]) Values( 'Tüm Fiyatlar','');
+INSERT INTO [PRODUCT_COMP]([COMPETITIVE],[DETAIL]) Values( 'Kampanya Fiyatları','');
+INSERT INTO [PRODUCT_COMP]([COMPETITIVE],[DETAIL]) Values( 'Toptan Satış Fiyatları','');
+INSERT INTO [PRODUCT_COMP]([COMPETITIVE],[DETAIL]) Values( 'Mağaza Fiyatları','');
+INSERT INTO [PRODUCT_COMP]([COMPETITIVE],[DETAIL]) Values( 'İnternet Satış Fiyatları','');
+

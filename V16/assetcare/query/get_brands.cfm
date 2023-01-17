@@ -1,0 +1,11 @@
+<cfquery name="GET_BRANDS" datasource="#DSN#">
+	SELECT
+		BRAND_ID,
+		BRAND_NAME
+	FROM
+		SETUP_BRAND
+	WHERE
+		MOTORIZED_VEHICLE = 1
+	ORDER BY
+		BRAND_NAME
+</cfquery>

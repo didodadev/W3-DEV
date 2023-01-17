@@ -1,0 +1,13 @@
+<cfquery name="GET_CATALOG_CHAPTER" datasource="#dsn#">
+	SELECT
+		CONTENTCAT_ID,
+		CHAPTER_ID,
+		CHAPTER
+	FROM
+		CONTENT_CHAPTER
+	WHERE
+		CONTENTCAT_ID = #attributes.CONTENTCAT_ID#
+	ORDER BY
+		CHAPTER
+</cfquery>
+

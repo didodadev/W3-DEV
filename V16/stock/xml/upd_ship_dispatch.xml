@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<OBJECT_PROPERTIES>
+	<OBJECT_PROPERTY>
+		<PROPERTY>xml_deliver_emp_automatic</PROPERTY>
+		<PROPERTY_DETAIL>Teslim Alanı Boş Kayıtlarda Teslim Alan Dolu Olarak Gelsin mi?</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>select</PROPERTY_TYPE>
+		<PROPERTY_VALUES>1,0</PROPERTY_VALUES>
+		<PROPERTY_NAMES>Evet,Hayır</PROPERTY_NAMES>
+		<PROPERTY_DEFAULT>1</PROPERTY_DEFAULT>
+		<PROPERTY_HELP>Teslim Alanın Sistemdeki kullanıcının Otomatik olarak Gelmesini Sağlar.</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+	<OBJECT_PROPERTY>
+		<PROPERTY>xml_deliver_required</PROPERTY>
+		<PROPERTY_DETAIL>Teslim Al Seçildiği Zaman Teslim Alan Zorunlu Olsun mu?</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>select</PROPERTY_TYPE>
+		<PROPERTY_VALUES>1,0</PROPERTY_VALUES>
+		<PROPERTY_NAMES>Evet,Hayır</PROPERTY_NAMES>
+		<PROPERTY_DEFAULT>1</PROPERTY_DEFAULT>
+		<PROPERTY_HELP>Teslim Alanın Zorunlu Olarak Girilmesini Sağlar.</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+	<OBJECT_PROPERTY>
+		<PROPERTY>xml_select_same_dept</PROPERTY>
+		<PROPERTY_DETAIL>Giriş ve Çıkış Depo Aynı Seçilebilsin mi?</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>select</PROPERTY_TYPE>
+		<PROPERTY_VALUES>1,0</PROPERTY_VALUES>
+		<PROPERTY_NAMES>Evet,Hayır</PROPERTY_NAMES>
+		<PROPERTY_DEFAULT>0</PROPERTY_DEFAULT>
+		<PROPERTY_HELP>Aynı Lokasyonda Raflar Arasında Transfere İzin Verilmesini Sağlar.</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+	<OBJECT_PROPERTY>
+		<PROPERTY>xml_serialno_control</PROPERTY>
+		<PROPERTY_DETAIL>Seri No Kontrolü Zorunlu Olsun mu?</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>select</PROPERTY_TYPE>
+		<PROPERTY_VALUES>1,0</PROPERTY_VALUES>
+		<PROPERTY_NAMES>Evet,Hayır</PROPERTY_NAMES>
+		<PROPERTY_DEFAULT>0</PROPERTY_DEFAULT>
+		<PROPERTY_HELP>Eğer evet olarak seçilirse, seri takibi yapılan ürünlerin serilerinin girilmesi zorunludur.</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+	<OBJECT_PROPERTY>
+		<PROPERTY>xml_upd_row_project</PROPERTY>
+		<PROPERTY_DETAIL>Belgede Seçilen Giriş Proje Satırlara Yansıtılsın mı?</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>select</PROPERTY_TYPE>
+		<PROPERTY_VALUES>0,1</PROPERTY_VALUES>
+		<PROPERTY_NAMES>Hayır,Evet</PROPERTY_NAMES>
+		<PROPERTY_DEFAULT>0</PROPERTY_DEFAULT>
+		<PROPERTY_HELP>Eğer evet olarak seçilirse belgedeki proje , satırda proje bilgisi seçilmeyen satırlara yansıtılır.</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+	<OBJECT_PROPERTY>
+		<PROPERTY>xml_upd_eshipment</PROPERTY>
+		<PROPERTY_DETAIL>Gönderilen E-İrsaliye Güncellenebilsin</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>select</PROPERTY_TYPE>
+		<PROPERTY_VALUES>1,0</PROPERTY_VALUES>
+		<PROPERTY_NAMES>Evet,Hayır</PROPERTY_NAMES>
+		<PROPERTY_DEFAULT>1</PROPERTY_DEFAULT>
+		<PROPERTY_HELP>Eğer hayır olarak seçilirse e-irsaliye olarak gönderilen irsaliyelerin güncellenmesi engellenir.</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+	<OBJECT_PROPERTY>
+		<PROPERTY>xml_location_auth_entry</PROPERTY>
+		<PROPERTY_DETAIL>Giriş Depo Lokasyon Yetkisi</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>select</PROPERTY_TYPE>
+		<PROPERTY_VALUES>-1,1,0</PROPERTY_VALUES>
+		<PROPERTY_NAMES>Default,Tüm Lokasyonlar,Yetkili Lokasyonlar</PROPERTY_NAMES>
+		<PROPERTY_DEFAULT></PROPERTY_DEFAULT>
+		<PROPERTY_HELP>Eğer Tüm Lokasyonlar Seçilirse Yetki Kontrollerinden Bağımsız Olarak Tüm Lokasyonlar Seçilebilir.</PROPERTY_HELP>
+	</OBJECT_PROPERTY>	
+	<OBJECT_PROPERTY>
+		<PROPERTY>xml_location_auth_outer</PROPERTY>
+		<PROPERTY_DETAIL>Çıkış Depo Lokasyon Yetkisi</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>select</PROPERTY_TYPE>
+		<PROPERTY_VALUES>-1,1,0</PROPERTY_VALUES>
+		<PROPERTY_NAMES>Default,Tüm Lokasyonlar,Yetkili Lokasyonlar</PROPERTY_NAMES>
+		<PROPERTY_DEFAULT></PROPERTY_DEFAULT>
+		<PROPERTY_HELP>Eğer Tüm Lokasyonlar Seçilirse Yetki Kontrollerinden Bağımsız Olarak Tüm Lokasyonlar Seçilebilir.</PROPERTY_HELP>
+	</OBJECT_PROPERTY>	
+</OBJECT_PROPERTIES>

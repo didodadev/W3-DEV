@@ -1,0 +1,49 @@
+/*
+LogoGo3/LogoTiger3 Databaselerinden bilgi alır
+Teminat Aktarım
+finance.securefund_import
+*/
+DECLARE @SirketID int=20
+DECLARE @SubeID int=1
+DECLARE @PeriodID int=1
+
+DECLARE @SQLString NVARCHAR(max)
+
+SET @SQLString = N'SELECT 
+0 as TeminatKategorisiID,
+0 as OperasyonTipiID,
+'+str(@SirketID)+' as SirketimizID,
+TEMINAT.CLCARDREF as UyeID,
+CASE WHEN  TEMINAT.CANCELLED=0 THEN 1 ELSE 0 END as Aktif,
+TEMINAT.AMOUNT as Tutar,
+CASE WHEN TEMINAT.COMMTYPE=0 THEN  TEMINAT.COMMRATE WHEN TEMINAT.AMOUNT>0 THEN 100 * TEMINAT.COMMAMOUNT/TEMINAT.AMOUNT ELSE 0 END as Komisyon,
+TEMINAT.TRNET as DovizTutar,
+CASE WHEN TEMINAT.DOC=1 THEN 0 ELSE 2 END as AlinanVerilen,
+ISNULL( (SELECT top 1 CURCODE FROM L_CURRENCYLIST WHERE  CURTYPE=TEMINAT.TRCURR),''TRL'') as IslemParaBirimi,
+0 as Masraf,
+0 as MasrafParaBirim,
+TEMINAT.BANKREF as BankasubesiID,
+TEMINAT.DEFINITION_ as Aciklama,
+CONVERT(VARCHAR, TEMINAT.BEGDATE , 104) as BaslamaTarihi,
+CONVERT(VARCHAR, TEMINAT.ENDDATE , 104) as BitisTarihi,
+TEMINAT.REPORTNET as DovizTutar,
+(SELECT B.CODE 
+	FROM LG_'+@FirmNr+'_'+@DonemNr+'_COLLATRLTRAN AS A INNER JOIN
+    LG_'+@FirmNr+'_EMUHACC AS B ON A.ACCREF = B.LOGICALREF WHERE A.COLLCARDREF=TEMINAT.LOGICALREF) as TeminatAlacakHesabi,
+(SELECT B.CODE 
+	FROM LG_'+@FirmNr+'_'+@DonemNr+'_COLLATRLTRAN AS A INNER JOIN
+    LG_'+@FirmNr+'_EMUHACC AS B ON A.CRSACCREF = B.LOGICALREF WHERE A.COLLCARDREF=TEMINAT.LOGICALREF)  as TeminatBorcHesabi,
+'+str(@PeriobID)+' as PeriodID,		
+TEMINAT.PROJECTREF as ProjeID,
+0 as KrediLimitiID,
+0 as SözlesmeID,
+0 as TeklifID,
+'+str(@SubeID)+' as SubemizID
+
+FROM LG_'+@FirmNr+'_'+@DonemNr+'_COLLATRLCARD TEMINAT INNER JOIN LG_'+@FirmNr+'_CLCARD CLCARD ON TEMINAT.CLCARDREF=CLCARD.LOGICALREF'
+
+EXECUTE sp_executesql @SQLString
+ 
+
+ 
+ 

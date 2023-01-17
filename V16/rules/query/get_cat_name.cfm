@@ -1,0 +1,9 @@
+﻿<cfquery name="GET_CAT_NAME" datasource="#dsn#">
+	SELECT
+		CONTENTCAT,
+		CONTENTCAT_ID 
+	FROM
+		CONTENT_CAT
+	WHERE
+		CONTENTCAT_ID = #URL.CONTENTCAT_ID#
+</cfquery>

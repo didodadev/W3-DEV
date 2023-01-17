@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<OBJECT_PROPERTIES>
+	<OBJECT_PROPERTY>
+		<PROPERTY>is_revenue_duedate</PROPERTY>
+		<PROPERTY_DETAIL>Kredi Kartı Tahsilatlarını İşlem Tarihinden Hesapla</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>select</PROPERTY_TYPE>
+		<PROPERTY_VALUES>1,0</PROPERTY_VALUES>
+		<PROPERTY_NAMES>Evet,Hayır</PROPERTY_NAMES>
+		<PROPERTY_DEFAULT>0</PROPERTY_DEFAULT>
+		<PROPERTY_HELP>Kredi Kartı Tahsilatlarını İşlem Tarihinden Hesapla:Evet ise ve ödeme performansı seçilmişse,kredi kartı tahsilatında seçilen işlem tarihinden vade farkı ve ortalama vade hesaplamaları yapılır;hayır ise ve ödeme performansı seçilmişse kredi kartı tahsilatında seçilen vade tarihinden vade farkı ve ortalama vade hesaplamaları yapılır.</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+	<OBJECT_PROPERTY>
+		<PROPERTY>is_avg_duedate</PROPERTY>
+		<PROPERTY_DETAIL>Ortalama Vade Gösterilsin mi</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>select</PROPERTY_TYPE>
+		<PROPERTY_VALUES>1,0</PROPERTY_VALUES>
+		<PROPERTY_NAMES>Evet,Hayır</PROPERTY_NAMES>
+		<PROPERTY_DEFAULT>0</PROPERTY_DEFAULT>
+		<PROPERTY_HELP>Ortalama Vade Gösterilsin mi:Evet ise listeleme sayfasında bulunan adat ya da ortalama vade selectboxından da ortalama vade seçilmişse ortalama vade sütununun görülmesini  sağlar.</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+	<OBJECT_PROPERTY>
+		<PROPERTY>is_show_store_acts</PROPERTY>
+		<PROPERTY_DETAIL>Şube Modülünde Tüm İşlemler Gösterilsin mi?</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>select</PROPERTY_TYPE>
+		<PROPERTY_VALUES>1,0</PROPERTY_VALUES>
+		<PROPERTY_NAMES>Evet,Hayır</PROPERTY_NAMES>
+		<PROPERTY_DEFAULT>0</PROPERTY_DEFAULT>
+		<PROPERTY_HELP>Eğer evet olarak seçilirse şube modülünde şube yetkisine bakmadan tüm işlemleri gösterir.</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+	<OBJECT_PROPERTY>
+		<PROPERTY>x_show_system_money</PROPERTY>
+		<PROPERTY_DETAIL>İşlem Tarihindeki TL Bakiyeleri Göster</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>select</PROPERTY_TYPE>
+		<PROPERTY_VALUES>1,0</PROPERTY_VALUES>
+		<PROPERTY_NAMES>Evet,Hayır</PROPERTY_NAMES>
+		<PROPERTY_DEFAULT>0</PROPERTY_DEFAULT>
+		<PROPERTY_HELP>İşlem Dövizli Seçildiğinde TL Bakiyelerinde İşlem Tarihine Göre Gelmesini Sağlar.</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+	<OBJECT_PROPERTY>
+		<PROPERTY>xml_account_code</PROPERTY>
+		<PROPERTY_DETAIL>Muhasebe Kodu Gösterilsin mi?</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>select</PROPERTY_TYPE>
+		<PROPERTY_VALUES>1,0</PROPERTY_VALUES>
+		<PROPERTY_NAMES>Evet,Hayır</PROPERTY_NAMES>
+		<PROPERTY_DEFAULT>0</PROPERTY_DEFAULT>
+		<PROPERTY_HELP>Muhasebe Kodunun Gösterilmesini Sağlar.</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+	<OBJECT_PROPERTY>
+		<PROPERTY>xml_show_phone_number</PROPERTY>
+		<PROPERTY_DETAIL>Telefon Numarası Gösterilsin mi?</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>select</PROPERTY_TYPE>
+		<PROPERTY_VALUES>1,0</PROPERTY_VALUES>
+		<PROPERTY_NAMES>Evet,Hayır</PROPERTY_NAMES>
+		<PROPERTY_DEFAULT>0</PROPERTY_DEFAULT>
+		<PROPERTY_HELP>Telefon Numarasının Gösterilmesini Sağlar.</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+	<OBJECT_PROPERTY>
+		<PROPERTY>xml_is_money_info</PROPERTY>
+		<PROPERTY_DETAIL>2. Döviz Seçili Gelsin mi?</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>select</PROPERTY_TYPE>
+		<PROPERTY_VALUES>1,0</PROPERTY_VALUES>
+		<PROPERTY_NAMES>Evet,Hayır</PROPERTY_NAMES>
+		<PROPERTY_DEFAULT>0</PROPERTY_DEFAULT>
+		<PROPERTY_HELP>2. Döviz Seçeneği Seçili Gelir</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+	<OBJECT_PROPERTY>
+        <PROPERTY>x_control_ims</PROPERTY>
+        <PROPERTY_DETAIL>Mikro Bölge Koduna Göre Listeleme Yapılsın mı?</PROPERTY_DETAIL>
+        <PROPERTY_TYPE>select</PROPERTY_TYPE>
+        <PROPERTY_VALUES>1,0</PROPERTY_VALUES>
+        <PROPERTY_NAMES>Evet,Hayır</PROPERTY_NAMES>
+        <PROPERTY_DEFAULT>0</PROPERTY_DEFAULT>
+        <PROPERTY_HELP>Şirket akış parametrelerinde 'Satış Bölgelerine Göre Müşteri Erişim Kontrolu Yapılsın mı?' Evet seçildiğinde listelemede mikro bölge koduna göre erişim kontrolünü aktif eder.</PROPERTY_HELP>
+    </OBJECT_PROPERTY>
+</OBJECT_PROPERTIES>

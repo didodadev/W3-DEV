@@ -1,0 +1,31 @@
+<cfquery name="GET_PRO_WORK" datasource="#DSN3#">
+	SELECT 
+		PW.WORK_ID,
+		PW.WORK_HEAD,
+		PW.OUTSRC_PARTNER_ID,
+		PW.TARGET_START AS TARGET_START,
+		PW.TARGET_FINISH,
+		PW.RELATED_WORK_ID,
+		PW.WORK_CURRENCY_ID,
+		PW.WORK_CAT_ID,
+		PW.PROJECT_EMP_ID,
+		PW.RECORD_DATE,
+		PP.PRO_CURRENCY_ID,
+		SP.PRIORITY,
+		SP.COLOR,
+		-1000 AS STR_CURRENCY,
+		1 AS TYPE ,
+		<!--- 'objects2.popup_updwork&ID=' AS LINK, --->
+		2 AS LINK_TYPE
+	FROM 
+		#dsn_alias#.PRO_PROJECTS AS PP, 
+		#dsn_alias#.PRO_WORKS AS PW, 
+		#dsn_alias#.SETUP_PRIORITY AS SP
+	WHERE 
+		PW.PROJECT_ID= <cfqueryparam cfsqltype="cf_sql_integer" value="#attributes.id#"> AND 
+		PP.PROJECT_ID=PW.PROJECT_ID AND 
+		(PW.WORK_PRIORITY_ID=SP.PRIORITY_ID OR PW.WORK_PRIORITY_ID IS NULL)
+	ORDER BY 
+		PW.TARGET_FINISH,
+		PW.RECORD_DATE
+</cfquery>

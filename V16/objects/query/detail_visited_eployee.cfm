@@ -1,0 +1,8 @@
+<cfquery name="DETAIL_VISITED_EMPLOYEE" datasource="#DSN#">
+	SELECT 
+		* 
+	FROM 
+		EMPLOYEE_POSITIONS 
+	WHERE 
+		POSITION_CODE = #NOTE_GIVEN_ID#
+</cfquery>

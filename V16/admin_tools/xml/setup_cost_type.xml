@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SETUP_COST_TYPE>
+          <COST_TYPE>
+            <COST_TYPE_NAME>Fiyat Koruma</COST_TYPE_NAME>
+            <COST_TYPE_DETAIL/>
+         </COST_TYPE>
+         <COST_TYPE>
+            <COST_TYPE_NAME>Rebate</COST_TYPE_NAME>
+            <COST_TYPE_DETAIL/>
+         </COST_TYPE>
+         <COST_TYPE>
+            <COST_TYPE_NAME>Back End Rebate</COST_TYPE_NAME>
+            <COST_TYPE_DETAIL/>
+         </COST_TYPE>
+         <COST_TYPE>
+            <COST_TYPE_NAME>Tedarikçi Desteği</COST_TYPE_NAME>
+            <COST_TYPE_DETAIL/>
+         </COST_TYPE>
+</SETUP_COST_TYPE>

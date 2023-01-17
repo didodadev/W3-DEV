@@ -1,0 +1,11 @@
+<cfquery name="GET_WARNINGS" datasource="#dsn#">
+	SELECT
+		WARNING_HEAD,
+		RECORD_DATE,
+		POSITION_CODE,
+		W_ID
+	FROM
+		PAGE_WARNINGS
+	WHERE
+		POSITION_CODE = 7 
+</cfquery>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<OBJECT_PROPERTIES>
+	<OBJECT_PROPERTY>
+		<PROPERTY>is_position_cat_ids</PROPERTY>
+		<PROPERTY_DETAIL>Pozisyon Id'leri</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>input</PROPERTY_TYPE>
+		<PROPERTY_VALUES></PROPERTY_VALUES>
+		<PROPERTY_NAMES></PROPERTY_NAMES>
+		<PROPERTY_DEFAULT></PROPERTY_DEFAULT>
+		<PROPERTY_HELP>Lütfen birden fazla yazacaksanız virgülle (,) ayırarak yazınız.</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+</OBJECT_PROPERTIES>

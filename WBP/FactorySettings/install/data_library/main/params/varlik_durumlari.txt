@@ -1,0 +1,8 @@
+INSERT INTO [ASSET_STATE]([ASSET_STATE],[DETAIL]) Values( 'Kullanımda',' ');
+INSERT INTO [ASSET_STATE]([ASSET_STATE],[DETAIL]) Values( 'Kiralandı','Kiralandı');
+INSERT INTO [ASSET_STATE]([ASSET_STATE],[DETAIL]) Values( 'Arızalı','  ');
+INSERT INTO [ASSET_STATE]([ASSET_STATE],[DETAIL]) Values( 'Bakımda',' ');
+INSERT INTO [ASSET_STATE]([ASSET_STATE],[DETAIL]) Values( 'Yedekte','  ');
+INSERT INTO [ASSET_STATE]([ASSET_STATE],[DETAIL]) Values( 'Satışta','  ');
+INSERT INTO [ASSET_STATE]([ASSET_STATE],[DETAIL]) Values( 'Pert','Pert');
+

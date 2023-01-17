@@ -1,0 +1,6 @@
+<div class="col col-12 col-md-12 col-sm-12 col-xs-12">
+	<cfinclude template="search_punishment.cfm">
+	<cf_box title="#getLang('','',47075)#" uidrop="1" hide_table_column="1">
+		<cfinclude template="../display/list_punishment_search.cfm">
+	</cf_box>
+</div>

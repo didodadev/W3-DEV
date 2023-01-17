@@ -1,0 +1,363 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SETUP_SITE>
+	<SETUPSITE>
+		<LINK_NAME>Spec XML Setup</LINK_NAME> 
+		<LINK_FILE>objects.popup_add_spect_list,objects.popup_upd_spect</LINK_FILE> 
+		<LINK_DETAIL>Spec ayarlarının düzenlenmesi</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Spec XML Setup</LINK_NAME> 
+		<LINK_FILE>objects.popup_configurator</LINK_FILE> 
+		<LINK_DETAIL>Spec ayarlarının düzenlenmesi</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Spec Listesi XML Setup</LINK_NAME> 
+		<LINK_FILE>objects.popup_list_spect_main</LINK_FILE> 
+		<LINK_DETAIL>Spec Listesi ayarlarının düzenlenmesi</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Ürün Listesi XML Setup</LINK_NAME> 
+		<LINK_FILE>objects.popup_products,objects.popup_add_basket_row_from_barcod</LINK_FILE>
+		<LINK_DETAIL>Ürün listesi ayarlarının düzenlenmesi</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Bireysel Üye Listesi XML Setup</LINK_NAME> 
+		<LINK_FILE>objects.popup_list_all_cons</LINK_FILE>
+		<LINK_DETAIL>Bireysel Üye Listesi ayarlarının düzenlenmesi</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Ödeme Performansı XML Setup</LINK_NAME> 
+		<LINK_FILE>objects.popup_list_extre,objects.popup_list_comp_extre</LINK_FILE> 
+		<LINK_DETAIL>Ödeme Performansı ayarlarının düzenlenmesi</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Ürün Listesi</LINK_NAME> 
+		<LINK_FILE>objects.popup_product_names</LINK_FILE> 
+		<LINK_DETAIL>Ürün Listesinin İstenilen Bilgilere Göre Gelmesi</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Ürün İade</LINK_NAME> 
+		<LINK_FILE>objects.popup_add_product_return</LINK_FILE> 
+		<LINK_DETAIL>Ürün İade Sayfasının Düzenlenmesi</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Masraf Fişi</LINK_NAME> 
+		<LINK_FILE>objects.expense_cost</LINK_FILE>
+		<LINK_DETAIL>Masraf Fişi Ayarlarının Düzenlenmesi</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Gelir Fişi</LINK_NAME> 
+		<LINK_FILE>objects.income_cost</LINK_FILE>
+		<LINK_DETAIL>Gelir Fişi Ayarlarının Düzenlemesi</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Harcama Talebi</LINK_NAME> 
+		<LINK_FILE>objects.expense_request</LINK_FILE>
+		<LINK_DETAIL>Harcama Talebi Düzenlemesi</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Pozisyon Listesi</LINK_NAME> 
+		<LINK_FILE>objects.popup_list_positions</LINK_FILE>
+		<LINK_DETAIL>Pozisyon Listesi</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Stok Export Oluştur</LINK_NAME> 
+		<LINK_FILE>objects.popup_form_export_stock,objects.popup_form_export_price_change_genius</LINK_FILE>
+		<LINK_DETAIL>Stok Export</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Toplu Barkod Yazdır</LINK_NAME> 
+		<LINK_FILE>objects.popup_collected_barcode</LINK_FILE>
+		<LINK_DETAIL>Toplu Barkod Yazdır</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Seri No Giriş</LINK_NAME> 
+		<LINK_FILE>objects.popup_upd_stock_serialno</LINK_FILE>
+		<LINK_DETAIL>Seri No</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Müşteri Kartı Oluştur</LINK_NAME> 
+		<LINK_FILE>objects.popup_export_customer_type</LINK_FILE>
+		<LINK_DETAIL>Müşteri Kartı</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Seri No Arama</LINK_NAME> 
+		<LINK_FILE>objects.serial_no</LINK_FILE>
+		<LINK_DETAIL>Seri No Arama</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Terazi Belgesi Oluştur</LINK_NAME> 
+		<LINK_FILE>objects.popup_export_terazi</LINK_FILE>
+		<LINK_DETAIL>Terazi Belgesi</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>İrsaliye Listesi</LINK_NAME> 
+		<LINK_FILE>objects.popup_list_choice_ship</LINK_FILE>
+		<LINK_DETAIL>İrsaliye Listesi</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Üye Adresi</LINK_NAME> 
+		<LINK_FILE>objects.popup_list_cons</LINK_FILE>
+		<LINK_DETAIL>Cari Adres Bilgisi</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Üye Adresi</LINK_NAME> 
+		<LINK_FILE>objects.popup_list_cons</LINK_FILE>
+		<LINK_DETAIL>Cari Adres Bilgisi</LINK_DETAIL>
+	</SETUPSITE>	
+	<SETUPSITE>
+		<LINK_NAME>Sipariş Listesi</LINK_NAME> 
+		<LINK_FILE>objects.list_orders_for_ship</LINK_FILE>
+		<LINK_DETAIL>Sipariş Listesi</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Sipariş Karşılama Raporu</LINK_NAME> 
+		<LINK_FILE>objects.popup_list_order_receive_rate</LINK_FILE>
+		<LINK_DETAIL>Sipariş Karşılama Raporu</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Satış Belgesi Ekle</LINK_NAME> 
+		<LINK_FILE>objects.popup_form_import_sales_cards</LINK_FILE>
+		<LINK_DETAIL>Satış Belgesi Ekle</LINK_DETAIL>
+	</SETUPSITE>
+		<SETUPSITE>
+		<LINK_NAME>Alış Analiz Sipariş Raporu</LINK_NAME> 
+		<LINK_FILE>objects.xml_setup_form</LINK_FILE>
+		<LINK_DETAIL>Alış Analiz Sipariş Raporu</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Proje Aksiyon Listesi XML Setup</LINK_NAME>
+		<LINK_FILE>objects.popup_list_project_actions</LINK_FILE>
+		<LINK_DETAIL>Proje Aksiyon Listesi Gösterim</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Harcama Detay XML Setup</LINK_NAME>
+		<LINK_FILE>objects.popup_list_cost</LINK_FILE>
+		<LINK_DETAIL>>Harcama Detay Gösterim</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Banka Hesabı Ekleme Sayfası Tanımlama</LINK_NAME> 
+		<LINK_FILE>objects.popup_form_add_bank_account</LINK_FILE> 
+		<LINK_DETAIL>Banka Hesabı Tanımlama ayarlarının düzenlenmesi</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Banka Hesabı Güncelleme Sayfası Tanımlama</LINK_NAME> 
+		<LINK_FILE>objects.popup_form_upd_bank_account</LINK_FILE> 
+		<LINK_DETAIL>Banka Hesabı Tanımlama ayarlarının düzenlenmesi</LINK_DETAIL> 
+  </SETUPSITE>
+  <SETUPSITE>
+		<LINK_NAME>Kullanıcı Erişim ve Yetkileri Modül Dili</LINK_NAME>
+		<LINK_FILE>objects.popup_list_positions_poweruser</LINK_FILE>
+		<LINK_DETAIL>Kullanıcı Erişim ve Yetkileri için Modül Dil Seçimi</LINK_DETAIL>
+  </SETUPSITE>
+  <SETUPSITE>
+		<LINK_NAME>Ziyaret Plan Sonucu</LINK_NAME>
+		<LINK_FILE>objects.popup_upd_event_plan_result</LINK_FILE>
+		<LINK_DETAIL>Ziyaret Sonucu</LINK_DETAIL>
+  </SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>İlişkili İş Ekranı</LINK_NAME> 
+		<LINK_FILE>objects.popup_add_related_work</LINK_FILE>
+		<LINK_DETAIL>İlişkili İş Ekranı</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>İrsaliye Detayı Görüntüleme</LINK_NAME> 
+		<LINK_FILE>objects.popup_detail_ship</LINK_FILE>
+		<LINK_DETAIL>İrsaliye Detayı Görüntüleme</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Fatura Detayı Görüntüleme</LINK_NAME> 
+		<LINK_FILE>objects.popup_detail_invoice</LINK_FILE>
+		<LINK_DETAIL>Fatura Detayı Görüntüleme</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Raf Listesi</LINK_NAME> 
+		<LINK_FILE>objects.popup_list_shelves</LINK_FILE>
+		<LINK_DETAIL>Raf Listesi</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Fırsat Popup</LINK_NAME> 
+		<LINK_FILE>objects.popup_list_opportunities</LINK_FILE>
+		<LINK_DETAIL>Fırsat Popup</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Üretim Emirleri Popup</LINK_NAME> 
+		<LINK_FILE>objects.popup_reserved_production_orders</LINK_FILE>
+		<LINK_DETAIL>Üretim Emirleri Popup</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Hızlı Seri No Girişi Popup</LINK_NAME> 
+		<LINK_FILE>objects.popup_add_serial_operations</LINK_FILE>
+		<LINK_DETAIL>Hızlı Seri No Girişi Popup</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Rezerveler</LINK_NAME> 
+		<LINK_FILE>objects.popup_reserved_orders</LINK_FILE>
+		<LINK_DETAIL>Rezerveler</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Stok Sayımı</LINK_NAME> 
+		<LINK_FILE>objects.popup_form_import_stock_count</LINK_FILE>
+		<LINK_DETAIL> Stok Sayımı</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Basketteki ürünlerin ilişkili üyeleri gelsin</LINK_NAME> 
+		<LINK_FILE>objects.popup_list_pars_multiuser</LINK_FILE>
+		<LINK_DETAIL>Basketteki ürünlerin ilişkili üyeleri gelsin</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Üye Listesi</LINK_NAME> 
+		<LINK_FILE>objects.popup_list_multiuser_company</LINK_FILE>
+		<LINK_DETAIL>Üye Listesi</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Meta tanımı eklenmesini sağlar</LINK_NAME> 
+		<LINK_FILE>objects.popup_add_meta_desc</LINK_FILE>
+		<LINK_DETAIL>Meta tanımı eklenmesini sağlar</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Muhasebe Dönemleri</LINK_NAME> 
+		<LINK_FILE>objects.popup_list_periods</LINK_FILE>
+		<LINK_DETAIL>Muhasebe Dönemleri</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Fiziki Varlık Rezervasyon</LINK_NAME> 
+		<LINK_FILE>objects.form_assetp_reserve</LINK_FILE>
+		<LINK_DETAIL>Fiziki Varlık Reserve</LINK_DETAIL>
+	</SETUPSITE>	
+	<SETUPSITE>
+		<LINK_NAME>Fiziki Varlık Rezervasyon</LINK_NAME> 
+		<LINK_FILE>objects.list_assets</LINK_FILE>
+		<LINK_DETAIL>Fiziki Varlık Reserve</LINK_DETAIL>
+	</SETUPSITE>	
+	<SETUPSITE>
+		<LINK_NAME>Ödeme Planı</LINK_NAME> 
+		<LINK_FILE>objects.popup_payment_with_voucher</LINK_FILE>
+		<LINK_DETAIL>Ödeme Planı</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Proje Listesi XML Setup</LINK_NAME>
+		<LINK_FILE>objects.popup_list_projects</LINK_FILE>
+		<LINK_DETAIL>Proje Listesi Gösterim</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Bütçe Listesi XML Setup</LINK_NAME>
+		<LINK_FILE>objects.list_budget</LINK_FILE>
+		<LINK_DETAIL>Bütçeler</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>İş Listesi XML Setup</LINK_NAME>
+		<LINK_FILE>objects.popup_add_work</LINK_FILE>
+		<LINK_DETAIL>İş Listesi</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Ziyaret Sonucu  XML Setup</LINK_NAME>
+		<LINK_FILE>objects.popup_add_event_plan_result</LINK_FILE>
+		<LINK_DETAIL>Ziyaret Sonuç</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Pozisyonlar XML Setup</LINK_NAME>
+		<LINK_FILE>objects.popup_list_positions_multiuser</LINK_FILE>
+		<LINK_DETAIL>Çalşan Pozisyonlar</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Kurumsal Üyeler XML Setup</LINK_NAME>
+		<LINK_FILE>objects.popup_list_pars</LINK_FILE>
+		<LINK_DETAIL>Kurumsal Üyeler</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Barkod Ekleme XML Setup</LINK_NAME>
+		<LINK_FILE>objects.popup_form_add_stock_barcode</LINK_FILE>
+		<LINK_DETAIL>Stoklara barkod ekleme sayfası</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Markalar XML Setup</LINK_NAME>
+		<LINK_FILE>objects.popup_product_brands</LINK_FILE>
+		<LINK_DETAIL>Marka Listeleme Sayfası</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Raf Dağıtım XML Setup</LINK_NAME>
+		<LINK_FILE>objects.popup_list_stock_shelf_distribution</LINK_FILE>
+		<LINK_DETAIL>Raf Dağıtım Sayfası</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Kampanyalar Popup XML Setup</LINK_NAME>
+		<LINK_FILE>objects.popup_list_campaigns</LINK_FILE>
+		<LINK_DETAIL>Kampanyalar Popup Sayfası</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>List Acouunt Plan XML setup</LINK_NAME>
+		<LINK_FILE>objects.popup_account_plan</LINK_FILE>
+		<LINK_DETAIL>Hesaplar Popup Sayfası</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Mail Gönderme Popup XML Setup</LINK_NAME>
+		<LINK_FILE>objects.popup_mail</LINK_FILE>
+		<LINK_DETAIL>Mail Gönderme Popup</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Hedef XML Setup</LINK_NAME>
+		<LINK_FILE>objects.popup_form_add_target,objects.popup_form_upd_target</LINK_FILE>
+		<LINK_DETAIL>Hedef XML Setup</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Belge Kaydetme Popup XML Setup</LINK_NAME>
+		<LINK_FILE>objects.popup_save_asset_file</LINK_FILE>
+		<LINK_DETAIL>Belge Kaydetme Popup</LINK_DETAIL>
+	</SETUPSITE>	
+	<SETUPSITE>
+		<LINK_NAME>Çalışan Bilgileri Popup XML Setup</LINK_NAME>
+		<LINK_FILE>objects.popup_emp_det</LINK_FILE>
+		<LINK_DETAIL>Çalışan Bilgileri Popup</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Partner / Public Kur Bilgileri XML Setup</LINK_NAME>
+		<LINK_FILE>objects.popup_list_currency_history</LINK_FILE>
+		<LINK_DETAIL>Kur Bilgileri</LINK_DETAIL>
+	</SETUPSITE>	
+	<SETUPSITE>
+		<LINK_NAME>Gelen E-fatura XML Setup</LINK_NAME>
+		<LINK_FILE>objects.popup_dsp_efatura_detail</LINK_FILE>
+		<LINK_DETAIL>Gelen E-fatura</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Hızlı Seri No XML Setup</LINK_NAME>
+		<LINK_FILE>objects.popup_add_upper_serial_operations</LINK_FILE>
+		<LINK_DETAIL>Seri No Giriş</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>İskonto Bilgisi</LINK_NAME>
+		<LINK_FILE>objects.popup_list_order_history</LINK_FILE>
+		<LINK_DETAIL>İskonto Bilgisi</LINK_DETAIL>
+	</SETUPSITE>	
+	<SETUPSITE>
+		<LINK_NAME>PHL' den Sipariş Oluşturma</LINK_NAME>
+		<LINK_FILE>objects.add_order_from_file</LINK_FILE>
+		<LINK_DETAIL>PHL' den Sipariş Oluşturma</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Abone Popup XML Setup</LINK_NAME>
+		<LINK_FILE>objects.popup_list_subscription</LINK_FILE>
+		<LINK_DETAIL>Abone Popup XML Setup</LINK_DETAIL>
+	</SETUPSITE>	
+	<SETUPSITE>
+		<LINK_NAME>Şablon XML Setup</LINK_NAME>
+		<LINK_FILE>objects.popup_print_files</LINK_FILE>
+		<LINK_DETAIL>Şablon Yazdırma Popup</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Şablon XML Setup</LINK_NAME>
+		<LINK_FILE>objects.popup_list_member_address</LINK_FILE>
+		<LINK_DETAIL>Teslim Yeri Popup</LINK_DETAIL>
+	</SETUPSITE>
+		<SETUPSITE>
+		<LINK_NAME>Masraf/Gelir Merkezi XML Setup</LINK_NAME>
+		<LINK_FILE>objects.popup_expense_center</LINK_FILE>
+		<LINK_DETAIL>Masraf/Gelir Merkezi Popup</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Fiyat Detay Popup</LINK_NAME>
+		<LINK_FILE>objects.popup_product_price_history_js,objects.popup_product_price_history_public_js</LINK_FILE>
+		<LINK_DETAIL></LINK_DETAIL>
+	</SETUPSITE>
+</SETUP_SITE>

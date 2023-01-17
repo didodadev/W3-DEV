@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SETUP_SITE>
+	<SETUPSITE>
+		<LINK_NAME>Satınalma Talebi Liste Sayfası Ayarları XML Setup</LINK_NAME> 
+		<LINK_FILE>purchase.list_internaldemand</LINK_FILE> 
+		<LINK_DETAIL>Satınalma Talebi Liste Sayfası Ayarları</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Satınalma Siparişi Ayarları XML Setup</LINK_NAME> 
+		<LINK_FILE>purchase.detail_order</LINK_FILE> 
+		<LINK_DETAIL>Satınalama Siparişi Çalışma Detayları</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>İç Talebi Satınalma Siparişine Dönüştürme XML Setup</LINK_NAME> 
+		<LINK_FILE>purchase.form_add_internaldemand_order</LINK_FILE> 
+		<LINK_DETAIL>İç Talebi Satınalma Siparişine Dönüştürme Detayları</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Satınalma Siparişleri XML Setup</LINK_NAME> 
+		<LINK_FILE>purchase.list_order,purchase.welcome</LINK_FILE> 
+		<LINK_DETAIL>Satınalma Siparişleri Listesi</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Satınalma Teklifleri XML Setup</LINK_NAME> 
+		<LINK_FILE>purchase.list_offer</LINK_FILE> 
+		<LINK_DETAIL>Satınalma Teklifleri Listesi</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Toplu Sipariş Ver XML Setup</LINK_NAME> 
+		<LINK_FILE>purchase.add_order_product_all_criteria</LINK_FILE> 
+		<LINK_DETAIL>Toplu Sipariş Ver</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Satın Alma Talepler Liste Sayfası Ayarları XML Setup</LINK_NAME> 
+		<LINK_FILE>purchase.list_purchasedemand</LINK_FILE> 
+		<LINK_DETAIL>Satın Alma Talepler Liste Sayfası Ayarları</LINK_DETAIL>
+	</SETUPSITE>	
+	<SETUPSITE>
+		<LINK_NAME>İç Talepler Liste Sayfası Ayarları XML Setup</LINK_NAME> 
+		<LINK_FILE>purchase.list_internaldemand</LINK_FILE> 
+		<LINK_DETAIL>İç Talepler Liste Sayfası Ayarları</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Satınalma Teklif Detay Sayfası Ayarları XML Setup</LINK_NAME> 
+		<LINK_FILE>purchase.detail_offer_ta</LINK_FILE> 
+		<LINK_DETAIL>Satınalma Teklif Detay Sayfası Ayarları</LINK_DETAIL>
+	</SETUPSITE>	
+	<SETUPSITE>
+		<LINK_NAME>Satınalma Dashboard Sayfası Ayarları XML Setup</LINK_NAME> 
+		<LINK_FILE>purchase.purchase_dashboard</LINK_FILE>
+		<LINK_DETAIL>Satınalma Dashboard Sayfası Ayarları</LINK_DETAIL>
+	</SETUPSITE>
+</SETUP_SITE>

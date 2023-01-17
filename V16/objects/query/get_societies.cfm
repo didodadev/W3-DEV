@@ -1,0 +1,9 @@
+<cfquery name="GET_SOCIETIES" datasource="#DSN#">
+	SELECT
+		SOCIETY_ID,
+		SOCIETY
+	FROM 
+		SETUP_SOCIAL_SOCIETY
+	ORDER BY
+		SOCIETY
+</cfquery>

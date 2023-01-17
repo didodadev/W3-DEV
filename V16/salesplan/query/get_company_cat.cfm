@@ -1,0 +1,9 @@
+<cfquery name="GET_COMPANYCAT" datasource="#DSN#">
+	SELECT 
+		COMPANYCAT_ID, 
+		COMPANYCAT 
+	FROM 
+		COMPANY_CAT
+	ORDER BY
+		COMPANYCAT
+</cfquery>

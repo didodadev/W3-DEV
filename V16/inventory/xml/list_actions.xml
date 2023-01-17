@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<OBJECT_PROPERTIES>
+  <OBJECT_PROPERTY>
+		<PROPERTY>xml_is_branch</PROPERTY>
+		<PROPERTY_DETAIL>Şube filtresi ve sutunu gelsin mi ?</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>select</PROPERTY_TYPE>
+		<PROPERTY_VALUES>0,1</PROPERTY_VALUES>
+		<PROPERTY_NAMES>Hayır,Evet</PROPERTY_NAMES>
+		<PROPERTY_DEFAULT>0</PROPERTY_DEFAULT>
+		<PROPERTY_HELP>Hayır seçildiği zaman şube filtresi ve sutunu gelmez .</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+</OBJECT_PROPERTIES>

@@ -1,0 +1,16 @@
+<!-- Description : Çalışan Yakını Ekle ve Güncelle sayfası için yeni dil eklendi ve EMPLOYEES_RELATIVES/SALARYPARAM_PAY tablolarına CHILD_HELP kolonu eklendi.
+Developer: Melek KOCABEY
+Company : Workcube
+Destination: Main-->
+<querytag>
+    UPDATE SETUP_LANGUAGE_TR SET ITEM='Çocuk Yardımı', ITEM_TR='Çocuk Yardımı', ITEM_ENG='Child Allowance ' WHERE DICTIONARY_ID = 46080
+   
+    IF NOT EXISTS ( SELECT 'Y' FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME='SALARYPARAM_PAY' AND COLUMN_NAME='CHILD_HELP')
+        BEGIN
+            ALTER TABLE SALARYPARAM_PAY ADD CHILD_HELP bit NULL
+        END;
+    IF NOT EXISTS ( SELECT 'Y' FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME='EMPLOYEES_RELATIVES' AND COLUMN_NAME='CHILD_HELP')
+        BEGIN
+            ALTER TABLE EMPLOYEES_RELATIVES ADD CHILD_HELP bit NULL
+        END;
+</querytag>

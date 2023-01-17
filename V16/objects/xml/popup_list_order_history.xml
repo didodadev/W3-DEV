@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<OBJECT_PROPERTIES>
+	<OBJECT_PROPERTY>
+		<PROPERTY>x_is_discount</PROPERTY>
+		<PROPERTY_DETAIL>İskonto bilgilerinin hangileri Gelsin</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>input</PROPERTY_TYPE>
+		<PROPERTY_VALUES></PROPERTY_VALUES>
+		<PROPERTY_NAMES></PROPERTY_NAMES>
+		<PROPERTY_DEFAULT>1,2,3,4</PROPERTY_DEFAULT>
+		<PROPERTY_HELP>1.İskonto1, 2.İskonto2, 3.İskonto3, 4.İskonto4, 5.İskonto5, 6.İskonto6, 7.İskonto7, 8.İskonto8,  9.İskonto9, 10.İskonto10 Yazılmayan Kolonlar Listede Görüntülenmeyecektir.</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+</OBJECT_PROPERTIES>

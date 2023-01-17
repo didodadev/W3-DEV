@@ -1,0 +1,153 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<SETUP_SITE>
+	<SETUPSITE>
+		<LINK_NAME>Sevk Fiyatı XML Setup</LINK_NAME>
+		<LINK_FILE>settings.form_add_ship_method_price</LINK_FILE>
+		<LINK_DETAIL>Sevkiyat Fiyatı Ekleme Güncelleme</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Şikayet Alt Başvuru Tree Kategorisi XML Setup</LINK_NAME>
+		<LINK_FILE>settings.form_add_g_service_app_sub_status</LINK_FILE>
+		<LINK_DETAIL>Şikayet Alt Başvuru Tree Kategorisi Ekleme Güncelleme</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Marka Tip Kategori Özellik XML Setup</LINK_NAME>
+		<LINK_FILE>settings.add_brand_type_cat</LINK_FILE>
+		<LINK_DETAIL>Marka Tip Kategori Ekleme Güncelleme</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>İlçe XML Setup</LINK_NAME>
+		<LINK_FILE>settings.popup_form_add_county</LINK_FILE>
+		<LINK_DETAIL>İlçe Ekleme Güncelleme</LINK_DETAIL>
+	</SETUPSITE>	
+	<SETUPSITE>
+		<LINK_NAME>Bireysel Üye Kategorisi Ekleme/Güncelleme XML Setup</LINK_NAME>
+		<LINK_FILE>settings.form_add_consumer_categories,settings.form_upd_consumer_categories</LINK_FILE>
+		<LINK_DETAIL>Risk Limiti Kullanım Kontrolü</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Şirket Detay</LINK_NAME>
+		<LINK_FILE>settings.form_upd_our_company</LINK_FILE>
+		<LINK_DETAIL>Şirket Güncelleme</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Çalışan Yetki Grubu</LINK_NAME>
+		<LINK_FILE>settings.form_add_user_group,settings.form_upd_user_group</LINK_FILE>
+		<LINK_DETAIL>Çalışan Yetki Grubu Dil Seçimi</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Çalışan Kullanıcı Bilgileri</LINK_NAME>
+		<LINK_FILE>settings.setup_employee_passwords</LINK_FILE>
+		<LINK_DETAIL>Çalışan Kullanıcı Adı Gönderimi</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Ödeme Yöntemleri</LINK_NAME>
+		<LINK_FILE>settings.form_add_paymethod</LINK_FILE>
+		<LINK_DETAIL>Ödeme Yönteminde Taksit Tarihi Belirleme</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Cari Aktarım</LINK_NAME>
+		<LINK_FILE>settings.form_close_cari</LINK_FILE>
+		<LINK_DETAIL>Cari Aktarım</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Bireysel Üye Cari Aktarım</LINK_NAME>
+		<LINK_FILE>settings.form_close_cari_consumer</LINK_FILE>
+		<LINK_DETAIL>Bireysel Üye Cari Aktarım</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Çalışan Cari Aktarım</LINK_NAME>
+		<LINK_FILE>settings.form_close_cari_employee</LINK_FILE>
+		<LINK_DETAIL>Çalışan Cari Aktarım</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Maliyet İşlemleri</LINK_NAME>
+		<LINK_FILE>settings.add_new_cost</LINK_FILE>
+		<LINK_DETAIL>Maliyet İşlemleri</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Mahalle Ekleme / Güncelleme</LINK_NAME>
+		<LINK_FILE>settings.popup_form_upd_district,settings.popup_form_add_district</LINK_FILE>
+		<LINK_DETAIL>Mahalle Ekleme / Güncelleme</LINK_DETAIL>
+	</SETUPSITE>	
+	<SETUPSITE>
+		<LINK_NAME>Mahalle Listeleme</LINK_NAME>
+		<LINK_FILE>settings.list_district</LINK_FILE>
+		<LINK_DETAIL>Mahalle Listeleme</LINK_DETAIL>
+	</SETUPSITE>	
+	<SETUPSITE>
+		<LINK_NAME>İş Kategorisi Ekleme / Güncelleme</LINK_NAME>
+		<LINK_FILE>settings.form_add_pro_work_cat,settings.form_upd_pro_work_cat</LINK_FILE>
+		<LINK_DETAIL>İş Kategorisi Ekleme / Güncelleme</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Aktarımlar XML Setup</LINK_NAME>
+		<LINK_FILE>settings.system_transfers</LINK_FILE>
+		<LINK_DETAIL>Aktarımlar XML Setup</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Kalite Kontrol Tipleri Listesi XML Setup</LINK_NAME>
+		<LINK_FILE>quality.control_standarts</LINK_FILE>
+		<LINK_DETAIL>Kalite Kontrol Tipleri Listesi XML Setup</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Kalite Kontrol Tipleri XML Setup</LINK_NAME>
+		<LINK_FILE>settings.popup_add_qualty_control_types</LINK_FILE>
+		<LINK_DETAIL>Kalite Kontrol Tipleri XML Setup</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Kalite Kontrol Sonuçları XML Setup</LINK_NAME>
+		<LINK_FILE>settings.popup_add_quality_control_result</LINK_FILE>
+		<LINK_DETAIL>Kalite Kontrol Sonuçları XML Setup</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Sektör Günceleme XML Setup</LINK_NAME>
+		<LINK_FILE>settings.form_upd_sector_cat</LINK_FILE>
+		<LINK_DETAIL>Sektör güncelleme XML Setup</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Sektör Günceleme XML Setup</LINK_NAME>
+		<LINK_FILE>settings.form_add_sector_cat</LINK_FILE>
+		<LINK_DETAIL>Sektör güncelleme XML Setup</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Arıza Kodu XML Setup</LINK_NAME>
+		<LINK_FILE>settings.form_add_service_defect_code</LINK_FILE>
+		<LINK_DETAIL>Arıza Kodu XML Setup</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Ürün Servis İşlem Tipi XML Setup</LINK_NAME>
+		<LINK_FILE>settings.form_add_service_spare_part</LINK_FILE>
+		<LINK_DETAIL>Ürün Servis İşlem Tipi XML Setup</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Basket Şablonları</LINK_NAME>
+		<LINK_FILE>settings.form_add_bskt_detail</LINK_FILE>
+		<LINK_DETAIL>Basket Şablonları</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Şikayet Alt Başvuru Kategorisi XML Setup</LINK_NAME>
+		<LINK_FILE>settings.form_add_g_service_app_cat_sub</LINK_FILE>
+		<LINK_DETAIL>Şikayet Alt Başvuru Kategorisi XML Setup</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Dönem Ekleme Güncelleme XML Setup</LINK_NAME>
+		<LINK_FILE>settings.form_add_period</LINK_FILE>
+		<LINK_DETAIL>Dönem Ekleme Güncelleme XML Setup</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Muhasebe Dönem Açılış Fişi XML Setup</LINK_NAME>
+		<LINK_FILE>settings.muhasebe_devir</LINK_FILE>
+		<LINK_DETAIL>Muhasebe Dönem Açılış Fişi XML Setup</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Dijital Varlık Kategorileri XML Setup</LINK_NAME>
+		<LINK_FILE>settings.asset_cat</LINK_FILE>
+		<LINK_DETAIL>Dijital Varlık Kategorileri XML Setup</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>KBS ve Emekli Sandığı XML Setup</LINK_NAME>
+		<LINK_FILE>settings.popup_upd_branch_ssk</LINK_FILE>
+		<LINK_DETAIL>KBS ve Emekli Sandığı XML Setup</LINK_DETAIL>
+	</SETUPSITE>
+</SETUP_SITE>

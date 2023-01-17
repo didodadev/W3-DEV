@@ -1,0 +1,13 @@
+<!-- Description : İcra tablosuna yeni alanlar eklendi. 
+Developer: Esma Uysal
+Company : Workcube
+Destination: Main -->
+<querytag>
+    IF NOT EXISTS ( SELECT 'Y' FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME='COMMANDMENT' AND COLUMN_NAME='ACCOUNT_NAME')
+    BEGIN
+        ALTER TABLE COMMANDMENT
+            ADD ACCOUNT_CODE VARCHAR(50), ACC_TYPE_ID int, ACCOUNT_NAME VARCHAR(250)
+        ALTER TABLE COMMANDMENT_HISTORY
+            ADD ACCOUNT_CODE VARCHAR(50), ACC_TYPE_ID int, ACCOUNT_NAME VARCHAR(250)
+    END;
+</querytag>

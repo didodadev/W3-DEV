@@ -1,0 +1,31 @@
+<!-- Description : Added discount expense center ,discount expense item ,exemption code columns for Accounting Code page
+Developer: Canan Ebret
+Company : Workcube
+Destination: Company-->
+<querytag>
+        IF NOT EXISTS (SELECT 'Y' FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME = 'SETUP_PRODUCT_PERIOD_CAT' AND TABLE_SCHEMA = '@_dsn_company_@' AND COLUMN_NAME = 'DISCOUNT_EXPENSE_CENTER_ID ')
+        BEGIN
+                ALTER TABLE SETUP_PRODUCT_PERIOD_CAT ADD 
+                DISCOUNT_EXPENSE_CENTER_ID  int NULL
+        END;
+        IF NOT EXISTS (SELECT 'Y' FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME = 'SETUP_PRODUCT_PERIOD_CAT' AND TABLE_SCHEMA = '@_dsn_company_@' AND COLUMN_NAME = 'DISCOUNT_EXPENSE_ITEM_ID ')
+        BEGIN
+                ALTER TABLE SETUP_PRODUCT_PERIOD_CAT ADD 
+                DISCOUNT_EXPENSE_ITEM_ID  int NULL
+        END;
+        IF NOT EXISTS (SELECT 'Y' FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME = 'SETUP_PRODUCT_PERIOD_CAT' AND TABLE_SCHEMA = '@_dsn_company_@' AND COLUMN_NAME = 'DISCOUNT_ACTIVITY_TYPE_ID ')
+        BEGIN
+                ALTER TABLE SETUP_PRODUCT_PERIOD_CAT ADD 
+                DISCOUNT_ACTIVITY_TYPE_ID  int NULL
+        END;
+        IF NOT EXISTS (SELECT 'Y' FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME = 'SETUP_PRODUCT_PERIOD_CAT' AND TABLE_SCHEMA = '@_dsn_company_@' AND COLUMN_NAME = 'REASON_CODE ')
+        BEGIN
+                ALTER TABLE SETUP_PRODUCT_PERIOD_CAT ADD 
+                REASON_CODE  nvarchar(MAX) NULL
+        END
+</querytag>
+
+
+		
+
+

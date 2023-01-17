@@ -1,0 +1,10 @@
+<cfquery name="GET_MAIN_MENUS" datasource="#DSN#">
+	SELECT
+		MENU_ID,
+		#dsn#.Get_Dynamic_Language(MAIN_MENU_SETTINGS.MENU_ID,'#session.ep.language#','MAIN_MENU_SETTINGS','MENU_NAME',NULL,NULL,MAIN_MENU_SETTINGS.MENU_NAME) AS MENU_NAME
+	FROM 
+		MAIN_MENU_SETTINGS
+	ORDER BY 
+		MENU_NAME
+</cfquery>
+

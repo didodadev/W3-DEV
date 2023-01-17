@@ -1,0 +1,10 @@
+﻿Aktif*(aktif:1 pasif:0);Abone No*;"Bireysel Müşteri 
+(ID)*";"Kurumsal Müşteri 
+(ID)*";Tanım *;Aşama ID*;Kategori ID*;Sözleşme Tarihi *;Montaj Tarihi;Özel kod;"Fatura Şirketi
+Bireysel Müşteri (ID)";"Fatura Şirketi 
+Kurumsal Müşteri (ID)";Satış Temsilcisi ID;"Satış Ortağı 
+Bireysel Müşteri (ID)";"Satış Ortağı 
+Kurumsal Müşteri (ID)";Satış Ort. Komisyonu;P.B.;"Referans Müşteri 
+Çalışan (ID)";"Referans Müşteri 
+Bireysel Müşteri (ID)";"Referans Müşteri 
+Kurumsal Müşteri (ID)";Ürün (Stok Kodu veya özel kod);Sözleşme No(ID);Abone Özel Tanım ID;Servis Ozel Tanım ID;Ödeme Yöntemi ID;Proje (ID);Fiziki Varlık ID;Şube ID

@@ -1,0 +1,362 @@
+﻿[
+    {
+      "description": "",
+      "title": "",
+      "key": "COMPANY_ASSET_RELATION"
+    },
+    {
+      "description": "",
+      "title": "",
+      "key": "SERVER_DETAIL"
+    },
+    {
+      "description": "",
+      "title": "",
+      "key": "USE_PASSWORD_REMINDER"
+    },
+    {
+      "description": "",
+      "title": "",
+      "key": "IS_WRK_VISIT_REPORT"
+    },
+    {
+      "description": "Dosya indirme dizini fiziksel yolunu verir",
+      "title": "İndirme klasörü",
+      "key": "DOWNLOAD_FOLDER"
+    },
+    {
+      "description": "",
+      "title": "",
+      "key": "INDEX_FOLDER"
+    },
+    {
+      "description": "Standart işlem parabirimi için IEFT kodunu verir",
+      "title": "Standart işlem parabirimi",
+      "key": "STANDART_PROCESS_MONEY"
+    },
+    {
+      "description": "Employee için URL adresini verir",
+      "title": "Employee URL",
+      "key": "EMPLOYEE_URL"
+    },
+    {
+      "description": "",
+      "title": "",
+      "key": "ACTIVE_DIRECTORY_SERVER"
+    },
+    {
+      "description": "",
+      "title": "",
+      "key": "CON_MAIL_PATH"
+    },
+    {
+      "description": "Standart diğer işlem parabirimi için IEFT kodunu verir",
+      "title": "Standart diğer işlem parabirimi",
+      "key": "STANDART_PROCESS_OTHER_MONEY"
+    },
+    {
+      "description": "",
+      "title": "",
+      "key": "USE_ACTIVE_DIRECTORY"
+    },
+    {
+      "description": "",
+      "title": "",
+      "key": "USE_SCRIPT_ON_PROCESS"
+    },
+    {
+      "description": "",
+      "title": "",
+      "key": "FILE_WEB_PATH"
+    },
+    {
+      "description": "",
+      "title": "",
+      "key": "FUSEBOX"
+    },
+    {
+      "description": "",
+      "title": "",
+      "key": "IS_ONLY_SHOW_PAGE"
+    },
+    {
+      "description": "",
+      "title": "",
+      "key": "MOBILE_DOMAIN"
+    },
+    {
+      "description": "",
+      "title": "",
+      "key": "ACTIVE_DIRECTORY_START"
+    },
+    {
+      "description": "DSN bağlantı adını verir",
+      "title": "DSN Değeri",
+      "key": "DSN"
+    },
+    {
+      "description": "",
+      "title": "",
+      "key": "PDA_COMPANIES"
+    },
+    {
+      "description": "",
+      "title": "",
+      "key": "COLORBORDER"
+    },
+    {
+      "description": "",
+      "title": "",
+      "key": "MOBILE_URL"
+    },
+    {
+      "description": "",
+      "title": "",
+      "key": "SAFEIP"
+    },
+    {
+      "description": "",
+      "title": "",
+      "key": "NETBOOK_FOLDER"
+    },
+    {
+      "description": "",
+      "title": "",
+      "key": "CAMPAIGN_MAIL_ADDRESS_LIST"
+    },
+    {
+      "description": "",
+      "title": "",
+      "key": "SYSTEMPARAM"
+    },
+    {
+      "description": "",
+      "title": "",
+      "key": "IS_FULLTEXT_SEARCH"
+    },
+    {
+      "description": "",
+      "title": "",
+      "key": "EMP_MAIL_PATH"
+    },
+    {
+      "description": "",
+      "title": "",
+      "key": "FREE_ACTIONS"
+    },
+    {
+      "description": "",
+      "title": "",
+      "key": "IS_GOV_PAYROLL"
+    },
+    {
+      "description": "",
+      "title": "",
+      "key": "IS_PERFORMANCE_COUNTER"
+    },
+    {
+      "description": "",
+      "title": "",
+      "key": "PARTNER_BROWSER_TYPES"
+    },
+    {
+      "description": "",
+      "title": "",
+      "key": "RESERVED_WORDS"
+    },
+    {
+      "description": "",
+      "title": "",
+      "key": "PDA_DOMAIN"
+    },
+    {
+      "description": "Partner için URL adresini verir",
+      "title": "Partner URL",
+      "key": "PARTNER_URL"
+    },
+    {
+      "description": "",
+      "title": "",
+      "key": "WORKCUBE_MODE"
+    },
+    {
+      "description": "",
+      "title": "",
+      "key": "PARTNER_COMPANIES"
+    },
+    {
+      "description": "",
+      "title": "",
+      "key": "CAREER_URL"
+    },
+    {
+      "description": "",
+      "title": "",
+      "key": "DATABASE_FOLDER"
+    },
+    {
+      "description": "",
+      "title": "",
+      "key": "COLORROW"
+    },
+    {
+      "description": "",
+      "title": "",
+      "key": "SESSION_TREE"
+    },
+    {
+      "description": "",
+      "title": "",
+      "key": "CAREER_COMPANIES"
+    },
+    {
+      "description": "",
+      "title": "",
+      "key": "ATTRIBUTES"
+    },
+    {
+      "description": "",
+      "title": "",
+      "key": "PUBLIC_DOMAIN"
+    },
+    {
+      "description": "",
+      "title": "",
+      "key": "DIR_SEPERATOR"
+    },
+    {
+      "description": "",
+      "title": "",
+      "key": "DATABASE_LOG_FOLDER"
+    },
+    {
+      "description": "",
+      "title": "",
+      "key": "DATABASE_HOST"
+    },
+    {
+      "description": "DSN_REPORT bağlantı adını verir",
+      "title": "DSN_REPORT Değeri",
+      "key": "DSN_REPORT"
+    },
+    {
+      "description": "",
+      "title": "",
+      "key": "EMPLOYEE_DOMAIN"
+    },
+    {
+      "description": "",
+      "title": "",
+      "key": "COLORHEADER"
+    },
+    {
+      "description": "",
+      "title": "",
+      "key": "ACTIVE_DIRECTORY_ATRR"
+    },
+    {
+      "description": "",
+      "title": "",
+      "key": "WORKCUBE_MODE_IP"
+    },
+    {
+      "description": "",
+      "title": "",
+      "key": "HTTPS_DOMAIN"
+    },
+    {
+      "description": "",
+      "title": "",
+      "key": "UPLOAD_FOLDER"
+    },
+    {
+      "description": "",
+      "title": "",
+      "key": "DATABASE_TYPE"
+    },
+    {
+      "description": "DSN1 bağlantı adını verir",
+      "title": "DSN1 Değeri",
+      "key": "DSN1"
+    },
+    {
+      "description": "",
+      "title": "",
+      "key": "ONLY_REPORT_SYSTEM"
+    },
+    {
+      "description": "",
+      "title": "",
+      "key": "COLORLIST"
+    },
+    {
+      "description": "",
+      "title": "",
+      "key": "PARTNER_DOMAIN"
+    },
+    {
+      "description": "",
+      "title": "",
+      "key": "PDA_URL"
+    },
+    {
+      "description": "",
+      "title": "",
+      "key": "DEFAULT_COMPANY_ID_"
+    },
+    {
+      "description": "",
+      "title": "",
+      "key": "LANG_LIST"
+    },
+    {
+      "description": "",
+      "title": "",
+      "key": "PAR_MAIL_PATH"
+    },
+    {
+      "description": "",
+      "title": "",
+      "key": "WORKCUBE_VERSION"
+    },
+    {
+      "description": "Kullanıcının kullandığı domain adresi",
+      "title": "Kullanıcı Domain Adresi",
+      "key": "USER_DOMAIN"
+    },
+    {
+      "description": "",
+      "title": "",
+      "key": "USE_HTTPS"
+    },
+    {
+      "description": "",
+      "title": "",
+      "key": "IS_PDF_HEADER"
+    },
+    {
+      "description": "",
+      "title": "",
+      "key": "REQUEST"
+    },
+    {
+      "description": "",
+      "title": "",
+      "key": "REPORTMAN_URL"
+    },
+    {
+      "description": "",
+      "title": "",
+      "key": "SERVER_URL"
+    },
+    {
+      "description": "",
+      "title": "",
+      "key": "SERVER_COMPANIES"
+    },
+    {
+      "description": "",
+      "title": "",
+      "key": "ACTIVE_DIRECTORY_SERVER_ADD"
+    }
+  ]

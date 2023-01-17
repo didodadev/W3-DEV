@@ -1,0 +1,3 @@
+.fs .modal-body-content {
+    height: calc(100% - 45px);
+}

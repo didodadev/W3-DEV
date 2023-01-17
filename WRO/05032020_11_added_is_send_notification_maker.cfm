@@ -1,0 +1,11 @@
+<!-- Description : Added a new column which named IS_SEND_NOTIFICATION_MAKER to PROCESS_TYPE_ROWS
+Developer: Uğur Hamurpet
+Company : Workcube
+Destination: Main-->
+<querytag>   
+    IF NOT EXISTS(SELECT 'Y' FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME='PROCESS_TYPE_ROWS' AND COLUMN_NAME='IS_SEND_NOTIFICATION_MAKER')
+    BEGIN
+        ALTER TABLE PROCESS_TYPE_ROWS ADD 
+        IS_SEND_NOTIFICATION_MAKER bit NULL;
+    END;
+</querytag>

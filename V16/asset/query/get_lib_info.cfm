@@ -1,0 +1,40 @@
+<cfquery name="GET_LIB_CAT" datasource="#dsn#">
+	SELECT LIBRARY_CAT FROM LIBRARY_CAT WHERE  LIBRARY_CAT_ID = #GET_LIB_ASSET.LIB_ASSET_CAT#
+</cfquery>
+<cfif GET_LIB_ASSET.DEPARTMENT_ID IS NOT 0>
+	<cfquery name="DEPARTMENT" datasource="#dsn#">
+		SELECT BRANCH_ID FROM DEPARTMENT WHERE DEPARTMENT_ID = #GET_LIB_ASSET.DEPARTMENT_ID#		
+	</cfquery>
+	<cfif Len(DEPARTMENT.BRANCH_ID)>
+		<cfquery name="GET_ASSETP_DEP" datasource="#dsn#">
+			SELECT
+				ZONE.ZONE_NAME,	
+				BRANCH.BRANCH_NAME,
+				DEPARTMENT.DEPARTMENT_HEAD
+			FROM
+				ZONE,
+				BRANCH,
+				DEPARTMENT
+			WHERE 
+				DEPARTMENT.DEPARTMENT_ID = #GET_LIB_ASSET.DEPARTMENT_ID#  AND
+				BRANCH.BRANCH_ID = #DEPARTMENT.BRANCH_ID# AND
+				ZONE.ZONE_ID = BRANCH.ZONE_ID
+		</cfquery>
+	</cfif>
+</cfif>
+<cfquery name="GET_LIB_ASSET_INFO" datasource="#dsn#">
+	SELECT 
+        LIBRARY_ASSET_ID, 
+        FINISHDATE, 
+        RECORDDATE, 
+        RECORD_EMP, 
+        RECORD_IP, 
+        UPDATEDATE, 
+        UPDDATE_EMP, 
+        UPDATE_IP, 
+        STATUS
+    FROM 
+    	LIBRARY_ASSET_RESERVE 
+    WHERE  
+    	LIBRARY_ASSET_ID = #GET_LIB_ASSET.LIB_ASSET_ID# 
+</cfquery> 

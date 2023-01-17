@@ -1,0 +1,343 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<setup_process_type>
+	<process>
+		<process_name>Ajanda Olayı</process_name>
+		<faction>agenda.view_daily,agenda.form_add_event,agenda.popup_add_event,agenda.form_upd_event,objects.popup_form_add_event,objects.popup_upd_event,sales.popup_form_add_event,sales.popup_opp_upd_event,objects2.form_add_event,objects2.add_event,objects2.form_upd_event</faction>
+	</process>
+	<process>
+		<process_name>Araç Talebi</process_name>
+		<faction>assetcare.add_vehicle_purchase_request,assetcare.upd_vehicle_purchase_request,assetcare.add_vehicle_sales_request,assetcare.upd_vehicle_sales_request,assetcare.add_vehicle_exchange_request,assetcare.upd_vehicle_exchange_request,assetcare.add_vehicle_return_request,assetcare.upd_vehicle_return_request,assetcare.popup_add_allocate</faction>
+	</process>
+	<process>
+		<process_name>Arıza Bildirim</process_name>
+		<faction>assetcare.form_add_asset_failure,assetcare.form_upd_asset_failure,correspondence.form_add_asset_failure,correspondence.form_upd_asset_failure</faction>
+	</process>
+	<process>
+		<process_name>Atama Talebi</process_name>
+		<faction>hr.list_personel_assign_form,hr.from_add_personel_assign_form,hr.from_upd_personel_assign_form</faction>
+	</process>
+	<process>
+		<process_name>Avans Talebi</process_name>
+		<faction>myhome.form_add_payment_request,myhome.my_payment_request,myhome.popupform_upd_other_payment_request_valid,myhome.popupform_upd_payment_request_valid,myhome.popupform_upd_payment_request,ehesap.popup_add_payment_request</faction>
+	</process>
+	<process>
+		<process_name>Bakım Planı</process_name>
+		<faction>assetcare.form_add_care_period,assetcare.form_upd_care_period,assetcare.popup_add_care_period</faction>
+	</process>
+	<process>
+		<process_name>Bakım Sonucu</process_name>
+		<faction>assetcare.form_add_asset_care,assetcare.popup_add_asset_care,assetcare.form_upd_asset_care,assetcare.popup_upd_asset_care</faction>
+	</process>
+	<process>
+		<process_name>Bireysel Üye</process_name>
+		<faction>member.form_add_consumer,member.detail_consumer,call.form_add_consumer,objects.popup_form_add_consumer,member.consumer_list,member.add_multiple_consumer_form,objects2.add_member,objects2.user_friendly</faction>
+	</process>
+	<process>
+		<process_name>Bütçe</process_name>
+		<faction>budget.popup_add_budget,budget.popup_upd_budget,budget.list_budgets,budget.add_budget_plan,budget.upd_budget_plan,budget.popup_upd_budget_plan,budget.popup_upd_budget_plan,settings.budget_plan_import</faction>
+	</process>
+	<process>
+		<process_name>Callcenter Başvuru</process_name>
+		<faction>call.add_service,call.upd_service,call.list_service,objects2.add_service_callcenter,call.popup_add_service</faction>
+	</process>
+	<process>
+		<process_name>Callcenter Helpdesk</process_name>
+		<faction>call.popup_add_helpdesk,call.popup_upd_helpdesk,call.helpdesk,objects2.add_service_help,call.upd_helpdesk</faction>
+	</process>
+	<process>
+		<process_name>CV Kayıt</process_name>
+		<faction>hr.form_add_cv,hr.form_upd_cv,hr.list_cv,hr.emptypopup_list_app_pos_to_cv_ajax,myhome.my_profile,settings.cv_import</faction>
+	</process>
+	<process>
+		<process_name>Deneme Süresi Değerlendirmesi</process_name>
+		<faction>objects.popup_form_upd_detailed_survey_main_result,objects.popup_form_add_detailed_survey_main_result</faction>
+	</process>
+	<process>
+		<process_name>Dijital Arşiv</process_name>
+		<faction>asset.form_add_asset,asset.form_upd_asset,objects.popup_form_add_asset,objects.popup_form_upd_asset,asset.list_asset,objects.popup_save_asset_file</faction>
+	</process>
+	<process>
+		<process_name>Eğitim Süreci</process_name>
+		<faction>training_management.form_add_class,training_management.form_upd_class,training_management.form_add_class,training_management.popup_add_new_training_class,training_management.popup_add_excuseds_class</faction>
+	</process>
+	<process>
+		<process_name>Eğitim Talep Süreci</process_name>
+		<faction>training.popup_form_add_training_request,training.popup_form_add_training_request_annual,training.popup_form_upd_training_request,training.popup_form_upd_training_request_annual</faction>
+	</process>
+	<process>
+		<process_name>Eğitim Test Süreci</process_name>
+		<faction>training_management.form_add_quiz,training_management.form_upd_quiz</faction>
+	</process>
+	<process>
+		<process_name>Ekip Planlama</process_name>
+		<faction>stock.popup_add_dispatch_team_planning,stock.list_dispatch_team_planning,stock.popup_upd_dispatch_team_planning</faction>
+	</process>
+	<process>
+		<process_name>Fiziki Varlık Rezervasyon</process_name>
+		<faction>objects.popup_assets,objects.popup_form_assetp_reserve,assetcare.popup_form_upd_assetp_reserve,objects.popup_form_upd_assetp_reserve</faction>
+	</process>
+	<process>
+		<process_name>Form Generator</process_name>
+		<faction>hr.list_detail_survey_report,settings.form_add_detail_survey,settings.form_upd_detail_survey,settings.emptypopupajax_form_publication,objects.emptypopupajax_form_participants,objects.popup_form_add_detail_survey,objects.popup_form_upd_detail_survey,objects.popup_form_add_detailed_survey_main_result,objects.popup_form_upd_detailed_survey_main_result</faction>
+	</process>	
+	<process>
+		<process_name>Harcama Talebi</process_name>
+		<faction>cost.form_upd_expense_plan_request,myhome.form_add_expense_plan_request,myhome.form_upd_expense_plan_request,cost.list_expense_requests,myhome.list_my_expense_requests</faction>
+	</process>
+	<process>
+		<process_name>İcra - Blok Takibi</process_name>
+		<faction>ch.list_law_request,ch.form_add_law_request,ch.form_upd_law_request,ch.form_add_block_request,ch.form_upd_block_request</faction>
+	</process>
+	<process>
+		<process_name>İç Talep</process_name>
+		<faction>purchase.list_internaldemand,purchase.add_internaldemand,purchase.upd_internaldemand,correspondence.list_internaldemand,correspondence.add_internaldemand,correspondence.upd_internaldemand,myhome.add_internaldemand,myhome.upd_internaldemand</faction>
+	</process>
+	<process>
+		<process_name>İçerik Yönetimi</process_name>
+		<faction>content.view_content,content.welcome,content.list_content,content.add_form_content,training_management.add_form_content,training_management.view_content</faction>
+	</process>
+	<process>
+		<process_name>İK Pozisyon</process_name>
+		<faction>hr.list_positions,hr.form_add_position,hr.popup_add_position,hr.form_upd_position</faction>
+	</process>
+	<process>
+		<process_name>İş Süreci</process_name>
+		<faction>objects2.popup_addwork,objects2.popup_updwork,project.addwork,project.updwork,project.works,objects.popup_add_work,project.popup_project_work_prints,project.prodetail,project.popup_ajax_display_grid,project.popup_ajax_display_gridgant</faction>
+	</process>
+	<process>
+		<process_name>İşe Alım</process_name>
+		<faction>hr.emp_app_select_list,hr.upd_emp_app_select_list,hr.popup_find_select_list,hr.popup_select_list_search,hr.upd_emp_app_select_list,myhome.upd_emp_app_select_list,myhome.popup_find_select_list,myhome.popup_select_list_search,hr.popup_add_app_test_time</faction>
+	</process>
+	<process>
+		<process_name>İzin Talebi</process_name>
+		<faction>ehesap.list_offtimes,hr.list_offtimes,ehesap.form_add_offtime_popup,ehesap.form_upd_offtime_popup,myhome.form_add_offtime_popup,myhome.form_add_offtime_yearly_popup</faction>
+	</process>
+	<process>
+		<process_name>Kalite Kontrol</process_name>
+		<faction>product.popup_product_guaranty,stock.popup_add_quality_control_report,stock.popup_upd_quality_control_report_rows,prod.popup_upd_quality_control_report_rows,prod.popup_add_quality_control_report</faction>
+	</process>
+	<process>
+		<process_name>Kampanya</process_name>
+		<faction>campaign.form_add_campaign,campaign.form_upd_campaign,campaign.list_campaign</faction>
+	</process>
+	<process>
+		<process_name>Kota Planlama</process_name>
+		<faction>salesplan.list_sales_quotas,salesplan.add_sales_quota,salesplan.upd_sales_quota</faction>
+	</process>
+	<process>
+		<process_name>Kurumsal Üye</process_name>
+		<faction>member.form_add_company,member.detail_company,objects.popup_form_add_company,crm.form_add_supplier,crm.form_upd_supplier,call.form_add_company,member.form_list_company,objects2.upd_my_member</faction>
+	</process>
+	<process>
+		<process_name>Maliyet</process_name>
+		<faction>product.list_product_cost,product.form_add_product_cost,product.popup_form_upd_product_cost,product.popup_convert_suggest,settings.add_new_cost_price,settings.add_new_cost_excel</faction>
+	</process>
+	<process>
+		<process_name>Malzeme ve İşçilik</process_name>
+		<faction>project.popup_add_project_material,project.popup_upd_project_material,project.popup_ajax_list_pro_material_paper</faction>
+	</process>
+	<process>
+		<process_name>Ödeme Planı</process_name>
+		<faction>sales.subscription_payment_plan</faction>
+	</process>
+	<process>
+		<process_name>Ödeme Talebi</process_name>
+		<faction>finance.list_payment_actions_order_demand,finance.list_payment_actions_order,finance.add_payment_actions,finance.upd_payment_actions,finance.list_payment_actions,correspondence.add_payment_actions,correspondence.upd_payment_actions,correspondence.list_payment_actions,correspondence.popup_form_add_payment_request,settings.close_invoice</faction>
+	</process>
+	<process>
+		<process_name>Performans Değerlendirme</process_name>
+		<faction>objects.popup_form_upd_detailed_survey_main_result,objects.popup_form_add_detailed_survey_main_result</faction>
+	</process>
+	<process>
+		<process_name>Personel Özlük (E-Profil)</process_name>
+		<faction>hr.list_hr,myhome.my_detail,hr.form_add_emp,hr.form_upd_emp,myhome.empytpopup_upd_my_detail,hr.popup_upd_emp_std,settings.import_employee</faction>
+	</process>
+	<process>
+		<process_name>Personel Talebi</process_name>
+		<faction>correspondence.from_add_personel_requirement_form,correspondence.from_upd_personel_requirement_form,correspondence.list_personel_requirement_form,hr.dsp_personel_requirement_form,hr.from_add_personel_requirement_form,hr.from_upd_personel_requirement_form,hr.list_personel_requirement_form,myhome.from_add_personel_requirement_form,myhome.from_upd_personel_requirement_form,myhome.list_personel_requirement_form</faction>
+	</process>
+	<process>
+		<process_name>Proje</process_name>
+		<faction>project.popup_updpro,project.addpro,project.projects,objects.popup_list_projects,objects2.list_projects,project.popup_project_work_prints,settings.form_add_pro_currency,settings.form_upd_pro_currency</faction>
+	</process>
+	<process>
+		<process_name>Promosyon</process_name>
+		<faction>product.list_promotions,product.form_add_prom,product.form_upd_prom,product.form_add_collacted_prom,product.form_upd_collacted_prom,product.form_add_detail_prom,product.form_upd_detail_prom</faction>
+	</process>
+	<process>
+		<process_name>Satınalma Siparişi</process_name>
+		<faction>purchase.form_add_order,purchase.detail_order,purchase.add_product_all_order,purchase.list_order,purchase.form_add_internaldemand_order,objects2.order_detail_purchase</faction>
+	</process>
+	<process>
+		<process_name>Satınalma Talebi</process_name>
+		<faction>purchase.list_purchasedemand,purchase.add_purchasedemand,purchase.upd_purchasedemand,myhome.list_internaldemand,myhome.add_purchasedemand,myhome.upd_purchasedemand</faction>
+	</process>
+	<process>
+		<process_name>Satınalma Teklifi</process_name>
+		<faction>purchase.form_add_offer,purchase.detail_offer_ta,purchase.list_offer</faction>
+	</process>
+	<process>
+		<process_name>Satış Fırsatı</process_name>
+		<faction>sales.list_opportunity,sales.form_upd_opportunity,sales.form_add_opportunity,sales.form_opportunity</faction>
+	</process>
+	<process>
+		<process_name>Satış Kota Planlama</process_name>
+		<faction>salesplan.form_add_sales_plan_quota,salesplan.form_upd_sales_plan_quota,salesplan.list_sales_plan_quotas</faction>
+	</process>
+	<process>
+		<process_name>Satış Siparişi</process_name>
+		<faction>sales.form_add_order,sales.detail_order,sales.list_order,objects2.form_add_orderww,objects2.form_add_orderww_camp</faction>
+	</process>
+	<process>
+		<process_name>Satış Siparişi (Taksitli)</process_name>
+		<faction>sales.list_order_instalment,sales.add_fast_sale,sales.upd_fast_sale</faction>
+	</process>
+	<process>
+		<process_name>Satış Teklifi</process_name>
+		<faction>sales.form_add_offer,sales.detail_offer_tv,sales.list_offer,objects2.add_offer,objects2.view_list_offer</faction>
+	</process>
+	<process>
+		<process_name>Seçim Listesi</process_name>
+		<faction>hr.popup_upd_select_list,myhome.popup_upd_select_list,hr.popup_add_select_emp_list,hr.emp_app_select_list,hr.upd_emp_app_select_list</faction>
+	</process>
+	<process>
+		<process_name>Servis Başvurusu</process_name>
+		<faction>service.add_service,service.upd_service,service.list_service,service.search_service</faction>
+	</process>
+	<process>
+		<process_name>Sevk Talebi</process_name>
+		<faction>stock.add_dispatch_internaldemand,stock.upd_dispatch_internaldemand</faction>
+	</process>
+	<process>
+		<process_name>Sevkiyat</process_name>
+		<faction>stock.form_add_packetship,stock.form_upd_packetship,stock.popup_add_packetship,stock.form_add_multi_packetship,stock.list_packetship,stock.list_multi_packetship,stock.list_command,stock.form_upd_multi_packetship</faction>
+	</process>
+	<process>
+		<process_name>Sistem</process_name>
+		<faction>sales.add_subscription_contract,sales.upd_subscription_contract,sales.list_subscription_contract</faction>
+	</process>
+	<process>
+		<process_name>Sosyal Medya Takibi</process_name>
+		<faction>worknet.list_social_media,worknet.upd_social_media</faction>
+	</process>
+	<process>
+		<process_name>Sözleşme Süreci</process_name>
+		<faction>contract.popup_add_contract,contract.popup_upd_contract,contract.form_add_contract,contract.form_upd_contract,contract.list_related_contracts</faction>
+	</process>
+	<process>
+		<process_name>Stok Export</process_name>
+		<faction>objects.popup_form_export_stock</faction>
+	</process>
+	<process>
+		<process_name>Terfi - Transfer Rotasyon</process_name>
+		<faction>hr.list_personel_rotation_form,hr.add_personel_rotation_form,hr.upd_personel_rotation_form,myhome.upd_personel_rotation_form,correspondence.add_personel_rotation_form,correspondence.upd_personel_rotation_form</faction>
+	</process>
+	<process>
+		<process_name>Üretim Emri</process_name>
+		<faction>prod.form_upd_prod_order,prod.order,prod.add_prod_order,prod.popup_ajax_display_product_tree,production.popup_ajax_production_orders_groups_operator,prod.tracking,prod.welcome,prod.demands,production.form_add_production_order</faction>
+	</process>
+	<process>
+		<process_name>Üretim Sonucu</process_name>
+		<faction>prod.list_results,prod.upd_prod_order_result,prod.add_prod_order_result</faction>
+	</process>
+	<process>
+		<process_name>Ürün Ağacı</process_name>
+		<faction>prod.list_product_tree,prod.add_product_tree,prod.popup_upd_sub_product,prod.manage_product_tree,settings.form_product_tree_import</faction>
+	</process>
+	<process>
+		<process_name>Ürün Fiyat</process_name>
+		<faction>product.popup_form_add_product_price,product.collacted_product_prices,store.popup_add_price,product.collacted_product_prices_total,product.popup_form_upd_price_request,product.list_price_change</faction>
+	</process>
+	<process>
+		<process_name>Ürün Garanti</process_name>
+		<faction>product.popup_product_guaranty,product.popup_product_guaranty_upd</faction>
+	</process>
+	<process>
+		<process_name>Ürün İade</process_name>
+		<faction>service.add_return,service.popup_upd_product_return,service.product_return,service.popup_add_product_return,objects.popup_add_product_return,objects2.add_return,objects2.upd_return</faction>
+	</process>
+	<process>
+		<process_name>Ürün Kayıt</process_name>
+		<faction>product.form_add_product,product.form_upd_product,product.list_product</faction>
+	</process>
+	<process>
+		<process_name>Ürün Koşullar</process_name>
+		<faction>product.conditions,product.popup_add_purchase_sales_condition,product.popup_upd_purchase_sales_condition</faction>
+	</process>
+	<process>
+		<process_name>Üye Risk</process_name>
+		<faction>finance.list_credits,contract.popup_add_company_credit,contract.detail_contract_company</faction>
+	</process>
+	<process>
+		<process_name>Varlık Talebi</process_name>
+		<faction>correspondence.popup_add_assetp_demand,correspondence.add_assetp_demand,myhome.list_assetp_demand,myhome.list_asset</faction>
+	</process>
+	<process>
+		<process_name>Varlık Yönetimi</process_name>
+        <faction>assetcare.form_add_assetp,assetcare.form_upd_assetp,assetcare.form_add_assetp_vehicle,assetcare.vehicle_detail,assetcare.add_assetp_vehicle,assetcare.popup_upd_vehicle_info,assetcare.form_upd_assetp_it,assetcare.form_add_assetp_it,invent.popup_add_inventory_stock_to_asset</faction>
+	</process>
+	<process>
+		<process_name>Wbo</process_name>
+		<faction>dev.add_fuseaction,dev.upd_fuseaction,dev.emptypopup_add_fuseaction,dev.emptypopup_upd_fuseaction.cfm,dev.list_wbo</faction>
+	</process>
+	<process>
+		<process_name>Yazışmalar</process_name>
+		<faction>correspondence.add_correspondence,correspondence.upd_correspondence</faction>
+	</process>	
+	<process>
+		<process_name>Ziyaret Planlama</process_name>
+		<faction>sales.list_visit,sales.form_add_visit,sales.form_upd_visit,crm.form_add_visit,crm.form_add_visit_daily,objects.popup_add_event_plan_result</faction>
+	</process>
+	<process>
+		<process_name>Hedef Kitle</process_name>
+		<faction>campaign.list_target_markets,campaign.form_add_target_market,campaign.form_upd_target_market,campaign.add_target_market,campaign.upd_target_market</faction>
+	</process>
+	<process>
+		<process_name>Gelen E-Fatura</process_name>
+		<faction>invoice.popup_add_efatura_xml,objects.popup_dsp_efatura_detail,objects.emptypopup_add_efatura_xml</faction>
+	</process>
+	<process>
+		<process_name>Üye Analiz Formu</process_name>
+		<faction>member.list_analysis,member.popup_form_add_analysis,member.popup_form_upd_analysis</faction>
+	</process>
+	<process>
+		<process_name>Zimmet Kayıtları</process_name>
+		<faction>hr.list_inventory_zimmet,hr.popup_add_inventory_zimmet,hr.popup_upd_inventory_zimmet,assetcare.popup_form_add_zimmet,assetcare.popup_form_upd_zimmet</faction>
+	</process>
+	<process>
+		<process_name>Sağlık Harcama Fişleri</process_name>
+		<faction>health.expenses</faction>
+	</process>
+	<process>
+		<process_name>Stok İşlemleri</process_name>
+		<faction>stock.list_purchase,stock.form_add_purchase</faction>
+	</process>
+	<process>
+		<process_name>Masraf Fişi</process_name>
+		<faction>cost.form_add_expense_cost,cost.list_expense_income</faction>
+	</process>
+	<process>
+		<process_name>Gelir Fişi</process_name>
+		<faction>cost.add_income_cost</faction>
+	</process>
+	<process>
+		<process_name>Alış Faturası</process_name>
+		<faction>invoice.form_add_bill_purchase,invoice.list_bill</faction>
+	</process>
+	<process>
+		<process_name>Mali Tablo Tanımları</process_name>
+		<faction>account.financial_audit_table_definition</faction>
+	</process>
+	<process>
+		<process_name>Mali Denetim Kopyası</process_name>
+		<faction>finance.audit_table_copies</faction>
+	</process>
+	<process>
+		<process_name>Mali Tablolar</process_name>
+		<faction>finance.audit_tables</faction>
+	</process>
+	<process>
+		<process_name>Vekalet</process_name>
+		<faction>hr.employee_mandate,myhome.employee_mandate</faction>
+	</process>
+</setup_process_type>

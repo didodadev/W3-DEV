@@ -1,0 +1,9 @@
+{
+    "cf_js_box": {
+        "prefix": "wjs:func_name",
+        "body": [
+            "<func_name()${1}>"
+        ],
+        "description": "Workcube wjs:func_name"
+    }
+}

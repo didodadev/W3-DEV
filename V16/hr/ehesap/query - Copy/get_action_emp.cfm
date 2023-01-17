@@ -1,0 +1,10 @@
+<cfquery name="GET_EMP" datasource="#dsn#">
+	SELECT
+		EMPLOYEE_ID,
+		EMPLOYEE_NAME,
+		EMPLOYEE_SURNAME
+	FROM
+		EMPLOYEES
+	WHERE
+		EMPLOYEE_ID=#EMP_ID#
+</cfquery>

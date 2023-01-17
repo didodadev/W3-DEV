@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SETUP_SITE>
+	<SETUPSITE>
+		<LINK_NAME>Kota Listeleme XML Setup</LINK_NAME> 
+		<LINK_FILE>salesplan.list_sales_quotas</LINK_FILE> 
+		<LINK_DETAIL>Kota Listeleme Ayarları</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Kota Ekleme XML Setup</LINK_NAME> 
+		<LINK_FILE>salesplan.add_sales_quota,salesplan.upd_sales_quota</LINK_FILE> 
+		<LINK_DETAIL>Kota Ekleme Ayarları</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Satış Takımı Ekleme / Güncelleme XML Setup</LINK_NAME> 
+		<LINK_FILE>salesplan.popup_add_sales_zones_team,salesplan.popup_upd_sales_zones_team</LINK_FILE> 
+		<LINK_DETAIL>Satış Takımı Ekleme / Güncelleme Ayarları</LINK_DETAIL>
+	</SETUPSITE>	
+</SETUP_SITE>

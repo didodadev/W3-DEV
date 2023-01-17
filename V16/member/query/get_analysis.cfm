@@ -1,0 +1,34 @@
+<cfquery name="GET_ANALYSIS" datasource="#DSN#">
+	SELECT 
+		ANALYSIS_HEAD,
+		ANALYSIS_ID,
+		ANALYSIS_OBJECTIVE,
+		ANALYSIS_AVERAGE,
+        ANALYSIS_STAGE,
+		TOTAL_POINTS,
+		PRODUCT_ID,
+		COMMENT1,
+		COMMENT2,
+		COMMENT3,
+		COMMENT4,
+		COMMENT5,
+		DETAIL,
+		RECORD_EMP,
+		RECORD_DATE,
+		ANALYSIS_PARTNERS,
+		ANALYSIS_CONSUMERS,
+		ANALYSIS_RIVALS,
+		IS_ACTIVE,
+		IS_PUBLISHED,
+		LANGUAGE_SHORT,
+		UPDATE_EMP,
+		UPDATE_DATE,
+		GOOGLE_FORMS_URL
+		<cfloop from="1" to="5" index="i">
+			,SCORE#i#
+		</cfloop>		
+	FROM 
+		MEMBER_ANALYSIS 
+	WHERE 
+		ANALYSIS_ID = <cfqueryparam cfsqltype="cf_sql_integer" value="#attributes.analysis_id#">
+</cfquery>

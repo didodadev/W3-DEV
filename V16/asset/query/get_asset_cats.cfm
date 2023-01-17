@@ -1,0 +1,10 @@
+<cfquery name="GET_ASSET_CATS" datasource="#DSN#">
+	SELECT 
+		ASSETCAT_ID,
+		ASSETCAT,
+		ASSETCAT_PATH
+	FROM 
+		ASSET_CAT
+	ORDER BY
+		ASSETCAT
+</cfquery>

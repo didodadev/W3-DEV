@@ -1,0 +1,483 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<process_stage_file>
+	<stage_file>
+		<file_module>Satış</file_module>
+		<file_name>subscription_main_action_file.cfm</file_name>
+		<file_type>Action</file_type>
+		<file_aim>subscription_main_display_file display dosyasından gelen değer göre çalışır. Süreçte belirtilen kişilere uyarı yollar.</file_aim>
+		<file_target>subscription_main_action_file.cfm</file_target>
+		<file_fuseaction></file_fuseaction>
+	</stage_file>
+	<stage_file>
+		<file_module>Satış</file_module>
+		<file_name>subscription_main_display_file.cfm</file_name>
+		<file_type>Display</file_type>
+		<file_aim>Sistem sayfasında bazı alanların değisikliye uğrayıp uğramadığını kontrol eder. Değşiklik varsa hidden alan 1 set edilir ve diğer action dosyası sayesinde uyarı yollanır süreç yetkililerine.</file_aim>
+		<file_target>subscription_main_display_file.cfm</file_target>
+		<file_fuseaction></file_fuseaction>
+	</stage_file>
+	<stage_file>
+		<file_module>Call Center Etkileşim</file_module>
+		<file_name>CallCenter_HelpDesk_Reply.cfm</file_name>
+		<file_type>Action</file_type>
+		<file_aim>Eklendiği aşamada etkileşimi Cevaplandırıldı olarak günceller.</file_aim>
+		<file_target>CallCenter_HelpDesk_Reply.cfm</file_target>
+		<file_fuseaction></file_fuseaction>
+	</stage_file>
+	<stage_file>
+		<file_module>Harcama Talebi Onay</file_module>
+		<file_name>talep_onay_action_file.cfm</file_name>
+		<file_type>Action</file_type>
+		<file_aim>İlgili harcama talebinin Onay aşamasına eklenmelidir. Ayrıca süreç kullanmadan harcamayı masraf fişine dönüştürecek firmalarda sürece tek aşama kaydedilir ve bu aşamaya action file olarak eklenmelidir.</file_aim>
+		<file_target>talep_onay_action_file.cfm</file_target>
+		<file_fuseaction>cost.form_upd_expense_plan_request,cost.form_add_expense_plan_request,myhome.form_add_expense_plan_request,myhome.form_upd_expense_plan_request,</file_fuseaction>
+	</stage_file>
+	<stage_file>
+		<file_module>Harcama Talebi Red</file_module>
+		<file_name>talep_red_action_file.cfm</file_name>
+		<file_type>Action</file_type>
+		<file_aim>İlgili harcama talebinin Red aşamasına eklenmelidir.</file_aim>
+		<file_target>talep_red_action_file.cfm</file_target>
+		<file_fuseaction>cost.form_upd_expense_plan_request,cost.form_add_expense_plan_request,myhome.form_add_expense_plan_request,myhome.form_upd_expense_plan_request,</file_fuseaction>
+	</stage_file>
+	<stage_file>
+		<file_module>Harcama Talebi Revize</file_module>
+		<file_name>talep_revize_action_file.cfm</file_name>
+		<file_type>Action</file_type>
+		<file_aim>İlgili harcama talebinin Revize aşamasına eklenmelidir. Onay veya Red durumunu kaldırır.</file_aim>
+		<file_target>talep_revize_action_file.cfm</file_target>
+		<file_fuseaction>cost.form_upd_expense_plan_request,cost.form_add_expense_plan_request,myhome.form_add_expense_plan_request,myhome.form_upd_expense_plan_request,</file_fuseaction>
+	</stage_file>
+	<stage_file>
+		<file_module>İçerik Yönetimi Hazırlık</file_module>
+		<file_name>content_hazirlik.cfm</file_name>
+		<file_type>action</file_type>
+		<file_aim>İçerik Yönetiminde aşama Hazırlık seçilirse detaydaki Statü de bu şekilde güncellenir.</file_aim>
+		<file_target>content_hazirlik.cfm</file_target>
+		<file_fuseaction></file_fuseaction>
+	</stage_file>
+	<stage_file>
+		<file_module>İçerik Yönetimi Onay</file_module>
+		<file_name>content_onay.cfm</file_name>
+		<file_type>action</file_type>
+		<file_aim>İçerik Yönetiminde aşama Onay seçilirse detaydaki Statü de bu şekilde güncellenir.</file_aim>
+		<file_target>content_onay.cfm</file_target>
+		<file_fuseaction></file_fuseaction>
+	</stage_file>
+	<stage_file>
+		<file_module>İçerik Yönetimi Yayın</file_module>
+		<file_name>content_publish_stage_action.cfm</file_name>
+		<file_type>action</file_type>
+		<file_aim>İçerik Yönetiminde aşama Yayın seçilirse detaydaki Statü de bu şekilde güncellenir.</file_aim>
+		<file_target>content_publish_stage_action.cfm</file_target>
+		<file_fuseaction></file_fuseaction>
+	</stage_file>
+	<stage_file>
+		<file_module>İnsan Kaynakları</file_module>
+		<file_name>performans_sureci_display_file.cfm</file_name>
+		<file_type>Display</file_type>
+		<file_aim>sürecin 1. amir 2.amir gibi sıra ile ilerlediği yerlerde 1.amir onay sürecine koyulursa onay bit value alanları 1set edilir ve o amir onaylamış olur.</file_aim>
+		<file_target>performans_sureci_display_file.cfm</file_target>
+		<file_fuseaction></file_fuseaction>
+	</stage_file>
+	<stage_file>
+		<file_module>İnsan Kaynakları</file_module>
+		<file_name>Personel_Requirement_Accept.cfm</file_name>
+		<file_type>Action</file_type>
+		<file_aim>Personel Taleplerinin Onay Aşamasına Eklenmelidir, Finish Parametresi 1 Olarak Güncellenir. Talebin Atama Formu ile İlişkilendirilebilmesi İçin Finish Değerinin 1 Olması Gerekir.</file_aim>
+		<file_target>Personel_Requirement_Accept.cfm</file_target>
+		<file_fuseaction></file_fuseaction>
+	</stage_file>
+	<stage_file>
+		<file_module>İnsan Kaynakları</file_module>
+		<file_name>Personel_Requirement_Denial.cfm</file_name>
+		<file_type>Action</file_type>
+		<file_aim>Personel Taleplerinin Red Aşamasına Eklenmelidir, Finish Parametresi 0 Olarak Güncellenir.</file_aim>
+		<file_target>Personel_Requirement_Denial.cfm</file_target>
+		<file_fuseaction></file_fuseaction>
+	</stage_file>
+	<stage_file>
+		<file_module>İş Müşteri Onay</file_module>
+		<file_name>work_mt_onay.cfm</file_name>
+		<file_type>Action</file_type>
+		<file_aim>Bu dosya ilgili işin müşteri onayından geçtikten sonra zaman harcamasında onaylanmış olarak işaretlenmesini sağlar. </file_aim>
+		<file_target>work_mt_onay.cfm</file_target>
+		<file_fuseaction></file_fuseaction>
+	</stage_file>
+	<stage_file>
+		<file_module>Satış</file_module>
+		<file_name>cikis_irsaliyesi_serili.cfm</file_name>
+		<file_type>Action</file_type>
+		<file_aim>Otomatik servisten irsaliye kaydediyor.</file_aim>
+		<file_target>cikis_irsaliyesi_serili.cfm</file_target>
+		<file_fuseaction></file_fuseaction>
+	</stage_file>
+	<stage_file>
+		<file_module>Satış</file_module>
+		<file_name>irsaliyeli_servis_display.cfm</file_name>
+		<file_type>Display</file_type>
+		<file_aim>Otomatik sürec dosyalarından irsaliye kesilecekse gerekli alanları zorunlu hale getiriyor.</file_aim>
+		<file_target>irsaliyeli_servis_display.cfm</file_target>
+		<file_fuseaction></file_fuseaction>
+	</stage_file>
+	<stage_file>
+		<file_module>Satış</file_module>
+		<file_name>mt_onay_action.cfm</file_name>
+		<file_type>Action</file_type>
+		<file_aim>Siparişteki ürünler ve onların spec ve ağaçlarındaki ürünlerden stokta eksik olanlar varsa mesaj veriri Yoksa risk kontrol yapar risk yetersizse uyarı yollar. Ürün miktarda veya riskte sorun varsa süreç ilk satıra geri alınır.</file_aim>
+		<file_target>MT_Onay_Action.cfm</file_target>
+		<file_fuseaction></file_fuseaction>
+	</stage_file>
+	<stage_file>
+		<file_module>Satış</file_module>
+		<file_name>mt_onay_action_risksiz.cfm</file_name>
+		<file_type>Action</file_type>
+		<file_aim>Siparişteki ürünler ve onların spec ve ağaçlarındaki ürünlerden stokta eksik olanlar varsa mesaj verir ve kayıt sürecini ilk satıra geri alınır.</file_aim>
+		<file_target>MT_Onay_Action_risksiz.cfm</file_target>
+		<file_fuseaction></file_fuseaction>
+	</stage_file>
+	<stage_file>
+		<file_module>Sipariş İptal</file_module>
+		<file_name>Order_Row_Stage_Iptal.cfm</file_name>
+		<file_type>Action</file_type>
+		<file_aim>Siparişin Satırlarını İptal olarak günceller. Bu aşamaya getiren kişinin bulunduğu yetki grubuna uyarı yollar ve satırları iptal hale getirir.</file_aim>
+		<file_target>Order_Row_Stage_Iptal.cfm</file_target>
+		<file_fuseaction></file_fuseaction>
+	</stage_file>
+	<stage_file>
+		<file_module>Sipariş Açık</file_module>
+		<file_name>Order_Row_Stage_Acik.cfm</file_name>
+		<file_type>Action</file_type>
+		<file_aim>Siparişin Satırlarını Açık olarak günceller. Bu aşamaya getiren kişinin bulunduğu yetki grubuna uyarı yollar ve satırları açık hale getirir.</file_aim>
+		<file_target>Order_Row_Stage_Acik.cfm</file_target>
+		<file_fuseaction></file_fuseaction>
+	</stage_file>
+	<stage_file>
+		<file_module>Sipariş Kapatıldı</file_module>
+		<file_name>Order_Row_Stage_Kapatildi.cfm</file_name>
+		<file_type>Action</file_type>
+		<file_aim>Siparişin Satırlarını Kapatıldı olarak günceller.</file_aim>
+		<file_target>Order_Row_Stage_Kapatildi.cfm</file_target>
+		<file_fuseaction></file_fuseaction>
+	</stage_file>
+	<stage_file>
+		<file_module>Sipariş Üretiliyor</file_module>
+		<file_name>Order_Row_Stage_Production.cfm</file_name>
+		<file_type>Action</file_type>
+		<file_aim>Satırlarda, Detayında Üretiliyor Seçili Olan Ürünlerin Siparişteki Aşamasını Üretim Olarak Günceller.</file_aim>
+		<file_target>Order_Row_Stage_Production.cfm</file_target>
+		<file_fuseaction></file_fuseaction>
+	</stage_file>
+	<stage_file>
+		<file_module>Sipariş Sevk</file_module>
+		<file_name>Order_Row_Stage_Sevk.cfm</file_name>
+		<file_type>Action</file_type>
+		<file_aim>Siparişin Satırlarını Sevk olarak günceller.</file_aim>
+		<file_target>Order_Row_Stage_Sevk.cfm</file_target>
+		<file_fuseaction></file_fuseaction>
+	</stage_file>
+	<stage_file>
+		<file_module>Sipariş Tedarik</file_module>
+		<file_name>Order_Row_Stage_Tedarik.cfm</file_name>
+		<file_type>Action</file_type>
+		<file_aim>Siparişin Satırlarını Tedarik olarak günceller.</file_aim>
+		<file_target>Order_Row_Stage_Tedarik.cfm</file_target>
+		<file_fuseaction></file_fuseaction>
+	</stage_file>
+	<stage_file>
+		<file_module>Sipariş Teslim</file_module>
+		<file_name>Order_Row_Stage_Teslim.cfm</file_name>
+		<file_type>Action</file_type>
+		<file_aim>Siparişin Satırlarını Teslim olarak günceller.</file_aim>
+		<file_target>Order_Row_Stage_Teslim.cfm</file_target>
+		<file_fuseaction></file_fuseaction>
+	</stage_file>
+	<stage_file>
+		<file_module>Sipariş Üretim</file_module>
+		<file_name>Order_Row_Stage_Uretim.cfm</file_name>
+		<file_type>Action</file_type>
+		<file_aim>Siparişin Satırlarını Üretim olarak günceller.</file_aim>
+		<file_target>Order_Row_Stage_Uretim.cfm</file_target>
+		<file_fuseaction></file_fuseaction>
+	</stage_file>
+	<stage_file>
+		<file_module>Satış</file_module>
+		<file_name>sale_order_surec_risk_kontrol.cfm</file_name>
+		<file_type>Display</file_type>
+		<file_aim>Müşterinin risk kontrolünü yapar. Risk aşılıyorsa sipariş güncellenemez.</file_aim>
+		<file_target>sale_order_surec_risk_kontrol.cfm</file_target>
+		<file_fuseaction></file_fuseaction>
+	</stage_file>
+	<stage_file>
+		<file_module>Satış</file_module>
+		<file_name>sale_order_risc_only_stage.cfm</file_name>
+		<file_type>Display</file_type>
+		<file_aim>Müşterinin risk kontrolünü yapar. Risk aşılıyorsa sipariş güncellenemez. Sadece bir stage için gecerli olarak çalışır.</file_aim>
+		<file_target>sale_order_risc_only_stage.cfm</file_target>
+		<file_fuseaction></file_fuseaction>
+	</stage_file>
+	<stage_file>
+		<file_module>Servis</file_module>
+		<file_name>servis_surec.cfm</file_name>
+		<file_type>Action</file_type>
+		<file_aim>Seçildiği satıra süreç geldiğinde o servisle ilgili çıkış irsaliyelerinin numaralarını yollanacak uyarıda açıklama olarak yollar.</file_aim>
+		<file_target>servis_surec.cfm</file_target>
+		<file_fuseaction></file_fuseaction>
+	</stage_file>
+	<stage_file>
+		<file_module>Ürün Yönetimi</file_module>
+		<file_name>prod_0.cfm</file_name>
+		<file_type>Action</file_type>
+		<file_aim>Eklendiği satırda ürünü pasif yapar.</file_aim>
+		<file_target>urun_onay\prod_0.cfm</file_target>
+		<file_fuseaction>product.emptypopup_add_product,product.emptypopup_upd_product</file_fuseaction>
+	</stage_file>
+	<stage_file>
+		<file_module>Ürün Yönetimi</file_module>
+		<file_name>prod_1.cfm</file_name>
+		<file_type>Action</file_type>
+		<file_aim>Eklendiği satırda ürünü aktif yapar.</file_aim>
+		<file_target>urun_onay\prod_1.cfm</file_target>
+		<file_fuseaction>product.emptypopup_add_product,product.emptypopup_upd_product</file_fuseaction>
+	</stage_file>
+	<stage_file>
+		<file_module>Ürün Yönetimi</file_module>
+		<file_name>prod_2b.cfm</file_name>
+		<file_type>Display</file_type>
+		<file_aim>Ürünlerin aktif yapılamayacağı satırlara eklenirse aktif checkboxını pasif yapar ve ürün aktif yapılamaz.</file_aim>
+		<file_target>urun_onay\prod_2b.cfm</file_target>
+		<file_fuseaction>product.form_add_product,product.form_upd_product</file_fuseaction>
+	</stage_file>
+	<stage_file>
+		<file_module>Üretim Planlama</file_module>
+		<file_name>uretim_sonuc_sevk.cfm</file_name>
+		<file_type>Action</file_type>
+		<file_aim>Üretim sonuç siparişinin açık ve üretimde olan satırları sevk aşamasına getirir.</file_aim>
+		<file_target>uretim_sonuc_sevk.cfm</file_target>
+		<file_fuseaction>prod.upd_prod_order_result,prod.add_prod_order_result</file_fuseaction>
+	</stage_file>
+	<stage_file>
+		<file_module>Üretim Planlama</file_module>
+		<file_name>production_orders_reserve.cfm</file_name>
+		<file_type>Action</file_type>
+		<file_aim>Üretim emrinin rezerve seçeneğini kaldırır.</file_aim>
+		<file_target>production_orders_reserve.cfm</file_target>
+		<file_fuseaction>prod.upd_prod_order,prod.add_prod_order</file_fuseaction>
+	</stage_file>
+	<stage_file>
+		<file_module>Yetki Yoksa Güncelleme</file_module>
+		<file_name>Yetki_Yoksa_Guncelleme.cfm</file_name>
+		<file_type>Display</file_type>
+		<file_aim>Bu dosya ilgili aşamada yetkili olmayan kişilerin bu aşamalarda işlemlerde değişiklik yapmasını engeller. </file_aim>
+		<file_target>Yetki_Yoksa_Guncelleme.cfm</file_target>
+		<file_fuseaction></file_fuseaction>
+	</stage_file>
+	<stage_file>
+		<file_module>Hobim Gönderildi</file_module>
+		<file_name>hobim_sent.cfm</file_name>
+		<file_type>Action</file_type>
+		<file_aim>Bu dosya ilgili aşamadaki hobim dosyasını gönderildi statüsüne getirir. </file_aim>
+		<file_target>hobim_sent.cfm</file_target>
+		<file_fuseaction></file_fuseaction>
+	</stage_file>
+	<stage_file>
+		<file_module>Hobim Basıldı</file_module>
+		<file_name>hobim_printed.cfm</file_name>
+		<file_type>Action</file_type>
+		<file_aim>Bu dosya ilgili aşamadaki hobim dosyasını basıldı statüsüne getirir. </file_aim>
+		<file_target>hobim_printed.cfm</file_target>
+		<file_fuseaction></file_fuseaction>
+	</stage_file>
+	<stage_file>
+		<file_module>Hobim İptal</file_module>
+		<file_name>hobim_iptal.cfm</file_name>
+		<file_type>Action</file_type>
+		<file_aim>Bu dosya ilgili aşamadaki hobim dosyasını iptal statüsüne getirir. </file_aim>
+		<file_target>hobim_iptal.cfm</file_target>
+		<file_fuseaction></file_fuseaction>
+	</stage_file>
+	<stage_file>
+		<file_module>Gelen E-Fatura Onay</file_module>
+		<file_name>gelen_efatura_onay.cfm</file_name>
+		<file_type>Action</file_type>
+		<file_aim>Bu dosya ilgili aşamadaki gelen efaura kaydını onay statüsüne getirir. </file_aim>
+		<file_target>gelen_efatura_onay.cfm</file_target>
+		<file_fuseaction></file_fuseaction>
+	</stage_file>
+	<stage_file>
+		<file_module>Gelen E-Fatura İptal</file_module>
+		<file_name>gelen_efatura_red.cfm</file_name>
+		<file_type>Action</file_type>
+		<file_aim>Bu dosya ilgili aşamadaki gelen efaura kaydını red statüsüne getirir. </file_aim>
+		<file_target>gelen_efatura_red.cfm</file_target>
+		<file_fuseaction></file_fuseaction>
+	</stage_file>
+	<stage_file>
+		<file_module>Deployment Yetki Kontrolü</file_module>
+		<file_name>deployment_for_authorize.cfm</file_name>
+		<file_type>Display</file_type>
+		<file_aim>Work object'i Depoloyment durumuna getirmek için yetkiye bakar </file_aim>
+		<file_target>deployment_for_authorize.cfm</file_target>
+		<file_fuseaction></file_fuseaction>
+	</stage_file>
+	<stage_file>
+		<file_module>Vekalet Iptal</file_module>
+		<file_name>HR_Mandate_Cancel.cfm</file_name>
+		<file_type>Action</file_type>
+		<file_aim>Vekalet süreci iptal olduğunda vekalet kaydını red statusüne çeker.</file_aim>
+		<file_target>HR_Mandate_Cancel.cfm</file_target>
+		<file_fuseaction></file_fuseaction>
+	</stage_file>
+	<stage_file>
+		<file_module>Vekalet Onay</file_module>
+		<file_name>HR_Mandate_Approve.cfm</file_name>
+		<file_type>Action</file_type>
+		<file_aim>Vekalet onaylandığında aktife çekilir.</file_aim>
+		<file_target>HR_Mandate_Approve.cfm</file_target>
+		<file_fuseaction></file_fuseaction>
+	</stage_file>
+	<stage_file>
+		<file_module>1. Amir Onay</file_module>
+		<file_name>birinci_amir_onay.cfm</file_name>
+		<file_type>Action</file_type>
+		<file_aim>1. Amir'in İzin Onay işlemini yapar.</file_aim>
+		<file_target>birinci_amir_onay.cfm</file_target>
+		<file_fuseaction></file_fuseaction>
+	</stage_file>
+	<stage_file>
+		<file_module>2. Amir Onay</file_module>
+		<file_name>ikinci_amir_onay.cfm</file_name>
+		<file_type>Action</file_type>
+		<file_aim>2. Amir'in İzin Onay işlemini yapar.</file_aim>
+		<file_target>ikinci_amir_onay.cfm</file_target>
+		<file_fuseaction></file_fuseaction>
+	</stage_file>
+	<stage_file>
+		<file_module>IK Onay</file_module>
+		<file_name>ik_izin_onay.cfm</file_name>
+		<file_type>Action</file_type>
+		<file_aim>IK'nın İzin Onay işlemini yapar.</file_aim>
+		<file_target>ik_izin_onay.cfm</file_target>
+		<file_fuseaction></file_fuseaction>
+	</stage_file>
+	<stage_file>
+		<file_module>IK Red</file_module>
+		<file_name>ik_izin_red.cfm</file_name>
+		<file_type>Action</file_type>
+		<file_aim>IK'nın İzin Red işlemini yapar.</file_aim>
+		<file_target>ik_izin_red.cfm</file_target>
+		<file_fuseaction></file_fuseaction>
+	</stage_file>
+	<stage_file>
+		<file_module>Seyahat Talebi Pozisyon Kontrolü</file_module>
+		<file_name>seyahat_talebi_kontrol.cfm</file_name>
+		<file_type>Display</file_type>
+		<file_aim>Seyahat Talebi harcırah işlemleri için  Pozisyon Kontrolü yapar</file_aim>
+		<file_target>seyahat_talebi_kontrol.cfm</file_target>
+		<file_fuseaction></file_fuseaction>
+	</stage_file>
+	<stage_file>
+		<file_module>Deneme Süresi Formu IK Onay</file_module>
+		<file_name>Survey_IK_Approve.cfm</file_name>
+		<file_type>Action</file_type>
+		<file_aim>Deneme Süreci Formu IK Onay işlemi yapar.</file_aim>
+		<file_target>Survey_IK_Approve.cfm</file_target>
+		<file_fuseaction></file_fuseaction>
+	</stage_file>
+	<stage_file>
+		<file_module>Deneme Süresi Formu 1.Amir Onay</file_module>
+		<file_name>Survey_Manager1_Approve.cfm</file_name>
+		<file_type>Action</file_type>
+		<file_aim>Deneme Süreci Formu 1.Amir Onay işlemi yapar.</file_aim>
+		<file_target>Survey_Manager1_Approve.cfm</file_target>
+		<file_fuseaction></file_fuseaction>
+	</stage_file>
+	<stage_file>
+		<file_module>Deneme Süresi Formu 2.Amir Onay</file_module>
+		<file_name>Survey_Manager2_Approve.cfm</file_name>
+		<file_type>Action</file_type>
+		<file_aim>Deneme Süreci Formu 2.Amir Onay işlemi yapar.</file_aim>
+		<file_target>Survey_Manager2_Approve.cfm</file_target>
+		<file_fuseaction></file_fuseaction>
+	</stage_file>
+	<stage_file>
+		<file_module>Fazla Mesai 1. Amir Onay</file_module>
+		<file_name>ext_worktime_1_approve.cfm</file_name>
+		<file_type>Action</file_type>
+		<file_aim>Fazla Mesai 1. Amir'in İzin Onay işlemini yapar.</file_aim>
+		<file_target>ext_worktime_1_approve.cfm</file_target>
+		<file_fuseaction></file_fuseaction>
+	</stage_file>
+	<stage_file>
+		<file_module>Fazla Mesai 2. Amir Onay</file_module>
+		<file_name>ext_worktime_2_approve.cfm</file_name>
+		<file_type>Action</file_type>
+		<file_aim>2. Amir'in İzin Onay işlemini yapar.</file_aim>
+		<file_target>ext_worktime_2_approve.cfm</file_target>
+		<file_fuseaction></file_fuseaction>
+	</stage_file>
+	<stage_file>
+		<file_module>Fazla Mesai IK Onay</file_module>
+		<file_name>ext_worktime_approve.cfm</file_name>
+		<file_type>Action</file_type>
+		<file_aim>IK'nın İzin Onay işlemini yapar.</file_aim>
+		<file_target>ext_worktime_approve.cfm</file_target>
+		<file_fuseaction></file_fuseaction>
+	</stage_file>
+	<stage_file>
+		<file_module>Fazla Mesai IK Red</file_module>
+		<file_name>ext_worktime_refusal.cfm</file_name>
+		<file_type>Action</file_type>
+		<file_aim>IK'nın İzin Red işlemini yapar.</file_aim>
+		<file_target>ext_worktime_refusal.cfm</file_target>
+		<file_fuseaction></file_fuseaction>
+	</stage_file>
+	<stage_file>
+		<file_module>Seyahat Talebi Birim Onay</file_module>
+		<file_name>travel_demand_unit_approve.cfm</file_name>
+		<file_type>Action</file_type>
+		<file_aim>Birimin Onay işlemini yapar.</file_aim>
+		<file_target>travel_demand_unit_approve.cfm</file_target>
+		<file_fuseaction></file_fuseaction>
+	</stage_file>
+	<stage_file>
+		<file_module>Seyahat Talebi IK Onay</file_module>
+		<file_name>travel_demand_IK_approve.cfm</file_name>
+		<file_type>Action</file_type>
+		<file_aim>IK'nın Seyahat Talebi Onay işlemini yapar.</file_aim>
+		<file_target>travel_demand_IK_approve.cfm</file_target>
+		<file_fuseaction></file_fuseaction>
+	</stage_file>
+	<stage_file>
+		<file_module>Seyahat Talebi Birim Onay Kontrol</file_module>
+		<file_name>travel_demand_IK_display.cfm</file_name>
+		<file_type>display</file_type>
+		<file_aim>IK Onay gerçekleştiyse butonları pasife alır.</file_aim>
+		<file_target>travel_demand_IK_display.cfm</file_target>
+		<file_fuseaction></file_fuseaction>
+	</stage_file>
+	<stage_file>
+		<file_module>Seyahat Talebi Birim Onay Kontrol</file_module>
+		<file_name>travel_demand_Unit_display.cfm</file_name>
+		<file_type>display</file_type>
+		<file_aim>Birim Onayı gerçekleştiyse butonları pasife alır.</file_aim>
+		<file_target>travel_demand_Unit_display.cfm</file_target>
+		<file_fuseaction></file_fuseaction>
+	</stage_file>
+	<stage_file>
+		<file_module>İçerik Hazırlık</file_module>
+		<file_name>content_preparation_stage_action.cfm</file_name>
+		<file_type>Action</file_type>
+		<file_aim>İçeriği hazırlık sürecine alır.</file_aim>
+		<file_target>content_preparation_stage_action.cfm</file_target>
+		<file_fuseaction></file_fuseaction>
+	</stage_file>
+	<stage_file>
+		<file_module>Satınalma Siparişi Bütçe Kontrol</file_module>
+		<file_name>budget_compliance_check.cfm</file_name>
+		<file_type>Action</file_type>
+		<file_aim>Bütçeyi kontrol eder,yetersiz bakiye ise mail atar.</file_aim>
+		<file_target>budget_compliance_check.cfm</file_target>
+		<file_fuseaction></file_fuseaction>
+	</stage_file>
+</process_stage_file>

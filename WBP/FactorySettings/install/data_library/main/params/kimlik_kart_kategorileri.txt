@@ -1,0 +1,5 @@
+INSERT INTO [SETUP_IDENTYCARD]([IDENTYCAT]) Values( 'Nüfus Cüzdanı');
+INSERT INTO [SETUP_IDENTYCARD]([IDENTYCAT]) Values( 'Sürücü Belgesi');
+INSERT INTO [SETUP_IDENTYCARD]([IDENTYCAT]) Values( 'Pasaport');
+INSERT INTO [SETUP_IDENTYCARD]([IDENTYCAT]) Values( 'Öğrenci Belgesi');
+

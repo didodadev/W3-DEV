@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<OBJECT_PROPERTIES>
+	<OBJECT_PROPERTY>
+		<PROPERTY>x_is_import_file</PROPERTY>
+		<PROPERTY_DETAIL>Dosyadan İmport Yapılabilsin</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>select</PROPERTY_TYPE>
+		<PROPERTY_VALUES>1,0</PROPERTY_VALUES>
+		<PROPERTY_NAMES>Evet,Hayır</PROPERTY_NAMES>
+		<PROPERTY_DEFAULT>0</PROPERTY_DEFAULT>
+		<PROPERTY_HELP>Evet Seçildiğinde Üretim Malzeme İhtiyaçları İmportunun Yapılabileceği İkon Açılır ve İmport İşlemleri Yapılabilir.</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+	<OBJECT_PROPERTY>
+		<PROPERTY>x_is_price</PROPERTY>
+		<PROPERTY_DETAIL>Fiyatlar Gelsin</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>select</PROPERTY_TYPE>
+		<PROPERTY_VALUES>1,0</PROPERTY_VALUES>
+		<PROPERTY_NAMES>Evet,Hayır</PROPERTY_NAMES>
+		<PROPERTY_DEFAULT>1</PROPERTY_DEFAULT>
+		<PROPERTY_HELP>Evet Seçildiğinde Birim Fiyat Bilgisi ve İhtiyaca Göre Hesaplanmış Toplam Fiyat Bilgisi Gelir.</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+	<OBJECT_PROPERTY>
+		<PROPERTY>x_is_alternative_stock</PROPERTY>
+		<PROPERTY_DETAIL>Alternatif Ürünlerin Stok Bilgisi Gelsin</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>select</PROPERTY_TYPE>
+		<PROPERTY_VALUES>1,0</PROPERTY_VALUES>
+		<PROPERTY_NAMES>Evet,Hayır</PROPERTY_NAMES>
+		<PROPERTY_DEFAULT>0</PROPERTY_DEFAULT>
+		<PROPERTY_HELP>Evet Seçildiğinde Alternatif Ürünlerin Stok Bilgilerinin Gelmesini Sağlar.</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+	<OBJECT_PROPERTY>
+		<PROPERTY>x_is_dept_location</PROPERTY>
+		<PROPERTY_DETAIL>Lokasyon Filtresi</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>select</PROPERTY_TYPE>
+		<PROPERTY_VALUES>1,0</PROPERTY_VALUES>
+		<PROPERTY_NAMES>Evet,Hayır</PROPERTY_NAMES>
+		<PROPERTY_DEFAULT>1</PROPERTY_DEFAULT>
+		<PROPERTY_HELP>Lokasyon Filtresi XML e Bağlı Olarak Lokasyonların Listelenmesi Sağlanıyor.</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+	<OBJECT_PROPERTY>
+		<PROPERTY>is_materials_frm_remain_amount</PROPERTY>
+		<PROPERTY_DETAIL>Malzeme İhtiyaç Listesi Kalan Miktara Göre Hesaplansın</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>select</PROPERTY_TYPE>
+		<PROPERTY_VALUES>1,0</PROPERTY_VALUES>
+		<PROPERTY_NAMES>Evet,Hayır</PROPERTY_NAMES>
+		<PROPERTY_DEFAULT>0</PROPERTY_DEFAULT>
+		<PROPERTY_HELP>Evet Seçili Olduğunda Üretilen Sarf Miktarları Malzeme İhtiyaçta Gelmez.NOT:Üretim Emirlerinden (Spec) ve Üretim Emirlerinden (Alternatifli) Listeleme Tiplerinde Çalışır.</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+	<OBJECT_PROPERTY>
+		<PROPERTY>demand_department_id</PROPERTY>
+		<PROPERTY_DETAIL>İç Taleplerin Dahil Edileceği Depo Id</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>input</PROPERTY_TYPE>
+		<PROPERTY_VALUES></PROPERTY_VALUES>
+		<PROPERTY_NAMES></PROPERTY_NAMES>
+		<PROPERTY_DEFAULT></PROPERTY_DEFAULT>
+		<PROPERTY_HELP>Çıkış Deposu Xml de girilen depo olan ve irsaliyesi kesilmemiş iç talep miktarı aktif stok değerinden düşülür.</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+	<OBJECT_PROPERTY>
+		<PROPERTY>real_stock_round_number</PROPERTY>
+		<PROPERTY_DETAIL>İhtiyaç Alanı Virgülden Sonra Kaç Basamak Gösterilsin?</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>select</PROPERTY_TYPE>
+		<PROPERTY_VALUES>2,4,6,8</PROPERTY_VALUES>
+		<PROPERTY_NAMES>2,4,6,8</PROPERTY_NAMES>
+		<PROPERTY_DEFAULT></PROPERTY_DEFAULT>
+		<PROPERTY_HELP>İhtiyaç Alanında Virgülden Sonra Kaç Basamak Gösterileceği Seçilir.</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+	<OBJECT_PROPERTY>
+		<PROPERTY>is_line_number</PROPERTY>
+		<PROPERTY_DETAIL>Sarf ve Fireler Ağaçtaki Sıra Numarasına Bağlı Olarak Gelsin mi?</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>select</PROPERTY_TYPE>
+		<PROPERTY_VALUES>1,0</PROPERTY_VALUES>
+		<PROPERTY_NAMES>Evet,Hayır</PROPERTY_NAMES>
+		<PROPERTY_DEFAULT>0</PROPERTY_DEFAULT>
+		<PROPERTY_HELP>Evet Seçildiğinde Sarf ve Firelerin Ağaçtaki Sıra Numaralarına Göre Gelmesi Sağlanır.</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+</OBJECT_PROPERTIES>

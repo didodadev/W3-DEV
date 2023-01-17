@@ -1,0 +1,34 @@
+/*
+LogoGo3/LogoTiger3 Databaselerinden bilgi alır
+Üye Risk Bilgileri İmport
+settings.form_member_risk_limit_import
+*/
+ 
+
+DECLARE @SQLString NVARCHAR(max)
+
+SET @SQLString = N'SELECT 
+
+CASE WHEN  CLCARD.ISPERSCOMP=1 THEN CLCARD.TCKNO ELSE CLCARD.TAXNR END as CariHesap,
+CLRNUMS.LOGICALREF as Asama,
+CLCARD.PAYMENTREF as AlisOdemeYontemi,
+CLCARD.PAYMENTREF as SatisOdemeYontemi,
+(SELECT LOGICALREF FROM L_SHPTYPES A WHERE A.SCODE=CLCARD.DELIVERYMETHOD ) as SevkYontemi,
+(SELECT LOGICALREF FROM L_SHPAGENT A WHERE A.CODE=CLCARD.DELIVERYFIRM )  as TasiyiciFirma,
+CLRNUMS.ACCRISKLIMIT as AcikHesapLimitiİslemDovizli,
+CLRNUMS.CSTCSRISKLIMIT as VadeliOdemeAraciLimitiIslemDovizli,
+ISNULL( (SELECT top 1 CURCODE FROM L_CURRENCYLIST WHERE  CURTYPE=CCURRENCY),''TRL'') as IslemParaBirimi,
+CLRNUMS.REPACCRISKLIMIT as AcikHesapLimitiSistemDovizli,
+CLRNUMS.REPCSTCSRISKLIMIT as VadeliOdemeAraciLimitiSistemDovizli,
+(select EARLYINTEREST from LG_'+@FirmNr+'_PAYPLANS A WHERE A.LOGICALREF=CLCARD.PAYMENTREF) as ErkenOdemeIndirimi,
+(select LATEINTEREST from LG_'+@FirmNr+'_PAYPLANS A WHERE A.LOGICALREF=CLCARD.PAYMENTREF)  as VadeFarki,
+0 as OdemeBlokaji,
+0 as FiyatListesi,
+0 as TaksitliIslem,
+CLCARD.CURRATETYPE as KurTipi
+
+FROM LG_'+@FirmNr+'_CLCARD AS CLCARD LEFT OUTER JOIN
+     LG_'+@FirmNr+'_'+@DonemNr+'_CLRNUMS CLRNUMS ON CLCARD.LOGICALREF = CLRNUMS.LOGICALREF'
+
+ 
+ EXECUTE sp_executesql @SQLString

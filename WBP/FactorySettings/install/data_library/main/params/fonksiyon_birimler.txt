@@ -1,0 +1,6 @@
+INSERT INTO [SETUP_CV_UNIT]([IS_VIEW],[UNIT_NAME],[UNIT_DETAIL],[HIERARCHY],[IS_ACTIVE]) Values( '1','İnsan Kaynakları',' ',' ','1');
+INSERT INTO [SETUP_CV_UNIT]([IS_VIEW],[UNIT_NAME],[UNIT_DETAIL],[HIERARCHY],[IS_ACTIVE]) Values( '0','Muhasebe-Finans',' ',' ','1');
+INSERT INTO [SETUP_CV_UNIT]([IS_VIEW],[UNIT_NAME],[UNIT_DETAIL],[HIERARCHY],[IS_ACTIVE]) Values( '1','Satış-Pazarlama',' ',' ','1');
+INSERT INTO [SETUP_CV_UNIT]([IS_VIEW],[UNIT_NAME],[UNIT_DETAIL],[HIERARCHY],[IS_ACTIVE]) Values( Null,'Bilişim-IT',' ',' ',Null);
+INSERT INTO [SETUP_CV_UNIT]([IS_VIEW],[UNIT_NAME],[UNIT_DETAIL],[HIERARCHY],[IS_ACTIVE]) Values( Null,'Diğer',' ',' ',Null);
+

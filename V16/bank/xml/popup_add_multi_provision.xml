@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<OBJECT_PROPERTIES>
+	<OBJECT_PROPERTY>
+		<PROPERTY>xml_product_list</PROPERTY>
+		<PROPERTY_DETAIL>Ödeme Planı Başlangıç Tarihi Seçildiğinde Dahil Edilecek Ürünler</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>input</PROPERTY_TYPE>
+		<PROPERTY_VALUES></PROPERTY_VALUES>
+		<PROPERTY_NAMES></PROPERTY_NAMES>
+		<PROPERTY_DEFAULT></PROPERTY_DEFAULT>
+		<PROPERTY_HELP>Ödeme Planı Başlangıç Tarihi Seçildiğinde Dahil Edilecek Ürünler:Ödeme planı başlangıç tarihi seçilmiş ise o tarihten itibaren hangi satırların geleceğini belirleyecek ürünlerin bilgileri girilir. </PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+	<OBJECT_PROPERTY>
+		<PROPERTY>xml_company_code</PROPERTY>
+		<PROPERTY_DETAIL>İşyeri Kodu Girilecek Pos Tipi No Listesi</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>input</PROPERTY_TYPE>
+		<PROPERTY_VALUES></PROPERTY_VALUES>
+		<PROPERTY_NAMES></PROPERTY_NAMES>
+		<PROPERTY_DEFAULT></PROPERTY_DEFAULT>
+		<PROPERTY_HELP>İşyeri Kodu Girilecek Pos Tipi No Listesi:İşyeri kodu girilecek pos tipleri girilir.</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+</OBJECT_PROPERTIES>

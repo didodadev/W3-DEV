@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PRODUCT_STAGE>
+	<PRODUCTSTAGE>
+		<PRODUCT_STAGE_MAIN>Öneri</PRODUCT_STAGE_MAIN>                                      
+	</PRODUCTSTAGE>
+	<PRODUCTSTAGE>
+		<PRODUCT_STAGE_MAIN>Test</PRODUCT_STAGE_MAIN>                                      
+	</PRODUCTSTAGE>
+	<PRODUCTSTAGE>
+		<PRODUCT_STAGE_MAIN>Numune</PRODUCT_STAGE_MAIN>                                      
+	</PRODUCTSTAGE>
+</PRODUCT_STAGE>

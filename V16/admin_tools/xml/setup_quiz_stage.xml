@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<STAGES>
+	<STAGE>
+		<STAGE_ID>-1</STAGE_ID>		  
+		<STAGE_NAME>Hazırlık</STAGE_NAME>		  
+	</STAGE>
+	<STAGE>
+		<STAGE_ID>-2</STAGE_ID>		  
+		<STAGE_NAME>Yayın</STAGE_NAME>		  
+	</STAGE>
+</STAGES>

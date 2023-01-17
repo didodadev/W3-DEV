@@ -1,0 +1,11 @@
+<!-- Description : EMPLOYEES_OFFTIME_CONTRACT tablosuna CONTRACT_STAGE alanı eklendi.
+Developer: Botan Kayğan
+Company : Workcube
+Destination: Main -->
+<querytag>
+    IF NOT EXISTS (SELECT 'Y' FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME = 'EMPLOYEES_OFFTIME_CONTRACT' AND COLUMN_NAME = 'CONTRACT_STAGE')
+    BEGIN
+        ALTER TABLE EMPLOYEES_OFFTIME_CONTRACT ADD
+        CONTRACT_STAGE int NULL;
+    END
+</querytag>

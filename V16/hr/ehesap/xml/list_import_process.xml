@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<OBJECT_PROPERTIES>
+	<OBJECT_PROPERTY>
+		<PROPERTY>x_power_user</PROPERTY>
+		<PROPERTY_DETAIL>Veri İmport Özel Yetki</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>select</PROPERTY_TYPE>
+		<PROPERTY_VALUES>1,2,3</PROPERTY_VALUES>
+		<PROPERTY_NAMES>Üst Düzey IK Yetkisi,Power User Yetkisi,Modül Yetkisi</PROPERTY_NAMES>
+		<PROPERTY_DEFAULT>1</PROPERTY_DEFAULT>
+		<PROPERTY_HELP>Listede eklenen dosyaların yetki düzeyine göre getirilmesi.</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+</OBJECT_PROPERTIES>

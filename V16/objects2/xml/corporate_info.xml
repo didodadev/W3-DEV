@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<OBJECT_PROPERTIES>
+	<OBJECT_PROPERTY>
+		<PROPERTY>default_our_company_id</PROPERTY>
+		<PROPERTY_DETAIL>Kurumsal hesap hangi firmaya kaydedilsin?</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>input</PROPERTY_TYPE>
+		<PROPERTY_VALUES></PROPERTY_VALUES>
+		<PROPERTY_NAMES></PROPERTY_NAMES>
+		<PROPERTY_DEFAULT></PROPERTY_DEFAULT>
+		<PROPERTY_HELP>Kurumsal hesabın hangi şirkete kaydedileceğini belirler. Şirketin sistemdeki idsi girilmelidir. Eğer değeri boşsa sessiondaki şirket idsini alır.</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+    <OBJECT_PROPERTY>
+		<PROPERTY>default_period_id</PROPERTY>
+		<PROPERTY_DETAIL>Kurumsal hesap hangi döneme kaydedilsin?</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>input</PROPERTY_TYPE>
+		<PROPERTY_VALUES></PROPERTY_VALUES>
+		<PROPERTY_NAMES></PROPERTY_NAMES>
+		<PROPERTY_DEFAULT></PROPERTY_DEFAULT>
+		<PROPERTY_HELP>Kurumsal hesabın hangi döneme kaydedileceğini belirler. Dönemin sistemdeki idsi girilmelidir. Eğer değeri boşsa sessiondaki dönem idsini alır.</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+    <OBJECT_PROPERTY>
+		<PROPERTY>default_process_stage</PROPERTY>
+		<PROPERTY_DETAIL>Kurumsal hesap hangi aşamada kaydedilsin?</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>input</PROPERTY_TYPE>
+		<PROPERTY_VALUES></PROPERTY_VALUES>
+		<PROPERTY_NAMES></PROPERTY_NAMES>
+		<PROPERTY_DEFAULT></PROPERTY_DEFAULT>
+		<PROPERTY_HELP>Kurumsal hesap kaydı yapılırken kaydın hangi aşamada yapılacağını belirler, değer atanmazsa ilk aşamada kaydeder</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+</OBJECT_PROPERTIES>

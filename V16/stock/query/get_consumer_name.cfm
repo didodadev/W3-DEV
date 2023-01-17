@@ -1,0 +1,11 @@
+<cfquery name="CONSUMER_NAME" datasource="#dsn#">
+	SELECT
+		CONSUMER_NAME,
+		CONSUMER_SURNAME,
+		COMPANY,
+		CONSUMER_EMAIL
+	FROM
+		CONSUMER
+	WHERE
+		CONSUMER_ID = #attributes.CONSUMER_ID#
+</cfquery>

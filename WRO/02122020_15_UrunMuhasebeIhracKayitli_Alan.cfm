@@ -1,0 +1,16 @@
+<!-- Description : SETUP_PRODUCT_PERIOD_CAT ve PRODUCT_PERIOD tablosuna İhraç Kayıtlı Satış alanı eklendi.
+Developer: Melek KOCABEY
+Company : Workcube
+Destination: Company-->
+<querytag>
+        IF NOT EXISTS (SELECT 'Y' FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME = 'SETUP_PRODUCT_PERIOD_CAT' AND TABLE_SCHEMA = '@_dsn_company_@' AND COLUMN_NAME = 'ACCOUNT_EXPORTREGISTERED ')
+        BEGIN
+                ALTER TABLE SETUP_PRODUCT_PERIOD_CAT ADD 
+                ACCOUNT_EXPORTREGISTERED nvarchar(50) NULL
+        END;
+        IF NOT EXISTS (SELECT 'Y' FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME = 'PRODUCT_PERIOD' AND TABLE_SCHEMA = '@_dsn_company_@' AND COLUMN_NAME = 'ACCOUNT_EXPORTREGISTERED ')
+        BEGIN
+                ALTER TABLE PRODUCT_PERIOD ADD 
+                ACCOUNT_EXPORTREGISTERED nvarchar(50) NULL
+        END;
+</querytag>

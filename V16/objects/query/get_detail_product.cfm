@@ -1,0 +1,17 @@
+<cfquery name="GET_PRODUCT" datasource="#DSN3#">
+	SELECT 
+		PC.PRODUCT_CAT,
+		P.*,
+		#dsn#.Get_Dynamic_Language(P.PRODUCT_ID,'#session.ep.language#','PRODUCT','PRODUCT_NAME',NULL,NULL,P.PRODUCT_NAME) AS PRODUCT_NAME_,
+		PU.MAIN_UNIT,
+		PU.ADD_UNIT
+	FROM 
+		PRODUCT P, 
+		PRODUCT_UNIT PU,
+		PRODUCT_CAT PC
+	WHERE 
+		P.PRODUCT_ID = #url.pid# AND 
+		P.PRODUCT_ID = PU.PRODUCT_ID AND 
+		P.PRODUCT_CATID = PC.PRODUCT_CATID AND
+		PU.IS_MAIN = 1 
+</cfquery>

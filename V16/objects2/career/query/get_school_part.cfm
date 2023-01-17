@@ -1,0 +1,3 @@
+<cfquery name="GET_SCHOOL_PART" datasource="#DSN#">
+	SELECT PART_ID, PART_NAME FROM SETUP_SCHOOL_PART ORDER BY PART_NAME
+</cfquery>

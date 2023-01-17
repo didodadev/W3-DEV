@@ -1,0 +1,136 @@
+/*
+BordroDatabaselerinden bilgi alır
+Çalışan Banka Bilgileri Aktarım
+ehesap.import_employee_banks
+*/
+DECLARE @SQLString NVARCHAR(max)
+
+SET @SQLString = N'SELECT 
+	 ROW_NUMBER() OVER(ORDER BY Sira) AS SiraNo,
+	 AdSoyad,
+	 TCKimlikNo,
+	 BankaID,
+	 BankaAdi,
+	 BankaSubeAdi,
+	 BankaSubeKodu,
+	 BankaHesapNo,
+	 HesapParaBirimi,
+	 IBANNo,
+	 SwiftKodu,
+	 _OrtakHesapHatasi_Ad,
+	 _OrtakHesapHatasi_Soyad,
+	 BankaHesabiniStandartYap
+	  FROM (
+	select
+	   0 AS Sira,
+		OZLUK.ADI+'' ''+OZLUK.IKINCIADI+'' ''+OZLUK.SOYADI as AdSoyad,
+		KIMLIK.MERNISNO as TCKimlikNo,
+		0 as BankaID,
+		BANKA.BANKAISIM as BankaAdi,
+		SUBE.SUBEISIM as BankaSubeAdi,
+		SUBE.SUBEKODU as BankaSubeKodu,
+		HESAP.HESAP_1 as BankaHesapNo,
+		''TL'' as HesapParaBirimi,
+		HESAP.IBAN_1 as IBANNo,
+		'''' as SwiftKodu,
+		'''' as _OrtakHesapHatasi_Ad,
+		'''' as _OrtakHesapHatasi_Soyad,
+		1 as BankaHesabiniStandartYap
+	FROM    TBLOZLUK AS OZLUK INNER JOIN
+			TBLBANKAHES AS HESAP ON OZLUK.OZLUKID = HESAP.OZLUKID LEFT OUTER JOIN
+			TBLKIMLIK KIMLIK ON OZLUK.OZLUKID = KIMLIK.OZLUKID LEFT OUTER JOIN
+			TBLBANKA_SUBE AS SUBE ON HESAP.SUBE_1 = SUBE.SUBEKODU LEFT OUTER JOIN
+			TBLBANKA_ISIM AS BANKA ON HESAP.BANKA_1 = BANKA.BANKAKODU
+			WHERE LEN(LTRIM(HESAP.HESAP_1+IBAN_1))>0 
+
+			UNION 
+	select
+	  0 AS Sira,
+		OZLUK.ADI+'' ''+OZLUK.IKINCIADI+'' ''+OZLUK.SOYADI as AdSoyad,
+		KIMLIK.MERNISNO as TCKimlikNo,
+		0 as BankaID,
+		BANKA.BANKAISIM as BankaAdi,
+		SUBE.SUBEISIM as BankaSubeAdi,
+		SUBE.SUBEKODU as BankaSubeKodu,
+		HESAP.HESAP_2 as BankaHesapNo,
+		''TL'' as HesapParaBirimi,
+		HESAP.IBAN_2 as IBANNo,
+		'''' as SwiftKodu,
+		'''' as _OrtakHesapHatasi_Ad,
+		'''' as _OrtakHesapHatasi_Soyad,
+		'''' as BankaHesabiniStandartYap
+	FROM    TBLOZLUK AS OZLUK INNER JOIN
+			TBLBANKAHES AS HESAP ON OZLUK.OZLUKID = HESAP.OZLUKID LEFT OUTER JOIN
+			TBLKIMLIK KIMLIK ON OZLUK.OZLUKID = KIMLIK.OZLUKID LEFT OUTER JOIN
+			TBLBANKA_SUBE AS SUBE ON HESAP.SUBE_2 = SUBE.SUBEKODU LEFT OUTER JOIN
+			TBLBANKA_ISIM AS BANKA ON HESAP.BANKA_2 = BANKA.BANKAKODU
+			WHERE LEN(LTRIM(HESAP.HESAP_2+IBAN_2))>0 
+					UNION  
+	select
+		0 AS Sira,
+		OZLUK.ADI+'' ''+OZLUK.IKINCIADI+'' ''+OZLUK.SOYADI as AdSoyad,
+		KIMLIK.MERNISNO as TCKimlikNo,
+		0 as BankaID,
+		BANKA.BANKAISIM as BankaAdi,
+		SUBE.SUBEISIM as BankaSubeAdi,
+		SUBE.SUBEKODU as BankaSubeKodu,
+		HESAP.HESAP_3 as BankaHesapNo,
+		''TL'' as HesapParaBirimi,
+		HESAP.IBAN_3 as IBANNo,
+		'''' as SwiftKodu,
+		'''' as _OrtakHesapHatasi_Ad,
+		'''' as _OrtakHesapHatasi_Soyad,
+		'''' as BankaHesabiniStandartYap
+	FROM    TBLOZLUK AS OZLUK INNER JOIN
+			TBLBANKAHES AS HESAP ON OZLUK.OZLUKID = HESAP.OZLUKID LEFT OUTER JOIN
+			TBLKIMLIK KIMLIK ON OZLUK.OZLUKID = KIMLIK.OZLUKID LEFT OUTER JOIN
+			TBLBANKA_SUBE AS SUBE ON HESAP.SUBE_3 = SUBE.SUBEKODU LEFT OUTER JOIN
+			TBLBANKA_ISIM AS BANKA ON HESAP.BANKA_3 = BANKA.BANKAKODU
+			WHERE LEN(LTRIM(HESAP.HESAP_3+IBAN_3))>0 
+ 					UNION 
+	select
+		0 AS Sira,
+		OZLUK.ADI+'' ''+OZLUK.IKINCIADI+'' ''+OZLUK.SOYADI as AdSoyad,
+		KIMLIK.MERNISNO as TCKimlikNo,
+		0 as BankaID,
+		BANKA.BANKAISIM as BankaAdi,
+		SUBE.SUBEISIM as BankaSubeAdi,
+		SUBE.SUBEKODU as BankaSubeKodu,
+		HESAP.HESAP_4 as BankaHesapNo,
+		''TL'' as HesapParaBirimi,
+		HESAP.IBAN_4 as IBANNo,
+		'''' as SwiftKodu,
+		'''' as _OrtakHesapHatasi_Ad,
+		'''' as _OrtakHesapHatasi_Soyad,
+		'''' as BankaHesabiniStandartYap
+	FROM    TBLOZLUK AS OZLUK INNER JOIN
+			TBLBANKAHES AS HESAP ON OZLUK.OZLUKID = HESAP.OZLUKID LEFT OUTER JOIN
+			TBLKIMLIK KIMLIK ON OZLUK.OZLUKID = KIMLIK.OZLUKID LEFT OUTER JOIN
+			TBLBANKA_SUBE AS SUBE ON HESAP.SUBE_4 = SUBE.SUBEKODU LEFT OUTER JOIN
+			TBLBANKA_ISIM AS BANKA ON HESAP.BANKA_4 = BANKA.BANKAKODU
+			WHERE LEN(LTRIM(HESAP.HESAP_4+IBAN_4))>0 
+					UNION 
+	select
+		0 AS Sira,
+		OZLUK.ADI+'' ''+OZLUK.IKINCIADI+'' ''+OZLUK.SOYADI as AdSoyad,
+		KIMLIK.MERNISNO as TCKimlikNo,
+		0 as BankaID,
+		BANKA.BANKAISIM as BankaAdi,
+		SUBE.SUBEISIM as BankaSubeAdi,
+		SUBE.SUBEKODU as BankaSubeKodu,
+		HESAP.HESAP_5 as BankaHesapNo,
+		''TL'' as HesapParaBirimi,
+		HESAP.IBAN_5 as IBANNo,
+		'''' as SwiftKodu,
+		'''' as _OrtakHesapHatasi_Ad,
+		'''' as _OrtakHesapHatasi_Soyad,
+		'''' as BankaHesabiniStandartYap
+	FROM    TBLOZLUK AS OZLUK INNER JOIN
+			TBLBANKAHES AS HESAP ON OZLUK.OZLUKID = HESAP.OZLUKID LEFT OUTER JOIN
+			TBLKIMLIK KIMLIK ON OZLUK.OZLUKID = KIMLIK.OZLUKID LEFT OUTER JOIN
+			TBLBANKA_SUBE AS SUBE ON HESAP.SUBE_5 = SUBE.SUBEKODU LEFT OUTER JOIN
+			TBLBANKA_ISIM AS BANKA ON HESAP.BANKA_5 = BANKA.BANKAKODU
+			WHERE LEN(LTRIM(HESAP.HESAP_5+IBAN_5))>0
+	 ) AS BANKAHESAPLAR'
+
+ EXECUTE sp_executesql @SQLString

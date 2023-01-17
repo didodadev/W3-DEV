@@ -1,0 +1,65 @@
+<!-- Description : Vadeli Mevduat Hesap İşlemi İçin Oluşturulan Yeni Tablolar
+Developer: İlker Altındal
+Company : Workcube
+Destination: Period -->
+
+<querytag>
+    IF NOT EXISTS( SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_SCHEMA = '@_dsn_period_@' and TABLE_NAME='INTEREST_YIELD_PLAN')
+    BEGIN
+
+    CREATE TABLE [INTEREST_YIELD_PLAN](
+        [YIELD_ID] [int] IDENTITY(1,1) NOT NULL,
+        [BANK_ACTION_ID] [int] NULL,
+        [ACTION_TYPE] [varchar](150) NULL,
+        [DUE_VALUE] [int] NULL,
+        [DUE_VALUE_DATE] [datetime] NULL,
+        [YIELD_RATE] [float] NULL,
+        [STOPAJ_RATE] [float] NULL,
+        [YIELD_AMOUNT] [float] NULL,
+        [YIELD_PAYMENT_PERIOD] [float] NULL,
+        [SPECIAL_DAY] [int] NULL,
+        [NUMBER_YIELD_COLLECTION] [int] NULL,
+        [YIELD_COLLECTION_AMOUNT] [float] NULL,
+        [RECORD_DATE] [datetime] NULL,
+        [RECORD_EMP] [int] NULL,
+        [RECORD_IP] [nvarchar](50) NULL,
+        [UPDATE_DATE] [datetime] NULL,
+        [UPDATE_EMP] [int] NULL,
+        [UPDATE_IP] [nvarchar](50) NULL,
+        [BUDGET_PLAN_ID] [int] NULL,
+        [FINANCIAL_SCENARIO_ID] [int] NULL,
+    CONSTRAINT [PK_INTEREST_YIELD_PLAN] PRIMARY KEY CLUSTERED 
+    (
+        [YIELD_ID] ASC
+    )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+    ) ON [PRIMARY]
+    END;
+
+    IF NOT EXISTS( SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_SCHEMA = '@_dsn_period_@' and TABLE_NAME='INTEREST_YIELD_PLAN_ROWS')
+    BEGIN
+
+    CREATE TABLE [INTEREST_YIELD_PLAN_ROWS](
+        [YIELD_ROWS_ID] [int] IDENTITY(1,1) NOT NULL,
+        [YIELD_ID] [int] NULL,
+        [OPERATION_NAME] [varchar](200) NULL,
+        [IS_PAYMENT] [int] NULL,
+        [BANK_ACTION_DATE] [datetime] NULL,
+        [AMOUNT] [float] NULL,
+        [STORE_REPORT_DATE] [datetime] NULL,
+        [STOPAJ_RATE] [float] NULL,
+        [STOPAJ_TOTAL] [float] NULL,
+        [EXPENSE_ITEM_TAHAKKUK_ID] [int] NULL,
+        [BANK_ACTION_ID] [int] NULL,
+    CONSTRAINT [PK_INTEREST_YIELD_PLAN_ROWS] PRIMARY KEY CLUSTERED 
+    (
+        [YIELD_ROWS_ID] ASC
+    )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+    ) ON [PRIMARY]
+    END;
+
+    IF NOT EXISTS(SELECT 'Y' FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_SCHEMA = '@_dsn_period_@' and TABLE_NAME='SETUP_STOPPAGE_RATES' AND COLUMN_NAME='SETUP_BANK_TYPE_ID' )
+    BEGIN   
+        ALTER TABLE SETUP_STOPPAGE_RATES ADD SETUP_BANK_TYPE_ID NVARCHAR(50) NULL 
+    END;
+
+</querytag>

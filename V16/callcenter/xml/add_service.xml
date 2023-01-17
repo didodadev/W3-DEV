@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<OBJECT_PROPERTIES>
+	<OBJECT_PROPERTY>
+		<PROPERTY>x_is_related_tree_cat</PROPERTY>
+		<PROPERTY_DETAIL>Görevli Alt Ağaç Kategorisine Bağlı Olarak Seçilsin</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>select</PROPERTY_TYPE>
+		<PROPERTY_VALUES>1,0</PROPERTY_VALUES>
+		<PROPERTY_NAMES>Evet,Hayır</PROPERTY_NAMES>
+		<PROPERTY_DEFAULT>0</PROPERTY_DEFAULT>
+		<PROPERTY_HELP>Evet seçilirse görevli seçimi yapılabilmesi için alt tree kategori seçimini zorunlu tutar.</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+	<OBJECT_PROPERTY>
+		<PROPERTY>x_is_mail_send_tree_list</PROPERTY>
+		<PROPERTY_DETAIL>Gönderi Listesi Alt Tree Ağaç Kategorisinden Oluşsun</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>select</PROPERTY_TYPE>
+		<PROPERTY_VALUES>1,0</PROPERTY_VALUES>
+		<PROPERTY_NAMES>Evet,Hayır</PROPERTY_NAMES>
+		<PROPERTY_DEFAULT>0</PROPERTY_DEFAULT>
+		<PROPERTY_HELP>Evet Seçili ise Şikayet Alt Tree Kategorisindeki Gönderi Listesini Kontrol Eder, Hayır Seçili ise Şikayet Alt Kategorisindeki Gönderi Listesini Kontrol Eder.</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+	<OBJECT_PROPERTY>
+		<PROPERTY>x_is_sub_tree_single_select</PROPERTY>
+		<PROPERTY_DETAIL>Alt Ağaç Kategoriler Tek Tek Seçilsin</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>select</PROPERTY_TYPE>
+		<PROPERTY_VALUES>1,0</PROPERTY_VALUES>
+		<PROPERTY_NAMES>Evet,Hayır</PROPERTY_NAMES>
+		<PROPERTY_DEFAULT>0</PROPERTY_DEFAULT>
+		<PROPERTY_HELP>Hayır Seçili ise Çoklu Şikayet Alt Kategorisi Seçimi Yapılabilir. Gönderi Listesine E-posta Gönderilebilmesi için Hayır Seçilmesi Gerekmektedir. </PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+	<OBJECT_PROPERTY>
+		<PROPERTY>x_is_multiple_select</PROPERTY>
+		<PROPERTY_DETAIL>Çoklu Alt Kategori Seçimi Yapılsın</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>select</PROPERTY_TYPE>
+		<PROPERTY_VALUES>0,1</PROPERTY_VALUES>
+		<PROPERTY_NAMES>Hayır,Evet</PROPERTY_NAMES>
+		<PROPERTY_DEFAULT>0</PROPERTY_DEFAULT>
+		<PROPERTY_HELP>Sayfada seçilen kategoriye bağlı alt kategorilerin toplu seçilmesine olanak verir. Alt ağaç kategorileri tek tek seçilsin xml'i hayır seçili olduğunda bu xml çalışmaz. </PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+	<OBJECT_PROPERTY>
+		<PROPERTY>x_paper_no</PROPERTY>
+		<PROPERTY_DETAIL>Belge Numarası</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>input</PROPERTY_TYPE>
+		<PROPERTY_VALUES></PROPERTY_VALUES>
+		<PROPERTY_NAMES></PROPERTY_NAMES>
+		<PROPERTY_DEFAULT></PROPERTY_DEFAULT>
+		<PROPERTY_HELP>Eğer buraya belge no girilirse eklenen başvuruların belge numaraları standart  belge numaralarından alınmaz , buraya eklenen ifadenin sonuna sistem tarafından üretilen rakamlar eklenerek belge numarası oluşturulur. Örneğin bu alana SB girilirse sistem belge numarası olarak SB-20110920000000093993 gibi bir numara oluşturur.</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+	<OBJECT_PROPERTY>
+		<PROPERTY>x_is_related_upper_cat</PROPERTY>
+		<PROPERTY_DETAIL>Alt Kategoriler Üst Kategoriye Bağlı Olsun mu?</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>select</PROPERTY_TYPE>
+		<PROPERTY_VALUES>1,0</PROPERTY_VALUES>
+		<PROPERTY_NAMES>Evet,Hayır</PROPERTY_NAMES>
+		<PROPERTY_DEFAULT>1</PROPERTY_DEFAULT>
+		<PROPERTY_HELP>Evet seçilirse sayfada yapılan kategori seçimine göre kategori ile ilgili alt kategoriler görüntülenir.</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+	<OBJECT_PROPERTY>
+		<PROPERTY>is_notify_popup</PROPERTY>
+		<PROPERTY_DETAIL>Başvuruyu Bildiren Otomatik Gelsin</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>select</PROPERTY_TYPE>
+		<PROPERTY_VALUES>1,0</PROPERTY_VALUES>
+		<PROPERTY_NAMES>Evet,Hayır</PROPERTY_NAMES>
+		<PROPERTY_DEFAULT>0</PROPERTY_DEFAULT>
+		<PROPERTY_HELP>Evet seçilirse başvuru yapan kısmına seçtiğimiz kurumsal üyenin temsilcisinin başvuruyu bildiren alanına otomatik olarak düşmesini sağlar.</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+	<OBJECT_PROPERTY>
+		<PROPERTY>x_comp_id</PROPERTY>
+		<PROPERTY_DETAIL>Finansal Bilgiyi Hangi Şirketin Verisinden Alsın? (Our-Company-ID'yi yazınız.) </PROPERTY_DETAIL>
+		<PROPERTY_TYPE>input</PROPERTY_TYPE>
+		<PROPERTY_VALUES></PROPERTY_VALUES>
+		<PROPERTY_NAMES></PROPERTY_NAMES>
+		<PROPERTY_DEFAULT></PROPERTY_DEFAULT>
+		<PROPERTY_HELP>Finansal Bilgiyi Hangi şirkettin verisinden alsın?</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+	<OBJECT_PROPERTY>
+		<PROPERTY>x_subs_comp_id</PROPERTY>
+		<PROPERTY_DETAIL>Çağrı Sahibinin Diğer Şirketlerdeki Abonelerini de Göster (Company idlerini yazınız. ) </PROPERTY_DETAIL>
+		<PROPERTY_TYPE>input</PROPERTY_TYPE>
+		<PROPERTY_VALUES></PROPERTY_VALUES>
+		<PROPERTY_NAMES></PROPERTY_NAMES>
+		<PROPERTY_DEFAULT></PROPERTY_DEFAULT>
+		<PROPERTY_HELP>Çağrı Sahibinin Diğer Şirketlerdeki Abonelerini de Göster</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+	<OBJECT_PROPERTY>
+		<PROPERTY>x_subs_team_mail</PROPERTY>
+		<PROPERTY_DETAIL>Başvuru Kayıt Edildiğinde Abone Ekibine Mail Gönderilsin mi?</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>select</PROPERTY_TYPE>
+		<PROPERTY_VALUES>1,0</PROPERTY_VALUES>
+		<PROPERTY_NAMES>Evet,Hayır</PROPERTY_NAMES>
+		<PROPERTY_DEFAULT>0</PROPERTY_DEFAULT>
+		<PROPERTY_HELP>Başvuru Kayıt Edildiğinde Abone Ekibine Mail Gönderilsin mi?</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+</OBJECT_PROPERTIES>

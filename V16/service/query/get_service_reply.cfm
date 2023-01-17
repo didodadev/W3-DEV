@@ -1,0 +1,8 @@
+<cfquery name="GET_SERVICE_REPLY" datasource="#DSN3#">
+	SELECT 
+		*
+	FROM
+		SERVICE_REPLY
+	WHERE
+		SERVICE_ID = <cfqueryparam cfsqltype="cf_sql_integer" value="#service_id#">
+</cfquery>

@@ -1,0 +1,11 @@
+<!-- Description :  EMPLOYEES_PUANTAJ_ROWS tablosuna SENIORITY_SALARY kolonu eklendi.
+Developer: Alper ÇİTMEN
+Company : Workcube
+Destination: Main -->
+<querytag>
+    IF NOT EXISTS( SELECT 'Y' FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME='EMPLOYEES_PUANTAJ_ROWS' AND TABLE_SCHEMA = '@_dsn_main_@' AND COLUMN_NAME='SENIORITY_SALARY')
+    BEGIN
+        ALTER TABLE EMPLOYEES_PUANTAJ_ROWS
+        ADD SENIORITY_SALARY float NULL
+    END;
+</querytag>

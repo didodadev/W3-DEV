@@ -1,0 +1,1 @@
+<cf_box box_page="#request.self#?fuseaction=dev.workdev&fuseact=#attributes.fuseact#&event=ajax-event-list&isAjax=1" title="Events" closable="0"></cf_box>

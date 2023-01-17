@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SETUP_SITE>
+	<SETUPSITE>
+		<LINK_NAME>Otomatik Ödeme Dosya Oluşturma XML Setup</LINK_NAME> 
+		<LINK_FILE>bank.popup_add_autopayment_export</LINK_FILE>
+		<LINK_DETAIL>Manuel Belge Kapama İşleminden Çalışsın</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Otomatik Ödeme Dosyalarında XML Setup</LINK_NAME> 
+		<LINK_FILE>bank.popup_open_multi_prov_file</LINK_FILE>
+		<LINK_DETAIL>Otomatik Ödeme Dosyalarında Şifreleme</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Otomatik Ödeme Dosyalarında XML Setup</LINK_NAME> 
+		<LINK_FILE>bank.popup_make_bankorder_file</LINK_FILE>
+		<LINK_DETAIL>Otomatik Ödeme Dosyalarında Şifreleme</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Banka Talimatları XML Setup</LINK_NAME> 
+		<LINK_FILE>bank.list_assign_order</LINK_FILE>
+		<LINK_DETAIL>Banka Talimatları Liste Sayfası</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Gelen ve Toplu Gelen Havale XML Ayarları</LINK_NAME> 
+		<LINK_FILE>bank.form_add_gelenh,bank.popup_add_gelenh,bank.form_upd_gelenh,bank.popup_upd_gelenh</LINK_FILE>
+		<LINK_DETAIL>Gelen ve Toplu Gelen Havale XML Ayarları</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Giden ve Toplu Giden Havale XML Ayarları</LINK_NAME> 
+		<LINK_FILE>bank.form_add_gidenh,bank.popup_form_add_gidenh,bank.form_upd_gidenh,bank.popup_upd_gidenh</LINK_FILE>
+		<LINK_DETAIL>Giden ve Toplu Giden Havale XML Ayarları</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Banka İşlemleri Liste Sayfası XML Setup</LINK_NAME> 
+		<LINK_FILE>bank.list_bank_actions</LINK_FILE>
+		<LINK_DETAIL>Banka İşlemleri Liste Sayfası</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Toplu Provizyon Sayfası XML Setup</LINK_NAME> 
+		<LINK_FILE>bank.popup_add_multi_provision</LINK_FILE>
+		<LINK_DETAIL>Toplu Provizyon Sayfası XML Setup</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Banka Hesabı Ekleme / Güncelleme XML Setup</LINK_NAME> 
+		<LINK_FILE>bank.form_add_bank_account,bank.form_upd_bank_account</LINK_FILE>
+		<LINK_DETAIL>Banka Hesabı Ekleme / Güncelleme XML Setup</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Banka Hesabı Açılışı XML Setup</LINK_NAME> 
+		<LINK_FILE>bank.form_add_bank_account_open,bank.form_upd_bank_account_open</LINK_FILE>
+		<LINK_DETAIL>Banka Hesabı Açılışı XML Setup</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Hesaba Para Yatır XML Setup</LINK_NAME> 
+		<LINK_FILE>bank.form_add_invest_money,bank.popup_upd_invest_money,bank.form_upd_invest_money</LINK_FILE>
+		<LINK_DETAIL>Hesaba Para Yatır XML Setup</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Hesaptan Para Çek XML Setup</LINK_NAME> 
+		<LINK_FILE>bank.form_add_get_money,bank.popup_upd_get_money,bank.form_upd_get_money</LINK_FILE>
+		<LINK_DETAIL>Hesaptan Para Çek XML Setup</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Virman XML Setup</LINK_NAME> 
+		<LINK_FILE>bank.form_add_virman,bank.form_upd_virman,bank.popup_upd_virman</LINK_FILE>
+		<LINK_DETAIL>Virman XML Setup</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Döviz Alış İşlemi XML Setup</LINK_NAME> 
+		<LINK_FILE>bank.form_bank_purchase_doviz,bank.popup_upd_bank_purchase_doviz,bank.form_upd_bank_purchase_doviz</LINK_FILE>
+		<LINK_DETAIL>Döviz Alış İşlemi XML Setup</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Döviz Satış İşlemi XML Setup</LINK_NAME> 
+		<LINK_FILE>bank.form_bank_sale_doviz,bank.popup_upd_bank_sale_doviz,bank.form_upd_bank_sale_doviz</LINK_FILE>
+		<LINK_DETAIL>Döviz Satış İşlemi XML Setup</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Kredi Kartı Tahsilat XML Setup</LINK_NAME> 
+		<LINK_FILE>bank.popup_add_creditcard_revenue,bank.popup_form_upd_creditcard_revenue</LINK_FILE>
+		<LINK_DETAIL>Kredi Kartı Tahsilat XML Setup</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Sanal POS XML Setup</LINK_NAME> 
+		<LINK_FILE>bank.popup_add_online_pos</LINK_FILE>
+		<LINK_DETAIL>Sanal POS XML Setup</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Kredi Kartıyla Ödeme XML Setup</LINK_NAME> 
+		<LINK_FILE>bank.popup_add_creditcard_bank_expense</LINK_FILE>
+		<LINK_DETAIL>Kredi Kartıyla Ödeme XML Setup</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Banka Kur Değerleme XML Setup</LINK_NAME> 
+		<LINK_FILE>bank.form_add_bank_rate_valuation</LINK_FILE>
+		<LINK_DETAIL>Banka Kur Değerleme XML Setup</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Giden Banka Talimatı Ekle XML Setup</LINK_NAME> 
+		<LINK_FILE>bank.popup_assign_order</LINK_FILE>
+		<LINK_DETAIL>Giden Banka Talimatı Ekle  XML Setup</LINK_DETAIL>
+	</SETUPSITE>
+</SETUP_SITE>

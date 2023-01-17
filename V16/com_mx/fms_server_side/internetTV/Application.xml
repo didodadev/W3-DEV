@@ -1,0 +1,18 @@
+<Application>
+	<StreamManager>
+		<VirtualDirectory>
+              <!-- Specifies application specific virtual directory mapping for recorded streams.   -->
+			<Streams>/;${INTERNETTV_DIR}</Streams>
+		</VirtualDirectory>
+        <Live>
+            <Queue enabled="false">
+                <!-- Specifies how often the server will flush the message queue by size   -->
+                <!-- (in bytes).  Set value to 0 also disable queuing. Default is 4096. -->
+                <MaxQueueSize>61440</MaxQueueSize>
+                <!-- Specifies how often the server will flush the message queue by time   -->
+                <!-- (in milliseconds).  The default value is set to 500 milliseconds.   -->
+                <MaxQueueDelay>500</MaxQueueDelay>
+           </Queue>
+        </Live>
+    </StreamManager>
+</Application>

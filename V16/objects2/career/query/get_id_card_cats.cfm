@@ -1,0 +1,3 @@
+<cfquery name="GET_ID_CARD_CATS" datasource="#DSN#">
+	SELECT IDENTYCAT_ID, IDENTYCAT FROM SETUP_IDENTYCARD
+</cfquery>

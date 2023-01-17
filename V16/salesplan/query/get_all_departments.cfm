@@ -1,0 +1,18 @@
+<cfquery name="ALL_BRANCHES" datasource="#DSN#">
+	SELECT 
+		BRANCH.BRANCH_NAME,
+		BRANCH.BRANCH_ID
+	FROM
+		BRANCH
+	WHERE
+		BRANCH.BRANCH_ID IN (
+								SELECT
+									BRANCH_ID
+								FROM
+									EMPLOYEE_POSITION_BRANCHES
+								WHERE
+									POSITION_CODE = #SESSION.EP.POSITION_CODE#
+								)
+	ORDER BY
+		BRANCH.BRANCH_NAME
+</cfquery> 

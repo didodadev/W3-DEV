@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<process_stage_file>
+	<stage_file>
+		<file_module>Ayarlar</file_module>
+		<file_name>iptal_faturada_disable_yapar.cfm</file_name>
+		<file_type>Display</file_type>
+		<file_aim>Süper kullanıcı yetkisine sahip olanlar dışındakilere faturayı iptal işaretleyip günceleme yapmasını engeller</file_aim>
+		<file_target>iptal_faturada_disable_yapar.cfm</file_target>
+		<file_fuseaction></file_fuseaction>
+	</stage_file>
+</process_stage_file>

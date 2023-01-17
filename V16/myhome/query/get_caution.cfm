@@ -1,0 +1,16 @@
+<cfquery name="GET_CAUTION" datasource="#dsn#">
+	SELECT
+		EC.*,
+		E.EMPLOYEE_NAME,
+		E.EMPLOYEE_SURNAME,
+		E.EMPLOYEE_ID
+		FROM
+		EMPLOYEES_CAUTION EC,
+		EMPLOYEES E
+	WHERE 
+		E.EMPLOYEE_ID = EC.CAUTION_TO
+		AND
+		EC.CAUTION_ID = #attributes.CAUTION_ID#
+</cfquery>
+
+

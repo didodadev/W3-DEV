@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<OBJECT_PROPERTIES>
+	<OBJECT_PROPERTY>
+		<PROPERTY>xml_multi_change</PROPERTY>
+		<PROPERTY_DETAIL>Toplu Değiştirme Gelsin mi?</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>select</PROPERTY_TYPE>
+		<PROPERTY_VALUES>1,0</PROPERTY_VALUES>
+		<PROPERTY_NAMES>Evet,Hayır</PROPERTY_NAMES>
+		<PROPERTY_DEFAULT>0</PROPERTY_DEFAULT>
+		<PROPERTY_HELP></PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+	<OBJECT_PROPERTY>
+		<PROPERTY>xml_is_department</PROPERTY>
+		<PROPERTY_DETAIL>Muhasebe Fişi İçin Departman ve Şube Seçilebilsin</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>select</PROPERTY_TYPE>
+		<PROPERTY_VALUES>0,1,2</PROPERTY_VALUES>
+		<PROPERTY_NAMES>Hayır,Evet,Zorunlu</PROPERTY_NAMES>
+		<PROPERTY_DEFAULT>0</PROPERTY_DEFAULT>
+		<PROPERTY_HELP>Faturada Muhasebe İşlemi için Departman Seçilebilir. Zorunlu Seçilirse Departman Bilgisi Boş Bırakılmaz.</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+	<OBJECT_PROPERTY>
+		<PROPERTY>x_kdv_add_to_otv</PROPERTY>
+		<PROPERTY_DETAIL>ÖTV oranı, KDV Matrahına Eklensin</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>select</PROPERTY_TYPE>
+		<PROPERTY_VALUES>0,1</PROPERTY_VALUES>
+		<PROPERTY_NAMES>Hayır,Evet</PROPERTY_NAMES>
+		<PROPERTY_DEFAULT>0</PROPERTY_DEFAULT>
+		<PROPERTY_HELP>Belirtilen ÖTV oranının KDV matrahı üzerinden hesaplanmasını sağlar.</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+	<OBJECT_PROPERTY>
+		<PROPERTY>xml_control_payment_plan_status</PROPERTY>
+		<PROPERTY_DETAIL>Ödeme Planı Otomatik Güncellensin</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>select</PROPERTY_TYPE>
+		<PROPERTY_VALUES>1,0</PROPERTY_VALUES>
+		<PROPERTY_NAMES>Evet,Hayır</PROPERTY_NAMES>
+		<PROPERTY_DEFAULT>0</PROPERTY_DEFAULT>
+		<PROPERTY_HELP>Hayır Seçilirse ve Fatura Güncellendiğinde Gelen 'Güncellediğiniz Faturanın Ödeme Planı Yeniden Oluşturucaktır' Uyarısında İptal Seçilirse, Ödeme Planı Güncellenmeden Fatura Güncellenir.</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+	<OBJECT_PROPERTY>
+		<PROPERTY>xml_upd_einvoice</PROPERTY>
+		<PROPERTY_DETAIL>Gönderilen E-Faturalar Güncellenebilsin</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>select</PROPERTY_TYPE>
+		<PROPERTY_VALUES>1,0</PROPERTY_VALUES>
+		<PROPERTY_NAMES>Evet,Hayır</PROPERTY_NAMES>
+		<PROPERTY_DEFAULT>1</PROPERTY_DEFAULT>
+		<PROPERTY_HELP>Eğer hayır olarak seçilirse e-faturası gönderilen faturaların güncellenmesi engellenir , sadece iptal edilirse güncellenmesine izin verilir.</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+	<OBJECT_PROPERTY>
+		<PROPERTY>xml_total_budget</PROPERTY>
+		<PROPERTY_DETAIL>Satış fiyatını Bütçe Geliri olarak kaydet</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>select</PROPERTY_TYPE>
+		<PROPERTY_VALUES>1,0</PROPERTY_VALUES>
+		<PROPERTY_NAMES>Evet,Hayır</PROPERTY_NAMES>
+		<PROPERTY_DEFAULT>0</PROPERTY_DEFAULT>
+		<PROPERTY_HELP>Eğer evet ise net toplam satış fiyatını da bütçe kalemine gelir olarak ekler.</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+</OBJECT_PROPERTIES>

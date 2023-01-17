@@ -1,0 +1,18 @@
+/*
+ Go3/ Tiger3  
+ Ek Barkod Aktarım
+ settings.import_stock_extra_barcodes
+*/
+ 
+
+SET @SQLString = N'SELECT 
+	ITEMS.CODE as StokKodu,
+	BIRIM.CODE as EkBirim,
+	BARKOD.BARCODE as Barkod 
+ 
+FROM    LG_'+@FirmNr+'_UNITBARCODE AS BARKOD INNER JOIN
+        LG_'+@FirmNr+'_ITMUNITA AS BIRIMDETAY ON BARKOD.ITMUNITAREF = BIRIMDETAY.LOGICALREF INNER JOIN
+        LG_'+@FirmNr+'_UNITSETL AS BIRIM ON BIRIMDETAY.UNITLINEREF = BIRIM.LOGICALREF INNER JOIN
+        LG_'+@FirmNr+'_ITEMS ITEMS ON BARKOD.ITEMREF = ITEMS.LOGICALREF'
+
+EXECUTE sp_executesql @SQLString

@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<OBJECT_PROPERTIES>
+	<OBJECT_PROPERTY>
+		<PROPERTY>x_offer_show_ids</PROPERTY>
+		<PROPERTY_DETAIL>Aktif Tekliflerde Görüntülenecek Aşama IDleri</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>input</PROPERTY_TYPE>
+		<PROPERTY_VALUES></PROPERTY_VALUES>
+		<PROPERTY_NAMES></PROPERTY_NAMES>
+		<PROPERTY_DEFAULT></PROPERTY_DEFAULT>
+		<PROPERTY_HELP>Girilen aşama idlere göre satınalma teklifleri listelenir. IDler virgül ile ayrılmalıdır. Örneğin; 1,2,3</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+	<OBJECT_PROPERTY>
+		<PROPERTY>x_offer_hide_ids</PROPERTY>
+		<PROPERTY_DETAIL>Aktif Tekliflerde Gizlenecek Aşama IDleri</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>input</PROPERTY_TYPE>
+		<PROPERTY_VALUES></PROPERTY_VALUES>
+		<PROPERTY_NAMES></PROPERTY_NAMES>
+		<PROPERTY_DEFAULT></PROPERTY_DEFAULT>
+		<PROPERTY_HELP>Girilen aşama idlere göre satınalma teklifleri gösterilmez. IDler virgül ile ayrılmalıdır. Örneğin; 1,2,3</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+	<OBJECT_PROPERTY>
+		<PROPERTY>x_demand_show_ids</PROPERTY>
+		<PROPERTY_DETAIL>Aktif Taleplerde Görüntülenecek Aşama IDleri</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>input</PROPERTY_TYPE>
+		<PROPERTY_VALUES></PROPERTY_VALUES>
+		<PROPERTY_NAMES></PROPERTY_NAMES>
+		<PROPERTY_DEFAULT></PROPERTY_DEFAULT>
+		<PROPERTY_HELP>Girilen aşama idlere göre satınalma talepleri listelenir. IDler virgül ile ayrılmalıdır. Örneğin; 1,2,3</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+	<OBJECT_PROPERTY>
+		<PROPERTY>x_demand_hide_ids</PROPERTY>
+		<PROPERTY_DETAIL>Aktif Taleplerde Gizlenecek Aşama IDleri</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>input</PROPERTY_TYPE>
+		<PROPERTY_VALUES></PROPERTY_VALUES>
+		<PROPERTY_NAMES></PROPERTY_NAMES>
+		<PROPERTY_DEFAULT></PROPERTY_DEFAULT>
+		<PROPERTY_HELP>Girilen aşama idlere göre satınalma talepleri gösterilmez. IDler virgül ile ayrılmalıdır. Örneğin; 1,2,3</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+	<OBJECT_PROPERTY>
+		<PROPERTY>x_order_show_ids</PROPERTY>
+		<PROPERTY_DETAIL>Aktif Siparişlerde Görüntülenecek Aşama IDleri</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>input</PROPERTY_TYPE>
+		<PROPERTY_VALUES></PROPERTY_VALUES>
+		<PROPERTY_NAMES></PROPERTY_NAMES>
+		<PROPERTY_DEFAULT></PROPERTY_DEFAULT>
+		<PROPERTY_HELP>Girilen aşama idlere göre satınalma siparişleri listelenir. IDler virgül ile ayrılmalıdır. Örneğin; 1,2,3</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+	<OBJECT_PROPERTY>
+		<PROPERTY>x_order_hide_ids</PROPERTY>
+		<PROPERTY_DETAIL>Aktif Siparişlerde Gizlenecek Aşama IDleri</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>input</PROPERTY_TYPE>
+		<PROPERTY_VALUES></PROPERTY_VALUES>
+		<PROPERTY_NAMES></PROPERTY_NAMES>
+		<PROPERTY_DEFAULT></PROPERTY_DEFAULT>
+		<PROPERTY_HELP>Girilen aşama idlere göre satınalma siparişleri gösterilmez. IDler virgül ile ayrılmalıdır. Örneğin; 1,2,3</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+	<OBJECT_PROPERTY>
+		<PROPERTY>x_expense_budget_id</PROPERTY>
+		<PROPERTY_DETAIL>Özet gösterilecek Bütçe ID'si</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>input</PROPERTY_TYPE>
+		<PROPERTY_VALUES></PROPERTY_VALUES>
+		<PROPERTY_NAMES></PROPERTY_NAMES>
+		<PROPERTY_DEFAULT></PROPERTY_DEFAULT>
+		<PROPERTY_HELP>Hesap özetinde gösterilece bütçe id'si girilmelidir.</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+</OBJECT_PROPERTIES>

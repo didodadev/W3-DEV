@@ -1,0 +1,12 @@
+<cfquery name="get_surveys_votes" datasource="#dsn#">
+	SELECT
+		SURVEY.SURVEY_HEAD,
+		COUNT(SURVEY.SURVEY_ID) AS VOTE_COUNT
+	FROM
+		SURVEY,
+		SURVEY_VOTES
+	WHERE
+		SURVEY.SURVEY_ID = SURVEY_VOTES.SURVEY_ID
+	GROUP BY 
+		SURVEY.SURVEY_HEAD
+</cfquery>

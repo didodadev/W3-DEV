@@ -1,0 +1,80 @@
+<cfquery name="GET_POSITIONS" datasource="#dsn#">
+	SELECT DISTINCT
+		EMPLOYEE_POSITIONS.EMPLOYEE_ID,
+		EMPLOYEE_POSITIONS.POSITION_ID,
+		EMPLOYEE_POSITIONS.POSITION_CODE,
+		EMPLOYEE_POSITIONS.POSITION_NAME,
+		EMPLOYEE_POSITIONS.EMPLOYEE_NAME,
+		EMPLOYEE_POSITIONS.EMPLOYEE_SURNAME,
+		EMPLOYEE_POSITIONS.EMPLOYEE_EMAIL,
+		EMPLOYEE_POSITIONS.IS_VEKALETEN,
+		EMPLOYEE_POSITIONS.VEKALETEN_DATE,
+		EMPLOYEE_POSITIONS.IS_MASTER,
+		DEPARTMENT.DEPARTMENT_ID,
+		DEPARTMENT.HIERARCHY_DEP_ID,
+		DEPARTMENT.ADMIN1_POSITION_CODE,
+		DEPARTMENT.ADMIN2_POSITION_CODE,
+		DEPARTMENT.DEPARTMENT_HEAD,
+		BRANCH.COMPANY_ID,
+		BRANCH.BRANCH_ID,
+		BRANCH.BRANCH_NAME,
+		ZONE.ZONE_NAME,
+		OUR_COMPANY.COMP_ID,
+		OUR_COMPANY.NICK_NAME
+	FROM
+		EMPLOYEE_POSITIONS,
+		DEPARTMENT,
+		BRANCH,		
+		ZONE,
+		OUR_COMPANY
+		<cfif len(attributes.keyword) eq 11 and IsNumeric(attributes.keyword)>
+			,EMPLOYEES_IDENTY
+		</cfif>
+	WHERE
+		OUR_COMPANY.COMP_ID=BRANCH.COMPANY_ID AND
+		EMPLOYEE_POSITIONS.DEPARTMENT_ID=DEPARTMENT.DEPARTMENT_ID AND
+		DEPARTMENT.BRANCH_ID=BRANCH.BRANCH_ID
+	<cfif isdefined("attributes.branch_id") and len(attributes.branch_id)>
+		AND BRANCH.BRANCH_ID = #attributes.branch_id#
+	</cfif>
+		AND BRANCH.ZONE_ID=ZONE.ZONE_ID
+	<cfif attributes.show_empty_pos neq 1>
+		AND EMPLOYEE_POSITIONS.EMPLOYEE_ID <> 0
+		AND EMPLOYEE_POSITIONS.EMPLOYEE_ID IS NOT NULL
+	</cfif>
+	<cfif not session.ep.ehesap>
+		AND BRANCH.BRANCH_ID IN ( SELECT BRANCH_ID FROM EMPLOYEE_POSITION_BRANCHES WHERE POSITION_CODE = #SESSION.EP.POSITION_CODE# )
+	</cfif>
+	<cfif isdefined("attributes.POSITION_CAT_ID") and len(attributes.POSITION_CAT_ID)>
+		AND EMPLOYEE_POSITIONS.POSITION_CAT_ID = #attributes.POSITION_CAT_ID#
+	</cfif>
+	<cfif isdefined("attributes.status") and (attributes.status eq 0)>
+		AND EMPLOYEE_POSITIONS.POSITION_STATUS = 0		  
+	<cfelseif isdefined("attributes.status") and (attributes.status eq 1)>
+		AND EMPLOYEE_POSITIONS.POSITION_STATUS = 1
+	<cfelse>
+		AND EMPLOYEE_POSITIONS.POSITION_STATUS = 1
+	</cfif>
+	<cfif isDefined("attributes.keyword") and len(attributes.keyword)>
+		<cfif len(attributes.keyword) eq 1>
+			AND EMPLOYEE_POSITIONS.EMPLOYEE_NAME LIKE '#attributes.keyword#%'
+		<cfelseif len(attributes.keyword) eq 11 and IsNumeric(attributes.keyword)>
+			AND EMPLOYEES_IDENTY.EMPLOYEE_ID = EMPLOYEE_POSITIONS.EMPLOYEE_ID
+			AND EMPLOYEES_IDENTY.TC_IDENTY_NO = '#attributes.keyword#'
+		<cfelse>
+			AND
+			(
+			EMPLOYEE_POSITIONS.POSITION_NAME LIKE '%#attributes.keyword#%' OR
+				<cfif database_type is "MSSQL">
+				EMPLOYEE_POSITIONS.EMPLOYEE_NAME+' '+EMPLOYEE_POSITIONS.EMPLOYEE_SURNAME LIKE '<cfif len(attributes.keyword) gt 2>%</cfif>#attributes.keyword#%'
+				<cfelseif database_type is "DB2">
+				EMPLOYEE_POSITIONS.EMPLOYEE_NAME||' '||EMPLOYEE_POSITIONS.EMPLOYEE_SURNAME LIKE '<cfif len(attributes.keyword) gt 2>%</cfif>#attributes.keyword#%'
+				</cfif>
+			)
+		</cfif>
+	</cfif>	
+	ORDER BY 
+		EMPLOYEE_POSITIONS.EMPLOYEE_NAME,
+		EMPLOYEE_POSITIONS.EMPLOYEE_SURNAME,
+		EMPLOYEE_POSITIONS.POSITION_NAME
+</cfquery>

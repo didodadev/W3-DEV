@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<OBJECT_PROPERTIES>
+  <OBJECT_PROPERTY>
+		<PROPERTY>x_required_project</PROPERTY>
+		<PROPERTY_DETAIL>Proje Seçimi Zorunlu Olsun</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>select</PROPERTY_TYPE>
+		<PROPERTY_VALUES>1,0</PROPERTY_VALUES>
+		<PROPERTY_NAMES>Evet,Hayır</PROPERTY_NAMES>
+		<PROPERTY_DEFAULT>0</PROPERTY_DEFAULT>
+		<PROPERTY_HELP>Proje Seçimi Zorunlu Olsun:Evet ise borç ya da alacak dekontu eklerken belgenin proje seçilmeden kaydedilmemesini sağlar.</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+	<OBJECT_PROPERTY>
+		<PROPERTY>x_expense_show</PROPERTY>
+		<PROPERTY_DETAIL>Masraf Merkezi ve Gider Kalemi Çalışan Detayından Gelsin</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>select</PROPERTY_TYPE>
+		<PROPERTY_VALUES>1,0</PROPERTY_VALUES>
+		<PROPERTY_NAMES>Evet,Hayır</PROPERTY_NAMES>
+		<PROPERTY_DEFAULT>0</PROPERTY_DEFAULT>
+		<PROPERTY_HELP>Masraf Merkezi ve Gider Kalemi Çalışan Detayından Gelsin: Evet ise dekont eklerken masraf merkezi ve gider kaleminin çalışan detayındaki 
+   muhasebe kodu ikonundan seçilen masraf merkezi ve gider kaleminden  gelmesini sağlar.</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+	<OBJECT_PROPERTY>
+		<PROPERTY>x_contract_show</PROPERTY>
+		<PROPERTY_DETAIL>Sözleşme Seçimi</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>select</PROPERTY_TYPE>
+		<PROPERTY_VALUES>1,0</PROPERTY_VALUES>
+		<PROPERTY_NAMES>Evet,Hayır</PROPERTY_NAMES>
+		<PROPERTY_DEFAULT>0</PROPERTY_DEFAULT>
+		<PROPERTY_HELP>Sözleşme Seçimi:Evet ise sözleşme popupı ekleme sayfasında görülebilir.</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+</OBJECT_PROPERTIES>

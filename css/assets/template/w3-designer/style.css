@@ -1,0 +1,504 @@
+.designer .row-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 30px;
+    margin: 0 0 20px 0;
+    border: 3px dashed #ddd;
+    padding: 30px 15px;
+    border-radius: 4px;
+}
+
+.designer .row-container.active{
+    border: 3px solid #ddd;
+}
+
+.designer .row-header{
+    border-bottom: 1px solid #ccc;
+    height: 50px;
+    padding: 6px;
+}
+
+.designer .row-header label input[type = "checbox"]{
+    width: 15px;
+    height: 15px;
+    margin: -3px 5px 0 0!important;
+}
+
+.designer .row-body > div{
+    margin-bottom: 10px;
+}
+
+.designer .row-body .sorterHead {
+    display: flex;
+    padding: 8px 0;
+    color: #e08283;
+    cursor: move;
+    margin: 5px 0 10px 0;
+    border-bottom: 1px solid #ddd;
+    text-transform: uppercase;
+}
+
+.designer .sorterHead .sorterElementName{
+    display: flex;
+    flex: 1;
+    align-items: center;
+    font-size: 13px!important;
+    color: #e08283;
+    letter-spacing: 1px;
+}
+
+.designer .sorterHead .sorterPermissionIcon {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+.designer .colNumber select {
+    font-family: 'Roboto';
+    color: #e08283;
+    border: 0;
+    padding: 0;
+    font-size: 13px;
+    letter-spacing: 1px;
+}
+
+i.row-trash {
+    line-height: 21px !important;
+    color: #F44336;
+    font-size: 17px;
+}
+i.col-trash{
+    line-height: 15px !important;
+    color: #e08283;
+    font-size: 17px;
+}
+
+
+/* WIDGET */
+.field {
+width: calc(100% - 15);
+position: relative;
+}
+
+.field label {
+width: 50%;
+padding: 5px;
+float: left;
+}
+
+.field select {
+    margin: 5px;
+}
+
+.field select + input {
+    width: 35px;
+}
+
+.field span {
+display: block;
+border: 1px solid #ccc;
+padding: 3px;
+margin: 3px;
+line-height: 1.42857143;
+background-color: white;
+float: left;
+min-height: 18px;
+}
+
+.field span.field-marker{
+    width: calc(50% - 40px);
+}
+
+.field span.table-field, .field .field-full{
+    width: calc(100% - 40px) !important;
+}
+
+.field span.hidden {
+display: block !important;
+border: 1px dashed #ccc;
+}
+
+.field span.select:after, .field span.workflow:after, .field span.processcat:after {
+font-family: FontAwesome;
+content: "\f0d7";
+display: block;
+padding-right: 3px;
+vertical-align: middle;
+float: right;
+}
+
+.field span.upload:after {
+font-family: FontAwesome;
+content: "\f093";
+display: block;
+padding-right: 3px;
+vertical-align: middle;
+float: right;
+}
+
+.field span.textarea {
+height: 46px;
+overflow-y: scroll;
+}
+
+.field span.image {
+height: 60px;
+background-image: url("/images/image.gif");
+background-repeat: no-repeat;
+background-position: center center;
+}
+
+.field span.check:before {
+font-family: FontAwesome;
+content: "\f096";
+display: block;
+padding-right: 3px;
+vertical-align: middle;
+float: right;
+margin-left: 10px;
+}
+
+.field span.radio:before {
+font-family: FontAwesome;
+content: "\f10c";
+display: block;
+padding-right: 3px;
+vertical-align: middle;
+float: right;
+margin-left: 10px;
+}
+
+.field span.button {
+background-color: #dedede;
+text-align: center;
+}
+
+.field span.text {
+border: none !important;
+border-bottom: 1px solid #ccc !important;
+}
+
+.field .table-field {
+border: 1px solid #ccc;
+padding: 3px;
+}
+
+.field a {
+display: block;
+font-size: 12px;
+background-color: #aaa;
+color: white;
+position: absolute;
+margin-left: 50%;
+margin-top: 4px;
+padding: 0 4px;
+}
+
+.field p {
+display: block;
+font-size: 12px;
+position: absolute;
+margin-left: calc(50% + 35px);
+margin-top: 4px;
+padding: 0;
+}
+
+.field p i {
+background-color: #aaa;
+color: white;
+line-height: 14px !important;
+padding: 0 3px;
+font-size: 12px;
+margin: 0;
+}
+
+.field:after {
+clear: both;
+}
+
+.grid-field {
+display: block;
+float: left;
+width: auto !important;
+}
+
+.grid-field a {
+margin-left: 0;
+margin-top: -2px;
+margin-bottom: -10px;
+}
+
+.grid-field p {
+margin-left: 26px;
+margin-top: -2px;
+margin-bottom: -10px;
+}
+
+.field-container {
+min-height: 100px;
+border: 1px dashed #ccc;
+padding: 6px;
+}
+
+.field-container .widget-seperator hr {
+border: none;
+border-bottom: 1px solid #ccc;
+margin: 6px 20px;
+}
+
+.field-container:after {
+clear: both;
+content: ' ';
+display: table;
+}
+
+.block-header {
+background-color: white;
+border-bottom: 1px solid #ccc;
+padding: 4px;
+text-align: right;
+}
+
+.block-header span.columnName{
+    float: left;
+}
+
+.toolbar, .propertiesbar{
+    position: sticky; top: 50px;
+}
+
+.col-3-temp{
+    width: 24%;
+}
+
+/* toolbox icons */
+
+.toolbox-block {
+    background-color: white;
+}
+
+.toolbox-body:after {
+    clear: both;
+    content: ' ';
+    display: table;
+}
+
+.tool {
+border: 1px solid #ccc;
+width: 39px;
+height: 39px;
+float: left;
+margin: 4px;
+}
+
+.tool span:before {
+display: block;
+width: 100%;
+height: 100%;
+text-align: center;
+line-height: 39px;
+font-size: 16px;
+font-family: FontAwesome;
+display: table;
+}
+
+.tool span.input:before {
+content: "\f246";
+}
+
+.tool span.hidden {
+display: block !important;
+}
+
+.tool span.hidden:before {
+content: "\f070";
+}
+
+.tool span.select:before {
+content: "\f150";
+}
+
+.tool span.multi-select:before {
+content: "\f00b" !important;
+}
+
+.tool span.textarea:before {
+content: "\f0c9";
+}
+
+.tool span.radio:before {
+content: "\f192";
+}
+
+.tool span.check:before {
+content: "\f046";
+}
+
+.tool span.upload:before {
+content: "\f093";
+}
+
+.tool span.image:before {
+content: "\f03e";
+}
+
+.tool span.button:before {
+content: "\f245";
+}
+
+.tool span.text:before {
+content: "\f031";
+}
+
+.tool span.gdpr:before {
+    content: "\0067";
+}
+
+.tool span.workflow:before {
+content: "\f277";
+}
+
+.tool span.processcat:before {
+content: "\f0ae";
+}
+
+.tool span.paperno:before {
+content: "\f0cb";
+}
+
+.tool span.graphs {
+    margin: 12px auto;
+    text-align: center;
+    display: block;
+    cursor: default;
+}
+
+.tool img.graphs{
+    margin: 5px auto;
+    cursor: default;
+}
+
+.graph_body{
+    min-height: 100px;
+    border: 1px dashed #ccc;
+    padding: 6px;
+}
+
+.graph_body .container-title{
+    margin: 10px 0 5px 0;
+}
+  
+.struct-block {
+    background-color: white;
+    border-radius: 4px;
+    box-shadow: 0px 0px 3px #ccc;
+    padding: 9px;
+    margin-bottom: 6px;
+  }
+  
+.struct-block .struct-head .title{
+    cursor: pointer;
+}
+
+.struct-block .struct-head .title span {
+    color: #333C48;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+.struct-block .struct-head i {
+    position: relative;
+    float: right;
+}
+
+.struct-block .struct-body {
+    margin-top: 6px;
+}
+
+.struct-block .struct-input{
+    width: calc(50% - 15px);
+}
+
+/* background placeholder */
+.background-placeholder {
+    background-color: #ebebeb;
+    margin: 4px;
+    height: 30px;
+    width: 100%;
+    border-radius: 4px;
+}
+
+/* menu bar */
+
+.menu {
+    padding-bottom: 6px;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 6px;
+  }
+
+.menubar {
+    padding: 6px;
+    margin: 6px;
+}
+
+.menubar .menu-element {
+    display: inline-block;
+    padding: 6px;
+    border: 1px solid #e1e9ef;
+}
+
+.widget-trash-container i.fa-trash {
+    position: absolute;
+    font-size: 39px;
+    top: 41px;
+    left: 19px;
+    color: #FFCDD2;
+}
+
+.widget-trash-container {
+    position: relative;
+}
+
+.widget-search-input {
+    position: relative;
+    width: 100%;
+}
+
+.widget-search-input input {
+    display: block;
+    width: 83%;
+    height: auto;
+    font-family: 'Roboto';
+    font-size: 18px;
+    color: #444;
+    border: 0;
+    padding: 14px 36px 12px 37px;
+    outline: none;
+    border-bottom: 2px dotted #c8c8c8;
+}
+
+.widget-search-input i {
+    cursor: pointer;
+    position: absolute;
+    left: 13px;
+    top: 50%;
+    font-size: 18px;
+    color: #444;
+    transform: translateY(-50%);
+}
+
+.widget-search-count {
+    padding: 2px 8px;
+    font-weight: 400;
+    color: #F44336;
+}
+
+.widget-list-col{
+    min-height: 100px;
+    border: 1px dashed #ccc;
+}
+
+.module-widget{
+    border-top:solid 1px #333;
+}

@@ -1,0 +1,8 @@
+<cfquery name="GET_ANALYSIS_JOIN_COUNT" datasource="#dsn#">
+	SELECT
+		COUNT(RESULT_ID) AS TOTAL_ATTENDS
+	FROM
+		MEMBER_ANALYSIS_RESULTS
+	WHERE
+		ANALYSIS_ID = #attributes.ANALYSIS_ID#
+</cfquery>

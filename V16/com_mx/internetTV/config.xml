@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+	<live>
+		<!-->
+			:: INFORMATION ::
+			
+			The live stream bandwidth usage takes shape seperately for camera and audio stream. Necessary bandwidth quota changes according
+			to the specified parameters below. For example; camera stream takes 28K and audio stream takes 4K as default for a client. This
+			means, clients need 32K (32 * 8 bit = 256 KBps) upload bandwidth to use camera and microphone at the same time according to the
+			default values.
+			
+			To increase the bandwidth limit, increases the quality for camera stream. But to increase the camera resolutions can decrease
+			FPS (frame per second) if bandwidth limit isn't enough. Increasing resolution parameters can decrease FPS too if bandwidth limit
+			isn't enough. The parameter values below, specified as optimum and acceptable level according to the minimum internet connection
+			capabilities. The minimum connection assumed as 1 MBps (128K) download limit and 256 KBps (32K) upload limit per second.
+			
+			If both client and admin applications will work on local network, recommended values for both admin and client parameters are below:
+			
+				<bandwidthLimit>400</bandwidthLimit>
+				<camResolutionWidth>640</camResolutionWidth>
+				<camResolutionHeight>480</camResolutionHeight>
+				<micQuality>44</micQuality>
+			
+			Audio stream quality is 11 kHz as default. FMS can stream the audio at only 11, 22 or 44 kHz. Necessary average bandwidth quotas
+			per second:
+			
+				- at 11 kHz, 4K
+				- at 22 kHz, 8K
+				- at 44 kHz, 12K
+			
+			:: PARAMETER DESCRIPTIONS ::
+			
+			Every parameter can be specified for admin and clients as seperately.
+			
+			- bandwidthLimit		: The maximum bandwidth usage per second for live camera stream and default is 28K (for admin, 60K).
+			- camResolutionWidth	: Resolution width parameter for camera stream.
+			- camResolutionHeight	: Resolution height parameter for camera stream.
+			- micQuality			: Audio quality as kHz.
+		<!-->
+		
+		<admin>
+			<bandwidthLimit>60</bandwidthLimit>
+			<camResolutionWidth>320</camResolutionWidth>
+			<camResolutionHeight>240</camResolutionHeight>
+			<micQuality>11</micQuality>
+		</admin>
+		
+		<client>
+			<bandwidthLimit>60</bandwidthLimit>
+			<camResolutionWidth>320</camResolutionWidth>
+			<camResolutionHeight>240</camResolutionHeight>
+			<micQuality>11</micQuality>
+		</client>
+	</live>
+</configuration>

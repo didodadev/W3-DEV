@@ -1,0 +1,165 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<OBJECT_PROPERTIES>
+		<OBJECT_PROPERTY>
+		<PROPERTY>is_show_stock_transfer_detail</PROPERTY>
+		<PROPERTY_DETAIL>Stok Devir İşlemlerinin Detayı Görüntülenebilsin</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>select</PROPERTY_TYPE>
+		<PROPERTY_VALUES>1,0</PROPERTY_VALUES>
+		<PROPERTY_NAMES>Evet,Hayır</PROPERTY_NAMES>
+		<PROPERTY_DEFAULT>0</PROPERTY_DEFAULT>
+		<PROPERTY_HELP>Evet olarak seçildiğinde listeleme sayfasında, Dönem Bakım işlemleri sırasında yapılan aktarımlardan gelen devir fişlerinin detayına girilebilir.</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+	<OBJECT_PROPERTY>
+		<PROPERTY>x_show_process_cat</PROPERTY>
+		<PROPERTY_DETAIL>Belge Tipinde İşlem Kategorileri Görüntülenebilsin</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>select</PROPERTY_TYPE>
+		<PROPERTY_VALUES>1,0</PROPERTY_VALUES>
+		<PROPERTY_NAMES>Evet,Hayır</PROPERTY_NAMES>
+		<PROPERTY_DEFAULT>0</PROPERTY_DEFAULT>
+		<PROPERTY_HELP>Evet olarak seçildiğinde listeleme sayfasında Belge Tipi sütununda işlem tipi ile birlikte bağlı olduğu işlem kategorisi de gösterilir.</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+		<OBJECT_PROPERTY>
+		<PROPERTY>is_show_reference_no</PROPERTY>
+		<PROPERTY_DETAIL>Referans Numarası Görüntülenebilsin</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>select</PROPERTY_TYPE>
+		<PROPERTY_VALUES>1,0</PROPERTY_VALUES>
+		<PROPERTY_NAMES>Evet,Hayır</PROPERTY_NAMES>
+		<PROPERTY_DEFAULT>0</PROPERTY_DEFAULT>
+		<PROPERTY_HELP> Evet olarak seçildiğinde listeleme sayfasında Referans No sütunu açılır ve bu sütunda ilgili belgenin diğer hangi belgeden oluşturulduğu gösterilir.</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+	<OBJECT_PROPERTY>
+		<PROPERTY>x_check_row_print</PROPERTY>
+		<PROPERTY_DETAIL>Print Belgeleri Satırdan Seçilebilsin</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>select</PROPERTY_TYPE>
+		<PROPERTY_VALUES>1,0</PROPERTY_VALUES>
+		<PROPERTY_NAMES>Evet,Hayır</PROPERTY_NAMES>
+		<PROPERTY_DEFAULT>0</PROPERTY_DEFAULT>
+		<PROPERTY_HELP>Evet olarak seçildiğinde listeleme sayfasında birden fazla belge seçilebilmesi için her satırda checkbox açılır.</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+	<OBJECT_PROPERTY>
+		<PROPERTY>xml_show_price</PROPERTY>
+		<PROPERTY_DETAIL>Net Birim Fiyat Görüntülenebilsin</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>select</PROPERTY_TYPE>
+		<PROPERTY_VALUES>1,0</PROPERTY_VALUES>
+		<PROPERTY_NAMES>Evet,Hayır</PROPERTY_NAMES>
+		<PROPERTY_DEFAULT>0</PROPERTY_DEFAULT>
+		<PROPERTY_HELP>Evet olarak seçildiğinde, "Net Birim Fiyat" sütunu açılır ve ilgili ürünün net birim fiyatı gösterilir. Bu XML satır bazında çalışır.</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+	<OBJECT_PROPERTY>
+		<PROPERTY>xml_list_cancel_stock</PROPERTY>
+		<PROPERTY_DETAIL>Stok Hareketleri Listeleme Seçeneği</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>select</PROPERTY_TYPE>
+		<PROPERTY_VALUES> ,1,0</PROPERTY_VALUES>
+		<PROPERTY_NAMES>Tümü,İptal Edilenler,İptal Edilmeyenler</PROPERTY_NAMES>
+		<PROPERTY_DEFAULT>0</PROPERTY_DEFAULT>
+		<PROPERTY_HELP></PROPERTY_HELP>
+	</OBJECT_PROPERTY>	
+	<OBJECT_PROPERTY>
+		<PROPERTY>xml_show_invoice</PROPERTY>
+		<PROPERTY_DETAIL>Listede Fatura İlişkisi Gösterilsin</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>select</PROPERTY_TYPE>
+		<PROPERTY_VALUES>1,0</PROPERTY_VALUES>
+		<PROPERTY_NAMES>Evet,Hayır</PROPERTY_NAMES>
+		<PROPERTY_DEFAULT>0</PROPERTY_DEFAULT>
+		<PROPERTY_HELP>Evet olarak seçildiğinde listeleme sayfasında Fatura sütunu açılır ve ilgili belge faturalandırılmış ise faturanın numarası gösterilir.</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+	<OBJECT_PROPERTY>
+		<PROPERTY>xml_show_lot_no</PROPERTY>
+		<PROPERTY_DETAIL>Listede Satır Bazında Lot No Gösterilsin</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>select</PROPERTY_TYPE>
+		<PROPERTY_VALUES>1,0</PROPERTY_VALUES>
+		<PROPERTY_NAMES>Evet,Hayır</PROPERTY_NAMES>
+		<PROPERTY_DEFAULT>0</PROPERTY_DEFAULT>
+		<PROPERTY_HELP>Evet olarak seçildiğinde, listeleme sayfasında eğer Satır Bazında listeleme yapılırsa "Lot No" sütunu açılır ve ilgili ürünün lot numarası gösterilir. Bu XML satır bazında çalışır.</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+	<OBJECT_PROPERTY>
+		<PROPERTY>xml_is_project_list</PROPERTY>
+		<PROPERTY_DETAIL>Projeler Gösterilsin</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>select</PROPERTY_TYPE>
+		<PROPERTY_VALUES>1,0</PROPERTY_VALUES>
+		<PROPERTY_NAMES>Evet,Hayır</PROPERTY_NAMES>
+		<PROPERTY_DEFAULT>0</PROPERTY_DEFAULT>
+		<PROPERTY_HELP> Evet olarak seçildiğinde listeleme sayfasında "Giriş Proje" ve "Çıkış Proje" sütunları açılır. Eğer ilgili belgede giriş-çıkış projeleri seçilmiş ise bu sutünlarda gösterilir.</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+	<OBJECT_PROPERTY>
+		<PROPERTY>x_is_location_info</PROPERTY>
+		<PROPERTY_DETAIL>Lokasyonlar Gösterilsin</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>select</PROPERTY_TYPE>
+		<PROPERTY_VALUES>1,0</PROPERTY_VALUES>
+		<PROPERTY_NAMES>Evet,Hayır</PROPERTY_NAMES>
+		<PROPERTY_DEFAULT>0</PROPERTY_DEFAULT>
+		<PROPERTY_HELP> Evet olarak seçildiğinde listeleme sayfasında bulunan "Giriş Depo" ve "Çıkış Depo" sütunlarında depoların hangi lokasyonlarına giriş çıkış olduğu da gösterilir. </PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+	<OBJECT_PROPERTY>
+		<PROPERTY>x_is_rows_per_amount</PROPERTY>
+		<PROPERTY_DETAIL>Pozisyon yetkilerindeki basketlerde ve Üretim sonucunda maliyet gösterilmesin</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>select</PROPERTY_TYPE>
+		<PROPERTY_VALUES>1,0</PROPERTY_VALUES>
+		<PROPERTY_NAMES>Evet,Hayır</PROPERTY_NAMES>
+		<PROPERTY_DEFAULT>0</PROPERTY_DEFAULT>
+		<PROPERTY_HELP>Evet olarak seçildiğine listeleme sayfasında "Birim Fiyat"  alanlarının gösterilmesini sağlar.Satır bazında çalışır.</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+	<OBJECT_PROPERTY>
+		<PROPERTY>xml_is_work_list</PROPERTY>
+		<PROPERTY_DETAIL>İşler Gösterilsin</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>select</PROPERTY_TYPE>
+		<PROPERTY_VALUES>1,0</PROPERTY_VALUES>
+		<PROPERTY_NAMES>Evet,Hayır</PROPERTY_NAMES>
+		<PROPERTY_DEFAULT>0</PROPERTY_DEFAULT>
+		<PROPERTY_HELP>Evet olarak seçildiğinde listeleme sayfasında "İş" sütunu açılır ve belgelerde seçilmiş olan işler bu sütunda gösterilir.</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+	<OBJECT_PROPERTY>
+		<PROPERTY>xml_is_deliver_date</PROPERTY>
+		<PROPERTY_DETAIL>Fiili Sevk Tarihi Gösterilsin</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>select</PROPERTY_TYPE>
+		<PROPERTY_VALUES>1,0</PROPERTY_VALUES>
+		<PROPERTY_NAMES>Evet,Hayır</PROPERTY_NAMES>
+		<PROPERTY_DEFAULT>1</PROPERTY_DEFAULT>
+		<PROPERTY_HELP>Evet olarak seçildiğinde listeleme sayfasında "Fiili Sevk Tarihi" sütunu açılır ve ilgili belgede seçilmiş olan fiili sevk tarihi bu sütunda gösterilir.</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+	<OBJECT_PROPERTY>
+		<PROPERTY>xml_is_record_emp</PROPERTY>
+		<PROPERTY_DETAIL>Kaydeden Gösterilsin</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>select</PROPERTY_TYPE>
+		<PROPERTY_VALUES>1,0</PROPERTY_VALUES>
+		<PROPERTY_NAMES>Evet,Hayır</PROPERTY_NAMES>
+		<PROPERTY_DEFAULT>1</PROPERTY_DEFAULT>
+		<PROPERTY_HELP>Evet olarak seçildiğinde listeleme sayfasında "Kaydeden" sütunu açılır ve belgeyi kaydeden çalışanın ismi gösterilir.</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+	<OBJECT_PROPERTY>
+		<PROPERTY>xml_is_deliver_emp</PROPERTY>
+		<PROPERTY_DETAIL>Teslim Alan Gösterilsin</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>select</PROPERTY_TYPE>
+		<PROPERTY_VALUES>1,0</PROPERTY_VALUES>
+		<PROPERTY_NAMES>Evet,Hayır</PROPERTY_NAMES>
+		<PROPERTY_DEFAULT>1</PROPERTY_DEFAULT>
+		<PROPERTY_HELP>Evet olarak seçildiğinde listeleme sayfasında "Teslim Alan" sütunu açılır ve belgede eğer Teslim Alan kişi seçilmiş ise bu sütunda gösterilir.</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+	<OBJECT_PROPERTY>
+		<PROPERTY>xml_project_filter</PROPERTY>
+		<PROPERTY_DETAIL>Proje Filtresi</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>select</PROPERTY_TYPE>
+		<PROPERTY_VALUES>0,1,2</PROPERTY_VALUES>
+		<PROPERTY_NAMES>Gelmesin,Çoklu Gelsin,Tekli Gelsin</PROPERTY_NAMES>
+		<PROPERTY_DEFAULT>2</PROPERTY_DEFAULT>
+		<PROPERTY_HELP>Eğer Tekli Gelsin seçilir ise listeleme sayfasında giriş çıkış ayırmaksızın sadece Proje filtresi gelir. Eğer Çoklu Gelsin seçilir ise Giriş Proje ve Çıkış Proje olarak iki ayrı filtre açılır. Gelmesin seçilir ise Proje filtresi listeleme sayfasından kaldırılır.</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+	<OBJECT_PROPERTY>
+		<PROPERTY>xml_department_filter</PROPERTY>
+		<PROPERTY_DETAIL>Depo Filtresi</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>select</PROPERTY_TYPE>
+		<PROPERTY_VALUES>0,1,2</PROPERTY_VALUES>
+		<PROPERTY_NAMES>Gelmesin,Çoklu Gelsin,Tekli Gelsin</PROPERTY_NAMES>
+		<PROPERTY_DEFAULT>2</PROPERTY_DEFAULT>
+		<PROPERTY_HELP>Eğer Tekli Gelsin seçilir ise listeleme sayfasında giriş çıkış ayırmaksızın  sadece Depo filtresi gelir. Eğer Çoklu Gelsin seçilir ise Giriş Depo ve Çıkış Depo olarak iki ayrı filtre açılır. Gelmesin seçilir ise Depo filtresi listeleme sayfasından kaldırılır.</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+	<OBJECT_PROPERTY>
+		<PROPERTY>xml_show_process_stage</PROPERTY>
+		<PROPERTY_DETAIL>Süreç Gösterilsin mi?</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>select</PROPERTY_TYPE>
+		<PROPERTY_VALUES>1,0</PROPERTY_VALUES>
+		<PROPERTY_NAMES>Evet,Hayır</PROPERTY_NAMES>
+		<PROPERTY_DEFAULT>0</PROPERTY_DEFAULT>
+		<PROPERTY_HELP>Eğer evet olarak seçilirse sayfada süreçler gösterilir.</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+</OBJECT_PROPERTIES>

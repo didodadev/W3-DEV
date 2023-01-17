@@ -1,0 +1,25 @@
+<cfquery name="GET_FUND_FLOW_DEF" datasource="#dsn2#">
+	SELECT
+		DEF_SELECTED_ROWS,
+		INVERSE_REMAINDER
+	FROM
+		ACCOUNT_DEFINITIONS
+	WHERE
+		DEF_TYPE_ID=11
+</cfquery>
+<cfif GET_FUND_FLOW_DEF.RECORDCOUNT>
+	<cfset SELECTED_LIST = GET_FUND_FLOW_DEF.DEF_SELECTED_ROWS >
+	<cfset inv_rem = GET_FUND_FLOW_DEF.INVERSE_REMAINDER >
+	<cfquery name="GET_FUND_FLOW" datasource="#DSN2#">
+		SELECT
+			*
+		FROM
+			FUND_FLOW_TABLE
+		WHERE
+			FUND_FLOW_ID IN (#SELECTED_LIST#) OR
+			ACCOUNT_CODE IS NULL	
+		ORDER BY 
+			CODE
+	</cfquery>
+	<cfset view_amount_type = GET_FUND_FLOW.VIEW_AMOUNT_TYPE >
+</cfif>

@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<SETUP_SITE>
+	<SETUPSITE>
+		<LINK_NAME>Ürün XML Setup</LINK_NAME>
+		<LINK_FILE>product.form_add_product,product.form_upd_product,form_add_sub_stock_code</LINK_FILE>
+		<LINK_DETAIL>Ürün Ekleme - Güncelleme</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Aksiyon XML Setup</LINK_NAME>
+		<LINK_FILE>product.form_upd_catalog_promotion,product.form_add_catalog_promotion,product.form_add_new_catalog_prom</LINK_FILE>
+		<LINK_DETAIL>Aksiyon Güncelleme</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Promosyon XML Setup</LINK_NAME>
+		<LINK_FILE>product.form_upd_prom</LINK_FILE>
+		<LINK_DETAIL>Promosyon Güncelleme</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Toplu Promosyon XML Setup</LINK_NAME>
+		<LINK_FILE>product.form_upd_collacted_prom</LINK_FILE>
+		<LINK_DETAIL>Toplu Promosyon Güncelleme</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Prim Tanımlama XML Setup</LINK_NAME>
+		<LINK_FILE>product.popup_add_conscat_premium</LINK_FILE>
+		<LINK_DETAIL>Prim Tanımlama</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Fiyat Listesi Tanımlama XML Setup</LINK_NAME>
+		<LINK_FILE>product.form_add_pricecat,product.form_upd_pricecat</LINK_FILE>
+		<LINK_DETAIL>Fiyat Listesi Tanımlama</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Ürün Listesi Tanımlama XML Setup</LINK_NAME>
+		<LINK_FILE>product.list_product,product.welcome</LINK_FILE>
+		<LINK_DETAIL>Ürün Listesi Tanımlama</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Alternatif Ürün Tanımlama XML Setup</LINK_NAME>
+		<LINK_FILE>product.popup_add_anative_product</LINK_FILE>
+		<LINK_DETAIL>Alternatif Ürün Tanımlama</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Promosyon Listesi XML Setup</LINK_NAME>
+		<LINK_FILE>product.list_promotions</LINK_FILE>
+		<LINK_DETAIL>Promosyon Listesi</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Detaylı Promosyon XML Setup</LINK_NAME>
+		<LINK_FILE>product.form_upd_detail_prom</LINK_FILE>
+		<LINK_DETAIL>Detaylı Promosyon</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>İstisnai Fiyat Listesi XML Setup</LINK_NAME>
+		<LINK_FILE>product.upd_price_list_for_company</LINK_FILE>
+		<LINK_DETAIL>İstisnai Fiyat Listesi</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Yeni Fiyat Oluşturma XML Setup</LINK_NAME>
+		<LINK_FILE>product.popup_form_add_product_price</LINK_FILE>
+		<LINK_DETAIL>Yeni Fiyat Oluşturma</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Fiyat Detay XML Setup</LINK_NAME>
+		<LINK_FILE>product.detail_product_price</LINK_FILE>
+		<LINK_DETAIL>Fiyat Detay</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Fiyat Düzenleme XML Setup</LINK_NAME>
+		<LINK_FILE>product.collacted_product_prices</LINK_FILE>
+		<LINK_DETAIL>Fiyat Düzenleme</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Konfigürator Setup</LINK_NAME>
+		<LINK_FILE>product.popup_upd_product_cat_configuration</LINK_FILE>
+		<LINK_DETAIL>Konfigürator Setup</LINK_DETAIL>
+	</SETUPSITE>
+		<SETUPSITE>
+		<LINK_NAME>Ürün Kategori</LINK_NAME>
+		<LINK_FILE>product.list_product_cat</LINK_FILE>
+		<LINK_DETAIL>Ürün Kategori</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Ürün Fiyat Listesi Setup</LINK_NAME>
+		<LINK_FILE>product.popup_stocks</LINK_FILE>
+		<LINK_DETAIL>Ürün Fiyat Listesi Setup</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>İmaj Ekle Setup</LINK_NAME>
+		<LINK_FILE>product.form_add_popup_image</LINK_FILE>
+		<LINK_DETAIL>İmaj Ekle Setup</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Beden-Renk Setup</LINK_NAME>
+		<LINK_FILE>product.upd_property_main,product.add_property_main</LINK_FILE>
+		<LINK_DETAIL>Beden-Renk Setup</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Ölçü ve Dağılım</LINK_NAME>
+		<LINK_FILE>product.form_add_popup_sub_stock_code</LINK_FILE>
+		<LINK_DETAIL>Ölçü ve Dağılım</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Ürün Birimi Setup</LINK_NAME>
+		<LINK_FILE>product.form_upd_popup_unit,product.form_add_popup_unit</LINK_FILE>
+		<LINK_DETAIL>Ürün Birimi Setup</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Ürün Maliyetleri Setup</LINK_NAME>
+		<LINK_FILE>product.form_add_product_cost</LINK_FILE>
+		<LINK_DETAIL>Ürün Maliyetleri Setup</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Proje Aksiyon Listesi XML Setup</LINK_NAME>
+		<LINK_FILE>product.popup_list_project_actions</LINK_FILE>
+		<LINK_DETAIL>Proje Aksiyon Listesi Gösterim</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Ürün Özellikleri XML Setup</LINK_NAME>
+		<LINK_FILE>product.popup_form_upd_product_dt_property,product.popup_form_add_product_dt_property</LINK_FILE>
+		<LINK_DETAIL>Ürün Özellikleri Gösterim</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Ürün Kalite Tanımları XML Setup</LINK_NAME>
+		<LINK_FILE>product.product_quality</LINK_FILE>
+		<LINK_DETAIL>Ürün Kalite Tanımları Gösterim</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Karma Koli Tanımları</LINK_NAME>
+		<LINK_FILE>product.popup_dsp_karma_contents</LINK_FILE>
+		<LINK_DETAIL>Karma Koli Tanımları</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Ürün Muhasebe Kodu XML Setup</LINK_NAME>
+		<LINK_FILE>product.popup_list_period</LINK_FILE>
+		<LINK_DETAIL>Ürün Muhasebe Kodu XML Setup</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Ürün Maliyetleri Setup</LINK_NAME>
+		<LINK_FILE>product.popup_form_upd_product_cost</LINK_FILE>
+		<LINK_DETAIL>Ürün Maliyetleri Setup</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Konfigurator</LINK_NAME>
+		<LINK_FILE>product.configurator</LINK_FILE>
+		<LINK_DETAIL></LINK_DETAIL>
+	</SETUPSITE>
+</SETUP_SITE>

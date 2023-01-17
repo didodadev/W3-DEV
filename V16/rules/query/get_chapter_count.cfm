@@ -1,0 +1,17 @@
+﻿ <cfquery name="GET_CHAPTER_COUNT" datasource="#dsn#">
+  SELECT 
+  	CHAPTER_ID, 
+  	CHAPTER FROM 
+  CONTENT_CHAPTER WHERE 
+	   CONTENTCAT_ID IN 
+	   (
+		SELECT
+			CONTENTCAT_ID
+		FROM
+			CONTENT_CAT
+		WHERE
+			CONTENTCAT_ID <> 0									
+			AND
+			LANGUAGE_ID = '#SESSION.EP.LANGUAGE#'
+		)
+  </cfquery>

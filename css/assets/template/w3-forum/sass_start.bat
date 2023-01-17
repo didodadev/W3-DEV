@@ -1,0 +1,1 @@
+sass --watch _theme.scss:.\style.css --style compact

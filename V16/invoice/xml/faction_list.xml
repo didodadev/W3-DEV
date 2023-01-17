@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SETUP_SITE>
+	<SETUPSITE>
+		<LINK_NAME>Toplu Fatura Yazdırma Ekranı XML Setup</LINK_NAME>
+		<LINK_FILE>invoice.popup_collected_print</LINK_FILE>
+		<LINK_DETAIL>Toplu fatura yazdırma ekranı ayarlarının düzenlenmesi</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Satış Faturası Ekleme Ekranı XML Setup</LINK_NAME>
+		<LINK_FILE>invoice.form_add_bill</LINK_FILE>
+		<LINK_DETAIL>Satış faturası ekleme ekranı düzenlenmesi</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Alış Faturası Ekleme Ekranı XML Setup</LINK_NAME>
+		<LINK_FILE>invoice.form_add_bill_purchase</LINK_FILE>
+		<LINK_DETAIL>Alış faturası ekleme ekranı düzenlenmesi</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Satış Faturası Güncelleme Ekranı XML Setup</LINK_NAME>
+		<LINK_FILE>invoice.detail_invoice_sale</LINK_FILE>
+		<LINK_DETAIL>Satış faturası güncelleme ekranı düzenlenmesi</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Alış Faturası Güncelleme Ekranı XML Setup</LINK_NAME>
+		<LINK_FILE>invoice.detail_invoice_purchase</LINK_FILE>
+		<LINK_DETAIL>Alış faturası güncelleme ekranı düzenlenmesi</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Perakende Satış Faturası Ekleme Ekranı XML Setup</LINK_NAME>
+		<LINK_FILE>invoice.add_bill_retail</LINK_FILE>
+		<LINK_DETAIL>Perakende satış faturası ekleme ekranı düzenlenmesi</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Perakende Satış Faturası Güncelleme Ekranı XML Setup</LINK_NAME>
+		<LINK_FILE>invoice.detail_invoice_retail</LINK_FILE>
+		<LINK_DETAIL>Perakende satış faturası güncelleme ekranı düzenlenmesi</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Diğer Alış Faturası Güncelleme Ekranı XML Setup</LINK_NAME>
+		<LINK_FILE>invoice.detail_invoice_other</LINK_FILE>
+		<LINK_DETAIL>Diğer Alış faturası güncelleme ekranı düzenlenmesi</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Siparişten Satış Faturası Ekleme Ekranı XML Setup</LINK_NAME>
+		<LINK_FILE>invoice.add_sale_invoice_from_order</LINK_FILE>
+		<LINK_DETAIL>Siparişten satış faturası ekleme ekranı düzenlenmesi</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Fatura Emirler Listesi</LINK_NAME>
+		<LINK_FILE>invoice.list_purchase</LINK_FILE>
+		<LINK_DETAIL>Stok Listesinin düzenlenmesi</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Fatura Listesi</LINK_NAME>
+		<LINK_FILE>invoice.list_bill</LINK_FILE>
+		<LINK_DETAIL>Fatura Listesinin düzenlenmesi</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Siparişten Alış Fatura Ekle</LINK_NAME>
+		<LINK_FILE>invoice.add_purchase_invoice_from_order</LINK_FILE>
+		<LINK_DETAIL>Siparişten Alış Fatura Ekle</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Toplu Fatura Oluşturma Sayfası Xml Setup</LINK_NAME>
+		<LINK_FILE>invoice.popup_form_add_sale_multi</LINK_FILE>
+		<LINK_DETAIL>Toplu Fatura Oluşturma Sayfası Düzenlemesi</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Fark ve Prim Kontrol Listesi</LINK_NAME>
+		<LINK_FILE>invoice.list_conract_comparison</LINK_FILE>
+		<LINK_DETAIL>Fark ve Prim Kontrol Listesi</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>İrsaliyeden Satış Faturası Ekleme Ekranı XML Setup</LINK_NAME>
+		<LINK_FILE>invoice.form_add_bill_from_ship</LINK_FILE>
+		<LINK_DETAIL>Satış faturası ekleme ekranı düzenlenmesi</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>İrsaliyeden Alış Faturası Ekleme Ekranı XML Setup</LINK_NAME>
+		<LINK_FILE>invoice.form_add_bill_purchase_from_ship</LINK_FILE>
+		<LINK_DETAIL>Alış faturası ekleme ekranı düzenlenmesi</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Toplu Faturalama Ekranı XML Setup</LINK_NAME>
+		<LINK_FILE>invoice.list_sale_multi</LINK_FILE>
+		<LINK_DETAIL>Toplu Faturalama ekranı düzenlenmesi</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Diğer Alış Faturası Ekleme Ekranı XML Setup</LINK_NAME>
+		<LINK_FILE>invoice.form_add_bill_other</LINK_FILE>
+		<LINK_DETAIL>Diğer Alış Faturası Ekleme Ekranı</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Fatura İptal Ekranı XML Setup</LINK_NAME>
+		<LINK_FILE>invoice.popup_cancel_invoice</LINK_FILE>
+		<LINK_DETAIL>Fatura İptal Ekranı düzenlenmesi</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Gelen E-Fatura Listeleme Ekranı XML Setup</LINK_NAME>
+		<LINK_FILE>invoice.received_einvoices</LINK_FILE>
+		<LINK_DETAIL>Fatura İptal Ekranı düzenlenmesi</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Gümrük-İhracat İşlemleri XML Setup</LINK_NAME>
+		<LINK_FILE>invoice.list_bill_FTexport</LINK_FILE>
+		<LINK_DETAIL>İhracat</LINK_DETAIL>
+	</SETUPSITE>
+</SETUP_SITE>

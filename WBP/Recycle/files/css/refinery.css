@@ -1,0 +1,82 @@
+.buttonSpecial{
+	background:red !important;
+	color:black;
+	height:80px !important;
+	width:100% !important;
+	font-size: large !important;
+	text-align:center;
+	font-size:x-large !important;
+	border-radius: 25px !important;
+	margin-top:20px !important;
+}
+.buttonActive{
+	/*color:black !important;*/
+	border:6px solid blue !important;
+}
+.specialDiv{
+	border-radius: 25px !important;
+	border: 6px solid blue;
+	margin-top: 20px !important;
+}
+.minHeightDiv{
+	min-height:810px !important;
+}
+.specialFormElement{
+	height: 40px !important;
+	border-radius: 10px !important;
+	padding: 5px !important;
+	margin-top: 20px !important;
+	text-align:right !important;
+}
+.mt-40{
+	margin-top:40px !important;
+	font-size:16px !important;
+}
+.subHeaderSpecial{
+	font-size: 30px !important;
+}
+.headerSpecial{
+	font-size: 40px !important;
+	margin: 50px !important;
+}
+.specialSubmitButton{
+	width: 130px !important;
+	height: 50px !important;
+	font-size: 16px !important;
+	border-radius: 20px !important;
+	margin-top:15px !important;
+}
+.specialCircleBox{
+	width:200px !important;
+	height:200px !important;
+	margin-right:50px !important;
+}
+.specialCircleBoxElement{
+	font-size:50px !important;
+	padding-top: 60px !important;
+}
+.circleContentMargin{
+	margin-right:30px !important;
+	margin:60px !important;
+}
+.padding20{
+	padding:20px !important;
+}
+.leftArea{
+	direction: rtl;
+	overflow: auto;
+	height: 820px;
+}
+.portletArea{
+	height: 600px; 
+	overflow: auto;
+}
+.paddingtop10{
+	padding-top:10px;
+}
+.padding5{
+	padding:5px;
+}
+.border1{
+	border:1px solid;
+}

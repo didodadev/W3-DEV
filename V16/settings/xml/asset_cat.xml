@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<OBJECT_PROPERTIES>
+  	<OBJECT_PROPERTY>
+		<PROPERTY>x_show_by_digital_asset_group</PROPERTY>
+		<PROPERTY_DETAIL>Kategoriler dijital varlık yetki grubuna göre çalışsın</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>select</PROPERTY_TYPE>
+		<PROPERTY_VALUES>1,0</PROPERTY_VALUES>
+		<PROPERTY_NAMES>Evet,Hayır</PROPERTY_NAMES>
+		<PROPERTY_DEFAULT>0</PROPERTY_DEFAULT>
+		<PROPERTY_HELP>Kategoriler dijital varlık yetki grubuna göre çalışsın:Kategorilerin dijital varlık yetki gruplarına bağlı olarak çalışmasını sağlar.</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+	<OBJECT_PROPERTY>
+		<PROPERTY>x_dont_show_file_by_digital_asset_group</PROPERTY>
+		<PROPERTY_DETAIL>Dijital varlık grubu seçilmeyen dosyalar gösterilmesin</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>select</PROPERTY_TYPE>
+		<PROPERTY_VALUES>1,0</PROPERTY_VALUES>
+		<PROPERTY_NAMES>Evet,Hayır</PROPERTY_NAMES>
+		<PROPERTY_DEFAULT>0</PROPERTY_DEFAULT>
+		<PROPERTY_HELP>Dijital varlık grubu seçilmeyen dosyalar gösterilmesin:Dijital varlık grubu seçilmeyen dosyaların gösterilmemesini sağlar.</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+</OBJECT_PROPERTIES>

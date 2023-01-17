@@ -1,0 +1,56 @@
+- Hover olarak görünecek tüm açıklamalar "snippets/descriptions.json" dosyası içinde yapılacaktır.
+- Diğer json dosyalarındaki description kısmı, kod yazılırken, öneriler yanında görünecektir.
+- Diğer json dosyalarındaki description için yazılan açıklamalarda, aşağıdaki kullanım GEÇERSİZDİR.
+- "snippets/descriptions.json" dosyası içinde MARKDOWN ifadeler kullanılabilir.
+- Temel mardown bilgisi için: https://www.markdownguide.org/basic-syntax/
+
+HOVER İÇİN KULLANIM (snippets/descriptions.json):
+    GENEL KURALLAR:
+        - custom tag adı tam olarak yazılmalı
+
+                * Örneğin: <cf_box> için;
+                
+                "cf_box" : "açıklama metni\n\raçıklama metni ikinci satır"
+
+                şeklinde kullanılmalı.
+                * Farklı yazımlarda, çalışmayacaktır.
+
+        LİNK EKLEME
+
+                * Örneğin: <cf_box> wiki linki eklemek için;
+                
+                "cf_box" : "[cf_box wiki](https://wiki.workcube.com/help/9813)"
+
+                * [Görünecek Metin](Link) şeklinde eklme yapılmalıdır.
+
+        - Örnek kod kullanımı göstermek amaçlı <cf_box> vb. kullanımlarda, kod öncesi, \n\r\t regex ifadesinin eklenemesi gerekiyor.
+
+                * Örneğin: <cf_box> örnek kullanımını eklemek eklemek için;
+
+                "cf_box" : 
+                    "#### [Ayrıntılı Bilgi İçin: cf_box wiki](https://wiki.workcube.com/help/9813)\n\r**Örnek Kullanım:**\n\r\t<cf_box title=\"Başlık\" resize=\"\"> ---Content--- <\/cf_box>\n**Kullanım Amacı:**\n\rcf-box sayfaların widget-kurulara bölünmesi ve böylelikle daha etki kullanılmasının ve daha anlaşılır olmasını sağlar. Ayrıca istendiğinde asenkron olarak objelerin sayfa içine yüklenmesini sağlar. cf_box böylelikle hem görünüm hem de yükleme fonksiyonu icra eder."
+
+                * #### işareti yazıyı başlık yapmak için kullanılıyor.
+                * #### Bu işaretten sonra bir boşluk olması ZORUNLUDUR.
+                * #### 1-6 arası eklenebilir. HTML h1-h6 etiketlerine denk gelir.
+                * Yazının başına ve sonuna BOŞLUK OLMAYACAK ŞEKİLDE ** işareti konması, yazıyı kalın(bold) yapar.
+                * \n Windows ve Linux için, \r ise Mac için yeni satırı ifade eder. İkisi birden kullanılmalı.
+                * Satır içinde kod bloğu göstermek için:
+                    - \n\r\t ifadesi kullanılmalı. \t bir tab boşluk anlamındadır, ancak burada yazılan ksımın kod bloğu şeklinde görünmesini sağlıyor.
+                * Açıklamada sıralı liste göstermek için:
+                    - 1. Madde1\n\r2. Madde2 şeklinde ekleme yapılabilir.
+                    (https://www.markdownguide.org/basic-syntax/#ordered-lists)
+                * Açıklamada sırasız liste göstermek için:
+                    - * Madde1\n\r* Madde2 şeklinde ya da - Madde1\n\r- Madde2 şeklinde ekleme yapılabilir.
+                    (https://www.markdownguide.org/basic-syntax/#unordered-lists)
+
+        SONUÇ: Bitmiş bir description aşağıdaki şekilde olmalıdır:
+
+            "cf_box" : 
+                "#### [Ayrıntılı Bilgi İçin: cf_box wiki](https://wiki.workcube.com/help/9813)\n\r**Örnek Kullanım:**\n\r\t<cf_box title=\"Başlık\" resize=\"\"> ---Content--- <\/cf_box>\n**Kullanım Amacı:**\n\rcf-box sayfaların widget-kurulara bölünmesi ve böylelikle daha etki kullanılmasının ve daha anlaşılır olmasını sağlar. Ayrıca istendiğinde asenkron olarak objelerin sayfa içine yüklenmesini sağlar. cf_box böylelikle hem görünüm hem de yükleme fonksiyonu icra eder."
+
+            * VARSA wiki linki eklenmeli.
+            * Kullanım örneğinden önce başlık olarak **Örnek Kullanım:** eklenmeli.
+            * Olabilecek en sade şekilde kullanım örneği eklenmeli.
+            * Açıklama öncesi başlık olarak **Kullanım Amacı:** eklenmeli.
+            * Temel seviyede, kullanım amacı açıklanmalı.

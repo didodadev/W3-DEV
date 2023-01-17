@@ -1,0 +1,3 @@
+<cfquery name="GET_PARTNER_POSITIONS" datasource="#dsn#">
+	SELECT * FROM SETUP_PARTNER_POSITION ORDER BY PARTNER_POSITION
+</cfquery>

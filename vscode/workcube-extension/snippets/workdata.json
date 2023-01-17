@@ -1,0 +1,42 @@
+{
+    "Workcube <get_department>": {
+        "prefix": "wdata:get_department",
+        "body": [
+            "<cfset get_department = CreateObject(\"component\",\"cfc/get_department\") />"
+        ]
+    },
+    "Workcube <get_product>": {
+        "prefix": "wdata:get_product",
+        "body": [
+            "<cfset get_product = CreateObject(\"component\",\"cfc/get_product\") />"
+        ]
+    },
+    "Workcube <get_shelf>": {
+        "prefix": "wdata:get_shelf",
+        "body": [
+            "<cfset get_shelf = CreateObject(\"component\",\"cfc/get_shelf\") />"
+        ]
+    },
+    "Workcube <get_acc_type>": {
+        "prefix": "wdata:get_acc_type",
+        "body": [
+            "<cfset get_acc_type = CreateObject(\"component\",\"cfc/get_acc_type\") />"
+        ]
+    },
+    "Workcube <get_budget_cat>": {
+        "prefix": "wdata:get_budget_cat",
+        "body": [
+            "<cfset get_budget_cat = CreateObject(\"component\",\"cfc/get_budget_cat\") />"
+        ]
+    },
+    "Workcube <get_cash>": {
+        "prefix": "wdata:get_cash",
+        "body": [
+            "<cfset get_cash = CreateObject(\"component\",\"cfc/get_cash\") />"
+        ]
+    },
+    "combo_name:list": {
+        "prefix": "combo_name:list",
+        "body": "${1|get_cash,get_budget_cat,get_acc_type,get_shelf,get_product,get_department|}"
+    }
+}

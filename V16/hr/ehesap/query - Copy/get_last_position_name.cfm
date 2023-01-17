@@ -1,0 +1,14 @@
+<cfquery name="get_last_position_name" datasource="#DSN#" maxrows="1">
+SELECT 	
+	EPH.POSITION_NAME,
+	D.DEPARTMENT_HEAD
+FROM 
+	EMPLOYEE_POSITIONS_HISTORY EPH,
+	DEPARTMENT D
+WHERE 
+	EPH.EMPLOYEE_ID = #attributes.employee_id#
+	AND D.DEPARTMENT_ID = EPH.DEPARTMENT_ID
+	AND EPH.IS_MASTER = 1
+ORDER BY 
+	HISTORY_ID DESC
+</cfquery>

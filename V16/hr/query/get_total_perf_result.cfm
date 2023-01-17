@@ -1,0 +1,10 @@
+<cfquery name="GET_TOTAL_PERF_RESULT" datasource="#dsn#">
+	SELECT 
+		PERFORMANCE_ID
+	FROM 
+		EMPLOYEE_TOTAL_PERFORMANCE
+	WHERE
+		PERIOD_ID = #period_year_found# AND <!--- IN (SELECT PERIOD_ID FROM SETUP_PERIOD WHERE PERIOD_YEAR = #period_year_found#) AND --->
+		PERIOD_PART = #PERIODPART# AND
+		EMP_ID = #EMPLOYEE_ID# 
+</cfquery>

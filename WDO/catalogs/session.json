@@ -1,0 +1,469 @@
+﻿[
+    {
+      "description": "",
+      "title": "",
+      "key": "PERIOD_START_DATE"
+    },
+    {
+      "description": "Aktif dönem ID değerini verir",
+      "title": "Aktif Dönem ID",
+      "key": "PERIOD_ID"
+    },
+    {
+      "description": "",
+      "title": "",
+      "key": "MENU_ID"
+    },
+    {
+      "description": "",
+      "title": "",
+      "key": "DOCKPHONE"
+    },
+    {
+      "description": "",
+      "title": "",
+      "key": "POWER_USER"
+    },
+    {
+      "description": "",
+      "title": "",
+      "key": "REPORT_USER_LEVEL"
+    },
+    {
+      "description": "",
+      "title": "",
+      "key": "USERKEY"
+    },
+    {
+      "description": "",
+      "title": "",
+      "key": "TIMEOUT_MIN"
+    },
+    {
+      "description": "",
+      "title": "",
+      "key": "SCREEN_HEIGHT"
+    },
+    {
+      "description": "",
+      "title": "",
+      "key": "PERIOD_IS_INTEGRATED"
+    },
+    {
+      "description": "Aktif kullanıcının ID değerini verir",
+      "title": "Kullanıcı ID",
+      "key": "USERID"
+    },
+    {
+      "description": "Aktif kullanıcının Kullanıcı Adı değerini verir",
+      "title": "Kullanıcı Adı",
+      "key": "USERNAME"
+    },
+    {
+      "description": "",
+      "title": "",
+      "key": "COMPANY_NICK"
+    },
+    {
+      "description": "Kullanıcının Admin yetkisine sahip olup olmadığını belirler",
+      "title": "Admin Yetkisi",
+      "key": "ADMIN"
+    },
+    {
+      "description": "",
+      "title": "",
+      "key": "SERVER_MACHINE"
+    },
+    {
+      "description": "",
+      "title": "",
+      "key": "DESIGN_ID"
+    },
+    {
+      "description": "",
+      "title": "",
+      "key": "USER_LEVEL"
+    },
+    {
+      "description": "Aktif dil IEFT değerini verir",
+      "title": "Dil",
+      "key": "LANGUAGE"
+    },
+    {
+      "description": "",
+      "extra": [
+        {
+          "description": "",
+          "title": "",
+          "key": "IS_MAXROWS_CONTROL_OFF"
+        },
+        {
+          "description": "",
+          "title": "",
+          "key": "SUBSCRIPTION_CONTRACT"
+        },
+        {
+          "description": "",
+          "title": "",
+          "key": "IS_PROJECT_GROUP"
+        },
+        {
+          "description": "",
+          "title": "",
+          "key": "IS_STOCK_BASED_COST"
+        },
+        {
+          "description": "",
+          "title": "",
+          "key": "PURCHASE_PRICE_ROUND_NUM"
+        },
+        {
+          "description": "",
+          "title": "",
+          "key": "ESHIPMENT_DATE"
+        },
+        {
+          "description": "",
+          "title": "",
+          "key": "EFATURA_DATE"
+        },
+        {
+          "description": "",
+          "title": "",
+          "key": "IS_COST_LOCATION"
+        },
+        {
+          "description": "",
+          "title": "",
+          "key": "IS_EDEFTER"
+        },
+        {
+          "description": "",
+          "title": "",
+          "key": "PROJECT_FOLLOWUP"
+        },
+        {
+          "description": "",
+          "title": "",
+          "key": "SPECT_TYPE"
+        },
+        {
+          "description": "",
+          "title": "",
+          "key": "IS_COST"
+        },
+        {
+          "description": "",
+          "title": "",
+          "key": "IS_LOT_NO"
+        },
+        {
+          "description": "",
+          "title": "",
+          "key": "IS_EARCHIVE"
+        },
+        {
+          "description": "",
+          "title": "",
+          "key": "UNCONDITIONAL_LIST"
+        },
+        {
+          "description": "",
+          "title": "",
+          "key": "IS_ADD_INFORMATIONS"
+        },
+        {
+          "description": "",
+          "title": "",
+          "key": "WORKCUBE_SECTOR"
+        },
+        {
+          "description": "",
+          "title": "",
+          "key": "SALES_PRICE_ROUND_NUM"
+        },
+        {
+          "description": "",
+          "title": "",
+          "key": "IS_ESHIPMENT"
+        },
+        {
+          "description": "",
+          "title": "",
+          "key": "RATE_ROUND_NUM"
+        },
+        {
+          "description": "",
+          "title": "",
+          "key": "IS_PAPER_CLOSER"
+        },
+        {
+          "description": "",
+          "title": "",
+          "key": "SALES_ZONE_FOLLOWUP"
+        },
+        {
+          "description": "",
+          "title": "",
+          "key": "ASSET_FOLLOWUP"
+        },
+        {
+          "description": "",
+          "title": "",
+          "key": "IS_IFRS"
+        },
+        {
+          "description": "",
+          "title": "",
+          "key": "GUARANTY_FOLLOWUP"
+        },
+        {
+          "description": "",
+          "title": "",
+          "key": "IS_EFATURA"
+        },
+        {
+          "description": "",
+          "title": "",
+          "key": "SMS"
+        },
+        {
+          "description": "",
+          "title": "",
+          "key": "IS_LOCATION_FOLLOW"
+        },
+        {
+          "description": "",
+          "title": "",
+          "key": "EARCHIVE_DATE"
+        },
+        {
+          "description": "",
+          "title": "",
+          "key": "IS_PROD_COST_TYPE"
+        },
+        {
+          "description": "",
+          "title": "",
+          "key": "SPECIAL_MENU_FILE"
+        }
+      ],
+      "title": "",
+      "key": "OUR_COMPANY_INFO"
+    },
+    {
+      "description": "",
+      "title": "",
+      "key": "CONSUMER_PRIORITY"
+    },
+    {
+      "description": "Aktif dönem yılını verir",
+      "title": "Aktif Dönem",
+      "key": "PERIOD_YEAR"
+    },
+    {
+      "description": "",
+      "title": "",
+      "key": "DATA_LEVEL"
+    },
+    {
+      "description": "",
+      "title": "",
+      "key": "OUR_COMPANY_ID"
+    },
+    {
+      "description": "",
+      "title": "",
+      "key": "DATEFORMAT_STYLE"
+    },
+    {
+      "description": "Aktif kullanıcının Adını verir",
+      "title": "Kullanıcının Adı",
+      "key": "NAME"
+    },
+    {
+      "description": "Aktif şirket ünvanını verir",
+      "title": "Şirket Ünvanı",
+      "key": "COMPANY"
+    },
+    {
+      "description": "",
+      "title": "",
+      "key": "DESIGN_COLOR"
+    },
+    {
+      "description": "",
+      "title": "",
+      "key": "COST_DISPLAY_VALID"
+    },
+    {
+      "description": "",
+      "title": "",
+      "key": "PRICE_VALID"
+    },
+    {
+      "description": "",
+      "title": "",
+      "key": "MAXROWS"
+    },
+    {
+      "description": "",
+      "title": "",
+      "key": "PROCESS_DATE"
+    },
+    {
+      "description": "",
+      "title": "",
+      "key": "USER_LOCATION"
+    },
+    {
+      "description": "",
+      "title": "",
+      "key": "PERIOD_DATE"
+    },
+    {
+      "description": "",
+      "title": "",
+      "key": "WORKTIPS_OPEN"
+    },
+    {
+      "description": "",
+      "title": "",
+      "key": "MEMBER_VIEW_CONTROL"
+    },
+    {
+      "description": "Kullanıcı ön tanımlı para birimi kodunu verir",
+      "title": "Para Birimi",
+      "key": "MONEY"
+    },
+    {
+      "description": "",
+      "title": "",
+      "key": "POSITION_CODE"
+    },
+    {
+      "description": "",
+      "title": "",
+      "key": "OTHER_MONEY"
+    },
+    {
+      "description": "",
+      "title": "",
+      "key": "ISBRANCHAUTHORIZATION"
+    },
+    {
+      "description": "",
+      "title": "",
+      "key": "IS_ORDER_CLOSED"
+    },
+    {
+      "description": "",
+      "title": "",
+      "key": "THEIR_RECORDS_ONLY"
+    },
+    {
+      "description": "",
+      "title": "",
+      "key": "TIME_ZONE"
+    },
+    {
+      "description": "",
+      "title": "",
+      "key": "EHESAP"
+    },
+    {
+      "description": "",
+      "title": "",
+      "key": "TIMEFORMAT_STYLE"
+    },
+    {
+      "description": "",
+      "title": "",
+      "key": "POWER_USER_LEVEL_ID"
+    },
+    {
+      "description": "",
+      "title": "",
+      "key": "SCREEN_WIDTH"
+    },
+    {
+      "description": "Aktif şirket ID değerini verir",
+      "title": "Şirket ID",
+      "key": "COMPANY_ID"
+    },
+    {
+      "description": "",
+      "title": "",
+      "key": "AUTHORITY_CODE_HR"
+    },
+    {
+      "description": "",
+      "title": "",
+      "key": "TIME_COST_CONTROL"
+    },
+    {
+      "description": "",
+      "title": "",
+      "key": "TIME_COST_CONTROL_TYPE"
+    },
+    {
+      "description": "",
+      "title": "",
+      "key": "WORKCUBE_ID"
+    },
+    {
+      "description": "Aktif kullanıcının Soyadını verir",
+      "title": "Kullanıcının Soyadı",
+      "key": "SURNAME"
+    },
+    {
+      "description": "",
+      "title": "",
+      "key": "DISCOUNT_VALID"
+    },
+    {
+      "description": "",
+      "title": "",
+      "key": "PERIOD_FINISH_DATE"
+    },
+    {
+      "description": "",
+      "title": "",
+      "key": "DUEDATE_VALID"
+    },
+    {
+      "description": "",
+      "title": "",
+      "key": "POSITION_NAME"
+    },
+    {
+      "description": "",
+      "title": "",
+      "key": "TIME_COST_CONTROL_DATE"
+    },
+    {
+      "description": "Kullanıcı ön tanımlı ikincil para birimi kodunu verir",
+      "title": "Para Birimi - İkincil",
+      "key": "MONEY2"
+    },
+    {
+      "description": "",
+      "title": "",
+      "key": "MONEYFORMAT_STYLE"
+    },
+    {
+      "description": "",
+      "title": "",
+      "key": "RATE_VALID"
+    },
+    {
+      "description": "",
+      "title": "",
+      "key": "COMPANY_EMAIL"
+    },
+    {
+      "description": "",
+      "title": "",
+      "key": "PRICE_DISPLAY_VALID"
+    }
+]

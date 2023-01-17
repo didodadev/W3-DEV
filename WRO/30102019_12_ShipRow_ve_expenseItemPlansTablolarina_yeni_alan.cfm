@@ -1,0 +1,29 @@
+<!-- Description : Ship row tablosune istisna kodu için alanlar ve expense_item_plans tablosuna bsmv_total ve oiv_total alanları açıldı. 
+Developer: Botan Kayğan
+Company : Workcube
+Destination: Period -->
+<querytag>
+    IF NOT EXISTS( SELECT 'Y' FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME='SHIP_ROW' AND TABLE_SCHEMA = '@_dsn_period_@' AND COLUMN_NAME='REASON_CODE')
+    BEGIN
+        ALTER TABLE SHIP_ROW ADD 
+        REASON_CODE int NULL
+    END;
+
+    IF NOT EXISTS( SELECT 'Y' FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME='SHIP_ROW' AND TABLE_SCHEMA = '@_dsn_period_@' AND COLUMN_NAME='REASON_NAME')
+    BEGIN
+        ALTER TABLE SHIP_ROW ADD 
+        REASON_NAME nvarchar(250) NULL
+    END;
+
+    IF NOT EXISTS( SELECT 'Y' FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME='EXPENSE_ITEM_PLANS' AND TABLE_SCHEMA = '@_dsn_period_@' AND COLUMN_NAME='BSMV_TOTAL')
+    BEGIN
+        ALTER TABLE EXPENSE_ITEM_PLANS ADD 
+        BSMV_TOTAL nvarchar(250) NULL
+    END;
+
+    IF NOT EXISTS( SELECT 'Y' FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME='EXPENSE_ITEM_PLANS' AND TABLE_SCHEMA = '@_dsn_period_@' AND COLUMN_NAME='OIV_TOTAL')
+    BEGIN
+        ALTER TABLE EXPENSE_ITEM_PLANS ADD 
+        OIV_TOTAL nvarchar(250) NULL
+    END;
+</querytag>

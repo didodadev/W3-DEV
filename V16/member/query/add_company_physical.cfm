@@ -1,0 +1,61 @@
+<cfsetting showdebugoutput="no">
+<cfquery name="get_company_p" datasource="#dsn#">
+	SELECT MANAGER_PARTNER_ID FROM COMPANY WHERE COMPANY_ID = #attributes.cpid#
+</cfquery>
+<cfscript>
+	attributes.start_date = attributes.start_date;
+	attributes.rent_start_date = '';
+	attributes.rent_finish_date = '';
+	attributes.invoice_consumer_id = '';
+	attributes.property = attributes.property;
+	attributes.is_active = 1;
+	attributes.assetp_status = attributes.status;
+	attributes.inventory_number = '';
+	attributes.assetp = attributes.assetp;
+	attributes.company_relation_id = attributes.company_relation_id;
+	attributes.sup_company_id = attributes.cpid; //gelen cari
+	attributes.sup_partner_id = get_company_p.manager_partner_id; // yoneticisi
+	attributes.sup_consumer_id = '';
+	attributes.assetp_catid = attributes.assetp_catid;
+	attributes.department_id = listgetat(session.ep.user_location,1,'-');
+	attributes.department_id2 = listgetat(session.ep.user_location,1,'-');
+	attributes.position_code = '';
+	attributes.position_code2 = '';
+	attributes.company_partner_id = '';
+	attributes.company_partner_id2 = '';
+	attributes.serial_number = ''; 
+	attributes.special_code = ''; //marka attributes.special_code
+	attributes.employee_id = '';
+	attributes.usage_purpose_id = '';
+	attributes.assetp_group = '';
+	attributes.brand_id = attributes.brand_id;
+	attributes.brand_type_id = attributes.brand_type_id;
+	attributes.brand_type_cat_id = attributes.brand_type_cat_id;
+	attributes.make_year = attributes.make_year; //model
+	attributes.assetp_detail = attributes.assetp_detail;
+	attributes.barcode = '';
+	attributes.is_collective_usage = '';
+	attributes.assetp_other_money = '';
+	attributes.assetp_other_money_value = '';
+	attributes.relation_asset_id = '';
+	attributes.physical_assets_width = filterNum(attributes.brand_type_cat_width);
+	attributes.physical_assets_size = filterNum(attributes.brand_type_cat_depth);
+	attributes.physical_assets_height = filterNum(attributes.brand_type_cat_height);
+	attributes.physical_assets_weight = filterNum(attributes.brand_type_cat_weight);
+	attributes.rent_amount = '';
+	attributes.rent_amount_currency = '';
+	attributes.rent_payment_period = '';
+	attributes.is_fuel_added = '';
+	attributes.fuel_amount = '';
+	attributes.fuel_amount_currency = '';
+	attributes.is_care_added = '';
+	attributes.care_amount = '';
+	attributes.care_amount_currency = '';
+	attributes.physical_assets_flag = attributes.physical_assets_flag;
+	attributes.first_port = attributes.first_port;
+	attributes.last_port = attributes.last_port;
+	attributes.type = 1;
+	x_dimension = 1;
+</cfscript>
+<cfinclude template="../../assetcare/query/add_assetp.cfm">
+

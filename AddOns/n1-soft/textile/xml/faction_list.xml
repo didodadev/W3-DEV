@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SETUP_SITE>
+	<SETUPSITE>
+		<LINK_NAME>Numune Talep Ekranı XML Setup</LINK_NAME> 
+		<LINK_FILE>textile.list_sample_request</LINK_FILE> 
+		<LINK_DETAIL>Numune Talep Ekranı ayarlarının düzenlenmesi</LINK_DETAIL>
+	</SETUPSITE>
+</SETUP_SITE>

@@ -1,0 +1,36 @@
+<cfquery name="ADD_COMPANY_NOTE" datasource="#dsn#">
+	INSERT
+		INTO
+			COMPANY_BRANCH_NOTES
+			(
+				COMPANY_ID,
+				BRANCH_ID,
+				NOTE_DETAIL,
+				NOTE_YEAR,
+				NOTE_MONTH,
+				RECORD_DATE,
+				RECORD_EMP,
+				RECORD_IP,
+				UPDATE_DATE,
+				UPDATE_EMP,
+				UPDATE_IP
+			)
+			VALUES
+			(
+				#attributes.cpid#,
+				#attributes.related_id#,
+				'#attributes.detail#',
+				#attributes.period_year#,
+				#attributes.period_month#,
+				#now()#,
+				#session.ep.userid#,
+				'#cgi.REMOTE_ADDR#',
+				#now()#,
+				#session.ep.userid#,
+				'#cgi.REMOTE_ADDR#'
+			)
+</cfquery>
+<script type="text/javascript">
+	wrk_opener_reload();
+	window.close();
+</script>

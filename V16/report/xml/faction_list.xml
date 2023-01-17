@@ -1,0 +1,258 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SETUP_SITE>
+	<SETUPSITE>
+		<LINK_NAME>BSC XML Setup</LINK_NAME>
+		<LINK_FILE>report.bsc_company</LINK_FILE>
+		<LINK_DETAIL>BSC XML Setup</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>MakeAge XML Setup</LINK_NAME>
+		<LINK_FILE>report.collacted_make_age_report</LINK_FILE>
+		<LINK_DETAIL>MakeAge XML Setup</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Proje İcmal XML Setup</LINK_NAME>
+		<LINK_FILE>report.project_accounts_report</LINK_FILE>
+		<LINK_DETAIL>Proje İcmal Setup</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Yevmiye Raporu XML Setup</LINK_NAME>
+		<LINK_FILE>report.rapor_yevmiye,report.popup_rapor_yevmiye,report.popup_rapor_yevmiye_pdf_info</LINK_FILE>
+		<LINK_DETAIL>Yevmiye Raporu Ayarları</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Rapor XML Setup</LINK_NAME>
+		<LINK_FILE>report.welcome</LINK_FILE>
+		<LINK_DETAIL>Rapor Setup</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Konsinye Raporu XML Setup</LINK_NAME>
+		<LINK_FILE>report.consigment_analyse_report</LINK_FILE>
+		<LINK_DETAIL>Konsinye Raporu XML Setup</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Stok Analiz Raporu XML Setup</LINK_NAME>
+		<LINK_FILE>report.stock_analyse,report.emptypopup_stock_analyse</LINK_FILE>
+		<LINK_DETAIL>Stok Analiz Raporu XML Setup</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Satış Analiz Raporu XML Setup</LINK_NAME>
+		<LINK_FILE>report.sale_analyse_report,report.emptypopup_sale_analyse_report</LINK_FILE>
+		<LINK_DETAIL>Satış Analiz Raporu XML Setup</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Alış Analiz Raporu XML Setup</LINK_NAME>
+		<LINK_FILE>report.purchase_analyse_report,report.emptypopup_purchase_analyse_report</LINK_FILE>
+		<LINK_DETAIL>Alış Analiz Raporu XML Setup</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Alış Analiz Sipariş Raporu XML Setup</LINK_NAME>
+		<LINK_FILE>report.purchase_analyse_report_orders,report.emptypopup_purchase_analyse_report_orders</LINK_FILE>
+		<LINK_DETAIL>Alış Analiz Sipariş Raporu XML Setup</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Detaylı Üye Analizi Raporu XML Setup</LINK_NAME>
+		<LINK_FILE>report.detayli_uye_analizi_raporu,report.emptypopup_detayli_uye_analizi_raporu</LINK_FILE>
+		<LINK_DETAIL>Detaylı Üye Analizi Raporu XML Setup</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Fatura Listesi Alışlar XML Setup</LINK_NAME>
+		<LINK_FILE>report.invoice_list_purchase</LINK_FILE>
+		<LINK_DETAIL>Fatura Listesi Alışlar XML Setup</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Cari ve Muhasebe Kodları Raporu XML Setup</LINK_NAME>
+		<LINK_FILE>report.company_account_code</LINK_FILE>
+		<LINK_DETAIL>Cari ve Muhasebe Kodları Raporu XML Setup</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Satış Analiz Sipariş Raporu XML Setup</LINK_NAME>
+		<LINK_FILE>report.sale_analyse_report_orders,report.emptypopup_sale_analyse_report_orders</LINK_FILE>
+		<LINK_DETAIL>Satış Analiz Sipariş Raporu XML Setup</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Satış Analiz İrsaliye Raporu XML Setup</LINK_NAME>
+		<LINK_FILE>report.sale_analyse_report_ship,report.emptypopup_sale_analyse_report_ship</LINK_FILE>
+		<LINK_DETAIL>Satış Analiz İrsaliye Raporu XML Setup</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Alış Analiz İrsaliye Raporu XML Setup</LINK_NAME>
+		<LINK_FILE>report.purchase_analyse_report_ship,report.emptypopup_purchase_analyse_report_ship</LINK_FILE>
+		<LINK_DETAIL>Alış Analiz İrsaliye Raporu XML Setup</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Ücret Yönetim Raporu</LINK_NAME>
+		<LINK_FILE>report.manage_all_salaries</LINK_FILE>
+		<LINK_DETAIL>Ücret Yönetim Raporu</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>BA-BS Raporu</LINK_NAME>
+		<LINK_FILE>report.report_ba_bs</LINK_FILE>
+		<LINK_DETAIL>BA-BS Raporu</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>BA-BS Raporu Printi</LINK_NAME>
+		<LINK_FILE>report.report_ba_bs_print</LINK_FILE>
+		<LINK_DETAIL>BA-BS Raporu Printi</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Detaylı Harcama Analiz Raporu XML Setup</LINK_NAME>
+		<LINK_FILE>report.cost_analyse_report,report.emptypopup_cost_analyse_report</LINK_FILE>
+		<LINK_DETAIL>Detaylı Harcama Analiz Raporu</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Detaylı Gelir Analiz Raporu XML Setup</LINK_NAME>
+		<LINK_FILE>report.detail_income_analyse_report</LINK_FILE>
+		<LINK_DETAIL>Detaylı Gelir Analiz Raporu</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Sistem Analizi Raporu XML Setup</LINK_NAME>
+		<LINK_FILE>report.system_analyse_report</LINK_FILE>
+		<LINK_DETAIL>Sistem Analizi Raporu</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Zaman Harcamaları Raporu XML Setup</LINK_NAME>
+		<LINK_FILE>report.time_cost_report</LINK_FILE>
+		<LINK_DETAIL>Zaman Harcamaları Raporu</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Etkileşim Raporu XML Setup</LINK_NAME>
+		<LINK_FILE>report.etkilesim_rapor</LINK_FILE>
+		<LINK_DETAIL>Etkileşim Raporu</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Fırsat Raporu XML Setup</LINK_NAME>
+		<LINK_FILE>report.detail_opportunity_report</LINK_FILE>
+		<LINK_DETAIL>Fırsat Raporu</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Teklif Raporu XML Setup</LINK_NAME>
+		<LINK_FILE>report.detail_sale_offer_report</LINK_FILE>
+		<LINK_DETAIL>Teklif Raporu</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Aylara Göre KDV Raporu XML Setup</LINK_NAME>
+		<LINK_FILE>report.kdv_report_with_month</LINK_FILE>
+		<LINK_DETAIL>Aylara Göre KDV Raporu</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Proje Raporu XML Setup</LINK_NAME>
+		<LINK_FILE>report.detail_report_project</LINK_FILE>
+		<LINK_DETAIL>Proje Raporu</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Ürün Ağacı Raporu XML Setup</LINK_NAME>
+		<LINK_FILE>report.detail_report_product_tree</LINK_FILE>
+		<LINK_DETAIL>Ürün Ağacı Raporu</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Üretim Analizi Raporu XML Setup</LINK_NAME>
+		<LINK_FILE>report.production_analyse</LINK_FILE>
+		<LINK_DETAIL>Üretim Analizi Raporu</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Boomboss Reprt System XML Setup</LINK_NAME>
+		<LINK_FILE>report.boomboss_report_system</LINK_FILE>
+		<LINK_DETAIL>Boomboss Reprt System</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Fatura Listesi Satışlar XML Setup</LINK_NAME>
+		<LINK_FILE>report.invoice_list_sale</LINK_FILE>
+		<LINK_DETAIL>Fatura Listesi Satışlar </LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Fatura Listesi Alışlar XML Setup</LINK_NAME>
+		<LINK_FILE>report.invoice_list_purchase</LINK_FILE>
+		<LINK_DETAIL>Fatura Listesi Alışlar </LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Stok Profil Raporu XML Setup</LINK_NAME>
+		<LINK_FILE>report.stock_profile</LINK_FILE>
+		<LINK_DETAIL>Stok Profil Raporu</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Depo Sevk Ürün Bazlı XML Setup</LINK_NAME>
+		<LINK_FILE>report.ship_dispatch_report</LINK_FILE>
+		<LINK_DETAIL>Depo Sevk Ürün Bazlı</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Ürün Muhasebe Kodları XML Setup</LINK_NAME>
+		<LINK_FILE>report.product_account_code</LINK_FILE>
+		<LINK_DETAIL>Ürün Muhasebe Kodları</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Standart Raporlar XML Setup</LINK_NAME>
+		<LINK_FILE>report.standart</LINK_FILE>
+		<LINK_DETAIL>Standart Raporlar Listesi</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Çek Senet Analiz Raporu XML Setup</LINK_NAME>
+		<LINK_FILE>report.cheque_voucher_analyse</LINK_FILE>
+		<LINK_DETAIL>Çek Senet Analiz Raporu</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Bütçe Dashboard XML Setup</LINK_NAME>
+		<LINK_FILE>report.budget_costrevenue_dashboard</LINK_FILE>
+		<LINK_DETAIL>Bütçe Dashboard</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Muhtasar Beyanname Hazırlık Raporu XML Setup</LINK_NAME>
+		<LINK_FILE>report.muhtasar_beyanname</LINK_FILE>
+		<LINK_DETAIL>Muhtasar Beyanname Hazırlık Raporu</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Çalışan Devam Raporu XML Setup</LINK_NAME>
+		<LINK_FILE>report.emp_daily_in_out</LINK_FILE>
+		<LINK_DETAIL>Çalışan Devam Raporu</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Çalışan Detaylı Analiz Raporu XML Setup</LINK_NAME>
+		<LINK_FILE>report.employee_analyse_report</LINK_FILE>
+		<LINK_DETAIL>Çalışan Detaylı Analiz Raporu</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Eğitim Ve Deneyim Bilgileri Raporu XML Setup</LINK_NAME>
+		<LINK_FILE>report.employees_edu_work_info</LINK_FILE>
+		<LINK_DETAIL>Eğitim Ve Deneyim Bilgileri Raporu</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Görev Değişiklikleri Pozisyon Raporu XML Setup</LINK_NAME>
+		<LINK_FILE>report.report_transfer_work_position</LINK_FILE>
+		<LINK_DETAIL>Görev Değişiklikleri Pozisyon Raporu Raporu</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Fazla Çalışma Saat Raporu XML Setup</LINK_NAME>
+		<LINK_FILE>report.extra_works_time_report</LINK_FILE>
+		<LINK_DETAIL>Fazla Çalışma Saat Raporu</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>İzin Raporu XML Setup</LINK_NAME>
+		<LINK_FILE>report.offtime_control_report</LINK_FILE>
+		<LINK_DETAIL>İzin Raporu</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>İzin - Kıdem - İhbar Yükü Raporu XML Setup</LINK_NAME>
+		<LINK_FILE>report.hr_offtimes_report</LINK_FILE>
+		<LINK_DETAIL>İzin - Kıdem - İhbar Yükü Raporu</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Fazla Mesai Raporu XML Setup</LINK_NAME>
+		<LINK_FILE>report.emp_ext_worktimes</LINK_FILE>
+		<LINK_DETAIL>Fazla Mesai Raporu</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Esnek Çalışma Talepleri Raporu XML Setup</LINK_NAME>
+		<LINK_FILE>report.flexible_worktime</LINK_FILE>
+		<LINK_DETAIL>Esnek Çalışma Talepleri Raporu</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>İzin - Kıdem - İhbar Yükü Raporu XML Setup</LINK_NAME>
+		<LINK_FILE>report.hr_offtimes_report</LINK_FILE>
+		<LINK_DETAIL>İzin - Kıdem - İhbar Yükü Raporu</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Numune Dashboard XML Setup</LINK_NAME>
+		<LINK_FILE>report.product_sample</LINK_FILE>
+		<LINK_DETAIL>Numune Dashboard XML Setup</LINK_DETAIL>
+	</SETUPSITE>
+</SETUP_SITE>

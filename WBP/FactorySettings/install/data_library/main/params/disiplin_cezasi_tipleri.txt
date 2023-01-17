@@ -1,0 +1,5 @@
+INSERT INTO [SETUP_CAUTION_TYPE]([CAUTION_TYPE],[DETAIL],[IS_ACTIVE]) Values( 'İşe Geç Gelme','','1');
+INSERT INTO [SETUP_CAUTION_TYPE]([CAUTION_TYPE],[DETAIL],[IS_ACTIVE]) Values( 'Uyarı','Her hafta 3 kereden fazla işe geç kalan çalışan için uyarı verilmektedir.','1');
+INSERT INTO [SETUP_CAUTION_TYPE]([CAUTION_TYPE],[DETAIL],[IS_ACTIVE]) Values( 'Kınama','','1');
+INSERT INTO [SETUP_CAUTION_TYPE]([CAUTION_TYPE],[DETAIL],[IS_ACTIVE]) Values( 'Ücret Kesintisi','','1');
+

@@ -1,0 +1,20 @@
+diff a/stock/display/list_command.cfm b/stock/display/list_command.cfm	(rejected hunks)
+@@ -349,7 +349,7 @@
+                     <cf_object_td type="text"><cf_get_lang_main no='1196.İl'></cf_object_td>
+                     <cf_object_td>
+                     	<input type="hidden" name="city_id" id="city_id" value="<cfif len(attributes.city)>#attributes.city_id#</cfif>">
+-                        <input type="text" name="city" id="city" value="<cfif len(attributes.city)>#attributes.city#</cfif>" style="width:120px;" onfocus="AutoComplete_Create('city','CITY_NAME','CITY_NAME','get_city','0','CITY_ID,CITY_NAME','city_id,city','','3','120');" autocomplete="off">
++                        <input type="text" name="city" id="city" value="<cfoutput><cfif len(attributes.city)>#attributes.city#</cfif></cfoutput>" style="width:120px;" onfocus="AutoComplete_Create('city','CITY_NAME','CITY_NAME','get_city','0','CITY_ID,CITY_NAME','city_id,city','','3','120');" autocomplete="off">
+                         <a href="javascript://" onclick="windowopen('<cfoutput>#request.self#?fuseaction=objects.popup_dsp_city&field_id=list_order.city_id&field_name=list_order.city',</cfoutput>'small');"><img src="/images/plus_thin.gif"></a>
+                     </cf_object_td>
+                 </cf_object_tr>
+@@ -385,7 +385,7 @@
+                     <cf_object_td type="text"><cf_get_lang_main no='1226.İlçe'></cf_object_td>
+                     <cf_object_td>
+                     	<input type="hidden" name="county_id" id="county_id" value="<cfif len(attributes.county)>#attributes.county_id#</cfif>">
+-                        <input type="text" name="county" id="county" value="<cfif len(attributes.county)>#attributes.county#</cfif>" onfocus="AutoComplete_Create('county','COUNTY_NAME','CITY_NAME,COUNTY_NAME','get_county','0','COUNTY_ID,COUNTY_NAME','county_id,county','','3','150');" autocomplete="off" style="width:120px;">
++                        <input type="text" name="county" id="county" value="<cfoutput><cfif len(attributes.county)>#attributes.county#</cfif></cfoutput>" onfocus="AutoComplete_Create('county','COUNTY_NAME','CITY_NAME,COUNTY_NAME','get_county','0','COUNTY_ID,COUNTY_NAME','county_id,county','','3','150');" autocomplete="off" style="width:120px;">
+                         <a href="javascript://" onclick="windowopen('<cfoutput>#request.self#?fuseaction=objects.popup_dsp_county&field_id=list_order.county_id&field_name=list_order.county&city_id=' + document.list_order.city_id.value,</cfoutput>'small');"><img src="/images/plus_thin.gif"></a>
+                     </cf_object_td>
+                 </cf_object_tr>
+

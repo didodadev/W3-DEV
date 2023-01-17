@@ -1,0 +1,10 @@
+INSERT INTO [SETUP_TITLE]([TITLE],[TITLE_DETAIL],[HIERARCHY],[IS_ACTIVE]) Values( 'Y.K. Üyesi','Yönetim Kurulu Üyesi',' ','1');
+INSERT INTO [SETUP_TITLE]([TITLE],[TITLE_DETAIL],[HIERARCHY],[IS_ACTIVE]) Values( 'Genel Müdür','Genel Müdür',' ','1');
+INSERT INTO [SETUP_TITLE]([TITLE],[TITLE_DETAIL],[HIERARCHY],[IS_ACTIVE]) Values( 'Genel Müdür Yardımcısı','Genel Müdür Yardımcısı',' ','1');
+INSERT INTO [SETUP_TITLE]([TITLE],[TITLE_DETAIL],[HIERARCHY],[IS_ACTIVE]) Values( 'Müdür','Müdür',' ','1');
+INSERT INTO [SETUP_TITLE]([TITLE],[TITLE_DETAIL],[HIERARCHY],[IS_ACTIVE]) Values( 'Müdür Yardımcısı','Müdür Yardımcısı',' ','1');
+INSERT INTO [SETUP_TITLE]([TITLE],[TITLE_DETAIL],[HIERARCHY],[IS_ACTIVE]) Values( 'Yönetmen','Yönetmen',' ','1');
+INSERT INTO [SETUP_TITLE]([TITLE],[TITLE_DETAIL],[HIERARCHY],[IS_ACTIVE]) Values( 'Lider','Lider',' ','1');
+INSERT INTO [SETUP_TITLE]([TITLE],[TITLE_DETAIL],[HIERARCHY],[IS_ACTIVE]) Values( 'Uzman','Uzman',' ','1');
+INSERT INTO [SETUP_TITLE]([TITLE],[TITLE_DETAIL],[HIERARCHY],[IS_ACTIVE]) Values( 'Y.K. Başkanı','Y.K. Başkanı',' ','1');
+INSERT INTO [SETUP_TITLE]([TITLE],[TITLE_DETAIL],[HIERARCHY],[IS_ACTIVE]) Values( 'Uzman Yardımcısı','Uzman Yardımcısı',' ','1');

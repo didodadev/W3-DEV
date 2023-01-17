@@ -1,0 +1,467 @@
+<!--- cari muhasebe işlemleri --->
+<cfscript>
+	str_alacak_tutar_list="";
+	str_alacak_kod_list="";
+	str_borc_tutar_list="";
+	str_borc_kod_list="";
+	if(isDefined("attributes.detail") and len(attributes.detail))
+		genel_fis_satir_detay = '#form.invoice_number#-#attributes.comp_name#-DEMİRBAŞ SATIŞ-#attributes.detail#';
+	else
+		genel_fis_satir_detay = '#form.invoice_number#-#attributes.comp_name#-DEMİRBAŞ SATIŞ';
+	satir_detay_list = ArrayNew(2); //muhasebe fisi satır detaylarını tutar
+	str_other_alacak_tutar_list = "";
+	str_other_borc_tutar_list = "";
+	str_other_borc_currency_list = "";
+	str_other_alacak_currency_list = "";
+
+	currency_multiplier = '';
+	currency_multiplier_kasa = 1;
+	satir_currency_multiplier =1;
+	paper_currency_multiplier =1;
+	if(isDefined('attributes.kur_say') and len(attributes.kur_say))
+		for(mon=1;mon lte attributes.kur_say;mon=mon+1)
+		{
+			if(evaluate("attributes.hidden_rd_money_#mon#") is session.ep.money2)
+				currency_multiplier = evaluate('attributes.txt_rate2_#mon#/attributes.txt_rate1_#mon#');
+			if(evaluate("attributes.hidden_rd_money_#mon#") is rd_money_value)
+				paper_currency_multiplier = evaluate('attributes.txt_rate2_#mon#/attributes.txt_rate1_#mon#');
+			if(isdefined('attributes.kasa') and evaluate("attributes.hidden_rd_money_#mon#") is ListLast(attributes.kasa,";"))
+				currency_multiplier_kasa = evaluate('attributes.txt_rate2_#mon#/attributes.txt_rate1_#mon#');
+		}
+	if(is_cari eq 1)
+	{
+		if(is_paymethod_based_cari eq 1 and isdefined('attributes.paymethod_id') and len(attributes.paymethod_id) and len(attributes.paymethod))
+		{
+			include('paymethod_based_cari_process_info.cfm');
+			for(ind_t=1;ind_t lte listlen(row_duedate_list); ind_t=ind_t+1)
+			{
+				cari_row_duedate=listgetat(row_duedate_list,ind_t);
+				carici(
+					action_id : get_invoice_id.max_id,
+					action_table : 'INVOICE',
+					workcube_process_type : process_type,
+					account_card_type : 13,
+					due_date : cari_row_duedate,
+					islem_tarihi : attributes.invoice_date,
+					islem_tutari :  evaluate('row_amount_total_#ind_t#'),
+					islem_belge_no : FORM.INVOICE_NUMBER,
+					to_cmp_id : attributes.company_id,
+					to_consumer_id : attributes.consumer_id,
+					to_employee_id : attributes.emp_id,
+					acc_type_id : acc_type_id,
+					to_branch_id : attributes.branch_id,
+					islem_detay : 'DEMİRBAŞ SATIŞ FATURASI',
+					action_detail : attributes.detail,
+					other_money_value : attributes.other_net_total_amount,
+					other_money : rd_money_value,
+					action_currency : SESSION.EP.MONEY,
+					process_cat : form.process_cat,
+					currency_multiplier : currency_multiplier,
+					project_id : attributes.project_id,
+					rate2: paper_currency_multiplier
+				);
+			}
+		}
+		else
+		{
+			carici(
+				action_id : get_invoice_id.max_id,
+				action_table : 'INVOICE',
+				workcube_process_type : process_type,
+				account_card_type : 13,
+				due_date : invoice_due_date,
+				islem_tarihi : attributes.invoice_date,
+				islem_tutari : attributes.net_total_amount,
+				islem_belge_no : FORM.INVOICE_NUMBER,
+				to_cmp_id : attributes.company_id,
+				to_consumer_id : attributes.consumer_id,
+				to_employee_id : attributes.emp_id,
+				acc_type_id : acc_type_id,
+				to_branch_id : attributes.branch_id,
+				islem_detay : 'DEMİRBAŞ SATIŞ FATURASI',
+				action_detail : attributes.detail,
+				other_money_value : attributes.other_net_total_amount,
+				other_money : rd_money_value,
+				action_currency : SESSION.EP.MONEY,
+				process_cat : form.process_cat,
+				currency_multiplier : currency_multiplier,
+				project_id : attributes.project_id,
+				rate2: paper_currency_multiplier
+			);
+		}
+	}
+	
+	if(is_account eq 1)
+	{
+		str_borc_tutar_list = attributes.net_total_amount;
+		str_borc_kod_list = MY_ACC_RESULT;
+		satir_detay_list[1][listlen(str_borc_tutar_list)] = genel_fis_satir_detay;
+		str_other_borc_tutar_list = attributes.other_net_total_amount;
+		str_other_borc_currency_list = rd_money_value;
+		if(attributes.total_amount gt 0)
+			genel_indirim_yuzdesi = attributes.net_total_discount / attributes.total_amount;
+		else
+			genel_indirim_yuzdesi = 0;
+			
+		if( isdefined("form.tevkifat_box") and isdefined('form.tevkifat_oran') and len(form.tevkifat_id))
+		{ /*herbir kdv ye uygulanacak tevkifat icin muhasebe hesapları cekiliyor*/
+			tevkifat_acc_codes=cfquery(datasource:"#dsn2#",sqlstring:"
+			SELECT 
+				ST_ROW.TEVKIFAT_BEYAN_CODE,ST_ROW.TAX
+			FROM 
+				#dsn3_alias#.SETUP_TEVKIFAT S_TEV,#dsn3_alias#.SETUP_TEVKIFAT_ROW ST_ROW 
+			WHERE
+				S_TEV.TEVKIFAT_ID = ST_ROW.TEVKIFAT_ID
+				AND S_TEV.TEVKIFAT_ID = #form.tevkifat_id#
+			ORDER BY ST_ROW.TAX");
+		}
+		for(j=1;j lte attributes.record_num;j=j+1)
+		{
+			if (isdefined("attributes.row_kontrol#j#") and evaluate("attributes.row_kontrol#j#"))
+			{
+				value_new = evaluate("attributes.unit_first_value#j#");
+				str_alacak_tutar_list = ListAppend(str_alacak_tutar_list,(value_new*evaluate("attributes.quantity#j#")),",");
+				if (is_account_group neq 1)
+				{
+					satir_detay_list[2][listlen(str_alacak_tutar_list)]='#attributes.comp_name#-#evaluate("attributes.invent_name#j#")#';
+				}
+				else
+				{
+					if(isDefined("attributes.detail") and len(attributes.detail))
+						satir_detay_list[2][listlen(str_alacak_tutar_list)]='#attributes.comp_name#-DEMİRBAŞ SATIŞ-#attributes.detail#';
+					else
+						satir_detay_list[2][listlen(str_alacak_tutar_list)]='#attributes.comp_name#-DEMİRBAŞ SATIŞ';
+				}
+				str_alacak_kod_list = ListAppend(str_alacak_kod_list,evaluate("attributes.account_id#j#"),",");
+				indirimli_kdv= evaluate("attributes.kdv_total#j#")-(evaluate("attributes.kdv_total#j#")*genel_indirim_yuzdesi);
+				if(isDefined('attributes.kur_say') and len(attributes.kur_say))
+					for(mon=1;mon lte attributes.kur_say;mon=mon+1)
+					{
+						if(evaluate("attributes.hidden_rd_money_#mon#") is listfirst(evaluate("attributes.money_id#j#")))
+							satir_currency_multiplier = evaluate('attributes.txt_rate2_#mon#/attributes.txt_rate1_#mon#');
+					}	
+				str_other_alacak_tutar_list = ListAppend(str_other_alacak_tutar_list, wrk_round(((value_new*evaluate("attributes.quantity#j#"))/satir_currency_multiplier),4),",");
+				str_other_alacak_currency_list = ListAppend(str_other_alacak_currency_list,listgetat(evaluate("attributes.money_id#j#"), 1, ','),",");
+				
+				get_tax_acc_code = cfquery(datasource : "#dsn2#", sqlstring : "SELECT INVENTORY_SALE_CODE,SALE_CODE FROM SETUP_TAX WHERE TAX = #evaluate("attributes.tax_rate#j#")#");
+				//otv
+				if(isDefined("attributes.otv_rate#j#") and len(evaluate("attributes.otv_rate#j#")) and evaluate("attributes.otv_rate#j#") gt 0)//varsa ötv hesaplar çekiliyor
+					get_otv_acc_code = cfquery(datasource : "#dsn2#", sqlstring : "SELECT ACCOUNT_CODE FROM #dsn3_alias#.SETUP_OTV WHERE PERIOD_ID = #SESSION.EP.PERIOD_ID# AND TAX = #evaluate("attributes.otv_rate#j#")#");
+				
+				if( isdefined("form.tevkifat_box") and isdefined('form.tevkifat_oran') and len(form.tevkifat_id))//tevkifat hesapları
+				{//sadece tevkifat için tevkifat tutarları alacak hesaplara ekleniyor
+					satir_tevk_tutar = (indirimli_kdv*attributes.tevkifat_oran);
+					str_alacak_kod_list = ListAppend(str_alacak_kod_list,tevkifat_acc_codes.tevkifat_beyan_code,",");		
+					str_alacak_tutar_list = ListAppend(str_alacak_tutar_list,wrk_round(satir_tevk_tutar),",");
+					if(listgetat(evaluate("attributes.money_id#j#"), 1, ',') neq session.ep.money)
+						str_other_alacak_tutar_list = ListAppend(str_other_alacak_tutar_list,wrk_round((satir_tevk_tutar)/satir_currency_multiplier),",");
+					else
+						str_other_alacak_tutar_list = ListAppend(str_other_alacak_tutar_list,wrk_round((satir_tevk_tutar)),",");
+					str_other_alacak_currency_list = ListAppend(str_other_alacak_currency_list,listgetat(evaluate("attributes.money_id#j#"), 1, ','),",");
+					satir_detay_list[2][listlen(str_alacak_tutar_list)]=genel_fis_satir_detay;
+				}
+				else if (indirimli_kdv neq 0)
+				{
+					tax_acc = get_tax_acc_code.INVENTORY_SALE_CODE;					
+					str_alacak_tutar_list = ListAppend(str_alacak_tutar_list,indirimli_kdv,",");
+					str_alacak_kod_list = ListAppend(str_alacak_kod_list,tax_acc,",");
+					if (is_account_group neq 1)
+					{
+						satir_detay_list[2][listlen(str_alacak_tutar_list)]='#attributes.comp_name#-#evaluate("attributes.invent_name#j#")#';
+					}
+					else
+					{
+						if(isDefined("attributes.detail") and len(attributes.detail))
+							satir_detay_list[2][listlen(str_alacak_tutar_list)]='#attributes.comp_name#-DEMİRBAŞ SATIŞ-#attributes.detail#';
+						else
+							satir_detay_list[2][listlen(str_alacak_tutar_list)]='#attributes.comp_name#-DEMİRBAŞ SATIŞ';
+					}
+					if(listgetat(evaluate("attributes.money_id#j#"), 1, ',') neq session.ep.money)
+						str_other_alacak_tutar_list = ListAppend(str_other_alacak_tutar_list,wrk_round((indirimli_kdv)/satir_currency_multiplier),",");
+					else
+						str_other_alacak_tutar_list = ListAppend(str_other_alacak_tutar_list,wrk_round((indirimli_kdv)),",");
+					str_other_alacak_currency_list = ListAppend(str_other_alacak_currency_list,listgetat(evaluate("attributes.money_id#j#"), 1, ','),",");
+					satir_detay_list[2][listlen(str_alacak_tutar_list)]=genel_fis_satir_detay;
+				}
+				//OTV hesaplamalari yapiliyor
+				if(isDefined("attributes.otv_rate#j#") and len(evaluate("attributes.otv_rate#j#")) and evaluate("attributes.otv_rate#j#") gt 0)
+				{
+					str_alacak_tutar_list = ListAppend(str_alacak_tutar_list,wrk_round(evaluate("attributes.otv_total#j#")),",");
+					str_alacak_kod_list = ListAppend(str_alacak_kod_list,get_otv_acc_code.account_code,",");
+					str_other_alacak_tutar_list = ListAppend(str_other_alacak_tutar_list,(evaluate("attributes.otv_total#j#")/satir_currency_multiplier),",");
+					str_other_alacak_currency_list = ListAppend(str_other_alacak_currency_list,listgetat(evaluate("attributes.money_id#j#"), 1, ','),",");
+					if (is_account_group neq 1)
+					{
+						satir_detay_list[2][listlen(str_alacak_tutar_list)]='#attributes.comp_name#-#evaluate("attributes.invent_name#j#")#';
+					}
+					else
+					{
+						if(isDefined("attributes.detail") and len(attributes.detail))
+							satir_detay_list[2][listlen(str_alacak_tutar_list)]='#attributes.comp_name#-DEMİRBAŞ SATIŞ-#attributes.detail#';
+						else
+							satir_detay_list[2][listlen(str_alacak_tutar_list)]='#attributes.comp_name#-DEMİRBAŞ SATIŞ';
+					}
+				}
+				//Fatura altı indirim varsa , her satır için seçilen hesaba indirim oranında borc hesabına da yazıyor
+				if(attributes.net_total_discount neq 0)
+				{
+					demirbas_toplam_indirim = wrk_round(evaluate("attributes.row_total_#j#") * genel_indirim_yuzdesi * evaluate("attributes.quantity#j#"));
+					str_other_borc_tutar_list = listappend(str_other_borc_tutar_list,wrk_round(demirbas_toplam_indirim/paper_currency_multiplier),',');
+					str_other_borc_currency_list = listappend(str_other_borc_currency_list,rd_money_value,',');
+					str_borc_tutar_list = listappend(str_borc_tutar_list,demirbas_toplam_indirim,',');
+					str_borc_kod_list = listappend(str_borc_kod_list,evaluate("attributes.account_id#j#"),',');
+					satir_detay_list[1][listlen(str_borc_tutar_list)] = genel_fis_satir_detay;
+				}
+				if(evaluate("attributes.last_diff_value#j#") gte 0)
+				{
+					if(evaluate("attributes.last_diff_value#j#") gt 0)
+					{
+						str_other_alacak_tutar_list = listappend(str_other_alacak_tutar_list,wrk_round(evaluate("attributes.last_diff_value#j#")/satir_currency_multiplier),',');
+						str_other_alacak_currency_list = listappend(str_other_alacak_currency_list,listgetat(evaluate("attributes.money_id#j#"), 1, ','),',');
+						str_alacak_tutar_list = listappend(str_alacak_tutar_list,evaluate("attributes.last_diff_value#j#"),',');
+						str_alacak_kod_list = listappend(str_alacak_kod_list,evaluate("attributes.budget_account_id#j#"),',');
+						satir_detay_list[2][listlen(str_alacak_tutar_list)] = genel_fis_satir_detay;
+					}
+					str_other_borc_tutar_list = listappend(str_other_borc_tutar_list,wrk_round(abs(evaluate("attributes.last_inventory_value#j#")-evaluate("attributes.total_first_value#j#"))/satir_currency_multiplier),',');
+					str_other_borc_currency_list = listappend(str_other_borc_currency_list,listgetat(evaluate("attributes.money_id#j#"), 1, ','),',');
+					str_borc_tutar_list = listappend(str_borc_tutar_list,abs(evaluate("attributes.last_inventory_value#j#")-evaluate("attributes.total_first_value#j#")),',');
+					str_borc_kod_list = listappend(str_borc_kod_list,evaluate("attributes.amort_account_id#j#"),',');
+					satir_detay_list[1][listlen(str_borc_tutar_list)] = genel_fis_satir_detay;
+				}
+				else if(evaluate("attributes.last_diff_value#j#") lt 0)
+				{
+					str_other_borc_tutar_list = listappend(str_other_borc_tutar_list,wrk_round(abs(evaluate("attributes.last_diff_value#j#"))/satir_currency_multiplier),',');
+					str_other_borc_currency_list = listappend(str_other_borc_currency_list,listgetat(evaluate("attributes.money_id#j#"), 1, ','),',');
+					str_borc_tutar_list = listappend(str_borc_tutar_list,abs(evaluate("attributes.last_diff_value#j#")),',');
+					str_borc_kod_list = listappend(str_borc_kod_list,evaluate("attributes.budget_account_id#j#"),',');
+					satir_detay_list[1][listlen(str_borc_tutar_list)] = genel_fis_satir_detay;
+					
+					str_other_borc_tutar_list = listappend(str_other_borc_tutar_list,wrk_round(abs(evaluate("attributes.last_inventory_value#j#")-evaluate("attributes.total_first_value#j#"))/satir_currency_multiplier),',');
+					str_other_borc_currency_list = listappend(str_other_borc_currency_list,listgetat(evaluate("attributes.money_id#j#"), 1, ','),',');
+					str_borc_tutar_list = listappend(str_borc_tutar_list,abs(evaluate("attributes.last_inventory_value#j#")-evaluate("attributes.total_first_value#j#")),',');
+					str_borc_kod_list = listappend(str_borc_kod_list,evaluate("attributes.amort_account_id#j#"),',');
+					satir_detay_list[1][listlen(str_borc_tutar_list)] = genel_fis_satir_detay;
+				}
+			}
+		}
+		
+		if (isDefined('attributes.stopaj_rate_id') and len(attributes.stopaj_rate_id))//stopaj popuptan seçilmişse
+			GET_SETUP_STOPPAGE_RATES = cfquery(datasource:"#dsn2#", sqlstring:"SELECT * FROM SETUP_STOPPAGE_RATES WHERE STOPPAGE_RATE_ID = #attributes.stopaj_rate_id#");
+		else if (isDefined('attributes.stopaj_yuzde') and len(attributes.stopaj_yuzde))//stopaj popuptan seçilmişse
+			GET_SETUP_STOPPAGE_RATES = cfquery(datasource:"#dsn2#", sqlstring:"SELECT * FROM SETUP_STOPPAGE_RATES WHERE STOPPAGE_RATE = #attributes.stopaj_yuzde#");
+		if(isdefined("GET_SETUP_STOPPAGE_RATES") and len(attributes.stopaj))
+		{
+			str_borc_kod_list = ListAppend(str_borc_kod_list, GET_SETUP_STOPPAGE_RATES.STOPPAGE_ACCOUNT_CODE, ",");
+			str_borc_tutar_list = ListAppend(str_borc_tutar_list, attributes.stopaj, ",");
+			str_other_borc_tutar_list = ListAppend(str_other_borc_tutar_list,(attributes.stopaj/paper_currency_multiplier),",");
+			str_other_borc_currency_list = ListAppend(str_other_borc_currency_list,rd_money_value,",");
+			satir_detay_list[1][listlen(str_borc_tutar_list)] = genel_fis_satir_detay;
+		}
+		//muhasebe fisi icin, olusabilecek yuvarlama satırının bilgileri
+		FARK_HESAP = cfquery(datasource:"#dsn2#",sqlstring:"SELECT FARK_GELIR,FARK_GIDER FROM #dsn3_alias#.SETUP_INVOICE_PURCHASE");
+		str_fark_gelir =FARK_HESAP.FARK_GELIR;
+		str_fark_gider =FARK_HESAP.FARK_GIDER;
+		str_max_round = 0.2;
+		str_round_detail = genel_fis_satir_detay;
+		
+		muhasebeci (
+			wrk_id:wrk_id,
+			action_id:get_invoice_id.max_id,
+			workcube_process_type : process_type,
+			account_card_type : 13,
+			company_id : attributes.company_id,
+			consumer_id : attributes.consumer_id,
+			employee_id : attributes.emp_id,
+			islem_tarihi : attributes.invoice_date,
+			borc_hesaplar : str_borc_kod_list,
+			borc_tutarlar : str_borc_tutar_list,
+			alacak_hesaplar : str_alacak_kod_list,
+			alacak_tutarlar : str_alacak_tutar_list,
+			fis_satir_detay: satir_detay_list,
+			fis_detay : 'DEMİRBAŞ SATIŞ FATURASI',
+			belge_no : form.invoice_number,
+			other_amount_borc : str_other_borc_tutar_list,
+			other_currency_borc : str_other_borc_currency_list,
+			other_amount_alacak : str_other_alacak_tutar_list,
+			other_currency_alacak : str_other_alacak_currency_list,
+			to_branch_id : ListGetAt(session.ep.user_location,2,"-"),
+			is_account_group : is_account_group,
+			currency_multiplier : currency_multiplier,
+			dept_round_account :str_fark_gider,
+			claim_round_account : str_fark_gelir,
+			max_round_amount :str_max_round,
+			round_row_detail:str_round_detail,
+			acc_department_id : acc_department_id,
+			workcube_process_cat : form.process_cat,
+			acc_project_id : attributes.project_id
+		);
+	}
+	if(is_budget eq 1)
+	{
+		for(tt=1;tt lte attributes.record_num;tt=tt+1)
+		{
+			is_income_expense = ( evaluate("attributes.last_diff_value#tt#") gt 0 ) ? true : false;
+			if(isDefined('attributes.kur_say') and len(attributes.kur_say))
+					for(mon=1;mon lte attributes.kur_say;mon=mon+1)
+					{
+						if(evaluate("attributes.hidden_rd_money_#mon#") is listfirst(evaluate("attributes.money_id#tt#")))
+							satir_currency_multiplier = evaluate('attributes.txt_rate2_#mon#/attributes.txt_rate1_#mon#');
+					}	
+			net_total = (xml_total_budget eq 1) ? (evaluate("attributes.row_total_#tt#") * evaluate("attributes.quantity#tt#")) : abs(evaluate("attributes.last_diff_value#tt#"));
+			other_money_value = (xml_total_budget eq 1) ? wrk_round(evaluate("attributes.row_other_total#tt#")/((evaluate("attributes.tax_rate#tt#")+100)/100)) : wrk_round(abs(evaluate("attributes.last_diff_value#tt#"))/satir_currency_multiplier,4);
+			if(len(evaluate("attributes.budget_item_id#tt#")) and len(evaluate("attributes.budget_item_name#tt#")) and len(evaluate("attributes.expense_center_id#tt#")))
+			{
+				butceci(
+					action_id : get_invoice_id.max_id,
+					muhasebe_db : dsn2,
+					action_table : 'INVOICE',
+					is_income_expense : is_income_expense,
+					process_type : process_type,
+					product_tax: evaluate("attributes.tax_rate#tt#"),//kdv
+					nettotal : net_total,//kdvsiz tutar
+					other_money_value : other_money_value,//kdvsiz  döviz toplam
+					action_currency : listgetat(evaluate("attributes.money_id#tt#"),1,','),
+					currency_multiplier : currency_multiplier,
+					expense_date : attributes.invoice_date,
+					expense_center_id : evaluate("attributes.expense_center_id#tt#"),
+					expense_item_id : evaluate("attributes.budget_item_id#tt#"),
+					detail : 'SABİT KIYMET SATIŞ GELİRİ',
+					project_id : attributes.project_id,
+					paper_no : form.invoice_number,
+					company_id : attributes.company_id,
+					consumer_id : attributes.consumer_id,
+					employee_id : attributes.emp_id,
+					branch_id : ListGetAt(session.ep.user_location,2,"-"),
+					insert_type : 1//banka vs den eklenen masraflar için farklı ekleme metodu tanımlar
+				);
+			}
+		}
+	}
+</cfscript>
+
+<!--- kasa işlemlerinin cari ve muhasebesi --->
+<cfif isdefined("form.cash")>
+	<cfquery name="ADD_CASH_ACTION" datasource="#dsn2#">
+		INSERT INTO
+			 CASH_ACTIONS
+			(
+				CASH_ACTION_TO_CASH_ID,
+				ACTION_TYPE,
+				ACTION_TYPE_ID,
+				BILL_ID,
+				CASH_ACTION_FROM_COMPANY_ID,
+				CASH_ACTION_FROM_CONSUMER_ID,
+				CASH_ACTION_FROM_EMPLOYEE_ID,
+				CASH_ACTION_VALUE,
+				CASH_ACTION_CURRENCY_ID,
+				ACTION_DATE,
+				ACTION_DETAIL,
+				IS_PROCESSED,
+				PAPER_NO,
+				IS_ACCOUNT,
+				IS_ACCOUNT_TYPE,
+				RECORD_EMP,
+				RECORD_IP,
+				RECORD_DATE,
+				PROCESS_CAT,
+				ACTION_VALUE,
+				ACTION_CURRENCY_ID
+				<cfif len(session.ep.money2)>
+					,ACTION_VALUE_2
+					,ACTION_CURRENCY_ID_2
+				</cfif>
+			)
+			VALUES
+			(
+				#ListFirst(attributes.kasa,";")#,
+				'DEMİRBAŞ SATIŞ FATURASI KAPAMA İŞLEMİ',
+				35,
+				#get_invoice_id.max_id#,
+				<cfif len(attributes.company_id)>#attributes.company_id#<cfelse>NULL</cfif>,
+				<cfif len(attributes.consumer_id)>#attributes.consumer_id#<cfelse>NULL</cfif>,
+				<cfif len(attributes.emp_id)>#attributes.emp_id#<cfelse>NULL</cfif>,
+				#attributes.net_total_amount#,
+				'#ListLast(attributes.kasa,";")#',
+				#attributes.invoice_date#,
+				'DEMİRBAŞ SATIŞ FATURASI KAPAMA İŞLEMİ',
+				<cfif is_account>1<cfelse>0</cfif>,
+				'#FORM.INVOICE_NUMBER#',
+				<cfif is_account eq 1>1,11,<cfelse>0,11,</cfif>
+				#SESSION.EP.USERID#,
+				'#CGI.REMOTE_ADDR#',
+				#NOW()#,
+				#form.process_cat#,
+				#attributes.net_total_amount#,
+				'#session.ep.money#'
+				<cfif len(session.ep.money2)>
+					,#wrk_round(attributes.net_total_amount/currency_multiplier,4)#
+					,'#session.ep.money2#'
+				</cfif>
+			)
+	</cfquery>
+	<cfquery name="GET_ACT_ID" datasource="#dsn2#">
+		SELECT MAX(ACTION_ID) AS ACT_ID	FROM CASH_ACTIONS
+	</cfquery>
+	<cfquery name="UPD_INVOICE_LAST" datasource="#dsn2#">
+		UPDATE INVOICE SET CASH_ID = #GET_ACT_ID.ACT_ID# WHERE INVOICE_ID=#get_invoice_id.max_id#
+	</cfquery>
+	<cfscript>
+		if(is_cari eq 1)
+		{
+			carici(
+				action_id : GET_ACT_ID.ACT_ID,  
+				action_table : 'CASH_ACTIONS',
+				workcube_process_type : 35,
+				account_card_type : 11,
+				due_date : invoice_due_date,
+				islem_tarihi : attributes.invoice_date,
+				islem_tutari : attributes.net_total_amount,
+				islem_belge_no : FORM.INVOICE_NUMBER,
+				from_cmp_id : attributes.company_id,
+				from_consumer_id : attributes.consumer_id,
+				from_employee_id : attributes.emp_id,
+				acc_type_id : acc_type_id,
+				to_branch_id : ListGetAt(session.ep.user_location,2,"-"),
+				islem_detay : 'DEMİRBAŞ SATIŞ FATURASI KAPAMA İŞLEMİ',
+				action_detail : attributes.detail,
+				other_money_value : (attributes.net_total_amount/currency_multiplier_kasa),
+				other_money : ListLast(attributes.kasa,";"),
+				action_currency : session.ep.money,
+				to_cash_id : ListFirst(attributes.kasa,";"),
+				process_cat : form.process_cat,
+				currency_multiplier : currency_multiplier_kasa,
+				rate2: currency_multiplier_kasa
+			 );
+		}
+		if(is_account eq 1)
+		{
+			get_cash_code = cfquery(datasource:"#dsn2#",sqlstring:"SELECT CASH_ACC_CODE FROM CASH WHERE CASH_ID=#ListFirst(attributes.kasa,";")#");
+			muhasebeci(
+				wrk_id:wrk_id,
+				action_id : GET_ACT_ID.ACT_ID,
+				workcube_process_type : 35,
+				account_card_type : 11,
+				islem_tarihi : attributes.invoice_date,
+				borc_hesaplar : get_cash_code.CASH_ACC_CODE,
+				borc_tutarlar : wrk_round(attributes.net_total_amount),
+				alacak_hesaplar : MY_ACC_RESULT,
+				alacak_tutarlar : wrk_round(attributes.net_total_amount),
+				fis_detay : 'DEMİRBAŞ SATIŞ FATURASI KAPAMA İŞLEMİ',
+				fis_satir_detay : 'DEMİRBAŞ SATIŞ FATURASI KAPAMA İŞLEMİ',
+				to_branch_id : ListGetAt(session.ep.user_location,2,"-"),
+				belge_no : form.invoice_number,
+				is_account_group : is_account_group,
+				acc_department_id : acc_department_id,
+				currency_multiplier : currency_multiplier_kasa,
+				acc_project_id : attributes.project_id
+			);
+		}
+	</cfscript>			
+	<cfquery name="UPD_INVOICE_ACC" datasource="#dsn2#">
+		UPDATE INVOICE SET IS_ACCOUNTED=#is_account# WHERE INVOICE_ID=#get_invoice_id.max_id#
+	</cfquery>
+<cfelse>
+	<cfquery name="UPD_INVOICE_ACC" datasource="#dsn2#">
+		UPDATE INVOICE SET IS_ACCOUNTED=0 WHERE INVOICE_ID=#get_invoice_id.max_id#
+	</cfquery>
+</cfif>

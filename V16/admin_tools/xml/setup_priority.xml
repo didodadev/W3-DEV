@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SETUP_PRIORITY>
+          <SET>
+            <PRIORITY>Normal</PRIORITY>
+            <COLOR>0099FF</COLOR>
+         </SET>
+          <SET>
+            <PRIORITY>Düşük</PRIORITY>
+            <COLOR>999999</COLOR>
+         </SET>
+          <SET>
+            <PRIORITY>Acil</PRIORITY>
+            <COLOR>33cc69</COLOR>
+         </SET>
+       <SET>
+            <PRIORITY>Derhal</PRIORITY>
+            <COLOR>FF0000</COLOR>
+         </SET>
+</SETUP_PRIORITY>

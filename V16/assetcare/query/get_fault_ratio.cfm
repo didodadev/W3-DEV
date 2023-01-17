@@ -1,0 +1,9 @@
+<cfquery name="GET_FAULT_RATIO" datasource="#DSN#">
+	SELECT
+		FAULT_RATIO_ID,
+		FAULT_RATIO_NAME			
+	FROM
+		SETUP_FAULT_RATIO
+	ORDER BY
+		FAULT_RATIO_NAME
+</cfquery>

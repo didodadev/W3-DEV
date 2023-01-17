@@ -1,0 +1,10 @@
+<!-- Description : Takvim gün dil düzenlemeleri
+Developer: Uğur Hamurpet
+Company : Workcube
+Destination: Main-->
+<querytag>
+    UPDATE SETUP_LANGUAGE_TR SET ITEM_ENG = 'Wk' WHERE DICTIONARY_ID = 29705
+    UPDATE SETUP_LANGUAGE_TR SET ITEM_ENG = 'Th' WHERE DICTIONARY_ID = 29702
+    UPDATE SETUP_LANGUAGE_TR SET ITEM_ENG = 'We' WHERE DICTIONARY_ID = 29701
+    UPDATE SETUP_LANGUAGE_TR SET ITEM_ENG = 'Mn' WHERE DICTIONARY_ID = 29699
+</querytag>

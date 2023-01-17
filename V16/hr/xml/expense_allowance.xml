@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<OBJECT_PROPERTIES>
+	<OBJECT_PROPERTY>
+		<PROPERTY>x_is_show_paper_type</PROPERTY>
+		<PROPERTY_DETAIL>Belge Türü Gösterilsin mi ?</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>select</PROPERTY_TYPE>
+		<PROPERTY_VALUES>1,0</PROPERTY_VALUES>
+		<PROPERTY_NAMES>Evet,Hayır</PROPERTY_NAMES>
+		<PROPERTY_DEFAULT>1</PROPERTY_DEFAULT>
+		<PROPERTY_HELP>Evet olarak seçilirse,belge türü alanı harcama talebi ekranına belge türü seçilebilir bir halde gelir.</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+	<OBJECT_PROPERTY>
+		<PROPERTY>x_is_show_ref_no</PROPERTY>
+		<PROPERTY_DETAIL>Referans No Gösterilsin mi ?</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>select</PROPERTY_TYPE>
+		<PROPERTY_VALUES>1,0</PROPERTY_VALUES>
+		<PROPERTY_NAMES>Evet,Hayır</PROPERTY_NAMES>
+		<PROPERTY_DEFAULT>1</PROPERTY_DEFAULT>
+		<PROPERTY_HELP>Evet olarak seçildiğinde referans no alanı yazılabilir bir halde harcama talebi ekranına gelir.</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+	<OBJECT_PROPERTY>
+		<PROPERTY>x_is_show_paymethod</PROPERTY>
+		<PROPERTY_DETAIL>Ödeme Yöntemi Gösterilsin mi ?</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>select</PROPERTY_TYPE>
+		<PROPERTY_VALUES>1,0</PROPERTY_VALUES>
+		<PROPERTY_NAMES>Evet,Hayır</PROPERTY_NAMES>
+		<PROPERTY_DEFAULT>1</PROPERTY_DEFAULT>
+		<PROPERTY_HELP>Evet olarak seçildiğinde Ödeme yöntemi alanı seçilebilir bir halde harcama talebi ekranına gelir.</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+	<OBJECT_PROPERTY>
+		<PROPERTY>x_is_show_cari</PROPERTY>
+		<PROPERTY_DETAIL>Satıcı Gösterilsin mi ?</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>select</PROPERTY_TYPE>
+		<PROPERTY_VALUES>1,0</PROPERTY_VALUES>
+		<PROPERTY_NAMES>Evet,Hayır</PROPERTY_NAMES>
+		<PROPERTY_DEFAULT>0</PROPERTY_DEFAULT>
+		<PROPERTY_HELP>Evet olarak seçilirse,Satıcı alanı harcama talebi ekranına satıcı seçilebilir bir halde gelir.(üyelerde satıcı check-boxı işaretlenen üyeler gelir.)</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+	<OBJECT_PROPERTY>
+		<PROPERTY>x_is_project_priority</PROPERTY>
+		<PROPERTY_DETAIL>Proje Öncelikli İşlem Yapılsın</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>select</PROPERTY_TYPE>
+		<PROPERTY_VALUES>1,0</PROPERTY_VALUES>
+		<PROPERTY_NAMES>Evet,Hayır</PROPERTY_NAMES>
+		<PROPERTY_DEFAULT>0</PROPERTY_DEFAULT>
+		<PROPERTY_HELP>Evet olarak seçildiğinde proje sütunu öncelikli gelir.</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+	<OBJECT_PROPERTY>
+		<PROPERTY>xml_order_list_rows</PROPERTY>
+		<PROPERTY_DETAIL>Satırlarda Öncelik Sıralaması</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>input</PROPERTY_TYPE>
+		<PROPERTY_VALUES></PROPERTY_VALUES>
+		<PROPERTY_NAMES></PROPERTY_NAMES>
+		<PROPERTY_DEFAULT>20,2,3,4,12,7,8,9,10,11,12,13,</PROPERTY_DEFAULT>
+		<PROPERTY_HELP>1.Tarih, 2.Açıklama, 3.Masraf Merkezi, 4.Gider Kalemi, 5.Ürün, 6.Birim, 7.Miktar, 8.Tutar, 9.Kdv %, 10.Kdv, 11.Genel Toplam, 12.Para Br, 13.Dövizli Tutar, 14.Aktivite Tipi, 15.İş, 16.Fırsat, 17.Harcama Yapan, 18.Fiziki Varlık, 19.Proje,20.Harcırah Kuralları / Nosu Yazılmayan Kolonlar Listede Görüntülenmeyecektir. (2,8,9,11,12,13) Alanları Zorunlu Olarak Görüntülenmelidir.</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+	<OBJECT_PROPERTY>
+		<PROPERTY>x_is_add_position_to_asset_list</PROPERTY>
+		<PROPERTY_DETAIL>Varlık Sorumlusu Harcama Yapan Olsun mu?</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>select</PROPERTY_TYPE>
+		<PROPERTY_VALUES>1,0</PROPERTY_VALUES>
+		<PROPERTY_NAMES>Evet,Hayır</PROPERTY_NAMES>
+		<PROPERTY_DEFAULT>0</PROPERTY_DEFAULT>
+		<PROPERTY_HELP> Evet olarak seçildiğinde satırda seçilen fiziki varlığın sorumlusu harcama yapan kişi olarak atılır.</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+	<OBJECT_PROPERTY>
+		<PROPERTY>x_is_project_select</PROPERTY>
+		<PROPERTY_DETAIL>Satırda Ürün Varken Proje Değiştirilebilsin mi?</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>select</PROPERTY_TYPE>
+		<PROPERTY_VALUES>0,1</PROPERTY_VALUES>
+		<PROPERTY_NAMES>Hayır,Evet</PROPERTY_NAMES>
+		<PROPERTY_DEFAULT>0</PROPERTY_DEFAULT>
+		<PROPERTY_HELP>Evet olarak seçildiğinde satırda ürün varken proje değiştirilebilir. Hayır ise ürün silinmeden proje değiştirilemez.</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+	<OBJECT_PROPERTY>
+		<PROPERTY>x_select_project</PROPERTY>
+		<PROPERTY_DETAIL>Proje Seçimi Zorunlu Olsun mu?</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>select</PROPERTY_TYPE>
+		<PROPERTY_VALUES>0,1</PROPERTY_VALUES>
+		<PROPERTY_NAMES>Hayır,Evet</PROPERTY_NAMES>
+		<PROPERTY_DEFAULT>0</PROPERTY_DEFAULT>
+		<PROPERTY_HELP>Evet olarak seçildiğinde proje seçimi olmadan harcama talebi eklenmesine ve güncellenmesine izin verilmez.</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+	<OBJECT_PROPERTY>
+		<PROPERTY>x_select_work</PROPERTY>
+		<PROPERTY_DETAIL>İş Seçimi Zorunlu Olsun mu?</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>select</PROPERTY_TYPE>
+		<PROPERTY_VALUES>0,1</PROPERTY_VALUES>
+		<PROPERTY_NAMES>Hayır,Evet</PROPERTY_NAMES>
+		<PROPERTY_DEFAULT>0</PROPERTY_DEFAULT>
+		<PROPERTY_HELP> Evet olarak seçildiğinde iş seçimi olmadan harcama talebi eklenmesine izin verilmez.</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+	<OBJECT_PROPERTY>
+		<PROPERTY>xml_exp_center_from_assetp</PROPERTY>
+		<PROPERTY_DETAIL>Masraf Merkezi Fiziki Varlık Sorumlusundan Gelsin</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>select</PROPERTY_TYPE>
+		<PROPERTY_VALUES>1,0</PROPERTY_VALUES>
+		<PROPERTY_NAMES>Evet,Hayır</PROPERTY_NAMES>
+		<PROPERTY_DEFAULT>0</PROPERTY_DEFAULT>
+		<PROPERTY_HELP> Evet olarak seçildiğinde Masraf merkezi fiziki varlığın sorumlusunun ücret kartında belirlediğimiz masraf merkezinden gelir.</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+	<OBJECT_PROPERTY>
+		<PROPERTY>xml_expense_center_is_popup</PROPERTY>
+		<PROPERTY_DETAIL>Masraf Merkezi/Bütçe Kalemi Popup Olarak Gelsin mi</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>select</PROPERTY_TYPE>
+		<PROPERTY_VALUES>1,0</PROPERTY_VALUES>
+		<PROPERTY_NAMES>Evet,Hayır</PROPERTY_NAMES>
+		<PROPERTY_DEFAULT>0</PROPERTY_DEFAULT>
+		<PROPERTY_HELP>Evet olarak seçilirse Masraf merkezi ve bütçe kalemi pop_up şeklinde gelir. Hayır seçilirse liste şeklinde açılır.</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+	<OBJECT_PROPERTY>
+		<PROPERTY>xml_expense_center_budget_item</PROPERTY>
+		<PROPERTY_DETAIL>Masraf/Gelir Merkezi Bütçe Kalemi İlişkisi Kullanılsın Mı</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>select</PROPERTY_TYPE>
+		<PROPERTY_VALUES>1,0</PROPERTY_VALUES>
+		<PROPERTY_NAMES>Evet,Hayır</PROPERTY_NAMES>
+		<PROPERTY_DEFAULT>0</PROPERTY_DEFAULT>
+		<PROPERTY_HELP>Evet olarak seçildiğinde,satırdaki seçilen gelir merkezine bağlı kalemler gelir.</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+	<OBJECT_PROPERTY>
+		<PROPERTY>x_authorized_branch_department</PROPERTY>
+		<PROPERTY_DETAIL>Masraf Merkezleri Yetkili Olunan Şubeler ve Departmanlara Göre Gelsin</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>select</PROPERTY_TYPE>
+		<PROPERTY_VALUES>1,0</PROPERTY_VALUES>
+		<PROPERTY_NAMES>Evet,Hayır</PROPERTY_NAMES>
+		<PROPERTY_DEFAULT>0</PROPERTY_DEFAULT>
+		<PROPERTY_HELP>Evet Seçildiğinde Sadece Yetkili Olunan Şubelerin ve Departmanların Masraf Merkezleri Gelir.</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+	<OBJECT_PROPERTY>
+		<PROPERTY>xml_show_process_stage</PROPERTY>
+		<PROPERTY_DETAIL>işlem Tipi gösterilsin mi?</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>select</PROPERTY_TYPE>
+		<PROPERTY_VALUES>1,0</PROPERTY_VALUES>
+		<PROPERTY_NAMES>Evet,Hayır</PROPERTY_NAMES>
+		<PROPERTY_DEFAULT>1</PROPERTY_DEFAULT>
+		<PROPERTY_HELP>Eğer evet olarak seçilirse sayfada işlem tipi gösterilir</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+</OBJECT_PROPERTIES>

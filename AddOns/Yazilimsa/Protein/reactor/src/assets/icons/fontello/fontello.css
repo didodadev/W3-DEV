@@ -1,0 +1,254 @@
+@font-face {
+  font-family: 'fontello';
+  src: url('fonts/fontello.eot?86619472');
+  src: url('fonts/fontello.eot?86619472#iefix') format('embedded-opentype'),
+       url('fonts/fontello.woff?86619472') format('woff'),
+       url('fonts/fontello.ttf?86619472') format('truetype'),
+       url('fonts/fontello.svg?86619472#fontello') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+/* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
+/* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
+/*
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: 'fontello';
+    src: url('../font/fontello.svg?86619472#fontello') format('svg');
+  }
+}
+*/
+ 
+ [class^="wrk-"]:before, [class*=" wrk-"]:before {
+  font-family: "fontello";
+  font-style: normal;
+  font-weight: normal;
+}
+ 
+.wrk-uF0001:before { content: '\e800'; } /* '' */
+.wrk-uF0002:before { content: '\e801'; } /* '' */
+.wrk-uF0003:before { content: '\e802'; } /* '' */
+.wrk-uF0004:before { content: '\e803'; } /* '' */
+.wrk-uF0005:before { content: '\e804'; } /* '' */
+.wrk-uF0006:before { content: '\e805'; } /* '' */
+.wrk-HR-Diğer:before { content: '\e806'; } /* '' */
+.wrk-HR-Planlama:before { content: '\e807'; } /* '' */
+.wrk-HR-Ücret-Özlük:before { content: '\e808'; } /* '' */
+.wrk-uF0010:before { content: '\e809'; } /* '' */
+.wrk-uF0011:before { content: '\e80a'; } /* '' */
+.wrk-HR:before { content: '\e80b'; } /* '' */
+.wrk-uF0013:before { content: '\e80c'; } /* '' */
+.wrk-uF0014:before { content: '\e80d'; } /* '' */
+.wrk-uF0015:before { content: '\e80e'; } /* '' */
+.wrk-uF0016:before { content: '\e80f'; } /* '' */
+.wrk-uF0017:before { content: '\e810'; } /* '' */
+.wrk-uF0018:before { content: '\e811'; } /* '' */
+.wrk-uF0019:before { content: '\e812'; } /* '' */
+.wrk-uF0020:before { content: '\e813'; } /* '' */
+.wrk-uF0021:before { content: '\e814'; } /* '' */
+.wrk-uF0022:before { content: '\e815'; } /* '' */
+.wrk-uF0023:before { content: '\e816'; } /* '' */
+.wrk-uF0024:before { content: '\e817'; } /* '' */
+.wrk-uF0025:before { content: '\e818'; } /* '' */
+.wrk-uF0026:before { content: '\e819'; } /* '' */
+.wrk-uF0027:before { content: '\e81a'; } /* '' */
+.wrk-uF0028:before { content: '\e81b'; } /* '' */
+.wrk-uF0029:before { content: '\e81c'; } /* '' */
+.wrk-CRM:before { content: '\e81d'; } /* '' */
+.wrk-uF0031:before { content: '\e81e'; } /* '' */
+.wrk-uF0032:before { content: '\e81f'; } /* '' */
+.wrk-CRM-Planlama:before { content: '\e820'; } /* '' */
+.wrk-uF0034:before { content: '\e821'; } /* '' */
+.wrk-CRM-Pazarlama:before { content: '\e822'; } /* '' */
+.wrk-CRM-Satış:before { content: '\e823'; } /* '' */
+.wrk-uF0037:before { content: '\e824'; } /* '' */
+.wrk-uF0038:before { content: '\e825'; } /* '' */
+.wrk-ERP-ÜrünVeStoklar:before { content: '\e826'; } /* '' */
+.wrk-ERP-Satış-Dağıtım:before { content: '\e827'; } /* '' */
+.wrk-uF0041:before { content: '\e828'; } /* '' */
+.wrk-ERP-Üretim:before { content: '\e829'; } /* '' */
+.wrk-ERP-FiyatYönetimi:before { content: '\e82a'; } /* '' */
+.wrk-uF0044:before { content: '\e82b'; } /* '' */
+.wrk-uF0045:before { content: '\e82c'; } /* '' */
+.wrk-uF0046:before { content: '\e82d'; } /* '' */
+.wrk-uF0047:before { content: '\e82e'; } /* '' */
+.wrk-uF0048:before { content: '\e82f'; } /* '' */
+.wrk-uF0049:before { content: '\e830'; } /* '' */
+.wrk-uF0050:before { content: '\e831'; } /* '' */
+.wrk-ERP-Finans-Muhasebe:before { content: '\e832'; } /* '' */
+.wrk-uF0052:before { content: '\e833'; } /* '' */
+.wrk-uF0053:before { content: '\e834'; } /* '' */
+.wrk-uF0054:before { content: '\e835'; } /* '' */
+.wrk-uF0055:before { content: '\e836'; } /* '' */
+.wrk-uF0056:before { content: '\e837'; } /* '' */
+.wrk-uF0057:before { content: '\e838'; } /* '' */
+.wrk-uF0058:before { content: '\e839'; } /* '' */
+.wrk-uF0059:before { content: '\e83a'; } /* '' */
+.wrk-uF0060:before { content: '\e83b'; } /* '' */
+.wrk-uF0061:before { content: '\e83c'; } /* '' */
+.wrk-uF0062:before { content: '\e83d'; } /* '' */
+.wrk-uF0063:before { content: '\e83e'; } /* '' */
+.wrk-uF0064:before { content: '\e83f'; } /* '' */
+.wrk-uF0065:before { content: '\e840'; } /* '' */
+.wrk-uF0066:before { content: '\e841'; } /* '' */
+.wrk-uF0067:before { content: '\e842'; } /* '' */
+.wrk-uF0068:before { content: '\e843'; } /* '' */
+.wrk-uF0069:before { content: '\e844'; } /* '' */
+.wrk-uF0070:before { content: '\e845'; } /* '' */
+.wrk-uF0071:before { content: '\e846'; } /* '' */
+.wrk-uF0072:before { content: '\e847'; } /* '' */
+.wrk-uF0073:before { content: '\e848'; } /* '' */
+.wrk-uF0074:before { content: '\e849'; } /* '' */
+.wrk-uF0075:before { content: '\e84a'; } /* '' */
+.wrk-uF0076:before { content: '\e84b'; } /* '' */
+.wrk-uF0077:before { content: '\e84c'; } /* '' */
+.wrk-uF0078:before { content: '\e84d'; } /* '' */
+.wrk-uF0079:before { content: '\e84e'; } /* '' */
+.wrk-uF0080:before { content: '\e84f'; } /* '' */
+.wrk-uF0081:before { content: '\e850'; } /* '' */
+.wrk-uF0082:before { content: '\e851'; } /* '' */
+.wrk-uF0083:before { content: '\e852'; } /* '' */
+.wrk-uF0084:before { content: '\e853'; } /* '' */
+.wrk-uF0085:before { content: '\e854'; } /* '' */
+.wrk-uF0086:before { content: '\e855'; } /* '' */
+.wrk-uF0087:before { content: '\e856'; } /* '' */
+.wrk-uF0088:before { content: '\e857'; } /* '' */
+.wrk-uF0089:before { content: '\e858'; } /* '' */
+.wrk-uF0090:before { content: '\e859'; } /* '' */
+.wrk-uF0091:before { content: '\e85a'; } /* '' */
+.wrk-uF0092:before { content: '\e85b'; } /* '' */
+.wrk-uF0093:before { content: '\e85c'; } /* '' */
+.wrk-uF0094:before { content: '\e85d'; } /* '' */
+.wrk-uF0095:before { content: '\e85e'; } /* '' */
+.wrk-uF0096:before { content: '\e85f'; } /* '' */
+.wrk-uF0097:before { content: '\e860'; } /* '' */
+.wrk-uF0098:before { content: '\e861'; } /* '' */
+.wrk-uF0099:before { content: '\e862'; } /* '' */
+.wrk-uF0100:before { content: '\e863'; } /* '' */
+.wrk-uF0101:before { content: '\e864'; } /* '' */
+.wrk-uF0102:before { content: '\e865'; } /* '' */
+.wrk-uF0103:before { content: '\e866'; } /* '' */
+.wrk-uF0104:before { content: '\e867'; } /* '' */
+.wrk-uF0105:before { content: '\e868'; } /* '' */
+.wrk-uF0106:before { content: '\e869'; } /* '' */
+.wrk-uF0107:before { content: '\e86a'; } /* '' */
+.wrk-uF0108:before { content: '\e86b'; } /* '' */
+.wrk-uF0109:before { content: '\e86c'; } /* '' */
+.wrk-uF0110:before { content: '\e86d'; } /* '' */
+.wrk-uF0111:before { content: '\e86e'; } /* '' */
+.wrk-uF0112:before { content: '\e86f'; } /* '' */
+.wrk-uF0113:before { content: '\e870'; } /* '' */
+.wrk-uF0114:before { content: '\e871'; } /* '' */
+.wrk-uF0115:before { content: '\e872'; } /* '' */
+.wrk-uF0116:before { content: '\e873'; } /* '' */
+.wrk-uF0117:before { content: '\e874'; } /* '' */
+.wrk-uF0118:before { content: '\e875'; } /* '' */
+.wrk-uF0119:before { content: '\e876'; } /* '' */
+.wrk-uF0120:before { content: '\e877'; } /* '' */
+.wrk-uF0121:before { content: '\e878'; } /* '' */
+.wrk-uF0122:before { content: '\e879'; } /* '' */
+.wrk-uF0123:before { content: '\e87a'; } /* '' */
+.wrk-uF0124:before { content: '\e87b'; } /* '' */
+.wrk-uF0125:before { content: '\e87c'; } /* '' */
+.wrk-uF0126:before { content: '\e87d'; } /* '' */
+.wrk-uF0127:before { content: '\e87e'; } /* '' */
+.wrk-uF0128:before { content: '\e87f'; } /* '' */
+.wrk-uF0129:before { content: '\e880'; } /* '' */
+.wrk-uF0130:before { content: '\e881'; } /* '' */
+.wrk-uF0131:before { content: '\e882'; } /* '' */
+.wrk-uF0132:before { content: '\e883'; } /* '' */
+.wrk-uF0133:before { content: '\e884'; } /* '' */
+.wrk-uF0134:before { content: '\e885'; } /* '' */
+.wrk-uF0135:before { content: '\e886'; } /* '' */
+.wrk-uF0136:before { content: '\e887'; } /* '' */
+.wrk-uF0137:before { content: '\e888'; } /* '' */
+.wrk-uF0138:before { content: '\e889'; } /* '' */
+.wrk-uF0139:before { content: '\e88a'; } /* '' */
+.wrk-uF0140:before { content: '\e88b'; } /* '' */
+.wrk-uF0141:before { content: '\e88c'; } /* '' */
+.wrk-uF0142:before { content: '\e88d'; } /* '' */
+.wrk-uF0143:before { content: '\e88e'; } /* '' */
+.wrk-uF0144:before { content: '\e88f'; } /* '' */
+.wrk-uF0145:before { content: '\e890'; } /* '' */
+.wrk-uF0146:before { content: '\e891'; } /* '' */
+.wrk-uF0147:before { content: '\e892'; } /* '' */
+.wrk-uF0148:before { content: '\e893'; } /* '' */
+.wrk-uF0149:before { content: '\e894'; } /* '' */
+.wrk-uF0150:before { content: '\e895'; } /* '' */
+.wrk-uF0151:before { content: '\e896'; } /* '' */
+.wrk-uF0152:before { content: '\e897'; } /* '' */
+.wrk-uF0153:before { content: '\e898'; } /* '' */
+.wrk-uF0154:before { content: '\e899'; } /* '' */
+.wrk-uF0155:before { content: '\e89a'; } /* '' */
+.wrk-uF0156:before { content: '\e89b'; } /* '' */
+.wrk-uF0157:before { content: '\e89c'; } /* '' */
+.wrk-uF0158:before { content: '\e89d'; } /* '' */
+.wrk-uF0159:before { content: '\e89e'; } /* '' */
+.wrk-uF0160:before { content: '\e89f'; } /* '' */
+.wrk-uF0161:before { content: '\e8a0'; } /* '' */
+.wrk-uF0162:before { content: '\e8a1'; } /* '' */
+.wrk-uF0163:before { content: '\e8a2'; } /* '' */
+.wrk-uF0164:before { content: '\e8a3'; } /* '' */
+.wrk-uF0165:before { content: '\e8a4'; } /* '' */
+.wrk-uF0166:before { content: '\e8a5'; } /* '' */
+.wrk-uF0167:before { content: '\e8a6'; } /* '' */
+.wrk-uF0168:before { content: '\e8a7'; } /* '' */
+.wrk-uF0169:before { content: '\e8a8'; } /* '' */
+.wrk-uF0170:before { content: '\e8a9'; } /* '' */
+.wrk-uF0171:before { content: '\e8aa'; } /* '' */
+.wrk-uF0172:before { content: '\e8ab'; } /* '' */
+.wrk-uF0173:before { content: '\e8ac'; } /* '' */
+.wrk-uF0174:before { content: '\e8ad'; } /* '' */
+.wrk-uF0175:before { content: '\e8ae'; } /* '' */
+.wrk-uF0176:before { content: '\e8af'; } /* '' */
+.wrk-uF0177:before { content: '\e8b0'; } /* '' */
+.wrk-uF0178:before { content: '\e8b1'; } /* '' */
+.wrk-uF0179:before { content: '\e8b2'; } /* '' */
+.wrk-uF0180:before { content: '\e8b3'; } /* '' */
+.wrk-uF0181:before { content: '\e8b4'; } /* '' */
+.wrk-uF0182:before { content: '\e8b5'; } /* '' */
+.wrk-uF0183:before { content: '\e8b6'; } /* '' */
+.wrk-uF0184:before { content: '\e8b7'; } /* '' */
+.wrk-uF0185:before { content: '\e8b8'; } /* '' */
+.wrk-uF0186:before { content: '\e8b9'; } /* '' */
+.wrk-uF0187:before { content: '\e8ba'; } /* '' */
+.wrk-uF0188:before { content: '\e8bb'; } /* '' */
+.wrk-uF0189:before { content: '\e8bc'; } /* '' */
+.wrk-uF0190:before { content: '\e8bd'; } /* '' */
+.wrk-uF0191:before { content: '\e8be'; } /* '' */
+.wrk-uF0192:before { content: '\e8bf'; } /* '' */
+.wrk-uF0193:before { content: '\e8c0'; } /* '' */
+.wrk-uF0194:before { content: '\e8c1'; } /* '' */
+.wrk-uF0195:before { content: '\e8c2'; } /* '' */
+.wrk-uF0196:before { content: '\e8c3'; } /* '' */
+.wrk-uF0197:before { content: '\e8c4'; } /* '' */
+.wrk-uF0198:before { content: '\e8c5'; } /* '' */
+.wrk-uF0199:before { content: '\e8c6'; } /* '' */
+.wrk-uF0200:before { content: '\e8c7'; } /* '' */
+.wrk-uF0201:before { content: '\e8c8'; } /* '' */
+.wrk-uF0202:before { content: '\e8c9'; } /* '' */
+.wrk-uF0203:before { content: '\e8ca'; } /* '' */
+.wrk-uF0204:before { content: '\e8cb'; } /* '' */
+.wrk-uF0205:before { content: '\e8cc'; } /* '' */
+.wrk-uF0206:before { content: '\e8cd'; } /* '' */
+.wrk-uF0207:before { content: '\e8ce'; } /* '' */
+.wrk-uF0208:before { content: '\e8cf'; } /* '' */
+.wrk-uF0209:before { content: '\e8d0'; } /* '' */
+.wrk-uF0210:before { content: '\e8d1'; } /* '' */
+.wrk-uF0211:before { content: '\e8d2'; } /* '' */
+.wrk-uF0212:before { content: '\e8d3'; } /* '' */
+.wrk-uF0213:before { content: '\e8d4'; } /* '' */
+.wrk-uF0214:before { content: '\e8d5'; } /* '' */
+.wrk-uF0215:before { content: '\e8d6'; } /* '' */
+.wrk-uF0216:before { content: '\e8d7'; } /* '' */
+.wrk-uF0217:before { content: '\e8d8'; } /* '' */
+.wrk-uF0218:before { content: '\e8d9'; } /* '' */
+.wrk-uF0219:before { content: '\e8da'; } /* '' */
+.wrk-uF0220:before { content: '\e8db'; } /* '' */
+.wrk-uF0221:before { content: '\e8dc'; } /* '' */
+.wrk-uF0222:before { content: '\e8dd'; } /* '' */
+.wrk-uF0223:before { content: '\e8de'; } /* '' */
+.wrk-uF0224:before { content: '\e8df'; } /* '' */
+.wrk-uF0225:before { content: '\e8e0'; } /* '' */
+.wrk-uF0226:before { content: '\e8e1'; } /* '' */
+.wrk-uF0227:before { content: '\e8e2'; } /* '' */

@@ -1,0 +1,4 @@
+INSERT INTO [SERVICE_CARE_CAT]([SERVICE_CARE],[DETAIL]) Values( 'Periyodik Bakım',Null);
+INSERT INTO [SERVICE_CARE_CAT]([SERVICE_CARE],[DETAIL]) Values( 'Uzaktan İzleme',Null);
+INSERT INTO [SERVICE_CARE_CAT]([SERVICE_CARE],[DETAIL]) Values( 'Talep Anında Bakım',Null);
+

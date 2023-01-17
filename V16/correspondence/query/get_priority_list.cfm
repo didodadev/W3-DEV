@@ -1,0 +1,8 @@
+<cfquery name="GET_PRIORITY" datasource="#dsn#">
+	SELECT
+		*
+	FROM
+		SETUP_PRIORITY
+	WHERE
+		PRIORITY_ID=#GET_LIST_INTERNALDEMAND.PRIORITY#
+</cfquery>

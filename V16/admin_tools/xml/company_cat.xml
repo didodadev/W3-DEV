@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<COMPANY_CAT>
+	  <COMPANY>
+			<COMPANYCAT_ID>1</COMPANYCAT_ID>
+			<COMPANYCAT>Ürün Tedarikçileri</COMPANYCAT>
+			<DETAIL/>
+	 </COMPANY>
+  
+	  <COMPANY>
+			<COMPANYCAT_ID>2</COMPANYCAT_ID>
+			<COMPANYCAT>Hizmet Tedarikçiler</COMPANYCAT>
+			<DETAIL/>
+	 </COMPANY>
+  
+	  <COMPANY>
+			<COMPANYCAT_ID>3</COMPANYCAT_ID>
+			<COMPANYCAT>Rakipler</COMPANYCAT>
+			<DETAIL/>
+	 </COMPANY>
+</COMPANY_CAT>

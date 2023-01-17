@@ -1,0 +1,13 @@
+<cfquery name="GET_PRO_CAT" datasource="#DSN3#">
+	SELECT
+		PRODUCT_CATID,
+		PRODUCT_CAT,
+		HIERARCHY
+	FROM
+		PRODUCT_CAT
+	WHERE
+		IS_SUB_PRODUCT_CAT = 0
+	ORDER BY
+		HIERARCHY,
+		PRODUCT_CAT		
+</cfquery>

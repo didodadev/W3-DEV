@@ -1,0 +1,9 @@
+<cfquery name="GET_PURPOSE" datasource="#DSN#">
+	SELECT
+		PURPOSE_ID,
+		USAGE_PURPOSE
+	FROM
+		SETUP_ASSETP_USAGE_PURPOSE
+	ORDER BY
+		PURPOSE_ID 
+</cfquery>

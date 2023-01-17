@@ -1,0 +1,8 @@
+1_ Üye Tipi : Kurumsal yada bireysel üyeyi ayýrt etmek için kullanmanýz gerekiyor . Kurumsal ise K , Bireysel ise B harfini yazýnýz .;2_ Öncelik : Ekleyeceðiniz muhasebe kodunuz bu üye için öncelikli kod olacak ise 1deðilse 0yazýnýz .;3_ Cari Kodu veya Özel Kod : Aktarýmda referans olarak kullanacaðýnýz alaný yazmanýz gerekiyor . Yalnýz bir aktarým ayný anda hem cari kodu hemde özel kod ile yapýlamaz, bir dosyadaki kodlarýn hepsinin ayný olmasý gerekmektedir yani bazýlarý cari kodu bazýlarý ise özel kod olamaz .;4_ Muhasebe Hesabý : Sisteminizde kayýtlý olan muhasebe hesap numaralarýndan bir tanesini girmeniz gerekmektedireðer sisteminizde tanýmýlý deðilse bu numara kayýt yapýlmayacaktýr . ;5_ Konsinye Mal Hesabý : Sisteminizde kayýtlý olan muhasebe hesap numaralarýndan bir tanesini girmeniz gerekmektedireðer sisteminizde tanýmýlý deðilse bu numara kayýt yapýlmayacaktýr .( Sadece kurumsal üyeler için geçerlidirbireysel üyeler için boþ býrakýlabilir );6_ Alýcý : Üyeniz Alýcý ise 1deðilse 0yazýnýz .;7_ Satýcý : Üyeniz Satýcý ise 1deðilse0 yazýnýz .;8_ Avans Hesap Kodu : Avans hesap kodunu yazýnýz .
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;

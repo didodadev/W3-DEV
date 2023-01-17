@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SETUP_SITE>
+	<SETUPSITE>
+		<LINK_NAME>Demirbaş Değerleme XML Setup</LINK_NAME> 
+		<LINK_FILE>invent.popup_add_invent_amortization</LINK_FILE> 
+		<LINK_DETAIL>Demirbaş Değerleme Ayarlarının Düzenlenmesi</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Sabit Kıymet Hareket  </LINK_NAME> 
+		<LINK_FILE>invent.list_actions</LINK_FILE> 
+		<LINK_DETAIL>Sabit Kıymet Hareket Listeleme Sayfası XML</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Demirbaş Değerleme Listesi XML Setup</LINK_NAME> 
+		<LINK_FILE>invent.list_invent_amortization</LINK_FILE> 
+		<LINK_DETAIL>Demirbaş Değerleme Listesi Ayarlarının Düzenlenmesi</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Demirbaş Detayı XML Setup</LINK_NAME> 
+		<LINK_FILE>invent.detail_invent</LINK_FILE> 
+		<LINK_DETAIL>Demirbaş Detayı Ayarlarının Düzenlenmesi</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Yeniden Değerleme XML Setup</LINK_NAME> 
+		<LINK_FILE>invent.popup_print_invent_amortization</LINK_FILE> 
+		<LINK_DETAIL>Yeniden Değerleme</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Sabit Kıymetler Satış XML Setup</LINK_NAME> 
+		<LINK_FILE>invent.add_invent_sale</LINK_FILE> 
+		<LINK_DETAIL>Sabit Kıymetler Satış</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Sabit Kıymetler Alış XML Setup</LINK_NAME> 
+		<LINK_FILE>invent.add_invent_purchase</LINK_FILE> 
+		<LINK_DETAIL>Sabit Kıymetler Alış</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Sabit Kıymeti Fiziki Varlığa Dönüştür XML Setup</LINK_NAME> 
+		<LINK_FILE>invent.popup_add_inventory_stock_to_asset</LINK_FILE> 
+		<LINK_DETAIL>Sabit Kıymeti Fiziki Varlığa Dönüştür</LINK_DETAIL>
+	</SETUPSITE>
+</SETUP_SITE>

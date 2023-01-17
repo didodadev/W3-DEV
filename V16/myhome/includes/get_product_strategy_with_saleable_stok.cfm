@@ -1,0 +1,22 @@
+<!--- satılabilir stok miktarına gore yeniden siparis noktasına gelen urunleri getiriyor --->
+<cfquery name="GET_STRATEGY" datasource="#dsn3#" maxrows="#attributes.maxrows#">
+	SELECT 
+		STOCKS.PRODUCT_ID,
+		STOCKS.STOCK_ID,
+		STOCKS.PRODUCT_NAME,
+		STOCKS.PROPERTY,
+		GSS.REPEAT_STOCK_VALUE,
+		GPS.SALEABLE_STOCK AS PRODUCT_TOTAL_STOCK
+	FROM
+		STOCKS,
+		#dsn2_alias#.GET_STOCK_LAST AS GPS,
+		#dsn2_alias#.GET_STOCK_STRATEGY AS GSS
+	WHERE
+		STOCKS.STOCK_ID = GPS.STOCK_ID AND 
+		STOCKS.PRODUCT_STATUS = 1 AND
+		STOCKS.STOCK_STATUS = 1 AND
+		GSS.DEPARTMENT_ID IS NULL AND 
+		GSS.STOCK_ID = GPS.STOCK_ID AND 
+		GPS.SALEABLE_STOCK <= GSS.REPEAT_STOCK_VALUE AND
+		ISNULL(GSS.IS_LIVE_ORDER,0) = 1
+</cfquery>

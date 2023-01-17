@@ -1,0 +1,28 @@
+/*
+Bordro Databaselerinden bilgi alır
+Çalışan Maaş Aktarımı
+ehesap.form_transfer_salary
+*/
+DECLARE @SQLString NVARCHAR(max)
+
+SET @SQLString = N'SELECT 
+	ROW_NUMBER() OVER(ORDER BY ASSIGN.LREF) AS SiraNo,
+	PERIDINF.IDTCNO as TcKimlikNo,
+	PERSON.NAME+'' ''+PERSON.MIDNAME+'' ''+PERSON.SURNAME as IsimSoyisim,
+	MONTH(ASSIGN.BEGDATE) as BaslangicAy,
+	isnull (MONTH(ASSIGN.ENDDATE),12) as BitisAy,
+	YEAR(ASSIGN.BEGDATE) as Yil,
+	WAGE_WAGE as Maas,
+	(SELECT TOP 1 CURCODE FROM L_CURRENCYLIST WHERE CURTYPE=WAGE_CURRTYPE) as DovizCinsi 
+
+FROM    LH_'+@FirmNr+'_PERIDINF AS PERIDINF RIGHT OUTER JOIN
+        LH_'+@FirmNr+'_PERSON AS PERSON ON PERIDINF.LREF = PERSON.LREF LEFT OUTER JOIN
+        LH_'+@FirmNr+'_ASSIGN AS ASSIGN ON PERSON.LREF = ASSIGN.PERREF
+order by PERSON.LREF,ASSIGN.BEGDATE'
+
+EXECUTE sp_executesql @SQLString
+ 
+
+ 
+
+ 

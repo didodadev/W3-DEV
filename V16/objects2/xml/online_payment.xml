@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<OBJECT_PROPERTIES>
+    <OBJECT_PROPERTY>
+		<PROPERTY>api_platform</PROPERTY>
+		<PROPERTY_DETAIL>NKolay api platform seçimi</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>select</PROPERTY_TYPE>
+		<PROPERTY_VALUES>test,prod</PROPERTY_VALUES>
+		<PROPERTY_NAMES>test,prod</PROPERTY_NAMES>
+		<PROPERTY_DEFAULT>test</PROPERTY_DEFAULT>
+		<PROPERTY_HELP>Ödeme entegrasyonu test sürecindeyse test seçilmelidir, canlı ortama geçiş sonrasında prod olarak değiştirilmelidir</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+    <OBJECT_PROPERTY>
+		<PROPERTY>company_code</PROPERTY>
+		<PROPERTY_DETAIL>NKolay üye işyeri numarası</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>input</PROPERTY_TYPE>
+		<PROPERTY_VALUES></PROPERTY_VALUES>
+		<PROPERTY_NAMES></PROPERTY_NAMES>
+		<PROPERTY_DEFAULT></PROPERTY_DEFAULT>
+		<PROPERTY_HELP>Ödeme entegratörü tarafından sağlanan üye işyeri numarasıdır.</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+    <OBJECT_PROPERTY>
+		<PROPERTY>merchantSecretKey</PROPERTY>
+		<PROPERTY_DETAIL>NKolay secret Key</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>input</PROPERTY_TYPE>
+		<PROPERTY_VALUES></PROPERTY_VALUES>
+		<PROPERTY_NAMES></PROPERTY_NAMES>
+		<PROPERTY_DEFAULT></PROPERTY_DEFAULT>
+		<PROPERTY_HELP>Ödeme entegratörü tarafından sağlanan özel anahtardır. Test ve canlı sistemler için farklılık gösterir. Canlı sisteme geçişte değiştirmeniz gerekir</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+    <OBJECT_PROPERTY>
+		<PROPERTY>sx_code</PROPERTY>
+		<PROPERTY_DETAIL>NKolay sx kodu</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>input</PROPERTY_TYPE>
+		<PROPERTY_VALUES></PROPERTY_VALUES>
+		<PROPERTY_NAMES></PROPERTY_NAMES>
+		<PROPERTY_DEFAULT></PROPERTY_DEFAULT>
+		<PROPERTY_HELP>Ödeme entegratörü tarafından sağlanan özel koddur. Test ve canlı sistemler için farklılık gösterir. Canlı sisteme geçişte değiştirmeniz gerekir</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+	<OBJECT_PROPERTY>
+		<PROPERTY>success_url</PROPERTY>
+		<PROPERTY_DETAIL>NKolay success url</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>input</PROPERTY_TYPE>
+		<PROPERTY_VALUES></PROPERTY_VALUES>
+		<PROPERTY_NAMES></PROPERTY_NAMES>
+		<PROPERTY_DEFAULT></PROPERTY_DEFAULT>
+		<PROPERTY_HELP>Ödeme işlemi başarılı olarak tamamlandıktan sonra yönlendirilecek adres</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+	<OBJECT_PROPERTY>
+		<PROPERTY>fail_url</PROPERTY>
+		<PROPERTY_DETAIL>NKolay fail url</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>input</PROPERTY_TYPE>
+		<PROPERTY_VALUES></PROPERTY_VALUES>
+		<PROPERTY_NAMES></PROPERTY_NAMES>
+		<PROPERTY_DEFAULT></PROPERTY_DEFAULT>
+		<PROPERTY_HELP>Ödeme işleminde hata oluştuğu taktirde yönlendirilecek adres</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+	<OBJECT_PROPERTY>
+		<PROPERTY>is_amount</PROPERTY>
+		<PROPERTY_DETAIL>Tutar İnput Gösterimi</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>select</PROPERTY_TYPE>
+		<PROPERTY_VALUES>1,0</PROPERTY_VALUES>
+		<PROPERTY_NAMES>evet,hayır</PROPERTY_NAMES>
+		<PROPERTY_DEFAULT>hayır</PROPERTY_DEFAULT>
+		<PROPERTY_HELP>Tutar</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+</OBJECT_PROPERTIES>

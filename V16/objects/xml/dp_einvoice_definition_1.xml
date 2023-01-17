@@ -1,0 +1,10 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/">
+		   <soapenv:Header/>
+		   <soapenv:Body>
+			  <tem:GetFormsAuthenticationTicket>
+				 <tem:CorporateCode>WCC</tem:CorporateCode>
+				 <tem:LoginName>ws.wcc</tem:LoginName>
+				 <tem:Password><![CDATA[1234]]></tem:Password>
+			  </tem:GetFormsAuthenticationTicket>
+		   </soapenv:Body>
+		</soapenv:Envelope>

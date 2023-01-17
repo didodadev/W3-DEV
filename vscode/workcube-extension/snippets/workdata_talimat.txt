@@ -1,0 +1,24 @@
+workdata cfc dosyaları için ekleme 2 kısımda, aşağıdaki gibi yapılacaktır:
+
+    Örnek:
+
+        "Workcube <get_department>": {
+            "prefix": "wdata:get_department",
+            "body": [
+                "<cfset get_department = CreateObject(\"component\",\"cfc/get_department\") />"
+            ]
+        },
+
+    - prefix için wdata: tanımı kullanılmalıdır.
+    - body kısmında, değişken adı olarak, cfc dosya adı verilmeli, içerik buna göre düzenlenmelidir.
+    - Her workdata cfc dosyası için üstteki gibi ekleme yapılmalı. Ardından, cfc dosya adı aşağıdaki listeye eklenmeli.
+
+        "combo_name:list": {
+            "prefix": "combo_name:list",
+            "body": "${1|get_cash,get_budget_cat,get_acc_type,get_shelf,get_product,get_department|}"
+        }
+
+
+        - cf_wrk_combo custom tag'inde, name içinde kullanılabilir yapmak için:
+            combo_name:list içerisine eklenmelidir.
+        - Bu tanımda, cfc dosya adı || karakterleri arasına BOŞLUK BIRAKMADAN, virgül ile ayırarak eklenmelidir.

@@ -1,0 +1,15 @@
+<!-- Description : Fatura Anlaşma Aksiyon Koşullarına Uygunluk Sayfası için stage ve not alanları
+Developer: İlker Altındal
+Company : Workcube
+Destination: Period -->
+<querytag>
+    IF NOT EXISTS (SELECT 'Y' FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME = 'INVOICE_CONTRACT_COMPARISON' AND TABLE_SCHEMA = '@_dsn_period_@' AND COLUMN_NAME = 'STAGE_ID')
+    BEGIN
+        ALTER TABLE INVOICE_CONTRACT_COMPARISON ADD STAGE_ID BIT NULL
+    END;
+
+    IF NOT EXISTS (SELECT 'Y' FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME = 'INVOICE_CONTRACT_COMPARISON' AND TABLE_SCHEMA = '@_dsn_period_@' AND COLUMN_NAME = 'NOTE')
+    BEGIN
+        ALTER TABLE INVOICE_CONTRACT_COMPARISON ADD NOTE nvarchar(50) NULL
+    END;
+</querytag>

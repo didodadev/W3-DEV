@@ -1,0 +1,11 @@
+<cfquery name="GET_PUNISHMENT_UPD" datasource="#dsn#">
+	SELECT 
+		ASSET_P_PUNISHMENT.*,
+		ASSET_P.ASSETP
+	FROM 
+		ASSET_P_PUNISHMENT,
+		ASSET_P
+	WHERE 
+		ASSET_P_PUNISHMENT.PUNISHMENT_ID = #attributes.punishment_id# AND 
+		ASSET_P_PUNISHMENT.ASSETP_ID = ASSET_P.ASSETP_ID
+</cfquery>

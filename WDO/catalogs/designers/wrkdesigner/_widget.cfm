@@ -1,0 +1,1 @@
+<cf_box box_page="#request.self#?fuseaction=dev.workdev&fuseact=#attributes.fuseact#&event=ajax-widget-list&isAjax=1" title="Widgets" closable="0"></cf_box>

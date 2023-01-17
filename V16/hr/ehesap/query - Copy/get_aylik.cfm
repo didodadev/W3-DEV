@@ -1,0 +1,351 @@
+<cfscript>
+	//workcube_fire_ids = "3,4,5,6,7,14,10,12,15,16";
+	//ebildirge_fire_ids = "9,9,7,8,10,5,4,3,5,2";
+	workcube_fire_ids = "1,2,26,27,21,25,6,7,3,4,5,14,9,10,8,13,15,11,12,17,18,19,20,22,23,24,28";
+	ebildirge_fire_ids= "15,3,4,5,2,1,12,13,9,14,10,6,7,6,12,13,7,7,7,18,16,17,20,19,20,21,22";
+	
+	ssk_employee_count=0;
+	bu_ay_basi = createdate(attributes.sal_year,attributes.sal_mon,1);
+	aydaki_gun_sayisi = daysinmonth(bu_ay_basi);
+	bu_ay_sonu = createdate(attributes.sal_year,attributes.SAL_MON,aydaki_gun_sayisi);
+	
+	bu_ay_basi_ = createodbcdatetime(bu_ay_basi);
+	bu_ay_sonu_ = createodbcdatetime(bu_ay_sonu);
+	</cfscript>
+	<cfquery name="get_insurance_ratio" datasource="#dsn#">
+		SELECT 
+			* 
+		FROM 
+			INSURANCE_RATIO 
+		WHERE 
+			STARTDATE <= #BU_AY_BASI# AND 
+			FINISHDATE >= #BU_AY_SONU#
+	</cfquery>
+	<cfif not get_insurance_ratio.recordcount>
+		<script type="text/javascript">
+			alert("Öncelikle SSK Parametrelerini Tanımlayınız !");
+			history.back();
+		</script>
+		<cfabort>
+	</cfif>
+	
+	<cfquery name="get_insurance_sonu" datasource="#dsn#" maxrows="1">
+		SELECT MAX_PAYMENT FROM INSURANCE_PAYMENT WHERE STARTDATE <= #BU_AY_BASI# AND FINISHDATE >= #BU_AY_SONU#
+	</cfquery>
+	<cfif not get_insurance_ratio.recordcount>
+		<script type="text/javascript">
+			alert("Öncelikle SSK Parametrelerini Tanımlayınız !");
+			history.back();
+		</script>
+		<cfabort>
+	</cfif>
+	<cfset ssk_matrah_tavan = get_insurance_sonu.MAX_PAYMENT>
+	<cfset attributes.SSK_OFFICE1 = attributes.SSK_OFFICE>
+	<cfset attributes.SSK_OFFICE = listgetat(attributes.SSK_OFFICE,3,'-')>
+	<cfinclude template="get_puantaj.cfm">
+	<cfif not get_puantaj.recordcount>
+		<script type="text/javascript">
+			alert("Öncelikle Puantaj aktarımı yapınız !");
+			history.back();
+		</script>
+		<cfabort>
+	</cfif>
+	
+	<cfquery name="get_branch_info" datasource="#DSN#">
+		SELECT BRANCH_ID, BRANCH_ADDRESS, BRANCH_POSTCODE, BRANCH_COUNTY, BRANCH_TELCODE, BRANCH_TEL1, BRANCH_CITY, BRANCH_WORK, BRANCH_FULLNAME, BRANCH_TAX_NO, BRANCH_TAX_OFFICE,  ADMIN1_POSITION_CODE, SSK_M, SSK_JOB, SSK_CD, SSK_BRANCH, SSK_BRANCH_OLD, SSK_NO, SSK_CITY, SSK_COUNTRY,SSK_AGENT, DANGER_DEGREE, DANGER_DEGREE_NO, KANUN_5084_ORAN, COMPANY_ID FROM BRANCH
+		WHERE
+			BRANCH_ID = #attributes.SSK_OFFICE#
+			AND BRANCH_STATUS = 1
+		<cfif not session.ep.ehesap>
+			AND BRANCH.BRANCH_ID IN ( SELECT BRANCH_ID FROM EMPLOYEE_POSITION_BRANCHES WHERE EMPLOYEE_POSITION_BRANCHES.POSITION_CODE = #session.ep.position_code# )
+		</cfif>
+	</cfquery>
+	<cfset attributes.SSK_OFFICE = attributes.SSK_OFFICE1>
+	<cfif get_branch_info.recordcount>	<!--- ch --->
+		<cfquery name="get_company_info" datasource="#DSN#">
+			SELECT COMPANY_NAME, MANAGER, TAX_NO, TAX_OFFICE FROM OUR_COMPANY WHERE COMP_ID = #get_branch_info.COMPANY_ID#
+		</cfquery>
+	</cfif>
+	<cfinclude template="../../query/get_emp_codes.cfm">
+	<cfquery name="get_puantaj_rows" datasource="#dsn#">
+		SELECT
+			(EMPLOYEES_PUANTAJ_ROWS.TOTAL_DAYS + EMPLOYEES_PUANTAJ_ROWS.IZIN) AS TOPLAM_GUN,
+			(EMPLOYEES_PUANTAJ_ROWS.TOTAL_SALARY - EMPLOYEES_PUANTAJ_ROWS.TOTAL_PAY_SSK_TAX - EMPLOYEES_PUANTAJ_ROWS.TOTAL_PAY_SSK - EMPLOYEES_PUANTAJ_ROWS.TOTAL_PAY_TAX - EMPLOYEES_PUANTAJ_ROWS.TOTAL_PAY - EMPLOYEES_PUANTAJ_ROWS.EXT_SALARY - EMPLOYEES_PUANTAJ_ROWS.IHBAR_AMOUNT - EMPLOYEES_PUANTAJ_ROWS.KIDEM_AMOUNT - EMPLOYEES_PUANTAJ_ROWS.YILLIK_IZIN_AMOUNT + EMPLOYEES_PUANTAJ_ROWS.OZEL_KESINTI_2) AS UCRET,
+			EMPLOYEES.EMPLOYEE_ID,
+			EMPLOYEES.EMPLOYEE_NAME,
+			EMPLOYEES.EMPLOYEE_SURNAME,
+			EMPLOYEES_DETAIL.SEX,
+			EMPLOYEES_IN_OUT.IN_OUT_ID,
+			EMPLOYEES_IN_OUT.TRADE_UNION_DEDUCTION,
+			EMPLOYEES_IN_OUT.USE_TAX,
+			EMPLOYEES_IN_OUT.SSK_STATUTE,
+			EMPLOYEES_IN_OUT.DEFECTION_LEVEL,
+			EMPLOYEES_IN_OUT.IS_5084,
+			EMPLOYEES_IN_OUT.EXPLANATION_ID,
+			EMPLOYEES_IN_OUT.START_DATE,
+			EMPLOYEES_IN_OUT.IN_OUT_ID,
+			EMPLOYEES_IN_OUT.FINISH_DATE,
+			EMPLOYEES_IDENTY.TC_IDENTY_NO,
+			EMPLOYEES_IDENTY.LAST_SURNAME,
+			EMPLOYEES_PUANTAJ_ROWS.EMPLOYEE_PUANTAJ_ID,
+			EMPLOYEES_PUANTAJ_ROWS.PUANTAJ_ID,
+			EMPLOYEES_PUANTAJ_ROWS.SSK_NO,
+			EMPLOYEES_PUANTAJ_ROWS.SSK_DAYS AS GUN_SAYISI,
+			EMPLOYEES_PUANTAJ_ROWS.SSK_ISVEREN_HISSESI_5921_DAY,
+			EMPLOYEES_PUANTAJ_ROWS.TOTAL_DAYS,
+			EMPLOYEES_PUANTAJ_ROWS.SSK_MATRAH,
+			EMPLOYEES_PUANTAJ_ROWS.IZIN,
+			EMPLOYEES_PUANTAJ_ROWS.IZIN_COUNT,
+			EMPLOYEES_PUANTAJ_ROWS.IZIN_PAID,
+			EMPLOYEES_PUANTAJ_ROWS.IZIN_PAID_COUNT,
+			EMPLOYEES_PUANTAJ_ROWS.SSK_ISVEREN_CARPAN,
+			EMPLOYEES_PUANTAJ_ROWS.TOTAL_SALARY,
+			EMPLOYEES_PUANTAJ_ROWS.EXT_SALARY,
+			EMPLOYEES_PUANTAJ_ROWS.TOTAL_PAY_SSK_TAX,
+			EMPLOYEES_PUANTAJ_ROWS.TOTAL_PAY_SSK,
+			EMPLOYEES_PUANTAJ_ROWS.TOTAL_PAY_TAX,
+			EMPLOYEES_PUANTAJ_ROWS.TOTAL_PAY,
+			EMPLOYEES_PUANTAJ_ROWS.ISSIZLIK_ISVEREN_HISSESI,
+			EMPLOYEES_PUANTAJ_ROWS.ISSIZLIK_ISCI_HISSESI,
+			EMPLOYEES_PUANTAJ_ROWS.SSDF_ISVEREN_HISSESI,
+			EMPLOYEES_PUANTAJ_ROWS.SSDF_ISCI_HISSESI,
+			EMPLOYEES_PUANTAJ_ROWS.SSK_DEVIR_LAST,
+			EMPLOYEES_PUANTAJ_ROWS.SSK_DEVIR,
+			EMPLOYEES_IN_OUT.DUTY_TYPE
+		FROM 
+			EMPLOYEES,
+			EMPLOYEES_DETAIL,
+			EMPLOYEES_IN_OUT,
+			BRANCH B,
+			EMPLOYEES_IDENTY,
+			EMPLOYEES_PUANTAJ_ROWS
+		WHERE
+			EMPLOYEES_IN_OUT.USE_SSK = 1 AND
+			EMPLOYEES_IN_OUT.BRANCH_ID = B.BRANCH_ID AND
+			EMPLOYEES_IN_OUT.SSK_STATUTE = #attributes.ssk_statute# AND
+			<cfif attributes.ssk_statute neq 23>
+				<cfif attributes.kanun is '0000'>
+					(
+					(
+					(B.IS_5510 IS NULL OR B.IS_5510 = 0) AND
+					(B.IS_5615 IS NULL OR B.IS_5615 = 0) AND
+					(B.KANUN_5084_ORAN = 0) AND
+					(EMPLOYEES_IN_OUT.IS_5510 = 0 OR EMPLOYEES_IN_OUT.IS_5510 IS NULL) AND
+					(EMPLOYEES_IN_OUT.DEFECTION_LEVEL = 0 OR EMPLOYEES_IN_OUT.DEFECTION_LEVEL IS NULL) AND
+					EMPLOYEES_PUANTAJ_ROWS.SSK_ISVEREN_HISSESI_GOV = 0 AND 
+					(EMPLOYEES_PUANTAJ_ROWS.TOTAL_DAYS > EMPLOYEES_PUANTAJ_ROWS.SSK_ISVEREN_HISSESI_5921_DAY OR EMPLOYEES_PUANTAJ_ROWS.SSK_ISVEREN_HISSESI_5921_DAY = 0) AND 
+					EMPLOYEES_IN_OUT.DEFECTION_LEVEL = 0
+					)
+					OR
+					EMPLOYEES_IN_OUT.SSK_STATUTE IN (2,18) /* Muzaffer Yeraltı Emekli */
+					)
+					AND
+				<cfelseif attributes.kanun is '5510'>
+					(EMPLOYEES_PUANTAJ_ROWS.SSK_ISVEREN_HISSESI_6111 = 0 OR EMPLOYEES_PUANTAJ_ROWS.SSK_ISVEREN_HISSESI_6111 IS NULL) AND
+					B.IS_5510 = 1 AND
+					(EMPLOYEES_IN_OUT.IS_5510 = 0 OR EMPLOYEES_IN_OUT.IS_5510 IS NULL) AND
+					(EMPLOYEES_IN_OUT.IS_5084 = 0 OR EMPLOYEES_IN_OUT.IS_5084 IS NULL) AND
+					(EMPLOYEES_IN_OUT.DEFECTION_LEVEL = 0 OR EMPLOYEES_IN_OUT.DEFECTION_LEVEL IS NULL) AND
+					(EMPLOYEES_PUANTAJ_ROWS.TOTAL_DAYS > EMPLOYEES_PUANTAJ_ROWS.SSK_ISVEREN_HISSESI_5921_DAY OR EMPLOYEES_PUANTAJ_ROWS.SSK_ISVEREN_HISSESI_5921_DAY = 0) AND
+					EMPLOYEES_PUANTAJ_ROWS.IS_7252_CONTROL = 0 AND
+					(EMPLOYEES_PUANTAJ_ROWS.LAW_NUMBER_7103 IS NULL OR EMPLOYEES_PUANTAJ_ROWS.LAW_NUMBER_7103 = 0) AND
+					(EMPLOYEES_PUANTAJ_ROWS.SSK_ISVEREN_HISSESI_14857 IS NULL OR EMPLOYEES_PUANTAJ_ROWS.SSK_ISVEREN_HISSESI_14857 = 0) AND
+				<cfelseif attributes.kanun is '04857'>
+					(EMPLOYEES_IN_OUT.IS_5510 = 0 OR EMPLOYEES_IN_OUT.IS_5510 IS NULL) AND
+					EMPLOYEES_IN_OUT.DEFECTION_LEVEL > 0 AND
+				<cfelseif attributes.kanun is '14857'>
+					/* EMPLOYEES_IN_OUT.IS_5510 = 1 AND
+					EMPLOYEES_IN_OUT.DEFECTION_LEVEL > 0 AND */
+                    EMPLOYEES_IN_OUT.LAW_NUMBERS = '14857' AND
+                    EMPLOYEES_PUANTAJ_ROWS.SSK_ISVEREN_HISSESI_14857 > 0 AND
+				<cfelseif attributes.kanun is '3294'>
+					EMPLOYEES_IN_OUT.LAW_NUMBERS = '3294' AND
+                    EMPLOYEES_PUANTAJ_ROWS.SSK_ISVEREN_HISSESI_3294 > 0 AND
+				<cfelseif attributes.kanun is '14447'>
+					EMPLOYEES_PUANTAJ_ROWS.SSK_ISVEREN_HISSESI_GOV_100 > 0 AND
+				<cfelseif attributes.kanun is '84447'>
+					EMPLOYEES_PUANTAJ_ROWS.SSK_ISVEREN_HISSESI_GOV_80 > 0 AND
+				<cfelseif attributes.kanun is '64447'>
+					EMPLOYEES_PUANTAJ_ROWS.SSK_ISVEREN_HISSESI_GOV_60 > 0 AND
+				<cfelseif attributes.kanun is '44447'>
+					EMPLOYEES_PUANTAJ_ROWS.SSK_ISVEREN_HISSESI_GOV_40 > 0 AND
+				<cfelseif attributes.kanun is '24447'>
+					EMPLOYEES_PUANTAJ_ROWS.SSK_ISVEREN_HISSESI_GOV_20 > 0 AND
+				<cfelseif attributes.kanun is '6111'>
+					(EMPLOYEES_PUANTAJ_ROWS.SSK_ISVEREN_HISSESI_6111 > 0)AND
+				<cfelseif attributes.kanun is '85615'>
+					B.IS_5615 = 1 AND
+					B.KANUN_5084_ORAN = 80 AND
+				<cfelseif attributes.kanun is '05615'>
+					B.IS_5615 = 1 AND
+					B.KANUN_5084_ORAN = 100 AND
+				<cfelseif attributes.kanun is '5084'>
+					B.IS_5615 = 0 AND
+					B.KANUN_5084_ORAN > 0 AND
+				<cfelseif attributes.kanun is '5921'>
+					EMPLOYEES_PUANTAJ_ROWS.SSK_ISVEREN_HISSESI_5921 > 0 AND
+				<cfelseif attributes.kanun is '46486'>
+					(
+						(
+							EMPLOYEES_IN_OUT.IS_6486 = 1 AND
+							B.KANUN_6486 = 4 AND
+							EMPLOYEES_PUANTAJ_ROWS.SSK_ISVEREN_HISSESI_6486 > 0
+						)
+						OR<!--- geçmiş aylarda 6486 olmadıgı icin 5510 u alacak daha sonra burası kapatılacak SG 20130817--->
+						(
+							B.IS_5510 = 1 AND
+							(EMPLOYEES_IN_OUT.IS_5510 = 0 OR EMPLOYEES_IN_OUT.IS_5510 IS NULL) AND
+							(EMPLOYEES_IN_OUT.IS_5084 = 0 OR EMPLOYEES_IN_OUT.IS_5084 IS NULL) AND
+							(ISNULL(EMPLOYEES_PUANTAJ_ROWS.SSK_ISVEREN_HISSESI_6111,0) = 0) AND
+							(EMPLOYEES_IN_OUT.DEFECTION_LEVEL = 0 OR EMPLOYEES_IN_OUT.DEFECTION_LEVEL IS NULL) AND
+							(EMPLOYEES_PUANTAJ_ROWS.TOTAL_DAYS > EMPLOYEES_PUANTAJ_ROWS.SSK_ISVEREN_HISSESI_5921_DAY OR EMPLOYEES_PUANTAJ_ROWS.SSK_ISVEREN_HISSESI_5921_DAY = 0)
+						)
+					) AND
+				<cfelseif attributes.kanun is '56486'>
+					(
+						(
+							EMPLOYEES_IN_OUT.IS_6486 = 1 AND
+							B.KANUN_6486 = 5 AND
+							EMPLOYEES_PUANTAJ_ROWS.SSK_ISVEREN_HISSESI_6486 > 0
+						)
+						OR<!--- geçmiş aylarda 6486 olmadıgı icin 5510 u alacak daha sonra burası kapatılacak SG 20130817--->
+						(
+							B.IS_5510 = 1 AND
+							(EMPLOYEES_IN_OUT.IS_5510 = 0 OR EMPLOYEES_IN_OUT.IS_5510 IS NULL) AND
+							(EMPLOYEES_IN_OUT.IS_5084 = 0 OR EMPLOYEES_IN_OUT.IS_5084 IS NULL) AND
+							(ISNULL(EMPLOYEES_PUANTAJ_ROWS.SSK_ISVEREN_HISSESI_6111,0) = 0) AND
+							(EMPLOYEES_IN_OUT.DEFECTION_LEVEL = 0 OR EMPLOYEES_IN_OUT.DEFECTION_LEVEL IS NULL) AND
+							(EMPLOYEES_PUANTAJ_ROWS.TOTAL_DAYS > EMPLOYEES_PUANTAJ_ROWS.SSK_ISVEREN_HISSESI_5921_DAY OR EMPLOYEES_PUANTAJ_ROWS.SSK_ISVEREN_HISSESI_5921_DAY = 0)
+						)
+					)  AND
+				<cfelseif attributes.kanun is '66486'>
+					(
+						(
+							EMPLOYEES_IN_OUT.IS_6486 = 1 AND
+							B.KANUN_6486 = 6 AND
+							EMPLOYEES_PUANTAJ_ROWS.SSK_ISVEREN_HISSESI_6486 > 0
+						)
+						OR<!--- geçmiş aylarda 6486 olmadıgı icin 5510 u alacak daha sonra burası kapatılacak SG 20130817--->
+						(
+							B.IS_5510 = 1 AND
+							(EMPLOYEES_IN_OUT.IS_5510 = 0 OR EMPLOYEES_IN_OUT.IS_5510 IS NULL) AND
+							(EMPLOYEES_IN_OUT.IS_5084 = 0 OR EMPLOYEES_IN_OUT.IS_5084 IS NULL) AND
+							(ISNULL(EMPLOYEES_PUANTAJ_ROWS.SSK_ISVEREN_HISSESI_6111,0) = 0) AND
+							(EMPLOYEES_IN_OUT.DEFECTION_LEVEL = 0 OR EMPLOYEES_IN_OUT.DEFECTION_LEVEL IS NULL) AND
+							(EMPLOYEES_PUANTAJ_ROWS.TOTAL_DAYS > EMPLOYEES_PUANTAJ_ROWS.SSK_ISVEREN_HISSESI_5921_DAY OR EMPLOYEES_PUANTAJ_ROWS.SSK_ISVEREN_HISSESI_5921_DAY = 0)
+						)
+					)  AND
+				<cfelseif attributes.kanun is '06486'>
+					(
+						EMPLOYEES_IN_OUT.IS_6486 = 1 AND
+						EMPLOYEES_PUANTAJ_ROWS.SSK_ISVEREN_HISSESI_6486 > 0 AND
+						B.KANUN_6486 IS NULL <!--- yurtdışı için eklenen kosul --->
+					) AND
+				<cfelseif attributes.kanun is '16322'>
+					(
+						EMPLOYEES_PUANTAJ_ROWS.SSK_ISVEREN_HISSESI_6322 >0 OR
+						(
+						EMPLOYEES_IN_OUT.IS_6322 = 1 AND
+						B.KANUN_6322 = 1
+						)
+					)AND
+				<cfelseif attributes.kanun is '26322'>
+					(
+						EMPLOYEES_PUANTAJ_ROWS.SSK_ISVEREN_HISSESI_6322 > 0 OR
+						(
+							EMPLOYEES_IN_OUT.IS_6322 = 1 AND
+							B.KANUN_6322 = 2
+						)
+					)AND
+				<cfelseif attributes.kanun is '05746'>
+					EMPLOYEES_PUANTAJ_ROWS.SSK_ISVEREN_HISSESI_5746 >0 AND
+				<cfelseif attributes.kanun is '04691'>
+					EMPLOYEES_PUANTAJ_ROWS.SSK_ISVEREN_HISSESI_4691 >0 AND
+				<cfelseif attributes.kanun is '25510'>
+					(EMPLOYEES_PUANTAJ_ROWS.SSK_ISVEREN_HISSESI_25510 > 0 OR EMPLOYEES_IN_OUT.IS_25510 = 1) AND 
+				<cfelseif attributes.kanun is '6645'>
+					EMPLOYEES_IN_OUT.IS_6645 = 1 AND EMPLOYEES_IN_OUT.SSK_STATUTE IN (1,8,9,10,32) AND
+				<cfelseif attributes.kanun is '0687'>
+					(EMPLOYEES_PUANTAJ_ROWS.SSK_ISVEREN_HISSESI_687 > 0 OR EMPLOYEES_PUANTAJ_ROWS.SSK_ISCI_HISSESI_687 > 0) AND
+				<cfelseif attributes.kanun is '17103'>
+					EMPLOYEES_PUANTAJ_ROWS.LAW_NUMBER_7103 = 17103 AND
+				<cfelseif attributes.kanun is '27103'>
+					EMPLOYEES_PUANTAJ_ROWS.LAW_NUMBER_7103 = 27103 AND
+				<cfelseif attributes.kanun is '37103'>
+					EMPLOYEES_PUANTAJ_ROWS.LAW_NUMBER_7103 = 37103 AND
+				<cfelseif attributes.kanun is '7252'>
+					EMPLOYEES_PUANTAJ_ROWS.IS_7252_CONTROL = 1 AND
+				<cfelseif attributes.kanun is '17256' or attributes.kanun is '27256'>
+					EMPLOYEES_IN_OUT.LAW_NUMBERS = <cfqueryparam cfsqltype="cf_sql_nvarchar" value="#attributes.kanun#"> AND
+				</cfif>
+			</cfif>
+			EMPLOYEES_PUANTAJ_ROWS.IN_OUT_ID = EMPLOYEES_IN_OUT.IN_OUT_ID AND
+			EMPLOYEES_PUANTAJ_ROWS.PUANTAJ_ID = #GET_PUANTAJ.PUANTAJ_ID#
+			AND EMPLOYEES.EMPLOYEE_ID = EMPLOYEES_DETAIL.EMPLOYEE_ID
+			AND EMPLOYEES.EMPLOYEE_ID = EMPLOYEES_IN_OUT.EMPLOYEE_ID
+			AND EMPLOYEES.EMPLOYEE_ID = EMPLOYEES_IDENTY.EMPLOYEE_ID
+			AND EMPLOYEES.EMPLOYEE_ID = EMPLOYEES_PUANTAJ_ROWS.EMPLOYEE_ID
+		<!--- BU AY İÇİNDE ÇALIŞMIŞ --->
+			AND	
+			(
+			EMPLOYEES_IN_OUT.START_DATE <= #bu_ay_sonu# AND 
+			(EMPLOYEES_IN_OUT.FINISH_DATE >= #bu_ay_basi# OR EMPLOYEES_IN_OUT.FINISH_DATE IS NULL)
+			)
+		<!--- // BU AY İÇİNDE ÇALIŞMIŞ --->
+		<cfif fusebox.dynamic_hierarchy>
+			<cfloop list="#emp_code_list#" delimiters="+" index="code_i">
+				<cfif database_type is "MSSQL">
+					AND 
+					('.' + EMPLOYEES.DYNAMIC_HIERARCHY + '.' + EMPLOYEES.DYNAMIC_HIERARCHY_ADD + '.') LIKE '%.#code_i#.%'
+						
+				<cfelseif database_type is "DB2">
+					AND
+					('.' || EMPLOYEES.DYNAMIC_HIERARCHY || '.' || EMPLOYEES.DYNAMIC_HIERARCHY_ADD || '.') LIKE '%.#code_i#.%'
+						
+				</cfif>
+			</cfloop>
+		<cfelse>
+			<cfloop list="#emp_code_list#" delimiters="+" index="code_i">
+				<cfif database_type is "MSSQL">
+					AND ('.' + EMPLOYEES.HIERARCHY + '.') LIKE '%.#code_i#.%'
+				<cfelseif database_type is "DB2">
+					AND ('.' || EMPLOYEES.HIERARCHY || '.') LIKE '%.#code_i#.%'
+				</cfif>
+			</cfloop>
+		</cfif>
+		ORDER BY
+			EMPLOYEES_IN_OUT.SSK_STATUTE,
+			EMPLOYEES.EMPLOYEE_ID,
+			EMPLOYEES_PUANTAJ_ROWS.EMPLOYEE_PUANTAJ_ID,
+			EMPLOYEES_IN_OUT.DEFECTION_LEVEL,
+			EMPLOYEES_IN_OUT.TRADE_UNION_DEDUCTION,
+			EMPLOYEES_IN_OUT.USE_SSK,
+			EMPLOYEES_IN_OUT.USE_TAX,
+			EMPLOYEES_IN_OUT.IN_OUT_ID
+	</cfquery>
+	<cfif not get_puantaj_rows.recordcount>
+		<script type="text/javascript">
+			alert('Uygun Kayıt Yok !');
+			history.back();
+		</script>
+		<cfabort>
+	</cfif>
+	
+	<cfquery name="get_izins" datasource="#dsn#">
+		SELECT 
+			OFFTIME.EMPLOYEE_ID,
+			SETUP_OFFTIME.EBILDIRGE_TYPE_ID,
+			SETUP_OFFTIME.IS_PAID,
+			SETUP_OFFTIME.SIRKET_GUN
+		FROM 
+			OFFTIME, SETUP_OFFTIME
+		WHERE
+			SETUP_OFFTIME.OFFTIMECAT_ID = OFFTIME.OFFTIMECAT_ID AND
+			OFFTIME.VALID = 1 AND
+			OFFTIME.STARTDATE < #DATEADD('h',-session.ep.time_zone,bu_ay_sonu)# AND
+			OFFTIME.FINISHDATE >= #DATEADD
+			('h',-session.ep.time_zone,bu_ay_basi)#
+			AND OFFTIME.IS_PUANTAJ_OFF = 0
+		ORDER BY 
+			OFFTIME.EMPLOYEE_ID
+	</cfquery>

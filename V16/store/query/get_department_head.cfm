@@ -1,0 +1,8 @@
+<cfquery name="GET_DEPARTMENT_HEAD" datasource="#dsn#">
+	SELECT 
+		DEPARTMENT_HEAD 
+	FROM 
+		DEPARTMENT
+	WHERE 
+		DEPARTMENT_ID=#ATTRIBUTES.DEPARTMENT#
+</cfquery>

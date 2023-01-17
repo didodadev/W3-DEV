@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SETUP_SITE>
+	<SETUPSITE>
+		<LINK_NAME>Ödeme Talebi ve Emri Sayfası Ayarları</LINK_NAME> 
+		<LINK_FILE>finance.add_payment_actions</LINK_FILE> 
+		<LINK_DETAIL>Ödeme Talebi ve Emri Sayfası</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Finans Gündemi Ayarları</LINK_NAME> 
+		<LINK_FILE>finance.dsp_welcome</LINK_FILE> 
+		<LINK_DETAIL>Finans Gündemi Ayarlarıı</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Ödeme Talepleri Listesi Ayarları</LINK_NAME> 
+		<LINK_FILE>finance.list_payment_actions</LINK_FILE> 
+		<LINK_DETAIL>Ödeme Talepleri Listesi Ayarları</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Senaryo Ayarları</LINK_NAME> 
+		<LINK_FILE>finance.scenario</LINK_FILE> 
+		<LINK_DETAIL>Senaryo Ayarları</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Z Raporu Ayarları</LINK_NAME> 
+		<LINK_FILE>finance.add_daily_zreport</LINK_FILE> 
+		<LINK_DETAIL>Z Raporu Ayarları</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Risk Tanımları Ayarları</LINK_NAME> 
+		<LINK_FILE>finance.list_credits</LINK_FILE> 
+		<LINK_DETAIL>Risk Tanımları Ayarları</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Teminat Ayarları</LINK_NAME> 
+		<LINK_FILE>finance.list_securefund</LINK_FILE> 
+		<LINK_DETAIL>Teminat Ayarları</LINK_DETAIL>
+	</SETUPSITE>
+		<SETUPSITE>
+		<LINK_NAME>5 Boyutlu İşlem</LINK_NAME> 
+		<LINK_FILE>finance.list_genel_virman</LINK_FILE> 
+		<LINK_DETAIL>5 Boyutlu İşlem</LINK_DETAIL>
+	</SETUPSITE>
+</SETUP_SITE>

@@ -1,0 +1,7 @@
+INSERT INTO [SETUP_PROJECT_ROLES]([PROJECT_ROLES],[DETAIL]) Values( 'Lider','Lider');
+INSERT INTO [SETUP_PROJECT_ROLES]([PROJECT_ROLES],[DETAIL]) Values( 'Kıdemli Uzman','Kıdemli Uzman');
+INSERT INTO [SETUP_PROJECT_ROLES]([PROJECT_ROLES],[DETAIL]) Values( 'Uzman','Uzman');
+INSERT INTO [SETUP_PROJECT_ROLES]([PROJECT_ROLES],[DETAIL]) Values( 'Uzman Yardımcısı','Uzman Yardımcısı');
+INSERT INTO [SETUP_PROJECT_ROLES]([PROJECT_ROLES],[DETAIL]) Values( 'Stajyer','Stajyer');
+INSERT INTO [SETUP_PROJECT_ROLES]([PROJECT_ROLES],[DETAIL]) Values( 'Proje Yöneticisi','Proje Yöneticisi');
+INSERT INTO [SETUP_PROJECT_ROLES]([PROJECT_ROLES],[DETAIL]) Values( 'Proje Koordinatörü','Proje Koordinatörü');

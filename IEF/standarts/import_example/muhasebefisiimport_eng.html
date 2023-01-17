@@ -1,0 +1,24 @@
+﻿<p style="text-align:justify; font-family:Geneva, Arial, Helvetica, sans-serif;">
+    <b>Accounting Receipts</b></br>
+    File extension should be csv and fields should be seperated using semicolon '(;)'. </br>
+    
+    File Row Format: 'Account Code; Comments; D/R; Amount(float); System Second Currency Total; Other Currency Unit(float), Other Currency Amount(float), Branch ID, Department ID, Project ID'</br>
+    
+    In file rows System Second Currency, Other Currency Unit and Other Currency Amount(float) information should be replaced with 0 (zero) if they are not needed.</br>
+    
+    <b>Account Code*:</b>  Mandatory field, must be filled. This field is also used for cash account codes selected in Cash Receipts and Disbursements.</br>
+    <b>Comments:</b>  Includes comments on receipts.</br>
+    <b>D/R:</b>  D stands for debt and R stands for Receivables. Mandatory field.</br>
+    <b>Amount:</b> Rows amounting to zero (0) will not be included in receipts.</br>
+    <b>System Second Currency Amount:</b> Shows the amount of Debt – Receivable in system's second currency. If not filled, the amount is automatically calculated with system exchange rate. </br>
+    <b>Other Currency Unit:</b> Currency Unit</br>
+    <b>Other Currency Unit Total(float) :</b> Currency Total</br>
+    <b>Branch ID(int)</b></br>
+    <b>Department ID(int)</b></br>
+    <b>Project ID(int)</b></br>
+    
+    <b>Example :</b></br>
+    100.01;Receipt Row Sample;A;100;85;EURO;67</br>
+    100.02;Receipt Row Sample2;A;25.70;0;0;0</br>
+    120.01;Receipt Row Sample3;B;125.70;85;EURO;67</br>
+</p>

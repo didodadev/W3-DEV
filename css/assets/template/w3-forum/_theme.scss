@@ -1,0 +1,769 @@
+@import "../w3-assets/scss/font-face";
+
+
+@include font-face(raleway, Raleway-ExtraLight, raleway, sans-serif, 200);
+@include font-face(raleway, Raleway-Regular, raleway, sans-serif, 400);
+@include font-face(raleway, Raleway-SemiBold, raleway, sans-serif, 600);
+@include font-face(raleway, Raleway-ExtraBold, raleway, sans-serif, 800);
+@include font-face(roboto, Roboto-Regular, roboto, sans-serif, 400);
+@include font-face(roboto, Roboto-Bold, roboto, sans-serif, 700);
+@include font-face(wrk-icon, wrk-icon, wrk-icon, sans-serif, 400);
+
+.form_box_header{
+  font-size: 17px!important;
+  padding: 5px 10px;
+}
+.w3-forum-form{
+
+   .wrk-circular-button-add{
+    font-size:25px!important;
+   
+      color: rgb(0, 150, 136);
+      text-decoration: none;
+     
+      
+              &:hover {
+                color: darken(rgb(0, 150, 136), 10%);
+                text-decoration: none;
+              }
+ 
+  }
+    .head-col{
+      border-bottom: 1px solid #ddd;
+      font-weight: bold;
+      font-size: +2;
+      padding: 20px 0 10px 0;
+    }
+
+
+    .container{
+      margin: 0 auto;
+    }
+    
+    .footer{
+      text-align: right;
+      margin-top: 15px;
+    }
+    .yoneticiler{
+      max-height: 250px;
+    }
+    .form-group{
+      margin: 10px 0!important;
+
+        textarea{
+          min-height: 150px;
+          max-height: 400px;
+        }
+    }
+    .yayin-alani{
+      overflow-y: scroll;
+      max-height: 350px;
+
+          &::-webkit-scrollbar{
+          width: 5px;
+          background-color: #ddd;
+        }
+
+        &::-webkit-scrollbar-thumb
+        {
+          background-color: #444;
+        }
+
+      div{
+        font-weight: bold;
+        padding: 10px 5px;
+      }
+      label{
+        padding: 3px;
+      }
+
+        
+    }
+}
+
+
+.w3-forum {
+
+
+  @import "../w3-assets/scss/workcube";
+
+  font-weight: $body-font-weight;
+  background-color: $white;
+  div {
+    @include rem(font-size,14px);
+  }
+
+//-------------------------------------eski
+.wrk_forum {
+  .wrk_forum_con {
+    .wrk_forum_head {
+      background-color: $white;
+      .wrk_forum_item {
+        border: 1px solid $gray-lightest!important;
+        height: 50px!important;
+        line-height: 50px!important;
+        white-space: nowrap!important;
+      }
+    }
+    .wrk_forum_section {
+      background-color: $white!important;
+      &:hover {
+        background-color: #fbfbfb!important;
+      }
+      ul {
+        li {
+          list-style-type: none!important;
+        }
+      }
+      a {
+        text-decoration: none!important;
+      }
+
+      @include rem(margin-top, 1px!important);
+      .wrk_forum_item {
+        border: 1px solid $gray-lightest!important;
+        .wrk_forum_item_title {
+          color: $brand-primary!important;
+          @include rem(font-size, 18px!important);
+          &:hover {
+            color: darken($brand-primary, 5%);
+            text-decoration: none!important;
+          }
+        }
+      }
+    }
+  }
+  .wrk_forum_first {
+    background-color: $white!important;
+    .wrk_forum_filt {
+		.margin-l{
+			@include rem(margin-left, -3px!important);
+		  }
+       input, select, button{
+      @include rem(font-size,14px);
+    }
+      .wrk_forum_search_item {
+        @extend .d-flex;
+        @extend .align-items-center;
+        @extend .text-center;
+		float: left!important;
+		
+      }
+      .ic_a {
+        text-decoration: none;
+
+      }
+      .wrk_forum_left {
+
+        .wrk_forum_search {
+		  @include rem(font-size, 16px!important);
+		  
+          .custom-select{
+			@include rem(font-size, 16px!important);
+			
+          }
+          input, select, textarea {
+            &:focus {
+              border-color: lighten($brand-success, 10%);
+              @include rem(font-size, 16px!important);
+            }
+
+          }
+
+          label {
+            @include rem(font-size, 16px!important);
+            color: $brand-primary!important; 
+          }
+          .form-group {
+
+          }
+        }
+        .wrk_forum_combosearch {
+          select{
+           
+          }
+          
+        }
+        .wrk_forum_connumber {
+         
+
+        }
+        .wrk_forum_searchbtn {
+           
+        }
+      }
+
+      .wrk_forum_right {
+        .wrk_links {
+          list-style: none!important;
+          display: inline-block!important;
+          overflow: hidden!important;
+          li {
+            float: left!important;
+
+            a {
+              text-decoration: none!important;
+              $icon-height: 40px;
+              @include rem(height, $icon-height!important);
+              line-height: $icon-height!important;
+              @include border-radius($icon-height!important);
+              display: block!important;
+              width: $icon-height!important;
+              text-align: center!important;
+              @include rem(margin-right, 5px!important);
+              color: white!important;
+              @include rem(font-size, 20px!important);
+            }
+
+            $links: (1, #1b80e4),
+                    (2, #00aa9a),
+                    (3, #00aac0),
+                    (4, #d29f1d),
+                    (5, #e34134),
+                    (6, #1b80e4),
+                    (7, #00aa9a),
+                    (8, #00aac0),
+                    (9, #d29f1d),
+                    (10, #e34134);
+
+            @each $rank, $color in $links {
+              &:nth-child(#{$rank}) {
+                a {
+                  background-color: $color!important;
+                  &:hover {
+                    background-color: darken($color, 10%);
+                  }
+                }
+              }
+            }
+
+            &:last-child {
+              a {
+                margin-right: 1px!important;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.wrk_frm {
+  a {
+    text-decoration: none!important;
+    color:$gray;
+    &:hover
+    {
+       color:$black;
+    }
+  }
+  .wrk_frm_header {
+    .wrk_frm_logo {
+      height: 130px!important;
+      width: 130px!important;
+    }
+    .wrk_frm_headBaslik {
+      @include rem(margin-top, 20px!important);
+      color: $state-success-text!important;
+    }
+
+  }
+  .wrk_frm_filtre {
+	  .margin-l{
+			@include rem(margin-left, -3px!important);
+		  }
+    .wrk_forum_left {
+      .wrk_forum_search {
+        input, select, textarea {
+          @include rem(font-size, 14px!important);
+          color:#929296 !important;
+          height: 35px !important;
+          &:focus {
+            border-color: lighten($brand-success, 10%);
+            @include rem(font-size, 14px!important);
+          }
+        }
+        label {
+          @include rem(font-size, 14px!important);
+          color: $brand-primary!important;
+        }
+        .selectboxnumber {
+          @include rem(width, 70px!important);
+        }
+      }
+      .btn{
+       
+      }
+      .btn-primary {
+        background-color: $brand-danger;
+        border-color: lighten($gray, 50%);
+        height: 35px !important;
+        &:hover {
+          background-color: darken($brand-danger, 10%);
+        }
+      }
+      a{
+          color: $white !important;
+        }
+
+    }
+  }
+  .wrk_frm_sectBaslik {
+    div{
+      @include rem(font-size,16px);
+      color: $gray;
+    }
+    font-family: 'Raleway', sans-serif!important;
+    @include rem(font-size,18px!important);
+    color:$black;
+
+  }
+
+  .workcube_section {
+    .wrk_letter {
+      @include rem(height, 50px!important);
+      @include rem(width, 50px!important);
+      background-color: $brand-warning!important;
+      color: $white!important;
+      @include rem(font-size, 30px!important);
+      @include rem(border-radius, 50px!important);
+      line-height: 50px!important;
+      text-align: center!important;
+      @include media-breakpoint-up(md) {
+        text-align: center!important;
+      }
+    }
+    .wrk_content {
+      ul{
+        li{
+          a{
+            @include rem(font-size,14px);
+            color:$brand-success!important;
+           }
+          }
+        }
+      @include rem(padding-left, 60px!important);
+      .wrk_who {
+        @include rem(font-size, 14px!important);
+        h6 {
+          
+        
+        }        
+      }
+      .wrk_user_img {
+        border: 1px solid $gray!important;
+        @include border-radius(30px!important);
+        @include rem(height, 30px!important);
+        @include rem(width, 30px!important);
+      }
+      .wrk_desc {
+
+        @include rem(font-size, 14px!important);
+      }
+      .wrk_mod_list {
+        list-style-type: none!important;
+        margin: 0!important;
+        padding: 0!important;
+        .wrk_mod {
+          float: left!important;
+          display: inline-block!important;
+          margin-right: 5px!important;
+         
+          
+          &:last-child {
+            margin-right: 0!important;
+          }
+        }
+      }
+    }
+    .wrk_topic {
+      @include media-breakpoint-down(md) {
+        padding-left: 75px!important;
+        text-align: left!important;
+      }
+      color: $brand-success!important;
+      @include rem(font-size, 18px!important);
+      text-align: center!important;
+    }
+    .wrk_lastpost {
+      @include media-breakpoint-down(md) {
+        border-left: 0 solid transparent;
+        padding-left: 75px!important;
+        text-align: left!important;
+        justify-content: flex-start !important;
+      }
+      border-left: 1px solid lighten($gray, 40%);
+      @include rem(font-size, 16px!important);
+
+      .wrk_user_img {
+        border: 1px solid $gray!important;
+        @include border-radius(30px!important);
+        @include rem(height, 30px!important);
+        @include rem(width, 30px!important);
+      }
+            .wrk_section_sonmesaj_text {
+              @include media-breakpoint-down(md) {
+              padding-left: 0 !important;
+      }
+              img{
+                width:50px!important;
+                height:50px!important;
+              }
+        a {
+          span {
+          @include rem(font-size, 14px!important);
+          color: $red!important;
+        }
+        }
+        span {
+          @include rem(font-size, 12px!important);
+          color: $gray-light!important;
+        }
+
+        @include rem(padding-left, 10px!important); 
+      }
+
+    }
+    .mobil_title {
+      display: none;
+      @include media-breakpoint-down(md) {
+        color: $brand-success !important;
+        @include rem(font-size, 13px !important);
+        font-weight: 600 !important;
+        font-family: $font-family-base!important;
+        display: inline-block!important;
+        @include rem(margin-right, 10px!important);
+      }
+    }
+    .mobil_text {
+      @include media-breakpoint-down(md) {
+        @include rem(font-size, 13px !important);
+        font-family: roboto!important;
+        font-weight: 400 !important;
+        color: $grayblue !important;
+      }
+    }
+
+  }
+
+  .wrk_frm_section {
+
+    .wrk_frm_section_span {
+      @include rem(height, 50px!important);
+      @include rem(width, 50px!important);
+      background-color: $brand-warning!important;
+      color: $white!important;
+      @include rem(font-size, 30px!important);
+      @include rem(border-radius, 50px!important);
+      line-height: 50px!important;
+      text-align: center!important;
+      @include media-breakpoint-up(md) {
+        text-align: center!important;
+      }
+    }
+    .wrk_frm_section_content {
+      @include rem(padding-left, 60px);
+      .konu_add_btn {
+        .btn-primary {
+          background-color: $brand-danger!important;
+          border: none!important;
+          color: $white!important;
+        }
+
+        a {
+          color: $brand-danger;
+          text-align: center!important;
+          @include media-breakpoint-down(md) {
+          text-align: left!important;
+          }
+        }
+
+        &:hover {
+          .btn-primary {
+            background-color: darken($brand-danger, 10%);
+          }
+          a {
+            color: darken($brand-danger, 10%);
+          }
+        }
+      }
+    }
+    .wrk_frm_section_konu {
+      @include media-breakpoint-down(md) {
+        padding-left: 75px!important;
+        text-align: left!important;
+      }
+      color: $brand-success;
+      @include rem(font-size, 18px!important);
+      text-align: center!important;
+    }
+    .wrk_frm_section_sonmesaj {
+      .topic_per{
+                a{ 
+          color:$brand-danger;
+          &:hover{
+            color: darken($brand-danger, 10%);
+          }
+        }
+      }
+      .guncelle{
+        color:$brand-success;
+      }
+      border-left: 1px solid lighten($gray, 40%);
+      @include rem(font-size, 16px!important);
+      .mdresp {
+        @include media-breakpoint-down(md) {
+          @include rem(padding-left, 60px);
+        }
+        a{
+          color:$brand-danger;
+          &:hover{
+            color: darken($brand-danger, 10%);
+          }
+        }
+      }
+      .mdresp_topic {
+        @include media-breakpoint-down(md) {
+          
+          
+        }
+      }
+      @include media-breakpoint-down(md) {
+        border-left: 0 solid transparent!important;
+      }
+    
+      .marg {
+        @include rem(margin-left, 50px!important);
+      }
+      .lpad {
+        @include media-breakpoint-down(md) {
+          padding-left: 75px !important;
+          span {
+            color: $brand-warning;
+            @include rem(font-size, 14px!important);
+          }
+
+        }
+      }
+
+      .wrk_frm_sect_personimg {
+        border: 1px solid $gray;
+        border-radius: 30px;
+        @include rem(height, 30px);
+        @include rem(width, 30px);
+      }
+      .soncevap {
+        color: $brand-danger;
+        @include rem(font-size, 14px);
+      }
+      .wrk_frm_section_sonmesaj_dbtn {
+        span {
+          @include rem(font-size, 25px);
+        }
+        .btn-primary {
+          background: none;
+          color: $brand-danger;
+          border: none;
+          &:hover {
+            color: darken($brand-danger, 10%);
+          }
+        }
+
+      }
+      i {
+        @include rem(font-size, 12px);
+        color: $brand-success;
+      }
+    }
+
+    @include media-breakpoint-down(md) {
+
+    }
+
+    .mdpad {
+      @include media-breakpoint-down(md) {
+        padding-left: 0;
+       
+      }
+    }
+
+    .wrk_frm_sect_paragraf {
+
+      @include rem(font-size, 14px);
+    }
+    .wrk_frm_sect_tag {
+      @include rem(font-size, 12px);
+      h6 {
+        @include rem(font-size, 12px);
+      }
+      span {
+        @include rem(font-size, 16px);
+      }
+    }
+    .wrk_frm_sect_personimg {
+      border: 1px solid $gray;
+      border-radius: 30px;
+      @include rem(height, 30px);
+      @include rem(width, 30px);
+    }
+    .wrk_frm_sect_personname {
+      color:$brand-success;
+      @include rem(font-size, 14px);
+      a {
+        @include rem(font-size, 14px);
+        @include rem(line-height, 50px);
+      }
+    }
+
+    .wrk_frm_section_span_konu {
+      @include rem(margin-left, 20px);
+      @include rem(height, 30px);
+      @include rem(width, 30px);
+      background-color: $brand-primary;
+      color: $white;
+      @include rem(font-size, 20px);
+      @include rem(border-radius, 50px);
+      line-height: 30px;
+      text-align: center;
+      @include media-breakpoint-up(md) {
+        text-align: center;
+      }
+    }
+
+    .wrk_sec_per_tar {
+      @include rem(font-size, 12px);
+    }
+
+  }
+  .wrk_frm_comments {
+    .left {
+      .imageperson {
+
+        img {
+          width: 60px;
+          height: 60px;
+          border: 1px black;
+          border-radius: 30px;
+        }
+      }
+      .infoperson {
+        @include media-breakpoint-down(sm) {
+          text-align: center;
+        }
+        .per_info {
+          @include rem(font-size, 16px);
+          a {
+            color: $brand-success;
+            text-decoration: none;
+            display: block;
+          }
+        }
+        .per_tar {
+          @include rem(font-size, 12px);
+          color: lighten($gray, 10%);
+          @include media-breakpoint-down(sm) {
+            margin-bottom: 10px;
+          }
+        }
+      }
+    }
+
+    .right {
+      height: auto;
+      width: auto;
+      border-left: 1px solid lighten($gray, 40%);
+      padding-left: 50px;
+      @include media-breakpoint-down(sm) {
+        padding-left: 0;
+        border-left: 0 solid transparent;
+      }
+      .comments_icon {
+        @include media-breakpoint-down(sm) {
+          text-align: center;
+        }
+        ul {
+          list-style-type: none;
+          margin: 0px;
+          padding: 0px;
+          display: inline-block;
+          li {
+            float: left;
+            width: 40px;
+            height: 40px;
+            text-align: left;
+            line-height: 40px;
+            @include media-breakpoint-down(md) {
+              text-align: center;
+            }
+            a {
+              color: $brand-success;
+              text-decoration: none;
+              display: block;
+              @include rem(font-size, 18px);
+              &:hover {
+                color: darken($brand-success, 10%);
+              }
+            }
+          }
+        }
+      }
+      .comment_text {
+        @include rem(font-size, 14px);
+		color: lighten($gray, 10%);
+		
+        img{
+		  width: 50%!important;
+		  height: auto!important;
+          @include rem(margin-bottom, 10px);    
+          display: block!important;
+        }
+      }
+    }
+
+  }
+}
+
+.btn-subject-add {
+  background-color: $brand-danger;
+  position: relative;
+  display: inline-block;
+  height: 30px;
+  width: 30px;
+  line-height: 30px;
+  text-align: center;
+  color: white !important;
+  @include rem(font-size, 12px);
+  &:after {
+    content: "";
+    width: 0;
+    height: 0;
+    position: absolute;
+    bottom: -10px;
+    left: 5px;
+    border-style: solid;
+    border-width: 10px 10px 0 0;
+    border-color: $brand-danger transparent transparent transparent;
+    line-height: 0px;
+  }
+}
+
+.tooltip .tooltip-inner {
+
+  background-color: #fed919 !important;
+  padding: 3px 5px !important;
+  font-size: 13px !important;
+  color: black !important;
+  font-weight: 600 !important;
+  margin-left: 20px !important;
+  &:before {
+    top: -10px !important;
+    left: 20px !important;;
+    margin-left: 10px !important;;
+    content: "" !important;
+    border-width: 15px 0 0 14px !important;;
+    border-color: transparent transparent transparent #fed919 !important;;
+  }
+}
+
+}

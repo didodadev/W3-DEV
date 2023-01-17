@@ -1,0 +1,564 @@
+<?xml version="1.0" encoding="utf-8"?>
+<INCOME_TABLE>
+      
+		  <INCOME>
+			<INCOME_ID>1</INCOME_ID>
+			<CODE>01_</CODE>
+			<NAME>BRÜT SATIŞ KARI VEYA ZARARI</NAME>
+			<NAME_LANG_NO>911</NAME_LANG_NO>
+			<ACCOUNT_CODE/>
+			<SIGN/>
+			<BA/>
+			<VIEW_AMOUNT_TYPE>2</VIEW_AMOUNT_TYPE>
+		 </INCOME>
+          <INCOME>
+		  	<INCOME_ID>2</INCOME_ID>
+		  	<CODE>01.A</CODE>
+		  	<NAME>BRÜT SATIŞLAR</NAME>
+			<NAME_LANG_NO>897</NAME_LANG_NO>
+		  	<ACCOUNT_CODE/>
+		  	<SIGN>+</SIGN>
+		  	<BA/>
+		  	<VIEW_AMOUNT_TYPE>2</VIEW_AMOUNT_TYPE>
+         </INCOME>
+      
+          <INCOME>
+		  	<INCOME_ID>3</INCOME_ID>
+		  	<CODE>01.A.01</CODE>
+		  	<NAME>Yurtiçi Satışlar</NAME>
+			<NAME_LANG_NO>898</NAME_LANG_NO>
+		  	<ACCOUNT_CODE>600</ACCOUNT_CODE>
+		  	<SIGN>+</SIGN>
+		  	<BA>1</BA>
+		  	<VIEW_AMOUNT_TYPE>2</VIEW_AMOUNT_TYPE>
+         </INCOME>
+      
+          <INCOME>
+		  	<INCOME_ID>4</INCOME_ID>
+		  	<CODE>01.A.02</CODE>
+		  	<NAME>Yurtdışı Satışlar</NAME>
+			<NAME_LANG_NO>899</NAME_LANG_NO>
+		  	<ACCOUNT_CODE>601</ACCOUNT_CODE>
+		  	<SIGN>+</SIGN>
+		  	<BA>1</BA>
+		  	<VIEW_AMOUNT_TYPE>2</VIEW_AMOUNT_TYPE>
+         </INCOME>
+      
+          <INCOME>
+		  	<INCOME_ID>5</INCOME_ID>
+		  	<CODE>01.A.03</CODE>
+		  	<NAME>Diğer Gelirler</NAME>
+			<NAME_LANG_NO>900</NAME_LANG_NO>
+		  	<ACCOUNT_CODE>602</ACCOUNT_CODE>
+		  	<SIGN>+</SIGN>
+		  	<BA>1</BA>
+		  	<VIEW_AMOUNT_TYPE>2</VIEW_AMOUNT_TYPE>
+         </INCOME>
+      
+          <INCOME>
+		  	<INCOME_ID>6</INCOME_ID>
+		  	<CODE>01.B</CODE>
+		  	<NAME>SATIŞ İNDİRİMLERİ</NAME>
+			<NAME_LANG_NO>901</NAME_LANG_NO>
+		  	<ACCOUNT_CODE/>
+		  	<SIGN>-</SIGN>
+		  	<BA/>
+		  	<VIEW_AMOUNT_TYPE>2</VIEW_AMOUNT_TYPE>
+         </INCOME>
+      
+          <INCOME>
+		  	<INCOME_ID>7</INCOME_ID>
+		  	<CODE>01.B.01</CODE>
+		  	<NAME>Satıştan İadeler</NAME>
+			<NAME_LANG_NO>902</NAME_LANG_NO>
+		  	<ACCOUNT_CODE>610</ACCOUNT_CODE>
+		  	<SIGN>-</SIGN>
+		  	<BA>0</BA>
+		  	<VIEW_AMOUNT_TYPE>2</VIEW_AMOUNT_TYPE>
+         </INCOME>
+      
+          <INCOME>
+		  	<INCOME_ID>8</INCOME_ID>
+		  	<CODE>01.B.02</CODE>
+		  	<NAME>Satış İskontoları</NAME>
+			<NAME_LANG_NO>903</NAME_LANG_NO>
+		  	<ACCOUNT_CODE>611</ACCOUNT_CODE>
+		  	<SIGN>-</SIGN>
+		  	<BA>0</BA>
+		  	<VIEW_AMOUNT_TYPE>2</VIEW_AMOUNT_TYPE>
+         </INCOME>
+      
+          <INCOME>
+		  	<INCOME_ID>9</INCOME_ID>
+		  	<CODE>01.B.03</CODE>
+		  	<NAME>Diğer İndirimler</NAME>
+			<NAME_LANG_NO>904</NAME_LANG_NO>
+		  	<ACCOUNT_CODE>612</ACCOUNT_CODE>
+		  	<SIGN>-</SIGN>
+		  	<BA>0</BA>
+		  	<VIEW_AMOUNT_TYPE>2</VIEW_AMOUNT_TYPE>
+         </INCOME>
+      
+          <INCOME>
+		  	<INCOME_ID>10</INCOME_ID>
+		  	<CODE>01.C</CODE>
+		  	<NAME>NET SATIŞLAR</NAME>
+			<NAME_LANG_NO>905</NAME_LANG_NO>
+		  	<ACCOUNT_CODE/>
+		  	<SIGN>+</SIGN>
+		  	<BA/>
+		  	<VIEW_AMOUNT_TYPE>2</VIEW_AMOUNT_TYPE>
+         </INCOME>
+      
+          <INCOME>
+		  	<INCOME_ID>11</INCOME_ID>
+		  	<CODE>01.D</CODE>
+		  	<NAME>SATIŞLARIN MALİYETİ</NAME>
+			<NAME_LANG_NO>906</NAME_LANG_NO>
+		  	<ACCOUNT_CODE/>
+		  	<SIGN>-</SIGN>
+		  	<BA/>
+		  	<VIEW_AMOUNT_TYPE>2</VIEW_AMOUNT_TYPE>
+         </INCOME>
+      
+          <INCOME>
+		  	<INCOME_ID>12</INCOME_ID>
+		  	<CODE>01.D.01</CODE>
+		  	<NAME>Satılan Mamuller Maliyeti</NAME>
+			<NAME_LANG_NO>907</NAME_LANG_NO>
+		  	<ACCOUNT_CODE>620</ACCOUNT_CODE>
+		  	<SIGN>-</SIGN>
+		  	<BA>0</BA>
+		  	<VIEW_AMOUNT_TYPE>2</VIEW_AMOUNT_TYPE>
+         </INCOME>
+      
+          <INCOME>
+		  	<INCOME_ID>13</INCOME_ID>
+		  	<CODE>01.D.02</CODE>
+		  	<NAME>Satılan Ticari Mallar Maliyeti</NAME>
+			<NAME_LANG_NO>908</NAME_LANG_NO>
+		  	<ACCOUNT_CODE>621</ACCOUNT_CODE>
+		  	<SIGN>-</SIGN>
+		  	<BA>0</BA>
+		  	<VIEW_AMOUNT_TYPE>2</VIEW_AMOUNT_TYPE>
+         </INCOME>
+      
+          <INCOME>
+		  	<INCOME_ID>14</INCOME_ID>
+		  	<CODE>01.D.03</CODE>
+		  	<NAME>Satılan Hizmet Maliyeti</NAME>
+			<NAME_LANG_NO>909</NAME_LANG_NO>
+		  	<ACCOUNT_CODE>622</ACCOUNT_CODE>
+		  	<SIGN>-</SIGN>
+		  	<BA>0</BA>
+		  	<VIEW_AMOUNT_TYPE>2</VIEW_AMOUNT_TYPE>
+         </INCOME>
+      
+          <INCOME>
+		  	<INCOME_ID>15</INCOME_ID>
+		  	<CODE>01.D.04</CODE>
+		  	<NAME>Diğer Satışların Maliyeti</NAME>
+			<NAME_LANG_NO>910</NAME_LANG_NO>
+		  	<ACCOUNT_CODE>623</ACCOUNT_CODE>
+		  	<SIGN>-</SIGN>
+		  	<BA>0</BA>
+		  	<VIEW_AMOUNT_TYPE>2</VIEW_AMOUNT_TYPE>
+         </INCOME>
+      
+          <INCOME>
+		  	<INCOME_ID>16</INCOME_ID>
+		  	<CODE>02_</CODE>
+		  	<NAME>FAALİYET KARI VEYA ZARARI</NAME>
+			<NAME_LANG_NO>916</NAME_LANG_NO>
+		  	<ACCOUNT_CODE/>
+		  	<SIGN/>
+		  	<BA/>
+		  	<VIEW_AMOUNT_TYPE>2</VIEW_AMOUNT_TYPE>
+         </INCOME>
+      
+          <INCOME>
+		  	<INCOME_ID>17</INCOME_ID>
+		  	<CODE>02.E</CODE>
+		  	<NAME>FAALİYET GİDERLERİ</NAME>
+			<NAME_LANG_NO>912</NAME_LANG_NO>
+		  	<ACCOUNT_CODE/>
+		  	<SIGN>-</SIGN>
+		  	<BA/>
+		  	<VIEW_AMOUNT_TYPE>2</VIEW_AMOUNT_TYPE>
+         </INCOME>
+      
+          <INCOME>
+		  	<INCOME_ID>18</INCOME_ID>
+		  	<CODE>02.E.01</CODE>
+		  	<NAME>Araştırma ve Geliştirme Giderleri</NAME>
+			<NAME_LANG_NO>913</NAME_LANG_NO>
+		  	<ACCOUNT_CODE>630</ACCOUNT_CODE>
+		  	<SIGN>-</SIGN>
+		  	<BA>0</BA>
+		  	<VIEW_AMOUNT_TYPE>2</VIEW_AMOUNT_TYPE>
+         </INCOME>
+      
+          <INCOME>
+		  	<INCOME_ID>19</INCOME_ID>
+		  	<CODE>02.E.02</CODE>
+		  	<NAME>Pazarlama, Satış ve Dağıtım Giderleri</NAME>
+			<NAME_LANG_NO>914</NAME_LANG_NO>
+		  	<ACCOUNT_CODE>631</ACCOUNT_CODE>
+		  	<SIGN>-</SIGN>
+		  	<BA>0</BA>
+		  	<VIEW_AMOUNT_TYPE>2</VIEW_AMOUNT_TYPE>
+         </INCOME>
+      
+          <INCOME>
+		  	<INCOME_ID>20</INCOME_ID>
+		  	<CODE>02.E.03</CODE>
+		  	<NAME>Genel Yönetim Giderleri</NAME>
+			<NAME_LANG_NO>915</NAME_LANG_NO>
+		  	<ACCOUNT_CODE>632</ACCOUNT_CODE>
+		  	<SIGN>-</SIGN>
+		  	<BA>0</BA>
+		  	<VIEW_AMOUNT_TYPE>2</VIEW_AMOUNT_TYPE>
+         </INCOME>
+      
+          <INCOME>
+		  	<INCOME_ID>21</INCOME_ID>
+		  	<CODE>03_</CODE>
+		  	<NAME>OLAĞAN KAR VEYA ZARAR</NAME>
+			<NAME_LANG_NO>937</NAME_LANG_NO>
+		  	<ACCOUNT_CODE/>
+		  	<SIGN/>
+		  	<BA/>
+		  	<VIEW_AMOUNT_TYPE>2</VIEW_AMOUNT_TYPE>
+         </INCOME>
+      
+          <INCOME>
+		  	<INCOME_ID>22</INCOME_ID>
+		  	<CODE>03.F</CODE>
+		  	<NAME>DIĞER FAALİYETLERDEN OLAĞAN GELİR VEYA KARLAR</NAME>
+			<NAME_LANG_NO>917</NAME_LANG_NO>
+		  	<ACCOUNT_CODE/>
+		  	<SIGN>+</SIGN>
+		  	<BA>1</BA>
+		  	<VIEW_AMOUNT_TYPE>2</VIEW_AMOUNT_TYPE>
+         </INCOME>
+      
+          <INCOME>
+		  	<INCOME_ID>23</INCOME_ID>
+		  	<CODE>03.F.01</CODE>
+		  	<NAME>İştiraklerden Temettü Gelirleri</NAME>
+			<NAME_LANG_NO>918</NAME_LANG_NO>
+		  	<ACCOUNT_CODE>640</ACCOUNT_CODE>
+		  	<SIGN>+</SIGN>
+		  	<BA>1</BA>
+		  	<VIEW_AMOUNT_TYPE>2</VIEW_AMOUNT_TYPE>
+         </INCOME>
+      
+          <INCOME>
+		  	<INCOME_ID>24</INCOME_ID>
+		  	<CODE>03.F.02</CODE>
+		  	<NAME>Bağlı Ortaklıklardan Temettü Gelirleri</NAME>
+			<NAME_LANG_NO>919</NAME_LANG_NO>
+		  	<ACCOUNT_CODE>641</ACCOUNT_CODE>
+		  	<SIGN>+</SIGN>
+		  	<BA>1</BA>
+		  	<VIEW_AMOUNT_TYPE>2</VIEW_AMOUNT_TYPE>
+         </INCOME>
+      
+          <INCOME>
+		  	<INCOME_ID>25</INCOME_ID>
+		  	<CODE>03.F.03</CODE>
+		  	<NAME>Faiz Gelirleri</NAME>
+			<NAME_LANG_NO>920</NAME_LANG_NO>
+		  	<ACCOUNT_CODE>642</ACCOUNT_CODE>
+		  	<SIGN>+</SIGN>
+		  	<BA>1</BA>
+		  	<VIEW_AMOUNT_TYPE>2</VIEW_AMOUNT_TYPE>
+         </INCOME>
+      
+          <INCOME>
+		  	<INCOME_ID>26</INCOME_ID>
+		  	<CODE>03.F.04</CODE>
+		  	<NAME>Komisyon Gelirleri</NAME>
+			<NAME_LANG_NO>921</NAME_LANG_NO>
+		  	<ACCOUNT_CODE>643</ACCOUNT_CODE>
+		  	<SIGN>+</SIGN>
+		  	<BA>1</BA>
+		  	<VIEW_AMOUNT_TYPE>2</VIEW_AMOUNT_TYPE>
+         </INCOME>
+      
+          <INCOME>
+		  	<INCOME_ID>27</INCOME_ID>
+		  	<CODE>03.F.05</CODE>
+		  	<NAME>Konusu Olmayan Karşılıklar</NAME>
+			<NAME_LANG_NO>922</NAME_LANG_NO>
+		  	<ACCOUNT_CODE>644</ACCOUNT_CODE>
+		  	<SIGN>+</SIGN>
+		  	<BA>1</BA>
+		  	<VIEW_AMOUNT_TYPE>2</VIEW_AMOUNT_TYPE>
+         </INCOME>
+      
+          <INCOME>
+		  	<INCOME_ID>28</INCOME_ID>
+		  	<CODE>03.F.06</CODE>
+		  	<NAME>Menkul Kıymet Satış Karları</NAME>
+			<NAME_LANG_NO>923</NAME_LANG_NO>
+		  	<ACCOUNT_CODE>645</ACCOUNT_CODE>
+		  	<SIGN>+</SIGN>
+		  	<BA>1</BA>
+		  	<VIEW_AMOUNT_TYPE>2</VIEW_AMOUNT_TYPE>
+         </INCOME>
+      
+          <INCOME>
+		  	<INCOME_ID>29</INCOME_ID>
+		  	<CODE>03.F.07</CODE>
+		  	<NAME>Kambiyo Karları</NAME>
+			<NAME_LANG_NO>924</NAME_LANG_NO>
+		  	<ACCOUNT_CODE>646</ACCOUNT_CODE>
+		  	<SIGN>+</SIGN>
+		  	<BA>1</BA>
+		  	<VIEW_AMOUNT_TYPE>2</VIEW_AMOUNT_TYPE>
+         </INCOME>
+      
+          <INCOME>
+		  	<INCOME_ID>30</INCOME_ID>
+		  	<CODE>03.F.08</CODE>
+		  	<NAME>Reeskont Faiz Gelirleri</NAME>
+			<NAME_LANG_NO>925</NAME_LANG_NO>
+		  	<ACCOUNT_CODE>647</ACCOUNT_CODE>
+		  	<SIGN>+</SIGN>
+		  	<BA>1</BA>
+		  	<VIEW_AMOUNT_TYPE>2</VIEW_AMOUNT_TYPE>
+         </INCOME>
+      
+          <INCOME>
+		  	<INCOME_ID>31</INCOME_ID>
+		  	<CODE>03.F.09</CODE>
+		  	<NAME>Faaliyetle İlgili Diğer Gelir ve Karlar</NAME>
+			<NAME_LANG_NO>926</NAME_LANG_NO>
+		  	<ACCOUNT_CODE>649</ACCOUNT_CODE>
+		  	<SIGN>+</SIGN>
+		  	<BA>1</BA>
+		  	<VIEW_AMOUNT_TYPE>2</VIEW_AMOUNT_TYPE>
+         </INCOME>
+      
+          <INCOME>
+		  	<INCOME_ID>32</INCOME_ID>
+		  	<CODE>03.G</CODE>
+		  	<NAME>DİĞER FAALİYETLERDEN GİDER VE ZARARLAR</NAME>
+			<NAME_LANG_NO>927</NAME_LANG_NO>
+		  	<ACCOUNT_CODE/>
+		  	<SIGN>-</SIGN>
+		  	<BA/>
+		  	<VIEW_AMOUNT_TYPE>2</VIEW_AMOUNT_TYPE>
+         </INCOME>
+      
+          <INCOME>
+		  	<INCOME_ID>33</INCOME_ID>
+		  	<CODE>03.G.01</CODE>
+		  	<NAME>Komisyon Giderleri</NAME>
+			<NAME_LANG_NO>928</NAME_LANG_NO>
+		  	<ACCOUNT_CODE>653</ACCOUNT_CODE>
+		  	<SIGN>-</SIGN>
+		  	<BA>0</BA>
+		  	<VIEW_AMOUNT_TYPE>2</VIEW_AMOUNT_TYPE>
+         </INCOME>
+      
+          <INCOME>
+		  	<INCOME_ID>34</INCOME_ID>
+		  	<CODE>03.G.02</CODE>
+		  	<NAME>Karşılık Giderleri</NAME>
+			<NAME_LANG_NO>929</NAME_LANG_NO>
+		  	<ACCOUNT_CODE>654</ACCOUNT_CODE>
+		  	<SIGN>-</SIGN>
+		  	<BA>0</BA>
+		  	<VIEW_AMOUNT_TYPE>2</VIEW_AMOUNT_TYPE>
+         </INCOME>
+      
+          <INCOME>
+		  	<INCOME_ID>35</INCOME_ID>
+		  	<CODE>03.G.03</CODE>
+		  	<NAME>Menkul Kıymet Satış Zararları</NAME>
+			<NAME_LANG_NO>930</NAME_LANG_NO>
+		  	<ACCOUNT_CODE>655</ACCOUNT_CODE>
+		  	<SIGN>-</SIGN>
+		  	<BA>0</BA>
+		  	<VIEW_AMOUNT_TYPE>2</VIEW_AMOUNT_TYPE>
+         </INCOME>
+      
+          <INCOME>
+		  	<INCOME_ID>36</INCOME_ID>
+		  	<CODE>03.G.04</CODE>
+		  	<NAME>Kambiyo Zararları</NAME>
+			<NAME_LANG_NO>931</NAME_LANG_NO>
+		  	<ACCOUNT_CODE>656</ACCOUNT_CODE>
+		  	<SIGN>-</SIGN>
+		  	<BA>0</BA>
+		  	<VIEW_AMOUNT_TYPE>2</VIEW_AMOUNT_TYPE>
+         </INCOME>
+      
+          <INCOME>
+		  	<INCOME_ID>37</INCOME_ID>
+		  	<CODE>03.G.05</CODE>
+		  	<NAME>Reeskont Faiz Giderleri</NAME>
+			<NAME_LANG_NO>932</NAME_LANG_NO>
+		  	<ACCOUNT_CODE>657</ACCOUNT_CODE>
+		  	<SIGN>-</SIGN>
+		  	<BA>0</BA>
+		  	<VIEW_AMOUNT_TYPE>2</VIEW_AMOUNT_TYPE>
+         </INCOME>
+      
+          <INCOME>
+		  	<INCOME_ID>38</INCOME_ID>
+		  	<CODE>03.G.06</CODE>
+		  	<NAME>Diğer Olağan Gider ve Zararlar</NAME>
+			<NAME_LANG_NO>933</NAME_LANG_NO>
+		  	<ACCOUNT_CODE>659</ACCOUNT_CODE>
+		  	<SIGN>-</SIGN>
+		  	<BA>0</BA>
+		  	<VIEW_AMOUNT_TYPE>2</VIEW_AMOUNT_TYPE>
+         </INCOME>
+      
+          <INCOME>
+		  	<INCOME_ID>39</INCOME_ID>
+		  	<CODE>03.H</CODE>
+		  	<NAME>FİNANSMAN GİDERLERI</NAME>
+			<NAME_LANG_NO>934</NAME_LANG_NO>
+		  	<ACCOUNT_CODE/>
+		  	<SIGN>-</SIGN>
+		  	<BA/>
+		  	<VIEW_AMOUNT_TYPE>2</VIEW_AMOUNT_TYPE>
+         </INCOME>
+      
+          <INCOME>
+		  	<INCOME_ID>40</INCOME_ID>
+		  	<CODE>03.H.01</CODE>
+		  	<NAME>Kısa Vadeli Borçlanma Giderleri</NAME>
+			<NAME_LANG_NO>935</NAME_LANG_NO>
+		  	<ACCOUNT_CODE>660</ACCOUNT_CODE>
+		  	<SIGN>-</SIGN>
+		  	<BA>0</BA>
+		  	<VIEW_AMOUNT_TYPE>2</VIEW_AMOUNT_TYPE>
+         </INCOME>
+      
+          <INCOME>
+		  	<INCOME_ID>41</INCOME_ID>
+		  	<CODE>03.H.02</CODE>
+		  	<NAME>Uzun Vadeli Borçlanma Giderleri</NAME>
+			<NAME_LANG_NO>936</NAME_LANG_NO>
+		  	<ACCOUNT_CODE>661</ACCOUNT_CODE>
+		  	<SIGN>-</SIGN>
+		  	<BA>0</BA>
+		  	<VIEW_AMOUNT_TYPE>2</VIEW_AMOUNT_TYPE>
+         </INCOME>
+		 
+		 <INCOME>
+		  	<INCOME_ID>42</INCOME_ID>
+		  	<CODE>04_</CODE>
+		  	<NAME>Dönem Karı Veya Zararı</NAME>
+			<NAME_LANG_NO>945</NAME_LANG_NO>
+		  	<ACCOUNT_CODE/>
+		  	<SIGN/>
+		  	<BA/>
+		  	<VIEW_AMOUNT_TYPE>2</VIEW_AMOUNT_TYPE>
+         </INCOME>
+      
+          <INCOME>
+		  	<INCOME_ID>43</INCOME_ID>
+		  	<CODE>04.I</CODE>
+		  	<NAME>OLAĞANDIŞI GELİR VE KARLAR</NAME>
+			<NAME_LANG_NO>938</NAME_LANG_NO>
+		  	<ACCOUNT_CODE/>
+		  	<SIGN>+</SIGN>
+		  	<BA/>
+		  	<VIEW_AMOUNT_TYPE>2</VIEW_AMOUNT_TYPE>
+         </INCOME>
+      
+          <INCOME>
+		  	<INCOME_ID>44</INCOME_ID>
+		  	<CODE>04.I.01</CODE>
+		  	<NAME>Önceki Dönem Gelir ve Karları</NAME>
+			<NAME_LANG_NO>939</NAME_LANG_NO>
+		  	<ACCOUNT_CODE>671</ACCOUNT_CODE>
+		  	<SIGN>+</SIGN>
+		  	<BA>1</BA>
+		  	<VIEW_AMOUNT_TYPE>2</VIEW_AMOUNT_TYPE>
+         </INCOME>
+      
+          <INCOME>
+		  	<INCOME_ID>45</INCOME_ID>
+		  	<CODE>04.I.02</CODE>
+		  	<NAME>Diğer Olağandışı Gelir ve Karlar</NAME>
+			<NAME_LANG_NO>940</NAME_LANG_NO>
+		  	<ACCOUNT_CODE>679</ACCOUNT_CODE>
+		  	<SIGN>+</SIGN>
+		  	<BA>1</BA>
+		  	<VIEW_AMOUNT_TYPE>2</VIEW_AMOUNT_TYPE>
+         </INCOME>
+      
+          <INCOME>
+		  	<INCOME_ID>46</INCOME_ID>
+		  	<CODE>04.J</CODE>
+		  	<NAME>OLAĞANDIŞI GİDER VE ZARARLAR</NAME>
+			<NAME_LANG_NO>941</NAME_LANG_NO>
+		  	<ACCOUNT_CODE/>
+		  	<SIGN>-</SIGN>
+		  	<BA/>
+		  	<VIEW_AMOUNT_TYPE>2</VIEW_AMOUNT_TYPE>
+         </INCOME>
+      
+          <INCOME>
+		  	<INCOME_ID>47</INCOME_ID>
+		  	<CODE>04.J.01</CODE>
+		  	<NAME>Çalışmayan Kısım Gider ve Zararları</NAME>
+			<NAME_LANG_NO>942</NAME_LANG_NO>
+		  	<ACCOUNT_CODE>680</ACCOUNT_CODE>
+		  	<SIGN>-</SIGN>
+		  	<BA>0</BA>
+		  	<VIEW_AMOUNT_TYPE>2</VIEW_AMOUNT_TYPE>
+         </INCOME>
+      
+          <INCOME>
+		  	<INCOME_ID>48</INCOME_ID>
+		  	<CODE>04.J.02</CODE>
+		  	<NAME>Önceki Dönem Gider ve Zararları</NAME>
+			<NAME_LANG_NO>943</NAME_LANG_NO>
+		  	<ACCOUNT_CODE>681</ACCOUNT_CODE>
+		  	<SIGN>-</SIGN>
+		  	<BA>0</BA>
+		  	<VIEW_AMOUNT_TYPE>2</VIEW_AMOUNT_TYPE>
+         </INCOME>
+      
+          <INCOME>
+		  	<INCOME_ID>49</INCOME_ID>
+		  	<CODE>04.J.03</CODE>
+		  	<NAME>Diğer Olagandışı Gider ve Zararlar </NAME>
+			<NAME_LANG_NO>944</NAME_LANG_NO>
+		  	<ACCOUNT_CODE>689</ACCOUNT_CODE>
+		  	<SIGN>-</SIGN>
+		  	<BA>0</BA>
+		  	<VIEW_AMOUNT_TYPE>2</VIEW_AMOUNT_TYPE>
+         </INCOME>
+      
+         <INCOME>
+		  	<INCOME_ID>50</INCOME_ID>
+		  	<CODE>05.K</CODE>
+		  	<NAME>Dönem Karı Vergi Ve Diğer Yasal Yükümlülük Karşılıkları</NAME>
+			<NAME_LANG_NO>946</NAME_LANG_NO>
+		  	<ACCOUNT_CODE>691</ACCOUNT_CODE>
+		  	<SIGN>-</SIGN>
+		  	<BA>0</BA>
+		  	<VIEW_AMOUNT_TYPE>2</VIEW_AMOUNT_TYPE>
+         </INCOME>
+		 
+		 <INCOME>
+		  	<INCOME_ID>51</INCOME_ID>
+		  	<CODE>05_</CODE>
+		  	<NAME>Dönem Net Karı Veya Zararı</NAME>
+			<NAME_LANG_NO>947</NAME_LANG_NO>
+		  	<ACCOUNT_CODE/>
+		  	<SIGN/>
+		  	<BA/>
+		  	<VIEW_AMOUNT_TYPE>2</VIEW_AMOUNT_TYPE>
+         </INCOME>
+      
+   </INCOME_TABLE>

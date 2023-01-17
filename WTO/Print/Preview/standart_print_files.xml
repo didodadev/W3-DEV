@@ -1,0 +1,1201 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<standart_print_file>
+	<!-- Butce-->
+	<print_file>
+		<file_name>design/template/butce_detay.cfm</file_name>
+		<file_head>Bütçe Detay</file_head>
+		<file_detail>Bütçe modülündeki Bütçelerin detaylı olarak gelir-gider planlarıyla birlikte yazdırılması için kullanılır.</file_detail>
+		<file_image>butce_detay.jpg</file_image>
+		<file_process>Bütçe</file_process>
+		<file_print_type>330</file_print_type>
+		<file_module_id>46</file_module_id>
+	</print_file>
+	<print_file>
+		<file_name>design/template/butce_plan_detay.cfm</file_name>
+		<file_head>Bütçe Plan Detay</file_head>
+		<file_detail>Bütçe modülündeki Bütçe planlarının detaylı olarak yazdırılması için kullanılır.</file_detail>
+		<file_image>butce_plan_detay.jpg</file_image>
+		<file_process>Bütçe Plan</file_process>
+		<file_print_type>331</file_print_type>
+		<file_module_id>46</file_module_id>
+	</print_file>
+	<!-- Barkod -->
+	<print_file>
+		<file_name>design/template/toplu_barkod_baski.cfm</file_name>
+		<file_head>Barkod Baskı</file_head>
+		<file_detail>Toplu Barkod çıktısı almayı sağlar.</file_detail>
+		<file_image>toplu_barkod_baski.jpg</file_image>
+		<file_process>Barcod Baskı</file_process>
+		<file_print_type>193</file_print_type>
+		<file_module_id>47</file_module_id>
+	</print_file>
+	<!-- Egitim yonetimi-->
+	<print_file>
+		<file_name>design/template/egitim_gorev_bildirim.cfm</file_name>
+		<file_head>Eğitim Eğitümen Bildirim Formu</file_head>
+		<file_detail>Eğitim yönetimi modülünde ilgili Eğitimle ilgili bildirinin Eğitimciye gönderilmesi için kullanılır.</file_detail>
+		<file_image>egitim_gorev_bildirim.jpg</file_image>
+		<file_process>Eğitim yönetimi</file_process>
+		<file_print_type>320</file_print_type>
+		<file_module_id>34</file_module_id>
+	</print_file>
+	<print_file>
+		<file_name>design/template/egitim_katilimci_bildirim.cfm</file_name>
+		<file_head>Eğitim Katılımcı Bildirim Formu</file_head>
+		<file_detail>Eğitim yönetimi modülünde ilgili Eğitimle ilgili bildirinin Katılımcılara gönderilmesi için kullanılır.</file_detail>
+		<file_image>egitim_katilimci_bildirim.jpg</file_image>
+		<file_process>Eğitim yönetimi Katılımcı</file_process>
+		<file_print_type>321</file_print_type>
+		<file_module_id>34</file_module_id>
+	</print_file>
+	<print_file>
+		<file_name>design/template/egitim_imza_listesi.cfm</file_name>
+		<file_head>Eğitim imza Listesi</file_head>
+		<file_detail>Eğitim yönetimi modülünde Katılımcılarn Eğitime katıldıklarını gösteren imza belgesinin yazdırılması için kullanılır.</file_detail>
+		<file_image>egitim_imza_listesi.jpg</file_image>
+		<file_process>Eğitim yönetimi</file_process>
+		<file_print_type>320</file_print_type>
+		<file_module_id>34</file_module_id>
+	</print_file>
+	<print_file>
+		<file_name>design/template/egitim_program_kimligi.cfm</file_name>
+		<file_head>Eğitim Program Kimliği</file_head>
+		<file_detail>Eğitim yönetimi modülünde Eğitimle ilgili bilgilerin yazdırılması için kullanılır.</file_detail>
+		<file_image>egitim_program_kimligi.jpg</file_image>
+		<file_process>Eğitim yönetimi</file_process>
+		<file_print_type>320</file_print_type>
+		<file_module_id>34</file_module_id>
+	</print_file>
+		<!--Esnek Çalışma -->
+	<print_file>
+		<file_name>design/template/esnek_calisma_basvuru_sablonu.cfm</file_name>
+		<file_head>Esnek Çalışma Şablonu</file_head>
+		<file_detail>Esnek Çalışma Başvuru Şablonunun yazdırılması için kullanılır.</file_detail>
+		<file_image>esnek_calisma_basvuru_sablonu.JPG</file_image>
+		<file_process>Esnek Çalışma</file_process>
+		<file_print_type>183</file_print_type>
+		<file_module_id>3</file_module_id>
+	</print_file>
+	<!-- Fatura-->
+	<print_file>
+		<file_name>design/template/fatura_print.cfm</file_name>
+		<file_head>Fatura Normal</file_head>
+		<file_detail>Fatura modülünden kesilen Satış faturalarının tüm ayrıntılarıyla birlikte sayfalı olarak yazdırılması için kullanılır.</file_detail>
+		<file_image>fatura_print.jpg</file_image>
+		<file_process>Genel Fatura Baskı</file_process>
+		<file_print_type>10</file_print_type>
+		<file_module_id>20</file_module_id>
+	</print_file>
+	<print_file>
+		<file_name>design/template/fatura_print_bilesenli.cfm</file_name>
+		<file_head>Fatura Bileşenli Baskı</file_head>
+		<file_detail>Fatura modülünden kesilen Satış faturalarının tüm ayrıntılarıyla ve ürünlerin Bileşenleriyle birlikte sayfalı olarak  yazdırılması için kullanılır.</file_detail>
+		<file_image>fatura_print_bilesenli.jpg</file_image>
+		<file_process>Genel Fatura Baskı</file_process>
+		<file_print_type>10</file_print_type>
+		<file_module_id>20</file_module_id>
+	</print_file>
+	<print_file>
+		<file_name>design/template/fatura_print_tevkifatli.cfm</file_name>
+		<file_head>Fatura Tevkifatlı Baskı</file_head>
+		<file_detail>Fatura modülünden kesilen Tevkifatlı Satış faturalarının tüm ayrıntılarıyla birlikte sayfalı olarak yazdırılması  için kullanılır.</file_detail>
+		<file_image>fatura_print_tevkifatli.jpg</file_image>
+		<file_process>Genel Fatura Baskı</file_process>
+		<file_print_type>10</file_print_type>
+		<file_module_id>20</file_module_id>
+	</print_file>
+	<print_file>
+		<file_name>design/template/fatura_print_tevkifatli_bilesenli.cfm</file_name>
+		<file_head>Fatura Tevkifatlı-Bileşenli Baskı</file_head>
+		<file_detail>Fatura modülünden kesilen Tevkifatlı Satış faturalarının tüm ayrıntılarıyla ve ürünlerin Bileşenleriyle birlikte sayfalı olarak yazdırılması için kullanılır.</file_detail>
+		<file_image>fatura_print_tevkifatli_bilesenli.jpg</file_image>
+		<file_process>Genel Fatura Baskı</file_process>
+		<file_print_type>10</file_print_type>
+		<file_module_id>20</file_module_id>
+	</print_file>
+	<print_file>
+		<file_name>design/template/sabit_kiymet_fatura.cfm</file_name>
+		<file_head>Sabit Kıymet Fatura Baskı</file_head>
+		<file_detail>Satılan sabit Kıymetlerin faturasnn demirbaş bilgileriyle birlikte yazdırılması için kullanılır.</file_detail>
+		<file_image>sabit_kiymet_fatura.jpg</file_image>
+		<file_process>Sabit Kıymet Detayı</file_process>
+		<file_print_type>350</file_print_type>
+		<file_module_id>31</file_module_id>
+	</print_file>
+	<!-- Finans Kasa - Banka - Cek-Senet-->		
+	<print_file>
+		<file_name>design/template/banka_doviz_alis_satis.cfm</file_name>
+		<file_head>Finans - Banka Döviz Al Satış işlemi</file_head>
+		<file_detail>Banka modülünden yapılan Döviz al - Satış işlemlerinin borç-alacak olarak yazdırılması için kullanılır.</file_detail>
+		<file_image>banka_doviz_alis_satis.jpg</file_image>
+		<file_process>Banka Döviz Al Satış işlemi</file_process>
+		<file_print_type>151</file_print_type>
+		<file_module_id>19</file_module_id>
+	</print_file>
+	<print_file>
+		<file_name>design/template/banka_kredi_karti_odeme.cfm</file_name>
+		<file_head>Finans - Banka Kredi Kart Ödeme</file_head>
+		<file_detail>Banka modülünden yapılan kredi kart ile Ödeme işlemlerinin borç-alacak olarak yazdırılması için kullanılır.</file_detail>
+		<file_image>banka_kredi_karti_odeme.jpg</file_image>
+		<file_process>Kredi Kart Ödeme</file_process>
+		<file_print_type>153</file_print_type>
+		<file_module_id>19</file_module_id>
+	</print_file>
+	<print_file>
+		<file_name>design/template/banka_kredi_karti_tahsilati.cfm</file_name>
+		<file_head>Finans - Banka Kredi Kart Tahsilat</file_head>
+		<file_detail>Banka modülünden yapılan kredi kart tahsilat işlemlerinin borç-alacak olarak yazdırılması için kullanılır.</file_detail>
+		<file_image>banka_kredi_karti_tahsilati.jpg</file_image>
+		<file_process>Kredi Kart Tahsilat</file_process>
+		<file_print_type>152</file_print_type>
+		<file_module_id>19</file_module_id>
+	</print_file>
+	<print_file>
+		<file_name>design/template/banka_gelen_giden_havale.cfm</file_name>
+		<file_head>Finans - Banka Gelen - Giden Havale</file_head>
+		<file_detail>Banka modülünden yapılan gelen havale ve giden havale işlemlerinin yazdırılması için kullanılır.</file_detail>
+		<file_image>banka_gelen_giden_havale.jpg</file_image>
+		<file_process>Gelen - Giden Havale</file_process>
+		<file_print_type>154</file_print_type>
+		<file_module_id>19</file_module_id>
+	</print_file>
+	<print_file>
+		<file_name>design/template/banka_para_yatirma_cekme.cfm</file_name>
+		<file_head>Finans - Banka Para Yatırma - Para Çekme</file_head>
+		<file_detail>Banka modülünden yapılan para yatırma ve para çekme işlemlerinin yazdırılması için kullanılır..</file_detail>
+		<file_image>banka_para_yatirma_cekme.jpg</file_image>
+		<file_process>Para Yatırma-Para Çekme</file_process>
+		<file_print_type>531</file_print_type>
+		<file_module_id>19</file_module_id>
+	</print_file>	
+	<print_file>
+		<file_name>design/template/banka_talimat.cfm</file_name>
+		<file_head>Finans - Banka Talimat</file_head>
+		<file_detail>Banka modülünden yapılan banka talimat islemlerinin yazdirilmasi icin kullanilir.</file_detail>
+		<file_image>banka_gelen_giden_havale.jpg</file_image>
+		<file_process>Banka Talimat</file_process>
+		<file_print_type>157</file_print_type>
+		<file_module_id>19</file_module_id>
+	</print_file>
+	<print_file>
+		<file_name>design/template/banka_talimat_Toplu.cfm</file_name>
+		<file_head>Finans - Banka Talimat (Toplu)</file_head>
+		<file_detail>Banka modulunden yapılan banka talimat islemlerinin toplu yazdirilmasi icin kullanilir.</file_detail>
+		<file_image>banka_talimat_coklu.jpg</file_image>
+		<file_process>Banka Talimat (Toplu)</file_process>
+		<file_print_type>150</file_print_type>
+		<file_module_id>19</file_module_id>
+	</print_file>
+	<print_file>
+		<file_name>design/template/toplu_cek_yazdirma.cfm</file_name>
+		<file_head>Finans - Toplu Çek Yazdırma</file_head>
+		<file_detail>Finans-Çek modülünden Toplu Çek Yazdırma işlemleri için kullanılır.</file_detail>
+		<file_image>cek_cikis_bordrosu.jpg</file_image>
+		<file_process>Çek Yazdırma</file_process>
+		<file_print_type>110</file_print_type>
+		<file_module_id>21</file_module_id>
+	</print_file>
+	<print_file>
+		<file_name>design/template/cek_cikis_bordrosu.cfm</file_name>
+		<file_head>Finans - Çek Çıkış Bordrosu</file_head>
+		<file_detail>Finans-Çek modülünden yapılan Çek Çıkış bordrosu işlemlerinin yazdırılması için kullanılır.</file_detail>
+		<file_image>cek_cikis_bordrosu.jpg</file_image>
+		<file_process>Çek çıkış</file_process>
+		<file_print_type>112</file_print_type>
+		<file_module_id>21</file_module_id>
+	</print_file>
+	<print_file>
+		<file_name>design/template/cek_cikis_bordrosu_banka.cfm</file_name>
+		<file_head>Finans - Çek Çıkış Bordrosu Banka</file_head>
+		<file_detail>Finans-Çek modülünden yapılan Çek Çıkış bordrosu(Banka) işlemlerinin yazdırılması için kullanılır.</file_detail>
+		<file_image>cek_cikis_bordrosu_banka.jpg</file_image>
+		<file_process>Çek cıkış</file_process>
+		<file_print_type>112</file_print_type>
+		<file_module_id>21</file_module_id>
+	</print_file>
+	<print_file>
+		<file_name>design/template/cek_cikis_bordrosu_tahsil.cfm</file_name>
+		<file_head>Finans - Çek Çıkış Bordrosu Tahsil</file_head>
+		<file_detail>Finans-Çek modülünden yapılan Çek Çıkış bordrosu(Tahsil) işlemlerinin yazdırılması için kullanılır.</file_detail>
+		<file_image>cek_cikis_bordrosu_tahsil.jpg</file_image>
+		<file_process>Çek Çıkış</file_process>
+		<file_print_type>112</file_print_type>
+		<file_module_id>21</file_module_id>
+	</print_file>
+	<print_file>
+		<file_name>design/template/cek_iade_cikis_bordrosu.cfm</file_name>
+		<file_head>Finans - Çek iade Çıkış Bordrosu</file_head>
+		<file_detail>Finans-Çek modülünden yapılan Çek Çıkış bordrosu(iade) işlemlerinin yazdırılması için kullanılır.</file_detail>
+		<file_image>cek_iade_cikis_bordrosu.jpg</file_image>
+		<file_process>Çek çıkış</file_process>
+		<file_print_type>112</file_print_type>
+		<file_module_id>21</file_module_id>
+	</print_file>
+	<print_file>
+		<file_name>design/template/cek_giris_cek_iade_banka.cfm</file_name>
+		<file_head>Finans - Çek Giris ve iade Bordrosu Banka</file_head>
+		<file_detail>Finans-Çek modülünden yapılan Çek Giriş bordrosu ve Çek iade banka bordrosu işlemlerinin yazdırılması için kullanılır.</file_detail>
+		<file_image>cek_giris_iade_bordrosu.jpg</file_image>
+		<file_process>Çek Giriş</file_process>
+		<file_print_type>112</file_print_type>
+		<file_module_id>21</file_module_id>
+	</print_file>
+	<print_file>
+		<file_name>design/template/cek_iade_giris_bordrosu.cfm</file_name>
+		<file_head>Finans - Çek Giriş iade Bordrosu</file_head>
+		<file_detail>Finans-Çek modülünden yapılan Çek iade Giriş bordrosu işlemlerinin yazdırılması için kullanılır.</file_detail>
+		<file_image>cek_iade_giris_bordrosu.jpg</file_image>
+		<file_process>Çek Giriş</file_process>
+		<file_print_type>111</file_print_type>
+		<file_module_id>21</file_module_id>
+	</print_file>
+	<print_file>
+		<file_name>design/template/senet_cikis_bordrosu.cfm</file_name>
+		<file_head>Finans - Senet Çıkış Bordrosu</file_head>
+		<file_detail>Finans-Senet modülünden yapılan senet Çıkış bordrosu işlemlerinin yazdırılması için kullanılır.</file_detail>
+		<file_image>senet_cikis_bordrosu.jpg</file_image>
+		<file_process>Senet Çıkış</file_process>
+		<file_print_type>114</file_print_type>
+		<file_module_id>21</file_module_id>
+	</print_file>
+	<print_file>
+		<file_name>design/template/senet_cikis_bordrosu_banka_tahsil.cfm</file_name>
+		<file_head>Finans - Senet Çıkış Bordrosu Banka Tahsil</file_head>
+		<file_detail>Finans-Senet modülünden yapılan senet Çıkış bordrosu(Banka Tahsil) işlemlerinin yazdırılması için kullanılır.</file_detail>
+		<file_image>senet_cikis_bordrosu_banka_tah.jpg</file_image>
+		<file_process>Senet Çıkış</file_process>
+		<file_print_type>114</file_print_type>
+		<file_module_id>21</file_module_id>
+	</print_file>
+	<print_file>
+		<file_name>design/template/senet_cikis_tahsil.cfm</file_name>
+		<file_head>Finans - Senet Çıkış Bordrosu Tahsil</file_head>
+		<file_detail>Finans-Senet modülünden yapılan Senet Çıkış Bordrosu(Tahsil) işlemlerinin yazdırılması için kullanılır.</file_detail>
+		<file_image>senet_cikis_tahsil.jpg</file_image>
+		<file_process>Senet Çıkış</file_process>
+		<file_print_type>114</file_print_type>
+		<file_module_id>21</file_module_id>
+	</print_file>
+	<print_file>
+		<file_name>design/template/senet_giris_senet_iade_banka.cfm</file_name>
+		<file_head>Finans - Senet Giriş ve Senet iade</file_head>
+		<file_detail>Finans-Senet modülünden yapılan senet Giriş bordrosu ve Senet iade işlemlerinin yazdırılması için kullanılır.</file_detail>
+		<file_image>senet_giris_senet_iade_giris.jpg</file_image>
+		<file_process>Senet Giri</file_process>
+		<file_print_type>113</file_print_type>
+		<file_module_id>21</file_module_id>
+	</print_file>
+	<print_file>
+		<file_name>design/template/senet_iade_cikis_bordrosu.cfm</file_name>
+		<file_head>Finans - Senet ade Çıkış Bordrosu</file_head>
+		<file_detail>Finans-Senet modülünden yapılan senet Çıkış bordrosu(iade) işlemlerinin yazdırılması için kullanılır.</file_detail>
+		<file_image>senet_iade_cikis.jpg</file_image>
+		<file_process>Senet çıkış</file_process>
+		<file_print_type>114</file_print_type>
+		<file_module_id>21</file_module_id>
+	</print_file>
+	<print_file>
+		<file_name>design/template/standart_cash_payment.cfm</file_name>
+		<file_head>Finans - Kasa Ödeme Şablonu</file_head>
+		<file_detail>Finans-Kasa modülünden yapılan Ödeme işlemlerinin yazdırılması için kullanılır.</file_detail>
+		<file_image>standart_cash_payment.jpg</file_image>
+		<file_process>Kasa Ödeme işlemi</file_process>
+		<file_print_type>132</file_print_type>
+		<file_module_id>18</file_module_id>
+	</print_file>
+	<print_file>
+		<file_name>design/template/nakit_tahsilat_kasa.cfm</file_name>
+		<file_head>Finans - Kasa Nakit Tahsilat</file_head>
+		<file_detail>Finans-Kasa modülünden yapılan Nakit Tahsilat işlemlerinin yazdırılması için kullanılır.</file_detail>
+		<file_image>nakit_tahsilat_kasa.jpg</file_image>
+		<file_process>Kasa Nakit Tahsilat işlemi</file_process>
+		<file_print_type>133</file_print_type>
+		<file_module_id>18</file_module_id>
+	</print_file>
+	<print_file>
+		<file_name>design/template/kasa_doviz_alis_satis.cfm</file_name>
+		<file_head>Finans - Kasa Döviz Al - Satış ablonu</file_head>
+		<file_detail>Finans-Kasa modülünden yapılan Döviz al-Satış işlemlerinin borç ve alacak olarak yazdırılması için kullanılır.</file_detail>
+		<file_image>kasa_doviz_alis_satis.jpg</file_image>
+		<file_process>Kasa Döviz Al Satış işlemi</file_process>
+		<file_print_type>131</file_print_type>
+		<file_module_id>18</file_module_id>
+	</print_file>
+	<print_file>
+		<file_name>design/template/mutabakat_mektubu.cfm</file_name>
+		<file_head>Mutabakat Mektubu</file_head>
+		<file_detail>Finans - Cari Hesap modülünde borç alacak dökümü alındıktan sonra ilgili cariyle ilgili mutabakat yazısını yazdırılması için kullanılır.</file_detail>
+		<file_image>mutabakat_mektubu.jpg</file_image>
+		<file_process>Cari Dekont</file_process>
+		<file_print_type>210</file_print_type>
+		<file_module_id>23</file_module_id>
+	</print_file>
+	<print_file>
+		<file_name>design/template/mutabakat_mektubu_bireysel_ve_kurumsal.cfm</file_name>
+		<file_head>Mutabakat Mektubu Bireysel ve Kurumsal</file_head>
+		<file_detail>Finans - Cari Hesap modülünde borç alacak dökümü alındıktan sonra ilgili cariyle ilgili mutabakat yazısını yazdırılması için kullanılır.</file_detail>
+		<file_image>mutabakat_mektubu.jpg</file_image>
+		<file_process>Cari Dekont</file_process>
+		<file_print_type>210</file_print_type>
+		<file_module_id>23</file_module_id>
+	</print_file>
+	<print_file>
+		<file_name>design/template/cari_virman_print.cfm</file_name>
+		<file_head>Cari Virman</file_head>
+		<file_detail>Finans - Cari Hesap modülünde cari hesaplar arasında yapılan virman ileminin yazdırılması için kullanılır.</file_detail>
+		<file_image>cari_virman.jpg</file_image>
+		<file_process>Cari Virman</file_process>
+		<file_print_type>211</file_print_type>
+		<file_module_id>23</file_module_id>
+	</print_file>
+	<print_file>
+		<file_name>design/template/borc_alacak_dekontu.cfm</file_name>
+		<file_head>Borç - Alacak Dekontu</file_head>
+		<file_detail>Finans - Cari Hareketler modülünde cari hesaplar arasındaki borç dekontlar ve alacak dekontlarnn yazdırılması için kullanılır.</file_detail>
+		<file_image>borc_alacak_dekontu.jpg</file_image>
+		<file_process>Cari Dekont</file_process>
+		<file_print_type>212</file_print_type>
+		<file_module_id>23</file_module_id>
+	</print_file>
+	<print_file>
+		<file_name>design/template/toplu_borc_alacak_dokumu.cfm</file_name>
+		<file_head>Borç - Alacak Dökümü</file_head>
+		<file_detail>Finans - Cari Hareketler modülünde cari hesaplar arasındaki borç ve alacak dökümlerin yazdırılması için kullanılır.</file_detail>
+		<file_image>borc_alacak_dekontu.jpg</file_image>
+		<file_process>Borç Alacak Dökümü</file_process>
+		<file_print_type>215</file_print_type>
+		<file_module_id>23</file_module_id>
+	</print_file>
+	<print_file>
+		<file_name>design/template/toplu_borc_alacak_dekont.cfm</file_name>
+		<file_head>Borç - Alacak Dekontu</file_head>
+		<file_detail>Finans - Cari Hareketler modülünde cari hesaplar arasındaki borç dekontlar ve alacak dekontlarnn yazdırılması için kullanılır.</file_detail>
+		<file_image>borc_alacak_dekontu.jpg</file_image>
+		<file_process>Borç Alacak Dekontu</file_process>
+		<file_print_type>215</file_print_type>
+		<file_module_id>23</file_module_id>
+	</print_file>
+	<print_file>
+		<file_name>design/template/toplu_cari_virman.cfm</file_name>
+		<file_head>Toplu Cari Virman Dökümü</file_head>
+		<file_detail>Toplu Cari Virman Print Şablonu</file_detail>
+		<file_image></file_image>
+		<file_process>Toplu Cari Virman Dökümü</file_process>
+		<file_print_type>217</file_print_type>
+		<file_module_id>33</file_module_id>
+	</print_file>
+	<print_file>
+		<file_name>design/template/masraf_fisi.cfm</file_name>
+		<file_head>Finans - Masraf Fişi</file_head>
+		<file_detail>Finans - Masraf yönetimi modülünden kesilen masraf fişlerinin yazdırılması için kullanılır.</file_detail>
+		<file_image>masraf_fisi.jpg</file_image>
+		<file_process>Masraf Fişi</file_process>
+		<file_print_type>230</file_print_type>
+		<file_module_id>49</file_module_id>
+	</print_file>
+	<print_file>
+		<file_name>design/template/harcama_talebi.cfm</file_name>
+		<file_head>Finans - Harcama Talebi</file_head>
+		<file_detail>Finans - Masraf - Talepler modülündekiç taleplerin yazdırılması için kullanılır.</file_detail>
+		<file_image>harcama_talebi.jpg</file_image>
+		<file_process>Harcama Talebi</file_process>
+		<file_print_type>231</file_print_type>
+		<file_module_id>49</file_module_id>
+	</print_file>
+	<print_file>
+		<file_name>design/template/odeme_talebi.cfm</file_name>
+		<file_head>Finans - Ödeme Talebi</file_head>
+		<file_detail>Finans - Talepler modülündeki Ödeme taleplerinin yazdırılması için kullanılır.</file_detail>
+		<file_image>odeme_talebi.jpg</file_image>
+		<file_process>Ödeme Talebi</file_process>
+		<file_print_type>145</file_print_type>
+		<file_module_id>16</file_module_id>
+	</print_file>
+	<print_file>
+		<file_name>design/template/toplu_odeme_talebi.cfm</file_name>
+		<file_head>Finans - Ödeme Talebi</file_head>
+		<file_detail>Finans - Talepler modülündeki Ödeme taleplerinin toplu yazdırılması için kullanılır.</file_detail>
+		<file_image>odeme_talebi.jpg</file_image>
+		<file_process>Toplu Ödeme Talebi</file_process>
+		<file_print_type>146</file_print_type>
+		<file_module_id>16</file_module_id>
+	</print_file>
+	<print_file>
+		<file_name>design/template/muhasebe_fisi.cfm</file_name>
+		<file_head>Muhasebe Fişi</file_head>
+		<file_detail>Muhasebe modülünde kesilen muhasebe fişlerinin satır ve alt toplamla birlikte yazdırılması için kullanılır.</file_detail>
+		<file_image>muhasebe_fisi.jpg</file_image>
+		<file_process>Muhasebe Fişi</file_process>
+		<file_print_type>290</file_print_type>
+		<file_module_id>22</file_module_id>
+	</print_file>
+	<print_file>
+		<file_name>design/template/z_raporu.cfm</file_name>
+		<file_head>Z Raporu</file_head>
+		<file_detail>Z Raporlarnn yazdırılması için kullanılır.</file_detail>
+		<file_image>z_raporu.jpg</file_image>
+		<file_process>Z Raporu</file_process>
+		<file_print_type>140</file_print_type>
+		<file_module_id>16</file_module_id>
+	</print_file>
+	<!-- Fiziki varlık yonetimi-->
+	<print_file>
+		<file_name>design/template/arac_islem_baski.cfm</file_name>
+		<file_head>Araç işlem Baskı</file_head>
+		<file_detail>Fiziki varlık modülünde al,satış ve iade taleplerinin ayrıntılı olarak yazdırılması için kullanılır.</file_detail>
+		<file_image>arac_islem_baski.jpg</file_image>
+		<file_process>Araç işlem Baskı</file_process>
+		<file_print_type>251</file_print_type>
+		<file_module_id>40</file_module_id>
+	</print_file>
+	<print_file>
+		<file_name>design/template/arac_islem_baski_coklu.cfm</file_name>
+		<file_head>Araç işlem Baskı çoklu</file_head>
+		<file_detail>Fiziki varlık modülünde birden fazla ara içeren al,Satış ve iade taleplerinin ayrıntılı ve çoklu olarak yazdırılması için kullanılır.</file_detail>
+		<file_image>arac_islem_baski_coklu.jpg</file_image>
+		<file_process>Ara işlem Baskı</file_process>
+		<file_print_type>251</file_print_type>
+		<file_module_id>40</file_module_id>
+	</print_file>
+	<print_file>
+		<file_name>design/template/fiziki_varlik_etiketi.cfm</file_name>
+		<file_head>Fiziki varlık Etiketi</file_head>
+		<file_detail>Fiziki varlık modülünde fiziki varlıklar için etiket yazdırılması için kullanılır.</file_detail>
+		<file_image>fiziki_varlik_etiketi.jpg</file_image>
+		<file_process>Fiziki varlık Etiketi</file_process>
+		<file_print_type>250</file_print_type>
+		<file_module_id>40</file_module_id>
+	</print_file>
+	<print_file>
+		<file_name>design/template/zimmet_tutanak.cfm</file_name>
+		<file_head>Zimmet Tutanak Formu</file_head>
+		<file_detail>Fiziki varlık modülünde kaydedilen zimmet kayıtların ilgili kişilere iletilmesi için kullanılır.</file_detail>
+		<file_image>zimmet_tutanak.jpg</file_image>
+		<file_process>Zimmet Tutanak</file_process>
+		<file_print_type>252</file_print_type>
+		<file_module_id>40</file_module_id>
+	</print_file>
+	<print_file>
+		<file_name>design/template/standart_ariza_bildirimi.cfm</file_name>
+		<file_head>Arıza Bildirim Formu</file_head>
+		<file_detail>Fiziki varlık modülünde kaydedilen arıza bildirim kayıtların yazılı döküman olarak alınması sağlanır.</file_detail>
+		<file_image>ariza_bildirim.jpg</file_image>
+		<file_process>Arıza Bildirimi</file_process>
+		<file_print_type>254</file_print_type>
+		<file_module_id>40</file_module_id>
+	</print_file>
+	<!-- Insan Kaynaklari-->
+	<print_file>
+		<file_name>design/template/is_basvuru.cfm</file_name>
+		<file_head>İK - İş Başvurusu</file_head>
+		<file_detail>İnsan kaynaklar modülünden yapılan iş başvurularının değerlendirme aşamasında yazdırılması için kullanılır.</file_detail>
+		<file_image>is_basvuru.jpg</file_image>
+		<file_process>İK Başvuru</file_process>
+		<file_print_type>171</file_print_type>
+		<file_module_id>3</file_module_id>
+	</print_file>
+	<print_file>
+		<file_name>design/template/calisan_detay.cfm</file_name>
+		<file_head>İK - alan Detay</file_head>
+		<file_detail>İnsan Kaynaklarında şirket alanlarınn tüm bilgilerinin detaylı olarak yazdırılması için kullanılır.</file_detail>
+		<file_image>calisan_detay.jpg</file_image>
+		<file_process>alan Detay</file_process>
+		<file_print_type>173</file_print_type>
+		<file_module_id>3</file_module_id>
+	</print_file>
+		<print_file>
+		<file_name>design/template/Yetki_sorumluluklar.cfm</file_name>
+		<file_head>Yetki-Sorumluluklar Print Şablonu</file_head>
+		<file_detail>Yetki sorumluluklar ekranında editöre bir yazı,resim vs eklenmek istendiğinde bunun yazdırılması için kullanılır.</file_detail>
+		<file_image>calisan_detay.jpg</file_image>
+		<file_process>Yetki-Sorumluluklar</file_process>
+		<file_print_type>181</file_print_type>
+		<file_module_id>3</file_module_id>
+	</print_file>
+	<print_file>
+		<file_name>design/template/calisan_detay2.cfm</file_name>
+		<file_head>İK - alan Detay Cv Bazl</file_head>
+		<file_detail>İnsan Kaynaklarında şirket alanlarınn E-Profildeki Bilgilerinin yazdırılması için kullanılır .</file_detail>
+		<file_image>calisan_detay.jpg</file_image>
+		<file_process>Çalışan Detay</file_process>
+		<file_print_type>173</file_print_type>
+		<file_module_id>3</file_module_id>
+	</print_file>
+	<print_file>
+		<file_name>design/template/ozgecmis1.cfm</file_name>
+		<file_head>İK - özgeçmiş</file_head>
+		<file_detail>İnsan Kaynaklarından yapılan başvurulara ait cv'lerin yazdırılması için kullanılır.</file_detail>
+		<file_image>özgecmis1.jpg</file_image>
+		<file_process>özgecmiş</file_process>
+		<file_print_type>170</file_print_type>
+		<file_module_id>3</file_module_id>
+	</print_file>
+	<print_file>
+		<file_name>design/template/ozgecmis2.cfm</file_name>
+		<file_head>K - Özgeçmiş (ereveli)</file_head>
+		<file_detail>İnsan Kaynaklarından yapılan başvurulara ait cv'lerin yazdırılması için kullanılır.</file_detail>
+		<file_image>Özgecmis2.jpg</file_image>
+		<file_process>Özgeçmiş</file_process>
+		<file_print_type>170</file_print_type>
+		<file_module_id>3</file_module_id>
+	</print_file>
+	<print_file>
+		<file_name>design/template/performans_mektubu.cfm</file_name>
+		<file_head>İK - Performans Mektubu</file_head>
+		<file_detail>İnsan Kaynaklarından yapılan performans değerlendirmelerinin ilgili alana iletilmesi için kullanılır.(5 Puan Sistemi)</file_detail>
+		<file_image>performans_mektubu.jpg</file_image>
+		<file_process>Performans değerlendirme Mektubu</file_process>
+		<file_print_type>174</file_print_type>
+		<file_module_id>3</file_module_id>
+	</print_file>
+	<print_file>
+		<file_name>design/template/performans_degerlendirme_mektubu.cfm</file_name>
+		<file_head>İK - Performans Mektubu</file_head>
+		<file_detail>İnsan Kaynaklarından yapılan performans değerlendirmelerinin ilgili alana iletilmesi için kullanılır.(5 Puan Sistemi)</file_detail>
+		<file_image>performans_mektubu.jpg</file_image>
+		<file_process>Performans değerlendirme Mektubu</file_process>
+		<file_print_type>174</file_print_type>
+		<file_module_id>3</file_module_id>
+	</print_file>		
+	<print_file>
+		<file_name>design/template/toplu_performans_mektubu.cfm</file_name>
+		<file_head>İK - Toplu Performans Mektubu</file_head>
+		<file_detail>İnsan Kaynaklarından yapılan performans değerlendirmelerinin şube tarih bazında toplu olarak alanlara iletilmesi için kullanılır.</file_detail>
+		<file_image>performans_mektubu.jpg</file_image>
+		<file_process>Performans değerlendirme Mektubu</file_process>
+		<file_print_type>174</file_print_type>
+		<file_module_id>3</file_module_id>
+	</print_file>
+	<print_file>
+		<file_name>design/template/print_performance_yil_sonu.cfm</file_name>
+		<file_head>İK - Performans Yıl Sonu Değerlendirme</file_head>
+		<file_detail>İnsan Kaynaklarından Yıl sonunda yapılan performance değerlendirilmesini görüntülemek için kullanılır.</file_detail>
+		<file_image>print_performance_yil_sonu.jpg</file_image>
+		<file_process>Performans değerlendirme</file_process>
+		<file_print_type>176</file_print_type>
+		<file_module_id>3</file_module_id>
+	</print_file>
+	<print_file>
+		<file_name>design/template/print_performance_ara.cfm</file_name>
+		<file_head>İK - Performans Ara Değerlendirme</file_head>
+		<file_detail>İnsan Kaynaklarından yıl içinde yapılan performans değerlendirmelerini görüntülemek için kullanılır.</file_detail>
+		<file_image>print_performance_ara.jpg</file_image>
+		<file_process>Performans Değerlendirme</file_process>
+		<file_print_type>176</file_print_type>
+		<file_module_id>3</file_module_id>
+	</print_file>
+	<print_file>
+		<file_name>design/template/print_target_plan_form.cfm</file_name>
+		<file_head>İK - Hedef Yetkinlik Değerlendirme Formu</file_head>
+		<file_detail>İnsan Kaynaklarında alanların hedef yetkinlik değerlendirmelerini ve bu değerlendirme sonuçlarını görüntülemek için kullanılır.</file_detail>
+		<file_image>print_target_plan_form.jpg</file_image>
+		<file_process>Performans Değerlendirme</file_process>
+		<file_print_type>176</file_print_type>
+		<file_module_id>3</file_module_id>
+	</print_file>
+	<print_file>
+		<file_name>design/template/print_offtime_request.cfm</file_name>
+		<file_head>İK - izin Talep Formu</file_head>
+		<file_detail>İnsan Kaynaklarında alanların izin taleplerini görüntülemek için kullanılır.</file_detail>
+		<file_image>print_offtime_request.jpg</file_image>
+		<file_process>İzin Talep Formu</file_process>
+		<file_print_type>175</file_print_type>
+		<file_module_id>3</file_module_id>
+	</print_file>
+	<print_file>
+		<file_name>design/template/print_offtime.cfm</file_name>
+		<file_head>İK - izin Formu</file_head>
+		<file_detail>İnsan Kaynaklarında alanların izin taleplerini görüntülemek için kullanılır.</file_detail>
+		<file_image>print_offtime_request.jpg</file_image>
+		<file_process>İzin Talep Formu</file_process>
+		<file_print_type>175</file_print_type>
+		<file_module_id>3</file_module_id>
+	</print_file>
+	<print_file>
+		<file_name>design/template/ik_izin_formu_2.cfm</file_name>
+		<file_head>İK - izin Formu (standart)</file_head>
+		<file_detail>İnsan Kaynaklarında alanların izin taleplerini görüntülemek için kullanılır.</file_detail>
+		<file_image>ik_izin_formu_2.jpg</file_image>
+		<file_process>İzin Talep Formu</file_process>
+		<file_print_type>175</file_print_type>
+		<file_module_id>3</file_module_id>
+	</print_file>
+	<print_file>
+		<file_name>design/template/varlik_talebi.cfm</file_name>
+		<file_head>İK - Varlık Talebi</file_head>
+		<file_detail>Varlık Talebi detayının yazdırılması için kullanılır.</file_detail>
+		<file_image>ik_izin_formu_2.jpg</file_image>
+		<file_process>Varlık Talebi</file_process>
+		<file_print_type>186</file_print_type>
+		<file_module_id>3</file_module_id>
+	</print_file>
+	<print_file>
+		<file_name>design/template/ik_isten_ayrilma_bildirgesi.cfm</file_name>
+		<file_head>İK - İşten Ayrılma Bildirgesi</file_head>
+		<file_detail>İnsan Kaynaklarında alanların işten çıkarılması veya çıkarılması durumunda doldurulması zorunlu kılınan belgenin yazdırılması için kullanılır.</file_detail>
+		<file_image>ik_isten_ayrilma_bildirgesi.jpg</file_image>
+		<file_process>işten çıkarma</file_process>
+		<file_print_type>179</file_print_type>
+		<file_module_id>48</file_module_id>
+	</print_file>
+	<print_file>
+		<file_name>design/template/ik_cikis_yazisi.cfm</file_name>
+		<file_head>İK - Çıkış Formu</file_head>
+		<file_detail>İnsan Kaynaklarında alanların işten çıkması durumunda çıkışının onaylandı gösteren belgenin yazdırılması için kullanılır.</file_detail>
+		<file_image>ik_cikis_yazisi.jpg</file_image>
+		<file_process>işten karma</file_process>
+		<file_print_type>179</file_print_type>
+		<file_module_id>48</file_module_id>
+	</print_file>
+	<print_file>
+		<file_name>design/template/ik_ibraname.cfm</file_name>
+		<file_head>İK - ibraname</file_head>
+		<file_detail>İnsan Kaynaklarında alanların işten çıkması durumunda gerekçesini sunması için kullanılır.</file_detail>
+		<file_image>ik_ibraname.jpg</file_image>
+		<file_process>işten çıkarma</file_process>
+		<file_print_type>179</file_print_type>
+		<file_module_id>48</file_module_id>
+	</print_file>
+	<print_file>
+		<file_name>design/template/ik_hizmet_belgesi.cfm</file_name>
+		<file_head>İK - Hizmet Belgesi</file_head>
+		<file_detail>İnsan Kaynaklarında alanların kurumumuzda alt süreyi göstermek ve yazdırmak için kullanılır.</file_detail>
+		<file_image>ik_hizmet_belgesi.jpg</file_image>
+		<file_process>İK Başvuru</file_process>
+		<file_print_type>171</file_print_type>
+		<file_module_id>3</file_module_id>
+	</print_file>
+	<print_file>
+		<file_name>design/template/ik_ibraname2.cfm</file_name>
+		<file_head>İK - İbraname 2</file_head>
+		<file_detail>İnsan Kaynaklarında alanların işten çıkması durumunda gerekçesini sunması için kullanılır.</file_detail>
+		<file_image>ik_ibraname2.jpg</file_image>
+		<file_process>işten çıkarma</file_process>
+		<file_print_type>179</file_print_type>
+		<file_module_id>48</file_module_id>
+	</print_file>
+	<print_file>
+		<file_name>design/template/ik_hizmet_belgesi2.cfm</file_name>
+		<file_head>İK - Hizmet Belgesi 2</file_head>
+		<file_detail>İnsan Kaynaklarında alanların kurumumuzda alt süreyi göstermek ve yazdırmak için kullanılır.</file_detail>
+		<file_image>ik_hizmet_belgesi2.jpg</file_image>
+		<file_process>İK Başvuru</file_process>
+		<file_print_type>171</file_print_type>
+		<file_module_id>3</file_module_id>
+	</print_file>
+	<print_file>
+		<file_name>design/template/ik_vergi_bilgi_formu.cfm</file_name>
+		<file_head>İK - Vergi Matrah</file_head>
+		<file_detail>İnsan Kaynaklarında alanların vergi matrahını göstermek ve yazdırmak için kullanılır.</file_detail>
+		<file_image>ik_vergi_bilgi_formu.jpg</file_image>
+		<file_process>İK Başvuru</file_process>
+		<file_print_type>171</file_print_type>
+		<file_module_id>3</file_module_id>
+	</print_file>
+	<print_file>
+		<file_name>design/template/ik_zimmet_formu.cfm</file_name>
+		<file_head>İK - Zimmet Formu</file_head>
+		<file_detail>İnsan Kaynaklarında alanların işten çıkarken üzerine zimetleri eşyaların teslimatının yapıldığını gostermek ve yazdırmak için kullanılır.</file_detail>
+		<file_image>ik_zimmet_formu.jpg</file_image>
+		<file_process>Zimmet Tutana</file_process>
+		<file_print_type>252</file_print_type>
+		<file_module_id>40</file_module_id>
+	</print_file>
+	<print_file>
+		<file_name>design/template/ik_calisma_belgesi.cfm</file_name>
+		<file_head>HR - Çalışma Belgesi</file_head>
+		<file_detail>İşten çıkan çalışanın, şahsına ve iş yerine ait bazı bilgileri ihtiva eden bir belgedir.</file_detail>
+		<file_image>ik_calisma_belgesi.jpg</file_image>
+		<file_process>ÇALIŞMA BELGESİ</file_process>
+		<file_print_type>179</file_print_type>
+		<file_module_id>48</file_module_id>
+	</print_file>
+	<print_file>
+		<file_name>design/template/calisma_belgesi4.cfm</file_name>
+		<file_head>HR - Çalışma Belgesi2</file_head>
+		<file_detail></file_detail>
+		<file_image>calisma_belgesi_4.jpg</file_image>
+		<file_process>CALISMA BELGESI2</file_process>
+		<file_print_type>173</file_print_type>
+		<file_module_id>3</file_module_id>
+	</print_file>
+	<print_file>
+		<file_name>design/template/calisma_belgesi5.cfm</file_name>
+		<file_head>HR - Çalışma Belgesi3</file_head>
+		<file_detail></file_detail>
+		<file_image>calisma_belgesi_5.jpg</file_image>
+		<file_process>CALISMA BELGESI3</file_process>
+		<file_print_type>173</file_print_type>
+		<file_module_id>3</file_module_id>
+	</print_file>
+	<print_file>
+		<file_name>design/template/calisma_belgesi6.cfm</file_name>
+		<file_head>HR - Çalışma Belgesi4</file_head>
+		<file_detail></file_detail>
+		<file_image>calisma_belgesi_6.jpg</file_image>
+		<file_process>CALISMA BELGESI4</file_process>
+		<file_print_type>173</file_print_type>
+		<file_module_id>3</file_module_id>
+	</print_file>
+	<print_file>
+		<file_name>design/template/calisana_ait_kimlik_bildirgesi.cfm</file_name>
+		<file_head>HR - Çalışana Ait Kimlik Bildirgesi</file_head>
+		<file_detail></file_detail>
+		<file_image>calisana_ait_kimlik_bildirgesi.jpg</file_image>
+		<file_process>Kimlik Bildirgesi</file_process>
+		<file_print_type>173</file_print_type>
+		<file_module_id>3</file_module_id>
+	</print_file>
+	<!-- Irsaliye-->
+	<print_file>
+		<file_name>design/template/irsaliye_baski.cfm</file_name>
+		<file_head>İrsaliye Baskı</file_head>
+		<file_detail>Stok modülünden kesilen irsaliyelerin satırlarla birlikte yazdırılması için kullanılır.</file_detail>
+		<file_image>irsaliye_baski.jpg</file_image>
+		<file_process>Genel İrsaliye Baskı</file_process>
+		<file_print_type>30</file_print_type>
+		<file_module_id>13</file_module_id>
+	</print_file>
+	<print_file>
+		<file_name>design/template/depolararasi_irsaliye_baski.cfm</file_name>
+		<file_head>Depolararası İrsaliye Baskı</file_head>
+		<file_detail>Stok modülünden kesilen depolararası sevk irsaliyelerin satırlarla birlikte yazdırılması için kullanılır.</file_detail>
+		<file_image>depolararasi_irsaliye_baski.jpg</file_image>
+		<file_process>Genel irsaliye Baskı</file_process>
+		<file_print_type>30</file_print_type>
+		<file_module_id>13</file_module_id>
+	</print_file>
+	<!-- Proje-->
+	<print_file>
+		<file_name>design/template/proje_baski.cfm</file_name>
+		<file_head>Proje Baskı Formu</file_head>
+		<file_detail>Proje modülünde projenin genel bilgilerini , proje seyrini ve aksiyonlar yazdırmak için kullanılır.</file_detail>
+		<file_image>proje_baski.jpg</file_image>
+		<file_process>Proje Baskı</file_process>
+		<file_print_type>310</file_print_type>
+		<file_module_id>1</file_module_id>
+	</print_file>
+	<print_file>
+		<file_name>design/template/standart_proje_is.cfm</file_name>
+		<file_head>Proje İş Printi</file_head>
+		<file_detail>Proje modülünde kayıtlı işin detayı ile ilgili aksiyonlar yazdırmak için kullanılır.</file_detail>
+		<file_image>proje_baski.jpg</file_image>
+		<file_process>Proje İş</file_process>
+		<file_print_type>311</file_print_type>
+		<file_module_id>1</file_module_id>
+	</print_file>
+	<print_file>
+		<file_name>design/template/proje_teklif.cfm</file_name>
+		<file_head>Proje Teklif Formu</file_head>
+		<file_detail>Proje modülünde projedeki tüm işleri maliyetleriyle birlikte detaylı ve sayfalı olarak teklif halinde sunmak için kullanılır.</file_detail>
+		<file_image>proje_teklif.jpg</file_image>
+		<file_process>Proje Baskı</file_process>
+		<file_print_type>310</file_print_type>
+		<file_module_id>1</file_module_id>
+	</print_file>	
+	<print_file>
+		<file_name>design/template/proje_icerik.cfm</file_name>
+		<file_head>Proje içerik Formu</file_head>
+		<file_detail>Proje modülünde proje ile ilgili girilen içerikleri koşul formu olarak sunmak için kullanılır.</file_detail>
+		<file_image>proje_icerik.jpg</file_image>
+		<file_process>Proje Baskı</file_process>
+		<file_print_type>310</file_print_type>
+		<file_module_id>1</file_module_id>
+	</print_file>	
+	<print_file>
+		<file_name>design/template/proje_teklif_icmal.cfm</file_name>
+		<file_head>Proje Teklif cmal Formu</file_head>
+		<file_detail>Proje modülünde proje ile ilgili girilen işleri maliyetleriyle birlikte sunmak için kullanılır.</file_detail>
+		<file_image>proje_teklif_icmal.jpg</file_image>
+		<file_process>Proje Baskı</file_process>
+		<file_print_type>310</file_print_type>
+		<file_module_id>1</file_module_id>
+	</print_file>
+	<print_file>
+		<file_name>design/template/proje_maliyet_raporu.cfm</file_name>
+		<file_head>Proje Teklif Maliyet Formu</file_head>
+		<file_detail>Proje modülünde projenin geneli için öngörülen maliyeti karşı tarafa sunmak için kullanılır.</file_detail>
+		<file_image>proje_maliyet_raporu.jpg</file_image>
+		<file_process>Proje Baskı</file_process>
+		<file_print_type>310</file_print_type>
+		<file_module_id>1</file_module_id>
+	</print_file>	
+	<!-- Sabit Kıymetler-->
+	<print_file>
+		<file_name>design/template/print_detail_invent.cfm</file_name>
+		<file_head>Sabit Kıymet Detay</file_head>
+		<file_detail>Sabit Kıymetler modülünde kaydedilen demirbaşların alış-Satış hareketleri ve demirbaş değişimleriyle birlikte detaylı olarak yazdırılması için kullanılır.</file_detail>
+		<file_image>print_detail_invent.jpg</file_image>
+		<file_process>Sabit Kıymet Detay</file_process>
+		<file_print_type>350</file_print_type>
+		<file_module_id>31</file_module_id>
+	</print_file>	
+	<!-- Satis Planlama-->
+	<print_file>
+		<file_name>design/template/satis_kota_formu.cfm</file_name>
+		<file_head>Satış Planlama Kota Formu</file_head>
+		<file_detail>Satış Planlama modülünde kaydedilen kotaların satışlarıyla birlikte detaylı olarak yazdırılması için kullanılır.</file_detail>
+		<file_image>satis_kota_formu.jpg</file_image>
+		<file_process>Kota Planlama</file_process>
+		<file_print_type>340</file_print_type>
+		<file_module_id>41</file_module_id>
+	</print_file>	
+	<!-- Satın Alma-->
+	<print_file>
+		<file_name>design/template/satinalma_ictalep.cfm</file_name>
+		<file_head>satınalma talep Formu</file_head>
+		<file_detail>satınalma modülündeki iç taleplerin detaylı ve sayfalı olarak yazdırılması için kullanılır.</file_detail>
+		<file_image>satinalma_ictalep.jpg</file_image>
+		<file_process>satınalma  Talep</file_process>
+		<file_print_type>92</file_print_type>
+		<file_module_id>12</file_module_id>
+	</print_file>
+	<print_file>
+		<file_name>design/template/satinalma_teklifi.cfm</file_name>
+		<file_head>satınalma Teklif Formu</file_head>
+		<file_detail>satınalma modülündeki tekliflerin detaylı olarak karşı tarafa sunulması için kullanılır.</file_detail>
+		<file_image>satinalma_teklifi.jpg</file_image>
+		<file_process>satınalma Teklifi</file_process>
+		<file_print_type>90</file_print_type>
+		<file_module_id>12</file_module_id>
+	</print_file>
+	<print_file>
+		<file_name>design/template/satinalma_siparis_formu.cfm</file_name>
+		<file_head>satınalma Sipari Formu</file_head>
+		<file_detail>satınalma modülünde kaydedilen siparişlerin detaylı ve sayfalı olarak yazdırılması için kullanılır.</file_detail>
+		<file_image>satinalma_siparis_formu.jpg</file_image>
+		<file_process>satınalma siparişi</file_process>
+		<file_print_type>91</file_print_type>
+		<file_module_id>12</file_module_id>
+	</print_file>	
+	<print_file>
+		<file_name>design/template/satinalma_siparis_depolu.cfm</file_name>
+		<file_head>satınalma Sipariş Formu (Depolu)</file_head>
+		<file_detail>satınalma modülünde kaydedilen siparişlerin depolarla birlikte ve sayfalı olarak yazdırılması için kullanılır.</file_detail>
+		<file_image>satinalma_siparis_depolu.jpg</file_image>
+		<file_process>satınalma siparişi</file_process>
+		<file_print_type>92</file_print_type>
+		<file_module_id>12</file_module_id>
+	</print_file>	
+	<!-- Satis-->
+	<print_file>
+		<file_name>design/template/print_sales_opportunity.cfm</file_name>
+		<file_head>Satış Fırsat Detay</file_head>
+		<file_detail>Satış modülündeki Fırsatla ürün Detaylı olarak karşı tarafa sunulması için kullanılır.</file_detail>
+		<file_image>print_sales_opportunity.jpg</file_image>
+		<file_process>Satış Fırsatlar</file_process>
+		<file_print_type>72</file_print_type>
+		<file_module_id>11</file_module_id>
+	</print_file>
+	<print_file>
+		<file_name>design/template/satis_siparis_formu.cfm</file_name>
+		<file_head>Satış Sipariş Formu</file_head>
+		<file_detail>Satış modülündeki siparişlerin detaylı ve sayfalı olarak yazdırılması için kullanılır.</file_detail>
+		<file_image>satis_siparis_formu.jpg</file_image>
+		<file_process>Satış siparişi</file_process>
+		<file_print_type>73</file_print_type>
+		<file_module_id>11</file_module_id>
+	</print_file>
+	<print_file>
+		<file_name>design/template/satis_siparis_formu_bilesenli.cfm</file_name>
+		<file_head>Satış Sipari Formu (Bileşenli)</file_head>
+		<file_detail>Satış modülündeki siparişlerin ürünlerin Bileşenleriyle birlikte ve sayfalı olarak yazdırılması için kullanılır.</file_detail>
+		<file_image>satis_siparis_formu_bilesenli.jpg</file_image>
+		<file_process>Satış siparişi</file_process>
+		<file_print_type>73</file_print_type>
+		<file_module_id>11</file_module_id>
+	</print_file>
+	<print_file>
+		<file_name>design/template/satis_teklifi.cfm</file_name>
+		<file_head>Satış Teklif Formu</file_head>
+		<file_detail>Satış modülündeki tekliflerin detaylı olarak karşı tarafa sunulması için kullanılır.</file_detail>
+		<file_image>satis_teklifi.jpg</file_image>
+		<file_process>Satış Teklifi</file_process>
+		<file_print_type>70</file_print_type>
+		<file_module_id>11</file_module_id>
+	</print_file>
+	<print_file>
+		<file_name>design/template/satis_teklifi_bilesenli.cfm</file_name>
+		<file_head>Satış Teklif Formu (Bileşenli)</file_head>
+		<file_detail>Satış modülündeki tekliflerin ürünlerin Bileşenleriyle birlikte detaylı olarak karşı tarafa sunulması için kullanılır.</file_detail>
+		<file_image>satis_teklifi_bilesenli.jpg</file_image>
+		<file_process>Satış Teklifi</file_process>
+		<file_print_type>70</file_print_type>
+		<file_module_id>11</file_module_id>
+	</print_file>
+	<!-- Stok-->
+	<print_file>
+		<file_name>design/template/seri_no_uretim_tarihli.cfm</file_name>
+		<file_head>Seri No Barkod (Üretim Tarihli)</file_head>
+		<file_detail>Stok modülünde  verilen ürünlerin barkodlarının üretim tarihleriyle birlikte toplu olarak  basılması için kullanılır.</file_detail>
+		<file_image>seri_no_uretim_tarihli.jpg</file_image>
+		<file_process>Seri Print Belgesi</file_process>
+		<file_print_type>192</file_print_type>
+		<file_module_id>47</file_module_id>
+	</print_file>
+	<print_file>
+		<file_name>design/template/seri_no_normal.cfm</file_name>
+		<file_head>Seri No Barkod</file_head>
+		<file_detail>Stok modülünde  verilen ürünlerin barkodlarının toplu olarak  basılması için kullanılır.</file_detail>
+		<file_image>seri_no_normal.jpg</file_image>
+		<file_process>Seri Print Belgesi</file_process>
+		<file_print_type>192</file_print_type>
+		<file_module_id>47</file_module_id>
+	</print_file>
+	<print_file>
+		<file_name>design/template/toplu_garanti_belgesi.cfm</file_name>
+		<file_head>Garanti Belgesi Basm</file_head>
+		<file_detail>Stok modülünde  verilen ürünler arasından istediğiniz aralıktaki işlerin garanti belgelerinin toplu olarak basılması için kullanılır.</file_detail>
+		<file_image>toplu_garanti_belgesi.jpg</file_image>
+		<file_process>Garanti Belgesi</file_process>
+		<file_print_type>191</file_print_type>
+		<file_module_id>47</file_module_id>
+	</print_file>
+	<print_file>
+		<file_name>design/template/sevkiyat_etiketi.cfm</file_name>
+		<file_head>Sevkiyat Etiket Basm</file_head>
+		<file_detail>Stok modülünde sevk edilecek ürünler için etiket basılması için kullanılır.</file_detail>
+		<file_image>sevkiyat_etiketi.jpg</file_image>
+		<file_process>Sevkiyat Etiketi</file_process>
+		<file_print_type>32</file_print_type>
+		<file_module_id>13</file_module_id>
+	</print_file>
+	<print_file>
+		<file_name>design/template/stok_fisi.cfm</file_name>
+		<file_head>Stok Fişi</file_head>
+		<file_detail>Stok modülünde kaydedilen stok fişlerinin (devir Fişi, depo Fişi , sarf Fişi, vb.) satırlarla birlikte detaylı yazdırılması için kullanılır.</file_detail>
+		<file_image>stok_fisi.jpg</file_image>
+		<file_process>Stok Fişi</file_process>
+		<file_print_type>31</file_print_type>
+		<file_module_id>13</file_module_id>
+	</print_file>
+	<!-- Uretim Planlama-->
+	<print_file>
+		<file_name>design/template/uretim_emri_detayli.cfm</file_name>
+		<file_head>Üretim Emri Detaylı</file_head>
+		<file_detail>Üretim Planlama modülünde kaydedilen üretim emirlerinin ürünlerin Bileşenleri ve satırlarla birlikte detaylı yazdırılması için kullanılır.</file_detail>
+		<file_image>uretim_emri_detayli.jpg</file_image>
+		<file_process>Üretim Emri</file_process>
+		<file_print_type>281</file_print_type>
+		<file_module_id>26</file_module_id>
+	</print_file>
+	<print_file>
+		<file_name>design/template/uretim_talebi_detayli.cfm</file_name>
+		<file_head>Üretim Talebi</file_head>
+		<file_detail>Üretim Planlama modülünde kaydedilen üretim taleplerinin Bileşenleri ve satırlarla birlikte detaylı yazdırılması için kullanılır.</file_detail>
+		<file_image>uretim_talebi_detayli.jpg</file_image>
+		<file_process>Üretim Talebi</file_process>
+		<file_print_type>281</file_print_type>
+		<file_module_id>26</file_module_id>
+	</print_file>
+	<print_file>
+		<file_name>design/template/uretim_emri_serino.cfm</file_name>
+		<file_head>Üretim Emri Seri No Basm</file_head>
+		<file_detail>Üretim Planlama modülünde kaydedilen üretim emirlerindeki ürünlerin barkodlarının toplu yazdırılması için kullanılır.</file_detail>
+		<file_image>uretim_emri_serino.jpg</file_image>
+		<file_process>Seri Print Belgesi</file_process>
+		<file_print_type>192</file_print_type>
+		<file_module_id>47</file_module_id>
+	</print_file>
+	<print_file>
+		<file_name>design/template/uretim_sonucu.cfm</file_name>
+		<file_head>Üretim Sonucu</file_head>
+		<file_detail>Uretim Planlama modülünde kaydedilen üretim sonular için  ürünlerin barkodlarının toplu yazdırılması için kullanılır.</file_detail>
+		<file_image>uretim_sonucu.jpg</file_image>
+		<file_process>Üretim Sonucu</file_process>
+		<file_print_type>280</file_print_type>
+		<file_module_id>26</file_module_id>
+	</print_file>
+	<print_file>
+		<file_name>design/template/uretim_sonucu_bilesenli.cfm</file_name>
+		<file_head>Üretim Sonucu (Bileşenli)</file_head>
+		<file_detail>üretim Planlama modülünde kaydedilen üretim sonular için  ürünlerin Bileşenleriyle birlikte barkodlarının toplu yazdırılması için kullanılır.</file_detail>
+		<file_image>uretim_sonucu_bilesenli.jpg</file_image>
+		<file_process>Üretim Sonucu</file_process>
+		<file_print_type>280</file_print_type>
+		<file_module_id>26</file_module_id>
+	</print_file>
+	<!-- Objects2-->
+	<print_file>
+		<file_name>design/template/urun_detayi_etiket.cfm</file_name>
+		<file_head>Partner ürün Etiketi Genel Fatura Baskı</file_head>
+		<file_detail>Partnerdan alan ürün özeti sayfasndan 7x6 boyutunda etiket yazdırılması için kullanılır.</file_detail>
+		<file_image>urun_detayi_etiket.jpg</file_image>
+		<file_process>ürün Detay (EP)</file_process>
+		<file_print_type>371</file_print_type>
+		<file_module_id>5</file_module_id>
+	</print_file>
+	<print_file>
+		<file_name>design/template/urun_detayi_etiket2.cfm</file_name>
+		<file_head>Partner ürün Etiketi 7x6</file_head>
+		<file_detail>Partnerdan alan ürün özeti sayfasndan 7x6 boyutunda etiket yazdırılması için kullanılır.</file_detail>
+		<file_image>urun_detayi_etiket2.jpg</file_image>
+		<file_process>ürün Detay (EP)</file_process>
+		<file_print_type>371</file_print_type>
+		<file_module_id>5</file_module_id>
+	</print_file>
+	<print_file>
+		<file_name>design/template/urun_barkodu.cfm</file_name>
+		<file_head>Ürün Barkodları</file_head>
+		<file_detail>Ürünlerin Barkod Yazdırma Ekranından Alınan Barkod Çıktıları İçin Kullanılır.</file_detail>
+		<file_image>urun_barkodu.jpg</file_image>
+		<file_process>Ürün Barkod Baskı</file_process>
+		<file_print_type>193</file_print_type>
+		<file_module_id>47</file_module_id>
+	</print_file>
+	<!--Ajanda-->
+	<print_file>
+		<file_name>design/template/ajanda_olay.cfm</file_name>
+		<file_head>Ajanda Olay Tutanag</file_head>
+		<file_detail>Ajanda olay tutanan print için kullanılır</file_detail>
+		<file_image>urun_detayi_etiket.jpg</file_image>
+		<file_process>Ajanda Olay</file_process>
+		<file_print_type>440</file_print_type>
+		<file_module_id>6</file_module_id>
+	</print_file>
+	<!--Uye Analizi-->
+	<print_file>
+		<file_name>design/template/member_analysis.cfm</file_name>
+		<file_head>Üye Analizi</file_head>
+		<file_detail>Üye Analizi print için kullanılır</file_detail>
+		<file_image>urun_detayi_etiket.jpg</file_image>
+		<file_process>Analiz</file_process>
+		<file_print_type>420</file_print_type>
+		<file_module_id>4</file_module_id>
+	</print_file>
+	<print_file>
+		<file_name>design/template/survey_template.cfm</file_name>
+		<file_head>Analiz Şablonu</file_head>
+		<file_detail>Analiz formunun printi için kullanılır</file_detail>
+		<file_image>urun_detayi_etiket.jpg</file_image>
+		<file_process>Analiz</file_process>
+		<file_print_type>420</file_print_type>
+		<file_module_id>4</file_module_id>
+	</print_file>
+	<print_file>
+		<file_name>design/template/survey_template.cfm</file_name>
+		<file_head>Kurumsal Üye Şablonu</file_head>
+		<file_detail>Kurumsal üye detayının printi için kullanılır</file_detail>
+		<file_image>urun_detayi_etiket.jpg</file_image>
+		<file_process>Kurumsal Üye</file_process>
+		<file_print_type>421</file_print_type>
+		<file_module_id>4</file_module_id>
+	</print_file>
+	<print_file>
+		<file_name>design/template/servis_teklif_formu.cfm</file_name>
+		<file_head>Servis Teklif Formu</file_head>
+		<file_detail>Servis Formu print için kullanılır</file_detail>
+		<file_image>servis_formu.jpg</file_image>
+		<file_process>Servis Başvuru Belgesi</file_process>
+		<file_print_type>51</file_print_type>
+		<file_module_id>14</file_module_id>
+	</print_file>
+	<print_file>
+		<file_name>design/template/servis_destek_formu.cfm</file_name>
+		<file_head>Servis Destek Formu</file_head>
+		<file_detail>Servis Formu print için kullanılır</file_detail>
+		<file_image>servis_formu.jpg</file_image>
+		<file_process>Servis Başvuru Belgesi</file_process>
+		<file_print_type>51</file_print_type>
+		<file_module_id>14</file_module_id>
+	</print_file>
+	<print_file>
+		<file_name>design/template/call_center_application.cfm</file_name>
+		<file_head>Başvurular</file_head>
+		<file_detail>Başvuru detayını print için kullanılır</file_detail>
+		<file_image>urun_detayi_etiket.jpg</file_image>
+		<file_process>Call Center Başvuru</file_process>
+		<file_print_type>461</file_print_type>
+		<file_module_id>27</file_module_id>
+	</print_file>
+	<print_file>
+		<file_name>design/template/Avans(taksitli)_Talebi.cfm</file_name>
+		<file_head>Avans Talebi</file_head>
+		<file_detail>Self / Servis İşlemlerimdeki Avans ve Taksitli Avans Sayfalarında Ortak Olarak Kullanılır</file_detail>
+		<file_image>urun_detayi_etiket.jpg</file_image>
+		<file_process>Avans/Taksitli Avans</file_process>
+		<file_print_type>184</file_print_type>
+		<file_module_id>3</file_module_id>
+	</print_file>
+	<print_file>
+		<file_name>design/template/anlasmalar_sozlesmeler.cfm</file_name>
+		<file_head>Sözleşmeler</file_head>
+		<file_detail>Anlaşmalar Sözleşmeler ekranındaki kayıtların yazılı dökümünü almayı sağlar</file_detail>
+		<file_image>urun_detayi_etiket.jpg</file_image>
+		<file_process>Anlaşmalar/Sözleşmeler</file_process>
+		<file_print_type>480</file_print_type>
+		<file_module_id>17</file_module_id>
+	</print_file>
+	<print_file>
+		<file_name>design/template/mail_print.cfm</file_name>
+		<file_head>Mail</file_head>
+		<file_detail>Maillerin yazılı dökümünü almayı sağlar</file_detail>
+		<file_image>urun_detayi_etiket.jpg</file_image>
+		<file_process>Mail Detayı</file_process>
+		<file_print_type>500</file_print_type>
+		<file_module_id>29</file_module_id>
+	</print_file>
+	<print_file>
+		<file_name>design/template/cek_transfer.cfm</file_name>
+		<file_head>Çek Transfer Giriş</file_head>
+		<file_detail>Çek Transfer Giriş printi için kullanılır</file_detail>
+		<file_image>urun_detayi_etiket.jpg</file_image>
+		<file_process>Çek Transfer Giriş</file_process>
+		<file_print_type>111</file_print_type>
+		<file_module_id>21</file_module_id>
+	</print_file>
+	<print_file>
+		<file_name>design/template/cek_transfer.cfm</file_name>
+		<file_head>Çek Transfer Çıkış</file_head>
+		<file_detail>Çek Transfer Çıkış printi için kullanılır</file_detail>
+		<file_image>urun_detayi_etiket.jpg</file_image>
+		<file_process>Çek Transfer Çıkış</file_process>
+		<file_print_type>112</file_print_type>
+		<file_module_id>21</file_module_id>
+	</print_file>		
+	<print_file>
+		<file_name>design/template/senet_transfer.cfm</file_name>
+		<file_head>Senet Transfer Giriş</file_head>
+		<file_detail>Senet Transfer Giriş printi için kullanılır</file_detail>
+		<file_image>urun_detayi_etiket.jpg</file_image>
+		<file_process>Senet Transfer Giriş</file_process>
+		<file_print_type>113</file_print_type>
+		<file_module_id>21</file_module_id>
+	</print_file>
+	<print_file>
+		<file_name>design/template/senet_transfer.cfm</file_name>
+		<file_head>Senet Transfer Çıkış</file_head>
+		<file_detail>Senet Transfer Çıkış printi için kullanılır</file_detail>
+		<file_image>urun_detayi_etiket.jpg</file_image>
+		<file_process>Senet Transfer Çıkış</file_process>
+		<file_print_type>114</file_print_type>
+		<file_module_id>21</file_module_id>
+	</print_file>		
+	<print_file>
+		<file_name>design/template/uretim_emri_print_sablon.cfm</file_name>
+		<file_head>Üretim Emri</file_head>
+		<file_detail>Üretim Planlama modülünde kaydedilen üretim emirlerinin ürünlerin Bileşenleri ve satırlarla birlikte detaylı yazdırılması için kullanılır.</file_detail>
+		<file_image>uretim_emri_detayli.jpg</file_image>
+		<file_process>Senet Transfer Çıkış</file_process>
+		<file_print_type>281</file_print_type>
+		<file_module_id>26</file_module_id>
+	</print_file>
+	<print_file>
+		<file_name>design/template/satis_siparis_islem_dovizli.cfm</file_name>
+		<file_head>Satış Sipariş Dövizli İşlem</file_head>
+		<file_detail>Satış modülündeki siparişlerin işlem dövizli olarak detaylı olarak yazdırılması için kullanılır.</file_detail>
+		<file_image></file_image>
+		<file_process>Satış Siparişi</file_process>
+		<file_print_type>73</file_print_type>
+		<file_module_id>11</file_module_id>
+	</print_file>	
+	<print_file>
+		<file_name>design/template/ziyaret_sonucu_sablonu.cfm</file_name>
+		<file_head>Ziyaret Sonucu Şablonu</file_head>
+		<file_detail>Ziyaret Sonuçlarının yazdırılması için kullanilir.</file_detail>
+		<file_image>ziyaret_sonucu_sablon.jpg</file_image>
+		<file_process>Ziyaret Planlama</file_process>
+		<file_print_type>75</file_print_type>
+		<file_module_id>75</file_module_id>
+	</print_file>	
+</standart_print_file>

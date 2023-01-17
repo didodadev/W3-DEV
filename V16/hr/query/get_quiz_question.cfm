@@ -1,0 +1,18 @@
+<cfquery name="GET_QUIZ_QUESTION" datasource="#dsn#">
+	DECLARE AU_CURSOR SCROLL CURSOR FOR
+	
+			SELECT 
+				*
+			FROM 
+				EMPLOYEE_QUIZ_QUESTION
+			WHERE
+				QUIZ_ID=#attributes.QUIZ_ID#
+	
+	OPEN AU_CURSOR
+	
+	FETCH ABSOLUTE #attributes.QUESTION_ROW# FROM AU_CURSOR
+	
+	CLOSE AU_CURSOR
+	DEALLOCATE AU_CURSOR
+</cfquery>		
+

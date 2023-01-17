@@ -1,0 +1,178 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SETUP_SITE>
+	<SETUPSITE>
+		<LINK_NAME>Fazla Mesailer XML Setup</LINK_NAME> 
+		<LINK_FILE>ehesap.list_ext_worktimes</LINK_FILE> 
+		<LINK_DETAIL>Fazla mesailerin ayarlarının düzenlenmesi</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Günlük Kazanç Hesaplama Yönetimi</LINK_NAME> 
+		<LINK_FILE>ehesap.popup_ssk_eva</LINK_FILE> 
+		<LINK_DETAIL>Eksik Gün Bildiriminde, Aylık Ücretli Çalışanlar için Hesaplama Yöntemi</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>İzin saatleri</LINK_NAME> 
+		<LINK_FILE>ehesap.form_add_offtime_popup,ehesap.form_upd_offtime_popup</LINK_FILE> 
+		<LINK_DETAIL>Başlangıç, Bitiş ve İşe Başlama saatlerinin XML den alınması</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Dinamik Bordro</LINK_NAME> 
+		<LINK_FILE>ehesap.list_dynamic_bordro</LINK_FILE> 
+		<LINK_DETAIL></LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Ucret Ödenek Listesinde Kıdem Tarihi</LINK_NAME> 
+		<LINK_FILE>ehesap.list_salary</LINK_FILE> 
+		<LINK_DETAIL>Kıdem Tarihi Olup Olmaması</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Kesinti Tanımları</LINK_NAME> 
+		<LINK_FILE>ehesap.popup_form_add_kesinti</LINK_FILE> 
+		<LINK_DETAIL>Kesinti Tanımları</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Kesinti Ekleme</LINK_NAME> 
+		<LINK_FILE>ehesap.popup_form_upd_kesinti_hr</LINK_FILE> 
+		<LINK_DETAIL>Kesinti Ekleme</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Ücret Dekontu</LINK_NAME> 
+		<LINK_FILE>ehesap.popup_add_collacted_dekont</LINK_FILE> 
+		<LINK_DETAIL>Ücret Dekontu</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Puantaj Bütçeleştirme</LINK_NAME> 
+		<LINK_FILE>ehesap.popup_add_puantaj_to_budget</LINK_FILE> 
+		<LINK_DETAIL>Puantaj Bütçeleştirme</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Puantaj Muhasebeleştirme</LINK_NAME> 
+		<LINK_FILE>ehesap.popup_add_puantaj_to_muhasebe</LINK_FILE> 
+		<LINK_DETAIL>Puantaj Muhasebeleştirme</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>İzin Listesi</LINK_NAME> 
+		<LINK_FILE>ehesap.offtimes,ehesap.emptypopup_ajax_offtime_valid</LINK_FILE> 
+		<LINK_DETAIL>İzin Listesi</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Avans Talebi Ekleme</LINK_NAME> 
+		<LINK_FILE>ehesap.popup_add_payment_request</LINK_FILE> 
+		<LINK_DETAIL>Avans Talebi Ekleme</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Toplu Ek Ödenek</LINK_NAME> 
+		<LINK_FILE>ehesap.popup_form_add_ek_odenek_all</LINK_FILE> 
+		<LINK_DETAIL>Toplu Ek Ödenek</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Toplu Kesinti</LINK_NAME> 
+		<LINK_FILE>ehesap.popup_form_add_kesinti_all</LINK_FILE> 
+		<LINK_DETAIL>Toplu Kesinti</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Çalışan Dönem Tanımları</LINK_NAME> 
+		<LINK_FILE>ehesap.popup_list_period</LINK_FILE> 
+		<LINK_DETAIL>Çalışan Dönem Tanımları</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Program Akış Parametreleri</LINK_NAME> 
+		<LINK_FILE>ehesap.form_upd_program_parameters</LINK_FILE> 
+		<LINK_DETAIL>Program Akış Parametreleri</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Avans Talepleri</LINK_NAME> 
+		<LINK_FILE>ehesap.list_payment_requests</LINK_FILE> 
+		<LINK_DETAIL>Avans Talepleri</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Masraf Merkezi</LINK_NAME> 
+		<LINK_FILE>ehesap.list_payments</LINK_FILE> 
+		<LINK_DETAIL>Masraf Merkezi</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Masraf Merkezi</LINK_NAME> 
+		<LINK_FILE>ehesap.list_emp_interruption</LINK_FILE> 
+		<LINK_DETAIL>Masraf Merkezi</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>İşe Giriş Çıkışlar</LINK_NAME> 
+		<LINK_FILE>ehesap.list_fire</LINK_FILE> 
+		<LINK_DETAIL>İşe Giriş Çıkışlar</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Puantaj</LINK_NAME> 
+		<LINK_FILE>ehesap.list_puantaj</LINK_FILE> 
+		<LINK_DETAIL>Puantaj</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Muhasebe Hesap Grupları</LINK_NAME> 
+		<LINK_FILE>ehesap.popup_form_upd_payroll_accounts</LINK_FILE> 
+		<LINK_DETAIL>Muhasebe Hesap Grupları</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>İşten Çıkış</LINK_NAME> 
+		<LINK_FILE>ehesap.popup_form_fire</LINK_FILE> 
+		<LINK_DETAIL>İşten Çıkış</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Ücret Pusulası</LINK_NAME> 
+		<LINK_FILE>ehesap.popup_view_price_compass</LINK_FILE> 
+		<LINK_DETAIL>Ücret Pusulası</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>İşe Giriş</LINK_NAME> 
+		<LINK_FILE>ehesap.form_add_position_in</LINK_FILE> 
+		<LINK_DETAIL>İşe Giriş</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Döviz Karşılıkları</LINK_NAME> 
+		<LINK_FILE>ehesap.popup_form_add_salary_money,ehesap.popup_form_upd_salary_money</LINK_FILE> 
+		<LINK_DETAIL>Döviz Karşılıkları</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>XML Aylık Bildirge</LINK_NAME> 
+		<LINK_FILE>ehesap.popup_form_export_ssk_xml</LINK_FILE> 
+		<LINK_DETAIL>XML Aylık Bildirge</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>XML İşten Çıkış</LINK_NAME> 
+		<LINK_FILE>ehesap.popup_form_fire2</LINK_FILE> 
+		<LINK_DETAIL>XML İşten Çıkış</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>İzin Süreleri</LINK_NAME> 
+		<LINK_FILE>ehesap.offtime_limit</LINK_FILE> 
+		<LINK_DETAIL>İzin Süreleri</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>İmport İşlemleri</LINK_NAME> 
+		<LINK_FILE>ehesap.list_import_process</LINK_FILE> 
+		<LINK_DETAIL>İmport İşlemleri</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Muhtasar Beyanname</LINK_NAME> 
+		<LINK_FILE>ehesap.list_muhtasar_xml_export</LINK_FILE> 
+		<LINK_DETAIL>Muhtasar Beyanname</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>PDKS - Ödenekli Çalışmalar</LINK_NAME> 
+		<LINK_FILE>ehesap.hourly_addfare_percantege</LINK_FILE> 
+		<LINK_DETAIL>PDKS - Ödenekli Çalışmalar</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Ücret Kuralları</LINK_NAME> 
+		<LINK_FILE>ehesap.personal_payment</LINK_FILE> 
+		<LINK_DETAIL>Ücret Kuralları</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>İcmal - Dinamik Çıktı</LINK_NAME> 
+		<LINK_FILE>ehesap.list_icmal</LINK_FILE> 
+		<LINK_DETAIL>Ücret Pusulası</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>İmport İşlemleri</LINK_NAME> 
+		<LINK_FILE>ehesap.import_payments</LINK_FILE> 
+		<LINK_DETAIL>İmport İşlemleri</LINK_DETAIL>
+	</SETUPSITE>
+</SETUP_SITE>

@@ -1,0 +1,9 @@
+<cfquery name="BRANCHES" datasource="#dsn#">
+SELECT 
+	BRANCH_ID, 
+	BRANCH_NAME 
+FROM 
+	BRANCH
+WHERE 
+	BRANCH_ID=#GET_DEPARTMENT.BRANCH_ID#
+</cfquery>

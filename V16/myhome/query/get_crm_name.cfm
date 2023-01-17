@@ -1,0 +1,10 @@
+<cfquery name="GET_CRM_NAME" datasource="#dsn3#">
+	SELECT 
+		SERVICE_ID,
+		SERVICE_HEAD,
+		SERVICE_CONSUMER_ID,
+		SERVICE_PARTNER_ID,
+		SERVICE_EMPLOYEE_ID
+	FROM 
+		SERVICE 
+</cfquery>

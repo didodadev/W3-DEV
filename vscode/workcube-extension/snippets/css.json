@@ -1,0 +1,20 @@
+{
+    "li_css" : {
+        "prefix" : "li_css",
+        "body" : [
+            " ${1|li_class1,li_class2,li_class3|}"
+        ]
+    },
+    "div_css" : {
+        "prefix" : "div_css",
+        "body" : [
+            " ${1|div_class1,div_class2,div_class3|}"
+        ]
+    },
+    "body_css" : {
+        "prefix" : "body_css",
+        "body" : [
+            " ${1|div_class1,div_class2,div_class3|}"
+        ]
+    }
+}

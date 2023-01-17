@@ -1,0 +1,18 @@
+<!-- Description : Kısa çalışma ödeneğine bağlı yeni kolonlar eklenddi(Kısa çalışma oranı, İlk hafta Hessaplama)
+Developer: Esma Uysal
+Company : Workcube
+Destination: main-->
+<querytag>
+        IF NOT EXISTS (SELECT 'Y' FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME = 'OFFTIME' AND TABLE_SCHEMA = '@_dsn_main_@' AND COLUMN_NAME = 'SHORT_WORKING_RATE')
+        BEGIN
+             ALTER TABLE OFFTIME ADD SHORT_WORKING_RATE int
+        END;
+        IF NOT EXISTS (SELECT 'Y' FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME = 'OFFTIME' AND TABLE_SCHEMA = '@_dsn_main_@' AND COLUMN_NAME = 'FIRST_WEEK_CALCULATION')
+        BEGIN
+            ALTER TABLE OFFTIME ADD FIRST_WEEK_CALCULATION bit
+        END;
+        IF NOT EXISTS (SELECT 'Y' FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME = 'EMPLOYEES_PUANTAJ_ROWS' AND TABLE_SCHEMA = '@_dsn_main_@' AND COLUMN_NAME = 'SHORT_WORKING_CALC')
+        BEGIN
+            ALTER TABLE EMPLOYEES_PUANTAJ_ROWS ADD SHORT_WORKING_CALC float
+        END;
+</querytag>

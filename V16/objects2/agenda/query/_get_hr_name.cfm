@@ -1,0 +1,11 @@
+<cfquery name="GET_HR_NAME" datasource="#DSN#">
+	SELECT 
+		EMPLOYEES.EMPLOYEE_ID,
+		EMPLOYEES.EMPLOYEE_USERNAME,
+		EMPLOYEES.EMPLOYEE_NAME,
+		EMPLOYEES.EMPLOYEE_SURNAME
+	FROM 
+		EMPLOYEES,EMPLOYEE_POSITIONS
+	WHERE
+		EMPLOYEES.EMPLOYEE_ID = <cfqueryparam cfsqltype="cf_sql_integer" value="#attributes.EMPLOYEE_ID#">
+</cfquery>

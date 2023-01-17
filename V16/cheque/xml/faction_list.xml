@@ -1,0 +1,109 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SETUP_SITE>
+	<SETUPSITE>
+		<LINK_NAME>Çek İade Giriş Düzenleme</LINK_NAME> 
+		<LINK_FILE>cheque.form_add_payroll_entry_return,cheque.form_upd_payroll_entry_return</LINK_FILE> 
+		<LINK_DETAIL>Çek İade Giriş Bordrosunda Düzenleme</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Çek Giriş Düzenleme</LINK_NAME> 
+		<LINK_FILE>cheque.form_add_payroll_entry,cheque.form_upd_payroll_entry</LINK_FILE> 
+		<LINK_DETAIL>Çek Giriş Bordrosunda Düzenleme</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Çek İade Çıkış Düzenleme</LINK_NAME> 
+		<LINK_FILE>cheque.form_add_payroll_endor_return</LINK_FILE>
+		<LINK_DETAIL>Çek İade Çıkış Bordrosunda Düzenleme</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Çek Çıkış Ciro Düzenleme</LINK_NAME> 
+		<LINK_FILE>cheque.form_add_payroll_endorsement,cheque.form_upd_payroll_endorsement</LINK_FILE>
+		<LINK_DETAIL>Çek Çıkış Ciro Bordrosunda Düzenleme</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Çek Çıkış Tahsil Düzenleme</LINK_NAME> 
+		<LINK_FILE>cheque.form_add_payroll_bank_revenue,cheque.form_upd_payroll_bank_revenue</LINK_FILE>
+		<LINK_DETAIL>Çek Çıkış Tahsil Düzenleme</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Çek Çıkış Banka Düzenleme</LINK_NAME> 
+		<LINK_FILE>cheque.form_add_payroll_bank_guaranty,cheque.form_upd_payroll_bank_guaranty</LINK_FILE>
+		<LINK_DETAIL>Çek Çıkış Banka Bordrosunda Düzenleme</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Çek Çıkış Banka - Teminat Düzenleme</LINK_NAME> 
+		<LINK_FILE>cheque.form_add_payroll_bank_guaranty_tem,cheque.form_upd_payroll_bank_guaranty_tem</LINK_FILE>
+		<LINK_DETAIL>Çek Çıkış Banka - Teminat Bordrosunda Düzenleme</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Çek İade Giriş Bordrosu-Banka Düzenleme</LINK_NAME> 
+		<LINK_FILE>cheque.form_add_payroll_bank_guaranty_return,cheque.form_upd_payroll_bank_guaranty_return</LINK_FILE>
+		<LINK_DETAIL>Çek İade Giriş Bordrosu-Banka  Bordrosunda Düzenleme</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Senet Çıkış Banka Düzenleme</LINK_NAME> 
+		<LINK_FILE>cheque.form_add_voucher_payroll_bank_tah,cheque.form_upd_voucher_payroll_bank_tah</LINK_FILE>
+		<LINK_DETAIL>Senet Çıkış Banka Bordrosunda Düzenleme</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Senet Çıkış Banka - Teminat Düzenleme</LINK_NAME> 
+		<LINK_FILE>cheque.form_add_voucher_payroll_bank_tem,cheque.form_upd_voucher_payroll_bank_tem</LINK_FILE>
+		<LINK_DETAIL>Senet Çıkış Banka - Teminat Bordrosunda Düzenleme</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Çek Detay Düzenleme</LINK_NAME> 
+		<LINK_FILE>cheque.popup_view_cheque_detail</LINK_FILE>
+		<LINK_DETAIL>Çek Detay Düzenleme</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Senet Detay Düzenleme</LINK_NAME> 
+		<LINK_FILE>cheque.popup_view_voucher_detail</LINK_FILE>
+		<LINK_DETAIL>Senet Detay Düzenleme</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Çek Ekle Düzenleme</LINK_NAME> 
+		<LINK_FILE>cheque.popup_add_cheque,cheque.popup_upd_self_cheque</LINK_FILE>
+		<LINK_DETAIL>Çek Ekle Düzenleme</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Senet Ekle Düzenleme</LINK_NAME> 
+		<LINK_FILE>cheque.popup_add_voucher</LINK_FILE>
+		<LINK_DETAIL>Senet Ekle Düzenleme</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Çek Ekle Düzenleme</LINK_NAME> 
+		<LINK_FILE>cheque.popup_add_self_cheque</LINK_FILE>
+		<LINK_DETAIL>Çek Ekle Düzenleme</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Senet Ekle Düzenleme</LINK_NAME> 
+		<LINK_FILE>cheque.popup_add_self_voucher</LINK_FILE>
+		<LINK_DETAIL>Senet Ekle Düzenleme</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Çek Listesi Düzenleme</LINK_NAME> 
+		<LINK_FILE>cheque.list_cheques</LINK_FILE>
+		<LINK_DETAIL>Çek Listesi Düzenleme</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Senet Listesi Düzenleme</LINK_NAME> 
+		<LINK_FILE>cheque.list_vouchers</LINK_FILE>
+		<LINK_DETAIL>Senet Listesi Düzenleme</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Senet Tahsilat İşlemi Düzenleme</LINK_NAME> 
+		<LINK_FILE>cheque.list_payment_voucher</LINK_FILE>
+		<LINK_DETAIL>Senet Tahsilat İşlemi Düzenleme</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Çek Listeleme</LINK_NAME> 
+		<LINK_FILE>cheque.popup_selct_cheque</LINK_FILE>
+		<LINK_DETAIL>Çek Listesi</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Senet Listeleme</LINK_NAME> 
+		<LINK_FILE>cheque.popup_selct_voucher</LINK_FILE>
+		<LINK_DETAIL>Senet Listesi</LINK_DETAIL>
+	</SETUPSITE>
+</SETUP_SITE>
+

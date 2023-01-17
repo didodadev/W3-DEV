@@ -1,0 +1,14 @@
+<cfquery name="GET_REPORT_MODULES" datasource="#DSN#">
+	SELECT
+		RM.MODULE_ID,
+		M.MODULE_NAME
+	FROM
+		REPORTS_MODULES RM,
+		MODULES M
+	WHERE
+		RM.MODULE_ID = M.MODULE_ID
+		AND
+		RM.REPORT_ID = #attributes.REPORT_ID# 
+	ORDER BY
+		M.MODULE_NAME
+</cfquery>

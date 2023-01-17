@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SETUP_SITE>
+	<SETUPSITE>
+		<LINK_NAME>Tahsil Fişi Ekleme/Güncelleme XML Setup</LINK_NAME>
+		<LINK_FILE>account.form_add_bill_collecting</LINK_FILE>
+		<LINK_DETAIL>Tahsil Fişi Ayarlarının Düzenlenmesi</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Tediye Fişi Ekleme/Güncelleme XML Setup</LINK_NAME>
+		<LINK_FILE>account.form_add_bill_payment,account.popup_add_bill_payment_copy,account.popup_upd_bill_payment</LINK_FILE>
+		<LINK_DETAIL>Tediye Fişi Ayarlarının Düzenlenmesi</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Mahsup Fişi Ekleme/Güncelleme XML Setup</LINK_NAME>
+		<LINK_FILE>account.form_add_bill_cash2cash,account.popup_add_bill_cash2cash_copy,account.popup_upd_bill_cash2cash</LINK_FILE>
+		<LINK_DETAIL>Mahsup Fişi Ayarlarının Düzenlenmesi</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Açılış Fişi Ekleme/Güncelleme XML Setup</LINK_NAME>
+		<LINK_FILE>account.form_upd_bill_opening</LINK_FILE>
+		<LINK_DETAIL>Açılış Fişi Ayarlarının Düzenlenmesi</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Muhasebe Fişi İmport XML Setup</LINK_NAME>
+		<LINK_FILE>account.account_card_import</LINK_FILE>
+		<LINK_DETAIL>Muhasebe Fişi İmport Edilmesi</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Muhasebe Fişi İmport XML Setup</LINK_NAME>
+		<LINK_FILE>account.account_card_import</LINK_FILE>
+		<LINK_DETAIL>Muhasebe Fişi İmport Edilmesi</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Hareket Birleştirme XML Setup</LINK_NAME>
+		<LINK_FILE>account.popup_add_sum_bills</LINK_FILE>
+		<LINK_DETAIL>Muhasebe Hareket Birleştirme</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Muhasebe Fişleri XML Setup</LINK_NAME>
+		<LINK_FILE>account.list_cards</LINK_FILE>
+		<LINK_DETAIL>Muhasebe Fişleri</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Defteri Kebir XML Setup</LINK_NAME>
+		<LINK_FILE>account.list_kebir</LINK_FILE>
+		<LINK_DETAIL>Defteri Kebir Dökümü</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Mizan XML Setup</LINK_NAME>
+		<LINK_FILE>account.list_scale</LINK_FILE>
+		<LINK_DETAIL>Mizan Dökümü</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Hareketler XML Setup</LINK_NAME>
+		<LINK_FILE>account.list_account_plan_rows</LINK_FILE>
+		<LINK_DETAIL>Hareketler</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Fiş Detay XMl Setup</LINK_NAME>
+		<LINK_FILE>account.popup_list_card_rows</LINK_FILE>
+		<LINK_DETAIL>Muhasebe Fişleri</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Muavin Defteri Dökümü XML Setup</LINK_NAME>
+		<LINK_FILE>account.list_account_card_rows</LINK_FILE>
+		<LINK_DETAIL>Muavin Defteri Dökümü</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Yevmiye Defteri XML Setup</LINK_NAME>
+		<LINK_FILE>account.list_account_card</LINK_FILE>
+		<LINK_DETAIL>Yevmiye Defteri</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Virman İşlemi XML Setup</LINK_NAME>
+		<LINK_FILE>account.add_account_to_account</LINK_FILE>
+		<LINK_DETAIL>Virman İşlemi</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Hesap Aktarım İşlemi XML Setup</LINK_NAME>
+		<LINK_FILE>account.add_acc_to_acc</LINK_FILE>
+		<LINK_DETAIL>Hesap Aktarım</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Hareket Birleştirme XML Setup</LINK_NAME>
+		<LINK_FILE>account.popup_add_sum_bills</LINK_FILE>
+		<LINK_DETAIL>Hareket Birleştirme</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Fiş Birleştirme İşlem Grubları XML Setup</LINK_NAME>
+		<LINK_FILE>account.popup_form_add_bills_process_groups,account.popup_form_upd_bills_process_groups</LINK_FILE>
+		<LINK_DETAIL>Fiş Birleştirme İşlem Grubları</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Açılış Fişi Satır Ekleme/Güncelleme XML Setup</LINK_NAME>
+		<LINK_FILE>account.account_open_row</LINK_FILE>
+		<LINK_DETAIL>Açılış Fişine Ait Satırların Düzenlenmesi</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Hesap Planı liste XML Setup</LINK_NAME>
+		<LINK_FILE>account.list_account_plan</LINK_FILE>
+		<LINK_DETAIL>Hesap Planı</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Muhasebe Fişi Toplu Print XML Setup</LINK_NAME>
+		<LINK_FILE>account.account_collected_print</LINK_FILE>
+		<LINK_DETAIL>Muhasebe Fişi Toplu Print Logo Adres Düzenlemesi</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Üretim Sonuçları Muhasebeleştirme XML Setup</LINK_NAME>
+		<LINK_FILE>account.production_result_account_card</LINK_FILE>
+		<LINK_DETAIL>Üretim Sonuçları Muhasebeleştirme</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Muhasebe Kur Değerleme XML Setup</LINK_NAME>
+		<LINK_FILE>account.account_card_rate_valuation</LINK_FILE>
+		<LINK_DETAIL>Muhasebe Kur Değerleme XML Setup</LINK_DETAIL>
+	</SETUPSITE>
+</SETUP_SITE>	

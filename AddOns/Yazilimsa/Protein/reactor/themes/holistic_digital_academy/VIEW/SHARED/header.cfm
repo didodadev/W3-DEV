@@ -1,0 +1,6 @@
+﻿<cfoutput>
+<!-- Required meta tags -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<cf_protein_meta_maker>
+</cfoutput>

@@ -1,0 +1,10 @@
+<!-- Description : OUTPUT TEMPLATESE'E BÜTÇE AKTARIM AALEBİ ŞABLONU EKLENDİ.
+Developer: Melek KOCABEY
+Company : Workcube
+Destination: Main-->
+<querytag>
+    IF NOT EXISTS(SELECT WRK_OUTPUT_TEMPLATE_ID FROM WRK_OUTPUT_TEMPLATES WHERE WRK_OUTPUT_TEMPLATE_NAME = 'Bütçe Aktarım Talebi')
+    BEGIN
+        INSERT [WRK_OUTPUT_TEMPLATES] ([WRK_OUTPUT_TEMPLATE_NAME], [WRK_OUTPUT_TEMPLATE_PATENT], [IS_ACTIVE], [BEST_PRACTISE_CODE], [OUTPUT_TEMPLATE_DETAIL], [WORKCUBE_PRODUCT_ID], [LICENCE_TYPE], [RELATED_WO], [AUTHOR_PARTNER_ID], [AUTHOR_NAME], [OUTPUT_TEMPLATE_VIEW_PATH], [OUTPUT_TEMPLATE_SECTORS], [WRK_PROCESS_STAGE], [PRINT_TYPE], [OUTPUT_TEMPLATE_VERSION], [RECORD_DATE], [RECORD_EMP], [RECORD_IP], [UPDATE_DATE], [UPDATE_EMP], [UPDATE_IP], [OUTPUT_TEMPLATE_PATH]) VALUES (N'Bütçe Aktarım Talebi', N'', 1, N'', N'Bütçe modülündeki Bütçelerin detaylı olarak gelir-gider planlarıyla birlikte yazdırılması için kullanılır.', NULL, 1, N'budget.budget_transfer_demand', NULL, N'Workcube Team', N'', N'41,1,2,56,42,3,4,5,6', 180, 332, N'V19', CAST(N'2020-11-05T09:42:05.000' AS DateTime), 15, N'127.0.0.1', CAST(N'2021-02-02T13:33:43.000' AS DateTime), 15, N'127.0.0.1', N'WTO/Print/Preview/budget_transfer_print.cfm')
+    END
+</querytag>

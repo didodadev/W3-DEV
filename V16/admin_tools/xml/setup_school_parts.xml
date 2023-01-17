@@ -1,0 +1,450 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SETUP_SCHOOL_PART>
+	<SCHOOL_PART>
+		<PART_ID>1</PART_ID>
+		<PART_NAME>Bilgisayar Öğretim ve Teknolojileri Eğitim </PART_NAME>
+	</SCHOOL_PART>
+	<SCHOOL_PART>
+		<PART_ID>3</PART_ID>
+		<PART_NAME>Eğitim Bilimleri </PART_NAME>
+	</SCHOOL_PART>
+	<SCHOOL_PART>
+		<PART_ID>5</PART_ID>
+		<PART_NAME>Grafik Tasarımı </PART_NAME>
+	</SCHOOL_PART>
+	<SCHOOL_PART>
+		<PART_ID>10</PART_ID>
+		<PART_NAME>Fen Bilgisi Öğretmenliği</PART_NAME>
+	</SCHOOL_PART>
+	<SCHOOL_PART>
+		<PART_ID>12</PART_ID>
+		<PART_NAME>Ortaöğretim Fen ve Matematik </PART_NAME>
+	</SCHOOL_PART>
+	<SCHOOL_PART>
+		<PART_ID>13</PART_ID>
+		<PART_NAME>Ortaöğretim Sosyal Alanlar Eğitimi </PART_NAME>
+	</SCHOOL_PART>
+	<SCHOOL_PART>
+		<PART_ID>15</PART_ID>
+		<PART_NAME>Türkçe Eğitimi Bölümü </PART_NAME>
+	</SCHOOL_PART>
+	<SCHOOL_PART>
+		<PART_ID>16</PART_ID>
+		<PART_NAME>Yabancı Diller Eğitimi Bölümü</PART_NAME>
+	</SCHOOL_PART>
+	<SCHOOL_PART>
+		<PART_ID>17</PART_ID>
+		<PART_NAME>Çalışma Ekonomisi ve Endüstri İşleri</PART_NAME>
+	</SCHOOL_PART>
+	<SCHOOL_PART>
+		<PART_ID>18</PART_ID>
+		<PART_NAME>İktisat Bölümü</PART_NAME>
+	</SCHOOL_PART>
+	<SCHOOL_PART>
+		<PART_ID>19</PART_ID>
+		<PART_NAME>İşletme</PART_NAME>
+	</SCHOOL_PART>
+	<SCHOOL_PART>
+		<PART_ID>21</PART_ID>
+		<PART_NAME>Bilgisayar Mühendisliği</PART_NAME>
+	</SCHOOL_PART>
+	<SCHOOL_PART>
+		<PART_ID>22</PART_ID>
+		<PART_NAME>Endüstri Mühendisliği</PART_NAME>
+	</SCHOOL_PART>
+	<SCHOOL_PART>
+		<PART_ID>23</PART_ID>
+		<PART_NAME>İç Mimarlık ve Çevre Tasarımı</PART_NAME>
+	</SCHOOL_PART>
+	<SCHOOL_PART>
+		<PART_ID>26</PART_ID>
+		<PART_NAME>Konservatuvar</PART_NAME>
+	</SCHOOL_PART>
+	<SCHOOL_PART>
+		<PART_ID>27</PART_ID>
+		<PART_NAME>Beden Eğitimi ve Spor Öğretmenliği</PART_NAME>
+	</SCHOOL_PART>
+	<SCHOOL_PART>
+		<PART_ID>36</PART_ID>
+		<PART_NAME>Matematik</PART_NAME>
+	</SCHOOL_PART>
+	<SCHOOL_PART>
+		<PART_ID>38</PART_ID>
+		<PART_NAME>Biyoloji</PART_NAME>
+	</SCHOOL_PART>
+	<SCHOOL_PART>
+		<PART_ID>39</PART_ID>
+		<PART_NAME>Coğrafya</PART_NAME>
+	</SCHOOL_PART>
+	<SCHOOL_PART>
+		<PART_ID>40</PART_ID>
+		<PART_NAME>Fizik</PART_NAME>
+	</SCHOOL_PART>
+	<SCHOOL_PART>
+		<PART_ID>41</PART_ID>
+		<PART_NAME>Kimya</PART_NAME>
+	</SCHOOL_PART>
+	<SCHOOL_PART>
+		<PART_ID>42</PART_ID>
+		<PART_NAME>Endüstri Ürünleri Tasarımı </PART_NAME>
+	</SCHOOL_PART>
+	<SCHOOL_PART>
+		<PART_ID>43</PART_ID>
+		<PART_NAME>Resim</PART_NAME>
+	</SCHOOL_PART>
+	<SCHOOL_PART>
+		<PART_ID>44</PART_ID>
+		<PART_NAME>Tarih</PART_NAME>
+	</SCHOOL_PART>
+	<SCHOOL_PART>
+		<PART_ID>45</PART_ID>
+		<PART_NAME>Matematik ve  Bilgisayar</PART_NAME>
+	</SCHOOL_PART>
+	<SCHOOL_PART>
+		<PART_ID>46</PART_ID>
+		<PART_NAME>Elektrik ve Elektronik Mühendisliği </PART_NAME>
+	</SCHOOL_PART>
+	<SCHOOL_PART>
+		<PART_ID>47</PART_ID>
+		<PART_NAME>Çevre Mühendisliği</PART_NAME>
+	</SCHOOL_PART>
+	<SCHOOL_PART>
+		<PART_ID>48</PART_ID>
+		<PART_NAME>Maden Mühendisliği</PART_NAME>
+		</SCHOOL_PART>
+	<SCHOOL_PART>
+		<PART_ID>49</PART_ID>
+		<PART_NAME>Halkla İlişkiler</PART_NAME>
+	</SCHOOL_PART>
+	<SCHOOL_PART>
+		<PART_ID>50</PART_ID>
+		<PART_NAME>Kamu Yönetimi</PART_NAME>
+	</SCHOOL_PART>
+	<SCHOOL_PART>
+		<PART_ID>51</PART_ID>
+		<PART_NAME>Siyaset Bilimi</PART_NAME>
+	</SCHOOL_PART>
+	<SCHOOL_PART>
+		<PART_ID>52</PART_ID>
+		<PART_NAME>Küresel ve Uluslararası İlişkiler</PART_NAME>
+	</SCHOOL_PART>
+	<SCHOOL_PART>
+		<PART_ID>53</PART_ID>
+		<PART_NAME>Jeodezi ve Fotogrametri Mühendisliği</PART_NAME>
+	</SCHOOL_PART>
+	<SCHOOL_PART>
+		<PART_ID>54</PART_ID>
+		<PART_NAME>Jeofizik Mühendisliği</PART_NAME>
+	</SCHOOL_PART>
+	<SCHOOL_PART>
+		<PART_ID>55</PART_ID>
+		<PART_NAME>Filoloji</PART_NAME>
+	</SCHOOL_PART>
+	<SCHOOL_PART>
+		<PART_ID>56</PART_ID>
+		<PART_NAME>Fizik Tedavi ve Rehabilitasyon</PART_NAME>
+	</SCHOOL_PART>
+	<SCHOOL_PART>
+		<PART_ID>57</PART_ID>
+		<PART_NAME>Tıp</PART_NAME>
+	</SCHOOL_PART>
+	<SCHOOL_PART>
+		<PART_ID>58</PART_ID>
+		<PART_NAME>Diş Hekimliği</PART_NAME>
+	</SCHOOL_PART>
+	<SCHOOL_PART>
+		<PART_ID>59</PART_ID>
+		<PART_NAME>Eczacılık</PART_NAME>
+	</SCHOOL_PART>
+	<SCHOOL_PART>
+		<PART_ID>60</PART_ID>
+		<PART_NAME>Hemşirelik</PART_NAME>
+	</SCHOOL_PART>
+	<SCHOOL_PART>
+		<PART_ID>61</PART_ID>
+		<PART_NAME>Makina Mühendisliği</PART_NAME>
+	</SCHOOL_PART>
+	<SCHOOL_PART>
+		<PART_ID>62</PART_ID>
+		<PART_NAME>İnşaat Mühendisliği</PART_NAME>
+	</SCHOOL_PART>
+	<SCHOOL_PART>
+		<PART_ID>63</PART_ID>
+		<PART_NAME>Ziraat Mühendisliği</PART_NAME>
+	</SCHOOL_PART>
+	<SCHOOL_PART>
+		<PART_ID>64</PART_ID>
+		<PART_NAME>Antropoloji</PART_NAME>
+	</SCHOOL_PART>
+	<SCHOOL_PART>
+		<PART_ID>65</PART_ID>
+		<PART_NAME>PART_NAME>Avrupa Birliği İlişkileri</PART_NAME>
+	</SCHOOL_PART>
+	<SCHOOL_PART>
+		<PART_ID>66</PART_ID>
+		<PART_NAME>Bankacılık</PART_NAME>
+	</SCHOOL_PART>
+	<SCHOOL_PART>
+		<PART_ID>67</PART_ID>
+		<PART_NAME>Bankacılık ve Finans</PART_NAME>
+	</SCHOOL_PART>
+	<SCHOOL_PART>
+		<PART_ID>68</PART_ID>
+		<PART_NAME>Bilgi ve Belge Yönetimi</PART_NAME>
+	</SCHOOL_PART>
+	<SCHOOL_PART>
+		<PART_ID>69</PART_ID>
+		<PART_NAME>Endüstri İlişkileri</PART_NAME>
+	</SCHOOL_PART>
+	<SCHOOL_PART>
+		<PART_ID>70</PART_ID>
+		<PART_NAME>Çocuk Gelişimi ve Eğitimi</PART_NAME>
+	</SCHOOL_PART>
+	<SCHOOL_PART>
+		<PART_ID>71</PART_ID>
+		<PART_NAME>Denizcilik İşletmeleri Yönetimi</PART_NAME>
+	</SCHOOL_PART>
+	<SCHOOL_PART>
+		<PART_ID>72</PART_ID>
+		<PART_NAME>Ekonometri</PART_NAME>
+	</SCHOOL_PART>
+	<SCHOOL_PART>
+		<PART_ID>73</PART_ID>
+		<PART_NAME>Ekonomi ve Finans</PART_NAME>
+	</SCHOOL_PART>
+	<SCHOOL_PART>
+		<PART_ID>74</PART_ID>
+		<PART_NAME>Ekonomi-Yönetim Bilimleri Programları</PART_NAME>
+	</SCHOOL_PART>
+	<SCHOOL_PART>
+		<PART_ID>75</PART_ID>
+		<PART_NAME>Ev Ekonomisi</PART_NAME>
+	</SCHOOL_PART>
+	<SCHOOL_PART>
+		<PART_ID>76</PART_ID>
+		<PART_NAME>Felsefe Grubu Öğretmenliği</PART_NAME>
+	</SCHOOL_PART>
+	<SCHOOL_PART>
+		<PART_ID>77</PART_ID>
+		<PART_NAME>Hukuk</PART_NAME>
+	</SCHOOL_PART>
+	<SCHOOL_PART>
+		<PART_ID>78</PART_ID>
+		<PART_NAME>Konaklama İşletmeciliği</PART_NAME>
+	</SCHOOL_PART>
+	<SCHOOL_PART>
+		<PART_ID>79</PART_ID>
+		<PART_NAME>Maliye</PART_NAME>
+	</SCHOOL_PART>
+	<SCHOOL_PART>
+		<PART_ID>80</PART_ID>
+		<PART_NAME>Moda Tasarımı</PART_NAME>
+	</SCHOOL_PART>
+	<SCHOOL_PART>
+		<PART_ID>81</PART_ID>
+		<PART_NAME>Muhasebe Bilgi Sistemleri</PART_NAME>
+	</SCHOOL_PART>
+	<SCHOOL_PART>
+		<PART_ID>82</PART_ID>
+		<PART_NAME>Muhasebe ve Finansal Yönetimi</PART_NAME>
+	</SCHOOL_PART>
+	<SCHOOL_PART>
+		<PART_ID>83</PART_ID>
+		<PART_NAME>Okul Öncesi Öğretmenliği</PART_NAME>
+	</SCHOOL_PART>
+	<SCHOOL_PART>
+		<PART_ID>84</PART_ID>
+		<PART_NAME>Peyzaj Mimarisi ve Kentsel Tasarım</PART_NAME>
+	</SCHOOL_PART>
+	<SCHOOL_PART>
+		<PART_ID>85</PART_ID>
+		<PART_NAME>Psikoloji</PART_NAME>
+	</SCHOOL_PART>
+	<SCHOOL_PART>
+		<PART_ID>86</PART_ID>
+		<PART_NAME>Reklamcılık</PART_NAME>
+	</SCHOOL_PART>
+	<SCHOOL_PART>
+		<PART_ID>87</PART_ID>
+		<PART_NAME>Rehberlik ve Psikolojik Danışmanlık</PART_NAME>
+	</SCHOOL_PART>
+	<SCHOOL_PART>
+		<PART_ID>88</PART_ID>
+		<PART_NAME>Sağlık İdaresi</PART_NAME>
+	</SCHOOL_PART>
+	<SCHOOL_PART>
+		<PART_ID>89</PART_ID>
+		<PART_NAME>Sağlık Kurumları İşletmeciliği</PART_NAME>
+	</SCHOOL_PART>
+	<SCHOOL_PART>
+		<PART_ID>90</PART_ID>
+		<PART_NAME>Sanat ve Sosyal Bilimler Programları</PART_NAME>
+	</SCHOOL_PART>
+	<SCHOOL_PART>
+		<PART_ID>91</PART_ID>
+		<PART_NAME>Sermaye Piyasası</PART_NAME>
+	</SCHOOL_PART>
+	<SCHOOL_PART>
+		<PART_ID>92</PART_ID>
+		<PART_NAME>Seyahat İşletmeciliği ve Turizm Rehberliği</PART_NAME>
+	</SCHOOL_PART>
+	<SCHOOL_PART>
+		<PART_ID>93</PART_ID>
+		<PART_NAME>Sınıf Öğretmenliği</PART_NAME>
+	</SCHOOL_PART>
+	<SCHOOL_PART>
+		<PART_ID>94</PART_ID>
+		<PART_NAME>Sigortacılık</PART_NAME>
+	</SCHOOL_PART>
+	<SCHOOL_PART>
+		<PART_ID>95</PART_ID>
+		<PART_NAME>Sigortacılık ve Risk Yönetimi</PART_NAME>
+	</SCHOOL_PART>
+	<SCHOOL_PART>
+		<PART_ID>96</PART_ID>
+		<PART_NAME>Sivil Hava Ulaştırma İşletmeciliği</PART_NAME>
+	</SCHOOL_PART>
+	<SCHOOL_PART>
+		<PART_ID>97</PART_ID>
+		<PART_NAME>Siyaset Bilimi ve Kamu Yönetimi</PART_NAME>
+	</SCHOOL_PART>
+	<SCHOOL_PART>
+		<PART_ID>98</PART_ID>
+		<PART_NAME>Sosyal Hizmetler</PART_NAME>
+	</SCHOOL_PART>
+	<SCHOOL_PART>
+		<PART_ID>99</PART_ID>
+		<PART_NAME>Turizm İşletmeciliği</PART_NAME>
+	</SCHOOL_PART>
+	<SCHOOL_PART>
+		<PART_ID>100</PART_ID>
+		<PART_NAME>Turizm İşletmeciliği ve Otelcilik</PART_NAME>
+	</SCHOOL_PART>
+	<SCHOOL_PART>
+		<PART_ID>101</PART_ID>
+		<PART_NAME>Turizm ve Otel İşletmeciliği</PART_NAME>
+	</SCHOOL_PART>
+	<SCHOOL_PART>
+		<PART_ID>102</PART_ID>
+		<PART_NAME>Turizm ve Otelcilik</PART_NAME>
+	</SCHOOL_PART>
+	<SCHOOL_PART>
+		<PART_ID>103</PART_ID>
+		<PART_NAME>Ulaştırma ve Lojistik</PART_NAME>
+	</SCHOOL_PART>
+	<SCHOOL_PART>
+		<PART_ID>104</PART_ID>
+		<PART_NAME>Uluslararası Finans</PART_NAME>
+	</SCHOOL_PART>
+	<SCHOOL_PART>
+		<PART_ID>105</PART_ID>
+		<PART_NAME>Uluslararası İlişkiler ve Avrupa Birliği</PART_NAME>
+	</SCHOOL_PART>
+	<SCHOOL_PART>
+		<PART_ID>106</PART_ID>
+		<PART_NAME>Uluslararası Lojistik ve Taşımacılık</PART_NAME>
+	</SCHOOL_PART>
+	<SCHOOL_PART>
+		<PART_ID>107</PART_ID>
+		<PART_NAME>Uluslararası Ticaret</PART_NAME>
+	</SCHOOL_PART>
+	<SCHOOL_PART>
+		<PART_ID>108</PART_ID>
+		<PART_NAME>Uluslararası Ticaret ve Finansman</PART_NAME>
+	</SCHOOL_PART>
+	<SCHOOL_PART>
+		<PART_ID>109</PART_ID>
+		<PART_NAME>Uluslararası Ticaret ve İşletmecilik</PART_NAME>
+	</SCHOOL_PART>
+	<SCHOOL_PART>
+		<PART_ID>110</PART_ID>
+		<PART_NAME>Üstün Zekalılar Öğretmenliği</PART_NAME>
+	</SCHOOL_PART>
+	<SCHOOL_PART>
+		<PART_ID>111</PART_ID>
+		<PART_NAME>Yönetim Bilişim Sistemleri</PART_NAME>
+	</SCHOOL_PART>
+	<SCHOOL_PART>
+		<PART_ID>112</PART_ID><PART_NAME>Anaokulu Öğretmenliği</PART_NAME>
+	</SCHOOL_PART>
+	<SCHOOL_PART>
+		<PART_ID>113</PART_ID>
+		<PART_NAME>Görme Engelliler Öğretmenliği</PART_NAME>
+	</SCHOOL_PART>
+	<SCHOOL_PART>
+		<PART_ID>114</PART_ID>
+		<PART_NAME>Halkla İlişkiler ve Reklamcılık</PART_NAME>
+	</SCHOOL_PART>
+	<SCHOOL_PART>
+		<PART_ID>115</PART_ID>
+		<PART_NAME>İşitme Engelliler Öğretmenliği</PART_NAME>
+	</SCHOOL_PART>
+	<SCHOOL_PART>
+		<PART_ID>116</PART_ID>
+		<PART_NAME>Türk Dili ve Edebiyatı</PART_NAME>
+	</SCHOOL_PART>
+	<SCHOOL_PART>
+		<PART_ID>117</PART_ID>
+		<PART_NAME>Türk Dili ve Edebiyatı Öğretmenliği</PART_NAME>
+	</SCHOOL_PART>
+	<SCHOOL_PART>
+		<PART_ID>118</PART_ID>
+		<PART_NAME>Türkçe Öğretmenliği</PART_NAME>
+	</SCHOOL_PART>
+	<SCHOOL_PART>
+		<PART_ID>119</PART_ID>
+		<PART_NAME>Zihin Engelliler Öğretmenliği</PART_NAME>
+	</SCHOOL_PART>
+	<SCHOOL_PART>
+		<PART_ID>121</PART_ID>
+		<PART_NAME>Aktüerya</PART_NAME>
+	</SCHOOL_PART>
+	<SCHOOL_PART>
+		<PART_ID>122</PART_ID>
+		<PART_NAME>Aktüerya Bilimleri</PART_NAME>
+	</SCHOOL_PART>
+	<SCHOOL_PART>
+		<PART_ID>123</PART_ID>
+		<PART_NAME>Bilgisayar Teknoloji ve Bilişim Sistemleri</PART_NAME>
+	</SCHOOL_PART>
+	<SCHOOL_PART>
+		<PART_ID>124</PART_ID>
+		<PART_NAME>Enformasyon Teknolojileri</PART_NAME>
+	</SCHOOL_PART>
+	<SCHOOL_PART>
+		<PART_ID>125</PART_ID>
+		<PART_NAME>Finans Matematiği</PART_NAME>
+	</SCHOOL_PART>
+	<SCHOOL_PART>
+		<PART_ID>126</PART_ID>
+		<PART_NAME>Hemşirelik ve Sağlık Hizmetleri</PART_NAME>
+	</SCHOOL_PART>
+	<SCHOOL_PART>
+		<PART_ID>127</PART_ID>
+		<PART_NAME>İlköğretim Matematik Öğretmenliği</PART_NAME>
+	</SCHOOL_PART>
+	<SCHOOL_PART>
+		<PART_ID>128</PART_ID>
+		<PART_NAME>Matematik Öğretmenliği</PART_NAME>
+	</SCHOOL_PART>
+	<SCHOOL_PART>
+		<PART_ID>129</PART_ID>
+		<PART_NAME>Sağlık Memurluğu</PART_NAME>
+	</SCHOOL_PART>
+	<SCHOOL_PART>
+		<PART_ID>130</PART_ID>
+		<PART_NAME>Bilgisayar Programcılığı</PART_NAME>
+	</SCHOOL_PART>
+	<SCHOOL_PART>
+		<PART_ID>131</PART_ID>
+		<PART_NAME>İşletme Mühendisliği</PART_NAME>
+	</SCHOOL_PART>
+	<SCHOOL_PART>
+		<PART_ID>132</PART_ID>
+		<PART_NAME>İlahiyat</PART_NAME>
+	</SCHOOL_PART>
+	<SCHOOL_PART>
+		<PART_ID>133</PART_ID>
+		<PART_NAME>Metalurji ve Malzeme Mühendisliği</PART_NAME>
+	</SCHOOL_PART>	
+	</SETUP_SCHOOL_PART>

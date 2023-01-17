@@ -1,0 +1,16 @@
+<cfquery name="GET_CONSUMER_DET" datasource="#dsn#">
+	SELECT 
+			CONSUMER_NAME,
+			CONSUMER_SURNAME,
+			CONSUMER_NAME,
+			CONSUMER_SURNAME AS FULLNAME,
+			CONSUMER_ID,
+			CONSUMER_CAT_ID
+	FROM 
+		CONSUMER
+	WHERE CONSUMER_ID IN (#LISTSORT(attributes.CONS,"NUMERIC")#)
+</cfquery>
+<cfset FULLNAME = "">
+<cfloop query="GET_CONSUMER_DET">
+		<cfset FULLNAME =  FULLNAME & ',' & "#CONSUMER_NAME# #CONSUMER_SURNAME#">
+</cfloop>

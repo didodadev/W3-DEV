@@ -1,0 +1,13 @@
+list_materials_total.cfm
+
+Bu dosyadan iki tane var birincisi workcube'ün orjinal dosyasını çalıştırıyor.
+
+ikincisi bu klasördeki get_order_detail_for_material_from_file.cfm dosyasını çalıştırıyor.
+
+Birincisi sadece fermuar boylarını getiriyor.
+İkincisi beden ve beden-boy çalıştığımız dosyayı getiriyor.
+
+
+Orjinal dosya yolu
+
+\\172.16.18.9\d\WORKCUBE_DOSYA\w3Catalyst\V16\production_plan\query

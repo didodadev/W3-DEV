@@ -1,0 +1,10 @@
+<cfquery name="GET_INCOME_LEVEL" datasource="#DSN#">
+	SELECT
+		INCOME_LEVEL_ID,
+		INCOME_LEVEL
+	FROM
+		SETUP_INCOME_LEVEL
+	ORDER BY
+		INCOME_LEVEL
+</cfquery>
+

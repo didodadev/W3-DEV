@@ -1,0 +1,33 @@
+<p style="text-align:justify; font-family:Geneva, Arial, Helvetica, sans-serif;">
+Stok aktarımı, önceki döneme ait stok hareketlerinin yeni döneme aktarımını sağlar.<br/><br/>
+
+Stokları Devret: Stokların yeni döneme aktarımını sağlar.<br/><br/>
+
+Kaynak Dönem: Mevcut dönem seçilmelidir.<br/><br/>
+
+Hedef Dönem: Aktarım yapılacak dönem seçilmelidir.<br/><br/>
+
+Spec Aktar: Speclerin yeni döneme aktarımını sağlar.<br/><br/>
+
+*Spec kullanılmıyor ise seçilmemelidir.<br/><br/>
+
+Raf Aktar: Rafların yeni döneme aktarımını sağlar.<br/><br/>
+
+*Raf kullanılmıyor ise seçilmemelidir.<br/><br/>
+
+Son Kullanma Tarihi Aktar: Kullanım tarihlerinin yeni döneme aktarımını sağlar.<br/><br/>
+
+*Son kullanma tarihi kullanılmıyor ise seçilmemelidir.<br/><br/>
+
+Yapılmış Aktarımları Sil: Daha önce yapılmış bir aktarım var ise silinmesini sağlar.<br/><br/>
+
+Aktarım sonunda yeni dönemde depo ve lokasyon bazında gruplanmış devir fişleri oluşur.<br/><br/>
+
+Stok aktarımda, o dönemde gerçekleşmiş tüm işlemlerin (fiili sevk tarihine bakılmaksızın) stok hareketleri bir sonraki döneme aktarılır. Dolayısıyla stok aktarımının yapıldığı eski dönemde fiili sevk tarihi yeni döneme ait işlemlerin stok hareketleri de devredilir. İstenirse bu stok hareketleri ilgili depo için oluşturulan devir fişinden manuel olarak çıkartılıp, hareketlerin geçerli olacağı fiili sevk tarihine göre sayım ya da fire fişi oluşturulabilir.<br/><br/>
+
+Yeni döneme stok aktarımı yaptıktan sonra, eski dönemde stokları etkileyecek (irsaliye, irsaliyeli fatura, vb) işlem yapıldığında aktarımlar silinip yeniden oluşturulmalıdır veya stok miktarını dengeleyebilmek için hareket türüne göre sayım ya da fire fişi kesilmelidir.<br/><br/>
+
+Aktarım yapmadan yeni dönemde stokları doğru takip edebilmek için pos devir işlemi de gerçekleştirilebilir.<br/><br/>
+
+*Herhangi bir durumda tekrar çalıştırılmasında bir sakınca yoktur.<br/><br/>
+</p>

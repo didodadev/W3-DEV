@@ -1,0 +1,2 @@
+INSERT INTO [SETUP_TEST_TYPE]([TEST_TYPE],[TEST_DETAIL]) Values( 'Yabancı Dil','Yabancı Dil sınavları için uygulanır');
+INSERT INTO [SETUP_TEST_TYPE]([TEST_TYPE],[TEST_DETAIL]) Values( 'Diksiyon','Diksiyon yeterlili');

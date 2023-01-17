@@ -1,0 +1,12 @@
+<cfquery name="GET_WORKGROUPS" datasource="#DSN#">
+ SELECT 
+ 	WORKGROUP_NAME,
+ 	GOAL,
+ 	WORKGROUP_ID 
+ FROM 
+ 	WORK_GROUP 
+ WHERE 
+ 	ONLINE_HELP = 1
+ ORDER BY 
+ 	WORKGROUP_ID ASC
+</cfquery>

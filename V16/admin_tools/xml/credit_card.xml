@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SETUP_CREDITCARD>
+	<CARD_CAT>
+		<CARDCAT>Visa</CARDCAT>
+	</CARD_CAT>
+	<CARD_CAT>
+		<CARDCAT>WorldCard</CARDCAT>
+	</CARD_CAT>
+</SETUP_CREDITCARD>

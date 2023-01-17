@@ -1,0 +1,49 @@
+--GO3-TİGER3 Çek / Senet İmport  settings.form_cheque_voucher_import
+
+DECLARE @CEKSEN int=1--1=cek/2=senet
+DECLARE @CEKSTATU int=1 --1=portfoy/2=bankada/4=ciro/5=karşılıksız/6=ödenmemiş/13=teminatta
+DECLARE @SQLString NVARCHAR(max)
+declare @whereCekstatus nvarchar(max)
+
+DECLARE @YERELPARA nvarchar(3)
+set @YERELPARA=(SELECT top 1 CURCODE FROM L_CURRENCYLIST WHERE  CURTYPE=(SELECT LOCALCTYP FROM L_CAPIFIRM A WHERE A.NR=@FirmNr) )
+ 
+if @CEKSTATU=1 begin set @whereCekstatus=' CSTRANS.STATUS IN (1)'end;
+if @CEKSTATU=2 begin set @whereCekstatus=' CSTRANS.STATUS IN (4,5)'end;
+if @CEKSTATU=4 begin set @whereCekstatus=' CSTRANS.STATUS IN (2)'end;
+if @CEKSTATU=5 begin set @whereCekstatus=' CSTRANS.STATUS IN (12)'end;
+if @CEKSTATU=6 begin set @whereCekstatus=' CSTRANS.STATUS IN (11)'end;
+if @CEKSTATU=13 begin set @whereCekstatus=' CSTRANS.STATUS IN (3)'end;
+ 
+
+SET @SQLString = N'select cstrans.status,
+ CONVERT(VARCHAR, CSCARD.DUEDATE, 104) as VadeTarihi,
+CSCARD.OWING as Borclu,
+CLCARD.CODE as CariHesap,
+CSCARD.BANKNAME as BankaAdi,
+(SELECT BRANCH FROM LG_001_BNCARD A WHERE A.BRANCHNO=CSCARD.BNBRANCHNO) as BankaSubesi,
+CSCARD.NEWSERINO as CekSenetNo,
+CSCARD.AMOUNT as Tutar,
+'''+@YERELPARA+''' as ParaBirimi,
+CSCARD.TRNET as IslemDoviziKarsiliği,
+ ISNULL( (SELECT top 1 CURCODE FROM L_CURRENCYLIST WHERE  CURTYPE = CSCARD.TRCURR),'''+@YERELPARA+''')  as IslemDovizi,
+CASE WHEN CSCARD.DOC IN(1,2) THEN 0 ELSE 1 END as MusteriCeki,
+CSCARD.SPECODE as OzelKod,
+0 as OdemeYontemi,
+CSCARD.REPORTRATE as TutarSistemDoviziKarsiligi,
+CSCARD.BNACCOUNTNO as HesapNo,
+CASE WHEN CSCARD.DOC IN (1,2) THEN (SELECT CODE FROM LG_001_CLCARD A WHERE A.LOGICALREF=CSTRANS.CARDREF) END as CekSahibi,
+CASE WHEN CIRO=1 THEN (SELECT CODE FROM LG_001_CLCARD A WHERE A.LOGICALREF=CSTRANS.CARDREF) END  as CiroEden,
+0 as OdemeSozu,
+CONVERT(VARCHAR, CSTRANS.DATE_ , 104)  as IslemTarihi
+from LG_001_01_CSCARD CSCARD LEFT OUTER JOIN LG_001_01_CSTRANS CSTRANS
+ON CSCARD.LOGICALREF=CSTRANS.CSREF LEFT OUTER JOIN LG_001_CLCARD  CLCARD
+ON CSTRANS.CARDREF=CLCARD.LOGICALREF
+WHERE ( CSCARD.DOC IN  (CASE WHEN '+str(@CEKSEN)+'=1 THEN 1 WHEN '+str(@CEKSEN)+'=2 then 2 END) 
+	OR CSCARD.DOC IN  (CASE WHEN '+str(@CEKSEN)+'=1 THEN 3 WHEN '+str(@CEKSEN)+'=2 then 4 END))
+	AND '+@whereCekstatus+'
+ORDER BY CSTRANS. LOGICALREF'
+
+EXECUTE sp_executesql @SQLString
+
+ 

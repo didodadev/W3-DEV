@@ -1,0 +1,2 @@
+<cf_get_workcube_asset company_id="#session.ep.company_id#" module_id='20' action_section='INTERNALDEMAND_ID' asset_cat_id="-2" action_id='#attributes.id#'>
+<cf_get_workcube_note company_id="#session.ep.company_id#" action_section='INTERNAL_ID' action_id='#attributes.id#' design_id='1' style="1">

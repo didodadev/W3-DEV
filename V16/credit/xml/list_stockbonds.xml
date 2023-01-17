@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<OBJECT_PROPERTIES>
+	<OBJECT_PROPERTY>
+		<PROPERTY>xml_net_or_brut</PROPERTY>
+		<PROPERTY_DETAIL>Getiri net veya brüt gelir üzerinden bütçe işlemi yapsın</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>select</PROPERTY_TYPE>
+		<PROPERTY_VALUES>1,0</PROPERTY_VALUES>
+		<PROPERTY_NAMES>Net,Brüt</PROPERTY_NAMES>
+		<PROPERTY_DEFAULT>1</PROPERTY_DEFAULT>
+		<PROPERTY_HELP>Net Tutar seçilir ise stopaj ile birlikte brüt seçilir ise stopaj düşülerek gelirleştirme yapılır.</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+</OBJECT_PROPERTIES>

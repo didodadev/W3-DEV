@@ -1,0 +1,270 @@
+.flowcard {
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0, 0, 0, 0.125);
+    border-radius: 0.25rem;
+    height:100%;
+  }
+  
+  .flowcard > hr {
+    margin-right: 0;
+    margin-left: 0;
+  }
+  
+  .flowcard > .list-group:first-child .list-group-item:first-child {
+    border-top-left-radius: 0.25rem;
+    border-top-right-radius: 0.25rem;
+  }
+  
+  .flowcard > .list-group:last-child .list-group-item:last-child {
+    border-bottom-right-radius: 0.25rem;
+    border-bottom-left-radius: 0.25rem;
+  }
+  
+  .flowcard-body {
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    padding:0;
+    overflow: auto;
+    /*padding: 1.25rem;*/
+  }
+  
+  .flowcard-title {
+    margin-bottom: 0.75rem;
+  }
+  
+  .flowcard-subtitle {
+    margin-top: -0.375rem;
+    margin-bottom: 0;
+  }
+  
+  .flowcard-text:last-child {
+    margin-bottom: 0;
+  }
+  
+  .flowcard-link:hover {
+    text-decoration: none;
+  }
+  
+  .flowcard-link + .flowcard-link {
+    margin-left: 1.25rem;
+  }
+  
+  .flowcard-header {
+    padding: 0.75rem 1.25rem;
+    margin: 0;
+    background-color:#f8f9fa;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+  }
+  
+  /* .flowcard-header:first-child {
+    border-radius: calc(0.25rem - 1px) calc(0.25rem - 1px) 0 0;
+  }
+   */
+  .flowcard-header + .list-group .list-group-item:first-child {
+    border-top: 0;
+  }
+  
+  .flowcard-footer {
+    padding: 0.75rem 1.25rem;
+    background-color: rgba(0, 0, 0, 0.03);
+    border-top: 1px solid rgba(0, 0, 0, 0.125);
+  }
+  
+  /* .flowcard-footer:last-child {
+    border-radius: 0 0 calc(0.25rem - 1px) calc(0.25rem - 1px);
+  } */
+  
+  .flowcard-header-tabs {
+    margin-right: -0.625rem;
+    margin-bottom: -0.75rem;
+    margin-left: -0.625rem;
+    border-bottom: 0;
+  }
+  
+  .flowcard-header-pills {
+    margin-right: -0.625rem;
+    margin-left: -0.625rem;
+  }
+  
+  .flowcard-img-overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 1.25rem;
+  }
+  
+  .flowcard-img {
+    width: 100%;
+    border-radius: calc(0.25rem - 1px);
+  }
+  
+  .flowcard-img-top {
+    width: 100%;
+    border-top-left-radius: calc(0.25rem - 1px);
+    border-top-right-radius: calc(0.25rem - 1px);
+  }
+  
+  .flowcard-img-bottom {
+    width: 100%;
+    border-bottom-right-radius: calc(0.25rem - 1px);
+    border-bottom-left-radius: calc(0.25rem - 1px);
+  }
+  
+  .flowcard-deck {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+  
+  .flowcard-deck .flowcard {
+    margin-bottom: 15px;
+  }
+
+  
+  @media only screen and (max-width: 768px) {
+  .flowcard-header{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 64px;
+    z-index: 99;
+    box-sizing: border-box;
+    align-items: center;
+  }
+  /* a.flowlabel{float:none!important;margin-top:0!important;display:flex;flex:1;justify-content:flex-end;} */
+  .flowcard-header label.flowlabel i{padding:0!important;margin:0!important;}
+  .flowcard-header .flowlabel i:last-child:not(.not){display:none;}
+  .flowcard-header .flowlabel i.not{margin-top:13px !important;}
+}
+
+  @media (min-width: 576px) {
+    .flowcard-deck {
+      -ms-flex-flow: row wrap;
+      flex-flow: row wrap;
+      margin-right: -15px;
+      margin-left: -15px;
+    }
+    .flowcard-deck .flowcard {
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex: 1 0 0%;
+      flex: 1 0 0%;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      margin-right: 15px;
+      margin-bottom: 0;
+      margin-left: 15px;
+    }
+  }
+  
+  .flowcard-group {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+  
+  .flowcard-group > .flowcard {
+    margin-bottom: 15px;
+  }
+  
+  @media (min-width: 576px) {
+    .flowcard-group {
+      -ms-flex-flow: row wrap;
+      flex-flow: row wrap;
+    }
+    .flowcard-group > .flowcard {
+      -ms-flex: 1 0 0%;
+      flex: 1 0 0%;
+      margin-bottom: 0;
+    }
+    .flowcard-group > .flowcard + .flowcard {
+      margin-left: 0;
+      border-left: 0;
+    }
+    .flowcard-group > .flowcard:not(:last-child) {
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+    .flowcard-group > .flowcard:not(:last-child) .flowcard-img-top,
+    .flowcard-group > .flowcard:not(:last-child) .flowcard-header {
+      border-top-right-radius: 0;
+    }
+    .card-group > .card:not(:last-child) .card-img-bottom,
+    .card-group > .card:not(:last-child) .card-footer {
+      border-bottom-right-radius: 0;
+    }
+    .card-group > .card:not(:first-child) {
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+    }
+    .card-group > .card:not(:first-child) .card-img-top,
+    .card-group > .card:not(:first-child) .card-header {
+      border-top-left-radius: 0;
+    }
+    .card-group > .card:not(:first-child) .card-img-bottom,
+    .card-group > .card:not(:first-child) .card-footer {
+      border-bottom-left-radius: 0;
+    }
+  }
+  
+  .card-columns .card {
+    margin-bottom: 0.75rem;
+  }
+
+  .flowcard-header label.flowlabel{
+    font-family: roboto !important;
+    font-size:17px !important;
+    font-weight:500;
+    color: rgba(0,0,0,.5);
+    cursor:pointer !important;
+    padding:0px 10px !important;
+  }
+  .flowcard-header label.flowlabel i{
+    padding:5px 10px;
+    color: rgba(0,0,0,.5);
+    margin-left:-10px;
+    font-style: normal;;
+  }
+  .flowcard-header label.flowlabel i.not{margin-top:5px;}
+
+  .flowcard-header label:hover{
+    color: black !important;
+  }
+
+  .flowcard-header label:not(:last-child){
+    border-right: 1px solid rgba(0,0,0,.5) !important;
+  }
+
+  .flowcard-header  img{ 
+    width: 50px;
+  }
+
+  @media (min-width: 576px) {
+    .card-columns {
+      -webkit-column-count: 3;
+      -moz-column-count: 3;
+      column-count: 3;
+      -webkit-column-gap: 1.25rem;
+      -moz-column-gap: 1.25rem;
+      column-gap: 1.25rem;
+      orphans: 1;
+      widows: 1;
+    }
+    .flowcard-columns .flowcard {
+      display: inline-block;
+      width: 100%;
+    }
+  }

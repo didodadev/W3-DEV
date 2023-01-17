@@ -1,0 +1,176 @@
+<!--- bu dosyadaki querynin nerdeyse aynısı query\get_tmarket_partners_count.cfm . burdaki degiskilikler ordada yapılsın. --->
+<cfquery name="GET_TMARKET_PARTNERS" datasource="#dsn#" result="ddd">
+	SELECT DISTINCT
+	<cfif isDefined("attributes.count")>
+		COUNT(DISTINCT CP.PARTNER_ID) COUNT_PARTNER
+	<cfelse>
+		CP.PARTNER_ID,
+		CP.COMPANY_PARTNER_NAME,
+		CP.COMPANY_PARTNER_EMAIL,
+		CP.COMPANY_PARTNER_SURNAME,
+		CP.COMPANY_PARTNER_ADDRESS,
+		CP.COMPANY_PARTNER_POSTCODE,
+		CP.COUNTRY,
+		CP.COUNTY,
+		CP.CITY,
+		CP.SEMT,
+		CP.MISSION,
+		CP.DEPARTMENT,
+		C.COMPANY_ID,
+		C.NICKNAME,
+		C.FULLNAME,
+		C.COMPANYCAT_ID,
+		C.COUNTY,
+		CP.COMPANY_PARTNER_TEL_EXT,
+		CP.COMPANY_PARTNER_FAX,
+		CP.MOBIL_CODE,
+		CP.MOBILTEL,
+		LTRIM(RTRIM(CP.MOBIL_CODE+CP.MOBILTEL)) AS CP_MOBILPHONE
+		</cfif>
+	FROM
+		COMPANY_PARTNER CP,
+		COMPANY C
+		<cfif ListLen(TMARKET.COMP_REL_BRANCH) or ListLen(TMARKET.COMP_REL_COMP)>,COMPANY_BRANCH_RELATED AS CBR</cfif>
+		<cfif ListLen(TMARKET.COMP_AGENT_POS_CODE,',')>,WORKGROUP_EMP_PAR WEP</cfif>
+		<cfif Listlen(TMARKET.COMP_PRODUCTCAT_LIST,',')>,WORKNET_RELATION_PRODUCT_CAT MRP</cfif>
+	WHERE
+		<cfif TMARKET.comp_want_email eq 1>
+			CP.WANT_EMAIL = 1  AND 
+		<cfelseif TMARKET.comp_want_email eq 0>
+			 CP.WANT_EMAIL = 0 AND
+		<cfelse>
+			 (CP.WANT_EMAIL = 1 OR CP.WANT_EMAIL = 0) AND
+		</cfif>
+		<cfif isdefined('TMARKET.REQ_COMP') and len(TMARKET.REQ_COMP)>
+			<cfquery name="GET_REQ_PEOPLE" datasource="#DSN#">
+			SELECT 
+				PARTNER_ID,COUNT (PARTNER_ID)
+			FROM 
+				MEMBER_REQ_TYPE 
+			WHERE 
+				REQ_ID IN (#TMARKET.REQ_COMP#)  
+			GROUP BY 
+			PARTNER_ID HAVING COUNT(PARTNER_ID)>=#ListLen(TMARKET.REQ_COMP,',')#
+			</cfquery>
+			<cfset C_REQ=ValueList(GET_REQ_PEOPLE.PARTNER_ID,',')>
+			<cfif listlen(C_REQ)>
+			CP.COMPANY_ID IN (#C_REQ#) AND 
+			</cfif>
+		</cfif>
+		<cfif ListLen(TMARKET.COMP_REL_BRANCH) or ListLen(TMARKET.COMP_REL_COMP)>
+			C.COMPANY_ID = CBR.COMPANY_ID AND
+			CP.COMPANY_ID = CBR.COMPANY_ID AND
+			CBR.CONSUMER_ID IS NULL AND
+		</cfif>
+		<cfif ListLen(TMARKET.COMP_AGENT_POS_CODE,',')>
+			C.COMPANY_ID = WEP.COMPANY_ID AND
+			WEP.COMPANY_ID IS NOT NULL AND
+			WEP.IS_MASTER = 1 AND
+		</cfif>
+		C.COMPANY_ID = CP.COMPANY_ID
+		<cfif len(TMARKET.SECTOR_CATS)>
+			AND C.SECTOR_CAT_ID IN (#TMARKET.SECTOR_CATS#)
+		</cfif>
+		<cfif len(TMARKET.COMPANY_SIZE_CATS)>
+			AND C.COMPANY_SIZE_CAT_ID IN (#TMARKET.COMPANY_SIZE_CATS#)
+		</cfif>
+		<cfif listlen(TMARKET.PARTNER_STATUS)>
+			AND C.COMPANY_STATUS IN (#TMARKET.PARTNER_STATUS#)
+            AND CP.COMPANY_PARTNER_STATUS IN(#TMARKET.PARTNER_STATUS#)
+		</cfif>
+		<cfif listlen(TMARKET.IS_POTANTIAL)>
+			AND C.ISPOTANTIAL IN (#TMARKET.IS_POTANTIAL#)
+		</cfif>
+		<cfif listlen(TMARKET.COMPANYCATS)>
+			AND C.COMPANYCAT_ID IN (#TMARKET.COMPANYCATS#)
+		</cfif>
+		<cfif listlen(TMARKET.PARTNER_TMARKET_SEX)>
+			AND CP.SEX IN (#LISTSORT(TMARKET.PARTNER_TMARKET_SEX,"NUMERIC")#) 
+		</cfif>
+		<cfif listlen(TMARKET.PARTNER_MISSION)>
+			AND CP.MISSION IN (#LISTSORT(TMARKET.PARTNER_MISSION,"NUMERIC")#) 
+		</cfif>
+		<cfif listlen(TMARKET.PARTNER_DEPARTMENT)>
+			AND CP.DEPARTMENT IN (#LISTSORT(TMARKET.PARTNER_DEPARTMENT,"NUMERIC")#) 
+		</cfif>
+        <cfif listlen(TMARKET.PARTNER_STAGE)>
+        	AND C.COMPANY_STATE IN(#TMARKET.PARTNER_STAGE#)
+        </cfif>
+		<cfif len(TMARKET.ONLY_FIRMMEMBER)>AND C.MANAGER_PARTNER_ID=CP.PARTNER_ID</cfif>
+		<cfif len(TMARKET.COMP_CONMEMBER)>AND C.IS_RELATED_COMPANY=#TMARKET.COMP_CONMEMBER#</cfif>
+		<cfif len(TMARKET.COMPANY_CITY_ID)>AND C.CITY IN (#TMARKET.COMPANY_CITY_ID#)</cfif>
+		<cfif len(TMARKET.COMPANY_COUNTY_ID)>AND C.COUNTY IN (#TMARKET.COMPANY_COUNTY_ID#)</cfif>
+		<cfif len(TMARKET.COMPANY_VALUE)>AND C.COMPANY_VALUE_ID IN (#TMARKET.COMPANY_VALUE#)</cfif>
+		<cfif len(TMARKET.COMPANY_IMS_CODE)>AND C.IMS_CODE_ID IN (#TMARKET.COMPANY_IMS_CODE#)</cfif>
+		<cfif len(TMARKET.COMPANY_PARTNER_HOBBY)>AND CP.PARTNER_ID IN (SELECT PARTNER_ID FROM COMPANY_PARTNER_HOBBY WHERE HOBBY_ID IN (#TMARKET.COMPANY_PARTNER_HOBBY#))</cfif>
+		<cfif len(TMARKET.COMPANY_RESOURCE)>AND C.RESOURCE_ID IN (#TMARKET.COMPANY_RESOURCE#)</cfif>
+		<cfif len(TMARKET.COMPANY_OZEL_KOD1)>AND C.OZEL_KOD='#TMARKET.COMPANY_OZEL_KOD1#'</cfif>
+		<cfif len(TMARKET.COMPANY_OZEL_KOD2)>AND C.OZEL_KOD_1='#TMARKET.COMPANY_OZEL_KOD2#'</cfif>
+		<cfif len(TMARKET.COMPANY_OZEL_KOD3)>AND C.OZEL_KOD_2='#TMARKET.COMPANY_OZEL_KOD3#'</cfif>
+		<cfif len(TMARKET.COMPANY_SALES_ZONE)>AND C.SALES_COUNTY IN (#TMARKET.COMPANY_SALES_ZONE#)</cfif>
+        <cfif listlen(TMARKET.COMPANY_COUNTRY_ID)>AND C.COUNTRY IN (#LISTSORT(TMARKET.COMPANY_COUNTRY_ID,"NUMERIC")#)</cfif>
+		<cfif Len(TMARKET.COMP_FIRM_LIST)>
+			AND C.FIRM_TYPE IN (',#TMARKET.COMP_FIRM_LIST#,')
+		</cfif>
+		<cfif len(TMARKET.COMP_PRODUCTCAT_LIST)>
+			AND C.COMPANY_ID=MRP.COMPANY_ID
+			AND MRP.PRODUCT_CATID IN(#TMARKET.COMP_PRODUCTCAT_LIST#)
+		</cfif>
+		<cfif len(TMARKET.COMPANY_REL_TYPE_ID) or len(TMARKET.COMPANY_REL_ID)>
+			AND C.COMPANY_ID IN (SELECT 
+										CPB.PARTNER_COMPANY_ID
+										FROM 
+											COMPANY_PARTNER_RELATION CPB 
+										WHERE 
+										<cfif len(TMARKET.COMPANY_REL_ID)>
+											CPB.COMPANY_ID  = #TMARKET.COMPANY_REL_ID# 
+										</cfif>
+										<cfif len(TMARKET.COMPANY_REL_TYPE_ID) and len(TMARKET.COMPANY_REL_ID)>AND</cfif>
+										<cfif len(TMARKET.COMPANY_REL_TYPE_ID)>
+											CPB.PARTNER_RELATION_ID IN (#TMARKET.COMPANY_REL_TYPE_ID#)
+										</cfif>
+										)
+		</cfif>
+		<cfif TMARKET.IS_BUYER eq 1>AND C.IS_BUYER =1</cfif>
+		<cfif TMARKET.IS_SELLER eq 1>AND C.IS_SELLER =1</cfif>
+		<!--- İlişkili şube ve companyler --->
+		<cfif ListLen(TMARKET.COMP_REL_BRANCH)>
+			AND CBR.BRANCH_ID IN (
+								<cfloop from="1" to="#ListLen(TMARKET.COMP_REL_BRANCH)#" index="sayac">
+								#ListGetAt(TMARKET.COMP_REL_BRANCH,sayac,',')#
+									<cfif sayac lt ListLen(TMARKET.COMP_REL_BRANCH)>
+									,
+									</cfif>
+								</cfloop>
+							  )
+		</cfif>
+		<cfif ListLen(TMARKET.COMP_REL_COMP)>
+			AND CBR.OUR_COMPANY_ID IN (
+								<cfloop from="1" to="#ListLen(TMARKET.COMP_REL_COMP)#" index="sayac2">
+								#ListGetAt(TMARKET.COMP_REL_COMP,sayac2,',')#
+									<cfif sayac2 lt ListLen(TMARKET.COMP_REL_COMP)>
+									,
+									</cfif>
+								</cfloop>
+							  )
+		</cfif>
+		<!--- Partner Temsilci --->
+		<cfif ListLen(TMARKET.COMP_AGENT_POS_CODE,',')>
+			AND WEP.POSITION_CODE IN
+									(
+								<cfloop from="1" to="#listlen(TMARKET.COMP_AGENT_POS_CODE,',')#" index="sayac3">
+								#ListGetAt(TMARKET.COMP_AGENT_POS_CODE,sayac3,',')#
+									<cfif sayac3 lt ListLen(TMARKET.COMP_AGENT_POS_CODE)>
+									,
+									</cfif>
+								</cfloop>
+			
+									)
+		</cfif>
+		<cfif  not isDefined("attributes.count")>
+	ORDER BY 
+		C.NICKNAME,
+		CP.COMPANY_PARTNER_NAME
+		</cfif>
+</cfquery>
+

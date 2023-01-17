@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SETUP_SITE>
+	<SETUPSITE>
+		<LINK_NAME>Masraf ve Gelir Fişi XML Setup</LINK_NAME> 
+		<LINK_FILE>cost.list_expense_income</LINK_FILE> 
+		<LINK_DETAIL>Masraf ve Gelir Fişi Listeleme Setup</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Harcama Taleplerim</LINK_NAME>
+		<LINK_FILE>cost.list_my_expense_requests</LINK_FILE>
+		<LINK_DETAIL>XML Setup:Harcama Taleplerim</LINK_DETAIL>
+	</SETUPSITE>
+		<SETUPSITE>
+		<LINK_NAME>Masraflar XML Setup</LINK_NAME>
+		<LINK_FILE>cost.list_expense_management</LINK_FILE>
+		<LINK_DETAIL>Masraflar Listeleme Setup</LINK_DETAIL>
+	</SETUPSITE>
+</SETUP_SITE>

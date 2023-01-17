@@ -1,0 +1,53 @@
+<cfif isdefined("attributes.compid")>
+	<cfset dsn3 = "#dsn#_#attributes.compid#">
+</cfif>
+<!--- 
+	PRODUCT seçilmesinin sebebi yeni şirkette ürün varmı diye kontrol için AK 
+	#dsn3_alias# olmalı cunkü yukardan dsn3 degisiyor ama dsn3_alias değişmemeli
+	--->
+<cfquery name="GET_CATALOG_PRODUCT" datasource="#DSN3#">
+	SELECT 
+		CPP.* ,
+		0 SALE_DISCOUNT1,
+		0 SALE_DISCOUNT2,
+		0 SALE_DISCOUNT3,
+		0 SALE_DISCOUNT4,
+		0 SALE_DISCOUNT5,
+		0 SALE_DISCOUNT6,
+		0 SALE_DISCOUNT7,
+		0 SALE_DISCOUNT8,
+		0 SALE_DISCOUNT9,
+		0 SALE_DISCOUNT10,
+		0 PURCHASE_ACTION_PRICE_DISCOUNT,
+		0 SALE_REBATE_CASH_1,
+		0 SALE_REBATE_RATE,
+		0 SALE_EXTRA_PRODUCT_1,
+		0 SALE_EXTRA_PRODUCT_2,
+		0 SALE_RETURN_DAY,
+		0 SALE_RETURN_RATE,
+		0 SALE_PRICE_PROTECTION_DAY,
+		CP.IS_APPLIED,
+		P.MANUFACT_CODE,
+		P.PRODUCT_CODE,
+		P.PRODUCT_CODE_2,
+		P.BARCOD,
+		P.MIN_MARGIN,
+		P.MAX_MARGIN,
+        CASE 
+        	WHEN CPP.STOCK_ID IS NOT NULL 
+	        	THEN (SELECT P.PRODUCT_NAME+' '+S.PROPERTY FROM #DSN1_alias#.STOCKS S WHERE S.STOCK_ID = CPP.STOCK_ID)
+            ELSE
+    	        P.PRODUCT_NAME
+        END AS 
+            PRODUCT_NAME
+	FROM 
+		#dsn3_alias#.CATALOG_PROMOTION_PRODUCTS CPP,
+		PRODUCT P,
+		#dsn3_alias#.CATALOG_PROMOTION CP
+	WHERE
+		CPP.CATALOG_ID = #attributes.ID# AND
+		CPP.PRODUCT_ID = P.PRODUCT_ID AND
+		CP.CATALOG_ID = CPP.CATALOG_ID 
+	ORDER BY
+		CPP.CATALOGPRODUCT_ID
+</cfquery>

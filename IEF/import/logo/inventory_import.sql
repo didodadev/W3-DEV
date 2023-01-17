@@ -1,0 +1,54 @@
+
+/*
+LogoGo3/LogoTiger3 Databaselerinden bilgi alır
+Demirbaş Aktarım
+settings.form_add_inventory_import
+*/
+
+DECLARE @SQLString NVARCHAR(MAX)
+SET @SQLString = N'SELECT 
+		 FAREGIST.DATEIN,
+		FAREGIST.REGCODE as DemirbasNo,
+		0 as DemirbasKategorisi,
+		ITEMS.NAME as Aciklama,
+		CONVERT(VARCHAR, FAREGIST.DATEIN , 104) as GirisTarihi,
+		FAREGIST.QUANTITY as Miktar,
+		(SELECT  SUM( LOCFIGS_BOOKVALRV) from LG_'+@FirmNr+'_FAYEAR A 
+			WHERE A.FREGREF=FAREGIST.LOGICALREF AND
+			A.YEAR_=(select CASE WHEN YEAR(BEGDATE)=YEAR(FAREGIST.DATEIN) THEN  YEAR(BEGDATE) ELSE YEAR(BEGDATE)-1 END from L_CAPIPERIOD 
+			WHERE NR='+@DonemNr+' AND FIRMNR='+@FirmNr+') ) as DonemBasiDeğer,
+		(SELECT  SUM( CURFIGS_BOOKVALRV) from LG_'+@FirmNr+'_FAYEAR A 
+			WHERE A.FREGREF=FAREGIST.LOGICALREF AND
+			A.YEAR_=(select CASE WHEN YEAR(BEGDATE)=YEAR(FAREGIST.DATEIN) THEN  YEAR(BEGDATE) ELSE YEAR(BEGDATE)-1 END from L_CAPIPERIOD 
+			WHERE NR='+@DonemNr+' AND FIRMNR='+@FirmNr+') ) as DonemBasiDeğer2,
+		(SELECT  SUM( LOCFIGS_ACCDEPREOY) from LG_'+@FirmNr+'_FAYEAR A 
+			WHERE A.FREGREF=FAREGIST.LOGICALREF AND
+			A.YEAR_=(select CASE WHEN YEAR(BEGDATE)=YEAR(FAREGIST.DATEIN) THEN  YEAR(BEGDATE) ELSE YEAR(BEGDATE)-1 END from L_CAPIPERIOD 
+			WHERE NR='+@DonemNr+' AND FIRMNR='+@FirmNr+') ) as DonemAmortismani,
+		(SELECT  SUM( CURFIGS_ACCDEPREOY) from LG_'+@FirmNr+'_FAYEAR A 
+			WHERE A.FREGREF=FAREGIST.LOGICALREF AND
+			A.YEAR_=(select CASE WHEN YEAR(BEGDATE)=YEAR(FAREGIST.DATEIN) THEN  YEAR(BEGDATE) ELSE YEAR(BEGDATE)-1 END from L_CAPIPERIOD 
+			WHERE NR='+@DonemNr+' AND FIRMNR='+@FirmNr+') ) as DonemAmortismani2,
+		''TRL'' as IslemParaBirimi,
+		case when FAREGIST.DEPRDUR5>0 THEN DEPRDUR5 ELSE FAREGIST.DEPRDUR  END as Faydaliomur,
+		FAREGIST.DEPRDUR as AmortismanOrani,
+		CASE WHEN FAREGIST.PARTDEP=1 THEN 1 ELSE 2 END as AmortismanTuru,
+		'''' as MuhasebeKodu,
+		0 as MasrafMerkezi,
+		0 as GiderKalemi,
+		FAREGIST.DEPRRATE as Periyod,
+		'''' as AmortismanBorcMuhasebeKodu,
+		'''' as AmortismanAlacakMuhasebeKodu,
+		FAREGIST.CRDREF as StokID,
+		0 as AboneID
+ 
+FROM     LG_'+@FirmNr+'_ITEMS AS ITEMS INNER JOIN
+         LG_'+@FirmNr+'_FAREGIST AS FAREGIST ON ITEMS.LOGICALREF = FAREGIST.CRDREF AND ITEMS.CARDTYPE = 4'
+
+EXECUTE sp_executesql @SQLString
+ 
+ 
+ 
+
+
+ 

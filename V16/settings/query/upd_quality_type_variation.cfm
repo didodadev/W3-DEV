@@ -1,0 +1,14 @@
+<cfquery name="ADD_QUALITY_TYPE_VARIATION" datasource="#DSN3#">
+	UPDATE
+		QUALITY_CONTROL_ROW
+	SET
+		QUALITY_CONTROL_ROW='#ATTRIBUTES.QUALITY_CONTROL_ROW#',
+		QUALITY_CONTROL_TYPE_ID=#ATTRIBUTES.QUALITY_CONTROL_TYPE_ID#,
+		TOLERANCE=<cfif len(ATTRIBUTES.TOLERANCE)>'#ATTRIBUTES.TOLERANCE#',<cfelse>NULL,</cfif>
+		UPDATE_DATE=#NOW()#,
+		UPDATE_EMP=#SESSION.EP.USERID#,
+		UPDATE_IP='#CGI.REMOTE_ADDR#'
+	WHERE
+		QUALITY_CONTROL_ROW_ID=#attributes.id#
+</cfquery>
+<cflocation url="#request.self#?fuseaction=settings.form_add_quality_type_variation" addtoken="no">

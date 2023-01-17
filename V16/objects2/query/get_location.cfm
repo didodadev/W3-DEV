@@ -1,0 +1,15 @@
+<cfquery name="GET_LOCATION" datasource="#DSN#">
+	SELECT 
+		DEPARTMENT.DEPARTMENT_HEAD, 
+		BRANCH.BRANCH_NAME,
+		ZONE.ZONE_NAME,
+		BRANCH.COMPANY_ID
+	FROM 
+		BRANCH,
+		DEPARTMENT,
+		ZONE 
+	WHERE
+		ZONE.ZONE_ID = BRANCH.ZONE_ID AND
+		BRANCH.BRANCH_ID=DEPARTMENT.BRANCH_ID AND
+		DEPARTMENT.DEPARTMENT_ID = <cfqueryparam cfsqltype="cf_sql_integer" value="#attributes.department_id#">
+</cfquery>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SETUP_SITE>
+	<SETUPSITE>
+		<LINK_NAME>Bütçe Planı XML Setup</LINK_NAME>
+		<LINK_FILE>budget.add_budget_plan</LINK_FILE>
+		<LINK_DETAIL>Bütçe Planı Ayarlarının Düzenlenmesi</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Bütçe Raporu</LINK_NAME>
+		<LINK_FILE>budget.detail_budget_report,budget.emptypopup_detail_budget_report</LINK_FILE>
+		<LINK_DETAIL>Bütçe Raporu</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Bütçe Planı XML Setup</LINK_NAME>
+		<LINK_FILE>budget.budget_transfer_demand</LINK_FILE>
+		<LINK_DETAIL>Bütçe Aktarım Talepleri Ayarlarının Düzenlenmesi</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Gelirler XML Setup</LINK_NAME>
+		<LINK_FILE>budget.budget_income_summery</LINK_FILE>
+		<LINK_DETAIL>Gelirler Listeleme Setup</LINK_DETAIL>
+	</SETUPSITE>
+</SETUP_SITE>

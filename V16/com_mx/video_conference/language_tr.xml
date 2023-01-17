@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<language>
+	<errors>
+		<errorTitle>Hata:</errorTitle>
+		<missedParameter>Gerekli parametrelerden biri ya da birkaçı eksik. İlgili parametreler:</missedParameter>
+		<connectionError>Bağlantı sağlanamadı! Lütfen geçerli bir adres belirtildiğinden emin olun. İlgili parametre için bkz:</connectionError>
+		<connectionClose>Bağlantı sonlandı! Lütfen uygulamayı kapatıp daha sonra tekrar deneyin..</connectionClose>
+		<originalErrorCode>Teknik hata kodu:</originalErrorCode>
+		<alreadyLoggedIn>Şu an kullanıcı zaten sistemde !</alreadyLoggedIn>
+		<archivingError>Arşivleme işlemi başarısız !</archivingError>
+		<fieldsInvalid>Gerekli alanlardan biri ya da daha fazlası geçersiz !</fieldsInvalid>
+		<sessionNotFound>Oturum bulunamadı!</sessionNotFound>
+		<validationError>İstemci doğrulanamadı!</validationError>
+		<logError>Oturum istatistikleri kaydedilirken bir hata oluştu!</logError>
+	</errors>
+			
+	<messages>
+		<pleaseWait>Lütfen bekleyiniz..</pleaseWait>
+		<connecting>sunucuya bağlanılıyor</connecting>
+		<starting>uygulama başlatılıyor</starting>
+		<writeHere>Metni buraya yazınız..</writeHere>
+		<userJoined>konferansa katıldı.</userJoined>
+		<userLeft>konferanstan ayrıldı.</userLeft>
+		<selectReceiver>Mesajın kime gönderileceğini seç</selectReceiver>
+		<userDeviceReady>aygıtlarını paylaşıma açtı.</userDeviceReady>
+		<userDeviceUnpublish>aygıtlarını paylaşmayı durdurdu.</userDeviceUnpublish>
+		<viewInfo>kullanıcı şu anda sizi izliyor / dinliyor</viewInfo>
+		<archiving>arşivleniyor, lütfen bekleyiniz..</archiving>
+		<archivingSuccess>Arşivleme işlemi başarıyla tamamlandı !</archivingSuccess>
+		<idAlreadyInUse>Bu ID zaten kullanımda! Lütfen farklı bir ID ile tekrar deneyin.</idAlreadyInUse>
+		<shareTip>Kamera ve mikrofonunuzu henüz paylaşmadınız!</shareTip>
+		<sharingLimitation>Eş zamanlı olarak en fazla 4 kişi aygıtlarını paylaşabilir!</sharingLimitation>
+		<invitation>sizi Video Konferans 'a davet etti. Katılmak için lütfen tıklayın</invitation>
+		<invitationSent>Davetiniz gönderilmiştir!</invitationSent>
+		<fileSizeLimitation>10 MB 'dan daha büyük dosyaları gönderemezsiniz!</fileSizeLimitation>
+		<fileRequestDelivered>Dosya gönderim isteğiniz iletildi, kabul edildiğinde gönderim başlayacaktır.</fileRequestDelivered>
+		<fileNotice>size bir dosya göndermek istiyor</fileNotice>
+		<fileRequestDeny>dosya gönderim isteğinizi reddetti!</fileRequestDeny>
+		<fileSendingStarted>Dosya gönderim işlemi başladı!</fileSendingStarted>
+		<fileSendingCancelled>dosya gönderim işlemini iptal etti!</fileSendingCancelled>
+		<youCancelledFileSending>Dosya gönderim işlemini iptal ettiniz!</youCancelledFileSending>
+		<youCancelledFileReceiving>Dosya alım işlemini iptal ettiniz!</youCancelledFileReceiving>
+		<fileSendingCompleted>Dosya gönderim işlemi tamamlandı.</fileSendingCompleted>
+	</messages>
+	
+	<titles>
+		<bar>WORKCUBE VIDEO KONFERANS</bar>
+		<devices>Aygıtlarım</devices>
+		<view>Salon</view>
+		<users>Katılımcılar</users>
+		<contacts>Kontaklar</contacts>
+		<chat>Sohbet</chat>
+	</titles>
+	
+	<words>
+		<channel>Herkese</channel>
+		<send>Gönder</send>
+		<cameraSettings>Kamera ayarları</cameraSettings>
+		<microphoneSettings>Mikrofon ayarları</microphoneSettings>
+		<publish>Kamera ve mikrofonumu paylaş</publish>
+		<unpublish>Kamera ve mikrofonumu paylaşmayı durdur</unpublish>
+		<startRecord>Aygıt(lar)ımı kaydetmeye başla</startRecord>
+		<stopRecord>Aygıt(lar)ımı kaydetmeyi bitir</stopRecord>
+		<archiveRecord>Aygıt kaydımı arşivle</archiveRecord>
+		<clear>Temizle</clear>
+		<nickname>Rumuz</nickname>
+		<nameAndSurname>İsim ve soyisim</nameAndSurname>
+		<join>Katıl</join>
+		<shareCamera>Kameramı paylaş</shareCamera>
+		<shareMicrophone>Mikrofonumu paylaş</shareMicrophone>
+		<exit>Güvenli çıkış</exit>
+		<refresh>Yenile</refresh>
+		<invite>Davet gönder</invite>
+		<generalChat>Konuşmaya dahil et</generalChat>
+		<privateChat>Özel sohbet</privateChat>
+		<soundAlerts>Sesli uyarılar</soundAlerts>
+		<windowActivating>Yeni mesaj alındığında pencereyi etkinleştir</windowActivating>
+		<participants>Katılımcılar</participants>
+		<sendFile>Dosya gönder</sendFile>
+		<receiveFile>Dosya al</receiveFile>
+		<accept>Kabul et</accept>
+		<deny>Reddet</deny>
+		<browse>Gözat..</browse>
+		<save>Kaydet</save>
+		<cancel>İptal</cancel>
+		<selectFile>Lütfen bir dosya seçiniz.</selectFile>
+		<fileIsSending>Dosya gönderiliyor</fileIsSending>
+	</words>
+</language>

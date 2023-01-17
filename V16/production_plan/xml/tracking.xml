@@ -1,0 +1,129 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<OBJECT_PROPERTIES>
+	<OBJECT_PROPERTY>
+		<PROPERTY>is_show_spec</PROPERTY>
+		<PROPERTY_DETAIL>Spec Göster</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>select</PROPERTY_TYPE>
+		<PROPERTY_VALUES>1,0</PROPERTY_VALUES>
+		<PROPERTY_NAMES>Evet,Hayır</PROPERTY_NAMES>
+		<PROPERTY_DEFAULT>1</PROPERTY_DEFAULT>
+		<PROPERTY_HELP>Sipariş Listeleme Satırında Spec Gösterimi İçin Kullanılır!</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+	<OBJECT_PROPERTY>
+		<PROPERTY>is_show_stock_code</PROPERTY>
+		<PROPERTY_DETAIL>Stok Kodu Göster</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>select</PROPERTY_TYPE>
+		<PROPERTY_VALUES>1,0</PROPERTY_VALUES>
+		<PROPERTY_NAMES>Evet,Hayır</PROPERTY_NAMES>
+		<PROPERTY_DEFAULT>1</PROPERTY_DEFAULT>
+		<PROPERTY_HELP>Sipariş Listeleme Satırında Stok Kodu Gösterimi İçin Kullanılır!</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+	<OBJECT_PROPERTY>
+		<PROPERTY>is_show_unit2</PROPERTY>
+		<PROPERTY_DETAIL>2.Birimi Göster</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>select</PROPERTY_TYPE>
+		<PROPERTY_VALUES>1,0</PROPERTY_VALUES>
+		<PROPERTY_NAMES>Evet,Hayır</PROPERTY_NAMES>
+		<PROPERTY_DEFAULT>0</PROPERTY_DEFAULT>
+		<PROPERTY_HELP>Sipariş Listeleme Satırında 2.Birim Gösterimi İçin Kullanılır!</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+	<OBJECT_PROPERTY>
+		<PROPERTY>is_show_work_prog</PROPERTY>
+		<PROPERTY_DETAIL>Çalışma Programı Göster</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>select</PROPERTY_TYPE>
+		<PROPERTY_VALUES>1,0</PROPERTY_VALUES>
+		<PROPERTY_NAMES>Evet,Hayır</PROPERTY_NAMES>
+		<PROPERTY_DEFAULT>1</PROPERTY_DEFAULT>
+		<PROPERTY_HELP>Sipariş Listeleme Satırında Çalışma Programı Gösterimi İçin Kullanılır!</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+	<OBJECT_PROPERTY>
+		<PROPERTY>is_show_total_order</PROPERTY>
+		<PROPERTY_DETAIL>Toplam Sipariş Miktarı Göster</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>select</PROPERTY_TYPE>
+		<PROPERTY_VALUES>1,0</PROPERTY_VALUES>
+		<PROPERTY_NAMES>Evet,Hayır</PROPERTY_NAMES>
+		<PROPERTY_DEFAULT>0</PROPERTY_DEFAULT>
+		<PROPERTY_HELP>Filtreleme Sayfasında Grupla Checkbox'ı İşaretlendiğinde İlgili Ürün İçin Toplam Sipariş Miktarını Gösterir.</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+	<OBJECT_PROPERTY>
+		<PROPERTY>is_calc_total_order</PROPERTY>
+		<PROPERTY_DETAIL>Acil İhtiyaç Miktarını Toplam Sipariş Miktarından Hesapla</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>select</PROPERTY_TYPE>
+		<PROPERTY_VALUES>1,0</PROPERTY_VALUES>
+		<PROPERTY_NAMES>Evet,Hayır</PROPERTY_NAMES>
+		<PROPERTY_DEFAULT>0</PROPERTY_DEFAULT>
+		<PROPERTY_HELP>Filtreleme Sayfasında Grupla Checkbox'ı İşaretlendiğinde İlgili Ürün İçin Acil İhtiyaç Miktarını Toplam İhtiyaç Miktarına Göre Hesaplar.</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+	<OBJECT_PROPERTY>
+		<PROPERTY>is_show_spec_no</PROPERTY>
+		<PROPERTY_DETAIL>Spec Alanında Gösterilecek Bilgi</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>select</PROPERTY_TYPE>
+		<PROPERTY_VALUES>1,0</PROPERTY_VALUES>
+		<PROPERTY_NAMES>Spec No,Spec İsmi</PROPERTY_NAMES>
+		<PROPERTY_DEFAULT>1</PROPERTY_DEFAULT>
+		<PROPERTY_HELP>Sipariş Listeleme Satırında Spec Gösterimi İçin Kullanılır!</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+	<OBJECT_PROPERTY>
+		<PROPERTY>is_time_calculation</PROPERTY>
+		<PROPERTY_DETAIL>Termin Hesabı Yapsın</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>select</PROPERTY_TYPE>
+		<PROPERTY_VALUES>1,0</PROPERTY_VALUES>
+		<PROPERTY_NAMES>Evet,Hayır</PROPERTY_NAMES>
+		<PROPERTY_DEFAULT>0</PROPERTY_DEFAULT>
+		<PROPERTY_HELP>Seçilirse üretim emri verilirken ana ürünün ve onun altında yer alan üretilen ürünler için seçilen istasyonların doluluk boşluk oranlarına bakılarak	verilen üretim miktarlarının ne kadar sürede üretileceği hesaplanarak en uygun başlangıç ve bitiş tarihleri Üretim Emirlerine yansıtılır,eğer bu seçeneği seçerseniz Üretim Emri ekleme sayfasındaki başlangıç ve bitiş tarihini girme zorunluluğunuz ortadan kalkar.Siz tarih girseniz bile bu seçenek seçili olduğundan başlangıç ve bitiş tarihi sistemin bulduğu en uygun tarih ile değiştirilir!</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+	<OBJECT_PROPERTY>
+		<PROPERTY>is_cue_theory</PROPERTY>
+		<PROPERTY_DETAIL>Kuyruk Teorisine Göre Çalış</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>select</PROPERTY_TYPE>
+		<PROPERTY_VALUES>1,0</PROPERTY_VALUES>
+		<PROPERTY_NAMES>Evet,Hayır</PROPERTY_NAMES>
+		<PROPERTY_DEFAULT>1</PROPERTY_DEFAULT>
+		<PROPERTY_HELP>Ürün Ağacındaki İstasyonda Çalışma Süresi Tanımlı ise, Siparişler Üretim Talebine ya da Direk Üretim Emrine Dönüştürüldüğünde İlgili İş İstasyonundaki Doluluk Oranına Göre Üretim Başlama Tarihlerini Ayarlar.</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+	<OBJECT_PROPERTY>
+		<PROPERTY>is_show_delivery_date</PROPERTY>
+		<PROPERTY_DETAIL>Teslim Tarihi</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>select</PROPERTY_TYPE>
+		<PROPERTY_VALUES>1,0</PROPERTY_VALUES>
+		<PROPERTY_NAMES>Satırdan gelsin,Detaydan gelsin</PROPERTY_NAMES>
+		<PROPERTY_DEFAULT>0</PROPERTY_DEFAULT>
+		<PROPERTY_HELP>İlgili Siparişin Teslim Tarihini Sipariş Detayından ya da Siparişin İlgili Satırından Gelmesini Sağlar.</PROPERTY_HELP>
+	</OBJECT_PROPERTY>	
+	<OBJECT_PROPERTY>
+		<PROPERTY>is_add_multi_demand</PROPERTY>
+		<PROPERTY_DETAIL>Miktar Kadar Talep ve Emir Oluşturulsun</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>select</PROPERTY_TYPE>
+		<PROPERTY_VALUES>1,0</PROPERTY_VALUES>
+		<PROPERTY_NAMES>Evet,Hayır</PROPERTY_NAMES>
+		<PROPERTY_DEFAULT>0</PROPERTY_DEFAULT>
+		<PROPERTY_HELP>Evet Seçilirse İlgili Sipariş Miktarı Kadar Talep ve Üretim Emri Oluşturulmasını Sağlar.</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+	<OBJECT_PROPERTY>
+		<PROPERTY>is_add_order</PROPERTY>
+		<PROPERTY_DETAIL>Üretim Emri Oluşturulabilsin</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>select</PROPERTY_TYPE>
+		<PROPERTY_VALUES>1,0</PROPERTY_VALUES>
+		<PROPERTY_NAMES>Evet,Hayır</PROPERTY_NAMES>
+		<PROPERTY_DEFAULT>1</PROPERTY_DEFAULT>
+		<PROPERTY_HELP>Evet Seçildiğinde Siparişler İçin Üretim Emri Verilmesini Sağlar.</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+	<OBJECT_PROPERTY>
+		<PROPERTY>is_add_demand</PROPERTY>
+		<PROPERTY_DETAIL>Üretim Talebi Oluşturulabilsin</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>select</PROPERTY_TYPE>
+		<PROPERTY_VALUES>1,0</PROPERTY_VALUES>
+		<PROPERTY_NAMES>Evet,Hayır</PROPERTY_NAMES>
+		<PROPERTY_DEFAULT>1</PROPERTY_DEFAULT>
+		<PROPERTY_HELP>Evet Seçildiğinde Siparişlerin Üretim Talebine Dönüştürülmesini Sağlar.</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+	<OBJECT_PROPERTY>
+		<PROPERTY>is_order_detail</PROPERTY>
+		<PROPERTY_DETAIL>Sipariş Açıklaması Gelsin</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>select</PROPERTY_TYPE>
+		<PROPERTY_VALUES>1,0</PROPERTY_VALUES>
+		<PROPERTY_NAMES>Evet,Hayır</PROPERTY_NAMES>
+		<PROPERTY_DEFAULT>1</PROPERTY_DEFAULT>
+		<PROPERTY_HELP>Evet Seçildiğinde Sipariş Detayında Girilen Açıklamanın Görünmesini Sağlar.</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+</OBJECT_PROPERTIES>

@@ -1,0 +1,14 @@
+<cfquery name="GET_LIB_ASSET_INFO" datasource="#dsn#">
+	SELECT 
+		LAR.* , 
+		LA.LIB_ASSET_NAME 
+	FROM 
+		LIBRARY_ASSET_RESERVE AS LAR, 
+		LIBRARY_ASSET AS LA 
+	WHERE 
+		LAR.LIBRARY_ASSET_ID = LA.LIB_ASSET_ID
+	AND
+		LAR.LIBRARY_RESERVE_ID = #attributes.reserve_id#
+	ORDER BY 
+		LAR.STARTDATE	
+</cfquery>

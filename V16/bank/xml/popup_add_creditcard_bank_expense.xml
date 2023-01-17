@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<OBJECT_PROPERTIES>
+	<OBJECT_PROPERTY>
+		<PROPERTY>x_select_branch</PROPERTY>
+		<PROPERTY_DETAIL>Şube Seçilebilsin</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>select</PROPERTY_TYPE>
+		<PROPERTY_VALUES>1,0</PROPERTY_VALUES>
+		<PROPERTY_NAMES>Evet,Hayır</PROPERTY_NAMES>
+		<PROPERTY_DEFAULT>0</PROPERTY_DEFAULT>
+		<PROPERTY_HELP>Şube Seçilebilsin:Evet ise şube filtresinin görülmesine ve seçim yapılabilmesine izin verir.</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+	<OBJECT_PROPERTY>
+		<PROPERTY>x_select_type_info</PROPERTY>
+		<PROPERTY_DETAIL>Tahsilat\Ödeme Tipi Seçilebilsin</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>select</PROPERTY_TYPE>
+		<PROPERTY_VALUES>1,0,2</PROPERTY_VALUES>
+		<PROPERTY_NAMES>Evet,Hayır,Zorunlu</PROPERTY_NAMES>
+		<PROPERTY_DEFAULT>0</PROPERTY_DEFAULT>
+		<PROPERTY_HELP>Tahsilat\Ödeme Tipi Seçilebilsin:Evet ise tahsilat tipi filtresinin görülmesine ve seçim yapılabilmesine izin verir.</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+	<OBJECT_PROPERTY>
+		<PROPERTY>x_required_project</PROPERTY>
+		<PROPERTY_DETAIL>Proje Seçimi Zorunlu Olsun</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>select</PROPERTY_TYPE>
+		<PROPERTY_VALUES>1,0</PROPERTY_VALUES>
+		<PROPERTY_NAMES>Evet,Hayır</PROPERTY_NAMES>
+		<PROPERTY_DEFAULT>0</PROPERTY_DEFAULT>
+		<PROPERTY_HELP>Proje Seçimi Zorunlu Olsun:Evet ise belgeyi kaydedebilmek için proje seçimini zorunlu kılar.</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+</OBJECT_PROPERTIES>

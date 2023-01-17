@@ -1,0 +1,15 @@
+<cfquery name="GET_SERVICE_PRIORITY" datasource="#dsn#">
+	SELECT 
+		SETUP_PRIORITY.PRIORITY 
+	FROM 
+		SETUP_PRIORITY,
+		#dsn3_alias#.SERVICE AS SERVICE
+	WHERE
+		SETUP_PRIORITY.PRIORITY_ID=SERVICE.PRIORITY
+	<cfif isDefined("URL.ID")>
+		AND SERVICE.SERVICE_ID=#URL.ID#
+		<cfelse>
+		AND SERVICE.SERVICE_ID=#SERVICE_ID#
+		</cfif>
+</cfquery>
+

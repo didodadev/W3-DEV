@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Protein | Soft</title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="icon/fontawesome-free-5.13.0-web/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+</head>
+
+
+<header class="site_head">
+    <div class="top"></div> 
+    <div class="nav">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                     <div class="menu">
+                        <a class="line" href="javascript://">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </a>
+                        <!-- Menu -->
+                        <ul>
+                            <li><a href="index.html">Anasayfa</a></li>
+                            <li><a href="product.html">Ürünler</a></li>
+                            <li><a href="product-detail.html">Ürün Detay</a></li>
+                            <li class="active"><a href="payment.html">Ödeme</a></li>
+                        </ul>
+                    </div> 
+                </div>
+                <div class="col">
+                    <div class="icon_menu">
+                        <form>
+                            <input type="search" placeholder="Site içi arama">
+                        </form>
+                        <ul>
+                            <li><a href=""><i class="fas fa-shopping-basket"></i>
+                                <span class="badge">1</span>
+                            </a></li>
+                            <li><a href=""><i class="fas fa-user"></i></a></li>
+                            <li><a href=""><i class="fas fa-heart"></i>
+                                <span class="badge">2</span>
+                            </a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<div class="container">
+    <div class="row">
+        <div class="page_title">
+            <h1>Siparişlerim</h1>
+        </div>
+    </div>
+    <div class="row">
+        <ul class="page_breadcrump">
+            <li><a href="javascript://">Anasayfa</a></li>
+            <li class="active"><a href="javascript://">Sepet</a></li>
+        </ul>
+    </div>
+</div> 
+
+<section>
+    <div class="container">
+        <div class="col-12">
+            <div class="row">
+                <div class="payment_timeline">
+                    <ul>
+                        <li class="active"><a href="javascript://" id="sepet"><span class="counter">1</span>Sepet</a></li>
+                        <li><a href="javascript://" id="uyelik_bilgileri"><span class="counter">2</span>Üyelik Bilgileri</a></li>
+                        <li><a href="javascript://" id="teslimat_bilgileri"><span class="counter">3</span>Teslimat Bilgileri</a></li>
+                        <li><a href="javascript://" id="odeme_bilgileri"><span class="counter">4</span>Ödeme Bilgileri</a></li>
+                        <li><a href="javascript://" id="siparis_tamamla"><span class="counter">5</span>Sipariş Tamamla</a></li>
+                    </ul>
+                </div>
+            </div>
+           <div class="row">
+                <div class="payment_content">
+                    <div class="payment_item active" id="sepet">
+                        <div class="payment_title">
+                            Seçtiğiniz Ürünler
+                        </div>
+                        <div class="row">
+                            <div class="col-6">
+                                <div class="product_item payment_product">
+                                    <div class="product_item_img">
+                                        <img src="image/box2.png">
+                                    </div>
+                                    <div class="product_item_text">
+                                        <p>Wooden Coffee Mug</p>
+                                        <span>
+                                            <i>$45.00</i>
+                                            <a href="javascript://" class="btn_del">KALDIR</a>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="product_item payment_product">
+                                    <div class="product_item_img">
+                                        <img src="image/box2.png">
+                                    </div>
+                                    <div class="product_item_text">
+                                        <p>Wooden Coffee Mug</p>
+                                        <span>
+                                            <i>$45.00</i>
+                                            <a href="javascript://" class="btn_del">KALDIR</a>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="payment_item" id="uyelik_bilgileri">
+                        <div class="payment_title">
+                            Üyelik Bilgileri
+                        </div>
+                        <form action="#" method="">
+                            <div class="form-group col-6">
+                                <label>Ad <span class="req" title="Zorunlu Alan">*</span></label>
+                                <input type="text" required>
+                            </div>
+                            <div class="form-group col-6">
+                                <label>Soyad <span class="req" title="Zorunlu Alan">*</span></label>
+                                <input type="text" required>
+                            </div>
+                            <div class="form-group col-6">
+                                <label>TC Kimlik No</label>
+                                <input type="text">
+                            </div>
+                            <div class="form-group col-6">
+                                <label>Dogum Tarihi</label>
+                                <input type="date">
+                            </div>
+                            <div class="form-group col-6">
+                                <label>Telefon <span class="req" title="Zorunlu Alan">*</span></label>
+                                <input type="tel" required>
+                            </div>
+                            <div class="form-group col-6">
+                                <label>Mail</label>
+                                <input type="text">
+                            </div>
+                        </form>
+                    </div>
+                    <div class="payment_item" id="teslimat_bilgileri">
+                        <div class="payment_title">
+                            Teslimat Bilgileri
+                        </div>
+                        <form action="#" method="">
+                            <div class="form-group col-6">
+                                <label>Ad(Teslim Edilecek) <span class="req" title="Zorunlu Alan">*</span></label>
+                                <input type="text" required>
+                            </div>
+                            <div class="form-group col-6">
+                                <label>Soyad(Teslim Edilecek) <span class="req" title="Zorunlu Alan">*</span></label>
+                                <input type="text" required>
+                            </div>
+                            <div class="form-group col-6">
+                                <label>İl <span class="req" title="Zorunlu Alan">*</span></label>
+                                <input type="text">
+                            </div>
+                            <div class="form-group col-6">
+                                <label>İlçe <span class="req" title="Zorunlu Alan">*</span></label>
+                                <input type="text">
+                            </div>
+                            <div class="form-group col-12">
+                                <label>Adres <span class="req" title="Zorunlu Alan">*</span></label>
+                                <textarea></textarea>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="payment_item" id="odeme_bilgileri">
+                        <div class="payment_title">
+                            Ödeme Bilgileri
+                        </div>
+                        <form action="#" method="">
+                            <div class="form-group col-6">
+                                <label>Kredi Kartı Üzerindeki İsim <span class="req" title="Zorunlu Alan">*</span></label>
+                                <input type="text">
+                            </div>
+                            <div class="form-group col-6">
+                                <label>Kredi Kartı Numarası <span class="req" title="Zorunlu Alan">*</span></label>
+                                <input type="text" required>
+                            </div>
+                            <div class="form-group col-6">
+                                <label>Kredi Kartı Numarası <span class="req" title="Zorunlu Alan">*</span></label>
+                                <input type="number" required>
+                            </div>
+                            <div class="form-group col-6">
+                                <label>Kredi Kartı Son Kullanma Tarihi <span class="req" title="Zorunlu Alan">*</span></label>
+                                <input type="number">
+                            </div>
+                        </form>
+                    </div>
+                    <div class="payment_item" id="odeme_bilgileri">
+                        <div class="payment_title">
+                            Siparişi Tamamla - Önizleme
+                        </div>
+                        <div class="payment_item_seperator">
+                            <h1>Üyelik Bilgileri</h1>
+                            <div class="row">
+                                <div class="col-3">
+                                    <span>Ad</span>
+                                    <i>Lorem İpsum</i>
+                                </div>
+                                <div class="col-3">
+                                    <span>Soyad</span>
+                                    <i>Lorem İpsum</i>
+                                </div>
+                                <div class="col-3">
+                                    <span>TC Kimlik No</span>
+                                    <i>Lorem İpsum</i>
+                                </div>
+                                <div class="col-3">
+                                    <span>Doğum Tarihi</span>
+                                    <i>Lorem İpsum</i>
+                                </div>
+                                <div class="col-3">
+                                    <span>Telefon</span>
+                                    <i>Lorem İpsum</i>
+                                </div>
+                                <div class="col-3">
+                                    <span>Mail</span>
+                                    <i>Lorem İpsum</i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="payment_item_seperator">
+                            <h1>Teslimat Bilgileri</h1>
+                            <div class="row">
+                                <div class="col-3">
+                                    <span>Ad(Teslim Edilecek)</span>
+                                    <i>Lorem İpsum</i>
+                                </div>
+                                <div class="col-3">
+                                    <span>Soyad(Teslim Edilecek)</span>
+                                    <i>Lorem İpsum</i>
+                                </div>
+                                <div class="col-3">
+                                    <span>İl</span>
+                                    <i>Lorem İpsum</i>
+                                </div>
+                                <div class="col-3">
+                                    <span>İlçe</span>
+                                    <i>Lorem İpsum</i>
+                                </div>
+                                <div class="col-3">
+                                    <span>Adres</span>
+                                    <i>Lorem İpsum</i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="payment_item_seperator">
+                            <h1>Ödeme Bilgileri</h1>
+                            <div class="row">
+                                <div class="col-3">
+                                    <span>Kredi Kartı Üzerindeki İsim</span>
+                                    <i>Lorem İpsum</i>
+                                </div>
+                                <div class="col-3">
+                                    <span>Kredi Kartı Numarası</span>
+                                    <i>Lorem İpsum</i>
+                                </div>
+                                <div class="col-3">
+                                    <span>Kredi Kartı Numarası</span>
+                                    <i>Lorem İpsum</i>
+                                </div>
+                                <div class="col-3">
+                                    <span>Kredi Kartı Son Kullanma Tarihi</span>
+                                    <i>Lorem İpsum</i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <div class="timeline_btn">
+                        <a href="javascript://" class=" btn_prev">Geri Dön</a>
+                        <a href="javascript://" class="btn_next">Sonraki</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <ul class="footer_menu">
+                    <li><a href="javascript://">Home</a></li>
+                    <li><a href="javascript://">Shop</a></li>
+                    <li><a href="javascript://">Accesories</a></li>
+                    <li><a href="javascript://">LookBook</a></li>
+                    <li><a href="javascript://">Blog</a></li>
+                </ul>
+            </div>
+            <div class="col">
+                <ul class="footer_menu">
+                    <li><a href="javascript://">Home</a></li>
+                    <li><a href="javascript://">Shop</a></li>
+                    <li><a href="javascript://">Accesories</a></li>
+                    <li><a href="javascript://">LookBook</a></li>
+                    <li><a href="javascript://">Blog</a></li>
+                </ul>
+            </div>
+            <div class="col">
+                <ul class="footer_menu">
+                    <li><a href="javascript://">Home</a></li>
+                    <li><a href="javascript://">Shop</a></li>
+                    <li><a href="javascript://">Accesories</a></li>
+                    <li><a href="javascript://">LookBook</a></li>
+                    <li><a href="javascript://">Blog</a></li>
+                </ul>
+            </div>
+            <div class="col copyright">
+                <ul class="social">
+                    <li class="facebook"><a href="javascript://" title="facebook" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+                    <li class="linkedin"><a href="javascript://" title="linkedin" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
+                    <li class="twitter"><a href="javascript://" title="twitter" target="_blank"><i class="fab fa-twitter"></i></a></li>
+                    <li class="tumblr"><a href="javascript://" title="tumblr" target="_blank"><i class="fab fa-tumblr"></i></a></li>
+                    <li class="pinterest"><a href="javascript://" title="pinterest" target="_blank"><i class="fab fa-pinterest-p"></i></a></li>
+                </ul>
+                <p>Workcube alt yapısı ile hazırlanmıştır.</p>
+            </div>
+        </div>
+    </div>
+</footer>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+<script src="js/index.js"></script>
+<script>
+    $(function(){
+        if($('.payment_content .active').index() == 0){
+            $('.btn_prev').hide();
+        }
+        $('.btn_next').click(function(){
+            var active = $('.payment_content .active');
+            $('.payment_timeline ul li').removeClass("active");
+            if(active.index()+1 < 4){
+                $('.btn_prev').show();
+                $('.payment_content > .active').removeClass("active");
+                $('.payment_timeline ul li').eq(active.index()+1).addClass("active");
+                $('.payment_content > .payment_item').eq(active.index()+1).addClass("active");
+            }
+            else if(active.index()+1 == 4){
+                $('.btn_next').hide();
+                $('.payment_content > .active').removeClass("active");
+                $('.payment_timeline ul li').eq(active.index()+1).addClass("active");
+                $('.payment_content > .payment_item').eq(active.index()+1).addClass("active");
+                $('.timeline_btn').append("<a href='' class='btn_pay'>Ödeme Yap</a>");
+            }
+        })
+        $('.btn_prev').click(function(){
+            var active = $('.payment_content .active');
+            $('.payment_timeline ul li').removeClass("active");
+            if(active.index()-1 > 0){
+                $('.btn_next').show();
+                $('.btn_pay').remove();
+                $('.payment_content > .active').removeClass("active");
+                $('.payment_timeline ul li').eq(active.index()-1).addClass("active");
+                $('.payment_content > .payment_item').eq(active.index()-1).addClass("active");
+            }
+            else if(active.index()-1 == 0){
+                $('.btn_prev').hide();
+                $('.btn_next').show();
+                $('.payment_content > .active').removeClass("active");
+                $('.payment_timeline ul li').eq(active.index()-1).addClass("active");
+                $('.payment_content > .payment_item').eq(active.index()-1).addClass("active");
+            }
+        })
+        
+    })
+</script>
+</body>
+</html>

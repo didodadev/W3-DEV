@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SETUP_SITE>
+	<SETUPSITE>
+		<LINK_NAME>Kasa Toplu Ödeme XML Ayarları</LINK_NAME> 
+		<LINK_FILE>cash.add_collacted_payment,cash.upd_collacted_payment</LINK_FILE>
+		<LINK_DETAIL>Kasa Toplu Ödeme XML Ayarları</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Toplu Tahsilat XML Ayarları</LINK_NAME> 
+		<LINK_FILE>cash.add_collacted_revenue,cash.upd_collacted_revenue</LINK_FILE>
+		<LINK_DETAIL>Kasa Tahsilat ve Toplu Tahsilat XML Ayarları</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Kasa Virman Ayarları</LINK_NAME> 
+		<LINK_FILE>cash.add_cash_to_cash,cash.form_add_cash_to_cash,cash.form_upd_cash_to_cash,cash.popup_upd_cash_to_cash</LINK_FILE>
+		<LINK_DETAIL>Kasa Virman Ayarları</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Kasa Kur Değerleme XML Setup</LINK_NAME> 
+		<LINK_FILE>cash.form_add_cash_rate_valuation</LINK_FILE>
+		<LINK_DETAIL>Kasa Kur Değerleme XML Setup</LINK_DETAIL>
+	</SETUPSITE>
+</SETUP_SITE>

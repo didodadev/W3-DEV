@@ -1,0 +1,325 @@
+@import url(windows-10/styles.min.css);
+@import url(font-awesome/4.7.0/css/font-awesome.min.css);
+ [class*="icon-"] {
+ font-family: FontAwesome;
+ vertical-align: middle;
+ font-style: normal;
+ font-size: 15px;
+}
+.icon-CMS:before {
+	content: "\f0f6";
+}
+.icon-Intranet:before {
+	content: "\f135";
+}
+.icon-LMS:before {
+	content: "\f19d";
+}
+.icon-MLM:before {
+	content: "\f0e8";
+}
+.icon-POS:before {
+	content: "\f09d";
+}
+.icon-SUBO:before {
+	content: "\f0c0";
+}
+.icon-print:before {
+	content: "\f02f";
+}
+.icon-add:before {
+	content: "\f067";
+}
+.icon-copy:before {
+	content: "\f0c5";
+}
+.icon-update:before {
+	content: "\f079";
+}
+.icon-branch:before {
+	content: "\f0e8";
+}
+.icon-chart:before {
+	content: "\f080";
+}
+.icon-remove:before {
+	content: "\f00d";
+}
+.icon-minus:before {
+	content: "\f068";
+}
+.icon-download:before {
+	content: "\f019";
+}
+.icon-trash-o:before {
+	content: "\f014";
+}
+.icon-undo-o:before {
+	content: "\f12e";
+}
+.icon-add-on:before {
+	content: "\f12e";
+}
+.icon-file-text-o:before {
+	content: "\f0f6";
+}
+.icon-pencil-square-o:before {
+	content: "\f044";
+}
+.icon-circle:before {
+	content: "\f111";
+}
+.icon-exchange:before {
+	content: "\f0ec";
+}
+.icon-pluss:before {
+	content: "\f067";
+}
+.icon-phone:before {
+	content: "\f10b";
+}
+.icon-print:before {
+	content: "\f02f";
+}
+.icon-chevron-right:before {
+	content: "\f054";
+}
+.icon-chevron-left:before {
+	content: "\f053";
+}
+.icon-double-right:before {
+	content: "\f101";
+}
+.icon-double-left:before {
+	content: "\f100";
+}
+.icon-forward:before, .icon-next:before {
+	content: "\f04e";
+}
+.icon-fast-forward:before, .icon-last:before {
+	content: "\f050";
+}
+.icon-backward:before, .icon-prev:before {
+	content: "\f04a";
+}
+.icon-fast-backward:before, .icon-first:before {
+	content: "\f049";
+}
+.icon-ellipsis:before {
+	content: "\f142";
+	cursor: pointer;
+}
+.icon-calendar-o:before {
+	content: "\f133";
+	cursor:pointer;
+}
+.icon-file:before {
+	content: "\f016";
+}
+.icon-envelope-o:before {
+	content: "\f003";
+}
+.icon-save:before {
+	/* fa-floppy-o*/
+	
+	content: "\f0c7";
+}
+.icon-file-pdf-o:before {
+	content: "\f1c1";
+}
+.icon-file-video-o:before {
+	content: "\f1c8";
+}
+.icon-file-word-o:before {
+	content: "\f1c2";
+}
+.icon-file-excel-o:before {
+	content: "\f1c3";
+}
+.icon-file-powerpoint-o:before {
+	content: "\f1c4";
+}
+.icon-down:before {
+	content: "\f078";
+}
+.icon-rss:before {
+	content: "\f09e";
+}
+.icon-time:before {
+	content: "\f017";
+}
+.icon-archive:before {
+	content: "\f187";
+}
+.icon-edge:before {
+	content: "\f282";
+}
+.icon-plus-square:before {
+	content: "\f0fe";
+}
+.icon-align-justify:before {
+	content: "\f039";
+}
+.icon-align-right:before {
+	content: "\f038";
+}
+.icon-align-center:before {
+	content: "\f037";
+}
+.icon-align-left:before {
+	content:"\f036";
+}
+.icon-cogs:before {
+	content:"\f085";
+}
+.icon-question:before {
+	content:"\f128";
+}
+
+.icon-bold:before {
+	content: "\f032";
+}
+.icon-italic:before {
+	content: "\f033";
+}
+.icon-underline:before {
+	content: "\f0cd";
+}
+.icon-cog:before {
+	content: "\f013";
+}
+.icon-eye-slash:before {
+	content :"\f070";	
+}
+.icon-asterisk:before {
+	content:"\f069";	
+}	
+.icon-lock:before {
+	content:"\f023";
+}
+.icon-book:before {
+	content : "\f02d";
+}
+.icon-money:before {
+	content : "\f0d6";
+}
+.icon-level-down:before {
+	content : "\f149";
+}
+.icon-level-up:before {
+	content : "\f148";
+}
+.icon-level-up:before {
+	content : "\f0f6";
+}
+.icon-refresh:before {
+	content : "\f021";
+}
+
+.icon-angle-down:before {
+	content : "\f107";
+}  
+.icon-angle-up:before {
+	content : "\f106";
+}
+.icon-angle-right:before {
+	content : "\f105";
+}  
+.icon-warning:before {
+	content : "\f071";
+}
+  
+.icon-check:before {
+	content : "\f00c";
+}
+  
+.icon-info-circle:before {
+	content : "\f05a";
+}
+.icon-frown-o:before {
+	content : "\f119";
+}
+  
+.icon-passive, icon-passive:hover {
+	color:#CCC7C7 !important;
+}
+.icon-green {
+	color:#9E9D24 !important;
+}
+.icon-red {
+	color:#C62828 !important;
+}
+.icon-blue {
+	color:#1565C0 !important;
+}
+.icon-purpler {
+	color:#6A1B9A !important;
+}
+.icon-yellow {
+	color:#FFD600 !important;
+}
+.color-darkCyan {
+	color:#4DB6AC !important
+}
+.icon-search:before{
+	content : "\f002";	
+}
+.icon-list-ul:before{
+	content : "\f0ca";	
+}
+.icon-filter:before{
+	content : "\f0b0";	
+}
+.icon-language:before{
+	content : "\f1ab";	
+}
+.icon-globe:before{
+	content : "\f0ac";	
+}
+.icon-industry:before{
+	content : "\f275";	
+}
+.icon-bars:before{
+	content : "\f0c9";	
+}
+.icon-sort:before{
+	content : "\f0dc";	
+}
+.icon-step-backward:before{
+	content : "\f048";	
+}
+.icon-caret-left:before{
+	content : "\f0d9";	
+}
+.icon-caret-right:before{
+	content : "\f0da";	
+}
+.icon-step-forward:before{
+	content : "\f051";	
+}
+.icon-paper-plane-o:before{
+	content : "\f1d9";	
+}
+
+.icon-link:before{
+	content : "\f0c1";	
+}
+
+.icon-settings:before{
+	content : "\f013";	
+}
+
+.icon-print2:before { 
+	content: "\f02f"; 
+} 
+
+.icon-file-text:before { 
+	content: "\f15c"; 
+}
+
+.icon-times:before { 
+	content: "\f00d"; 
+} 
+.icon-print2 { 
+	color: #4c87b9 !important; 
+}

@@ -1,0 +1,68 @@
+{
+    "cf_box" :
+        "#### [Ayrıntılı Bilgi İçin: cf_box wiki](https://wiki.workcube.com/help/9813)\n\r**Örnek Kullanım:**\n\r\t<cf_box title=\"Başlık\" resize=\"\"> ---Content--- <\/cf_box>\n\r**Kullanım Amacı:**\n\rcf-box sayfaların widget-kurulara bölünmesi ve böylelikle daha etki kullanılmasının ve daha anlaşılır olmasını sağlar. Ayrıca istendiğinde asenkron olarak objelerin sayfa içine yüklenmesini sağlar. cf_box böylelikle hem görünüm hem de yükleme fonksiyonu icra eder.",
+    "cf_box_elements" :
+        "**Örnek Kullanım:**\n\r\t<cf_box_search more=\"0\"> ---Content--- <\/cf_box_search>\n\r**Kullanım Amacı:**\n\rCustom tagin amacı css standartlarına uygun form elementleri oluşturmaktır. Genellikle ekleme ve güncelleme sayfalarında kullanılır. Sayfada form varsa kullanımı zorunludur. İki tür form var; yatay ve dikey. Defaultu yatay. Dikey form tercih edilirse custom tage vertical=\"1\" eklenir.",
+    "cf_box_search" :
+        "#### [Ayrıntılı Bilgi İçin: cf_box_search wiki](https://wiki.workcube.com/help/9820)\n\r**Örnek Kullanım:**\n\r\t<cf_box_search more=\"0\"> ---Content--- <\/cf_box_search>\n\r**Kullanım Amacı:**\n\rcf_box_search listeleme ekranlarında filtreleme için eklediğimiz elementleri kapsayan, flex yapıya sahip bir tagdir. Kullanım amacı ise bize ekstra css kodu yazdırmadan kullanışlı ve responsive olmasıdır. cf_box içerisinde ve default olarak cf_box_search_detail ile kullanılır.\n\r**Not:** Tag içerisinde kullandığımız search butonun, button_type değeri 4 olmalıdır.",
+    "cf_box_search_detail" :
+        "#### [Ayrıntılı Bilgi İçin: cf_box_search wiki](https://wiki.workcube.com/help/9820)\n\r**Örnek Kullanım:**\n\r\t<cf_box_search_detail> ---Content--- <\/cf_box_search_detail>\n\r**Kullanım Amacı:**\n\rcf_box_search ile, cf_box içerisinde ve default olarak kullanılır.",
+    "cf_wrk_search_button" :
+        "**Örnek Kullanım:**\n\r\t<cf_wrk_search_button search_function='kontrol()'>\n\r**Kullanım Amacı:**\n\rListelerdeki arama butonuna bir kere basılmasını sağlar, cfform tagi arasında her yerde kullanılmalıdır.",
+    "cf_seperator" :
+        "**Örnek Kullanım:**\n\r\t<cf_seperator title=\"\" id=\"\">\n\r**Kullanım Amacı:**\n\rAdından da anlaşılacağı üzere ayırıcı olarak kullanılır. Sayfalarda bazı bölümleri ayırmak isteyebilir ve açıp kapatmak isteyebilirsin. Custom tag'e attributes olarak title ve id verilmeli (`Id`: Açıp kapatmak istenilen bölümün idsi).",
+    "cf_tab" : 
+        "**Örnek Kullanım:**\n\r\t<cf_tab slider=\"1\"> ---Content--- <\/cf_tab>\n\r**Kullanım Amacı:**\n\rTab'ın içinde gönderilen boxları slayt şeklinde ya da normal sayfa şeklinde gösterilmesini sağlar.",
+    "cf_flat_list" :
+        "**Örnek Kullanım:**\n\r\t<cf_flat_list>\n\r**Kullanım Amacı:**\n\rTable yerine kullanılan tagdir ve amaç css standardı. Tablonun kolonları arasında çizgi yoktur. Genellikle kolon ve sayısal değerlerin az olduğu tablolarda kullanılır.",
+    "cf_grid_list" :
+        "**Örnek Kullanım:**\n\r\t<cf_grid_list>\n\r**Kullanım Amacı:**\n\rTable yerine kullanılan tagdir ve amaç css standardı. Tablonun kolonları arasında çizgi vardır. Genellikle kolon ve sayısal değerlerin fazla olduğu veya inputların olduğu tablolarda kullanılır.",
+    "cf_paging" :
+        "**Örnek Kullanım:**\n\r\t<cf_paging page=\"#attributes.page#\">\n\r**Kullanım Amacı:**\n\rListeleme sayfalarında kullanılır. Verilen maxrows ve kayıt sayısına göre önceki, sonraki, ilk ve son sayfalara gider ve tablonun font size'ını azaltma ve arttırmayı sağlar.",
+    "cf_loader" :
+        "**Örnek Kullanım:**\n\r\t<cf_loader data_type='' append_element='' href='' totalCount='' startrow='' maxrows='' win_scroll=''>\n\r**Kullanım Amacı:**\n\rBu customtag sayfalama işlemlerini scroll ile aşağı indikçe ya da sayfa sonundaki butona tıklandıkça yapmak amacıyla yazılmıştır.",
+    "cf_box_footer" :
+        "**Örnek Kullanım:**\n\r\t<cf_box_footer> ---Content--- <\/cf_box_footer>\n\r**Kullanım Amacı:**\n\rButonların formun altına css standartlarına uygun biçimde gelmesi için oluşturuldu. Box_footer içine genellikle save, upd, delete butonlarını koyarız. Aynı zamanda güncelleyen ve kaydeden bilgilerini getirdiğimiz cf_record_info custom tag'ini koyabiliriz.",
+    "cf_record_info" :
+        "**Örnek Kullanım:**\n\r\t<cf_record_info query_name=\"get_notice\">\n\r**Kullanım Amacı:**\n\rHemen hemen birçok sayfada olan kaydeden ve güncelleyen bilgilerinin tek satır yazılarak kullanım kolaylığı sağlanması için yazıldı.",
+    "cf_workcube_buttons" :
+        "**Örnek Kullanım:**\n\r\t<cf_workcube_buttons is_upd=\"1\" is_delete=\"0\" add_function=\"kontrol()\">\n\r**Kullanım Amacı:**\n\rKullanım amacının en önemli sebeplerinden biri güvenlik açığı olmamasıdır ve butonlar için kullanımı zorunludur. Kaydet, güncelle, sil butonları ve extra butonları gerekli attributeslerle sağlar. Default değeri kaydettir.",
+    "cf_xml_page_edit" :
+        "**Örnek Kullanım:**\n\r\t<cf_xml_page_edit fuseact=\"prod.tracking\">\n\r**Kullanım Amacı:**\n\rSayfa için oluşturulmuş XML'den verileri sayfa içinde tanımlı değişkenler haline getiriyor.\n\rAyrıca xml_str diye bir string tanımlanarak, ajax kullanılan, yönlendirme yapılan yada listeleme sayfalarına taşımak üzere XML'deki tüm değişkenleri değerleri ile döndüren bir değişken tanımlanıyor.\n\r**İstisna Durumlar:**\n\rÖrneğin bir sayfanın XML ayarlarına başka bir sayfada ihtiyaç duyarsanız, ya da bir sayfa 4-5 ayrı yerde farklı fuseactionlar ile çağırlıyorsa; `<cf_xml_page_edit fuseact=\"prod.tracking\">` kullanım bu şekilde oluyor. Yani bu kod hangi sayfada olursanız olun prod.tracking sayfası için girilmiş olan xml değişkenlerini sayfanızda tanımlı hale getirir.",
+    "cf_date" :
+        "**Örnek Kullanım:**\n\r\t<cf_date tarih=\"attributes.startdate\">\n\r**Kullanım Amacı:**\n\rVerilen tarih değişkeninin değerini \"31/12/2003 gibi\" ODBC tarih formatına çevirir.",
+    "cf_wrk_date_image" :
+        "**Örnek Kullanım:**\n\r\t<cf_wrk_date_image date_field=\"date2\">\n\r**Kullanım Amacı:**\n\rTakvim eklemek amacıyla kullanılır.",
+    "cf_workcube_process" :
+        "#### [Ayrıntılı Bilgi İçin: cf_workcube_process wiki](https://wiki.workcube.com/help/9821)\n\r**Örnek Kullanım:**\n\r\t<cf_workcube_process is_upd='0' process_cat_width='188' is_detail='0'>\n\r**Kullanım Amacı:**\n\rSüreç barındıran sayfalarda Kontrol Paneli > BPM içerisinde oluşturulan süreç ve aşamalarda yapılan ayarlara göre işlemler yapmanızı sağlar. 2 türlü kullanılabilir.\n\r1. **Form sayfalarında**\n\r\t* Süreç aşamalarında yapılan yetki düzenlemelerine göre aşamaların sadece yetklili kişilere gösterilmesini sağlar.\n\r\t* Yetkili olunan ve aksiyon istenilen aşamalarda, yetkili kişinin belge içerisinden onay, red, iptal vb. aksiyonları verebilmesini sağlar.\n\r\t* Özellikle liste sayfalarında süreç aşamasının sırasına göre renklendirilmesini sağlar. (1. aşama yeşil, 2. aşama turuncu vs.)\n\r\t* Süreç ve aşamalarda tanımladığınız display file dosyalarını çalıştırır ve arayüzde cfml ya da javascript kodu çalıştırmanızı sağlar.\n\r2. **Action (query[ cfm, cfc ]) dosyalarında**\n\r\t* Süreç ve aşamalarda yaptığınız ayarlara göre workflow - chatflow kaydı oluşturmanızı sağlar.\n\r\t* Email ve SMS göndermenizi sağlar.\n\r\t* Süreç ve aşamalarda tanımladığınız action dosyalarını çalıştırarak query dosyalarında olaylar cfml komutları çalıştırmanızı sağlar.",
+    "cf_workcube_file_action" :
+        "**Örnek Kullanım:**\n\r\t<cf_workcube_file_action pdf='1' mail='1' doc='1' print='1'>\n\r**Kullanım Amacı:**\n\rStandart pdf, belge, yazdırma, faks ve posta işlemleri.",
+    "cf_workcube_process_cat" :
+        "**Örnek Kullanım:**\n\r\t<cf_workcube_process_cat onclick_function=\"check_process_is_sale();\" process_cat=\"#get_sale_det.process_cat#\">\n\r**Kullanım Amacı:**\n\rİşlem Kategorileri.",
+    "cf_papers" :
+        "**Örnek Kullanım:**\n\r\t<cf_papers paper_type=\"order\">\n\r**Kullanım Amacı:**\n\rOtomatik olarak oluşturulan belge numarasını geri döndürür ve kontrolünü yapar.",
+    "cf_get_lang" :
+        "#### [Ayrıntılı Bilgi İçin: Dil Custom Tagleri wiki](https://wiki.workcube.com/help/10794)\n\r**Örnek Kullanım:**\n\r\t<cf_get_lang dictionary_id=\"43974.Sözlükteki Kelime-Tümce\">\n\r**Kullanım Amacı:**\n\rWorkcube arayüzdeki tüm kelimeler ve tümceler sözlükle çalışır. Sözlük arayüzü sadece dinamik hale getirmez. Aynı zamanda çok dilli bir ve global bir yapı oluşturur.  Kelimeleri/tümceler öncelikle sözlüğe kaydedilir. Ardından arayüzdeki tüm kelimeler dil customtagleri ile doğrudan cache bellekten çağrılarak performans sağlanır.",
+    "cf_add_log" :
+        "**Örnek Kullanım:**\n\r\t<cf_add_log log_type=\"-1\" action_id=\"#attributes.id#\" action_name=\"#attributes.name#\">\n\r**Kullanım Amacı:**\n\rEkleme, güncelleme ve silme işlemlerine ait bilgileri veri tabanına kaydeder.\n\r* **log_type:** Yapılan işlemin tipi Ekleme=1 Güncelleme=0 Silme=-1 - `required`\n\r* **action_id:** Üzerinde işlem yapılan kaydın id'si - `required`\n\r* **action_name:** Üzerinde işlem yapılan kaydın adı veya açıklaması - `required`\n\r* **process_type:** Varsa işleme ait işlem kategorisi\n\r* **process_stage:** Varsa İşleme Ait Aşama\n\r* **paper_no:** Varsa İşleme Ait İşlem Numarası\n\r* **data_source:** Varsa dsn tanimi yapilir. (transaction bloglari icin gerekli olabiliyor.)",
+    "cf_wrk_grid" :
+        "**Örnek Kullanım:**\n\r\t<cf_wrk_grid search_header = \"#getLang('settings', 952)#\" table_name=\"SETUP_SUBSCRIPTION_RELATION\" sort_column=\"SUBSCRIPTION_RELATION\" u_id=\"SUBSCRIPTION_RELATION_ID\" datasource=\"#dsn#\" search_areas = \"SUBSCRIPTION_RELATION,DETAIL\" dictionary_count=\"2\">\n\r**Kullanım Amacı:**\n\r....",
+    "cf_wrk_grid_column" :
+        "**Örnek Kullanım:**\n\r\t<cf_wrk_grid_column name=\"SUBSCRIPTION_RELATION_ID\" header=\"ID\" display=\"no\" select=\"yes\"/>\n\r**Kullanım Amacı:**\n\r....",
+    "cf_language_info" :
+        "**Örnek Kullanım:**\n\r\t<cf_language_info table_name=\"PROCESS_TYPE_ROWS\" column_name=\"STAGE\" column_id_value=\"#attributes.process_row_id#\" maxlength=\"500\" datasource=\"#dsn#\" column_id=\"PROCESS_ROW_ID\" control_type=\"0\">\n\r**Kullanım Amacı:**\n\r....",
+    "cf_workcube_to_cc" :
+        "**Örnek Kullanım:**\n\r\t<cf_workcube_to_cc is_update=\"1\" cc_dsp_name=\"#txt_2#\" form_name=\"upd_cont\" str_list_param=\"2,3\" action_dsn=\"#DSN3#\" str_action_names=\"COMPANY_PARTNER AS CC_PAR,CONSUMERS AS CC_CON\" action_table=\"RELATED_CONTRACT\" action_id_name=\"CONTRACT_ID\" action_id=\"#attributes.contract_id#\" data_type=\"1\" str_alias_names=\"\">\n\r**Kullanım Amacı:**\n\r....",
+    "cf_n2txt" :
+        "**Örnek Kullanım:**\n\r\t<cf_n2txt number=\"myNumber\" para_birimi=\"#get_cheque_detail.CURRENCY_ID#\">\n\r**Kullanım Amacı:**\n\rVerilen sayısal değişken içeriğini okunuşuna çevirir, verilen değer float olmalıdır.\n\r**Not:** En yüksek, katrilyon değeri verilebilir.\n\r**İngilizce yazdırmak için:**\n\r\t<cf_get_lang_set_main lang_name=\"ENG\">\n\rcustom tagini bu tagin üst kısmına eklemek gerekiyor.",
+    "cf_wrk_combo" :
+        "**Örnek Kullanım:**\n\r\t<cf_wrk_combo name=\"property_id\" query_name=\"GET_CONTENT_PROPERTY\" value=\"#attributes.property_id#\" option_name=\"name\" option_text=\"#text#\" option_value=\"content_property_id\">\n\r**Kullanım Amacı:**\n\r....",
+    "cf_wrk_dynamic_params" :
+        "**Örnek Kullanım:**\n\r\t<cf_wrk_dynamic_params returninputvalue=\"outland_transport_type_id,outland_transport_type\" returnqueryvalue=\"PARAM_DATA_ID,PARAM_DATA_DESCRIPTION\" type_id=\"1\" defaultColumnList=\"Taşıma Şekilleri\" type_name=\"Sınırdaki Taşıma Şekilleri\" fieldId=\"outland_transport_type_id\" fieldName=\"outland_transport_type\">\n\r**Kullanım Amacı:**\n\rGönderilen parametre tipine göre data'yı getirir.",
+    "cf_wrk_MultiSelect" :
+        "**Örnek Kullanım:**\n\r\t<cfsavecontent variable=\"name\"><cf_get_lang dictionary_id='31704.TÜM TÜRKİYE'></cfsavecontent>\n\r\t<cf_wrk_MultiSelect name=\"prefered_city\" option_name=\"CITY_NAME\" option_value=\"CITY_ID\" table_name=\"SETUP_CITY\" is_option_text=\"1\" option_text=\"#name#\">\n\r**Kullanım Amacı:**\n\rMultiSelect yapısındaki selectler için hazırlanmıştır. Select de gösterilecek ve değeri tutulacak alan adı ve table adı verildiğinde get_query.cfc dosyasından bilgiler çağrılır.Query kirliliğini azaltır.",
+    "cf_workcube_process_info" :
+        "**Örnek Kullanım:**\n\r\t<cf_workcube_process_info fuseaction=\"prod.order\">\n\r**Kullanım Amacı:**\n\rKullanılan sayfada kullanıcının yetkili olduğu aşamaların idlerini liste olarak döndürür. **process_rowid_list:** Oluşturduğu liste",
+    "cf_duxi" :
+        "**Örnek Kullanım:**\n\r\t<cf_duxi name=\"website\" type=\"text\" gdpr=\"1,2,3,4\" label=\"47050\">\n\r**Kullanım Amacı:**\n\rForm elementlerinin daha basit, daha güvenli ve daha hızlı kullanımı için oluşturulmuş custom tag."
+}

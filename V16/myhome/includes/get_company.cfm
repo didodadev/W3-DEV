@@ -1,0 +1,11 @@
+<cfquery name="GET_COMPANY" datasource="#dsn#">
+	SELECT 
+		*
+	FROM
+		COMPANY C
+		INNER JOIN COMPANY_CAT_OUR_COMPANY CC ON C.COMPANYCAT_ID = CC.COMPANYCAT_ID AND CC.OUR_COMPANY_ID = #session.ep.company_id#
+	WHERE
+		C.ISPOTANTIAL = 1
+	ORDER BY 
+		RECORD_DATE DESC
+</cfquery>

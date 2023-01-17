@@ -1,0 +1,1 @@
+sass --watch _workcube.scss:..\css\style.css --style compact

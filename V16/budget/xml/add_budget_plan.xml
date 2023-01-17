@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<OBJECT_PROPERTIES>
+	<OBJECT_PROPERTY>
+		<PROPERTY>is_show_branch</PROPERTY>
+		<PROPERTY_DETAIL>Şube Seçilebilsin</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>select</PROPERTY_TYPE>
+		<PROPERTY_VALUES>1,0</PROPERTY_VALUES>
+		<PROPERTY_NAMES>Evet,Hayır</PROPERTY_NAMES>
+		<PROPERTY_DEFAULT>0</PROPERTY_DEFAULT>
+		<PROPERTY_HELP></PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+	<OBJECT_PROPERTY>
+		<PROPERTY>is_show_project</PROPERTY>
+		<PROPERTY_DETAIL> Satırda Proje seçimi zorunlu olsun </PROPERTY_DETAIL>
+		<PROPERTY_TYPE>select</PROPERTY_TYPE>
+		<PROPERTY_VALUES>1,0</PROPERTY_VALUES>
+		<PROPERTY_NAMES>Evet,Hayır</PROPERTY_NAMES>
+		<PROPERTY_DEFAULT>0</PROPERTY_DEFAULT>
+		<PROPERTY_HELP></PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+	<OBJECT_PROPERTY>
+		<PROPERTY>xml_acc_department_info</PROPERTY>
+		<PROPERTY_DETAIL>Departman Seçilebilsin</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>select</PROPERTY_TYPE>
+		<PROPERTY_VALUES>0,1,2</PROPERTY_VALUES>
+		<PROPERTY_NAMES>Hayır,Evet,Zorunlu</PROPERTY_NAMES>
+		<PROPERTY_DEFAULT>0</PROPERTY_DEFAULT>
+		<PROPERTY_HELP>Muhasebe İşlemi İçin Departman Seçilebilir. Zorunlu Seçilirse Departman Bilgisi Boş Bırakılamaz</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+	<OBJECT_PROPERTY>
+		<PROPERTY>is_kontrol_value</PROPERTY>
+		<PROPERTY_DETAIL>Tahakkuk Fişinde Gelir-Gider Toplamları Kontrol Edilsin</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>select</PROPERTY_TYPE>
+		<PROPERTY_VALUES>1,0</PROPERTY_VALUES>
+		<PROPERTY_NAMES>Evet,Hayır</PROPERTY_NAMES>
+		<PROPERTY_DEFAULT>1</PROPERTY_DEFAULT>
+		<PROPERTY_HELP>Eğer evet olarak sçeilirse tahakkuk fişinde gelir ve gider eşit olmadan kayıt yapılmaz.</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+	<OBJECT_PROPERTY>
+		<PROPERTY>xml_account_code_from_member</PROPERTY>
+		<PROPERTY_DETAIL>Muhasebe Kodu Cari Hesaptan Gelsin</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>select</PROPERTY_TYPE>
+		<PROPERTY_VALUES>1,0</PROPERTY_VALUES>
+		<PROPERTY_NAMES>Evet,Hayır</PROPERTY_NAMES>
+		<PROPERTY_DEFAULT>0</PROPERTY_DEFAULT>
+		<PROPERTY_HELP>Cari Hesaba Ait Muhasebe Kodu Gelir.</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+	<OBJECT_PROPERTY>
+		<PROPERTY>xml_order_list_rows</PROPERTY>
+		<PROPERTY_DETAIL>Satırlarda Öncelik Sıralaması</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>input</PROPERTY_TYPE>
+		<PROPERTY_VALUES></PROPERTY_VALUES>
+		<PROPERTY_NAMES></PROPERTY_NAMES>
+		<PROPERTY_DEFAULT>1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17</PROPERTY_DEFAULT>
+		<PROPERTY_HELP>1.Tarih, 2.Açıklama, 3.Masraf Merkezi, 4.Bütçe Kategorisi, 5.Bütçe Kalemi, 6.Muhasebe Kodu, 7.Aktivite Tipi, 8.İş Gurubu, 9.Proje, 10.Cari Hesap, 11.Gelir TL, 12.Gider TL, 13.Fark TL, 14.Gelir Döviz, 15.Gider Döviz, 16.Fark Döviz, 17.Fiziki Varlık / Numarası yazılmayan alan listede görüntülenmeyecektir. (2,3,5,10,11,12,13,14,15,16) Alanları Zorunlu Olarak Görüntülenmelidir.</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+	<OBJECT_PROPERTY>
+		<PROPERTY>xml_show_percent</PROPERTY>
+		<PROPERTY_DETAIL>Gelir ve Gider Tutarları Yüzdesel Orana Göre Hesaplansın</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>select</PROPERTY_TYPE>
+		<PROPERTY_VALUES>1,0</PROPERTY_VALUES>
+		<PROPERTY_NAMES>Evet,Hayır</PROPERTY_NAMES>
+		<PROPERTY_DEFAULT>0</PROPERTY_DEFAULT>
+		<PROPERTY_HELP>Gelir ve Gider Tutarları Girilen Yüzdesel Orana Göre Hesaplanır.</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+</OBJECT_PROPERTIES>

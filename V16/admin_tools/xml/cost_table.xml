@@ -1,0 +1,394 @@
+<?xml version="1.0" encoding="utf-8"?>
+<COST_TABLE>
+      
+          <COST>
+		  	<COST_ID>60</COST_ID>
+		  	<CODE>01.A</CODE>
+		  	<NAME>DİREKT İLKMADDE VE MALZEME GİDERLERİ</NAME>
+		  	<ACCOUNT_CODE/>
+		  	<SIGN>+</SIGN>
+		  	<BA/>
+		  	<VIEW_AMOUNT_TYPE>2</VIEW_AMOUNT_TYPE>
+			<NAME_LANG_NO></NAME_LANG_NO>
+		  	<ZERO>0</ZERO>
+		  	<ADD_>0</ADD_>
+         </COST>
+      
+          <COST>
+		  	<COST_ID>61</COST_ID>
+		  	<CODE>01.A.01</CODE>
+		  	<NAME>Direkt İlkmadde ve Malzeme Giderleri</NAME>
+		  	<ACCOUNT_CODE>710 </ACCOUNT_CODE>
+		  	<SIGN>+</SIGN>
+		  	<BA>1</BA>
+		  	<VIEW_AMOUNT_TYPE>1</VIEW_AMOUNT_TYPE>
+			<NAME_LANG_NO></NAME_LANG_NO>
+		  	<ZERO>0</ZERO>
+		  	<ADD_>0</ADD_>
+         </COST>
+      
+          <COST>
+		  	<COST_ID>62</COST_ID>
+		  	<CODE>01.A.02</CODE>
+		  	<NAME>Direkt ilkmadde ve Malzeme Fiyat Farkı</NAME>
+		  	<ACCOUNT_CODE>712</ACCOUNT_CODE>
+		  	<SIGN>+</SIGN>
+		  	<BA>1</BA>
+		  	<VIEW_AMOUNT_TYPE>2</VIEW_AMOUNT_TYPE>
+			<NAME_LANG_NO></NAME_LANG_NO>
+		  	<ZERO>0</ZERO>
+		  	<ADD_>0</ADD_>
+         </COST>
+      
+          <COST>
+		  	<COST_ID>63</COST_ID>
+		  	<CODE>01.A.03</CODE>
+		  	<NAME>Direkt İlkmadde ve Malzeme Miktar Farkı</NAME>
+		  	<ACCOUNT_CODE>713</ACCOUNT_CODE>
+		  	<SIGN>+</SIGN>
+		  	<BA>0</BA>
+		  	<VIEW_AMOUNT_TYPE>2</VIEW_AMOUNT_TYPE>
+			<NAME_LANG_NO></NAME_LANG_NO>
+		  	<ZERO>0</ZERO>
+		  	<ADD_>0</ADD_>
+         </COST>
+      
+          <COST>
+		  	<COST_ID>64</COST_ID>
+		  	<CODE>01.B</CODE>
+		  	<NAME>DİREKT İŞÇİLİK GİDERLERİ</NAME>
+		  	<ACCOUNT_CODE/>
+		  	<SIGN>+</SIGN>
+		  	<BA/>
+		  	<VIEW_AMOUNT_TYPE>2</VIEW_AMOUNT_TYPE>
+			<NAME_LANG_NO></NAME_LANG_NO>
+		  	<ZERO>0</ZERO>
+		  	<ADD_>0</ADD_>
+         </COST>
+      
+          <COST>
+		  	<COST_ID>65</COST_ID>
+		  	<CODE>01.B.01</CODE>
+		  	<NAME>Direkt İşçilik Giderleri</NAME>
+		  	<ACCOUNT_CODE>720</ACCOUNT_CODE>
+		  	<SIGN>+</SIGN>
+		  	<BA>0</BA>
+		  	<VIEW_AMOUNT_TYPE>2</VIEW_AMOUNT_TYPE>
+			<NAME_LANG_NO></NAME_LANG_NO>
+		  	<ZERO>0</ZERO>
+		  	<ADD_>0</ADD_>
+         </COST>
+      
+          <COST>
+		  	<COST_ID>66</COST_ID>
+		  	<CODE>01.B.02</CODE>
+		  	<NAME>Direkt İşçilik Ücret Farkları</NAME>
+		  	<ACCOUNT_CODE>722</ACCOUNT_CODE>
+		  	<SIGN>+</SIGN>
+		  	<BA>0</BA>
+		  	<VIEW_AMOUNT_TYPE>2</VIEW_AMOUNT_TYPE>
+			<NAME_LANG_NO></NAME_LANG_NO>
+		  	<ZERO>0</ZERO>
+		  	<ADD_>0</ADD_>
+         </COST>
+      
+          <COST>
+		  	<COST_ID>67</COST_ID>
+		  	<CODE>01.B.03</CODE>
+		  	<NAME>Direkt İşçilik Süre Farkları</NAME>
+		  	<ACCOUNT_CODE>723</ACCOUNT_CODE>
+		  	<SIGN>+</SIGN>
+		  	<BA>0</BA>
+		  	<VIEW_AMOUNT_TYPE>2</VIEW_AMOUNT_TYPE>
+			<NAME_LANG_NO></NAME_LANG_NO>
+		  	<ZERO>0</ZERO>
+		  	<ADD_>0</ADD_>
+         </COST>
+      
+          <COST>
+		  	<COST_ID>68</COST_ID>
+		  	<CODE>01.C</CODE>
+		  	<NAME>GENEL ÜRETİM GİDERLERİ</NAME>
+		  	<ACCOUNT_CODE/>
+		  	<SIGN>+</SIGN>
+		  	<BA>0</BA>
+		  	<VIEW_AMOUNT_TYPE>2</VIEW_AMOUNT_TYPE>
+			<NAME_LANG_NO></NAME_LANG_NO>
+		  	<ZERO>0</ZERO>
+		  	<ADD_>0</ADD_>
+         </COST>
+      
+          <COST>
+		  	<COST_ID>69</COST_ID>
+		  	<CODE>01.C.01</CODE>
+		  	<NAME>Genel Üretim Giderleri</NAME>
+		  	<ACCOUNT_CODE>730</ACCOUNT_CODE>
+		  	<SIGN>+</SIGN>
+		  	<BA>1</BA>
+		  	<VIEW_AMOUNT_TYPE>2</VIEW_AMOUNT_TYPE>
+			<NAME_LANG_NO></NAME_LANG_NO>
+		  	<ZERO>0</ZERO>
+		  	<ADD_>0</ADD_>
+         </COST>
+      
+          <COST>
+		  	<COST_ID>70</COST_ID>
+		  	<CODE>01.C.02</CODE>
+		  	<NAME>Genel Üretim Giderleri Bütçe Farkları</NAME>
+		  	<ACCOUNT_CODE>732</ACCOUNT_CODE>
+		  	<SIGN>+</SIGN>
+		  	<BA>1</BA>
+		  	<VIEW_AMOUNT_TYPE>2</VIEW_AMOUNT_TYPE>
+			<NAME_LANG_NO></NAME_LANG_NO>
+		  	<ZERO>0</ZERO>
+		  	<ADD_>0</ADD_>
+         </COST>
+      
+          <COST>
+		  	<COST_ID>71</COST_ID>
+		  	<CODE>01.C.03</CODE>
+		  	<NAME>Genel Üretim Giderleri Verimlilik Farkları</NAME>
+		  	<ACCOUNT_CODE>733</ACCOUNT_CODE>
+		  	<SIGN>+</SIGN>
+		  	<BA>1</BA>
+		  	<VIEW_AMOUNT_TYPE>2</VIEW_AMOUNT_TYPE>
+			<NAME_LANG_NO></NAME_LANG_NO>
+		  	<ZERO>0</ZERO>
+		  	<ADD_>0</ADD_>
+         </COST>
+      
+          <COST>
+		  	<COST_ID>72</COST_ID>
+		  	<CODE>01.C.04</CODE>
+		  	<NAME>Genel Üretim Giderleri Kapasite Farkları</NAME>
+		  	<ACCOUNT_CODE>734</ACCOUNT_CODE>
+		  	<SIGN>+</SIGN>
+		  	<BA>1</BA>
+		  	<VIEW_AMOUNT_TYPE>2</VIEW_AMOUNT_TYPE>
+			<NAME_LANG_NO></NAME_LANG_NO>
+		  	<ZERO>0</ZERO>
+		  	<ADD_>0</ADD_>
+         </COST>
+      
+          <COST>
+		  	<COST_ID>73</COST_ID>
+		  	<CODE>01.D</CODE>
+		  	<NAME>YARI MAMÜL KULLANIMI</NAME>
+		  	<ACCOUNT_CODE/>
+		  	<SIGN>+</SIGN>
+		  	<BA/>
+		  	<VIEW_AMOUNT_TYPE>2</VIEW_AMOUNT_TYPE>
+			<NAME_LANG_NO></NAME_LANG_NO>
+		  	<ZERO>0</ZERO>
+		  	<ADD_>0</ADD_>
+         </COST>
+      
+          <COST>
+		  	<COST_ID>74</COST_ID>
+		  	<CODE>01.D.01</CODE>
+		  	<NAME>Dönem Başı Stok</NAME>
+		  	<ACCOUNT_CODE>151</ACCOUNT_CODE>
+		  	<SIGN>+</SIGN>
+		  	<BA>0</BA>
+		  	<VIEW_AMOUNT_TYPE>2</VIEW_AMOUNT_TYPE>
+			<NAME_LANG_NO></NAME_LANG_NO>
+		  	<ZERO>1</ZERO>
+		  	<ADD_>1</ADD_>
+         </COST>
+      
+          <COST>
+		  	<COST_ID>75</COST_ID>
+		  	<CODE>01.D.02</CODE>
+		  	<NAME>Dönem Sonu Stok</NAME>
+		  	<ACCOUNT_CODE>151</ACCOUNT_CODE>
+		  	<SIGN>+</SIGN>
+		  	<BA>0</BA>
+		  	<VIEW_AMOUNT_TYPE>2</VIEW_AMOUNT_TYPE>
+			<NAME_LANG_NO></NAME_LANG_NO>
+		  	<ZERO>1</ZERO>
+		  	<ADD_>0</ADD_>
+         </COST>
+      
+          <COST>
+		  	<COST_ID>76</COST_ID>
+		  	<CODE>01</CODE>
+		  	<NAME>ÜRETİLEN  MAMUL MALİYETİ</NAME>
+		  	<ACCOUNT_CODE/>
+		  	<SIGN/>
+		  	<BA>1</BA>
+		  	<VIEW_AMOUNT_TYPE>2</VIEW_AMOUNT_TYPE>
+			<NAME_LANG_NO></NAME_LANG_NO>
+		  	<ZERO>0</ZERO>
+		  	<ADD_>0</ADD_>
+         </COST>
+      
+          <COST>
+		  	<COST_ID>77</COST_ID>
+		  	<CODE>02.E.01</CODE>
+		  	<NAME>Dönem Başı Stoku</NAME>
+		  	<ACCOUNT_CODE>152</ACCOUNT_CODE>
+		  	<SIGN>+</SIGN>
+		  	<BA>0</BA>
+		  	<VIEW_AMOUNT_TYPE>2</VIEW_AMOUNT_TYPE>
+			<NAME_LANG_NO></NAME_LANG_NO>
+		  	<ZERO>1</ZERO>
+		  	<ADD_>1</ADD_>
+         </COST>
+      
+          <COST>
+		  	<COST_ID>78</COST_ID>
+		  	<CODE>02.E.02</CODE>
+		  	<NAME>Dönem Sonu Stoku</NAME>
+		  	<ACCOUNT_CODE>152</ACCOUNT_CODE>
+		  	<SIGN>+</SIGN>
+		  	<BA>0</BA>
+		  	<VIEW_AMOUNT_TYPE>2</VIEW_AMOUNT_TYPE>
+			<NAME_LANG_NO></NAME_LANG_NO>
+		  	<ZERO>0</ZERO>
+		  	<ADD_>0</ADD_>
+         </COST>
+      
+          <COST>
+		  	<COST_ID>79</COST_ID>
+		  	<CODE>02.E.03</CODE>
+		  	<NAME>İç Tüketim</NAME>
+		  	<ACCOUNT_CODE>801</ACCOUNT_CODE>
+		  	<SIGN>+</SIGN>
+		  	<BA>1</BA>
+		  	<VIEW_AMOUNT_TYPE>2</VIEW_AMOUNT_TYPE>
+			<NAME_LANG_NO></NAME_LANG_NO>
+		  	<ZERO>0</ZERO>
+		  	<ADD_>0</ADD_>
+         </COST>
+      
+          <COST>
+		  	<COST_ID>80</COST_ID>
+		  	<CODE>02</CODE>
+		  	<NAME>MAMÜL KULLANIMI</NAME>
+		  	<ACCOUNT_CODE/>
+		  	<SIGN/>
+		  	<BA/>
+		  	<VIEW_AMOUNT_TYPE>2</VIEW_AMOUNT_TYPE>
+			<NAME_LANG_NO></NAME_LANG_NO>
+		  	<ZERO>0</ZERO>
+		  	<ADD_>0</ADD_>
+         </COST>
+      
+          <COST>
+		  	<COST_ID>81</COST_ID>
+		  	<CODE>03</CODE>
+		  	<NAME>SATILAN MAMÜL MALİYETİ</NAME>
+		  	<ACCOUNT_CODE/>
+		  	<SIGN/>
+		  	<BA/>
+		  	<VIEW_AMOUNT_TYPE>2</VIEW_AMOUNT_TYPE>
+			<NAME_LANG_NO></NAME_LANG_NO>
+		  	<ZERO>1</ZERO>
+		  	<ADD_>0</ADD_>
+         </COST>
+      
+          <COST>
+		  	<COST_ID>82</COST_ID>
+		  	<CODE>04.A.01</CODE>
+		  	<NAME>Dönem Başı Ticari Mallar Stoku</NAME>
+		  	<ACCOUNT_CODE>153</ACCOUNT_CODE>
+		  	<SIGN>+</SIGN>
+		  	<BA>0</BA>
+		  	<VIEW_AMOUNT_TYPE>2</VIEW_AMOUNT_TYPE>
+			<NAME_LANG_NO></NAME_LANG_NO>
+		  	<ZERO>1</ZERO>
+		  	<ADD_>1</ADD_>
+         </COST>
+      
+          <COST>
+		  	<COST_ID>83</COST_ID>
+		  	<CODE>04.A.02</CODE>
+		  	<NAME>Dönem İçi Alışlar</NAME>
+		  	<ACCOUNT_CODE>153</ACCOUNT_CODE>
+		  	<SIGN>+</SIGN>
+		  	<BA>0</BA>
+		  	<VIEW_AMOUNT_TYPE>2</VIEW_AMOUNT_TYPE>
+			<NAME_LANG_NO></NAME_LANG_NO>
+		  	<ZERO>1</ZERO>
+		  	<ADD_>1</ADD_>
+         </COST>
+      
+          <COST>
+		  	<COST_ID>84</COST_ID>
+		  	<CODE>04.A.03</CODE>
+		  	<NAME>Dönem Sonu Ticari Mallar</NAME>
+		  	<ACCOUNT_CODE>153</ACCOUNT_CODE>
+		  	<SIGN>+</SIGN>
+		  	<BA>0</BA>
+		  	<VIEW_AMOUNT_TYPE>2</VIEW_AMOUNT_TYPE>
+			<NAME_LANG_NO></NAME_LANG_NO>
+		  	<ZERO>0</ZERO>
+		  	<ADD_>0</ADD_>
+         </COST>
+      
+          <COST>
+		  	<COST_ID>85</COST_ID>
+		  	<CODE>04.A.04</CODE>
+		  	<NAME>İç Tüketim</NAME>
+		  	<ACCOUNT_CODE>802</ACCOUNT_CODE>
+		  	<SIGN>+</SIGN>
+		  	<BA>0</BA>
+		  	<VIEW_AMOUNT_TYPE>2</VIEW_AMOUNT_TYPE>
+			<NAME_LANG_NO></NAME_LANG_NO>
+		  	<ZERO>0</ZERO>
+		  	<ADD_>0</ADD_>
+         </COST>
+      
+          <COST>
+		  	<COST_ID>86</COST_ID>
+		  	<CODE>04</CODE>
+		  	<NAME>SATILAN TİCARİ MALLAR MALİYETİ</NAME>
+		  	<ACCOUNT_CODE/>
+		  	<SIGN/>
+		  	<BA/>
+		  	<VIEW_AMOUNT_TYPE>2</VIEW_AMOUNT_TYPE>
+			<NAME_LANG_NO></NAME_LANG_NO>
+		  	<ZERO>1</ZERO>
+		  	<ADD_>0</ADD_>
+         </COST>
+      
+          <COST>
+		  	<COST_ID>87</COST_ID>
+		  	<CODE>05</CODE>
+		  	<NAME>SATILAN HİZMET MALİYETİ</NAME>
+		  	<ACCOUNT_CODE/>
+		  	<SIGN/>
+		  	<BA/>
+		  	<VIEW_AMOUNT_TYPE>2</VIEW_AMOUNT_TYPE>
+			<NAME_LANG_NO></NAME_LANG_NO>
+		  	<ZERO>1</ZERO>
+		  	<ADD_>0</ADD_>
+         </COST>
+      
+          <COST>
+		  	<COST_ID>88</COST_ID>
+		  	<CODE>05.A.01</CODE>
+		  	<NAME>SATILAN HİZMET MALİYETİ HESABI</NAME>
+		  	<ACCOUNT_CODE>622</ACCOUNT_CODE>
+		  	<SIGN>+</SIGN>
+		  	<BA>0</BA>
+		  	<VIEW_AMOUNT_TYPE>2</VIEW_AMOUNT_TYPE>
+			<NAME_LANG_NO></NAME_LANG_NO>
+		  	<ZERO>0</ZERO>
+		  	<ADD_>0</ADD_>
+         </COST>
+      
+          <COST>
+		  	<COST_ID>89</COST_ID>
+		  	<CODE>06</CODE>
+		  	<NAME>SATIŞLARIN MALİYETİ</NAME>
+		  	<ACCOUNT_CODE/>
+		  	<SIGN/>
+		  	<BA/>
+		  	<VIEW_AMOUNT_TYPE>2</VIEW_AMOUNT_TYPE>
+			<NAME_LANG_NO></NAME_LANG_NO>
+		  	<ZERO>1</ZERO>
+		  	<ADD_>0</ADD_>
+         </COST>
+      
+   </COST_TABLE>

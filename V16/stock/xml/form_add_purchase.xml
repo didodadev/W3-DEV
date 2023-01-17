@@ -1,0 +1,138 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<OBJECT_PROPERTIES>
+	<OBJECT_PROPERTY>
+		<PROPERTY>xml_control_process_type</PROPERTY>
+		<PROPERTY_DETAIL>Konsinye İrsaliyelerinde İrsaliye Seçiminde İşlem Tipi Kontrolü Yapılsın</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>select</PROPERTY_TYPE>
+		<PROPERTY_VALUES>1,0</PROPERTY_VALUES>
+		<PROPERTY_NAMES>Evet,Hayır</PROPERTY_NAMES>
+		<PROPERTY_DEFAULT>1</PROPERTY_DEFAULT>
+		<PROPERTY_HELP>Evet seçilirse konsinye işlemlerinde irsaliye seçimi yapılırken sadece konsinye tipli irsaliyelerin seçilmesine izin verilir.</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+	<OBJECT_PROPERTY>
+		<PROPERTY>xml_control_project</PROPERTY>
+		<PROPERTY_DETAIL>Konsinye İşlemlerinde Proje Kontrolü Yapılsın</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>select</PROPERTY_TYPE>
+		<PROPERTY_VALUES>1,0</PROPERTY_VALUES>
+		<PROPERTY_NAMES>Evet,Hayır</PROPERTY_NAMES>
+		<PROPERTY_DEFAULT>0</PROPERTY_DEFAULT>
+		<PROPERTY_HELP>Evet seçilirse konsinye iade işlemlerinde proje ile ilgili şu kontroller yapılır.Konsinye çıkış irsaliyesinde proje seçilmişse, iade işleminde de aynı projenin seçili olması kontrolü yapılır.Konsinye çıkış irsaliyesinde proje seçilmemişse, iade işleminde de proje seçilmesine izin verilmez.Birden fazla konsinye çıkış irsaliyesi iade alınmak istediğinde, hepsinde aynı projenin seçili olması kontrolü yapılır.</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+	<OBJECT_PROPERTY>
+		<PROPERTY>xml_order_row_deliverdate_copy_to_ship</PROPERTY>
+		<PROPERTY_DETAIL>Sipariş Satırındaki Teslim Tarihi İrsaliyeye Taşınsın</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>select</PROPERTY_TYPE>
+		<PROPERTY_VALUES>1,0</PROPERTY_VALUES>
+		<PROPERTY_NAMES>Evet,Hayır</PROPERTY_NAMES>
+		<PROPERTY_DEFAULT>1</PROPERTY_DEFAULT>
+		<PROPERTY_HELP>Evet olarak seçildiğinde irsaliye ile ilişkili satınalma siparişinin satırlarında girilmiş olan Teslim Tarihi, irsaliyenin ilgili satırlarına yansıtılır.</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+	<OBJECT_PROPERTY>
+		<PROPERTY>xml_control_order_date</PROPERTY>
+		<PROPERTY_DETAIL>Sipariş Tarih Kontrolü Yapılsın</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>select</PROPERTY_TYPE>
+		<PROPERTY_VALUES>0,1</PROPERTY_VALUES>
+		<PROPERTY_NAMES>Hayır,Evet</PROPERTY_NAMES>
+		<PROPERTY_DEFAULT>0</PROPERTY_DEFAULT>
+		<PROPERTY_HELP>Fatura Tarihinin Sipariş Tarihinden Önce Olmama Kontrolü Yapar</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+	<OBJECT_PROPERTY>
+		<PROPERTY>xml_disable_change</PROPERTY>
+		<PROPERTY_DETAIL>Demirbaş İade İşlemlerinde Ürün Değişiklik Kontrolü Yapılsın mı?</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>select</PROPERTY_TYPE>
+		<PROPERTY_VALUES>1,0</PROPERTY_VALUES>
+		<PROPERTY_NAMES>Evet,Hayır</PROPERTY_NAMES>
+		<PROPERTY_DEFAULT>0</PROPERTY_DEFAULT>
+		<PROPERTY_HELP>Evet seçildiğinde Demirbaş Stok İade Fişi olan irsaliyede ürün değişiklik kontrolü için satırlarda miktarlarla ilgili ürün değişiklik kontrolü yapılır.</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+	<OBJECT_PROPERTY>
+		<PROPERTY>xml_return_disable_change</PROPERTY>
+		<PROPERTY_DETAIL>İade Ekranından Yapılan İşlemlerde Ürün Değişiklik Kontrolü Yapılsın mı?</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>select</PROPERTY_TYPE>
+		<PROPERTY_VALUES>1,0</PROPERTY_VALUES>
+		<PROPERTY_NAMES>Evet,Hayır</PROPERTY_NAMES>
+		<PROPERTY_DEFAULT>0</PROPERTY_DEFAULT>
+		<PROPERTY_HELP>Evet seçildiğinde belge, irsaliyeye dönüştürülmüş bir belge ise satırlarda miktarlarla ilgili ürün değişiklik kontrolü yapılır.</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+	<OBJECT_PROPERTY>
+		<PROPERTY>xml_disable_system_change</PROPERTY>
+		<PROPERTY_DETAIL>Demirbaş İade İşlemlerinde Abone Değiştirilsin mi?</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>select</PROPERTY_TYPE>
+		<PROPERTY_VALUES>1,0</PROPERTY_VALUES>
+		<PROPERTY_NAMES>Evet,Hayır</PROPERTY_NAMES>
+		<PROPERTY_DEFAULT>1</PROPERTY_DEFAULT>
+		<PROPERTY_HELP>Evet seçildiğinde Demirbaş Stok İade Fişi olan irsaliyede abone değiştirilebilir.</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+	<OBJECT_PROPERTY>
+		<PROPERTY>xml_kontrol_inv_process_type</PROPERTY>
+		<PROPERTY_DETAIL>Demirbaş İade İşlemlerinde İşlem Tipi Kontrolleri Yapılsın mı?</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>select</PROPERTY_TYPE>
+		<PROPERTY_VALUES>1,0</PROPERTY_VALUES>
+		<PROPERTY_NAMES>Evet,Hayır</PROPERTY_NAMES>
+		<PROPERTY_DEFAULT>0</PROPERTY_DEFAULT>
+		<PROPERTY_HELP>Eğer evet olarak seçilirse demirbaş stok iade fişi olan işlemin işlem tipi değiştirilemez , demirbaş stok iade kaydetmeyen bir işlem tipiyse de demirbaş stok iade fişi kaydeden bir işlem tipi ile değiştirilemez.</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+	<OBJECT_PROPERTY>
+		<PROPERTY>xml_kontrol_process_type</PROPERTY>
+		<PROPERTY_DETAIL>İşlem Tipi Kontrolleri Yapılsın mı?</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>select</PROPERTY_TYPE>
+		<PROPERTY_VALUES>1,0</PROPERTY_VALUES>
+		<PROPERTY_NAMES>Evet,Hayır</PROPERTY_NAMES>
+		<PROPERTY_DEFAULT>0</PROPERTY_DEFAULT>
+		<PROPERTY_HELP>Eğer evet olarak seçilirse PROCESS_ID leri farklı olan işlem tipleri arasında güncelleme yapması engellenir.</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+	<OBJECT_PROPERTY>
+		<PROPERTY>xml_show_ship_address</PROPERTY>
+		<PROPERTY_DETAIL>Yükleme Yeri Gösterilsin mi?</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>select</PROPERTY_TYPE>
+		<PROPERTY_VALUES>1,0</PROPERTY_VALUES>
+		<PROPERTY_NAMES>Evet,Hayır</PROPERTY_NAMES>
+		<PROPERTY_DEFAULT>0</PROPERTY_DEFAULT>
+		<PROPERTY_HELP>Evet olarak seçildiğinde "Yükleme Yeri" popupı açılır ve carinin hangi adresinden ürün alınıyor ise o adresin seçilmesi sağlanır.</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+	<OBJECT_PROPERTY>
+		<PROPERTY>xml_save_konsinye_iade</PROPERTY>
+		<PROPERTY_DETAIL>Konsinye İade  İşleminde  İlişkili Çıkış İrsaliyesi Zorunlu Olsun mu?</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>select</PROPERTY_TYPE>
+		<PROPERTY_VALUES>1,0</PROPERTY_VALUES>
+		<PROPERTY_NAMES>Evet,Hayır</PROPERTY_NAMES>
+		<PROPERTY_DEFAULT>1</PROPERTY_DEFAULT>
+		<PROPERTY_HELP>Eğer evet olarak seçilirse, konsinye iade çıkış işlemi yapabilmek için ilişkili bir çıkış irsaliyesi seçilmesi gerekir.</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+	<OBJECT_PROPERTY>
+		<PROPERTY>xml_serialno_control</PROPERTY>
+		<PROPERTY_DETAIL>Seri No Kontrolü Zorunlu Olsun mu?</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>select</PROPERTY_TYPE>
+		<PROPERTY_VALUES>1,0</PROPERTY_VALUES>
+		<PROPERTY_NAMES>Evet,Hayır</PROPERTY_NAMES>
+		<PROPERTY_DEFAULT>0</PROPERTY_DEFAULT>
+		<PROPERTY_HELP>Eğer evet olarak seçilirse, seri takibi yapılan ürünlerin serilerinin girilmesi zorunludur.</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+	<OBJECT_PROPERTY>
+		<PROPERTY>xml_show_service_app</PROPERTY>
+		<PROPERTY_DETAIL>Servis Başvurusu Gelsin Mi?</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>select</PROPERTY_TYPE>
+		<PROPERTY_VALUES>1,0,2</PROPERTY_VALUES>
+		<PROPERTY_NAMES>Evet,Hayır,Zorunlu</PROPERTY_NAMES>
+		<PROPERTY_DEFAULT>0</PROPERTY_DEFAULT>
+		<PROPERTY_HELP>Seçilen cariye göre servis başvurularını getirir.</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+	<OBJECT_PROPERTY>
+		<PROPERTY>xml_show_process_stage</PROPERTY>
+		<PROPERTY_DETAIL>Süreç Gösterilsin mi?</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>select</PROPERTY_TYPE>
+		<PROPERTY_VALUES>1,0</PROPERTY_VALUES>
+		<PROPERTY_NAMES>Evet,Hayır</PROPERTY_NAMES>
+		<PROPERTY_DEFAULT>0</PROPERTY_DEFAULT>
+		<PROPERTY_HELP>Eğer evet olarak seçilirse sayfada süreçler gösterilir.</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+	<OBJECT_PROPERTY>
+		<PROPERTY>xml_location_auth</PROPERTY>
+		<PROPERTY_DETAIL>Depo Lokasyon Yetkisi</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>select</PROPERTY_TYPE>
+		<PROPERTY_VALUES>-1,1,0</PROPERTY_VALUES>
+		<PROPERTY_NAMES>Default,Tüm Lokasyonlar,Yetkili Lokasyonlar</PROPERTY_NAMES>
+		<PROPERTY_DEFAULT></PROPERTY_DEFAULT>
+		<PROPERTY_HELP>Eğer Tüm Lokasyonlar Seçilirse Yetki Kontrollerinden Bağımsız Olarak Tüm Lokasyonlar Seçilebilir.</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+</OBJECT_PROPERTIES>

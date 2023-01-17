@@ -1,0 +1,28 @@
+
+<!-- Description : işlem kategorilerinde eksik alanlar eklendi
+Developer: Pınar Yıldız
+Company : Workcube
+Destination: Company-->
+<querytag>   
+        IF NOT EXISTS (SELECT 'Y' FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_SCHEMA = '@_dsn_company_@' AND TABLE_NAME = 'SETUP_PROCESS_CAT' AND COLUMN_NAME = 'IS_INWARD_PROCESSING')
+        BEGIN
+                ALTER TABLE SETUP_PROCESS_CAT ADD 
+                IS_INWARD_PROCESSING bit NULL DEFAULT ((0))
+        END;
+        IF NOT EXISTS (SELECT 'Y' FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_SCHEMA = '@_dsn_company_@' AND TABLE_NAME = 'SETUP_PROCESS_CAT' AND COLUMN_NAME = 'IS_EXPORT_REGISTERED')
+        BEGIN
+                ALTER TABLE SETUP_PROCESS_CAT ADD 
+                IS_EXPORT_REGISTERED bit NULL DEFAULT ((0))
+        END;
+        IF NOT EXISTS (SELECT 'Y' FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_SCHEMA = '@_dsn_company_@' AND TABLE_NAME = 'SETUP_PROCESS_CAT' AND COLUMN_NAME = 'ACCOUNT_TYPE_ID')
+        BEGIN
+                ALTER TABLE SETUP_PROCESS_CAT ADD 
+                ACCOUNT_TYPE_ID int NULL
+        END;
+        IF NOT EXISTS (SELECT 'Y' FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_SCHEMA = '@_dsn_company_@' AND TABLE_NAME = 'SETUP_PROCESS_CAT' AND COLUMN_NAME = 'ACCOUNT_TYPE_ID')
+        BEGIN
+                ALTER TABLE SETUP_PROCESS_CAT ADD 
+                ACCOUNT_TYPE_ID int NULL
+        END;
+</querytag>
+

@@ -1,0 +1,20 @@
+.xs {
+width:28px !important;
+height:32px !important;
+}
+.sm {
+width:42px !important;
+height:48px !important;
+}
+.md {
+width:70px !important;
+height:80px !important;
+}
+.lrg{
+width:98px !important;
+height:112px !important;
+}
+span.icn-md {
+    font-size:30px !important;
+    color:#3B4033 !important;
+}

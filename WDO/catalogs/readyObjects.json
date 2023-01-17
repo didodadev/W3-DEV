@@ -1,0 +1,38 @@
+[
+    {
+      "WIDGET_TITLE": "cf_wrk_add_info",
+      "WIDGET_VERSION": "1.0"
+    },
+    {
+      "WIDGET_TITLE": "cf_get_related_events",
+      "WIDGET_VERSION": "1.0"
+    },
+    {
+      "WIDGET_TITLE": "cf_get_workcube_asset",
+      "WIDGET_VERSION": "1.0"
+    },
+    {
+      "WIDGET_TITLE": "cf_get_member_analysis",
+      "WIDGET_VERSION": "1.0"
+    },
+    {
+      "WIDGET_TITLE": "cf_get_workcube_note",
+      "WIDGET_VERSION": "1.0"
+    },
+    {
+      "WIDGET_TITLE": "cf_get_workcube_domain",
+      "WIDGET_VERSION": "1.0"
+    },
+    {
+      "WIDGET_TITLE": "cf_get_workcube_content",
+      "WIDGET_VERSION": "1.0"
+    },
+    {
+      "WIDGET_TITLE": "cf_get_workcube_bank_account",
+      "WIDGET_VERSION": "1.0"
+    },
+    {
+      "WIDGET_TITLE": "cf_get_workcube_form_generator",
+      "WIDGET_VERSION": "1.0"
+    }
+]

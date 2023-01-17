@@ -1,0 +1,5 @@
+
+<cfquery name="DELORDERSTATUS" datasource="#dsn#">
+	DELETE FROM ORDER_STATUS WHERE ORDERSTATUS_ID=#ORDERSTATUS_ID#
+</cfquery>
+

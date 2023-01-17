@@ -1,0 +1,20 @@
+/*
+Bordro Databaselerinden bilgi alır
+Temel Ücret Skalası Aktarım
+ehesap.form_transfer_salary_scale
+*/
+
+DECLARE @SQLString NVARCHAR(max)
+
+set @SQLString= N'select
+	ROW_NUMBER() OVER(ORDER BY ASSIGN.PERTITLE ASC)  as SiraNo,
+	(SELECT A.LREF  FROM LH_'+@FirmNr+'_QUALFDEF A WHERE A.CODE=ASSIGN.PERTITLE)  as PozisyonTipi,
+	YEAR(BEGDATE) as Yil,
+	MIN(WAGE_WAGE) as EnDusukUcret,
+	MAX(WAGE_WAGE) as EnYuksekUcret,
+	ISNULL( (SELECT top 1 CURCODE FROM L_CURRENCYLIST WHERE  CURTYPE=ASSIGN.WAGE_CURRTYPE),''TRL'') as ParaBirimi
+FROM LH_'+@FirmNr+'_ASSIGN ASSIGN
+GROUP BY PERTITLE,YEAR(BEGDATE),WAGE_CURRTYPE,ASSIGN.PERTITLE
+ORDER BY PERTITLE,YEAR(BEGDATE)'
+
+EXECUTE sp_executesql @SQLString

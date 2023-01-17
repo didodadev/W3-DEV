@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<SETUP_SITE>
+	<SETUPSITE>
+		<LINK_NAME>Internette Görünsün XML Setup</LINK_NAME>
+		<LINK_FILE>agenda.form_add_event,agenda.popup_add_event</LINK_FILE>
+		<LINK_DETAIL>Internette Görünsün seçeneği Gösterim Detayı</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Ajanda Xml Setup</LINK_NAME>
+		<LINK_FILE>agenda.view_daily,agenda.view_weekly,agenda.view_monthly</LINK_FILE>
+		<LINK_DETAIL>Günlük, Haftalık ve Aylık Ajanda</LINK_DETAIL>
+	</SETUPSITE>
+</SETUP_SITE>

@@ -1,0 +1,28 @@
+
+ALTER VIEW @company_db@.[STOCKS]
+AS
+SELECT        STOCKS_1.STOCK_ID, STOCKS_1.STOCK_CODE, STOCKS_1.STOCK_CODE_2, STOCKS_1.PRODUCT_ID, STOCKS_1.PROPERTY, STOCKS_1.BARCOD, STOCKS_1.PRODUCT_UNIT_ID, 
+                         STOCKS_1.MANUFACT_CODE, STOCKS_1.STOCK_STATUS, STOCKS_1.RECORD_EMP, STOCKS_1.RECORD_IP, STOCKS_1.RECORD_DATE, STOCKS_1.UPDATE_EMP, STOCKS_1.UPDATE_IP, 
+                         STOCKS_1.UPDATE_DATE, STOCKS_1.SERIAL_BARCOD, @product_db@.PRODUCT.PRODUCT_STATUS, @product_db@.PRODUCT.PRODUCT_NAME, 
+                         @product_db@.PRODUCT.PRODUCT_CODE, @product_db@.PRODUCT.PRODUCT_CODE_2, @product_db@.PRODUCT.BARCOD AS PRODUCT_BARCOD, ISNULL
+                             ((SELECT        TAX
+                                 FROM            @company_db@.PRODUCT_TAX AS PT
+                                 WHERE        (PRODUCT_ID = @product_db@.PRODUCT.PRODUCT_ID) AND (OUR_COMPANY_ID = @company_id@)), @product_db@.PRODUCT.TAX) AS TAX, ISNULL
+                             ((SELECT        OTV
+                                 FROM            @company_db@.PRODUCT_TAX AS PT
+                                 WHERE        (PRODUCT_ID = @product_db@.PRODUCT.PRODUCT_ID) AND (OUR_COMPANY_ID = @company_id@)), @product_db@.PRODUCT.OTV) AS OTV, ISNULL
+                             ((SELECT        TAX_PURCHASE
+                                 FROM            @company_db@.PRODUCT_TAX AS PT
+                                 WHERE        (PRODUCT_ID = @product_db@.PRODUCT.PRODUCT_ID) AND (OUR_COMPANY_ID = @company_id@)), @product_db@.PRODUCT.TAX_PURCHASE) AS TAX_PURCHASE, 
+                         @product_db@.PRODUCT.COMPANY_ID, @product_db@.PRODUCT.BRAND_ID, @product_db@.PRODUCT.PRODUCT_MANAGER, @product_db@.PRODUCT.PRODUCT_CATID, 
+                         @product_db@.PRODUCT.IS_INVENTORY, @product_db@.PRODUCT.IS_PRODUCTION, @product_db@.PRODUCT.IS_SALES, @product_db@.PRODUCT.IS_PURCHASE, 
+                         @product_db@.PRODUCT.IS_TERAZI, @product_db@.PRODUCT.IS_SERIAL_NO, @product_db@.PRODUCT.IS_KARMA, @product_db@.PRODUCT.PRODUCT_DETAIL, 
+                         @product_db@.PRODUCT.IS_PROTOTYPE, @product_db@.PRODUCT.IS_INTERNET, @product_db@.PRODUCT.IS_COST, @product_db@.PRODUCT.IS_QUALITY, 
+                         @product_db@.PRODUCT.IS_ZERO_STOCK, @product_db@.PRODUCT.IS_LIMITED_STOCK, @product_db@.PRODUCT.PRODUCT_DETAIL2, @product_db@.PRODUCT.SHORT_CODE_ID, 
+                         @product_db@.PRODUCT.IS_COMMISSION, @product_db@.PRODUCT.USER_FRIENDLY_URL, @product_db@.PRODUCT.SEGMENT_ID, @product_db@.PRODUCT.MIN_MARGIN, 
+                         @product_db@.PRODUCT.MAX_MARGIN, @product_db@.PRODUCT.SHELF_LIFE, @product_db@.PRODUCT.PACKAGE_CONTROL_TYPE, @product_db@.PRODUCT.IS_EXTRANET, 
+                         @product_db@.PRODUCT.IS_LOT_NO, @product_db@.PRODUCT.PRODUCT_TREE_AMOUNT, @product_db@.PRODUCT.IS_ADD_XML
+FROM            @product_db@.PRODUCT INNER JOIN
+                         @product_db@.PRODUCT_OUR_COMPANY ON @product_db@.PRODUCT.PRODUCT_ID = @product_db@.PRODUCT_OUR_COMPANY.PRODUCT_ID INNER JOIN
+                         @product_db@.STOCKS AS STOCKS_1 ON @product_db@.PRODUCT.PRODUCT_ID = STOCKS_1.PRODUCT_ID
+WHERE        (@product_db@.PRODUCT_OUR_COMPANY.OUR_COMPANY_ID = @company_id@)

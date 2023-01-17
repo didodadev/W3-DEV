@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<OBJECT_PROPERTIES>
+	<OBJECT_PROPERTY>
+		<PROPERTY>x_cost_acc</PROPERTY>
+		<PROPERTY_DETAIL>Muhasebe Hareketi Maliyet Değerlerine Göre Yapılsın mı?</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>select</PROPERTY_TYPE>
+		<PROPERTY_VALUES>1,0</PROPERTY_VALUES>
+		<PROPERTY_NAMES>Evet,Hayır</PROPERTY_NAMES>
+		<PROPERTY_DEFAULT>0</PROPERTY_DEFAULT>
+		<PROPERTY_HELP>Evet olarak seçildiğinde mahsup fişinde muhasebe ürünün net maliyetinden yapılır.</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+	<OBJECT_PROPERTY>
+		<PROPERTY>x_employee_name</PROPERTY>
+		<PROPERTY_DETAIL>Teslim Alan Kısmı Boş Gelsin</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>select</PROPERTY_TYPE>
+		<PROPERTY_VALUES>1,0</PROPERTY_VALUES>
+		<PROPERTY_NAMES>Evet,Hayır</PROPERTY_NAMES>
+		<PROPERTY_DEFAULT>1</PROPERTY_DEFAULT>
+		<PROPERTY_HELP>Hayır olarak işaretlendiğinde Teslim Alan popupında belgeyi kaydedecek olan çalışanın ismi otomatik olarak dolu gelir.</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+	<OBJECT_PROPERTY>
+		<PROPERTY>x_departman_out</PROPERTY>
+		<PROPERTY_DETAIL>Proje Deposu Seçili Gelsin mi?</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>select</PROPERTY_TYPE>
+		<PROPERTY_VALUES>1,0</PROPERTY_VALUES>
+		<PROPERTY_NAMES>Evet,Hayır</PROPERTY_NAMES>
+		<PROPERTY_DEFAULT>1</PROPERTY_DEFAULT>
+		<PROPERTY_HELP>Proje Detay sayfasında ilişkili depo lokasyon seçilmiş ise ; Çıkış Depo alanı otomatik getirilir.</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+	<OBJECT_PROPERTY>
+		<PROPERTY>xml_serialno_control</PROPERTY>
+		<PROPERTY_DETAIL>Seri No Kontrolü Zorunlu Olsun mu?</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>select</PROPERTY_TYPE>
+		<PROPERTY_VALUES>1,0</PROPERTY_VALUES>
+		<PROPERTY_NAMES>Evet,Hayır</PROPERTY_NAMES>
+		<PROPERTY_DEFAULT>0</PROPERTY_DEFAULT>
+		<PROPERTY_HELP>Eğer evet olarak seçilirse, seri takibi yapılan ürünlerin serilerinin girilmesi zorunludur.</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+	<OBJECT_PROPERTY>
+		<PROPERTY>xml_multiple_counting_fis</PROPERTY>
+		<PROPERTY_DETAIL>Aynı Günde Aynı Depoya Birden Fazla Sayım Fişi Girilebilsin mi?</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>select</PROPERTY_TYPE>
+		<PROPERTY_VALUES>1,0</PROPERTY_VALUES>
+		<PROPERTY_NAMES>Evet,Hayır</PROPERTY_NAMES>
+		<PROPERTY_DEFAULT>0</PROPERTY_DEFAULT>
+		<PROPERTY_HELP>Evet olarak seçildiğinde belirli bir tarih için aynı deponun aynı lokasyonuna birden fazla sayım fişi girilmesine izin verilir.</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+	<OBJECT_PROPERTY>
+		<PROPERTY>xml_location_auth_entry</PROPERTY>
+		<PROPERTY_DETAIL>Giriş Depo Lokasyon Yetkisi</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>select</PROPERTY_TYPE>
+		<PROPERTY_VALUES>-1,1,0</PROPERTY_VALUES>
+		<PROPERTY_NAMES>Default,Tüm Lokasyonlar,Yetkili Lokasyonlar</PROPERTY_NAMES>
+		<PROPERTY_DEFAULT></PROPERTY_DEFAULT>
+		<PROPERTY_HELP>Eğer Tüm Lokasyonlar Seçilirse Yetki Kontrollerinden Bağımsız Olarak Tüm Lokasyonlar Seçilebilir.</PROPERTY_HELP>
+	</OBJECT_PROPERTY>	
+	<OBJECT_PROPERTY>
+		<PROPERTY>xml_location_auth_outer</PROPERTY>
+		<PROPERTY_DETAIL>Çıkış Depo Lokasyon Yetkisi</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>select</PROPERTY_TYPE>
+		<PROPERTY_VALUES>-1,1,0</PROPERTY_VALUES>
+		<PROPERTY_NAMES>Default,Tüm Lokasyonlar,Yetkili Lokasyonlar</PROPERTY_NAMES>
+		<PROPERTY_DEFAULT></PROPERTY_DEFAULT>
+		<PROPERTY_HELP>Eğer Tüm Lokasyonlar Seçilirse Yetki Kontrollerinden Bağımsız Olarak Tüm Lokasyonlar Seçilebilir.</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+</OBJECT_PROPERTIES>

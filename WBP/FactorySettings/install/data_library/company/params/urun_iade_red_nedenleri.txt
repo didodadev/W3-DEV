@@ -1,0 +1,2 @@
+INSERT INTO [SETUP_PROD_CANCEL_CATS]([CANCEL_CAT]) Values( 'Yasal Süreç Aşımı');
+INSERT INTO [SETUP_PROD_CANCEL_CATS]([CANCEL_CAT]) Values( 'Yanlış Beyan');

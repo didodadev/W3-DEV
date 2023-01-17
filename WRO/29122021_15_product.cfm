@@ -1,0 +1,18 @@
+<!-- Description : holistic 21.2 sürümü tablolar ve kolon değişiklikleri
+Developer: Fatih Kara
+Company : Workcube
+Destination: Product -->
+<querytag>  
+IF EXISTS (SELECT 'Y' FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_SCHEMA = '@_dsn_product_@' AND TABLE_NAME = 'PRODUCT_IMAGES' AND COLUMN_NAME = 'DETAIL')
+BEGIN
+    IF EXISTS (SELECT *  FROM sys.indexes  WHERE name='NCL_PRODUCT_IMAGES_1' AND object_id = OBJECT_ID('[PRODUCT_IMAGES]'))
+    BEGIN
+        DROP INDEX [NCL_PRODUCT_IMAGES_1] ON [PRODUCT_IMAGES] 
+    END;
+            ALTER TABLE PRODUCT_IMAGES ALTER COLUMN DETAIL nvarchar(max) NULL;
+    IF NOT EXISTS (SELECT *  FROM sys.indexes  WHERE name='NCL_PRODUCT_IMAGES_1' AND object_id = OBJECT_ID('[PRODUCT_IMAGES]'))
+    BEGIN
+        CREATE NONCLUSTERED INDEX [NCL_PRODUCT_IMAGES_1] ON [PRODUCT_IMAGES] ([PRODUCT_ID] ASC,[IMAGE_SIZE] ASC,[PRODUCT_IMAGEID] ASC,[PATH] ASC,[PATH_SERVER_ID] ASC)
+    END;
+END;
+</querytag>

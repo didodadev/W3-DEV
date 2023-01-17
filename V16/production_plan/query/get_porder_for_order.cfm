@@ -1,0 +1,23 @@
+<cfquery name="get_prod_orders" datasource="#DSN3#">
+	SELECT
+		PO.P_ORDER_ID,
+		PO.P_ORDER_NO,
+		P.PRODUCT_NAME,
+		S.PROPERTY,
+		S.STOCK_ID,
+		P.PRODUCT_ID,
+		PO.QUANTITY,
+		PO.START_DATE,
+		PO.STATUS_ID
+	FROM
+		PRODUCTION_ORDERS PO,
+		PRODUCT P,
+		STOCKS S
+	WHERE
+		S.STOCK_ID=PO.STOCK_ID
+	AND
+		S.PRODUCT_ID=P.PRODUCT_ID
+	AND	
+		PO.ORDER_ID=#attributes.order_id#
+</cfquery>
+

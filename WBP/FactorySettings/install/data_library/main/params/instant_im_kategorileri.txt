@@ -1,0 +1,6 @@
+INSERT INTO [SETUP_IM]([IMCAT],[IMCAT_ICON],[IMCAT_LINK_TYPE]) Values( 'Whatsapp',Null,Null);
+INSERT INTO [SETUP_IM]([IMCAT],[IMCAT_ICON],[IMCAT_LINK_TYPE]) Values( 'Skype',Null,Null);
+INSERT INTO [SETUP_IM]([IMCAT],[IMCAT_ICON],[IMCAT_LINK_TYPE]) Values( 'Messenger',Null,Null);
+INSERT INTO [SETUP_IM]([IMCAT],[IMCAT_ICON],[IMCAT_LINK_TYPE]) Values( 'Telegram',Null,Null);
+INSERT INTO [SETUP_IM]([IMCAT],[IMCAT_ICON],[IMCAT_LINK_TYPE]) Values( 'Google Meet',Null,Null);
+

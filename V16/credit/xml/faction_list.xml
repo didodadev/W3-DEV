@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SETUP_SITE>
+	<SETUPSITE>
+		<LINK_NAME> Kredi Ödemesi</LINK_NAME> 
+		<LINK_FILE>credit.popup_add_credit_payment,credit.popup_upd_credit_payment</LINK_FILE> 
+		<LINK_DETAIL> Kredi Ödemesi</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME> Kredi Tahsilatı</LINK_NAME> 
+		<LINK_FILE>credit.popup_add_credit_revenue,credit.popup_upd_credit_revenue</LINK_FILE> 
+		<LINK_DETAIL> Kredi Tahsilatı</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME> Krediler</LINK_NAME> 
+		<LINK_FILE>credit.list_credit_contract</LINK_FILE> 
+		<LINK_DETAIL> Krediler</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Kredi Sözleşmesi</LINK_NAME> 
+		<LINK_FILE>credit.add_credit_contract,credit.upd_credit_contract</LINK_FILE> 
+		<LINK_DETAIL>Kredi Sözleşmesi</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Menkul Kıymet Getiri Listesi</LINK_NAME> 
+		<LINK_FILE>credit.securities_list_interest</LINK_FILE> 
+		<LINK_DETAIL>Menkul Kıymet Getiri Listesi</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Menkul Kıymet Getiri Hesaba Geçiş</LINK_NAME> 
+		<LINK_FILE>credit.list_stockbonds</LINK_FILE> 
+		<LINK_DETAIL>Menkul Kıymet Getiri Hesaba Geçiş</LINK_DETAIL>
+	</SETUPSITE>
+</SETUP_SITE>
+

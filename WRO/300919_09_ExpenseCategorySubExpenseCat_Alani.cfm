@@ -1,0 +1,10 @@
+<!-- Description : EXPENSE_CATEGORY tablosuna IS_SUB_EXPENSE_CAT alanı açıldı
+Developer: Melek KOCABEY
+Company : Workcube
+Destination: Period -->
+<querytag>
+    IF NOT EXISTS (SELECT 'Y' FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME = 'EXPENSE_CATEGORY' AND TABLE_SCHEMA = '@_dsn_period_@' AND COLUMN_NAME = 'IS_SUB_EXPENSE_CAT')
+    BEGIN
+        ALTER TABLE EXPENSE_CATEGORY ADD IS_SUB_EXPENSE_CAT BIT NULL
+    END;
+</querytag>

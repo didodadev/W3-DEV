@@ -1,0 +1,10 @@
+<cfquery name="GET_ACTION_BILL" datasource="#dsn2#">
+	SELECT
+		INVOICE_NUMBER,
+		RECORD_DATE,
+		RECORD_EMP
+	FROM
+		INVOICE
+	WHERE
+		INVOICE_ID=#BILL_ID#
+</cfquery>

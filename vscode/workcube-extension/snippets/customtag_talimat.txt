@@ -1,0 +1,62 @@
+CUSTOM TAGS SNIPPETS
+
+    - Custom Tag'ler iki kısım halinde eklenecektir.
+        1. Kod Tamamlama
+        2. Parametrelerin Eklenmesi
+
+    1. KOD TAMAMLAMA
+        * Örnek:
+
+            1. "Workcube <cf_box>":{
+            2.     "prefix": "wrk:cf_box",
+            3.     "body": [
+            4.         "<cf_box${1}>",
+            5.         "</cf_box>"
+            6.     ]
+               }
+
+        1. Tamamlama kısmında görünecek, custom tag adıdır.
+        2. Tamamlamanın bulunması için yazılacak kısayol. wrk:tag_ismi şeklinde girilmelidir.
+        3-4-5-6. Snippet çalıştırıldığında, editöre eklenecek olan kod bloğudur. Dizi olarak eklenir, her satır çift tırnaklar arasında yazılmalı.
+            - ${1} -> Snippet çalıştıktan sonra imlecin, kod bloğu içinde nerede olacağını belirtir. (Tab Stop)
+            - ${1} ${2} ${3} şeklinde artırılabilir. Her tab'a basıldığında bir sonrakine geçer.
+            - ${0} -> Tab stop için bitiş noktasıdır. Nereye yazılırsa, son tab stop noktası orasıdır.
+        
+    2. PARAMETRELERİN EKLENMESİ
+        * Örnek:
+
+            1. "cf_box_sub": {
+            2.     "prefix": "cf_box_sub",
+            3.     "body": "${1| , title=\"\", resize=\"\", copllapsable=\"\", export=\"\"|}$0"
+               }
+
+
+            1. Eklenecek parametleri tanımlaması için bir isim girilir.
+                * İsim girilirken: customtag_ismi_sub şeklinde YAZILMALIDIR.
+            2. Üstteki isim ile aynı girilmelidir.
+            3. Bu kısmın yapısı önemlidir.
+                ${1| , param1=\"\", param2=\"\"|}$0
+            - İki adet | (pipe) işareti arasına, çıkması istenen parametreler girilmelidir.
+            - Çift tırnaklardan önce ters bölü (\) işareti eklenmelidir.
+    
+    ZORUNLU PARAMETRELERİN EKLENMESİ
+        - Bazı custom tag'ler için, kullanılması zorunlu parametreler mevcut. Bunlar, custom tag ile birlikte eklenmeli, sub içine de ayrıca eklenmelidir.
+
+        * Örnek:
+            Custom Tag:
+
+            "Workcube <cf_loader>": {
+                "prefix": "wrk:cf_loader",
+                "body": [
+                    "<cf_loader append_element=\"elementid\" href=\"\" totalCount=\"\"${1}>"
+                ]
+            }
+
+            Sub:
+
+            "cf_loader_sub":{
+                "prefix": "wsub:cf_loader_sub",
+                "body": "${1| , data_type=\"HTML\", append_element=\"\", href=\"\", totalCount=\"0\", startrow=\"0\", maxrows=\"0\", win_scroll=\"1\"|}"
+            }
+
+        - Eğer parametrelerin default değerleri varsa, üstteki örnekteki gibi bu değerler de eklenmelidir.

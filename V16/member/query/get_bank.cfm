@@ -1,0 +1,28 @@
+<cfquery name="GET_BANK" datasource="#DSN#">
+	SELECT 
+		COMPANY_BANK_ID,
+		COMPANY_BANK,
+		COMPANY_BANK_CODE,
+		COMPANY_IBAN_CODE,
+		COMPANY_BANK_BRANCH,
+		COMPANY_ACCOUNT_NO,
+		COMPANY_BANK_MONEY,
+		COMPANY_ACCOUNT_DEFAULT,
+		COMPANY_BANK_BRANCH_CODE,
+        RECORD_DATE,
+        RECORD_EMP,
+        RECORD_IP,
+        UPDATE_DATE,
+        UPDATE_EMP,
+        UPDATE_IP
+	FROM 
+		COMPANY_BANK
+		<cfif isDefined("URL.BID")>
+	WHERE 
+		COMPANY_BANK_ID = #URL.BID#
+		<cfelse>
+	WHERE 
+		COMPANY_ID = #URL.CPID#
+		</cfif>
+</cfquery>
+

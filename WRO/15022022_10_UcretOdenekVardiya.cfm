@@ -1,0 +1,17 @@
+
+<!-- Description :  Ücret kartı vardiya alanı integer a çevirildi.
+Developer: Esma Uysal
+Company : Workcube
+Destination: Main-->
+<querytag>
+    IF EXISTS ( SELECT 'Y' FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME='EMPLOYEES_IN_OUT' AND TABLE_SCHEMA = '@_dsn_main_@' AND COLUMN_NAME='IS_VARDIYA')
+    BEGIN
+        ALTER TABLE EMPLOYEES_IN_OUT 
+        ALTER COLUMN IS_VARDIYA int
+    END;
+    IF EXISTS ( SELECT 'Y' FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME='EMPLOYEES_IN_OUT_HISTORY' AND TABLE_SCHEMA = '@_dsn_main_@' AND COLUMN_NAME='IS_VARDIYA')
+    BEGIN
+        ALTER TABLE EMPLOYEES_IN_OUT_HISTORY 
+        ALTER COLUMN IS_VARDIYA int
+    END;
+</querytag>

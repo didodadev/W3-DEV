@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<OBJECT_PROPERTIES>
+    <OBJECT_PROPERTY>
+        <PROPERTY>is_budget_transfer_demand</PROPERTY>
+        <PROPERTY_DETAIL>Birden fazla satırdan talep oluşturulsun.</PROPERTY_DETAIL>
+        <PROPERTY_TYPE>select</PROPERTY_TYPE>
+        <PROPERTY_VALUES>1,0</PROPERTY_VALUES>
+        <PROPERTY_NAMES>Evet,Hayır</PROPERTY_NAMES>
+        <PROPERTY_DEFAULT>0</PROPERTY_DEFAULT>
+        <PROPERTY_HELP>Birden fazla satır seçimi yapılamaması</PROPERTY_HELP>
+    </OBJECT_PROPERTY>
+    <OBJECT_PROPERTY>
+        <PROPERTY>is_budget_compliance_check</PROPERTY>
+        <PROPERTY_DETAIL>Bütçe Uygunlukta tekli satır seçimi yapılmadan aktarım gercekleşsin.</PROPERTY_DETAIL>
+        <PROPERTY_TYPE>select</PROPERTY_TYPE>
+        <PROPERTY_VALUES>1,0</PROPERTY_VALUES>
+        <PROPERTY_NAMES>Evet,Hayır</PROPERTY_NAMES>
+        <PROPERTY_DEFAULT>0</PROPERTY_DEFAULT>
+        <PROPERTY_HELP>istenilen satırın aktarılması için evet toplu aktarım için hayır seçilmelidir.</PROPERTY_HELP>
+    </OBJECT_PROPERTY>
+    <OBJECT_PROPERTY>
+        <PROPERTY>is_control_type</PROPERTY>
+        <PROPERTY_DETAIL>Bütçe Uygunluk Kontrol Tipi</PROPERTY_DETAIL>
+        <PROPERTY_TYPE>select</PROPERTY_TYPE>
+        <PROPERTY_VALUES>0,1,2</PROPERTY_VALUES>
+        <PROPERTY_NAMES>Seçiniz,Masraf Merkezi ve Bütçe Kategori Bazında,Masraf Merkezi ve Proje Bazında</PROPERTY_NAMES>
+        <PROPERTY_DEFAULT>0</PROPERTY_DEFAULT>
+        <PROPERTY_HELP>Kontrol Tipi:proje veya bütçe kategori bazında işlem görmesini sağlar.</PROPERTY_HELP>
+    </OBJECT_PROPERTY>
+    <OBJECT_PROPERTY>
+        <PROPERTY>x_to_position_code</PROPERTY>
+        <PROPERTY_DETAIL>Sorumlu Alanında Default Gelecek Kullanıcı</PROPERTY_DETAIL>
+        <PROPERTY_TYPE>input</PROPERTY_TYPE>
+        <PROPERTY_VALUES></PROPERTY_VALUES>
+        <PROPERTY_NAMES></PROPERTY_NAMES>
+        <PROPERTY_DEFAULT></PROPERTY_DEFAULT>
+        <PROPERTY_HELP>Pozisyon ID ye göre çalışır.</PROPERTY_HELP>
+    </OBJECT_PROPERTY>
+    <OBJECT_PROPERTY>
+        <PROPERTY>is_control_type</PROPERTY>
+        <PROPERTY_DETAIL>Bütçe Uygunluk Kontrolunde Kontrol Tipi "Bütçe Kategori Bazında" Gelsin</PROPERTY_DETAIL>
+        <PROPERTY_TYPE>select</PROPERTY_TYPE>
+        <PROPERTY_VALUES>1,0</PROPERTY_VALUES>
+        <PROPERTY_NAMES>Evet,Hayır</PROPERTY_NAMES>
+        <PROPERTY_DEFAULT>0</PROPERTY_DEFAULT>
+        <PROPERTY_HELP></PROPERTY_HELP>
+    </OBJECT_PROPERTY>
+    <OBJECT_PROPERTY>
+        <PROPERTY>xml_proje_cat_id</PROPERTY>
+        <PROPERTY_DETAIL>Proje Kategori ID</PROPERTY_DETAIL>
+        <PROPERTY_TYPE>input</PROPERTY_TYPE>
+        <PROPERTY_VALUES></PROPERTY_VALUES>
+        <PROPERTY_NAMES></PROPERTY_NAMES>
+        <PROPERTY_DEFAULT></PROPERTY_DEFAULT>
+        <PROPERTY_HELP>Proje Kategori ID değerlerine göre projeyi getirir .</PROPERTY_HELP>
+    </OBJECT_PROPERTY>
+</OBJECT_PROPERTIES>

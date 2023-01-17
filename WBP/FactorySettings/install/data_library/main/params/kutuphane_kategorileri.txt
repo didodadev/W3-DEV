@@ -1,0 +1,5 @@
+INSERT INTO [LIBRARY_CAT]([LIBRARY_CAT],[DETAIL]) Values( 'Roman','Roman');
+INSERT INTO [LIBRARY_CAT]([LIBRARY_CAT],[DETAIL]) Values( 'Hikaye','Hikaye');
+INSERT INTO [LIBRARY_CAT]([LIBRARY_CAT],[DETAIL]) Values( 'Bilgi','Bilgi');
+INSERT INTO [LIBRARY_CAT]([LIBRARY_CAT],[DETAIL]) Values( 'Biyografi','Biyografi');
+

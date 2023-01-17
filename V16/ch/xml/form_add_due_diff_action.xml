@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<OBJECT_PROPERTIES>
+	<OBJECT_PROPERTY>
+		<PROPERTY>is_invoice_no_product</PROPERTY>
+		<PROPERTY_DETAIL>Fatura Bilgisi Satırlara Yazılsın</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>select</PROPERTY_TYPE>
+		<PROPERTY_VALUES>0,1</PROPERTY_VALUES>
+		<PROPERTY_NAMES>Hayır,Evet</PROPERTY_NAMES>
+		<PROPERTY_DEFAULT>0</PROPERTY_DEFAULT>
+		<PROPERTY_HELP>Eğer evet olarak seçilirse vade farkı için eklenen ödeme planı satırında ürün adı ile birlikte fatura numarası da yazılır.</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+	<OBJECT_PROPERTY>
+		<PROPERTY>is_action_date</PROPERTY>
+		<PROPERTY_DETAIL>İşlem Tarihi Listelemeden Önce Seçilsin</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>select</PROPERTY_TYPE>
+		<PROPERTY_VALUES>0,1</PROPERTY_VALUES>
+		<PROPERTY_NAMES>Hayır,Evet</PROPERTY_NAMES>
+		<PROPERTY_DEFAULT>0</PROPERTY_DEFAULT>
+		<PROPERTY_HELP>İşlem Tarihi Listelemeden Önce Seçilsin</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+	<OBJECT_PROPERTY>
+		<PROPERTY>xml_money_type</PROPERTY>
+		<PROPERTY_DETAIL>Kur Tipi</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>select</PROPERTY_TYPE>
+		<PROPERTY_VALUES>1,2,3,4</PROPERTY_VALUES>
+		<PROPERTY_NAMES>Alış,Satış,Efektif Alış,Efektif Satış</PROPERTY_NAMES>
+		<PROPERTY_DEFAULT>2</PROPERTY_DEFAULT>
+		<PROPERTY_HELP>Kur Tipi:Kurun alış,satış,efektif alış ya da efektif satış cinsinden hesaplanmasını sağlar.</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+	<OBJECT_PROPERTY>
+		<PROPERTY>due_day_info</PROPERTY>
+		<PROPERTY_DETAIL>Vade Farkı Günü</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>input</PROPERTY_TYPE>
+		<PROPERTY_VALUES></PROPERTY_VALUES>
+		<PROPERTY_NAMES></PROPERTY_NAMES>
+		<PROPERTY_DEFAULT></PROPERTY_DEFAULT>
+		<PROPERTY_HELP>Eğer değer girilirse belgenin işlem tarihine bu değeri ekleyip oluşan tarihe göre vade farkı hesaplar.</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+</OBJECT_PROPERTIES>

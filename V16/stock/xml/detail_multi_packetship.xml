@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<OBJECT_PROPERTIES>
+	<OBJECT_PROPERTY>
+		<PROPERTY>x_equipment_planning_info</PROPERTY>
+		<PROPERTY_DETAIL>Sevkiyat Bilgileri Planlama Bazında Görünsün</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>select</PROPERTY_TYPE>
+		<PROPERTY_VALUES>1,0</PROPERTY_VALUES>
+		<PROPERTY_NAMES>Evet,Hayır</PROPERTY_NAMES>
+		<PROPERTY_DEFAULT>0</PROPERTY_DEFAULT>
+		<PROPERTY_HELP>Evet seçildiğinde listeleme sayfasında Plan Tarihi filtresi açılır ve girilen tarihe göre arama yapılır.</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+	<OBJECT_PROPERTY>
+		<PROPERTY>xml_planning_date</PROPERTY>
+		<PROPERTY_DETAIL>Plan Tarihi Zorunlu Olsun mu ?</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>select</PROPERTY_TYPE>
+		<PROPERTY_VALUES>1,0</PROPERTY_VALUES>
+		<PROPERTY_NAMES>Evet,Hayır</PROPERTY_NAMES>
+		<PROPERTY_DEFAULT>0</PROPERTY_DEFAULT>
+		<PROPERTY_HELP>Plan Tarihi Alanı Sevkiyat Bilgileri Planlama Bazında Görünsün mü Xml'ine Bağlı Olarak Çalışır.</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+	<OBJECT_PROPERTY>
+		<PROPERTY>x_ship_group_dept</PROPERTY>
+		<PROPERTY_DETAIL>Satırdaki Depoya Göre İrsaliyeleştirme/Faturalandırma İşlemi Yapılsın</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>select</PROPERTY_TYPE>
+		<PROPERTY_VALUES>1,0</PROPERTY_VALUES>
+		<PROPERTY_NAMES>Evet,Hayır</PROPERTY_NAMES>
+		<PROPERTY_DEFAULT>0</PROPERTY_DEFAULT>
+		<PROPERTY_HELP>Evet seçildiğinde Toplu Sevkiyat detayındaki Çıkış Depoya değil, sevkiyatın bağlı olduğu siparişin detayındaki depoya göre irsaliyeleştirme/faturalandırma yapılır.</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+	<OBJECT_PROPERTY>
+		<PROPERTY>x_member_cat</PROPERTY>
+		<PROPERTY_DETAIL>Fatura Kaydedilecek Kurumsal Üye Kategori ID'leri</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>input</PROPERTY_TYPE>
+		<PROPERTY_VALUES></PROPERTY_VALUES>
+		<PROPERTY_NAMES></PROPERTY_NAMES>
+		<PROPERTY_DEFAULT></PROPERTY_DEFAULT>
+		<PROPERTY_HELP>Buraya girilen kategorilere ait üyelerin sevkiyat kayıtlarında fatura kaydedilir.</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+	<OBJECT_PROPERTY>
+		<PROPERTY>x_consumer_cat</PROPERTY>
+		<PROPERTY_DETAIL>Fatura Kaydedilecek Bireysel Üye Kategori ID'leri</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>input</PROPERTY_TYPE>
+		<PROPERTY_VALUES></PROPERTY_VALUES>
+		<PROPERTY_NAMES></PROPERTY_NAMES>
+		<PROPERTY_DEFAULT></PROPERTY_DEFAULT>
+		<PROPERTY_HELP>Buraya girilen kategorilere ait üyelerin sevkiyat kayıtlarında fatura kaydedilir.</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+	<OBJECT_PROPERTY>
+		<PROPERTY>x_edit_ship_row_amount</PROPERTY>
+		<PROPERTY_DETAIL>Sevkiyat Detayı / Yüklenen Bilgisi Değerini Değiştirebilecek Şirket Idleri</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>input</PROPERTY_TYPE>
+		<PROPERTY_VALUES></PROPERTY_VALUES>
+		<PROPERTY_NAMES>Evet,Hayır</PROPERTY_NAMES>
+		<PROPERTY_DEFAULT>1</PROPERTY_DEFAULT>
+		<PROPERTY_HELP>Buraya İlgili Şirket Idleri Girilir, Birden Fazla Id Girilebilir, İfadeler Virgül İle Ayrılmalıdır. Nümerik Değerler Olmalıdır.</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+</OBJECT_PROPERTIES>

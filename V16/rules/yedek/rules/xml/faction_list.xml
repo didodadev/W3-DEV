@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<SETUP_SITE>
+	<SETUPSITE>
+		<LINK_NAME>Literatür Welcome Dil Seçeneği</LINK_NAME>
+		<LINK_FILE>rule.welcome</LINK_FILE>
+		<LINK_DETAIL>>Literatür Welcome Dil Seçeneği</LINK_DETAIL>
+	</SETUPSITE>
+</SETUP_SITE>

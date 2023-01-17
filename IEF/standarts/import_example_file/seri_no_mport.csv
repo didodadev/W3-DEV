@@ -1,0 +1,1 @@
+﻿1- Seri No ;2- Lot No ;3- Referans No ;4- Stok Kodu ( Zorunlu );5- Depo ID ( Zorunlu );6- Lokasyon ID ( Zorunlu );7- Alış Garanti Kategorisi Id ( Zorunlu ) ---> Sisteme alınacak serilerin kategorisi ;8- Garanti Başlama Tarihi - gg/aa/yyyy ( Zorunlu );9- Garanti Bitiş Tarihi - gg/aa/yyyy ( Zorunlu );10- Birim Miktarı ( Zorunlu )

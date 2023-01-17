@@ -1,0 +1,9 @@
+<cfquery name="GET_ASSET_STATE" datasource="#DSN#">
+	SELECT
+		ASSET_STATE_ID,
+		ASSET_STATE
+	FROM 
+		ASSET_STATE
+	ORDER BY
+		ASSET_STATE
+</cfquery>

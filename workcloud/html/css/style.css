@@ -1,0 +1,223 @@
+
+.install_panel{
+    padding:50px 100px;
+}
+
+section{
+    margin-top:30px;
+}
+
+.paddingLess{
+    padding-left:0px !important;
+    padding-right:0px !important;
+}
+
+.step_area{
+    width:100%;
+    min-height:50px;
+    float:left;
+
+}
+
+.content{
+    float: left;
+    min-height: 50px;
+    width: 215px;
+    margin: 22px 0 0 10px;
+}
+
+.content .title{
+    font-size:16px;
+}
+
+.content .text{
+    margin-top:10px;
+    color:#8c8c8c;
+}
+
+.circle {
+    float: left;
+    width: 45px;
+    height: 45px;
+    text-align: center;
+    padding: 12px 0;
+    font-size: 18px;
+    margin-top: 10px;
+    border-radius: 50px;
+    font-weight: bold;
+    background-color: orange;
+    color: white;
+
+}
+
+.stepwizard {
+margin-left: 5px;
+margin-right: 5px;
+
+}
+
+.stepactive{
+    background-color: green!important;
+}
+
+.stepwizard:before {
+    top: 10px;
+    bottom: 10px;
+    margin-left: 22px;
+    position: absolute;
+    content: " ";
+    width: 3px;
+    height: 100%;
+    background-color: orange;
+    z-index: -1;
+    
+}
+
+
+.message_header {
+    display: block;
+    padding: 10px 5px;
+    font-weight: bold;
+    color: #fff;
+    text-align: center;
+    background-color: #7be85f;
+
+}
+
+.info_header {
+    display: block;
+    padding: 10px 5px;
+    font-weight: bold;
+    color: #6d6d6d;
+    text-align: center;
+    border: solid 3px #4bbfde;
+    border-radius: 15px;
+
+}
+
+html, body  {
+    
+    height:  100%;
+    padding: 0;
+    margin: 0;
+  
+}
+
+.warningicon{
+    text-align: center;
+}
+
+    .warningicon i{
+        color: #afafaf;
+        font-size: 40px;
+    }
+
+ol.warning{
+    padding:0;
+    margin:0 0 10px 0;
+}
+
+    ol.warning li{
+        padding-right: 15px;
+        margin-top: 15px;
+        border-right: solid 3px #ff7676;
+    }
+
+.button-panel{
+    text-align: right;
+}
+
+form .btn{
+    padding:6px 30px !important; 
+}
+
+    span.loading{
+        width: 40px;
+        height: 40px;
+        margin-right: 10px;
+    }
+
+@media only screen and (max-width:768px) {
+    .install_panel{
+        padding: 8px;
+    }
+
+    header h3{
+        font-size: 14px;
+    }
+
+
+    .step_area{
+        width: auto;
+        margin-left: 5px;
+    }
+    
+    .content{
+        display: none;
+    }
+    
+        .stepwizard {
+            width: 100%;
+            min-height: 50px;
+            float: left;
+            margin: 0 5px 25px 5px;
+        }
+        
+        .stepwizard:before {
+            display: none;
+        }
+
+}
+
+/* Ui-İnfo */
+.ui-info-text{background-color: #f3f3f3; float:left;width:100%;padding:5px 10px;margin-bottom: 15px;}
+.ui-info-text h1, .ui-info-text h2, .ui-info-text h3, .ui-info-text h4, .ui-info-text h5, .ui-info-text h6{padding:0!important;font-size:14px;font-weight:bold!important;color:#555;}
+.ui-info-text h2{margin:0 0 5px 0!important;}
+.ui-info-text > span{display:block;font-size:14px;margin:0 0 10px 0;color:#555;}
+.ui-info-text p img{height:initial!important;width:initial!important;max-width:100%;}
+.ui-info-text p{font-size:12px;line-height:20px;color:#555;margin:0 0 5px 0;}
+.ui-info-text a{font-family:'Roboto';font-size:13px;color:#555;font-weight:bold;}
+.ui-info-text > ul{padding:0 0 0 10px;margin:10px 0;}
+.ui-info-text > ul li{list-style-type:none;text-decoration:none;margin:0 0 5px 15px;position:relative;font-family:'Roboto';font-size:11px;color:#555;}
+.ui-info-text > ul li:last-child{margin:0 0 0 15px!important;}
+.ui-info-text > ul li:before{content:'';position:absolute;left:-15px;top:50%;margin-top:-4px;width:8px;height:8px;background-color:#FF9800;}
+.ui-info-text > ul li a{display:block;color:#3572b0;}
+.ui-info-text p a{color:#3572b0;}
+.ui-info-text p a:hover{color:#3572b0;text-decoration:none;}
+.ui-info-text .ui-block{float:left;width:100%;}
+.ui-info-text .ui-block .col{padding-left:0;}
+.ui-info-text .ui-customTooltip{margin:0!important;}
+
+/* Ui-Form */
+.ui-form-list, .ui-form-list-btn{float: left; width:100%; margin-top: 10px;}
+.ui-form-list .row{width:100%;}
+.ui-form-list .form-group{height: 65px; margin:0 0 5px 0;}
+
+/*Ui-table-list*/
+
+.ui-table-list{width:100%;border-collapse:collapse;border-spacing:0;border:1px solid #bbb;}
+.ui-table-list span[class*="ctl-"]{display:block;width:30px;height:30px;margin:0 auto;}
+.ui-table-list > thead > tr > th{padding: 10px 5px;}
+.ui-table-list > thead > tr > th a{color:#555;display:block;text-align:center;transition:.4s;}
+.ui-table-list > thead > tr > th a i{color:#555;font-size:14px;font-weight:normal;transition:.4s;}
+.ui-table-list > thead > tr > th a:hover{color:#44b6ae;transition:.4s;text-decoration:none;}
+.ui-table-list > thead > tr > th a:hover i{color:#44b6ae;transition:.4s;}
+.ui-table-list > thead a > i{display:block;text-align:center;font-size:13px;color:#44b6ae;}
+.ui-table-list > tbody a{font-size:12px;color:#44b6ae;text-decoration:none;transition:.4s;}
+.ui-table-list a i{font-size:12px;color:#555!important;transition:.4s;}
+.ui-table-list a:hover{text-decoration:none;color:#44b6ae;transition:.4s;}
+.ui-table-list a:hover i{color:#44b6ae!important;transition:.4s;}
+.ui-table-list > tfoot > tr > td > a > i, .ui-table-list > tbody > tr > td > a > i, .ui-table-list > thead > tr > td > a > i{display:block;text-align:center;font-size:12px;color:#555;transition:.4s;}
+.ui-table-list > tfoot > tr > td > a > i:hover, .ui-table-list > tbody > tr > td > a > i:hover, .ui-table-list > thead > tr > td > a > i:hover{color:#44b6ae;transition:.4s;}
+.ui-table-list > tfoot > tr > td, .ui-table-list > tbody > tr > td, .ui-table-list > thead > tr > td{border:1px solid #bbb;font-size:12px;padding:6px 5px !important;color:#555;min-width:30px;}
+.ui-table-list > tfoot > tr, .ui-table-list > tbody > tr, .ui-table-list > thead > tr{background-color:transparent;transition:.4s;}
+.ui-table-list > tfoot > tr, .ui-table-list > tbody > tr, .ui-table-list > thead > tr{transition:.4s;}
+.ui-table-list > tbody > tr:hover{background-color:rgba(255, 247, 0, 0.15)!important;transition:.4s;}
+.ui-table-list input[type="checkbox"]{width:25px;vertical-align:middle;}
+
+.fa-angle-down{cursor:pointer;}.activeTr{background:#f5f5f5;}.flagTrue{color:green;}.flagFalse{color:red;}.flagWarning{color:orange;}
+
+.pdnl{padding-left: 0 !important;}
+.pdnr{padding-right: 0 !important;}
+.pdnt{padding-top: 0 !important;}
+.pdnb{padding-bottom: 0 !important;}

@@ -1,0 +1,79 @@
+$font-family-base: "Roboto", sans-serif;
+$headings-font-family: "Raleway", sans-serif;
+$grid-gutter-width-base: 30px;
+$headings-font-weight: 600;
+$body-font-weight: 400;
+$white: #FFFFFF;
+$black: #000000;
+$input-border-focus: #45B5AE;
+$post-title-font-size: 2rem;
+$post-category-font-size: 0.8rem;
+$widget-title: 1.1rem;
+$wigdet-item-title-font-size: 1rem;
+$wigdet-item-date-font-size: 0.8rem;
+$header-bold: 600;
+$space-m: $grid-gutter-width-base/2;
+// Renkler
+$gray-dark: #2B2F34 !default;
+$gray: #555D67 !default;
+$gray-light: #838990 !default;
+$gray-lighter: #D1D3D6 !default;
+$gray-lightest: #F0F0F1 !default;
+$grayblue-dark: #222d32 !default;
+$grayblue: #263238 !default;
+$grayblue-light: #4d575c !default;
+$grayblue-lighter: #757d80 !default;
+$grayblue-lightest: #9ca2a5 !default;
+$brand-primary: #1976d2 !default;
+$brand-success: #009688 !default;
+$brand-info: #00BCD4 !default;
+$brand-warning: #e1ab22 !default;
+$brand-danger: #e13022 !default;
+$body-bg: transparent;
+$more-color: $brand-info;
+$facebook-color: #3B5998 !default;
+$twitter-color: #1DA1F2 !default;
+$instagram-color: #833AB4 !default;
+$linkedin-color: #0077B5 !default;
+$googleplus-color: #DD4B39 !default;
+$youtube-color: #CD201F !default;
+$pinterest-color: #BD081C !default;
+$whatsapp-color: #25d366 !default;
+$envelope-color: $brand-success !default;
+// İntranet Color
+$intr-red: #f64b4b !default;
+$intr-purple: #9c44c5 !default;
+$intr-blue: #4889f4 !default;
+$intr-green: #13be54 !default;
+$intr-yellow: #f5cc0f !default;
+$intr-orange: #fd950f !default;
+$intr-bluedark: #056198 !default;
+$intr-greendark: #1c8459 !default;
+                    
+
+// Options
+$enable-flex: true;
+$enable-rounded: false;
+$enable-shadows: false;
+$enable-gradients: false;
+$enable-transitions: true;
+$enable-hover-media-query: true;
+$enable-grid-classes: true;
+$enable-print-styles: true;
+
+
+
+//Renkler
+$state-success-text: $brand-success !default;
+$state-success-bg: lighten($brand-success, 50%) !default;
+$state-success-border: darken($state-success-bg, 5%) !default;
+$state-info-text: $brand-info !default;
+$state-info-bg: lighten($brand-info, 50%) !default;
+$state-info-border: darken($state-info-bg, 7%) !default;
+$state-warning-text: $brand-warning !default;
+$state-warning-bg: lighten($brand-warning, 50%) !default;
+$mark-bg: $state-warning-bg !default;
+$state-warning-border: darken($state-warning-bg, 5%) !default;
+$state-danger-text: $brand-danger !default;
+$state-danger-bg: lighten($brand-danger, 50%) !default;
+$state-danger-border: darken($state-danger-bg, 5%) !default;

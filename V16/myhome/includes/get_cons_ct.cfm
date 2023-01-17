@@ -1,0 +1,12 @@
+<cfquery name="get_cons_ct" datasource="#dsn#">
+	SELECT 
+		*
+	FROM 
+		CONSUMER,
+		CONSUMER_CAT 
+	WHERE 
+		CONSUMER.CONSUMER_CAT_ID = CONSUMER_CAT.CONSCAT_ID AND 
+		CONSUMER.ISPOTANTIAL = 1
+	ORDER BY 
+		CONSUMER.RECORD_DATE DESC
+</cfquery>

@@ -1,0 +1,10 @@
+<cfquery name="GET_USER_GROUP_NAME" datasource="#DSN#">
+	SELECT 
+		USER_GROUP_NAME,
+		USER_GROUP_PERMISSIONS
+	FROM 
+		USER_GROUP
+	WHERE
+		USER_GROUP_ID = #attributes.USER_GROUP_ID#
+</cfquery>
+

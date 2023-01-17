@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<OBJECT_PROPERTIES>
+	<OBJECT_PROPERTY>
+		<PROPERTY>is_show_bakiye</PROPERTY>
+		<PROPERTY_DETAIL>Listede Bakiye Gösterilsin</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>select</PROPERTY_TYPE>
+		<PROPERTY_VALUES>1,0</PROPERTY_VALUES>
+		<PROPERTY_NAMES>Evet,Hayır</PROPERTY_NAMES>
+		<PROPERTY_DEFAULT>0</PROPERTY_DEFAULT>
+		<PROPERTY_HELP>Listede Bakiye Gösterilsin:Evet ise satırdaki işlemden önce ve sonra banka hesabında bulunan bakiyeyi gösteren sütunların görülmesini sağlar.</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+	<OBJECT_PROPERTY>
+		<PROPERTY>xml_select_acc_member</PROPERTY>
+		<PROPERTY_DETAIL>Cari veya Banka Seçme Zorunluluğu Olsun</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>select</PROPERTY_TYPE>
+		<PROPERTY_VALUES>1,0</PROPERTY_VALUES>
+		<PROPERTY_NAMES>Evet,Hayır</PROPERTY_NAMES>
+		<PROPERTY_DEFAULT>1</PROPERTY_DEFAULT>
+		<PROPERTY_HELP>Cari veya Banka Seçme Zorunluluğu Olsun:Evet ise listeleme yapabilmek için cari ya da banka hesaplarından birinin seçilmesini zorunlu kılar.</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+	<OBJECT_PROPERTY>
+		<PROPERTY>xml_show_bsy</PROPERTY>
+		<PROPERTY_DETAIL>Bireysel Üyelerde Temsilci Bilgisi Görüntülensin</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>select</PROPERTY_TYPE>
+		<PROPERTY_VALUES>1,0</PROPERTY_VALUES>
+		<PROPERTY_NAMES>Evet,Hayır</PROPERTY_NAMES>
+		<PROPERTY_DEFAULT>0</PROPERTY_DEFAULT>
+		<PROPERTY_HELP>Bireysel Üyelerde Temsilci Bilgisi Görüntülensin:Evet se bireysel üyeler için temsilci sütununda temsilci bilgisinin görülmesini sağlar.</PROPERTY_HELP>
+	</OBJECT_PROPERTY>	
+	<OBJECT_PROPERTY>
+		<PROPERTY>xml_show_iban_no</PROPERTY>
+		<PROPERTY_DETAIL>Üyenin IBAN Nosu gelsin</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>select</PROPERTY_TYPE>
+		<PROPERTY_VALUES>1,0</PROPERTY_VALUES>
+		<PROPERTY_NAMES>Evet,Hayır</PROPERTY_NAMES>
+		<PROPERTY_DEFAULT>0</PROPERTY_DEFAULT>
+		<PROPERTY_HELP>Üyenin IBAN Nosu gelsin:Evet ise IBAN sütununda üyeye tanımlanan iban bilgisinin görülmesini sağlar.</PROPERTY_HELP>
+	</OBJECT_PROPERTY>	
+	<OBJECT_PROPERTY>
+		<PROPERTY>xml_add_multi_files</PROPERTY>
+		<PROPERTY_DETAIL>Her Talimat İçin Bir Kere Dosya Oluşturulabilsin</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>select</PROPERTY_TYPE>
+		<PROPERTY_VALUES>1,0</PROPERTY_VALUES>
+		<PROPERTY_NAMES>Evet,Hayır</PROPERTY_NAMES>
+		<PROPERTY_DEFAULT>0</PROPERTY_DEFAULT>
+		<PROPERTY_HELP>Her Talimat İçin Bir Kere Dosya Oluşturulabilsin:Evet ise banka talimatlarının sadece bir kere havaleye dönüştürülmesine izin verir.</PROPERTY_HELP>
+	</OBJECT_PROPERTY>	
+	<OBJECT_PROPERTY>
+		<PROPERTY>xml_is_havale</PROPERTY>
+		<PROPERTY_DETAIL>Havale Durumu</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>select</PROPERTY_TYPE>
+		<PROPERTY_VALUES>0,1,2</PROPERTY_VALUES>
+		<PROPERTY_NAMES>Seçiniz,Oluşturuldu,Oluşturulmadı</PROPERTY_NAMES>
+		<PROPERTY_DEFAULT>2</PROPERTY_DEFAULT>
+		<PROPERTY_HELP>Havale Durumu:Havale durumu checkboxının oluşturuldu ya da oluşturulmadı olarak defaultta gelmesini sağlar.</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+	<OBJECT_PROPERTY>
+		<PROPERTY>xml_payment_type</PROPERTY>
+		<PROPERTY_DETAIL>Ödeme/Tahsilat Tipine Göre Filtrelensin</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>select</PROPERTY_TYPE>
+		<PROPERTY_VALUES>1,0</PROPERTY_VALUES>
+		<PROPERTY_NAMES>Evet,Hayır</PROPERTY_NAMES>
+		<PROPERTY_DEFAULT>0</PROPERTY_DEFAULT>
+		<PROPERTY_HELP>Ödeme/Tahsilat Tipine Göre Filtrelensin:Evet ise ödeme/tahsilat tipi filtresinin görülmesini sağlar.</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+</OBJECT_PROPERTIES>

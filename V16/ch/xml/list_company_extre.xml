@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<OBJECT_PROPERTIES>
+	<OBJECT_PROPERTY>
+		<PROPERTY>is_revenue_duedate</PROPERTY>
+		<PROPERTY_DETAIL>Kredi Kartı Tahsilatlarını İşlem Tarihinden Hesapla</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>select</PROPERTY_TYPE>
+		<PROPERTY_VALUES>1,0</PROPERTY_VALUES>
+		<PROPERTY_NAMES>Evet,Hayır</PROPERTY_NAMES>
+		<PROPERTY_DEFAULT>0</PROPERTY_DEFAULT>
+		<PROPERTY_HELP>Kredi Kartı Tahsilatlarını İşlem Tarihinden Hesapla; Evet ise ve ödeme performansı seçilmişse,kredi kartı tahsilatında seçilen işlem tarihinden vade farkı ve ortalama vade hesaplamaları yapılır;hayır ise ve ödeme performansı seçilmişse kredi kartı tahsilatında seçilen vade tarihinden vade farkı ve ortalama vade hesaplamaları yapılır.</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+	<OBJECT_PROPERTY>
+		<PROPERTY>is_make_age_date</PROPERTY>
+		<PROPERTY_DETAIL>Ödeme Performansı Tarih Aralığına Göre Çalışsın Mı?</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>select</PROPERTY_TYPE>
+		<PROPERTY_VALUES>1,0</PROPERTY_VALUES>
+		<PROPERTY_NAMES>Evet,Hayır</PROPERTY_NAMES>
+		<PROPERTY_DEFAULT>0</PROPERTY_DEFAULT>
+		<PROPERTY_HELP>Ödeme Performansının tarih aralığına göre çalışmasını sağlar. İşlem tarihine bakarken ödenmiş çek senetler için ödeme tarihinden ,diğer işlemler için de işlem tarihinden filtreleme yapar. Sadece ödeme performansı kısmında geçerlidir, açık işlemlerdeki bloğu etkilemez.</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+</OBJECT_PROPERTIES>

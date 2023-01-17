@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<OBJECT_PROPERTIES>
+	<OBJECT_PROPERTY>
+		<PROPERTY>xml_location_auth</PROPERTY>
+		<PROPERTY_DETAIL>Depo Lokasyon Yetkisi</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>select</PROPERTY_TYPE>
+		<PROPERTY_VALUES>-1,1,0</PROPERTY_VALUES>
+		<PROPERTY_NAMES>Default,Tüm Lokasyonlar,Yetkili Lokasyonlar</PROPERTY_NAMES>
+		<PROPERTY_DEFAULT></PROPERTY_DEFAULT>
+		<PROPERTY_HELP>Eğer Tüm Lokasyonlar Seçilirse Yetki Kontrollerinden Bağımsız Olarak Tüm Lokasyonlar Seçilebilir.</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+</OBJECT_PROPERTIES>

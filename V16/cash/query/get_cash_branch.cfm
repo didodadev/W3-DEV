@@ -1,0 +1,11 @@
+<!--- 	25072002 
+		CASH.LIST_CASHES SAYFASI ICIN GET_CASHES QUERY SI ICINE DAHIL EDILDI
+--->
+ <cfquery name="GET_CASH_BRANCH" datasource="#dsn#">
+	SELECT
+		*
+	FROM
+		BRANCH
+	WHERE
+		BRANCH_ID=#BRANCH_ID#
+</cfquery>

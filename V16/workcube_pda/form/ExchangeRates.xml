@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?> 
+<ExchangeRates>
+  <currency>
+   <name>British Pounds</name> 
+   <rate>1.95</rate> 
+  </currency>
+  <currency>
+   <name>Canadian Dollars</name> 
+   <rate>0.85</rate> 
+  </currency>
+  <currency>
+   <name>Japanese Yen</name> 
+   <rate>1.95</rate> 
+  </currency>
+  <currency>
+   <name>Euro</name> 
+   <rate>1.31</rate> 
+  </currency>
+</ExchangeRates>

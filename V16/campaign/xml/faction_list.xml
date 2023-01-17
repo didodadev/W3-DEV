@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<SETUP_SITE>
+	<SETUPSITE>
+		<LINK_NAME>Kampanya XML Setup</LINK_NAME>
+		<LINK_FILE>campaign.form_upd_campaign</LINK_FILE>
+		<LINK_DETAIL>Kampanya Güncelleme</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Kampanya XML Setup</LINK_NAME>
+		<LINK_FILE>campaign.form_add_campaign</LINK_FILE>
+		<LINK_DETAIL>Kampanya Ekleme</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Hedef Kitle XML Setup</LINK_NAME>
+		<LINK_FILE>campaign.form_add_target_market,campaign.form_upd_target_market</LINK_FILE>
+		<LINK_DETAIL>Hedef Kitle Ekleme/Güncelleme</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Organizasyon Takvimi XML Setup</LINK_NAME>
+		<LINK_FILE>campaign.list_organization_agenda</LINK_FILE>
+		<LINK_DETAIL>Organizasyon Takvimi</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Etkinlik XML Setup</LINK_NAME>
+		<LINK_FILE>campaign.add_organization</LINK_FILE>
+		<LINK_DETAIL>Etkinlik Ekleme / Güncelleme</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Hedef Kitle</LINK_NAME>
+		<LINK_FILE>campaign.popup_list_target_masses</LINK_FILE>
+		<LINK_DETAIL>Hedef Kitle Mail Gönderme</LINK_DETAIL>
+	</SETUPSITE>
+</SETUP_SITE>

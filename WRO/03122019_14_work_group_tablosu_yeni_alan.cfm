@@ -1,0 +1,17 @@
+<!-- Description : WORK_GROUP tablosuna ACTION_FIELD ve ACTION_ID alanları eklendi.
+Developer: Botan Kayğan
+Company : Workcube
+Destination: Main -->
+<querytag>
+    IF NOT EXISTS (SELECT 'Y' FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME = 'WORK_GROUP' AND COLUMN_NAME = 'ACTION_FIELD')
+    BEGIN
+        ALTER TABLE WORK_GROUP ADD
+        ACTION_FIELD nvarchar(100) NULL
+    END;
+
+    IF NOT EXISTS (SELECT 'Y' FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME = 'WORK_GROUP' AND COLUMN_NAME = 'ACTION_ID')
+    BEGIN
+        ALTER TABLE WORK_GROUP ADD
+        ACTION_ID int NULL
+    END;
+</querytag>

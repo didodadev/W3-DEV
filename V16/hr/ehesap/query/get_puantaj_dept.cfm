@@ -1,0 +1,53 @@
+<cfinclude template="../../query/get_emp_codes.cfm">
+<cfquery name="get_puantaj_dept" datasource="#DSN#">
+	SELECT DISTINCT
+		EMPLOYEES_IN_OUT.USE_SSK,
+		EMPLOYEES_IN_OUT.SOCIALSECURITY_NO,
+		EMPLOYEES_IN_OUT.START_CUMULATIVE_TAX,
+		EMPLOYEES_IN_OUT.IS_START_CUMULATIVE_TAX,
+		EMPLOYEES_PUANTAJ_ROWS.*,
+		BRANCH.IS_5510,
+		BRANCH.COMPANY_ID,
+		EMPLOYEES_IN_OUT.IS_5084 AS KISI_5084,
+		EMPLOYEES_IN_OUT.IS_5510 AS KISI_5510
+	FROM
+		EMPLOYEES,
+		EMPLOYEES_IN_OUT,
+		EMPLOYEES_PUANTAJ,
+		EMPLOYEES_PUANTAJ_ROWS,
+		BRANCH
+	WHERE
+		EMPLOYEES_IN_OUT.IN_OUT_ID = EMPLOYEES_PUANTAJ_ROWS.IN_OUT_ID AND
+		EMPLOYEES_PUANTAJ.SAL_MON = #attributes.SAL_MON# AND
+		EMPLOYEES_PUANTAJ.SAL_YEAR = #session.ep.period_year# AND
+		EMPLOYEES_IN_OUT.DEPARTMENT_ID IN (#dept_id_list#) AND
+		EMPLOYEES_PUANTAJ_ROWS.EMPLOYEE_ID = EMPLOYEES.EMPLOYEE_ID AND
+		EMPLOYEES_PUANTAJ_ROWS.EMPLOYEE_ID = EMPLOYEES_IN_OUT.EMPLOYEE_ID AND
+		EMPLOYEES_PUANTAJ_ROWS.PUANTAJ_ID = EMPLOYEES_PUANTAJ.PUANTAJ_ID AND
+		EMPLOYEES_PUANTAJ.SSK_OFFICE = BRANCH.SSK_OFFICE AND
+		EMPLOYEES_PUANTAJ.SSK_OFFICE_NO = BRANCH.SSK_NO AND
+		EMPLOYEES_IN_OUT.BRANCH_ID = BRANCH.BRANCH_ID
+	<cfif fusebox.dynamic_hierarchy>
+		<cfloop list="#emp_code_list#" delimiters="+" index="code_i">
+			<cfif database_type is "MSSQL">
+				AND 
+				('.' + EMPLOYEES.DYNAMIC_HIERARCHY + '.' + EMPLOYEES.DYNAMIC_HIERARCHY_ADD + '.') LIKE '%.#code_i#.%'
+					
+			<cfelseif database_type is "DB2">
+				AND 
+				('.' || EMPLOYEES.DYNAMIC_HIERARCHY || '.' || EMPLOYEES.DYNAMIC_HIERARCHY_ADD || '.') LIKE '%.#code_i#.%'
+					
+			</cfif>
+		</cfloop>
+<cfelse>
+		<cfloop list="#emp_code_list#" delimiters="+" index="code_i">
+			<cfif database_type is "MSSQL">
+				AND ('.' + EMPLOYEES.HIERARCHY + '.') LIKE '%.#code_i#.%'
+			<cfelseif database_type is "DB2">
+				AND ('.' || EMPLOYEES.HIERARCHY || '.') LIKE '%.#code_i#.%'
+			</cfif>
+		</cfloop>
+</cfif>
+	ORDER BY EMPLOYEES_PUANTAJ_ROWS.EMPLOYEE_PUANTAJ_ID DESC
+</cfquery>
+

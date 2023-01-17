@@ -1,0 +1,36 @@
+<cfquery name="GET_OTHER_CONSUMERS" datasource="#DSN#">
+	SELECT
+		*,
+         (SELECT TOP 1
+            EP.PERIOD_ID 
+        FROM
+            EMPLOYEE_POSITIONS E,
+            EMPLOYEE_POSITION_PERIODS EP
+        WHERE
+            E.POSITION_CODE = #session.ep.position_code# AND
+            E.POSITION_ID = EP.POSITION_ID AND EP.PERIOD_ID = SETUP_PERIOD.PERIOD_ID) AUTHORITY_STATUS
+	FROM
+		SETUP_PERIOD WITH (NOLOCK)
+    ORDER BY
+        PERIOD_YEAR DESC,
+        OUR_COMPANY_ID                   
+</cfquery>
+<cfquery name="GET_CONSUMER_PERIODS" datasource="#DSN#">
+	SELECT
+		CP.PERIOD_ID,
+		C.PERIOD_ID AS DEFAULT_PERIOD
+	FROM
+		CONSUMER_PERIOD CP WITH (NOLOCK),
+		CONSUMER C WITH (NOLOCK)
+	WHERE
+		C.CONSUMER_ID = #attributes.CPID# AND
+		CP.CONSUMER_ID = C.CONSUMER_ID
+</cfquery>
+<cfquery name="GET_PERIOD_YEAR" datasource="#DSN#">
+	SELECT
+	DISTINCT 
+		PERIOD_YEAR
+	FROM
+		SETUP_PERIOD
+
+</cfquery>

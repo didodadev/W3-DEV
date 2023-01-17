@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SETUP_SITE>
+	<SETUPSITE>
+		<LINK_NAME>Üretim</LINK_NAME> 
+		<LINK_FILE>production.welcome</LINK_FILE> 
+		<LINK_DETAIL>Üretim Sayfası</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Üretim Emri Sayfası</LINK_NAME> 
+		<LINK_FILE>production.form_add_production_order</LINK_FILE> 
+		<LINK_DETAIL>Üretim Emri Detay Sayfası</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Üretim Emri Satırındaki Operasyon Sayfası</LINK_NAME> 
+		<LINK_FILE>production.form_add_production_operation</LINK_FILE> 
+		<LINK_DETAIL>Üretim Emri Satırındaki Operasyon Sayfası</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Üretim Emirler Liste Sayfası</LINK_NAME> 
+		<LINK_FILE>production.list_production_orders</LINK_FILE> 
+		<LINK_DETAIL>Üretim Emirler Liste Sayfası</LINK_DETAIL>
+	</SETUPSITE>
+</SETUP_SITE>

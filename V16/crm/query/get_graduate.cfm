@@ -1,0 +1,9 @@
+<cfquery name="GET_GRADUATE" datasource="#DSN#">
+	SELECT 
+		GRADUATE_ID,
+		GRADUATE_NAME 
+	FROM 
+		SETUP_GRADUATE_LEVEL 
+	ORDER BY
+		GRADUATE_ID
+</cfquery>

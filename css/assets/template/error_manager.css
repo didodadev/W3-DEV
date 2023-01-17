@@ -1,0 +1,4 @@
+body { background-color: #ffffff; }
+p{ line-height: 7mm; font-size: 14px; }
+div.errorPageList{ min-height: 600px; overflow-y: auto; }
+div.buttonPanel{ display: flex; justify-content: center; }

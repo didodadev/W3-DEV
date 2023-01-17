@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SETUP_SITE>
+	<SETUPSITE>
+		<LINK_NAME>Servis Başvurusu XML Setup</LINK_NAME> 
+		<LINK_FILE>service.add_service,service.upd_service</LINK_FILE> 
+		<LINK_DETAIL>Servis Başvuru Ekleme Güncelleme</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Servis Başvuru Listesi XML Setup</LINK_NAME> 
+		<LINK_FILE>service.list_service</LINK_FILE> 
+		<LINK_DETAIL>Servis Başvuru Listesi</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>İade Listesi XML Setup</LINK_NAME> 
+		<LINK_FILE>service.list_product_return</LINK_FILE> 
+		<LINK_DETAIL>İade Listesi</LINK_DETAIL>
+	</SETUPSITE>
+</SETUP_SITE>
+

@@ -1,0 +1,2265 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SETUP_SITE>
+	<SETUPSITE>
+		<LINK_NAME>Çağrı Merkezine Etkileşim Ekle</LINK_NAME>
+		<LINK_FOLDER>display</LINK_FOLDER>
+		<LINK_FILE>add_service_help.cfm</LINK_FILE>
+		<LINK_DETAIL>Çağrı merkezi modülüne etkileşim kaydedilmesini sağlar.</LINK_DETAIL>
+		<LINK_XML>add_service_help.xml</LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Çağrı Merkezi Etkileşim Listesi</LINK_NAME>
+		<LINK_FOLDER>display</LINK_FOLDER>
+		<LINK_FILE>helpdesk.cfm</LINK_FILE>
+		<LINK_DETAIL>Üyeye ait etkileşimleri listeler</LINK_DETAIL>
+		<LINK_XML>helpdesk.xml</LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Sosyal Medya Linkleri</LINK_NAME>
+		<LINK_FOLDER>display</LINK_FOLDER>
+		<LINK_FILE>list_social_media_links.cfm</LINK_FILE>
+		<LINK_DETAIL>Call Center etkileşimi formu</LINK_DETAIL>
+		<LINK_XML></LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Parapuanlarım</LINK_NAME>
+		<LINK_FOLDER>sale</LINK_FOLDER>
+		<LINK_FILE>list_money_credits.cfm</LINK_FILE>
+		<LINK_DETAIL></LINK_DETAIL>
+		<LINK_XML></LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Hediye Kartlarım</LINK_NAME>
+		<LINK_FOLDER>sale</LINK_FOLDER>
+		<LINK_FILE>list_gift_cards.cfm</LINK_FILE>
+		<LINK_DETAIL></LINK_DETAIL>
+		<LINK_XML></LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Partner Serileri</LINK_NAME>
+		<LINK_FOLDER>service/display</LINK_FOLDER>
+		<LINK_FILE>list_partner_serials.cfm</LINK_FILE>
+		<LINK_DETAIL>Partnerların Seri Listesi</LINK_DETAIL>
+		<LINK_XML></LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Partner Serileri Ekleme</LINK_NAME>
+		<LINK_FOLDER>service/form</LINK_FOLDER>
+		<LINK_FILE>add_partner_serials.cfm</LINK_FILE>
+		<LINK_DETAIL>Partnerların Seri Girme Yeri</LINK_DETAIL>
+		<LINK_XML></LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Call Center Başvuruları</LINK_NAME>
+		<LINK_FOLDER>service/display</LINK_FOLDER>
+		<LINK_FILE>list_service_call_center.cfm</LINK_FILE>
+		<LINK_DETAIL>Call Center Başvurularını Getirir</LINK_DETAIL>
+		<LINK_XML>list_service_call_center.xml</LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Not Sistemi</LINK_NAME>
+		<LINK_FOLDER>display</LINK_FOLDER>
+		<LINK_FILE>partner_public_note.cfm</LINK_FILE>
+		<LINK_DETAIL>Üyenin kendi kendisine not bırakmasına yarar.</LINK_DETAIL>
+		<LINK_XML></LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Mail Listesine Kayıt</LINK_NAME>
+		<LINK_FOLDER>display</LINK_FOLDER>
+		<LINK_FILE>form_add_maillist.cfm</LINK_FILE>
+		<LINK_DETAIL>Üye Olmadan Kampanyalardan olaylardan haberdar olabilmek için.</LINK_DETAIL>
+		<LINK_XML></LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Servisle İlişkili Belgeler</LINK_NAME>
+		<LINK_FOLDER>service/display</LINK_FOLDER>
+		<LINK_FILE>service_relation_asset.cfm</LINK_FILE> 
+		<LINK_DETAIL></LINK_DETAIL>
+		<LINK_XML></LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Call Center Başvurusu</LINK_NAME>
+		<LINK_FOLDER>service/form</LINK_FOLDER>
+		<LINK_FILE>add_service_callcenter.cfm</LINK_FILE> 
+		<LINK_DETAIL>Call Center başvurusu ekleme formu. Xml Parametrelerde aşama, sistem ve alt kategori seçenekleri gelir.</LINK_DETAIL>
+		<LINK_XML>add_service_callcenter.xml</LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Çağrı Merkezi Başvuru Detayı</LINK_NAME>
+		<LINK_FOLDER>service/form</LINK_FOLDER>
+		<LINK_FILE>upd_service_call_center.cfm</LINK_FILE> 
+		<LINK_DETAIL>Çağrı merkezi başvurusunun detay bilgilerini gösterir.</LINK_DETAIL>
+		<LINK_XML>upd_service_callcenter.xml</LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Çağrı Merkezi Başvuru İlişkili Belgeler</LINK_NAME>
+		<LINK_FOLDER>service/display</LINK_FOLDER>
+		<LINK_FILE>g_service_relation_asset.cfm</LINK_FILE> 
+		<LINK_DETAIL></LINK_DETAIL>
+		<LINK_XML>g_service_relation_asset.xml</LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Şirketim</LINK_NAME> 
+		<LINK_FOLDER>member</LINK_FOLDER>
+		<LINK_FILE>form_upd_my_company.cfm</LINK_FILE> 
+		<LINK_DETAIL>Şirket güncelleme formunu gösterir.</LINK_DETAIL>
+		<LINK_XML>form_upd_my_company.xml</LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Şirkete Kullanıcı Ekle</LINK_NAME> 
+		<LINK_FOLDER>member</LINK_FOLDER>
+		<LINK_FILE>form_add_partner.cfm</LINK_FILE> 
+		<LINK_DETAIL>Kişi ekleme formunu gösterir.</LINK_DETAIL>
+		<LINK_XML></LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Şirket Kullanıcı Bilgilerini Güncelle</LINK_NAME> 
+		<LINK_FOLDER>member</LINK_FOLDER>
+		<LINK_FILE>form_upd_partner.cfm</LINK_FILE> 
+		<LINK_DETAIL>Kiş güncelleme formunu gösterir.</LINK_DETAIL>
+		<LINK_XML>form_upd_partner.xml</LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Şirket Kullanıcı Hobileri</LINK_NAME> 
+		<LINK_FOLDER>member</LINK_FOLDER>
+		<LINK_FILE>form_upd_partner_hobbies.cfm</LINK_FILE> 
+		<LINK_DETAIL>Partner Hobi</LINK_DETAIL>
+		<LINK_XML></LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Şirket Kullanıcı Yetkinlikleri</LINK_NAME> 
+		<LINK_FOLDER>member</LINK_FOLDER>
+		<LINK_FILE>form_upd_company_partner_req_type.cfm</LINK_FILE> 
+		<LINK_DETAIL>Partner Yetkinlik</LINK_DETAIL>
+		<LINK_XML></LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Şirket Ekibi</LINK_NAME> 
+		<LINK_FOLDER>member</LINK_FOLDER>
+		<LINK_FILE>member_group_team.cfm</LINK_FILE> 
+		<LINK_DETAIL>Şirketin Ekibini Getirir.</LINK_DETAIL>
+		<LINK_XML>member_group_team.xml</LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Bireysel Üye Bilgileri</LINK_NAME> 
+		<LINK_FOLDER>member</LINK_FOLDER>
+		<LINK_FILE>me.cfm</LINK_FILE> 
+		<LINK_DETAIL>Bireysel üye bilgilerini değiştirme.</LINK_DETAIL>
+		<LINK_XML>me.xml</LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Bireysel Site Üyelikleri</LINK_NAME> 
+		<LINK_FOLDER>member</LINK_FOLDER>
+		<LINK_FILE>consumer_site_domains.cfm</LINK_FILE> 
+		<LINK_DETAIL>Bireysel Site Üyelikleri.</LINK_DETAIL>
+		<LINK_XML></LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Üyenin Kredi Kartları</LINK_NAME> 
+		<LINK_FOLDER>member</LINK_FOLDER>
+		<LINK_FILE>member_credit_card.cfm</LINK_FILE> 
+		<LINK_DETAIL>Üyenin Kredi Kartlarını Getirir.</LINK_DETAIL>
+		<LINK_XML></LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Kurumsal Üye Kayıt Başvurusu</LINK_NAME> 
+		<LINK_FOLDER>member</LINK_FOLDER>
+		<LINK_FILE>add_member_company.cfm</LINK_FILE> 
+		<LINK_DETAIL>Kurumsal Üye Kayıt Başvurusu</LINK_DETAIL>
+		<LINK_XML>add_member_company.xml</LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Bireysel Üye Kayıt Başvurusu</LINK_NAME> 
+		<LINK_FOLDER>member</LINK_FOLDER>
+		<LINK_FILE>add_member_consumer.cfm</LINK_FILE> 
+		<LINK_DETAIL>(Public) Bireysel Üye Kayıt Başvurusu</LINK_DETAIL>
+		<LINK_XML>add_member_consumer.xml</LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>İlişkili Bireysel Üye Kayıt</LINK_NAME> 
+		<LINK_FOLDER>member</LINK_FOLDER>
+		<LINK_FILE>add_my_consumer.cfm</LINK_FILE> 
+		<LINK_DETAIL>(Public) İlişkili Bireysel Üye Kayıt</LINK_DETAIL>
+		<LINK_XML>add_my_consumer.xml</LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>İlişkili Bireysel Üye Detay</LINK_NAME> 
+		<LINK_FOLDER>member</LINK_FOLDER>
+		<LINK_FILE>upd_my_consumer.cfm</LINK_FILE> 
+		<LINK_DETAIL>(Partner) İliişkili biresel üye detay sayfasını gösterir.</LINK_DETAIL>
+		<LINK_XML>upd_my_consumer.xml</LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>İlişkili Kurumsal Üye Güncelleme</LINK_NAME> 
+		<LINK_FOLDER>member</LINK_FOLDER>
+		<LINK_FILE>upd_my_member.cfm</LINK_FILE> 
+		<LINK_DETAIL>(Partner) Kurumsal Üye güncelleme ekranını gösterir.</LINK_DETAIL>
+		<LINK_XML>upd_my_member.xml</LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>İlişkili Partner Güncelleme</LINK_NAME> 
+		<LINK_FOLDER>member</LINK_FOLDER>
+		<LINK_FILE>upd_my_partner.cfm</LINK_FILE> 
+		<LINK_DETAIL>(Partner) Kurumsal Üye İlişkili Partner Güncelleme</LINK_DETAIL>
+		<LINK_XML></LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Kur Bilgisi</LINK_NAME> 
+		<LINK_FOLDER>menus</LINK_FOLDER>
+		<LINK_FILE>money_currency.cfm</LINK_FILE> 
+		<LINK_DETAIL>Kur bilgilerini görmek için kullanılır.</LINK_DETAIL>
+		<LINK_XML></LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Markalar Listesi</LINK_NAME> 
+		<LINK_FOLDER>menus</LINK_FOLDER>
+		<LINK_FILE>brand_menu.cfm</LINK_FILE> 
+		<LINK_DETAIL>Marka listesini göstermek için kullanılır</LINK_DETAIL>
+		<LINK_XML>brand_menu.xml</LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Ürün Kategorisine Bağlı Markalar Listesi</LINK_NAME> 
+		<LINK_FOLDER>menus</LINK_FOLDER>
+		<LINK_FILE>product_category_brand.cfm</LINK_FILE> 
+		<LINK_DETAIL>Ürün Kategorisine Bağlı Marka listesini göstermek için kullanılır</LINK_DETAIL>
+		<LINK_XML>product_category_brand_menu.xml</LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>İçerik Kategoriler</LINK_NAME> 
+		<LINK_FOLDER>menus</LINK_FOLDER>
+		<LINK_FILE>content_category_menu.cfm</LINK_FILE> 
+		<LINK_DETAIL>İçerik kategorilerinin menüsü. İçerik olmadan kullanılmaz.</LINK_DETAIL>
+		<LINK_XML>content_category.xml</LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Ürün Kategorilerine Kolay Erişim</LINK_NAME> 
+		<LINK_FOLDER>menus</LINK_FOLDER>
+		<LINK_FILE>jump_product_category.cfm</LINK_FILE> 
+		<LINK_DETAIL>Ürün kategorilerine hızlı erişmeyi sağlayan jump menü.</LINK_DETAIL>
+		<LINK_XML>jump_product_category.xml</LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Ürün Kategorileri</LINK_NAME> 
+		<LINK_FOLDER>menus</LINK_FOLDER>
+		<LINK_FILE>product_category.cfm</LINK_FILE> 
+		<LINK_DETAIL>Ürün kategorileri listesi.</LINK_DETAIL>
+		<LINK_XML>product_category.xml</LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Ürün Ağacı</LINK_NAME> 
+		<LINK_FOLDER>product</LINK_FOLDER>
+		<LINK_FILE>product_tree.cfm</LINK_FILE> 
+		<LINK_DETAIL>Ürün Ağacı</LINK_DETAIL>
+		<LINK_XML>product_tree.xml</LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Kategori ve Markaya Göre Arama</LINK_NAME> 
+		<LINK_FOLDER>menus</LINK_FOLDER>
+		<LINK_FILE>search_brand_by_category.cfm</LINK_FILE> 
+		<LINK_DETAIL>Kategoriye ve markaya göre ürün arama.</LINK_DETAIL>
+		<LINK_XML></LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>İç İçe Kategoriye Göre Arama</LINK_NAME> 
+		<LINK_FOLDER>menus</LINK_FOLDER>
+		<LINK_FILE>category_hierarcy_search.cfm</LINK_FILE> 
+		<LINK_DETAIL>İç içe kategoriye göre ürün arama.</LINK_DETAIL>
+		<LINK_XML></LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Konu Arama</LINK_NAME> 
+		<LINK_FOLDER>menus</LINK_FOLDER>
+		<LINK_FILE>search_content.cfm</LINK_FILE> 
+		<LINK_DETAIL>İçerik konu arama için kullanılır.</LINK_DETAIL>
+		<LINK_XML>search_content.xml</LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Markaya Göre Detaylı Ürün Arama</LINK_NAME> 
+		<LINK_FOLDER>menus</LINK_FOLDER>
+		<LINK_FILE>search_product_brand_horizantal.cfm</LINK_FILE> 
+		<LINK_DETAIL>Markaya göre detaylı ürün arama popup'ı.</LINK_DETAIL>
+		<LINK_XML></LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>İçerik Bölümleri</LINK_NAME> 
+		<LINK_FOLDER>menus</LINK_FOLDER>
+		<LINK_FILE>content_chapter_menu.cfm</LINK_FILE> 
+		<LINK_DETAIL>İçerikteki bölümleri menüsü.</LINK_DETAIL>
+		<LINK_XML></LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Ürün Arama</LINK_NAME> 
+		<LINK_FOLDER>menus</LINK_FOLDER>
+		<LINK_FILE>search_product_keyword.cfm</LINK_FILE> 
+		<LINK_DETAIL>Ürün arama filtresi.</LINK_DETAIL>
+		<LINK_XML></LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Markalar</LINK_NAME> 
+		<LINK_FOLDER>product</LINK_FOLDER>
+		<LINK_FILE>list_brands.cfm</LINK_FILE> 
+		<LINK_DETAIL>Webde Gösterilen Markalar</LINK_DETAIL>
+		<LINK_XML>list_brands.xml</LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Marka Detay Göster</LINK_NAME> 
+		<LINK_FOLDER>product</LINK_FOLDER>
+		<LINK_FILE>view_brand_page.cfm</LINK_FILE> 
+		<LINK_DETAIL>Marka detayını göstermek için kullanılır</LINK_DETAIL>
+		<LINK_XML></LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Banner</LINK_NAME> 
+		<LINK_FOLDER>banner</LINK_FOLDER>
+		<LINK_FILE>banner.cfm</LINK_FILE> 
+		<LINK_DETAIL>Banner</LINK_DETAIL>
+		<LINK_XML>banner.xml</LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Resimli Kampanya Listesi</LINK_NAME> 
+		<LINK_FOLDER>campaign/display</LINK_FOLDER>
+		<LINK_FILE>list_campaign_with_images.cfm</LINK_FILE> 
+		<LINK_DETAIL>Kampanyaları görsellerle birlikte listeler.</LINK_DETAIL>
+		<LINK_XML></LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Resimsiz Kampanya Listesi</LINK_NAME> 
+		<LINK_FOLDER>campaign/display</LINK_FOLDER>
+		<LINK_FILE>list_campaign.cfm</LINK_FILE>
+		<LINK_DETAIL>Kampanyaları görselsiz listeler.</LINK_DETAIL>
+		<LINK_XML>list_campaign.xml</LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Kampanya İlişkili İçerikleri</LINK_NAME> 
+		<LINK_FOLDER>campaign/display</LINK_FOLDER>
+		<LINK_FILE>campaign_relation_content.cfm</LINK_FILE> 
+		<LINK_DETAIL>Kampanya ile İlişkili İçerikler.</LINK_DETAIL>
+		<LINK_XML>campaign_relation_content.xml</LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Kampanya İlişkili Belgeleri</LINK_NAME> 
+		<LINK_FOLDER>campaign/display</LINK_FOLDER>
+		<LINK_FILE>campaign_relation_asset.cfm</LINK_FILE> 
+		<LINK_DETAIL>Kampanya ile ilişkili belgeleri getirir.</LINK_DETAIL>
+		<LINK_XML></LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Kampanya İlişkili Ödeme Yöntemleri</LINK_NAME> 
+		<LINK_FOLDER>campaign/display</LINK_FOLDER>
+		<LINK_FILE>campaign_relation_paymethods.cfm</LINK_FILE> 
+		<LINK_DETAIL>Kampanya ile ilişkili ödeme yöntemlerini getirir.</LINK_DETAIL>
+		<LINK_XML></LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Kampanya İlişkili Anketleri</LINK_NAME> 
+		<LINK_FOLDER>campaign/display</LINK_FOLDER>
+		<LINK_FILE>campaign_relation_survey.cfm</LINK_FILE> 
+		<LINK_DETAIL>Kampanya ile ilişkili anketleri getirir.</LINK_DETAIL>
+		<LINK_XML></LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Kampanya Ekibi</LINK_NAME> 
+		<LINK_FOLDER>campaign/display</LINK_FOLDER>
+		<LINK_FILE>campaign_team.cfm</LINK_FILE> 
+		<LINK_DETAIL>Kampanyanın ekibini getirir.</LINK_DETAIL>
+		<LINK_XML></LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Kampanya Detayı</LINK_NAME> 
+		<LINK_FOLDER>campaign/display</LINK_FOLDER>
+		<LINK_FILE>dsp_campaign.cfm</LINK_FILE> 
+		<LINK_DETAIL>Kampanyanın detay bilgilerini gösterir.</LINK_DETAIL>
+		<LINK_XML></LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Güncel Kampanyalar</LINK_NAME>
+		<LINK_FOLDER>campaign/display</LINK_FOLDER>
+		<LINK_FILE>campaign_right.cfm</LINK_FILE>
+		<LINK_DETAIL>Sistemdeki güncel bir kampanyayı getirir.</LINK_DETAIL>
+		<LINK_XML></LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Kampanya Basketli Ürünleri</LINK_NAME> 
+		<LINK_FOLDER>campaign/display</LINK_FOLDER>
+		<LINK_FILE>list_prices_campaign.cfm</LINK_FILE> 
+		<LINK_DETAIL>Kampanya Basketli Ürünleri</LINK_DETAIL>
+		<LINK_XML></LINK_XML>
+	</SETUPSITE>
+		<SETUPSITE>
+		<LINK_NAME>Kampanya Basketsiz Ürünleri</LINK_NAME> 
+		<LINK_FOLDER>campaign/display</LINK_FOLDER>
+		<LINK_FILE>list_prices_campaign_no_sale.cfm</LINK_FILE> 
+		<LINK_DETAIL>Kampanya Ürünleri</LINK_DETAIL>
+		<LINK_XML></LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Kampanya Promosyon Ürünleri</LINK_NAME> 
+		<LINK_FOLDER>campaign/display</LINK_FOLDER>
+		<LINK_FILE>list_promotion_campaign.cfm</LINK_FILE> 
+		<LINK_DETAIL>Kampanya Promosyon Ürünleri</LINK_DETAIL>
+		<LINK_XML>list_prices.xml</LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Kampanya Aksiyon Ürünleri</LINK_NAME> 
+		<LINK_FOLDER>campaign/display</LINK_FOLDER>
+		<LINK_FILE>list_prices_campaign_simple.cfm</LINK_FILE> 
+		<LINK_DETAIL>Kampanyanın aksiyon ürünlerini getirir.</LINK_DETAIL>
+		<LINK_XML></LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Kampanya E-posta Listesine Kaydol</LINK_NAME> 
+		<LINK_FOLDER>campaign/display</LINK_FOLDER>
+		<LINK_FILE>add_campaign_maillist.cfm</LINK_FILE>
+		<LINK_DETAIL>Kampanya e-posta listesine üyenin eklenmesini sağlar..</LINK_DETAIL>
+		<LINK_XML></LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>İçerik Yorumları</LINK_NAME> 
+		<LINK_FOLDER>content</LINK_FOLDER>
+		<LINK_FILE>content_comments.cfm</LINK_FILE> 
+		<LINK_DETAIL>İçerik için yazılmış yorumları getirir. İçerik olmadan kullanılmaz.</LINK_DETAIL>
+		<LINK_XML></LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>İçerik Etiketleri</LINK_NAME> 
+		<LINK_FOLDER>content</LINK_FOLDER>
+		<LINK_FILE>content_tags.cfm</LINK_FILE> 
+		<LINK_DETAIL></LINK_DETAIL>
+		<LINK_XML></LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>İçerik Belgeleri</LINK_NAME> 
+		<LINK_FOLDER>content</LINK_FOLDER>
+		<LINK_FILE>content_relation_asset.cfm</LINK_FILE> 
+		<LINK_DETAIL>İçeriğe bağlı varlıkları getirir. İçerik olmadan kullanılmaz.</LINK_DETAIL>
+		<LINK_XML>content_relation_asset.xml</LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>İlişkili İçerikler</LINK_NAME>
+		<LINK_FOLDER>content</LINK_FOLDER>
+		<LINK_FILE>content_relation_content.cfm</LINK_FILE>
+		<LINK_DETAIL>İçerikle ilişkili içerikleri getirir. İçerik olmadan kullanılmaz.</LINK_DETAIL>
+		<LINK_XML>cnt_relation_cnt.xml</LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>İlişkili İmajlar</LINK_NAME> 
+		<LINK_FOLDER>content</LINK_FOLDER>
+		<LINK_FILE>content_relation_image.cfm</LINK_FILE> 
+		<LINK_DETAIL>İçerikle ilişkili imajları getirir. İçerik olmadan kullanılmaz.</LINK_DETAIL>
+		<LINK_XML>content_image.xml</LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>İçerikle İlişkili Ürünler</LINK_NAME> 
+		<LINK_FOLDER>content</LINK_FOLDER>
+		<LINK_FILE>content_relation_product.cfm</LINK_FILE> 
+		<LINK_DETAIL>İçerikle ilişkili ürünleri getirir. İçerik olmadan kullanılmaz.</LINK_DETAIL>
+		<LINK_XML>content_relation_product.xml</LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>İçerik Detay</LINK_NAME> 
+		<LINK_FOLDER>content</LINK_FOLDER>
+		<LINK_FILE>detail_content.cfm</LINK_FILE> 
+		<LINK_DETAIL>İçeriğin detayını gösterir.</LINK_DETAIL>
+		<LINK_XML>detail_content.xml</LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Ana İçerikler</LINK_NAME> 
+		<LINK_FOLDER>content</LINK_FOLDER>
+		<LINK_FILE>content_main.cfm</LINK_FILE> 
+		<LINK_DETAIL>Ana İçerikler (Anasayfa -Kategori - Bölüm URL değişkeninden algılanır.)</LINK_DETAIL>
+		<LINK_XML>content_main.xml</LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>İkincil İçerikler</LINK_NAME> 
+		<LINK_FOLDER>content</LINK_FOLDER>
+		<LINK_FILE>content_main_right.cfm</LINK_FILE> 
+		<LINK_DETAIL>İkincil İçerikler (Anasayfa - Kategori - Bölüm URL değişkeninden algılanır.)</LINK_DETAIL>
+		<LINK_XML>content_main_right.xml</LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>İçerik Listesi</LINK_NAME> 
+		<LINK_FOLDER>content</LINK_FOLDER>
+		<LINK_FILE>list_content.cfm</LINK_FILE> 
+		<LINK_DETAIL></LINK_DETAIL>
+		<LINK_XML>list_content.xml</LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Konu Arama Sonuçları</LINK_NAME> 
+		<LINK_FOLDER>content</LINK_FOLDER>
+		<LINK_FILE>search_content_result.cfm</LINK_FILE> 
+		<LINK_DETAIL>Konu Arama Sonuçları.</LINK_DETAIL>
+		<LINK_XML>search_content_result.xml</LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>İçerik Yorumları Görüntüleme</LINK_NAME> 
+		<LINK_FOLDER>content</LINK_FOLDER>
+		<LINK_FILE>view_content_comment.cfm</LINK_FILE> 
+		<LINK_DETAIL>İçerik yorumlarını göstermeye yarar. İçerik olmadan kullanılmaz.</LINK_DETAIL>
+		<LINK_XML></LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>İçeriğe Puan Ver</LINK_NAME> 
+		<LINK_FOLDER>content</LINK_FOLDER>
+		<LINK_FILE>content_vote.cfm</LINK_FILE> 
+		<LINK_DETAIL>İçeriğe Puan vermeye yarar. İçerik olmadan kullanılmaz.</LINK_DETAIL>
+		<LINK_XML></LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Bölüme Göre İçerik Listesi</LINK_NAME> 
+		<LINK_FOLDER>content</LINK_FOLDER>
+		<LINK_FILE>chapter_content_list.cfm</LINK_FILE> 
+		<LINK_DETAIL>Bölüm No'lara Göre İçerikleri Getirir.</LINK_DETAIL>
+		<LINK_XML>chapter_content_list.xml</LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Destek Yardım</LINK_NAME> 
+		<LINK_FOLDER>login</LINK_FOLDER>
+		<LINK_FILE>online_information.cfm</LINK_FILE> 
+		<LINK_DETAIL>Destek Yardım.</LINK_DETAIL>
+		<LINK_XML></LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Destek Yardım (İş Grubundaki Herkese).</LINK_NAME> 
+		<LINK_FOLDER>login</LINK_FOLDER>
+		<LINK_FILE>online_information_workgroup.cfm</LINK_FILE> 
+		<LINK_DETAIL>Destek Yardım (İş Grubundaki Herkese).</LINK_DETAIL>
+		<LINK_XML></LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Bireysel Üye Girişi</LINK_NAME> 
+		<LINK_FOLDER>login</LINK_FOLDER>
+		<LINK_FILE>public_login.cfm</LINK_FILE> 
+		<LINK_DETAIL>Bireysel üye şifre-password kutusu.</LINK_DETAIL>
+		<LINK_XML>public_login.xml</LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Partner Üye Girişi</LINK_NAME> 
+		<LINK_FOLDER>login</LINK_FOLDER>
+		<LINK_FILE>partner_login.cfm</LINK_FILE> 
+		<LINK_DETAIL>Kurumsal üye şifre-password kutusu</LINK_DETAIL>
+		<LINK_XML>partner_login.xml</LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Bireysel Üye Şifre Bilgilerim</LINK_NAME> 
+		<LINK_FOLDER>login</LINK_FOLDER>
+		<LINK_FILE>change_cons_pass.cfm</LINK_FILE> 
+		<LINK_DETAIL>Bireysel Üye Şifre Bilgilerini Getirir</LINK_DETAIL>
+		<LINK_XML>change_cons_pass.xml</LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Üyelerim</LINK_NAME> 
+		<LINK_FOLDER>member</LINK_FOLDER>
+		<LINK_FILE>list_my_members.cfm</LINK_FILE> 
+		<LINK_DETAIL>(Partner)İlişkili Üyeler</LINK_DETAIL>
+		<LINK_XML>list_my_members.xml</LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Referans Olduğum Üyeler</LINK_NAME> 
+		<LINK_FOLDER>member</LINK_FOLDER>
+		<LINK_FILE>my_ref_member.cfm</LINK_FILE> 
+		<LINK_DETAIL>Referans Olduğum Üyeler</LINK_DETAIL>
+		<LINK_XML>my_ref_member.xml</LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Partner Session Bilgisi</LINK_NAME> 
+		<LINK_FOLDER>menus</LINK_FOLDER>
+		<LINK_FILE>partner_session_info.cfm</LINK_FILE> 
+		<LINK_DETAIL>Partner session bilgilerini getirir..</LINK_DETAIL>
+		<LINK_XML></LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Public Session Bilgisi</LINK_NAME> 
+		<LINK_FOLDER>menus</LINK_FOLDER>
+		<LINK_FILE>public_session_info.cfm</LINK_FILE> 
+		<LINK_DETAIL>Public session bilgilerini getirir..</LINK_DETAIL>
+		<LINK_XML></LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Kariyer Başvurusu</LINK_NAME> 
+		<LINK_FOLDER>login</LINK_FOLDER>
+		<LINK_FILE>add_cv.cfm</LINK_FILE> 
+		<LINK_DETAIL>Kariyer Başvurusu</LINK_DETAIL>
+		<LINK_XML></LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Son İncelediğim 5 Ürün</LINK_NAME> 
+		<LINK_FOLDER>product</LINK_FOLDER>
+		<LINK_FILE>last_visited_5_products.cfm</LINK_FILE> 
+		<LINK_DETAIL>Son İncelediğim 5 Ürün.</LINK_DETAIL>
+		<LINK_XML>last_visited_5_products.xml</LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Özel Ürün Listesi</LINK_NAME> 
+		<LINK_FOLDER>product</LINK_FOLDER>
+		<LINK_FILE>list_simple_product.cfm</LINK_FILE> 
+		<LINK_DETAIL>Fiyatsız Ürün Listesini Getirir.</LINK_DETAIL>
+		<LINK_XML>list_simple_product.xml</LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Ürün Listesi</LINK_NAME> 
+		<LINK_FOLDER>product</LINK_FOLDER>
+		<LINK_FILE>list_prices.cfm</LINK_FILE> 
+		<LINK_DETAIL>Ürün Listesi</LINK_DETAIL>
+		<LINK_XML>list_prices.xml</LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Belirlenen Fiyat Listesine Ait Ürünler</LINK_NAME> 
+		<LINK_FOLDER>product</LINK_FOLDER>
+		<LINK_FILE>list_price_product.cfm</LINK_FILE> 
+		<LINK_DETAIL>Belirlenen Fiyat Listesine Ait Ürünler.</LINK_DETAIL>
+		<LINK_XML>list_prices.xml</LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Seri Sonu Fiyat Listesi</LINK_NAME> 
+		<LINK_FOLDER>product</LINK_FOLDER>
+		<LINK_FILE>list_prices_serial.cfm</LINK_FILE> 
+		<LINK_DETAIL>Seri Sonu Fiyat Listesi</LINK_DETAIL>
+		<LINK_XML>list_prices_serial.xml</LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Detaylı Ürün Arama</LINK_NAME> 
+		<LINK_FOLDER>product</LINK_FOLDER>
+		<LINK_FILE>detail_product_property_search.cfm</LINK_FILE> 
+		<LINK_DETAIL>Kategori, marka ve özelliklere göre ürün getirir..</LINK_DETAIL>
+		<LINK_XML>detail_product_property_search.xml</LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Detaylı Ürün Arama</LINK_NAME> 
+		<LINK_FOLDER>menus</LINK_FOLDER>
+		<LINK_FILE>detail_product_category_search.cfm</LINK_FILE> 
+		<LINK_DETAIL>Kategori, marka ve özelliklere göre ürün getirir..</LINK_DETAIL>
+		<LINK_XML>detail_product_property_search.xml</LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Sadece Ürün Özelliklerine Göre Arama</LINK_NAME> 
+		<LINK_FOLDER>menus</LINK_FOLDER>
+		<LINK_FILE>product_property_search.cfm</LINK_FILE> 
+		<LINK_DETAIL>Sadece ürün özelliklerini getirir.</LINK_DETAIL>
+		<LINK_XML></LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Promosyon Listesi</LINK_NAME> 
+		<LINK_FOLDER>product</LINK_FOLDER>
+		<LINK_FILE>list_promotions.cfm</LINK_FILE> 
+		<LINK_DETAIL>Promosyon listesini getirir.</LINK_DETAIL>
+		<LINK_XML>list_promotions.xml</LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Alternatif Ürünler</LINK_NAME> 
+		<LINK_FOLDER>product</LINK_FOLDER>
+		<LINK_FILE>product_alternative_product.cfm</LINK_FILE> 
+		<LINK_DETAIL>Ürüne bağlı alternatif ürünler.</LINK_DETAIL>
+		<LINK_XML>product_alternative_product.xml</LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Uyumsuz Ürünler</LINK_NAME>
+		<LINK_FOLDER>product</LINK_FOLDER>
+		<LINK_FILE>product_alternate_except.cfm</LINK_FILE> 
+		<LINK_DETAIL>Ürüne ailesinde olmayan ürünler.</LINK_DETAIL>
+		<LINK_XML>product_alternate_except.xml</LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Ürün Karşılaştırması</LINK_NAME> 
+		<LINK_FOLDER>product</LINK_FOLDER>
+		<LINK_FILE>product_compare.cfm</LINK_FILE>
+		<LINK_DETAIL>Ürün karşılaştırma sayfasını getirir.</LINK_DETAIL>
+		<LINK_XML>product_compare.xml</LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Ürün Konfigurasyonu</LINK_NAME> 
+		<LINK_FOLDER>product</LINK_FOLDER>
+		<LINK_FILE>product_configure.cfm</LINK_FILE> 
+		<LINK_DETAIL>Ürün konfigurasyon sayfasını getirir.</LINK_DETAIL>
+		<LINK_XML></LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Ürün Konfigürasyon Önerisi</LINK_NAME> 
+		<LINK_FOLDER>product</LINK_FOLDER>
+		<LINK_FILE>product_configure_proposal.cfm</LINK_FILE> 
+		<LINK_DETAIL>Ürün konfigürasyon önerisini getirir.</LINK_DETAIL>
+		<LINK_XML></LINK_XML>
+	</SETUPSITE>	
+	<SETUPSITE>
+		<LINK_NAME>Ürünü Özelleştir</LINK_NAME> 
+		<LINK_FOLDER>product</LINK_FOLDER>
+		<LINK_FILE>product_customize.cfm</LINK_FILE> 
+		<LINK_DETAIL>Ürünü özelleştirme sayfasını getirir.</LINK_DETAIL>
+		<LINK_XML></LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Ürünü Özelleştirme Önerisi</LINK_NAME> 
+		<LINK_FOLDER>product</LINK_FOLDER>
+		<LINK_FILE>product_customize_proposal.cfm</LINK_FILE> 
+		<LINK_DETAIL>Ürün özelleştirme önerisini getirir.</LINK_DETAIL>
+		<LINK_XML></LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Ürün Özellikleri</LINK_NAME> 
+		<LINK_FOLDER>product</LINK_FOLDER>
+		<LINK_FILE>product_property.cfm</LINK_FILE> 
+		<LINK_DETAIL>Ürün özelliklerini gösterir.</LINK_DETAIL>
+		<LINK_XML></LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Ürün İçerik Detay</LINK_NAME> 
+		<LINK_FOLDER>product</LINK_FOLDER>
+		<LINK_FILE>product_detail_content.cfm</LINK_FILE> 
+		<LINK_DETAIL>Ürüne Ait İçeriğin Detayını Getirir.</LINK_DETAIL>
+		<LINK_XML>detail_content.xml</LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Ürünle İlişkili Belgeler</LINK_NAME> 
+		<LINK_FOLDER>product</LINK_FOLDER>
+		<LINK_FILE>product_relation_asset.cfm</LINK_FILE> 
+		<LINK_DETAIL>Ürünle ilişkili belgeleri gösterir.</LINK_DETAIL>
+		<LINK_XML>product_relation_asset.xml</LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Kategori ve Ürünle İlişkili İçerikler</LINK_NAME> 
+		<LINK_FOLDER>product</LINK_FOLDER>
+		<LINK_FILE>product_relation_content.cfm</LINK_FILE> 
+		<LINK_DETAIL>Ürünle ilişkili içerikleri gösterir.</LINK_DETAIL>
+		<LINK_XML>product_relation_cnt.xml</LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Ürünle İlişkili İmajlar</LINK_NAME> 
+		<LINK_FOLDER>product</LINK_FOLDER>
+		<LINK_FILE>product_relation_image.cfm</LINK_FILE> 
+		<LINK_DETAIL>Ürünle ilişkili imajları gösterir.</LINK_DETAIL>
+		<LINK_XML>product_image.xml</LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Ürünle İlişkili Ürünler</LINK_NAME> 
+		<LINK_FOLDER>product</LINK_FOLDER>
+		<LINK_FILE>product_relation_product.cfm</LINK_FILE> 
+		<LINK_DETAIL>Ürünle ilişkili ürünleri gösterir.</LINK_DETAIL>
+		<LINK_XML>product_relation_product.xml</LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Ürün Detayı</LINK_NAME> 
+		<LINK_FOLDER>product</LINK_FOLDER>
+		<LINK_FILE>product_summary.cfm</LINK_FILE> 
+		<LINK_DETAIL>Ürünün Detayını Gösterir</LINK_DETAIL>
+		<LINK_XML>product_summary.xml</LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Ürün Markasına Ait Diğer Ürünler</LINK_NAME> 
+		<LINK_FOLDER>product</LINK_FOLDER>
+		<LINK_FILE>list_brand_product.cfm</LINK_FILE> 
+		<LINK_DETAIL>Ürün Markasına Ait Diğer Ürünleri Gösterir.</LINK_DETAIL>
+		<LINK_XML>list_brand_product.xml</LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Ürün Kategorisine Ait Diğer Ürünler</LINK_NAME> 
+		<LINK_FOLDER>product</LINK_FOLDER>
+		<LINK_FILE>list_cat_product.cfm</LINK_FILE> 
+		<LINK_DETAIL>Ürün Kategorisine Ait Diğer Ürünleri Gösterir.</LINK_DETAIL>
+		<LINK_XML>list_cat_product.xml</LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Ürün Kategorisine Ait Diğer Markalar</LINK_NAME> 
+		<LINK_FOLDER>product</LINK_FOLDER>
+		<LINK_FILE>list_category_brand.cfm</LINK_FILE> 
+		<LINK_DETAIL>Ürün Kategorisine Ait Diğer Markaları Gösterir.</LINK_DETAIL>
+		<LINK_XML></LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Ürün Yöneticisi</LINK_NAME> 
+		<LINK_FOLDER>product</LINK_FOLDER>
+		<LINK_FILE>product_manager.cfm</LINK_FILE> 
+		<LINK_DETAIL>Ürün Yöneticisi</LINK_DETAIL>
+		<LINK_XML></LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Ürün Yorum Sayfası</LINK_NAME> 
+		<LINK_FOLDER>product</LINK_FOLDER>
+		<LINK_FILE>view_product_comment.cfm</LINK_FILE> 
+		<LINK_DETAIL>Ürünle ilgili yorumları gösterir.</LINK_DETAIL>
+		<LINK_XML>view_product_comment.xml</LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Vitrin Ürünleri</LINK_NAME> 
+		<LINK_FOLDER>product</LINK_FOLDER>
+		<LINK_FILE>view_vision.cfm</LINK_FILE> 
+		<LINK_DETAIL>Vitrin Ürünleri</LINK_DETAIL>
+		<LINK_XML>view_vision.xml</LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Sistemler Listesi.</LINK_NAME> 
+		<LINK_FOLDER>sale</LINK_FOLDER>
+		<LINK_FILE>list_subscription.cfm</LINK_FILE> 
+		<LINK_DETAIL>Sistemler Listesini Getirir.</LINK_DETAIL>
+		<LINK_XML></LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Siparişle İlişkili Belgeler</LINK_NAME> 
+		<LINK_FOLDER>sale</LINK_FOLDER>
+		<LINK_FILE>order_relation_asset.cfm</LINK_FILE> 
+		<LINK_DETAIL></LINK_DETAIL>
+		<LINK_XML>order_relation_asset.xml</LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Referansı Olduğum Sistemler Listesi.</LINK_NAME> 
+		<LINK_FOLDER>sale</LINK_FOLDER>
+		<LINK_FILE>list_subscription_ref.cfm</LINK_FILE> 
+		<LINK_DETAIL>Referansı Olduğum Sistemler Listesini Getirir.</LINK_DETAIL>
+		<LINK_XML></LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Üyelerimin Sistemleri</LINK_NAME> 
+		<LINK_FOLDER>sale</LINK_FOLDER>
+		<LINK_FILE>list_subscription_hier.cfm</LINK_FILE> 
+		<LINK_DETAIL>Üyelerimin Sistemleri</LINK_DETAIL>
+		<LINK_XML></LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Sistem Detay.</LINK_NAME> 
+		<LINK_FOLDER>sale</LINK_FOLDER>
+		<LINK_FILE>dsp_subscription.cfm</LINK_FILE> 
+		<LINK_DETAIL>Sistem Detay Sayfasını Gösterir.</LINK_DETAIL>
+		<LINK_XML>dsp_subscription.xml</LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Sistem Belgeleri.</LINK_NAME> 
+		<LINK_FOLDER>sale</LINK_FOLDER>
+		<LINK_FILE>subscription_relation_asset.cfm</LINK_FILE> 
+		<LINK_DETAIL>Sisteme ait belgeleri getirir.</LINK_DETAIL>
+		<LINK_XML>subscription_relation_asset.xml</LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Teklif Önizleme</LINK_NAME> 
+		<LINK_FOLDER>sale</LINK_FOLDER>
+		<LINK_FILE>basket_proposal.cfm</LINK_FILE> 
+		<LINK_DETAIL>Teklif Önizleme sayfasını gösterir.</LINK_DETAIL>
+		<LINK_XML></LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Mini Sepet</LINK_NAME>
+		<LINK_FOLDER>sale</LINK_FOLDER>
+		<LINK_FILE>list_mini_basket.cfm</LINK_FILE> 
+		<LINK_DETAIL>Mini sepet.</LINK_DETAIL>
+		<LINK_XML>mini_basket.xml</LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Mini Sepet Kampanya</LINK_NAME>
+		<LINK_FOLDER>sale</LINK_FOLDER>
+		<LINK_FILE>list_mini_basket_camp.cfm</LINK_FILE> 
+		<LINK_DETAIL>Kampanya Mini Sepet.</LINK_DETAIL>
+		<LINK_XML>mini_basket_camp.xml</LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Fırsatlar</LINK_NAME> 
+		<LINK_FOLDER>sale</LINK_FOLDER>
+		<LINK_FILE>list_opportunities.cfm</LINK_FILE> 
+		<LINK_DETAIL>Fırsatlarım.</LINK_DETAIL>
+		<LINK_XML>list_opportunities.xml</LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Üyelerimin Fırsatları</LINK_NAME> 
+		<LINK_FOLDER>sale</LINK_FOLDER>
+		<LINK_FILE>list_opportunities_hier.cfm</LINK_FILE> 
+		<LINK_DETAIL>Üyelerimin Fırsatları</LINK_DETAIL>
+		<LINK_XML></LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Fırsat Ekle</LINK_NAME> 
+		<LINK_FOLDER>sale</LINK_FOLDER>
+		<LINK_FILE>add_opportunity.cfm</LINK_FILE> 
+		<LINK_DETAIL>Fırsat Ekle.</LINK_DETAIL>
+		<LINK_XML></LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Fırsat Detay</LINK_NAME> 
+		<LINK_FOLDER>sale</LINK_FOLDER>
+		<LINK_FILE>upd_opportunity.cfm</LINK_FILE> 
+		<LINK_DETAIL>Fırsat Detay.</LINK_DETAIL>
+		<LINK_XML>upd_opportunity.xml</LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Fırsat Belgeleri</LINK_NAME> 
+		<LINK_FOLDER>sale</LINK_FOLDER>
+		<LINK_FILE>opp_relation_asset.cfm</LINK_FILE> 
+		<LINK_DETAIL>Fırsat belgelerini getirir.</LINK_DETAIL>
+		<LINK_XML>opp_relation_asset.xml</LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Sipariş Ön Bilgileri</LINK_NAME> 
+		<LINK_FOLDER>sale</LINK_FOLDER>
+		<LINK_FILE>list_pro_info.cfm</LINK_FILE> 
+		<LINK_DETAIL>Sipariş Ön Bilgileri</LINK_DETAIL>
+		<LINK_XML>list_pro_info.xml</LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Sipariş Özel Bilgileri Görüntüleme</LINK_NAME> 
+		<LINK_FOLDER>sale</LINK_FOLDER>
+		<LINK_FILE>dsp_pro_info.cfm</LINK_FILE> 
+		<LINK_DETAIL>Sipariş Özel Bilgileri</LINK_DETAIL>
+		<LINK_XML></LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Siparişi Nihayi Müşteriye Kaydet.</LINK_NAME> 
+		<LINK_FOLDER>form</LINK_FOLDER>
+		<LINK_FILE>add_orderww_customer.cfm</LINK_FILE> 
+		<LINK_DETAIL>Siparişi Nihayi Müşteriye Kaydet.</LINK_DETAIL>
+		<LINK_XML></LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Sipariş Kaydet</LINK_NAME> 
+		<LINK_FOLDER>form</LINK_FOLDER>
+		<LINK_FILE>add_orderww_normal.cfm</LINK_FILE> 
+		<LINK_DETAIL>Sipariş Kaydet</LINK_DETAIL>
+		<LINK_XML>add_orderww_normal.xml</LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Puanlı Sipariş Kaydet</LINK_NAME> 
+		<LINK_FOLDER>form</LINK_FOLDER>
+		<LINK_FILE>add_order_puan.cfm</LINK_FILE> 
+		<LINK_DETAIL>Puanlı Sipariş Kaydet</LINK_DETAIL>
+		<LINK_XML></LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Siparişi Kaydet</LINK_NAME> 
+		<LINK_FOLDER>query</LINK_FOLDER>
+		<LINK_FILE>add_orderww.cfm</LINK_FILE>
+		<LINK_DETAIL>Siparişi Kaydet</LINK_DETAIL>
+		<LINK_XML>add_orderww_normal.xml</LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Tahsilatı Kaydet</LINK_NAME>
+		<LINK_FOLDER>query</LINK_FOLDER>
+		<LINK_FILE>add_online_pos_from_order.cfm</LINK_FILE> 
+		<LINK_DETAIL>Tahsilatı Kaydet</LINK_DETAIL>
+		<LINK_XML>add_online_pos_from_order.xml</LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Kredi Kartı Ödeme</LINK_NAME>
+		<LINK_FOLDER>finance/form</LINK_FOLDER>
+		<LINK_FILE>form_add_online_pos.cfm</LINK_FILE> 
+		<LINK_DETAIL>Kredi Kartı Ödeme</LINK_DETAIL>
+		<LINK_XML>form_add_online_pos.xml</LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Kredi Kartı Ödeme Kaydet</LINK_NAME>
+		<LINK_FOLDER>finance/query</LINK_FOLDER>
+		<LINK_FILE>add_online_pos.cfm</LINK_FILE> 
+		<LINK_DETAIL>Kredi Kartı Ödeme Kaydet</LINK_DETAIL>
+		<LINK_XML>add_online_pos.xml</LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Basket Sayfası 2</LINK_NAME>
+		<LINK_FOLDER>sale</LINK_FOLDER>
+		<LINK_FILE>iframe_form_basket.cfm</LINK_FILE> 
+		<LINK_DETAIL>list_prices</LINK_DETAIL>
+		<LINK_XML></LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Puan Sepet Listesi</LINK_NAME>
+		<LINK_FOLDER>sale</LINK_FOLDER>
+		<LINK_FILE>list_basket_puan.cfm</LINK_FILE> 
+		<LINK_DETAIL>Puan Sepet Listesi</LINK_DETAIL>
+		<LINK_XML></LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Basket Listesi</LINK_NAME> 
+		<LINK_FOLDER>sale</LINK_FOLDER>
+		<LINK_FILE>list_basket_ww.cfm</LINK_FILE> 
+		<LINK_DETAIL>Basket listesi</LINK_DETAIL>
+		<LINK_XML>list_basket.xml</LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Kampanya Basket Listesi</LINK_NAME> 
+		<LINK_FOLDER>sale</LINK_FOLDER>
+		<LINK_FILE>list_basket_ww_camp.cfm</LINK_FILE> 
+		<LINK_DETAIL>Kampanya Basket listesi</LINK_DETAIL>
+		<LINK_XML></LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Kampanya Sepeti Sipariş Ekranı</LINK_NAME> 
+		<LINK_FOLDER>form</LINK_FOLDER>
+		<LINK_FILE>add_orderww_camp.cfm</LINK_FILE> 
+		<LINK_DETAIL>Kampanya Sepeti Sipariş Ekranı</LINK_DETAIL>
+		<LINK_XML></LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Mini Basket</LINK_NAME> 
+		<LINK_FOLDER>sale</LINK_FOLDER>
+		<LINK_FILE>mini_basket_ww.cfm</LINK_FILE> 
+		<LINK_DETAIL>WW mini basket.</LINK_DETAIL>
+		<LINK_XML>mini_basket.xml</LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Sipariş Takipleri(Bekleyen Siparişler)</LINK_NAME> 
+		<LINK_FOLDER>sale</LINK_FOLDER>
+		<LINK_FILE>list_order_demands.cfm</LINK_FILE> 
+		<LINK_DETAIL>Sipariş Takipleri(Bekleyen Siparişler)</LINK_DETAIL>
+		<LINK_XML></LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Referans Üyelerimin Bekleyen Siparişleri</LINK_NAME> 
+		<LINK_FOLDER>sale</LINK_FOLDER>
+		<LINK_FILE>list_my_ref_order_demands.cfm</LINK_FILE> 
+		<LINK_DETAIL>Referans Üyelerimin Bekleyen Siparişleri</LINK_DETAIL>
+		<LINK_XML></LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Satış Analizi</LINK_NAME> 
+		<LINK_FOLDER>sale</LINK_FOLDER>
+		<LINK_FILE>sale_analyse.cfm</LINK_FILE> 
+		<LINK_DETAIL>Satış Analiz sayfasını gösterir.</LINK_DETAIL>
+		<LINK_XML></LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Satış Analizi Sipariş</LINK_NAME> 
+		<LINK_FOLDER>sale</LINK_FOLDER>
+		<LINK_FILE>sale_analyse_orders.cfm</LINK_FILE> 
+		<LINK_DETAIL>Sipariş Satış Analiz sayfasını gösterir.</LINK_DETAIL>
+		<LINK_XML></LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Alış Analizi</LINK_NAME> 
+		<LINK_FOLDER>sale</LINK_FOLDER>
+		<LINK_FILE>purchase_analyse.cfm</LINK_FILE> 
+		<LINK_DETAIL>Alış Analiz sayfasını gösterir.</LINK_DETAIL>
+		<LINK_XML></LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Ürün İadeleri</LINK_NAME> 
+		<LINK_FOLDER>service/display</LINK_FOLDER>
+		<LINK_FILE>list_return.cfm</LINK_FILE> 
+		<LINK_DETAIL>Ürün iadeleri sayfasını gösterir.</LINK_DETAIL>
+		<LINK_XML></LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Seri Noya Ait Başvurular</LINK_NAME> 
+		<LINK_FOLDER>service/display</LINK_FOLDER>
+		<LINK_FILE>list_serial_services.cfm</LINK_FILE> 
+		<LINK_DETAIL>Seri noya ait başvuruların gösterildiği sayfa.</LINK_DETAIL>
+		<LINK_XML></LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Servis Başvurular</LINK_NAME> 
+		<LINK_FOLDER>service/display</LINK_FOLDER>
+		<LINK_FILE>list_service.cfm</LINK_FILE> 
+		<LINK_DETAIL>Bana ait başvuruları,üyelerime ait başvuruları,iş ortağı olduğum başvuruları veya tümünü listeler.</LINK_DETAIL>
+		<LINK_XML>list_service.xml</LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Seri No Sorgulama</LINK_NAME> 
+		<LINK_FOLDER>service/display</LINK_FOLDER>
+		<LINK_FILE>serial_no.cfm</LINK_FILE> 
+		<LINK_DETAIL>Seri no sorgulama sayfasını gösterir.</LINK_DETAIL>
+		<LINK_XML></LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Public Seri No Sorgulama</LINK_NAME> 
+		<LINK_FOLDER>service/display</LINK_FOLDER>
+		<LINK_FILE>serial_noww.cfm</LINK_FILE> 
+		<LINK_DETAIL>Public Seri no sorgulama sayfasını gösterir.</LINK_DETAIL>
+		<LINK_XML></LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Arızalı Ürün Gönderim Formu</LINK_NAME> 
+		<LINK_FOLDER>service/display</LINK_FOLDER>
+		<LINK_FILE>service_print.cfm</LINK_FILE> 
+		<LINK_DETAIL>Arızalı ürün gönderme form sayfasını gösterir.</LINK_DETAIL>
+		<LINK_XML></LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Servis Başvuru Hakedişleri</LINK_NAME> 
+		<LINK_FOLDER>service/display</LINK_FOLDER>
+		<LINK_FILE>service_progress_payment.cfm</LINK_FILE> 
+		<LINK_DETAIL>Servis başvurulardan oluşan hakedişleri gösterir.</LINK_DETAIL>
+		<LINK_XML></LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Ürün İade Ekleme Sayfası</LINK_NAME> 
+		<LINK_FOLDER>service/form</LINK_FOLDER>
+		<LINK_FILE>add_return.cfm</LINK_FILE> 
+		<LINK_DETAIL>Ürün iade ekleme sayfasını gösterir.</LINK_DETAIL>
+		<LINK_XML>add_return.xml</LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Ürün İade Güncelleme Sayfası</LINK_NAME> 
+		<LINK_FOLDER>service/form</LINK_FOLDER>
+		<LINK_FILE>upd_return.cfm</LINK_FILE> 
+		<LINK_DETAIL>Ürün iade güncelleme sayfasını gösterir.</LINK_DETAIL>
+		<LINK_XML>upd_return.xml</LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Başvuru Ekleme Sayfası</LINK_NAME> 
+		<LINK_FOLDER>service/form</LINK_FOLDER>
+		<LINK_FILE>add_service_party.cfm</LINK_FILE> 
+		<LINK_DETAIL>Başvuru ekleme sayfasını gösterir.</LINK_DETAIL>
+		<LINK_XML></LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Başvuru Takip</LINK_NAME> 
+		<LINK_FOLDER>service/form</LINK_FOLDER>
+		<LINK_FILE>add_service_plus.cfm</LINK_FILE> 
+		<LINK_DETAIL>Başvuru takip sayfasını gösterir.</LINK_DETAIL>
+		<LINK_XML></LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Başvuru Ekle</LINK_NAME> 
+		<LINK_FOLDER>service/form</LINK_FOLDER>
+		<LINK_FILE>add_services.cfm</LINK_FILE> 
+		<LINK_DETAIL>Başvuru ekleme sayfasını gösterir.</LINK_DETAIL>
+		<LINK_XML></LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Sistem Başvuru Ekle</LINK_NAME> 
+		<LINK_FOLDER>service/form</LINK_FOLDER>
+		<LINK_FILE>add_system_service.cfm</LINK_FILE> 
+		<LINK_DETAIL>Sistem Başvuru ekleme sayfasını gösterir.</LINK_DETAIL>
+		<LINK_XML></LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Başvuru Detay Sayfası</LINK_NAME> 
+		<LINK_FOLDER>service/form</LINK_FOLDER>
+		<LINK_FILE>detail_service.cfm</LINK_FILE> 
+		<LINK_DETAIL>Başvuru detay sayfasını gösterir.</LINK_DETAIL>
+		<LINK_XML>detail_service.xml</LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Başvuru Sistem Detay Sayfası</LINK_NAME> 
+		<LINK_FOLDER>service/form</LINK_FOLDER>
+		<LINK_FILE>detail_system_service.cfm</LINK_FILE> 
+		<LINK_DETAIL>Başvuru detay sayfasını gösterir.</LINK_DETAIL>
+		<LINK_XML>detail_service.xml</LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Başvuru Takip Detay Sayfası</LINK_NAME> 
+		<LINK_FOLDER>service/form</LINK_FOLDER>
+		<LINK_FILE>dsp_service_plus.cfm</LINK_FILE> 
+		<LINK_DETAIL>Başvuru takip detay sayfasını gösterir.</LINK_DETAIL>
+		<LINK_XML></LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Garanti Bilgisi Güncelleme</LINK_NAME> 
+		<LINK_FOLDER>service/form</LINK_FOLDER>
+		<LINK_FILE>upd_guaranty_service.cfm</LINK_FILE> 
+		<LINK_DETAIL>Garanti bilgisi göncelleme sayfasını gösterir.</LINK_DETAIL>
+		<LINK_XML></LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Ürün İade Talebi Güncelleme</LINK_NAME> 
+		<LINK_FOLDER>service/form</LINK_FOLDER>
+		<LINK_FILE>upd_return.cfm</LINK_FILE> 
+		<LINK_DETAIL>Ürün iade talebi detay sayfasına gider.</LINK_DETAIL>
+		<LINK_XML></LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Servis Başvuru Takip Güncelleme</LINK_NAME> 
+		<LINK_FOLDER>service/form</LINK_FOLDER>
+		<LINK_FILE>upd_service_plus.cfm</LINK_FILE> 
+		<LINK_DETAIL>Servis başvuru takip detay sayfasını gösteririr.</LINK_DETAIL>
+		<LINK_XML></LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Kargo Bilgisi</LINK_NAME> 
+		<LINK_FOLDER>display</LINK_FOLDER>
+		<LINK_FILE>dsp_cargo_information.cfm</LINK_FILE> 
+		<LINK_DETAIL>Kargo bilgilerini getirir.</LINK_DETAIL>
+		<LINK_XML></LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>İletişim</LINK_NAME> 
+		<LINK_FOLDER>display</LINK_FOLDER>
+		<LINK_FILE>dsp_contact.cfm</LINK_FILE> 
+		<LINK_DETAIL>İletişim</LINK_DETAIL>
+		<LINK_XML></LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Sipariş Detay Sayfası</LINK_NAME> 
+		<LINK_FOLDER>sale</LINK_FOLDER>
+		<LINK_FILE>dsp_detail_order.cfm</LINK_FILE> 
+		<LINK_DETAIL>Sipariş detay sayfasına gösterir.</LINK_DETAIL>
+		<LINK_XML>dsp_order_detail.xml</LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Satınalma Sipariş Detay Sayfası</LINK_NAME> 
+		<LINK_FOLDER>sale</LINK_FOLDER>
+		<LINK_FILE>dsp_order_purchase.cfm</LINK_FILE> 
+		<LINK_DETAIL>Satınalma Sipariş detay sayfasına gösterir.</LINK_DETAIL>
+		<LINK_XML>dsp_order_purchase.xml</LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Teklif Detay Sayfası</LINK_NAME> 
+		<LINK_FOLDER>sale</LINK_FOLDER>
+		<LINK_FILE>dsp_offer_detail.cfm</LINK_FILE> 
+		<LINK_DETAIL>Teklif detay sayfasına gösterir.</LINK_DETAIL>
+		<LINK_XML></LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Teklif Detay Sayfası Partner İçin</LINK_NAME> 
+		<LINK_FOLDER>sale</LINK_FOLDER>
+		<LINK_FILE>dsp_offer_detail_pp.cfm</LINK_FILE> 
+		<LINK_DETAIL>Teklif detay sayfasına gösterir.</LINK_DETAIL>
+		<LINK_XML></LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Teklif Ekleme Sayfası</LINK_NAME> 
+		<LINK_FOLDER>sale</LINK_FOLDER>
+		<LINK_FILE>add_offer.cfm</LINK_FILE> 
+		<LINK_DETAIL>Teklif talebini eklemek için kullanılır.</LINK_DETAIL>
+		<LINK_XML></LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Teklif Ekleme Sayfası Partner İçin</LINK_NAME> 
+		<LINK_FOLDER>sale</LINK_FOLDER>
+		<LINK_FILE>add_offer_pp.cfm</LINK_FILE> 
+		<LINK_DETAIL>Teklif talebini eklemek için kullanılır.</LINK_DETAIL>
+		<LINK_XML></LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Teklifle İlişkili İçerikler</LINK_NAME> 
+		<LINK_FOLDER>sale</LINK_FOLDER>
+		<LINK_FILE>offer_relation_content.cfm</LINK_FILE> 
+		<LINK_DETAIL>Teklifle İlişkili İçerikler.</LINK_DETAIL>
+		<LINK_XML></LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Teklifle İlişkili Belgeler</LINK_NAME> 
+		<LINK_FOLDER>sale</LINK_FOLDER>
+		<LINK_FILE>offer_relation_asset.cfm</LINK_FILE> 
+		<LINK_DETAIL>Teklifle İlişkili Belgeler gösterir.</LINK_DETAIL>
+		<LINK_XML>offer_relation_asset.xml</LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Teklifle İlişkili Yazışmalar</LINK_NAME> 
+		<LINK_FOLDER>sale</LINK_FOLDER>
+		<LINK_FILE>offer_relation_pluses.cfm</LINK_FILE> 
+		<LINK_DETAIL>Teklifle İlişkili Yazışmaları Gösterir.</LINK_DETAIL>
+		<LINK_XML></LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Packing List</LINK_NAME> 
+		<LINK_FOLDER>sale</LINK_FOLDER>
+		<LINK_FILE>packing_list.cfm</LINK_FILE> 
+		<LINK_DETAIL>Sipariş sayfasına packing listesini getirir.</LINK_DETAIL>
+		<LINK_XML></LINK_XML>
+		</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Sipariş Sevkleri</LINK_NAME> 
+		<LINK_FOLDER>sale</LINK_FOLDER>
+		<LINK_FILE>list_order_ship.cfm</LINK_FILE> 
+		<LINK_DETAIL>Sipariş sayfasına sevk listesini getirir.</LINK_DETAIL>
+		<LINK_XML></LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Sipariş Takipleri</LINK_NAME> 
+		<LINK_FOLDER>sale</LINK_FOLDER>
+		<LINK_FILE>list_order_pluses.cfm</LINK_FILE> 
+		<LINK_DETAIL>Sipariş takipler</LINK_DETAIL>
+		<LINK_XML></LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Siparişlerim</LINK_NAME> 
+		<LINK_FOLDER>display</LINK_FOLDER>
+		<LINK_FILE>dsp_list_order.cfm</LINK_FILE> 
+		<LINK_DETAIL>Siparişler listesini gösterir.</LINK_DETAIL>
+		<LINK_XML>dsp_list_order.xml</LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Satınalma Siparişlerim</LINK_NAME> 
+		<LINK_FOLDER>display</LINK_FOLDER>
+		<LINK_FILE>dsp_list_order_purchase.cfm</LINK_FILE> 
+		<LINK_DETAIL>Satınalma Siparişler listesini gösterir.</LINK_DETAIL>
+		<LINK_XML></LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Üst Şirketi Olduğum Üyelerin Siparişleri</LINK_NAME> 
+		<LINK_FOLDER>display</LINK_FOLDER>
+		<LINK_FILE>dsp_list_order_hierarchy.cfm</LINK_FILE> 
+		<LINK_DETAIL>Üst Şirketi Olduğum Üyelerin Siparişlerini gösterir.</LINK_DETAIL>
+		<LINK_XML></LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Tekliflerim</LINK_NAME> 
+		<LINK_FOLDER>display</LINK_FOLDER>
+		<LINK_FILE>dsp_list_offer.cfm</LINK_FILE> 
+		<LINK_DETAIL>Teklifler listesini gösterir.</LINK_DETAIL>
+		<LINK_XML></LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Analizler Sayfası</LINK_NAME> 
+		<LINK_FOLDER>survey</LINK_FOLDER>
+		<LINK_FILE>list_analyses.cfm</LINK_FILE> 
+		<LINK_DETAIL>Analiz liste sayfasını gösterir.</LINK_DETAIL>
+		<LINK_XML></LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Analizler Detay</LINK_NAME> 
+		<LINK_FOLDER>survey</LINK_FOLDER>
+		<LINK_FILE>dsp_analyses.cfm</LINK_FILE> 
+		<LINK_DETAIL>Analiz detay sayfasını gösterir.</LINK_DETAIL>
+		<LINK_XML></LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Anket</LINK_NAME> 
+		<LINK_FOLDER>survey</LINK_FOLDER>
+		<LINK_FILE>poll.cfm</LINK_FILE> 
+		<LINK_DETAIL>Anket sayfasını gösterir.</LINK_DETAIL>
+		<LINK_XML>poll.xml</LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Anket Listesi</LINK_NAME> 
+		<LINK_FOLDER>campaign/display</LINK_FOLDER>
+		<LINK_FILE>list_survey.cfm</LINK_FILE> 
+		<LINK_DETAIL>Tüm anketleri listeler.</LINK_DETAIL>
+		<LINK_XML></LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Detaylı Promosyon Listesi</LINK_NAME> 
+		<LINK_FOLDER>campaign/display</LINK_FOLDER>
+		<LINK_FILE>list_detail_promotions.cfm</LINK_FILE> 
+		<LINK_DETAIL>Kişinin fiyat listesi için geçerli detaylı promosyonları getirir.</LINK_DETAIL>
+		<LINK_XML></LINK_XML>
+	</SETUPSITE>
+
+	<SETUPSITE>
+		<LINK_NAME>Sipariş Print</LINK_NAME> 
+		<LINK_FOLDER>display</LINK_FOLDER>
+		<LINK_FILE>popup_order_print.cfm</LINK_FILE> 
+		<LINK_DETAIL>Sipariş print sayfasına gösterir.</LINK_DETAIL>
+		<LINK_XML></LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Anket Sonucu</LINK_NAME> 
+		<LINK_FOLDER>survey</LINK_FOLDER>
+		<LINK_FILE>vote_results.cfm</LINK_FILE> 
+		<LINK_DETAIL>Anket sonuçlarını gösterir.</LINK_DETAIL>
+		<LINK_XML></LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Not Ekleme Sayfası</LINK_NAME> 
+		<LINK_FOLDER>form</LINK_FOLDER>
+		<LINK_FILE>add_notes.cfm</LINK_FILE> 
+		<LINK_DETAIL>Not ekleme sayfasını gösterir.</LINK_DETAIL>
+		<LINK_XML></LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Tahsilat Detayı</LINK_NAME> 
+		<LINK_FOLDER>form</LINK_FOLDER>
+		<LINK_FILE>add_online_pos_kontrol.cfm</LINK_FILE> 
+		<LINK_DETAIL>Tahsilat detay sayfasını gösterir.</LINK_DETAIL>
+		<LINK_XML></LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Sipariş WW</LINK_NAME> 
+		<LINK_FOLDER>form</LINK_FOLDER>
+		<LINK_FILE>add_orderww_ic.cfm</LINK_FILE> 
+		<LINK_DETAIL>WW sipariş ekleme sayfasını gösterir.</LINK_DETAIL>
+		<LINK_XML></LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Ürüne Puan Ver</LINK_NAME> 
+		<LINK_FOLDER>product</LINK_FOLDER>
+		<LINK_FILE>product_vote.cfm</LINK_FILE> 
+		<LINK_DETAIL>Ürüne puan vermeye yarar. Ürün olmazsa kullanılmaz.</LINK_DETAIL>
+		<LINK_XML></LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Adres Ekle</LINK_NAME> 
+		<LINK_FOLDER>form</LINK_FOLDER>
+		<LINK_FILE>form_add_address.cfm</LINK_FILE> 
+		<LINK_DETAIL>Adres ekleme formunu gösterir.</LINK_DETAIL>
+		<LINK_XML></LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Adres Güncelle</LINK_NAME> 
+		<LINK_FOLDER>form</LINK_FOLDER>
+		<LINK_FILE>form_upd_address.cfm</LINK_FILE> 
+		<LINK_DETAIL>Adres güncelleme formunu gösterir.</LINK_DETAIL>
+		<LINK_XML></LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Analiz Yapmak</LINK_NAME> 
+		<LINK_FOLDER>survey</LINK_FOLDER>
+		<LINK_FILE>make_analyse.cfm</LINK_FILE> 
+		<LINK_DETAIL>Analiz yapma sayfasını gösterir.</LINK_DETAIL>
+		<LINK_XML></LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>İş Ortakları Listesi</LINK_NAME>
+		<LINK_FOLDER>member</LINK_FOLDER>
+		<LINK_FILE>list_partner.cfm</LINK_FILE>
+		<LINK_DETAIL>İl ve kategoriye göre iş ortakları.</LINK_DETAIL>
+		<LINK_XML>list_partner.xml</LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Üst Sektörler</LINK_NAME>
+		<LINK_FOLDER>worknet</LINK_FOLDER>
+		<LINK_FILE>sector_upper.cfm</LINK_FILE>
+		<LINK_DETAIL>Üst Sektörleri Getirir.</LINK_DETAIL>
+		<LINK_XML></LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Alt Sektörler</LINK_NAME>
+		<LINK_FOLDER>worknet</LINK_FOLDER>
+		<LINK_FILE>sector_cats.cfm</LINK_FILE>
+		<LINK_DETAIL>Alt Sektörleri Getirir.</LINK_DETAIL>
+		<LINK_XML></LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Üyenin Detayını Getirir</LINK_NAME> 
+		<LINK_FOLDER>member</LINK_FOLDER>
+		<LINK_FILE>view_member.cfm</LINK_FILE> 
+		<LINK_DETAIL>Üyenin Detayını Getirir.</LINK_DETAIL>
+		<LINK_XML>view_member.xml</LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Üyenin Etkileşimlerini Toplantılarını vs Getirir</LINK_NAME> 
+		<LINK_FOLDER>member</LINK_FOLDER>
+		<LINK_FILE>view_member_relation.cfm</LINK_FILE> 
+		<LINK_DETAIL>Üyenin Etkileşimlerini Toplantılarını vs Getirir.</LINK_DETAIL>
+		<LINK_XML></LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Forum</LINK_NAME> 
+		<LINK_FOLDER>forum/display</LINK_FOLDER>
+		<LINK_FILE>list_forums.cfm</LINK_FILE> 
+		<LINK_DETAIL>Forum.</LINK_DETAIL>
+		<LINK_XML>list_forums.xml</LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Forum Konular</LINK_NAME> 
+		<LINK_FOLDER>forum/display</LINK_FOLDER>
+		<LINK_FILE>list_reply.cfm</LINK_FILE> 
+		<LINK_DETAIL>Forum Konular.</LINK_DETAIL>
+		<LINK_XML></LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Forum Cevapları</LINK_NAME> 
+		<LINK_FOLDER>forum/display</LINK_FOLDER>
+		<LINK_FILE>list_topic.cfm</LINK_FILE> 
+		<LINK_DETAIL>Forum Cevapları.</LINK_DETAIL>
+		<LINK_XML></LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Packing Listesi</LINK_NAME>
+		<LINK_FOLDER>display</LINK_FOLDER>
+		<LINK_FILE>packing_list.cfm</LINK_FILE>
+		<LINK_DETAIL>Packing Listesi</LINK_DETAIL>
+		<LINK_XML></LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Ödemeler</LINK_NAME>
+		<LINK_FOLDER>finance/display</LINK_FOLDER>
+		<LINK_FILE>list_payments.cfm</LINK_FILE>
+		<LINK_DETAIL>Ödemeler Listesi</LINK_DETAIL>
+		<LINK_XML></LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Hesap Extresi</LINK_NAME>
+		<LINK_FOLDER>finance/display</LINK_FOLDER>
+		<LINK_FILE>list_extre.cfm</LINK_FILE> 
+		<LINK_DETAIL>Hesap Extresi Al.</LINK_DETAIL>
+		<LINK_XML>list_extre.xml</LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Hesap Extresi Simple</LINK_NAME> 
+		<LINK_FOLDER>finance/display</LINK_FOLDER>
+		<LINK_FILE>list_extre_simple.cfm</LINK_FILE> 
+		<LINK_DETAIL>Hesap Extresi Simple Al.</LINK_DETAIL>
+		<LINK_XML>list_extre_simple.xml</LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Finansal Özet</LINK_NAME> 
+		<LINK_FOLDER>finance/display</LINK_FOLDER>
+		<LINK_FILE>dsp_extre_summary.cfm</LINK_FILE> 
+		<LINK_DETAIL>Finansal Özet</LINK_DETAIL>
+		<LINK_XML></LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Finansal Özet 2</LINK_NAME> 
+		<LINK_FOLDER>finance/display</LINK_FOLDER>
+		<LINK_FILE>dsp_finance_summary2.cfm</LINK_FILE> 
+		<LINK_DETAIL>Finansal Özet 2</LINK_DETAIL>
+		<LINK_XML></LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Son İşe Alınanlar Şube</LINK_NAME> 
+		<LINK_FOLDER>career/display</LINK_FOLDER>
+		<LINK_FILE>list_in_out_branches.cfm</LINK_FILE> 
+		<LINK_DETAIL>Son İşe Alım Yapılan Şubeleri Listeler</LINK_DETAIL>
+		<LINK_XML>list_in_out_branches.xml</LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>İlan Arama</LINK_NAME> 
+		<LINK_FOLDER>career/display</LINK_FOLDER>
+		<LINK_FILE>search_notice.cfm</LINK_FILE> 
+		<LINK_DETAIL>İlan Arama</LINK_DETAIL>
+		<LINK_XML></LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Son İşe Alınanlar</LINK_NAME> 
+		<LINK_FOLDER>career/display</LINK_FOLDER>
+		<LINK_FILE>view_last_in_outs.cfm</LINK_FILE> 
+		<LINK_DETAIL>Son İşe Alınan Kişileri Listeler</LINK_DETAIL>
+		<LINK_XML>view_last_in_outs.xml</LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>İlanlar Partner</LINK_NAME> 
+		<LINK_FOLDER>career/display</LINK_FOLDER>
+		<LINK_FILE>list_notices_partner.cfm</LINK_FILE> 
+		<LINK_DETAIL>Partnere Ait İlanları Getirir.</LINK_DETAIL>
+		<LINK_XML></LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>İlan Başvuruları Partner</LINK_NAME> 
+		<LINK_FOLDER>career/display</LINK_FOLDER>
+		<LINK_FILE>list_apps.cfm</LINK_FILE> 
+		<LINK_DETAIL>Partnere Ait İlan Başvurularını Getirir.</LINK_DETAIL>
+		<LINK_XML></LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>İlan Başvuru Detayı Partner</LINK_NAME> 
+		<LINK_FOLDER>career/form</LINK_FOLDER>
+		<LINK_FILE>upd_app_pos.cfm</LINK_FILE> 
+		<LINK_DETAIL>Partnere Ait İlan Başvurularının Detayını Getirir.</LINK_DETAIL>
+		<LINK_XML></LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Partner İlan Ekleme</LINK_NAME> 
+		<LINK_FOLDER>career/form</LINK_FOLDER>
+		<LINK_FILE>form_add_notice.cfm</LINK_FILE> 
+		<LINK_DETAIL>Partnerin ilan eklemesini Sağlar.</LINK_DETAIL>
+		<LINK_XML></LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Partner İlan Güncelleme</LINK_NAME> 
+		<LINK_FOLDER>career/form</LINK_FOLDER>
+		<LINK_FILE>form_upd_notice.cfm</LINK_FILE> 
+		<LINK_DETAIL>Partnerin ilanlarında değiklik yapmasını Sağlar.</LINK_DETAIL>
+		<LINK_XML></LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>İlanlar</LINK_NAME> 
+		<LINK_FOLDER>career/display</LINK_FOLDER>
+		<LINK_FILE>list_notices.cfm</LINK_FILE> 
+		<LINK_DETAIL>İlanlar Listesi</LINK_DETAIL>
+		<LINK_XML>list_notices.xml</LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Üretim Emirleri</LINK_NAME> 
+		<LINK_FOLDER>product</LINK_FOLDER>
+		<LINK_FILE>list_production_orders.cfm</LINK_FILE> 
+		<LINK_DETAIL></LINK_DETAIL>
+		<LINK_XML></LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>İlişkili Üretim Emirleri</LINK_NAME> 
+		<LINK_FOLDER>product</LINK_FOLDER>
+		<LINK_FILE>list_related_p_orders.cfm</LINK_FILE> 
+		<LINK_DETAIL></LINK_DETAIL>
+		<LINK_XML></LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Üretim Sonuçları</LINK_NAME> 
+		<LINK_FOLDER>product</LINK_FOLDER>
+		<LINK_FILE>related_order_results.cfm</LINK_FILE> 
+		<LINK_DETAIL></LINK_DETAIL>
+		<LINK_XML></LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>İlan detay</LINK_NAME> 
+		<LINK_FOLDER>career/display</LINK_FOLDER>
+		<LINK_FILE>dsp_notice.cfm</LINK_FILE> 
+		<LINK_DETAIL>İlan detayı</LINK_DETAIL>
+		<LINK_XML></LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Kariyer Kullanıcı Girişi</LINK_NAME> 
+		<LINK_FOLDER>career/form</LINK_FOLDER>
+		<LINK_FILE>form_login.cfm</LINK_FILE> 
+		<LINK_DETAIL>Kariyer Kullanıcı Girişi</LINK_DETAIL>
+		<LINK_XML>form_login.xml</LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Yeni Kullanıcı Girişi</LINK_NAME> 
+		<LINK_FOLDER>career/form</LINK_FOLDER>
+		<LINK_FILE>form_add_new_user.cfm</LINK_FILE> 
+		<LINK_DETAIL>Yeni Kullanıcı Girişi</LINK_DETAIL>
+		<LINK_XML></LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Başvurular</LINK_NAME> 
+		<LINK_FOLDER>career/display</LINK_FOLDER>
+		<LINK_FILE>list_app_pos.cfm</LINK_FILE> 
+		<LINK_DETAIL>Başvurular</LINK_DETAIL>
+		<LINK_XML>list_app_pos.xml</LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Başvuru Ara</LINK_NAME> 
+		<LINK_FOLDER>career/display</LINK_FOLDER>
+		<LINK_FILE>search_app.cfm</LINK_FILE> 
+		<LINK_DETAIL>Başvuru Ara</LINK_DETAIL>
+		<LINK_XML></LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Hızlı Özgeçmişim</LINK_NAME> 
+		<LINK_FOLDER>career/form</LINK_FOLDER>
+		<LINK_FILE>form_upd_fast_cv.cfm</LINK_FILE> 
+		<LINK_DETAIL>Hızlı Özgeçmişim</LINK_DETAIL>
+		<LINK_XML>form_upd_fast_cv.xml</LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Özgeçmişim / Kimlik ve İletişim Bilgilerim</LINK_NAME> 
+		<LINK_FOLDER>career/form</LINK_FOLDER>
+		<LINK_FILE>form_upd_cv_1.cfm</LINK_FILE> 
+		<LINK_DETAIL>Özgeçmişim / Kimlik ve İletişim Bilgilerim</LINK_DETAIL>
+		<LINK_XML>form_upd_cv_1.xml</LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Özgeçmişim / Kişisel Bilgilerim</LINK_NAME> 
+		<LINK_FOLDER>career/form</LINK_FOLDER>
+		<LINK_FILE>form_upd_cv_2.cfm</LINK_FILE> 
+		<LINK_DETAIL>Özgeçmişim / Kişisel Bilgilerim</LINK_DETAIL>
+		<LINK_XML>form_upd_cv_2.xml</LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Özgeçmişim / Diğer Kimlik Bilgilerim</LINK_NAME> 
+		<LINK_FOLDER>career/form</LINK_FOLDER>
+		<LINK_FILE>form_upd_cv_3.cfm</LINK_FILE> 
+		<LINK_DETAIL>Özgeçmişim / Diğer Kimlik Bilgilerim</LINK_DETAIL>
+		<LINK_XML>form_upd_cv_3.xml</LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Özgeçmişim / Eğitim Bilgilerim</LINK_NAME> 
+		<LINK_FOLDER>career/form</LINK_FOLDER>
+		<LINK_FILE>form_upd_cv_4.cfm</LINK_FILE> 
+		<LINK_DETAIL>Özgeçmişim / Eğitim Bilgilerim</LINK_DETAIL>
+		<LINK_XML>form_upd_cv_4.xml</LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Özgeçmişim / İş Tecrübelerim</LINK_NAME> 
+		<LINK_FOLDER>career/form</LINK_FOLDER>
+		<LINK_FILE>form_upd_cv_5.cfm</LINK_FILE> 
+		<LINK_DETAIL>Özgeçmişim / İş Tecrübelerim</LINK_DETAIL>
+		<LINK_XML>form_upd_cv_5.xml</LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Özgeçmişim / Çalışma Tercihlerim</LINK_NAME> 
+		<LINK_FOLDER>career/form</LINK_FOLDER>
+		<LINK_FILE>form_upd_cv_6.cfm</LINK_FILE> 
+		<LINK_DETAIL>Özgeçmişim / Çalışma Tercihlerim</LINK_DETAIL>
+		<LINK_XML>form_upd_cv_6.xml</LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Özgeçmişim / Kabul</LINK_NAME> 
+		<LINK_FOLDER>career/form</LINK_FOLDER>
+		<LINK_FILE>form_upd_cv_7.cfm</LINK_FILE> 
+		<LINK_DETAIL>Özgeçmişim / Kabul</LINK_DETAIL>
+		<LINK_XML>form_upd_cv_7.xml</LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Özgeçmiş Önizleme</LINK_NAME> 
+		<LINK_FOLDER>career/display</LINK_FOLDER>
+		<LINK_FILE>dsp_cv.cfm</LINK_FILE> 
+		<LINK_DETAIL>Özgeçmiş Önizleme</LINK_DETAIL>
+		<LINK_XML>dsp_cv.xml</LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Üye Bilgilerim</LINK_NAME> 
+		<LINK_FOLDER>career/form</LINK_FOLDER>
+		<LINK_FILE>change_pass.cfm</LINK_FILE> 
+		<LINK_DETAIL>Üye Bilgilerim</LINK_DETAIL>
+		<LINK_XML></LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Proje Detay</LINK_NAME> 
+		<LINK_FOLDER>project/display</LINK_FOLDER>
+		<LINK_FILE>dsp_project_detail.cfm</LINK_FILE> 
+		<LINK_DETAIL>Proje Detay</LINK_DETAIL>
+		<LINK_XML>dsp_project_detail.xml</LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Projeye Bağlı İşler</LINK_NAME> 
+		<LINK_FOLDER>project/display</LINK_FOLDER>
+		<LINK_FILE>pro_works_list.cfm</LINK_FILE> 
+		<LINK_DETAIL>Projeye Bağlı İşler</LINK_DETAIL>
+		<LINK_XML>pro_works_list.xml</LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Projeler Listesi</LINK_NAME> 
+		<LINK_FOLDER>project/display</LINK_FOLDER>
+		<LINK_FILE>dsp_projects.cfm</LINK_FILE> 
+		<LINK_DETAIL>Projeler Listesi</LINK_DETAIL>
+		<LINK_XML>dsp_projects.xml</LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Projeyle İlişkili Belgeler</LINK_NAME> 
+		<LINK_FOLDER>project/display</LINK_FOLDER>
+		<LINK_FILE>project_relation_asset.cfm</LINK_FILE> 
+		<LINK_DETAIL>Projeyle İlişkili Belgeler</LINK_DETAIL>
+		<LINK_XML></LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Projeyle İlişkili İçerikler</LINK_NAME> 
+		<LINK_FOLDER>project/display</LINK_FOLDER>
+		<LINK_FILE>project_relation_content.cfm</LINK_FILE> 
+		<LINK_DETAIL>Projeyle İlişkili İçerikler</LINK_DETAIL>
+		<LINK_XML></LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Projeyle İlişkili Olaylar</LINK_NAME> 
+		<LINK_FOLDER>project/display</LINK_FOLDER>
+		<LINK_FILE>project_relation_events.cfm</LINK_FILE> 
+		<LINK_DETAIL>Projeyle İlişkili Olaylar</LINK_DETAIL>
+		<LINK_XML></LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Projeyle İlişkili Notlar</LINK_NAME> 
+		<LINK_FOLDER>project/display</LINK_FOLDER>
+		<LINK_FILE>project_relation_note.cfm</LINK_FILE> 
+		<LINK_DETAIL>Projeyle İlişkili Notlar</LINK_DETAIL>
+		<LINK_XML>project_relation_note.xml</LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Proje Ekibi</LINK_NAME> 
+		<LINK_FOLDER>project/display</LINK_FOLDER>
+		<LINK_FILE>project_team.cfm</LINK_FILE> 
+		<LINK_DETAIL>Proje Ekibi</LINK_DETAIL>
+		<LINK_XML>project_team.xml</LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Benim İşlerim</LINK_NAME> 
+		<LINK_FOLDER>project/display</LINK_FOLDER>
+		<LINK_FILE>dsp_my_works.cfm</LINK_FILE> 
+		<LINK_DETAIL>Bana Ait Olay İşleri Gösterir.</LINK_DETAIL>
+		<LINK_XML>dsp_my_works.xml</LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Olay Ekle</LINK_NAME> 
+		<LINK_FOLDER>agenda/display</LINK_FOLDER>
+		<LINK_FILE>form_add_event.cfm</LINK_FILE> 
+		<LINK_DETAIL>Ajandaya olay eklenebilmesini sağlar.</LINK_DETAIL>
+		<LINK_XML>form_add_event.xml</LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Olay Güncelle</LINK_NAME> 
+		<LINK_FOLDER>agenda/display</LINK_FOLDER>
+		<LINK_FILE>form_upd_event.cfm</LINK_FILE> 
+		<LINK_DETAIL>Ajandada olay güncellenebilmesini sağlar.</LINK_DETAIL>
+		<LINK_XML>form_add_event.xml</LINK_XML>
+	</SETUPSITE>
+	<!--<SETUPSITE>
+		<LINK_NAME>Olay Detayı</LINK_NAME> 
+		<LINK_FOLDER>agenda/display</LINK_FOLDER>
+		<LINK_FILE>dsp_event.cfm</LINK_FILE> 
+		<LINK_DETAIL>Güncelleme yapılamadan olayın detay bilgilerini gösterir.</LINK_DETAIL>
+		<LINK_XML></LINK_XML>
+	</SETUPSITE>-->
+	<SETUPSITE>
+		<LINK_NAME>Bugünkü Olaylar</LINK_NAME> 
+		<LINK_FOLDER>agenda/display</LINK_FOLDER>
+		<LINK_FILE>dsp_daily_agenda.cfm</LINK_FILE> 
+		<LINK_DETAIL>Ajandada bugün gerçekleşmesi planlanan olayları gösterir.</LINK_DETAIL>
+		<LINK_XML>dsp_daily_agenda.xml</LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Olay Listesi</LINK_NAME> 
+		<LINK_FOLDER>agenda/display</LINK_FOLDER>
+		<LINK_FILE>list_events.cfm</LINK_FILE> 
+		<LINK_DETAIL>İnternette yayındaki olayların listelenmesini sağlar.</LINK_DETAIL>
+		<LINK_XML></LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Dijital Arşiv</LINK_NAME> 
+		<LINK_FOLDER>asset</LINK_FOLDER>
+		<LINK_FILE>list_assets.cfm</LINK_FILE> 
+		<LINK_DETAIL>Dijital Arşiv</LINK_DETAIL>
+		<LINK_XML>list_asset.xml</LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Videoları Yanda kategorilere göre getirir.</LINK_NAME> 
+		<LINK_FOLDER>asset</LINK_FOLDER>
+		<LINK_FILE>list_all_videos.cfm</LINK_FILE> 
+		<LINK_DETAIL>Video Listesi</LINK_DETAIL>
+		<LINK_XML></LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Özelliklere Göre Videolar</LINK_NAME>
+		<LINK_FOLDER>asset</LINK_FOLDER>
+		<LINK_FILE>list_detail_videos.cfm</LINK_FILE>
+		<LINK_DETAIL>Dijital Videolar</LINK_DETAIL>
+		<LINK_XML>list_videos.xml</LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Bölüm Yanı İçerikleri</LINK_NAME> 
+		<LINK_FOLDER>menus</LINK_FOLDER>
+		<LINK_FILE>content_chapter_side_menu.cfm</LINK_FILE> 
+		<LINK_DETAIL>Belirtilen bölümün yan içeriklerini listeler.</LINK_DETAIL>
+		<LINK_XML></LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Kategori Bölümleri</LINK_NAME> 
+		<LINK_FOLDER>menus</LINK_FOLDER>
+		<LINK_FILE>chapters_in_category_menu.cfm</LINK_FILE> 
+		<LINK_DETAIL>Belirtilen kategorinin bölümlerini listeler.</LINK_DETAIL>
+		<LINK_XML>content_chapter_category.xml</LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Saat ve Tarih</LINK_NAME> 
+		<LINK_FOLDER>menus</LINK_FOLDER>
+		<LINK_FILE>time_clock.cfm</LINK_FILE> 
+		<LINK_DETAIL>Saat ve tarihi gösterir.</LINK_DETAIL>
+		<LINK_XML></LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Bundle Listesi</LINK_NAME>
+		<LINK_FOLDER>product</LINK_FOLDER>
+		<LINK_FILE>list_prices_bundle.cfm</LINK_FILE>
+		<LINK_DETAIL>Bundle Listesi</LINK_DETAIL>
+		<LINK_XML></LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>MyCube Mail</LINK_NAME>
+		<LINK_FOLDER>login</LINK_FOLDER>
+		<LINK_FILE>open_mycube_inbox.cfm</LINK_FILE>
+		<LINK_DETAIL>MyCube Mail</LINK_DETAIL>
+		<LINK_XML></LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Dijital Belge Detay</LINK_NAME>
+		<LINK_FOLDER>asset</LINK_FOLDER>
+		<LINK_FILE>dsp_asset.cfm</LINK_FILE>
+		<LINK_DETAIL>Dijital Belge Detay</LINK_DETAIL>
+		<LINK_XML>dsp_asset.xml</LINK_XML>
+	</SETUPSITE>	
+	<SETUPSITE>
+		<LINK_NAME>İçeriği Arkadaşına Gönder</LINK_NAME>
+		<LINK_FOLDER>content</LINK_FOLDER>
+		<LINK_FILE>content_webmail.cfm</LINK_FILE>
+		<LINK_DETAIL>İçeriği Arkadaşına Gönder</LINK_DETAIL>
+		<LINK_XML></LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>İntranet Üye Girişi</LINK_NAME>
+		<LINK_FOLDER>login</LINK_FOLDER>
+		<LINK_FILE>intranet_login.cfm</LINK_FILE>
+		<LINK_DETAIL>İntranet Üye Girişi</LINK_DETAIL>
+		<LINK_XML>intranet_login.xml</LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Çalışan Doğum Günleri</LINK_NAME>
+		<LINK_FOLDER>menus</LINK_FOLDER>
+		<LINK_FILE>dsp_birthdate.cfm</LINK_FILE>
+		<LINK_DETAIL>Çalışan Doğum Günleri</LINK_DETAIL>
+		<LINK_XML></LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Bağımsız Sayfa Çağır</LINK_NAME>
+		<LINK_FOLDER>display</LINK_FOLDER>
+		<LINK_FILE>bring_page.cfm</LINK_FILE>
+		<LINK_DETAIL>Bağımsız Sayfa Çağır</LINK_DETAIL>
+		<LINK_XML>bring_page.xml</LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Worknet Talepler</LINK_NAME> 
+		<LINK_FOLDER>worknet</LINK_FOLDER>
+		<LINK_FILE>list_last_demands.cfm</LINK_FILE> 
+		<LINK_DETAIL>Worknet Talepler</LINK_DETAIL>
+		<LINK_XML>list_last_demands.xml</LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Yardımlar</LINK_NAME> 
+		<LINK_FOLDER>display</LINK_FOLDER>
+		<LINK_FILE>search_helpdesk.cfm</LINK_FILE>
+		<LINK_DETAIL>Yardımlar</LINK_DETAIL>
+		<LINK_XML></LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Excel,print,mail ve pdf dökümanlarını getirir.</LINK_NAME> 
+		<LINK_FOLDER>menus</LINK_FOLDER>
+		<LINK_FILE>print_exel_pdf_mail_menu.cfm</LINK_FILE>
+		<LINK_DETAIL>Excel,print,mail ve pdf dökümanlarını getirir.</LINK_DETAIL>
+		<LINK_XML></LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Print,mail ve yorum menüsünü getirir.</LINK_NAME> 
+		<LINK_FOLDER>menus</LINK_FOLDER>
+		<LINK_FILE>print_mail_comment_menu.cfm</LINK_FILE>
+		<LINK_DETAIL>Print,mail ve yorum menüsünü getirir.</LINK_DETAIL>
+		<LINK_XML></LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Üyenin İçerikleri.</LINK_NAME> 
+		<LINK_FOLDER>member</LINK_FOLDER>
+		<LINK_FILE>company_relation_content.cfm</LINK_FILE>
+		<LINK_DETAIL>Üyenin İçerikleri.</LINK_DETAIL>
+		<LINK_XML>content_company.xml</LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Proje Ön Bilgileri</LINK_NAME> 
+		<LINK_FOLDER>sale</LINK_FOLDER>
+		<LINK_FILE>list_project_pro_info.cfm</LINK_FILE> 
+		<LINK_DETAIL>Proje Ön Bilgileri</LINK_DETAIL>
+		<LINK_XML>list_project_pro_info.xml</LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Spot Tabbed Menü</LINK_NAME> 
+		<LINK_FOLDER>content</LINK_FOLDER>
+		<LINK_FILE>content_spot_tabbed_panel.cfm</LINK_FILE> 
+		<LINK_DETAIL>İçerik Kategorilerine Ait Spotları ve İçerikleri Getirir.</LINK_DETAIL>
+		<LINK_XML>content_spot_tabbed.xml</LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>İçerik Tabed Menü</LINK_NAME> 
+		<LINK_FOLDER>content</LINK_FOLDER>
+		<LINK_FILE>content_tabbed_menu.cfm</LINK_FILE> 
+		<LINK_DETAIL>İçerikleri Getirir.</LINK_DETAIL>
+		<LINK_XML>content_tabbed_menu.xml</LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Vitrin Tabbed Menü</LINK_NAME> 
+		<LINK_FOLDER>product</LINK_FOLDER>
+		<LINK_FILE>vision_tabbed_menu.cfm</LINK_FILE> 
+		<LINK_DETAIL>Vitrin Kategorilerine Ait Ürünleri Getirir.</LINK_DETAIL>
+		<LINK_XML>view_vision.xml</LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Ürün Detayı Tabbed Menü</LINK_NAME> 
+		<LINK_FOLDER>product</LINK_FOLDER>
+		<LINK_FILE>product_summary_tabbed_menu.cfm</LINK_FILE> 
+		<LINK_DETAIL>Ürüne Ait İlişkili Objeleri Getirir.</LINK_DETAIL>
+		<LINK_XML>summary_tabbed_menu.xml</LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Ürün Fiyatı Ödeme Yöntemleri</LINK_NAME> 
+		<LINK_FOLDER>product</LINK_FOLDER>
+		<LINK_FILE>product_relation_payments.cfm</LINK_FILE> 
+		<LINK_DETAIL>Ürün Fiyatına Ait Ödeme Seçeneklerini Getirir.</LINK_DETAIL>
+		<LINK_XML></LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Ürün Videoları</LINK_NAME> 
+		<LINK_FOLDER>product</LINK_FOLDER>
+		<LINK_FILE>product_relation_videos.cfm</LINK_FILE> 
+		<LINK_DETAIL>Ürün Videoları</LINK_DETAIL>
+		<LINK_XML></LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Üyeye Ait Sevkiyatlar</LINK_NAME> 
+		<LINK_FOLDER>sale</LINK_FOLDER>
+		<LINK_FILE>list_packetship.cfm</LINK_FILE> 
+		<LINK_DETAIL>Üyeye Ait Sevkiyatları Getirir</LINK_DETAIL>
+		<LINK_XML></LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Sevkiyat Detay</LINK_NAME> 
+		<LINK_FOLDER>sale</LINK_FOLDER>
+		<LINK_FILE>dsp_packetship.cfm</LINK_FILE> 
+		<LINK_DETAIL>Sevkiyatın Detayını Getirir</LINK_DETAIL>
+		<LINK_XML></LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Üyenin Toplu Sevkiyatları</LINK_NAME> 
+		<LINK_FOLDER>sale</LINK_FOLDER>
+		<LINK_FILE>list_multi_packetship.cfm</LINK_FILE> 
+		<LINK_DETAIL>Üyeye Ait Sevkiyatları Getirir</LINK_DETAIL>
+		<LINK_XML></LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Toplu Sevkiyat Detay</LINK_NAME> 
+		<LINK_FOLDER>sale</LINK_FOLDER>
+		<LINK_FILE>dsp_multi_packetship.cfm</LINK_FILE> 
+		<LINK_DETAIL>Sevkiyatın Detayını Getirir</LINK_DETAIL>
+		<LINK_XML>dsp_multi_packetship.xml</LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>TV İzleme Objesini Getirir</LINK_NAME> 
+		<LINK_FOLDER>asset</LINK_FOLDER>
+		<LINK_FILE>live_internettv.cfm</LINK_FILE> 
+		<LINK_DETAIL>TV İzleme Objesini Getirir</LINK_DETAIL>
+		<LINK_XML></LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Üyenin Bakiyesi.</LINK_NAME> 
+		<LINK_FOLDER>member</LINK_FOLDER>
+		<LINK_FILE>dsp_summary_extre_member.cfm</LINK_FILE> 
+		<LINK_DETAIL>Üyenin Bakiyesini Gösterir.</LINK_DETAIL>
+		<LINK_XML></LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Üyenin Belgeleri.</LINK_NAME> 
+		<LINK_FOLDER>member</LINK_FOLDER>
+		<LINK_FILE>member_relation_asset.cfm</LINK_FILE> 
+		<LINK_DETAIL>Üyenin Belgelerini Getirir.</LINK_DETAIL>
+		<LINK_XML>member_relation_asset.xml</LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Workcube Konfiguratör.</LINK_NAME> 
+		<LINK_FOLDER>product</LINK_FOLDER>
+		<LINK_FILE>workcube_congurator.cfm</LINK_FILE> 
+		<LINK_DETAIL>Workcube Konfiguratör.</LINK_DETAIL>
+		<LINK_XML>workcube_configurator.xml</LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Hızlı Sipariş Ekranı.</LINK_NAME> 
+		<LINK_FOLDER>sale</LINK_FOLDER>
+		<LINK_FILE>add_basket_expres.cfm</LINK_FILE> 
+		<LINK_DETAIL>Hızlı Sipariş Ekranı.</LINK_DETAIL>
+		<LINK_XML>add_basket_expres.xml</LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Podcast Player</LINK_NAME> 
+		<LINK_FOLDER>asset</LINK_FOLDER>
+		<LINK_FILE>podcast_player.cfm</LINK_FILE> 
+		<LINK_DETAIL>İstediğim dijital arşivin sesini getirir.</LINK_DETAIL>
+		<LINK_XML>podcast_player.xml</LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>İçerik Kategori ve Bölümleri</LINK_NAME> 
+		<LINK_FOLDER>menus</LINK_FOLDER>
+		<LINK_FILE>content_category_chapter.cfm</LINK_FILE> 
+		<LINK_DETAIL>İçerik Kategori ve Bölümleri</LINK_DETAIL>
+		<LINK_XML></LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Literatür Neredeyim</LINK_NAME> 
+		<LINK_FOLDER>menus</LINK_FOLDER>
+		<LINK_FILE>content_info.cfm</LINK_FILE> 
+		<LINK_DETAIL>Literatür Neredeyim</LINK_DETAIL>
+		<LINK_XML></LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Ürün Neredeyim</LINK_NAME> 
+		<LINK_FOLDER>menus</LINK_FOLDER>
+		<LINK_FILE>product_info.cfm</LINK_FILE> 
+		<LINK_DETAIL>Ürün Neredeyim</LINK_DETAIL>
+		<LINK_XML></LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Menu Boşluk Objesi</LINK_NAME> 
+		<LINK_FOLDER>menus</LINK_FOLDER>
+		<LINK_FILE>menu_blank_object.cfm</LINK_FILE> 
+		<LINK_DETAIL>Menu Boşluk Objesi</LINK_DETAIL>
+		<LINK_XML>menu_blank_object.xml</LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>FLV player</LINK_NAME> 
+		<LINK_FOLDER>asset</LINK_FOLDER>
+		<LINK_FILE>flvplayer.cfm</LINK_FILE> 
+		<LINK_DETAIL>FLV Player objesini getirir.</LINK_DETAIL>
+		<LINK_XML></LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Video Arama</LINK_NAME> 
+		<LINK_FOLDER>asset</LINK_FOLDER>
+		<LINK_FILE>video_dsp_search.cfm</LINK_FILE> 
+		<LINK_DETAIL>Video Arama.</LINK_DETAIL>
+		<LINK_XML></LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Video Detay</LINK_NAME> 
+		<LINK_FOLDER>asset</LINK_FOLDER>
+		<LINK_FILE>detail_video.cfm</LINK_FILE> 
+		<LINK_DETAIL>Video Detay</LINK_DETAIL>
+		<LINK_XML></LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Video Oynatıcı</LINK_NAME> 
+		<LINK_FOLDER>asset</LINK_FOLDER>
+		<LINK_FILE>flvplayer.cfm</LINK_FILE> 
+		<LINK_DETAIL>FLV Player objesini getirir.</LINK_DETAIL>
+		<LINK_XML>flvplayer.xml</LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Video Detay Bilgileri</LINK_NAME> 
+		<LINK_FOLDER>asset</LINK_FOLDER>
+		<LINK_FILE>video_info.cfm</LINK_FILE> 
+		<LINK_DETAIL>Video Detay Bilgileri.</LINK_DETAIL>
+		<LINK_XML></LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Video Oylama</LINK_NAME> 
+		<LINK_FOLDER>asset</LINK_FOLDER>
+		<LINK_FILE>video_options.cfm</LINK_FILE> 
+		<LINK_DETAIL>Video Oylama.</LINK_DETAIL>
+		<LINK_XML></LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Video Yorumları</LINK_NAME> 
+		<LINK_FOLDER>asset</LINK_FOLDER>
+		<LINK_FILE>list_comments.cfm</LINK_FILE> 
+		<LINK_DETAIL>Video Yorumları.</LINK_DETAIL>
+		<LINK_XML></LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Video Arama</LINK_NAME> 
+		<LINK_FOLDER>asset</LINK_FOLDER>
+		<LINK_FILE>video_dsp_search.cfm</LINK_FILE> 
+		<LINK_DETAIL>Video Arama.</LINK_DETAIL>
+		<LINK_XML></LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Video Listesi</LINK_NAME> 
+		<LINK_FOLDER>asset</LINK_FOLDER>
+		<LINK_FILE>list_video.cfm</LINK_FILE> 
+		<LINK_DETAIL></LINK_DETAIL>
+		<LINK_XML></LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Yayınlar</LINK_NAME> 
+		<LINK_FOLDER>asset</LINK_FOLDER>
+		<LINK_FILE>broadcast.cfm</LINK_FILE> 
+		<LINK_DETAIL>Bugüne ait canlı yayın veya tüm yayınları getirir.</LINK_DETAIL>
+		<LINK_XML>broadcast.xml</LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Fırsat Display Ekranı</LINK_NAME> 
+		<LINK_FOLDER>sale</LINK_FOLDER>
+		<LINK_FILE>dsp_opportunity.cfm</LINK_FILE> 
+		<LINK_DETAIL>Fırsat Display Ekranı.</LINK_DETAIL>
+		<LINK_XML></LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Fırsata Ait Takipler</LINK_NAME> 
+		<LINK_FOLDER>sale</LINK_FOLDER>
+		<LINK_FILE>list_opportunity_plus.cfm</LINK_FILE> 
+		<LINK_DETAIL>Fırsata Ait Takipler.</LINK_DETAIL>
+		<LINK_XML></LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Site Haritası</LINK_NAME> 
+		<LINK_FOLDER>display</LINK_FOLDER>
+		<LINK_FILE>sitemap.cfm</LINK_FILE> 
+		<LINK_DETAIL>Site Haritası</LINK_DETAIL>
+		<LINK_XML></LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Haftanın Eğitimi</LINK_NAME>
+		<LINK_FOLDER>training/display</LINK_FOLDER>
+		<LINK_FILE>main_training.cfm</LINK_FILE>
+		<LINK_DETAIL>Haftanın Eğitimi</LINK_DETAIL>
+		<LINK_XML>main_training.xml</LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Eğitim Listesi</LINK_NAME>
+		<LINK_FOLDER>training/display</LINK_FOLDER>
+		<LINK_FILE>training_list.cfm</LINK_FILE>
+		<LINK_DETAIL>Güncel eğitimleri listeler</LINK_DETAIL>
+		<LINK_XML></LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Ürün Kategori İsimleri</LINK_NAME> 
+		<LINK_FOLDER>product</LINK_FOLDER>
+		<LINK_FILE>get_product_cat_names.cfm</LINK_FILE> 
+		<LINK_DETAIL>H3 tagini kullanarak arama motoru dostu olarak gösterir</LINK_DETAIL>
+		<LINK_XML></LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Ürün İsmi</LINK_NAME> 
+		<LINK_FOLDER>product</LINK_FOLDER>
+		<LINK_FILE>get_product_names.cfm</LINK_FILE> 
+		<LINK_DETAIL>H3 tagini kullanarak arama motoru dostu olarak gösterir</LINK_DETAIL>
+		<LINK_XML></LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>İçerik Layerı</LINK_NAME> 
+		<LINK_FOLDER>content</LINK_FOLDER>
+		<LINK_FILE>layer_content.cfm</LINK_FILE> 
+		<LINK_DETAIL>Layer İçerik</LINK_DETAIL>
+		<LINK_XML>layer_content.xml</LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Giriş Kontrol</LINK_NAME> 
+		<LINK_FOLDER>login</LINK_FOLDER>
+		<LINK_FILE>send_login_direct.cfm</LINK_FILE> 
+		<LINK_DETAIL></LINK_DETAIL>
+		<LINK_XML></LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Kargo Bilgileri</LINK_NAME> 
+		<LINK_FOLDER>form</LINK_FOLDER>
+		<LINK_FILE>dsp_cargo_information.cfm</LINK_FILE> 
+		<LINK_DETAIL>Kargo Detay Bilgileri</LINK_DETAIL>
+		<LINK_XML></LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Genel Arama Sonuçları</LINK_NAME> 
+		<LINK_FOLDER>form</LINK_FOLDER>
+		<LINK_FILE>general_search_result.cfm</LINK_FILE> 
+		<LINK_DETAIL>Genel Arama Sonuçlarını Getirir</LINK_DETAIL>
+		<LINK_XML></LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Add this share objesi</LINK_NAME> 
+		<LINK_FOLDER>content</LINK_FOLDER>
+		<LINK_FILE>add_this.cfm</LINK_FILE> 
+		<LINK_DETAIL>Bağımsız add this share objesi.</LINK_DETAIL>
+		<LINK_XML></LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Rastgele Ürünler</LINK_NAME> 
+		<LINK_FOLDER>product</LINK_FOLDER>
+		<LINK_FILE>random_products.cfm</LINK_FILE> 
+		<LINK_DETAIL></LINK_DETAIL>
+		<LINK_XML>random_products.xml</LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Kampanya Basketi</LINK_NAME> 
+		<LINK_FOLDER>product</LINK_FOLDER>
+		<LINK_FILE>add_orderww_camp.cfm</LINK_FILE> 
+		<LINK_DETAIL></LINK_DETAIL>
+		<LINK_XML>add_orderww_camp.xml</LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Favorilerime Ekle</LINK_NAME> 
+		<LINK_FOLDER>product</LINK_FOLDER>
+		<LINK_FILE>add_my_favourites.cfm</LINK_FILE> 
+		<LINK_DETAIL></LINK_DETAIL>
+		<LINK_XML></LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Favori Ürünlerim</LINK_NAME> 
+		<LINK_FOLDER>product</LINK_FOLDER>
+		<LINK_FILE>list_favourities.cfm</LINK_FILE> 
+		<LINK_DETAIL></LINK_DETAIL>
+		<LINK_XML>list_prices.xml</LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Üyenin Banka Hesapları</LINK_NAME> 
+		<LINK_FOLDER>member</LINK_FOLDER>
+		<LINK_FILE>member_bank_account.cfm</LINK_FILE> 
+		<LINK_DETAIL></LINK_DETAIL>
+		<LINK_XML></LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Kampanya Yorumu Ekle</LINK_NAME>
+		<LINK_FOLDER>campaign/display</LINK_FOLDER>
+		<LINK_FILE>add_campaign_comment.cfm</LINK_FILE>
+		<LINK_DETAIL></LINK_DETAIL>
+		<LINK_XML></LINK_XML>	
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Yorumlar</LINK_NAME>
+		<LINK_FOLDER>content</LINK_FOLDER>
+		<LINK_FILE>viewContentComments.cfm</LINK_FILE>
+		<LINK_DETAIL></LINK_DETAIL>
+		<LINK_XML>view_content_comments.xml</LINK_XML>	
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Yorum Ekle</LINK_NAME>
+		<LINK_FOLDER>content</LINK_FOLDER>
+		<LINK_FILE>add_cont_comment.cfm</LINK_FILE>
+		<LINK_DETAIL></LINK_DETAIL>
+		<LINK_XML></LINK_XML>	
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Referans Üye Bilgileri</LINK_NAME> 
+		<LINK_FOLDER>member</LINK_FOLDER>
+		<LINK_FILE>reference_detail.cfm</LINK_FILE> 
+		<LINK_DETAIL>Referans üye bilgilerini listeleme</LINK_DETAIL>
+		<LINK_XML>reference_detail.xml</LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Üye Takip</LINK_NAME> 
+		<LINK_FOLDER>member</LINK_FOLDER>
+		<LINK_FILE>my_ref_member_demands.cfm</LINK_FILE> 
+		<LINK_DETAIL>Üye Takip listeleme</LINK_DETAIL>
+		<LINK_XML></LINK_XML>
+	</SETUPSITE>	
+</SETUP_SITE>

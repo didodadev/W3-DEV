@@ -1,0 +1,30 @@
+<!--- 
+	Bu sayfadan objects*query icindede var orayida update ediniz.arzubt 051122003
+--->
+<cfquery name="GET_SALE_COST" datasource="#DSN2#" maxrows="5">
+	SELECT DISTINCT
+		IR.PRICE,
+		IR.PRICE_OTHER,
+		IR.OTHER_MONEY, 
+		IR.DISCOUNT1, 
+		IR.DISCOUNT2, 
+		IR.DISCOUNT3, 
+		IR.DISCOUNT4, 
+		IR.DISCOUNT5, 
+		I.INVOICE_DATE,
+		I.CONSUMER_ID, 
+		I.COMPANY_ID, 
+		IR.UNIT
+	FROM	
+		INVOICE_ROW AS IR,
+		INVOICE AS I,
+		#dsn3_alias#.STOCKS AS ST
+	WHERE
+		ST.PRODUCT_ID = #attributes.pid#
+		AND	ST.STOCK_ID = IR.STOCK_ID
+		AND	I.PURCHASE_SALES = 1
+		AND ISNULL(I.IS_IPTAL,0)=0
+		AND	I.INVOICE_ID = IR.INVOICE_ID
+	ORDER BY
+		I.INVOICE_DATE DESC
+</cfquery>

@@ -1,0 +1,13 @@
+<cfquery name="get_report" datasource="#dsn#">
+	SELECT
+		REPORTS.*,
+		EMPLOYEES.EMPLOYEE_NAME,
+		EMPLOYEES.EMPLOYEE_SURNAME
+	FROM
+		REPORTS,
+		EMPLOYEES
+	WHERE
+		REPORTS.REPORT_ID = #attributes.REPORT_ID#
+		AND 
+		REPORTS.RECORD_EMP = EMPLOYEES.EMPLOYEE_ID
+</cfquery>

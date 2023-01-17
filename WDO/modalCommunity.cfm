@@ -1,0 +1,1 @@
+<div class="row">	<div class="col col-12">		<h3>Community</h3>	</div></div><div class="row">	<div class="col col-12"></div></div>

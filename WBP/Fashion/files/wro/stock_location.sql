@@ -1,0 +1,35 @@
+USE [workcube_akarteks]
+GO
+
+/****** Object:  View [workcube_akarteks_2019_1].[GET_STOCK_PRODUCT_WLOCATION]    Script Date: 27.02.2020 01:21:46 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE VIEW [workcube_akarteks_2019_1].[GET_STOCK_PRODUCT_WLOCATION] AS
+			SELECT
+				ROUND(SUM(SR.STOCK_IN - SR.STOCK_OUT),4) AS PRODUCT_STOCK, 
+				S.PRODUCT_ID, 
+				S.STOCK_ID, 
+				S.STOCK_CODE, 
+				S.PROPERTY, 
+				S.BARCOD,
+				SR.STORE AS DEPARTMENT_ID,
+				SR.STORE_LOCATION AS LOCATION_ID
+			FROM
+				workcube_akarteks_product.STOCKS S,
+				[workcube_akarteks_2019_1].STOCKS_ROW SR
+			WHERE
+				S.STOCK_ID = SR.STOCK_ID
+			GROUP BY
+				S.PRODUCT_ID, 
+				S.STOCK_ID, 
+				S.STOCK_CODE, 
+				S.PROPERTY, 
+				S.BARCOD, 
+				SR.STORE,
+				SR.STORE_LOCATION
+GO
+

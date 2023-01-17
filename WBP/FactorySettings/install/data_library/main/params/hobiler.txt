@@ -1,0 +1,5 @@
+INSERT INTO [SETUP_HOBBY]([HOBBY_NAME]) Values( 'Yüzme');
+INSERT INTO [SETUP_HOBBY]([HOBBY_NAME]) Values( 'Dağcılık');
+INSERT INTO [SETUP_HOBBY]([HOBBY_NAME]) Values( 'Boks');
+INSERT INTO [SETUP_HOBBY]([HOBBY_NAME]) Values( 'Tenis');
+

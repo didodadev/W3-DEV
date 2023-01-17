@@ -1,0 +1,11 @@
+<cfquery name="GET_DEPARTMENT_UPD" datasource="#dsn#">
+	SELECT 
+		D.*,B.BRANCH_NAME 
+	FROM 
+		DEPARTMENT D,BRANCH B
+	WHERE
+		D.DEPARTMENT_ID=#URL.DEPARTMENT_ID#
+		AND
+		D.BRANCH_ID = B.BRANCH_ID
+</cfquery>
+

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SETUP_SITE>
+	<SETUPSITE>
+		<LINK_NAME>Üye Arama Sayfası XML Setup</LINK_NAME> 
+		<LINK_FILE>call.list_callcenter</LINK_FILE> 
+		<LINK_DETAIL>Üye Arama Listesi Sayfa Düzenlemesi</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Başvuru Ekleme / Güncelleme XML Setup</LINK_NAME> 
+		<LINK_FILE>call.add_service,call.upd_service</LINK_FILE> 
+		<LINK_DETAIL>Başvuru Ekleme / Güncelleme Sayfalarının Düzenlemesi</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Başvuru Listeleme XML Setup</LINK_NAME> 
+		<LINK_FILE>call.list_service</LINK_FILE> 
+		<LINK_DETAIL>Başvuru Listeleme Sayfalarının Düzenlemesi</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Etkileşim Listeleme XML Setup</LINK_NAME> 
+		<LINK_FILE>call.helpdesk</LINK_FILE> 
+		<LINK_DETAIL>Etkileşim Listeleme Sayfalarının Düzenlemesi</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Başvuru Takip XML Setup</LINK_NAME> 
+		<LINK_FILE>call.popup_add_service_plus</LINK_FILE> 
+		<LINK_DETAIL>Başvuru Takip Sayfalarının Düzenlemesi</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Etkileşim Ekleme</LINK_NAME> 
+		<LINK_FILE>call.popup_add_helpdesk,call.upd_helpdesk</LINK_FILE> 
+		<LINK_DETAIL>Etkileşim Ekleme Sayfalarının Düzenlemesi</LINK_DETAIL>
+	</SETUPSITE>
+
+</SETUP_SITE>

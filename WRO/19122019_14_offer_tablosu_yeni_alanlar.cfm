@@ -1,0 +1,17 @@
+<!-- Description : OFFER tablosuna ACCEPTED_OFFER_ID ve ACCEPTED_OFFER_DATE alanı eklendi.
+Developer: Botan Kayğan
+Company : Workcube
+Destination: Company -->
+<querytag>
+    IF NOT EXISTS (SELECT 'Y' FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME = 'OFFER' AND TABLE_SCHEMA = '@_dsn_company_@' AND COLUMN_NAME = 'ACCEPTED_OFFER_ID')
+    BEGIN
+        ALTER TABLE OFFER ADD
+        ACCEPTED_OFFER_ID int NULL
+    END;
+
+    IF NOT EXISTS (SELECT 'Y' FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME = 'OFFER' AND TABLE_SCHEMA = '@_dsn_company_@' AND COLUMN_NAME = 'ACCEPTED_OFFER_DATE')
+    BEGIN
+        ALTER TABLE OFFER ADD
+        ACCEPTED_OFFER_DATE datetime NULL
+    END;
+</querytag>

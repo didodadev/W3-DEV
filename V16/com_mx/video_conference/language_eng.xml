@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<language>
+	<errors>
+		<errorTitle>Error:</errorTitle>
+		<missedParameter>One or some of required parameters does not exist. Related parameters:</missedParameter>
+		<connectionError>Connection failed! Please be sure that a valid address is specified. Related parameter:</connectionError>
+		<connectionClose>Connection closed! Please close the application and try again later..</connectionClose>
+		<originalErrorCode>Technical error code:</originalErrorCode>
+		<alreadyLoggedIn>The user is already in system right now !</alreadyLoggedIn>
+		<archivingError>Archiving process failed !</archivingError>
+		<fieldsInvalid>One or more of necessary fields are invalid !</fieldsInvalid>
+		<sessionNotFound>Session could not found!</sessionNotFound>
+		<validationError>Client could not validated!</validationError>
+		<logError>An error occured while logging the session statistics!</logError>
+	</errors>
+			
+	<messages>
+		<pleaseWait>Please wait..</pleaseWait>
+		<connecting>connecting to server</connecting>
+		<starting>application starting</starting>
+		<writeHere>Write here..</writeHere>
+		<userJoined>joined to conference.</userJoined>
+		<userLeft>left from conference.</userLeft>
+		<selectReceiver>Select who will receive the message</selectReceiver>
+		<userDeviceReady>opened the devices for sharing.</userDeviceReady>
+		<userDeviceUnpublish>stopped to share the devices.</userDeviceUnpublish>
+		<viewInfo>user(s) is(are) watching / listening you right now</viewInfo>
+		<archiving>archiving, please wait..</archiving>
+		<archivingSuccess>Archiving process completed succesful !</archivingSuccess>
+		<idAlreadyInUse>This ID is already in use! Please try again with another ID.</idAlreadyInUse>
+		<shareTip>You did not share your camera and microphone yet!</shareTip>
+		<sharingLimitation>Only 4 users can share the devices at the same time!</sharingLimitation>
+		<invitation>invited you Video Conference. Please click to join</invitation>
+		<invitationSent>Your invitation has been sent!</invitationSent>
+		<fileSizeLimitation>You can't send files bigger than 10 MB!</fileSizeLimitation>
+		<fileRequestDelivered>Your request to send file is delivered, the download will start after accepted.</fileRequestDelivered>
+		<fileNotice>wants to send a file to you</fileNotice>
+		<fileRequestDeny>denied your request to send file!</fileRequestDeny>
+		<fileSendingStarted>File sending process started!</fileSendingStarted>
+		<fileSendingCancelled>cancelled file sending operation!</fileSendingCancelled>
+		<youCancelledFileSending>You cancelled file sending operation!</youCancelledFileSending>
+		<youCancelledFileReceiving>You cancelled file receiving operation!</youCancelledFileReceiving>
+		<fileSendingCompleted>File sending process completed.</fileSendingCompleted>
+	</messages>
+	
+	<titles>
+		<bar>WORKCUBE VIDEO CONFERENCE</bar>
+		<devices>My Devices</devices>
+		<view>Saloon</view>
+		<users>Participants</users>
+		<contacts>Contacts</contacts>
+		<chat>Chat</chat>
+	</titles>
+	
+	<words>
+		<channel>To everyone</channel>
+		<send>Send</send>
+		<cameraSettings>Camera settings</cameraSettings>
+		<microphoneSettings>Microphone settings</microphoneSettings>
+		<publish>Share my camera and microphone</publish>
+		<unpublish>Stop to share my camera and microphone</unpublish>
+		<startRecord>Start to record my device(s)</startRecord>
+		<stopRecord>Stop to record my device(s)</stopRecord>
+		<archiveRecord>Archive my device record</archiveRecord>
+		<clear>Clear</clear>
+		<nickname>Nickname</nickname>
+		<nameAndSurname>Name and surname</nameAndSurname>
+		<join>Join</join>
+		<shareCamera>Share my camera</shareCamera>
+		<shareMicrophone>Share my microphone</shareMicrophone>
+		<exit>Exit safely</exit>
+		<refresh>Refresh</refresh>
+		<invite>Send invitation</invite>
+		<generalChat>Include to the chat</generalChat>
+		<privateChat>Private chat</privateChat>
+		<soundAlerts>Sound alerts</soundAlerts>
+		<windowActivating>Activate the window when receive new message</windowActivating>
+		<participants>Participants</participants>
+		<sendFile>Send file</sendFile>
+		<receiveFile>Receive file</receiveFile>
+		<accept>Accept</accept>
+		<deny>Deny</deny>
+		<browse>Browse..</browse>
+		<save>Save</save>
+		<cancel>Cancel</cancel>
+		<selectFile>Please select a file.</selectFile>
+		<fileIsSending>File is sending</fileIsSending>
+	</words>
+</language>

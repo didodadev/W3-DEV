@@ -1,0 +1,16 @@
+<cfquery name="GET_SALARY_MONEY" datasource="#dsn#">
+	SELECT
+		*
+	FROM
+		EMPLOYEES_SALARY_CHANGE
+	WHERE
+		SALARY_YEAR = #attributes.SALARY_YEAR#
+		AND
+		SALARY_MONTH = #attributes.SALARY_MONTH#
+		AND
+		MONEY = '#Trim(attributes.MONEY)#'
+		AND
+		COMPANY_ID = #SESSION.EP.COMPANY_ID#
+	ORDER BY
+		SALARY_YEAR, SALARY_MONTH, MONEY
+</cfquery>

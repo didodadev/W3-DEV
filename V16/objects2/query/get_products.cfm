@@ -1,0 +1,16 @@
+<cfquery name="products" datasource="#dsn3#">
+	SELECT 
+		P.PRODUCT_NAME,
+		P.PRODUCT_ID 
+	FROM 
+		PRODUCT P,
+		PRODUCT_CAT PC	
+	WHERE 
+		P.PRODUCT_CATID = PC.PRODUCT_CATID
+		AND
+		PC.IS_PUBLIC =1
+		AND
+		P.IS_INTERNET = 1
+	ORDER BY
+		PRODUCT_NAME
+</cfquery>

@@ -1,0 +1,40 @@
+ <cfquery name="add_t" datasource="#DSN#">
+	INSERT INTO 
+    	TRAINING_CLASS_TRAINER_EVAL
+    (		 
+        CLASS_ID,
+        PROGRAMA_UYGUN,
+        SURE_YETERLI,
+        KATILIMCI_BILGI_SEVIYE,
+        DERSE_KATILIM,
+        OLUMLU_NITELIK,
+        OLUMSUZ_NITELIK,
+        GORUS_ONVERI,
+        KATILIMCIYA_UYGUN,
+        DERS_SONU_BEKLENTI,
+        KATILIMCI_DUZEYLERI,
+        RECORD_EMP,
+        RECORD_DATE,
+        RECORD_IP
+    )
+    VALUES
+    (
+        #attributes.CLASS_ID#,
+        '#attributes.PROGRAMA_UYGUN#',
+        '#attributes.SURE_YETERLI#',
+        '#attributes.KATILIMCI_BILGI_SEVIYE#',
+        '#attributes.DERSE_KATILIM#',
+        '#attributes.OLUMLU_NITELIK#',
+        '#attributes.OLUMSUZ_NITELIK#',
+        '#attributes.GORUS_ONVERI#',
+        '#attributes.KATILIMCIYA_UYGUN#',
+        '#attributes.DERS_SONU_BEKLENTI#',
+        '#attributes.KATILIMCI_DUZEYLERI#',
+        #SESSION.EP.USERID#,
+        #NOW()#,
+        '#CGI.REMOTE_ADDR#'
+    )	
+</cfquery>
+<script type="text/javascript">
+	window.close();	
+</script>

@@ -1,0 +1,77 @@
+{
+    "name": "workcube-extension",
+    "displayName": "Workcube Extension",
+    "description": "Workcube Extension for Visual Studio Code",
+    "version": "1.0.2",
+    "publisher": "Workcube",
+    "repository": {
+        "url": "https://bitbucket.org/workcube/devcatalyst/src/master/vscode/workcube-extension/"
+    },
+    "author": {
+        "name": "Alper Çitmen"
+    },
+    "icon": "img/icon.png",
+    "engines": {
+        "vscode": "^1.50.0"
+    },
+    "categories": [
+        "Snippets"
+    ],
+    "activationEvents": [
+        "onLanguage:cfml",
+        "workspaceContains:**/*.cfm",
+        "workspaceContains:**/*.cfc",
+        "workspaceContains:**/*.cfml"
+    ],
+    "main": "./ext",
+    "contributes": {
+        "commands": [
+            {
+                "command": "workcube-extension.cf_workcube",
+                "category": "CFML",
+                "title": "Workcube: Custom Tag Parametrelerini Getir"
+            }
+        ],
+        "keybindings": [
+            {
+                "command": "workcube-extension.cf_workcube",
+                "key": "ctrl+shift+space",
+                "mac": "cmd+shift+space",
+                "when": "editorTextFocus && editorLangId == cfml"
+            }
+        ],
+        "snippets": [
+            {
+                "language": "cfml",
+                "path": "./snippets/customtags.json"
+            },
+            {
+                "language": "cfml",
+                "path": "./snippets/js.json"
+            },
+            {
+                "language": "cfml",
+                "path": "./snippets/css.json"
+            },
+            {
+                "language": "cfml",
+                "path": "./snippets/workdata.json"
+            }
+        ],
+        "languages": [
+            {
+                "id": "cfml",
+                "aliases": [
+                    "CFML",
+                    "cfml"
+                ],
+                "extensions": [
+                    ".cfc",
+                    ".cfm",
+                    ".cfml"
+                ],
+                "configuration": "./language-configuration.json"
+            }
+        ]
+    }
+}

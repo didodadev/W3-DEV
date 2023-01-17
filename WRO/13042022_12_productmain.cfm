@@ -1,0 +1,10 @@
+<!-- Description : OUR_COMPANY_INFO NEW COLUMN
+Developer: Emine Yılmaz
+Company : Workcube
+Destination: MAIN -->
+<querytag>  
+    IF NOT EXISTS (SELECT 'Y' FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_SCHEMA = '@_dsn_main_@' AND TABLE_NAME = 'OUR_COMPANY_INFO' AND COLUMN_NAME = 'SENDGRID_GROUP_ID')
+    BEGIN
+        ALTER TABLE OUR_COMPANY_INFO ADD SENDGRID_GROUP_ID int NULL;
+    END;
+</querytag>

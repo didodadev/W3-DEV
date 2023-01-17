@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SETUP_SITE>
+	<SETUPSITE>
+		<LINK_NAME>Paket Kontrol Listesi XML Setup</LINK_NAME> 
+		<LINK_FILE>stock.popup_ship_package_detail</LINK_FILE> 
+		<LINK_DETAIL>Spec ayarlarının düzenlenmesi</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Stok Listesi</LINK_NAME> 
+		<LINK_FILE>stock.list_purchase,stock.welcome</LINK_FILE> 
+		<LINK_DETAIL>Stok Listesinin düzenlenmesi</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Stoklar</LINK_NAME> 
+		<LINK_FILE>stock.list_stock</LINK_FILE> 
+		<LINK_DETAIL>Stok Listesinin düzenlenmesi</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Stok Emirler Listesi</LINK_NAME> 
+		<LINK_FILE>stock.list_command</LINK_FILE> 
+		<LINK_DETAIL>Stok Emriler Listesinin Düzenlenmesi</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Stok Virman</LINK_NAME> 
+		<LINK_FILE>stock.form_add_stock_exchange</LINK_FILE> 
+		<LINK_DETAIL>Stok Virman İşleminin Düzenlenmesi</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Satış İrsaliyesi</LINK_NAME> 
+		<LINK_FILE>stock.form_add_sale</LINK_FILE> 
+		<LINK_DETAIL>Satış İrsaliyesi Ekle</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Stok Fişi</LINK_NAME> 
+		<LINK_FILE>stock.form_add_fis</LINK_FILE> 
+		<LINK_DETAIL>Stok Fişi Ekle</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Alış İrsaliyesi</LINK_NAME> 
+		<LINK_FILE>stock.form_add_purchase</LINK_FILE> 
+		<LINK_DETAIL>Alış İrsaliyesi Ekle</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Stok Detay</LINK_NAME> 
+		<LINK_FILE>stock.detail_stock</LINK_FILE> 
+		<LINK_DETAIL>Stok Detay</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Stok Lokasyon Detay</LINK_NAME> 
+		<LINK_FILE>stock.detail_store_stock_popup</LINK_FILE> 
+		<LINK_DETAIL>Stok Lokasyon Bilgisi</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Toplu Sevkiyat Detay</LINK_NAME> 
+		<LINK_FILE>stock.detail_multi_packetship,stock.add_multi_packetship,stock.upd_multi_packetship,stock.list_multi_packetship</LINK_FILE> 
+		<LINK_DETAIL>Toplu Sevkiyat Listesi</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Ekip Planı</LINK_NAME> 
+		<LINK_FILE>stock.dispatch_team_planning,stock.list_dispatch_team_planning,stock.popup_add_dispatch_team_planning,stock.popup_upd_dispatch_team_planning</LINK_FILE> 
+		<LINK_DETAIL>Ekip Planlama</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Depolararası Sevk İrsaliyesi</LINK_NAME> 
+		<LINK_FILE>stock.upd_ship_dispatch,stock.add_ship_dispatch</LINK_FILE> 
+		<LINK_DETAIL>Depolarası Sevk İrsaliyesi Güncelleme</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>PHL'den İrsaliye Oluştur</LINK_NAME> 
+		<LINK_FILE>stock.add_ship_from_file</LINK_FILE> 
+		<LINK_DETAIL>PHL'den İrsaliye Oluştur</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>İade İşlemleri</LINK_NAME> 
+		<LINK_FILE>stock.add_invent_return</LINK_FILE> 
+		<LINK_DETAIL>İade İşlemleri</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Depolar/Lokasyonlar/Raflar</LINK_NAME> 
+		<LINK_FILE>stock.list_departments</LINK_FILE> 
+		<LINK_DETAIL>Depolar/Lokasyonlar/Raflar</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Paketleme ve Sevkiyat Ekle</LINK_NAME> 
+		<LINK_FILE>stock.popup_add_packetship</LINK_FILE> 
+		<LINK_DETAIL>Paketleme ve Sevkiyat Ekle</LINK_DETAIL>
+	</SETUPSITE>	
+	<SETUPSITE>
+		<LINK_NAME>Mal Alım İrsaliyesi Dağıtım Sayfası</LINK_NAME> 
+		<LINK_FILE>stock.popup_list_ship_delivery</LINK_FILE> 
+		<LINK_DETAIL>Mal Alım İrsaliyesi Dağıtım Sayfası</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Stok Hareketleri Popup Sayfası</LINK_NAME> 
+		<LINK_FILE>stock.detail_stock_popup</LINK_FILE> 
+		<LINK_DETAIL>Ürün Kartındaki Stok Hareketleri Popup Sayfası</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Sevkiyatlar Listesi</LINK_NAME> 
+		<LINK_FILE>stock.list_packetship</LINK_FILE> 
+		<LINK_DETAIL>Sevkiyatlar Listesi</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>İthal Mal Girişi</LINK_NAME> 
+		<LINK_FILE>stock.add_stock_in_from_customs</LINK_FILE> 
+		<LINK_DETAIL>İthal Mal Girişi</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Seri ve Lot İşlemleri</LINK_NAME> 
+		<LINK_FILE>stock.list_serial_operations</LINK_FILE> 
+		<LINK_DETAIL>Seri ve Lot İşlemleri</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Spekt Virman</LINK_NAME> 
+		<LINK_FILE>stock.form_add_spec_exchange</LINK_FILE> 
+		<LINK_DETAIL>spect Virman İşleminin Düzenlenmesi</LINK_DETAIL>
+	</SETUPSITE>
+</SETUP_SITE>

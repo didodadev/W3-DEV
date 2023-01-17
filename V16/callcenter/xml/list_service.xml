@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<OBJECT_PROPERTIES>
+  <OBJECT_PROPERTY>
+		<PROPERTY>x_show_authorized_stage</PROPERTY>
+		<PROPERTY_DETAIL>Filtrede ve Listede Sadece Yetkili Olunan Süreçler Gelsin</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>select</PROPERTY_TYPE>
+		<PROPERTY_VALUES>1,0</PROPERTY_VALUES>
+		<PROPERTY_NAMES>Evet,Hayır</PROPERTY_NAMES>
+		<PROPERTY_DEFAULT>0</PROPERTY_DEFAULT>
+		<PROPERTY_HELP>Evet seçildiğinde filtrede ve listede yetkili olunan süreçlerdeki başvurular görüntülenir.</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+	<OBJECT_PROPERTY>
+		<PROPERTY>xml_is_our_company</PROPERTY>
+		<PROPERTY_DETAIL>Listede Sadece Kendi Şirketine Ait Başvurular Görünsün</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>select</PROPERTY_TYPE>
+		<PROPERTY_VALUES>1,0</PROPERTY_VALUES>
+		<PROPERTY_NAMES>Evet,Hayır</PROPERTY_NAMES>
+		<PROPERTY_DEFAULT>0</PROPERTY_DEFAULT>
+		<PROPERTY_HELP>Evet seçilirse sisteme bağlanılan şirketle ilişkili başvurular görülür.</PROPERTY_HELP>
+	</OBJECT_PROPERTY>	
+</OBJECT_PROPERTIES>

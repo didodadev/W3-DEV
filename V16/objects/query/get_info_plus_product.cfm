@@ -1,0 +1,10 @@
+<cfquery name="GET_VALUES" datasource="#DSN3#">
+	SELECT
+		*
+	FROM
+		PRODUCT_INFO_PLUS AS PIP,
+		SETUP_PRO_INFO_PLUS_NAMES AS SPIPN
+	WHERE
+		PIP.PRODUCT_ID = #attributes.pid# AND
+		PIP.PRO_INFO_ID = SPIPN.PRO_INFO_ID
+</cfquery>

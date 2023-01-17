@@ -1,0 +1,5 @@
+INSERT INTO [SETUP_VISION_TYPE]([VISION_TYPE_NAME],[VISION_TYPE_DETAIL],[VISION_TYPE_IMAGE],[VISION_TYPE_IMAGE_SERVER_ID]) Values( 'Haftanın Fırsatı','Haftanın ürünlerini listelemek için kullanılır.',Null,Null);
+INSERT INTO [SETUP_VISION_TYPE]([VISION_TYPE_NAME],[VISION_TYPE_DETAIL],[VISION_TYPE_IMAGE],[VISION_TYPE_IMAGE_SERVER_ID]) Values( 'Günün Promosyonu','Günün Promosyonu',Null,Null);
+INSERT INTO [SETUP_VISION_TYPE]([VISION_TYPE_NAME],[VISION_TYPE_DETAIL],[VISION_TYPE_IMAGE],[VISION_TYPE_IMAGE_SERVER_ID]) Values( 'Sizin İçin Seçtiklerimiz','En İyiler en uygun fiyatlarla',Null,Null);
+INSERT INTO [SETUP_VISION_TYPE]([VISION_TYPE_NAME],[VISION_TYPE_DETAIL],[VISION_TYPE_IMAGE],[VISION_TYPE_IMAGE_SERVER_ID]) Values( 'Süper Markalar','Özel markaların promosyonu',Null,Null);
+

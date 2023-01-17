@@ -1,0 +1,2564 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<workcube_process_types>
+	<process>
+		<process_module_id>22</process_module_id>
+		<process_cat>Açılış Fişi</process_cat>
+		<process_cat_eng>Opening Receipt</process_cat_eng>
+		<process_type>10</process_type>
+		<process_multi_type></process_multi_type>
+		<process_fuseaction>account.account_card_import,account.form_upd_bill_opening,account.popup_add_bill_opening_other,account.popup_list_card_rows,account.popup_upd_bill_opening</process_fuseaction>
+		<process_module_name>Muhasebe</process_module_name>
+		<process_chapter>1</process_chapter>
+		<invoice_type_code></invoice_type_code>
+		<profile_id></profile_id>
+		<dictionary_id>58756</dictionary_id>
+	</process>
+	<process>
+		<process_module_id>22</process_module_id>
+		<process_cat>Tahsil Fişi</process_cat>
+		<process_cat_eng>Collection Receipt</process_cat_eng>
+		<process_type>11</process_type>
+		<process_multi_type></process_multi_type>
+		<process_fuseaction>account.account_card_import,account.form_add_bill_collecting,account.popup_add_bill_collecting_copy,account.popup_upd_bill_collecting</process_fuseaction>
+		<process_module_name>Muhasebe</process_module_name>
+		<process_chapter/>
+		<invoice_type_code></invoice_type_code>
+		<profile_id></profile_id>
+		<dictionary_id>48950</dictionary_id>
+	</process>
+	<process>
+		<process_module_id>22</process_module_id>
+		<process_cat>Tediye Fişi</process_cat>
+		<process_cat_eng>Payment Receipt</process_cat_eng>
+		<process_type>12</process_type>
+		<process_multi_type></process_multi_type>
+		<process_fuseaction>account.account_card_import,account.form_add_bill_payment,account.popup_add_bill_payment_copy,account.popup_upd_bill_payment</process_fuseaction>
+		<process_module_name>Muhasebe</process_module_name>
+		<process_chapter/>
+		<invoice_type_code></invoice_type_code>
+		<profile_id></profile_id>
+		<dictionary_id>48951</dictionary_id>
+	</process>
+	<process>
+		<process_module_id>22</process_module_id>
+		<process_cat>Mahsup Fişi</process_cat>
+		<process_cat_eng>Accounting Receipt</process_cat_eng>
+		<process_type>13</process_type>
+		<process_multi_type></process_multi_type>
+		<process_fuseaction>account.account_card_import,account.form_add_bill_cash2cash,account.popup_add_bill_cash2cash_copy,account.popup_upd_bill_cash2cash</process_fuseaction>
+		<process_module_name>Muhasebe</process_module_name>
+		<process_chapter/>
+		<invoice_type_code></invoice_type_code>
+		<profile_id></profile_id>
+		<dictionary_id>58452</dictionary_id>
+	</process>
+	<process>
+		<process_module_id>22</process_module_id>
+		<process_cat>Özel Fiş</process_cat>
+		<process_cat_eng>Special Receipt</process_cat_eng>
+		<process_type>14</process_type>
+		<process_multi_type></process_multi_type>
+		<process_fuseaction>account.account_card_import,account.form_add_bill_cash2cash,account.popup_upd_bill_cash2cash</process_fuseaction>
+		<process_module_name>Muhasebe</process_module_name>
+		<process_chapter/>
+		<invoice_type_code></invoice_type_code>
+		<profile_id></profile_id>
+		<dictionary_id>29435</dictionary_id>
+	</process>
+	<process>
+		<process_module_id>31</process_module_id>
+		<process_cat>Demirbaş Yeniden Değerleme</process_cat>
+		<process_cat_eng>Fixed Asset Revaluation</process_cat_eng>
+		<process_type>18</process_type>
+		<process_multi_type></process_multi_type>
+		<process_fuseaction>invent.list_invent_amortization,invent.add_invent_amortization,invent.popup_add_invent_amortization,invent.popup_upd_invent_amortization</process_fuseaction>
+		<process_module_name>Inventory</process_module_name>
+		<process_chapter>1</process_chapter>
+		<invoice_type_code></invoice_type_code>
+		<profile_id></profile_id>
+		<dictionary_id>29508</dictionary_id>
+	</process>
+	<process>
+		<process_module_id>22</process_module_id>
+		<process_cat>Kapanış Fişi</process_cat>
+		<process_cat_eng>Closing Receipt</process_cat_eng>
+		<process_type>19</process_type>
+		<process_multi_type></process_multi_type>
+		<process_fuseaction>account.account_card_import,account.form_add_bill_cash2cash,account.popup_add_bill_cash2cash_copy,account.popup_upd_bill_cash2cash</process_fuseaction>
+		<process_module_name>Muhasebe</process_module_name>
+		<process_chapter/>
+		<invoice_type_code></invoice_type_code>
+		<profile_id></profile_id>
+		<dictionary_id>29543</dictionary_id>
+	</process>
+	<process>
+		<process_module_id>22</process_module_id>
+		<process_cat>Reeskont İşlemi</process_cat>
+		<process_cat_eng>Reescount Process</process_cat_eng>
+		<process_type>302</process_type>
+		<process_multi_type></process_multi_type>
+		<process_fuseaction>account.list_reescount,account.form_add_reescount</process_fuseaction>
+		<process_module_name>Muhasebe</process_module_name>
+		<process_chapter/>
+		<invoice_type_code></invoice_type_code>
+		<profile_id></profile_id>
+		<dictionary_id>48961</dictionary_id>
+	</process>
+	<process>
+		<process_module_id>19</process_module_id>
+		<process_cat>Açılış Fişi</process_cat>
+		<process_cat_eng>Opening Receipt</process_cat_eng>
+		<process_type>20</process_type>
+		<process_multi_type></process_multi_type>
+		<process_fuseaction>bank.form_add_bank_account_open,bank.form_upd_bank_account_open,bank.popup_upd_bank_account_open</process_fuseaction>
+		<process_module_name>Bank</process_module_name>
+		<process_chapter>2</process_chapter>
+		<invoice_type_code></invoice_type_code>
+		<profile_id></profile_id>
+		<dictionary_id>58756</dictionary_id>
+	</process>
+	<process>
+		<process_module_id>19</process_module_id>
+		<process_cat>İşlem (Para Yatırma)</process_cat>
+		<process_cat_eng>Transaction (Deposit Money)</process_cat_eng>
+		<process_type>21</process_type>
+		<process_multi_type></process_multi_type>
+		<process_fuseaction>bank.form_add_invest_money,bank.form_upd_invest_money,bank.popup_upd_invest_money</process_fuseaction>
+		<process_module_name>Bank</process_module_name>
+		<process_chapter>2</process_chapter>
+		<invoice_type_code></invoice_type_code>
+		<profile_id></profile_id>
+		<dictionary_id>29544</dictionary_id>
+	</process>
+	<process>
+		<process_module_id>19</process_module_id>
+		<process_cat>İşlem (Para Çekme)</process_cat>
+		<process_cat_eng>Transaction (Drawing Money)</process_cat_eng>
+		<process_type>22</process_type>
+		<process_multi_type></process_multi_type>
+		<process_fuseaction>bank.form_add_get_money,bank.form_upd_get_money,bank.popup_upd_get_money</process_fuseaction>
+		<process_module_name>Bank</process_module_name>
+		<process_chapter>2</process_chapter>
+		<invoice_type_code></invoice_type_code>
+		<profile_id></profile_id>
+		<dictionary_id>48960</dictionary_id>
+	</process>
+	<process>
+		<process_module_id>19</process_module_id>
+		<process_cat>Virman</process_cat>
+		<process_cat_eng>Transfer</process_cat_eng>
+		<process_type>23</process_type>
+		<process_multi_type>230</process_multi_type>
+		<process_fuseaction>bank.form_add_virman,bank.form_upd_virman,bank.popup_upd_virman</process_fuseaction>
+		<process_module_name>Bank</process_module_name>
+		<process_chapter>2</process_chapter>
+		<invoice_type_code></invoice_type_code>
+		<profile_id></profile_id>
+		<dictionary_id>49025</dictionary_id>
+	</process>
+	<process>
+		<process_module_id>19</process_module_id>
+		<process_cat>Vadeli Mevduat Hesaba Yatır</process_cat>
+		<process_cat_eng>Deposit into Term Deposit Account</process_cat_eng>
+		<process_type>2311</process_type>
+		<process_multi_type></process_multi_type>
+		<process_fuseaction>bank.interest_revenue</process_fuseaction>
+		<process_module_name>Bank</process_module_name>
+		<process_chapter>2</process_chapter>
+		<invoice_type_code></invoice_type_code>
+		<profile_id></profile_id>
+		<dictionary_id>51369</dictionary_id>
+	</process>
+	<process>
+		<process_module_id>19</process_module_id>
+		<process_cat>Vadeli Mevduat Hesaba Geçiş</process_cat>
+		<process_cat_eng>Transition to Interest Account</process_cat_eng>
+		<process_type>2313</process_type>
+		<process_multi_type></process_multi_type>
+		<process_fuseaction>bank.interest_revenue</process_fuseaction>
+		<process_module_name>Bank</process_module_name>
+		<process_chapter>2</process_chapter>
+		<invoice_type_code></invoice_type_code>
+		<profile_id></profile_id>
+		<dictionary_id>51388</dictionary_id>
+	</process>
+	<process>
+		<process_module_id>19</process_module_id>
+		<process_cat>Vadeli Mevduat Reeskont</process_cat>
+		<process_cat_eng>Transition to Interest Account</process_cat_eng>
+		<process_type>2314</process_type>
+		<process_multi_type></process_multi_type>
+		<process_fuseaction>bank.interest_revenue</process_fuseaction>
+		<process_module_name>Bank</process_module_name>
+		<process_chapter>2</process_chapter>
+		<invoice_type_code></invoice_type_code>
+		<profile_id></profile_id>
+		<dictionary_id>51388</dictionary_id>
+	</process>
+	<process>
+		<process_module_id>19</process_module_id>
+		<process_cat>Gelen Havale</process_cat>
+		<process_cat_eng>Incoming Money Transfer</process_cat_eng>
+		<process_type>24</process_type>
+		<process_multi_type>240</process_multi_type>
+		<process_fuseaction>bank.add_gelenh,bank.form_add_gelenh,bank.form_upd_gelenh,bank.popup_add_autopayment_import,bank.popup_add_gelenh,bank.popup_upd_gelenh</process_fuseaction>
+		<process_module_name>Bank</process_module_name>
+		<process_chapter>2</process_chapter>
+		<invoice_type_code></invoice_type_code>
+		<profile_id></profile_id>
+		<dictionary_id>57834</dictionary_id>
+	</process>
+	<process>
+		<process_module_id>19</process_module_id>
+		<process_cat>Giden Havale</process_cat>
+		<process_cat_eng>Outgoing Money Transfer</process_cat_eng>
+		<process_type>25</process_type>
+		<process_multi_type>250</process_multi_type>
+		<process_fuseaction>bank.form_add_gidenh,bank.form_upd_gidenh,bank.popup_add_autopayment_import,bank.popup_add_gidenh,bank.popup_form_add_gidenh,bank.popup_form_upd_gidenh,bank.popup_upd_gidenh</process_fuseaction>
+		<process_module_name>Bank</process_module_name>
+		<process_chapter>2</process_chapter>
+		<invoice_type_code></invoice_type_code>
+		<profile_id></profile_id>
+		<dictionary_id>57835</dictionary_id>
+	</process>
+	<process>
+		<process_module_id>18</process_module_id>
+		<process_cat>Açılış Fişi</process_cat>
+		<process_cat_eng>Opening Receipt</process_cat_eng>
+		<process_type>30</process_type>
+		<process_multi_type></process_multi_type>
+		<process_fuseaction>cash.form_add_cash_open,cash.form_upd_cash_open,cash.popup_upd_cash_open</process_fuseaction>
+		<process_module_name>Kasa</process_module_name>
+		<process_chapter>3</process_chapter>
+		<invoice_type_code></invoice_type_code>
+		<profile_id></profile_id>
+		<dictionary_id>49654</dictionary_id>
+	</process>
+	<process>
+		<process_module_id>18</process_module_id>
+		<process_cat>Tahsilat</process_cat>
+		<process_cat_eng>Collection</process_cat_eng>
+		<process_type>31</process_type>
+		<process_multi_type>310</process_multi_type>
+		<process_fuseaction>cash.form_add_cash_revenue,cash.form_upd_cash_revenue,cash.popup_upd_cash_revenue</process_fuseaction>
+		<process_module_name>Kasa</process_module_name>
+		<process_chapter>3</process_chapter>
+		<invoice_type_code></invoice_type_code>
+		<profile_id></profile_id>
+		<dictionary_id>57845</dictionary_id>
+	</process>
+	<process>
+		<process_module_id>18</process_module_id>
+		<process_cat>Ödeme</process_cat>
+		<process_cat_eng>Payment</process_cat_eng>
+		<process_type>32</process_type>
+		<process_multi_type>320</process_multi_type>
+		<process_fuseaction>cash.form_add_cash_payment,cash.form_upd_cash_payment,cash.popup_add_cash_payment,cash.popup_upd_cash_payment</process_fuseaction>
+		<process_module_name>Kasa</process_module_name>
+		<process_chapter>3</process_chapter>
+		<invoice_type_code></invoice_type_code>
+		<profile_id></profile_id>
+		<dictionary_id>57847</dictionary_id>
+	</process>
+	<process>
+		<process_module_id>18</process_module_id>
+		<process_cat>Virman</process_cat>
+		<process_cat_eng>Transfer</process_cat_eng>
+		<process_type>33</process_type>
+		<process_multi_type></process_multi_type>
+		<process_fuseaction>cash.form_add_cash_to_cash,cash.form_upd_cash_to_cash,cash.popup_add_cash_to_cash,cash.popup_upd_cash_to_cash</process_fuseaction>
+		<process_module_name>Kasa</process_module_name>
+		<process_chapter>3</process_chapter>
+		<invoice_type_code></invoice_type_code>
+		<profile_id></profile_id>
+		<dictionary_id>49025</dictionary_id>
+	</process>
+	<process>
+		<process_module_id>18</process_module_id>
+		<process_cat>Mal Alım Faturası Kapama</process_cat>
+		<process_cat_eng>Closing Invoice for Goods Purchase</process_cat_eng>
+		<process_type>34</process_type>
+		<process_multi_type></process_multi_type>
+		<process_fuseaction>cash.form_add_alisf_kapa,cash.popup_upd_alisf_kapa</process_fuseaction>
+		<process_module_name>Kasa</process_module_name>
+		<process_chapter>3</process_chapter>
+		<invoice_type_code></invoice_type_code>
+		<profile_id></profile_id>
+		<dictionary_id>29564</dictionary_id>
+	</process>
+	<process>
+		<process_module_id>18</process_module_id>
+		<process_cat>Mal Satış Faturası Kapama</process_cat>
+		<process_cat_eng>Closing Invoice for Goods Sales</process_cat_eng>
+		<process_type>35</process_type>
+		<process_multi_type></process_multi_type>
+		<process_fuseaction>cash.form_add_satisf_kapa,cash.popup_upd_satisf_kapa</process_fuseaction>
+		<process_module_name>Kasa</process_module_name>
+		<process_chapter>3</process_chapter>
+		<invoice_type_code></invoice_type_code>
+		<profile_id></profile_id>
+		<dictionary_id>29565</dictionary_id>
+	</process>
+	<process>
+		<process_module_id>16</process_module_id>
+		<process_cat>Şube Kasa Raporu</process_cat>
+		<process_cat_eng>Branch Cash Account Report</process_cat_eng>
+		<process_type>36</process_type>
+		<process_multi_type></process_multi_type>
+		<process_fuseaction>finance.popup_add_daily_sales_report_expense,finance.popup_upd_daily_sales_report_expense</process_fuseaction>
+		<process_module_name>Finans</process_module_name>
+		<process_chapter/>
+		<invoice_type_code></invoice_type_code>
+		<profile_id></profile_id>
+		<dictionary_id>29569</dictionary_id>
+	</process>
+	<process>
+		<process_module_id>23</process_module_id>
+		<process_cat>Açılış Fişi</process_cat>
+		<process_cat_eng>Opening Receipt</process_cat_eng>
+		<process_type>40</process_type>
+		<process_multi_type></process_multi_type>
+		<process_fuseaction>ch.form_upd_account_open,ch.popup_add_ch_open_row,ch.popup_upd_ch_open_row,settings.popup_form_close_cari</process_fuseaction>
+		<process_module_name>Cari Hesaplar</process_module_name>
+		<process_chapter>4</process_chapter>
+		<invoice_type_code></invoice_type_code>
+		<profile_id></profile_id>
+		<dictionary_id>58756</dictionary_id>
+	</process>
+	<process>
+		<process_module_id>23</process_module_id>
+		<process_cat>Borç Dekontu</process_cat>
+		<process_cat_eng>Debit Note</process_cat_eng>
+		<process_type>41</process_type>
+		<process_multi_type></process_multi_type>
+		<process_fuseaction>ch.form_add_debit_claim_note,ch.form_add_due_diff_action,ch.form_upd_debit_claim_note,ch.popup_form_add_debit_claim_note,ch.popup_form_upd_debit_claim_note</process_fuseaction>
+		<process_module_name>Cari Hesaplar</process_module_name>
+		<process_chapter>4</process_chapter>
+		<invoice_type_code></invoice_type_code>
+		<profile_id></profile_id>
+		<dictionary_id>49034</dictionary_id>
+	</process>
+	<process>
+		<process_module_id>23</process_module_id>
+		<process_cat>Alacak Dekontu</process_cat>
+		<process_cat_eng>Credit Note</process_cat_eng>
+		<process_type>42</process_type>
+		<process_multi_type></process_multi_type>
+		<process_fuseaction>ch.form_add_debit_claim_note,ch.form_upd_debit_claim_note,ch.popup_form_add_debit_claim_note,ch.popup_form_upd_debit_claim_note</process_fuseaction>
+		<process_module_name>Cari Hesaplar</process_module_name>
+		<process_chapter>4</process_chapter>
+		<invoice_type_code></invoice_type_code>
+		<profile_id></profile_id>
+		<dictionary_id>49035</dictionary_id>
+	</process>
+	<process>
+		<process_module_id>23</process_module_id>
+		<process_cat>Cari Virman</process_cat>
+		<process_cat_eng>Current Account Transfer</process_cat_eng>
+		<process_type>43</process_type>
+		<process_multi_type>430</process_multi_type>
+		<process_fuseaction>cash.form_add_cash_open,ch.form_add_cari_to_cari,ch.form_upd_cari_to_cari,ch.popup_add_cari_to_cari,ch.popup_upd_cari_to_cari</process_fuseaction>
+		<process_module_name>Cari Hesaplar</process_module_name>
+		<process_chapter>4</process_chapter>
+		<invoice_type_code></invoice_type_code>
+		<profile_id></profile_id>
+		<dictionary_id>29567</dictionary_id>
+	</process>
+	<process>
+		<process_module_id>23</process_module_id>
+		<process_cat>Prim Ödeme</process_cat>
+		<process_cat_eng>Premium Payment</process_cat_eng>
+		<process_type>44</process_type>
+		<process_multi_type></process_multi_type>
+		<process_fuseaction>ch.list_premium_payment,ch.form_add_premium_payment,ch.form_upd_premium_payment</process_fuseaction>
+		<process_module_name>Cari Hesaplar</process_module_name>
+		<process_chapter>4</process_chapter>
+		<invoice_type_code></invoice_type_code>
+		<profile_id></profile_id>
+		<dictionary_id>29568</dictionary_id>
+	</process>
+	<process>
+		<process_module_id>23</process_module_id>
+		<process_cat>Borç Kur Değerleme Dekontu</process_cat>
+		<process_cat_eng>Payable Exchange Rate Valuation Bank Receipt</process_cat_eng>
+		<process_type>45</process_type>
+		<process_multi_type></process_multi_type>
+		<process_fuseaction>ch.add_collacted_dekont,ch.upd_collacted_dekont</process_fuseaction>
+		<process_module_name>Cari Hesaplar</process_module_name>
+		<process_chapter>4</process_chapter>
+		<invoice_type_code></invoice_type_code>
+		<profile_id></profile_id>
+		<dictionary_id>48953</dictionary_id>
+	</process>
+	<process>
+		<process_module_id>23</process_module_id>
+		<process_cat>Alacak Kur Değerleme Dekontu</process_cat>
+		<process_cat_eng>Receivable Exchange Rate Valuation Bank Receipt</process_cat_eng>
+		<process_type>46</process_type>
+		<process_multi_type></process_multi_type>
+		<process_fuseaction>ch.add_collacted_dekont,ch.upd_collacted_dekont</process_fuseaction>
+		<process_module_name>Cari Hesaplar</process_module_name>
+		<process_chapter>4</process_chapter>
+		<invoice_type_code></invoice_type_code>
+		<profile_id></profile_id>
+		<dictionary_id>48954</dictionary_id>
+	</process>
+	<process>
+		<process_module_id>20</process_module_id>
+		<process_cat>Verilen Kur Farkı Faturası</process_cat>
+		<process_cat_eng>Provided Exchange Rate Difference Invoice</process_cat_eng>
+		<process_type>48</process_type>
+		<process_multi_type></process_multi_type>
+		<process_fuseaction>invoice.detail_invoice_sale,invoice.form_add_bill,invoice.form_copy_bill</process_fuseaction>
+		<process_module_name>Fatura</process_module_name>
+		<process_chapter>5</process_chapter>
+		<invoice_type_code>SATIS</invoice_type_code>
+		<profile_id></profile_id>
+		<dictionary_id>29572</dictionary_id>
+	</process>
+	<process>
+		<process_module_id>20</process_module_id>
+		<process_cat>Alınan Kur Farkı Faturası</process_cat>
+		<process_cat_eng>Received Exchange Rate Difference Invoice</process_cat_eng>
+		<process_type>49</process_type>
+		<process_multi_type></process_multi_type>
+		<process_fuseaction>invoice.detail_invoice_purchase,invoice.form_add_bill_purchase,invoice.form_copy_bill_purchase</process_fuseaction>
+		<process_module_name>Fatura</process_module_name>
+		<process_chapter>5</process_chapter>
+		<invoice_type_code></invoice_type_code>
+		<profile_id></profile_id>
+		<dictionary_id>29573</dictionary_id>
+	</process>
+	<process>
+		<process_module_id>20</process_module_id>
+		<process_cat>Verilen Vade Farkı Faturası</process_cat>
+		<process_cat_eng>Provided Interest Cost Invoice</process_cat_eng>
+		<process_type>50</process_type>
+		<process_multi_type></process_multi_type>
+		<process_fuseaction>invoice.add_new_diff_invoice,invoice.detail_invoice_sale,invoice.form_add_bill,invoice.form_add_bill_from_ship,invoice.form_copy_bill</process_fuseaction>
+		<process_module_name>Fatura</process_module_name>
+		<process_chapter>5</process_chapter>
+		<invoice_type_code>SATIS</invoice_type_code>
+		<profile_id></profile_id>
+		<dictionary_id>57827</dictionary_id>
+	</process>
+	<process>
+		<process_module_id>20</process_module_id>
+		<process_cat>Alınan Vade Farkı Faturası</process_cat>
+		<process_cat_eng>Received Interest Cost Invoice</process_cat_eng>
+		<process_type>51</process_type>
+		<process_multi_type></process_multi_type>
+		<process_fuseaction>invoice.detail_invoice_purchase,invoice.form_add_bill_purchase,invoice.form_add_bill_purchase_from_ship,invoice.form_copy_bill_purchase</process_fuseaction>
+		<process_module_name>Fatura</process_module_name>
+		<process_chapter>5</process_chapter>
+		<invoice_type_code></invoice_type_code>
+		<profile_id></profile_id>
+		<dictionary_id>57763</dictionary_id>
+	</process>
+	<process>
+		<process_module_id>20</process_module_id>
+		<process_cat>Perakende Satış Faturası</process_cat>
+		<process_cat_eng>Retail Sales Invoice Collection</process_cat_eng>
+		<process_type>52</process_type>
+		<process_multi_type></process_multi_type>
+		<process_fuseaction>invoice.add_bill_retail,invoice.detail_invoice_retail,</process_fuseaction>
+		<process_module_name>Fatura</process_module_name>
+		<process_chapter>5</process_chapter>
+		<invoice_type_code>SATIS</invoice_type_code>
+		<profile_id></profile_id>
+		<dictionary_id>57765</dictionary_id>
+	</process>
+	<process>
+		<process_module_id>20</process_module_id>
+		<process_cat>Toptan Satış Faturası</process_cat>
+		<process_cat_eng>Wholesale Sales Invoice</process_cat_eng>
+		<process_type>53</process_type>
+		<process_multi_type></process_multi_type>
+		<process_fuseaction>invoice.add_sale_invoice_from_order,invoice.add_sale_invoice_from_order,order,invoice.detail_invoice_sale,invoice.form_add_bill,invoice.form_add_bill_from_ship,invoice.form_copy_bill,invoice.form_copy_bill,invoice.popup_form_add_sale_multi</process_fuseaction>
+		<process_module_name>Fatura</process_module_name>
+		<process_chapter>5</process_chapter>
+		<invoice_type_code>SATIS</invoice_type_code>
+		<profile_id></profile_id>
+		<dictionary_id>57825</dictionary_id>
+	</process>
+	<process>
+		<process_module_id>20</process_module_id>
+		<process_cat>Perakende Satış İade Faturası</process_cat>
+		<process_cat_eng>Retail Sales Return Invoice</process_cat_eng>
+		<process_type>54</process_type>
+		<process_multi_type></process_multi_type>
+		<process_fuseaction>invoice.detail_invoice_purchase,invoice.form_add_bill_purchase,invoice.form_add_bill_purchase_from_ship,invoice.form_copy_bill_purchase</process_fuseaction>
+		<process_module_name>Fatura</process_module_name>
+		<process_chapter>5</process_chapter>
+		<invoice_type_code></invoice_type_code>
+		<profile_id></profile_id>
+		<dictionary_id>57824</dictionary_id>
+	</process>
+	<process>
+		<process_module_id>20</process_module_id>
+		<process_cat>Toptan Satış İade Faturası</process_cat>
+		<process_cat_eng>Wholesale Sales Return Invoice</process_cat_eng>
+		<process_type>55</process_type>
+		<process_multi_type></process_multi_type>
+		<process_fuseaction>invoice.detail_invoice_purchase,invoice.form_add_bill_purchase,invoice.form_add_bill_purchase_from_ship,invoice.form_copy_bill_purchase</process_fuseaction>
+		<process_module_name>Fatura</process_module_name>
+		<process_chapter>5</process_chapter>
+		<invoice_type_code></invoice_type_code>
+		<profile_id></profile_id>
+		<dictionary_id>57768</dictionary_id>
+	</process>
+	<process>
+		<process_module_id>20</process_module_id>
+		<process_cat>Verilen Hizmet Faturası</process_cat>
+		<process_cat_eng>Provided Service Invoice</process_cat_eng>
+		<process_type>56</process_type>
+		<process_multi_type></process_multi_type>
+		<process_fuseaction>invoice.detail_invoice_sale,invoice.form_add_bill,invoice.form_add_bill_from_ship,invoice.form_copy_bill,invoice.form_copy_bill,invoice.popup_form_add_sale_multi</process_fuseaction>
+		<process_module_name>Fatura</process_module_name>
+		<process_chapter>5</process_chapter>
+		<invoice_type_code>SATIS</invoice_type_code>
+		<profile_id></profile_id>
+		<dictionary_id>57829</dictionary_id>
+	</process>
+	<process>
+		<process_module_id>20</process_module_id>
+		<process_cat>Serbest Meslek Makbuzu - Satış</process_cat>
+		<process_cat_eng>Self-Employment Receipt</process_cat_eng>
+		<process_type>680</process_type>
+		<process_multi_type></process_multi_type>
+		<process_fuseaction>invoice.form_add_bill</process_fuseaction>
+		<process_module_name>Fatura</process_module_name>
+		<process_chapter>5</process_chapter>
+		<invoice_type_code>SATIS</invoice_type_code>
+		<profile_id></profile_id>
+		<dictionary_id>29577</dictionary_id>
+	</process>
+	<process>
+		<process_module_id>20</process_module_id>
+		<process_cat>Müstahsil Makbuzu - Satış</process_cat>
+		<process_cat_eng>Producer Receipt</process_cat_eng>
+		<process_type>640</process_type>
+		<process_multi_type></process_multi_type>
+		<process_fuseaction>invoice.form_add_bill</process_fuseaction>
+		<process_module_name>Fatura</process_module_name>
+		<process_chapter>5</process_chapter>
+		<invoice_type_code>SATIS</invoice_type_code>
+		<profile_id></profile_id>
+		<dictionary_id>57823</dictionary_id>
+	</process>
+	<process>
+		<process_module_id>20</process_module_id>
+		<process_cat>Verilen Proforma Faturası</process_cat>
+		<process_cat_eng>Provided Proforma Invoice</process_cat_eng>
+		<process_type>57</process_type>
+		<process_multi_type></process_multi_type>
+		<process_fuseaction>invoice.form_add_bill,invoice.form_add_bill_from_ship,invoice.form_copy_bill,invoice.detail_invoice_sale</process_fuseaction>
+		<process_module_name>Fatura</process_module_name>
+		<process_chapter>5</process_chapter>
+		<invoice_type_code></invoice_type_code>
+		<profile_id></profile_id>
+		<dictionary_id>49370</dictionary_id>
+	</process>
+	<process>
+		<process_module_id>20</process_module_id>
+		<process_cat>Verilen Fiyat Farkı Faturası</process_cat>
+		<process_cat_eng>Provided Price Difference Invoice</process_cat_eng>
+		<process_type>58</process_type>
+		<process_multi_type></process_multi_type>
+		<process_fuseaction>invoice.add_new_diff_invoice,invoice.detail_invoice_sale,invoice.form_add_bill,invoice.form_add_bill_from_ship,invoice.form_copy_bill</process_fuseaction>
+		<process_module_name>Fatura</process_module_name>
+		<process_chapter>5</process_chapter>
+		<invoice_type_code>SATIS</invoice_type_code>
+		<profile_id></profile_id>
+		<dictionary_id>57830</dictionary_id>
+	</process>
+	<process>
+		<process_module_id>20</process_module_id>
+		<process_cat>Mal Alım Faturası</process_cat>
+		<process_cat_eng>Goods Purchase Invoice</process_cat_eng>
+		<process_type>59</process_type>
+		<process_multi_type></process_multi_type>
+		<process_fuseaction>invoice.detail_invoice_purchase,invoice.form_add_bill_purchase,invoice.form_add_bill_purchase_from_ship,invoice.form_copy_bill_purchase,invoice.add_purchase_invoice_from_order,invoice.add_purchase_invoice_from_order</process_fuseaction>
+		<process_module_name>Fatura</process_module_name>
+		<process_chapter>5</process_chapter>
+		<invoice_type_code></invoice_type_code>
+		<profile_id></profile_id>
+		<dictionary_id>57822</dictionary_id>
+	</process>
+	<process>
+		<process_module_id>20</process_module_id>
+		<process_cat>Alınan Hizmet Faturası</process_cat>
+		<process_cat_eng>Received Service Invoice</process_cat_eng>
+		<process_type>60</process_type>
+		<process_multi_type></process_multi_type>
+		<process_fuseaction>invoice.add_purchase,invoice.detail_invoice_purchase,invoice.form_add_bill_purchase,invoice.form_add_bill_purchase_from_ship,invoice.form_copy_bill_purchase</process_fuseaction>
+		<process_module_name>Fatura</process_module_name>
+		<process_chapter>5</process_chapter>
+		<invoice_type_code></invoice_type_code>
+		<profile_id></profile_id>
+		<dictionary_id>57813</dictionary_id>
+	</process>
+	<process>
+		<process_module_id>20</process_module_id>
+		<process_cat>Alınan Proforma Faturası</process_cat>
+		<process_cat_eng>Received Proforma Invoice</process_cat_eng>
+		<process_type>61</process_type>
+		<process_multi_type></process_multi_type>
+		<process_fuseaction>invoice.detail_invoice_purchase,invoice.form_add_bill_purchase,invoice.form_add_bill_purchase_from_ship,invoice.form_copy_bill_purchase</process_fuseaction>
+		<process_module_name>Fatura</process_module_name>
+		<process_chapter>5</process_chapter>
+		<invoice_type_code></invoice_type_code>
+		<profile_id></profile_id>
+		<dictionary_id>57814</dictionary_id>
+	</process>
+	<process>
+		<process_module_id>20</process_module_id>
+		<process_cat>Alım İade Faturası</process_cat>
+		<process_cat_eng>Return from Purchase Invoice</process_cat_eng>
+		<process_type>62</process_type>
+		<process_multi_type></process_multi_type>
+		<process_fuseaction>invoice.detail_invoice_sale,invoice.form_add_bill,invoice.form_add_bill_from_ship,invoice.form_copy_bill,invoice.form_copy_bill</process_fuseaction>
+		<process_module_name>Fatura</process_module_name>
+		<process_chapter>5</process_chapter>
+		<invoice_type_code>IADE</invoice_type_code>
+		<profile_id></profile_id>
+		<dictionary_id>57815</dictionary_id>
+	</process>
+	<process>
+		<process_module_id>20</process_module_id>
+		<process_cat>Alınan Fiyat Farkı Faturası</process_cat>
+		<process_cat_eng>Received Price Difference Invoice</process_cat_eng>
+		<process_type>63</process_type>
+		<process_multi_type></process_multi_type>
+		<process_fuseaction>invoice.detail_invoice_purchase,invoice.form_add_bill_purchase,invoice.form_add_bill_purchase_from_ship,invoice.form_copy_bill_purchase</process_fuseaction>
+		<process_module_name>Fatura</process_module_name>
+		<process_chapter>5</process_chapter>
+		<invoice_type_code></invoice_type_code>
+		<profile_id></profile_id>
+		<dictionary_id>57811</dictionary_id>
+	</process>
+	<process>
+		<process_module_id>20</process_module_id>
+		<process_cat>Müstahsil Makbuzu</process_cat>
+		<process_cat_eng>Producer Receipt</process_cat_eng>
+		<process_type>64</process_type>
+		<process_multi_type></process_multi_type>
+		<process_fuseaction>invoice.detail_invoice_other,invoice.form_add_bill_other</process_fuseaction>
+		<process_module_name>Fatura</process_module_name>
+		<process_chapter>5</process_chapter>
+		<invoice_type_code></invoice_type_code>
+		<profile_id></profile_id>
+		<dictionary_id>57823</dictionary_id>
+	</process>
+	<process>
+		<process_module_id>31</process_module_id>
+		<process_cat>Sabit Kıymet Alış Faturası</process_cat>
+		<process_cat_eng>Fixed Asset Purchase Invoice</process_cat_eng>
+		<process_type>65</process_type>
+		<process_multi_type></process_multi_type>
+		<process_fuseaction>invent.add_invent_purchase,invent.form_add_invent,invent.form_upd_invent,invent.upd_purchase_invent</process_fuseaction>
+		<process_module_name>Inventory</process_module_name>
+		<process_chapter>5</process_chapter>
+		<invoice_type_code></invoice_type_code>
+		<profile_id></profile_id>
+		<dictionary_id>33604</dictionary_id>
+	</process>
+	<process>
+		<process_module_id>31</process_module_id>
+		<process_cat>Sabit Kıymet Alış İade</process_cat>
+		<process_cat_eng>Fixed Asset Purchase Returns</process_cat_eng>
+		<process_type>661</process_type>
+		<process_multi_type></process_multi_type>
+		<process_fuseaction>invent.add_invent_sale,invent.form_sale_invent,invent.form_upd_sale_invent,invent.upd_invent_sale</process_fuseaction>
+		<process_module_name>Inventory</process_module_name>
+		<process_chapter>5</process_chapter>
+		<invoice_type_code>IADE</invoice_type_code>
+		<profile_id></profile_id>
+		<dictionary_id>61011</dictionary_id>
+	</process>
+	<process>
+		<process_module_id>31</process_module_id>
+		<process_cat>Sabit Kıymet Satış Faturası</process_cat>
+		<process_cat_eng>Fixed Asset Sales Invoice</process_cat_eng>
+		<process_type>66</process_type>
+		<process_multi_type></process_multi_type>
+		<process_fuseaction>invent.add_invent_sale,invent.form_sale_invent,invent.form_upd_sale_invent,invent.upd_invent_sale</process_fuseaction>
+		<process_module_name>Inventory</process_module_name>
+		<process_chapter>5</process_chapter>
+		<invoice_type_code>SATIS</invoice_type_code>
+		<profile_id></profile_id>
+		<dictionary_id>58758</dictionary_id>
+	</process>
+	<process>
+		<process_module_id>31</process_module_id>
+		<process_cat>Sabit Kıymet Satış İade</process_cat>
+		<process_cat_eng>Fixed Asset Sales Returns</process_cat_eng>
+		<process_type>651</process_type>
+		<process_multi_type></process_multi_type>
+		<process_fuseaction>invent.add_invent_purchase,invent.form_add_invent,invent.form_upd_invent,invent.upd_purchase_invent</process_fuseaction>
+		<process_module_name>Inventory</process_module_name>
+		<process_chapter>5</process_chapter>
+		<invoice_type_code></invoice_type_code>
+		<profile_id></profile_id>
+		<dictionary_id>61012</dictionary_id>
+	</process>
+	<process>
+		<process_module_id>20</process_module_id>
+		<process_cat>Toplu Satış İşlemi</process_cat>
+		<process_cat_eng>Group Sales Operation</process_cat_eng>
+		<process_type>67</process_type>
+		<process_multi_type></process_multi_type>
+		<process_fuseaction></process_fuseaction>
+		<process_module_name>Fatura</process_module_name>
+		<process_chapter>5</process_chapter>
+		<invoice_type_code>SATIS</invoice_type_code>
+		<profile_id></profile_id>
+		<dictionary_id>49397</dictionary_id>
+	</process>
+	<process>
+		<process_module_id>20</process_module_id>
+		<process_cat>Serbest Meslek Makbuzu</process_cat>
+		<process_cat_eng>Self-Employment Receipt</process_cat_eng>
+		<process_type>68</process_type>
+		<process_multi_type></process_multi_type>
+		<process_fuseaction>invoice.detail_invoice_other,invoice.form_add_bill_other</process_fuseaction>
+		<process_module_name>Fatura</process_module_name>
+		<process_chapter>5</process_chapter>
+		<invoice_type_code></invoice_type_code>
+		<profile_id></profile_id>
+		<dictionary_id>29577</dictionary_id>
+	</process>
+	<process>
+		<process_module_id>16</process_module_id>
+		<process_cat>Z Raporu</process_cat>
+		<process_cat_eng>Z Report</process_cat_eng>
+		<process_type>69</process_type>
+		<process_multi_type></process_multi_type>
+		<process_fuseaction>finance.add_daily_zreport,finance.emptypopup_add_daily_zreport,finance.emptypopup_upd_daily_zreport,finance.upd_daily_zreport</process_fuseaction>
+		<process_module_name>Finans</process_module_name>
+		<process_chapter/>
+		<invoice_type_code></invoice_type_code>
+		<profile_id></profile_id>
+		<dictionary_id>58438</dictionary_id>
+	</process>
+	<process>
+		<process_module_id>13</process_module_id>
+		<process_cat>Perakende Satış İrsaliyesi</process_cat>
+		<process_cat_eng>Retail Sales Delivery Note</process_cat_eng>
+		<process_type>70</process_type>
+		<process_multi_type></process_multi_type>
+		<process_fuseaction>stock.add_ship_from_file,stock.form_add_order_sale,stock.form_add_sale,stock.form_upd_sale</process_fuseaction>
+		<process_module_name>Stok</process_module_name>
+		<process_chapter>11</process_chapter>
+		<invoice_type_code></invoice_type_code>
+		<profile_id></profile_id>
+		<dictionary_id>29579</dictionary_id>
+	</process>
+	<process>
+		<process_module_id>13</process_module_id>
+		<process_cat>Toptan Satış İrsaliyesi</process_cat>
+		<process_cat_eng>Wholesale Sales Delivery Note</process_cat_eng>
+		<process_type>71</process_type>
+		<process_multi_type></process_multi_type>
+		<process_fuseaction>stock.add_ship_from_file,stock.form_add_order_sale,stock.form_add_sale,stock.form_upd_sale</process_fuseaction>
+		<process_module_name>Stok</process_module_name>
+		<process_chapter>11</process_chapter>
+		<invoice_type_code></invoice_type_code>
+		<profile_id></profile_id>
+		<dictionary_id>58752</dictionary_id>
+	</process>
+	<process>
+		<process_module_id>13</process_module_id>
+		<process_cat>Konsinye Çıkış İrsaliyesi</process_cat>
+		<process_cat_eng>Consignment Output Delivery Note</process_cat_eng>
+		<process_type>72</process_type>
+		<process_multi_type></process_multi_type>
+		<process_fuseaction>stock.add_ship_from_file,stock.form_add_order_sale,stock.form_add_sale,stock.form_upd_sale</process_fuseaction>
+		<process_module_name>Stok</process_module_name>
+		<process_chapter>11</process_chapter>
+		<invoice_type_code></invoice_type_code>
+		<profile_id></profile_id>
+		<dictionary_id>58753</dictionary_id>
+	</process>
+	<process>
+		<process_module_id>13</process_module_id>
+		<process_cat>Perakende Satış İade İrsaliyesi</process_cat>
+		<process_cat_eng>Retail Sales Return Delivery Note</process_cat_eng>
+		<process_type>73</process_type>
+		<process_multi_type></process_multi_type>
+		<process_fuseaction>stock.form_add_order_purchase,stock.form_add_purchase,stock.form_upd_purchase,stock.form_add_purchase_return</process_fuseaction>
+		<process_module_name>Stok</process_module_name>
+		<process_chapter>11</process_chapter>
+		<invoice_type_code></invoice_type_code>
+		<profile_id></profile_id>
+		<dictionary_id>58754</dictionary_id>
+	</process>
+	<process>
+		<process_module_id>13</process_module_id>
+		<process_cat>Toptan Satış İade İrsaliyesi</process_cat>
+		<process_cat_eng>Wholesale Sales Return Delivery Note</process_cat_eng>
+		<process_type>74</process_type>
+		<process_multi_type></process_multi_type>
+		<process_fuseaction>stock.form_add_order_purchase,stock.form_add_purchase,stock.form_upd_purchase,stock.form_add_purchase_return</process_fuseaction>
+		<process_module_name>Stok</process_module_name>
+		<process_chapter>11</process_chapter>
+		<invoice_type_code></invoice_type_code>
+		<profile_id></profile_id>
+		<dictionary_id>29580</dictionary_id>
+	</process>
+	<process>
+		<process_module_id>13</process_module_id>
+		<process_cat>Konsinye Çıkış İade İrsaliyesi</process_cat>
+		<process_cat_eng>Consignment Output Return Delivery Note</process_cat_eng>
+		<process_type>75</process_type>
+		<process_multi_type></process_multi_type>
+		<process_fuseaction>stock.form_add_order_purchase,stock.form_add_purchase,stock.form_upd_purchase</process_fuseaction>
+		<process_module_name>Stok</process_module_name>
+		<process_chapter>11</process_chapter>
+		<invoice_type_code></invoice_type_code>
+		<profile_id></profile_id>
+		<dictionary_id>34101</dictionary_id>
+	</process>
+	<process>
+		<process_module_id>13</process_module_id>
+		<process_cat>Mal Alım İrsaliyesi</process_cat>
+		<process_cat_eng>Goods Purchase Delivery Note</process_cat_eng>
+		<process_type>76</process_type>
+		<process_multi_type></process_multi_type>
+		<process_fuseaction>stock.form_add_order_purchase,stock.form_add_purchase,stock.form_upd_purchase,stock.add_ship_from_file</process_fuseaction>
+		<process_module_name>Stok</process_module_name>
+		<process_chapter>11</process_chapter>
+		<invoice_type_code></invoice_type_code>
+		<profile_id></profile_id>
+		<dictionary_id>29581</dictionary_id>
+	</process>
+	<process>
+		<process_module_id>13</process_module_id>
+		<process_cat>Konsinye Giriş İrsaliyesi</process_cat>
+		<process_cat_eng>Incoming Consignment Delivery Note</process_cat_eng>
+		<process_type>77</process_type>
+		<process_multi_type></process_multi_type>
+		<process_fuseaction>sstock.form_add_order_purchase,stock.form_add_purchase,stock.form_upd_purchase</process_fuseaction>
+		<process_module_name>Stok</process_module_name>
+		<process_chapter>11</process_chapter>
+		<invoice_type_code></invoice_type_code>
+		<profile_id></profile_id>
+		<dictionary_id>49415</dictionary_id>
+	</process>
+	<process>
+		<process_module_id>13</process_module_id>
+		<process_cat>Alım İade İrsaliyesi</process_cat>
+		<process_cat_eng>Purchase Return Delivery Note</process_cat_eng>
+		<process_type>78</process_type>
+		<process_multi_type></process_multi_type>
+		<process_fuseaction>stock.add_ship_from_file,stock.add_ship_from_file,stock.form_add_order_sale,stock.form_add_order_sale,stock.form_add_sale,stock.form_upd_sale</process_fuseaction>
+		<process_module_name>Stok</process_module_name>
+		<process_chapter>11</process_chapter>
+		<invoice_type_code></invoice_type_code>
+		<profile_id></profile_id>
+		<dictionary_id>29584</dictionary_id>
+	</process>
+	<process>
+		<process_module_id>13</process_module_id>
+		<process_cat>Konsinye Giriş İade İrsaliyesi</process_cat>
+		<process_cat_eng>Incoming Consignment Return Delivery Note</process_cat_eng>
+		<process_type>79</process_type>
+		<process_multi_type></process_multi_type>
+		<process_fuseaction>stock.add_ship_from_file,stock.form_add_order_sale,stock.form_add_sale,stock.form_upd_sale</process_fuseaction>
+		<process_module_name>Stok</process_module_name>
+		<process_chapter>11</process_chapter>
+		<invoice_type_code></invoice_type_code>
+		<profile_id></profile_id>
+		<dictionary_id>29585</dictionary_id>
+	</process>
+	<process>
+		<process_module_id>13</process_module_id>
+		<process_cat>Müstahsil İrsaliyesi</process_cat>
+		<process_cat_eng>Producer Delivery Note</process_cat_eng>
+		<process_type>80</process_type>
+		<process_multi_type></process_multi_type>
+		<process_fuseaction>stock.form_add_purchase,stock.form_upd_purchase</process_fuseaction>
+		<process_module_name>Stok</process_module_name>
+		<process_chapter>11</process_chapter>
+		<invoice_type_code></invoice_type_code>
+		<profile_id></profile_id>
+		<dictionary_id>29586</dictionary_id>
+	</process>
+	<process>
+		<process_module_id>13</process_module_id>
+		<process_cat>Sevk İrsaliyesi</process_cat>
+		<process_cat_eng>Packing List</process_cat_eng>
+		<process_type>81</process_type>
+		<process_multi_type></process_multi_type>
+		<process_fuseaction>stock.add_dispatch_ship_from_internaldemand,stock.add_ship_dispatch,stock.form_upd_purchase,stock.upd_ship_dispatch</process_fuseaction>
+		<process_module_name>Stok</process_module_name>
+		<process_chapter>11</process_chapter>
+		<invoice_type_code></invoice_type_code>
+		<profile_id></profile_id>
+		<dictionary_id>29587</dictionary_id>
+	</process>
+	<process>
+		<process_module_id>13</process_module_id>
+		<process_cat>Gider Pusulası(Mal) İrsaliyesi</process_cat>
+		<process_cat_eng>Expense Receipt (Goods) Packing List</process_cat_eng>
+		<process_type>84</process_type>
+		<process_multi_type></process_multi_type>
+		<process_fuseaction>stock.form_add_order_purchase</process_fuseaction>
+		<process_module_name>Stok</process_module_name>
+		<process_chapter>11</process_chapter>
+		<invoice_type_code></invoice_type_code>
+		<profile_id></profile_id>
+		<dictionary_id>49427</dictionary_id>
+	</process>
+	<process>
+		<process_module_id>13</process_module_id>
+		<process_cat>Üreticiye Çıkış İrsaliyesi</process_cat>
+		<process_cat_eng>Output to Producer Delivery Note</process_cat_eng>
+		<process_type>85</process_type>
+		<process_multi_type></process_multi_type>
+		<process_fuseaction>service.add_sale_ship,service.popup_upd_purchase_ship,service.popup_upd_sale_ship,stock.add_ship_from_file,stock.form_add_order_sale,stock.form_add_sale,stock.form_upd_sale</process_fuseaction>
+		<process_module_name>Stok</process_module_name>
+		<process_chapter>11</process_chapter>
+		<invoice_type_code></invoice_type_code>
+		<profile_id></profile_id>
+		<dictionary_id>39206</dictionary_id>
+	</process>
+	<process>
+		<process_module_id>13</process_module_id>
+		<process_cat>Üreticiden Giriş İrsaliyesi</process_cat>
+		<process_cat_eng>Incoming Goods from Producer Delivery Note</process_cat_eng>
+		<process_type>86</process_type>
+		<process_multi_type></process_multi_type>
+		<process_fuseaction>service.add_sale_ship,service.popup_upd_purchase_ship,service.popup_upd_sale_ship,stock.form_add_order_purchase,stock.form_add_purchase,stock.form_upd_purchase</process_fuseaction>
+		<process_module_name>Stok</process_module_name>
+		<process_chapter>11</process_chapter>
+		<invoice_type_code></invoice_type_code>
+		<profile_id></profile_id>
+		<dictionary_id>39207</dictionary_id>
+	</process>
+	<process>
+		<process_module_id>13</process_module_id>
+		<process_cat>İthalat İrsaliyesi</process_cat>
+		<process_cat_eng>Import Delivery Note</process_cat_eng>
+		<process_type>87</process_type>
+		<process_multi_type></process_multi_type>
+		<process_fuseaction>stock.form_add_order_purchase,stock.form_add_purchase,stock.form_upd_purchase</process_fuseaction>
+		<process_module_name>Stok</process_module_name>
+		<process_chapter>11</process_chapter>
+		<invoice_type_code></invoice_type_code>
+		<profile_id></profile_id>
+		<dictionary_id>29593</dictionary_id>
+	</process>
+	<process>
+		<process_module_id>13</process_module_id>
+		<process_cat>İhracat İrsaliyesi</process_cat>
+		<process_cat_eng>Export Delivery Note</process_cat_eng>
+		<process_type>88</process_type>
+		<process_multi_type></process_multi_type>
+		<process_fuseaction>stock.form_add_sale,stock.form_upd_sale</process_fuseaction>
+		<process_module_name>Stok</process_module_name>
+		<process_chapter>11</process_chapter>
+		<invoice_type_code></invoice_type_code>
+		<profile_id></profile_id>
+		<dictionary_id>29594</dictionary_id>
+	</process>
+	<process>
+		<process_module_id>21</process_module_id>
+		<process_cat>Çek Giriş Bordrosu</process_cat>
+		<process_cat_eng>Check Entry Payroll</process_cat_eng>
+		<process_type>90</process_type>
+		<process_multi_type></process_multi_type>
+		<process_fuseaction>cash.form_add_cheque_cash_revenue,cheque.form_add_payroll_entry,cheque.form_upd_payroll_entry</process_fuseaction>
+		<process_module_name>Çek</process_module_name>
+		<process_chapter>9</process_chapter>
+		<invoice_type_code></invoice_type_code>
+		<profile_id></profile_id>
+		<dictionary_id>57852</dictionary_id>
+	</process>
+	<process>
+		<process_module_id>21</process_module_id>
+		<process_cat>Çek Çıkış Bordrosu (C/H a)</process_cat>
+		<process_cat_eng>Cheque Exit Payroll - (Revenue)</process_cat_eng>
+		<process_type>91</process_type>
+		<process_multi_type></process_multi_type>
+		<process_fuseaction>cheque.form_add_payroll_endorsement,cheque.form_upd_payroll_endorsement</process_fuseaction>
+		<process_module_name>Çek</process_module_name>
+		<process_chapter>9</process_chapter>
+		<invoice_type_code></invoice_type_code>
+		<profile_id></profile_id>
+		<dictionary_id>49448</dictionary_id>
+	</process>
+	<process>
+		<process_module_id>21</process_module_id>
+		<process_cat>Çek Çıkış (Kasa Tahsil)</process_cat>
+		<process_cat_eng>Cheque Output (Cash Collection)</process_cat_eng>
+		<process_type>92</process_type>
+		<process_multi_type></process_multi_type>
+		<process_fuseaction>cheque.form_add_payroll_bank_revenue,cheque.form_upd_payroll_bank_revenue</process_fuseaction>
+		<process_module_name>Çek</process_module_name>
+		<process_chapter>9</process_chapter>
+		<invoice_type_code></invoice_type_code>
+		<profile_id></profile_id>
+		<dictionary_id>49449</dictionary_id>
+	</process>
+	<process>
+		<process_module_id>21</process_module_id>
+		<process_cat>Çek Çıkış B. (Banka Tahsil)</process_cat>
+		<process_cat_eng>Cheque Exit Payroll (Bank Collection)</process_cat_eng>
+		<process_type>93</process_type>
+		<process_multi_type></process_multi_type>
+		<process_fuseaction>cheque.form_add_payroll_bank_guaranty,cheque.form_upd_payroll_bank_guaranty</process_fuseaction>
+		<process_module_name>Çek</process_module_name>
+		<process_chapter>9</process_chapter>
+		<invoice_type_code></invoice_type_code>
+		<profile_id></profile_id>
+		<dictionary_id>49452</dictionary_id>
+	</process>
+	<process>
+		<process_module_id>21</process_module_id>
+		<process_cat>Çek Çıkış İade Bordrosu</process_cat>
+		<process_cat_eng>Cheque Exit Return Payroll</process_cat_eng>
+		<process_type>94</process_type>
+		<process_multi_type></process_multi_type>
+		<process_fuseaction>cheque.form_add_payroll_endor_return,cheque.form_upd_payroll_endor_return</process_fuseaction>
+		<process_module_name>Çek</process_module_name>
+		<process_chapter>9</process_chapter>
+		<invoice_type_code></invoice_type_code>
+		<profile_id></profile_id>
+		<dictionary_id>29595</dictionary_id>
+	</process>
+	<process>
+		<process_module_id>21</process_module_id>
+		<process_cat>Çek Giriş İade Bordrosu</process_cat>
+		<process_cat_eng>Cheque Input Return Payroll</process_cat_eng>
+		<process_type>95</process_type>
+		<process_multi_type></process_multi_type>
+		<process_fuseaction>cheque.form_add_payroll_entry_return,cheque.form_upd_payroll_entry_return,cheque.popup_basket_cheque,cheque.popup_detail_payrol_entry</process_fuseaction>
+		<process_module_name>Çek</process_module_name>
+		<process_chapter>9</process_chapter>
+		<invoice_type_code></invoice_type_code>
+		<profile_id></profile_id>
+		<dictionary_id>49470</dictionary_id>
+	</process>
+	<process>
+		<process_module_id>21</process_module_id>
+		<process_cat>Senet Giriş Bordrosu</process_cat>
+		<process_cat_eng>Note Entry Payroll</process_cat_eng>
+		<process_type>97</process_type>
+		<process_multi_type></process_multi_type>
+		<process_fuseaction>cheque.emptypopup_add_voucher_payroll_entry,cheque.form_add_voucher_payroll_entry,cheque.form_upd_voucher_payroll_entry,objects.popup_payment_with_voucher,objects.popup_upd_payment_with_voucher,cheque.popup_add_payment_with_voucher</process_fuseaction>
+		<process_module_name>Çek</process_module_name>
+		<process_chapter>9</process_chapter>
+		<invoice_type_code></invoice_type_code>
+		<profile_id></profile_id>
+		<dictionary_id>58010</dictionary_id>
+	</process>
+	<process>
+		<process_module_id>21</process_module_id>
+		<process_cat>Senet Çıkış Bordrosu (c/h a)</process_cat>
+		<process_cat_eng>Note Output Payroll (Payroll)</process_cat_eng>
+		<process_type>98</process_type>
+		<process_multi_type></process_multi_type>
+		<process_fuseaction>cheque.form_add_voucher_payroll_endorsement,cheque.form_upd_payroll_voucher_endorsement</process_fuseaction>
+		<process_module_name>Çek</process_module_name>
+		<process_chapter>9</process_chapter>
+		<invoice_type_code></invoice_type_code>
+		<profile_id></profile_id>
+		<dictionary_id>49465</dictionary_id>
+	</process>
+	<process>
+		<process_module_id>21</process_module_id>
+		<process_cat>Senet Çıkış B. (Banka Tahsil)</process_cat>
+		<process_cat_eng>Note Output Payroll (Bank Collection)</process_cat_eng>
+		<process_type>99</process_type>
+		<process_multi_type></process_multi_type>
+		<process_fuseaction>cheque.form_add_voucher_payroll_bank_tah,cheque.form_upd_voucher_payroll_bank_tah</process_fuseaction>
+		<process_module_name>Çek</process_module_name>
+		<process_chapter>9</process_chapter>
+		<invoice_type_code></invoice_type_code>
+		<profile_id></profile_id>
+		<dictionary_id>49466</dictionary_id>
+	</process>
+	<process>
+		<process_module_id>21</process_module_id>
+		<process_cat>Senet Çıkış B. (Banka Tem.)</process_cat>
+		<process_cat_eng>Note Output Payroll (Bank Guarantee)</process_cat_eng>
+		<process_type>100</process_type>
+		<process_multi_type></process_multi_type>
+		<process_fuseaction>cheque.form_add_voucher_payroll_bank_tem,cheque.form_upd_voucher_payroll_bank_tem</process_fuseaction>
+		<process_module_name>Çek</process_module_name>
+		<process_chapter>9</process_chapter>
+		<invoice_type_code></invoice_type_code>
+		<profile_id></profile_id>
+		<dictionary_id>49467</dictionary_id>
+	</process>
+	<process>
+		<process_module_id>21</process_module_id>
+		<process_cat>Senet Çıkış İade Bordrosu</process_cat>
+		<process_cat_eng>Note Output Return Payroll</process_cat_eng>
+		<process_type>101</process_type>
+		<process_multi_type></process_multi_type>
+		<process_fuseaction>cheque.add_voucher_payroll_endor_return,cheque.upd_voucher_payroll_endor_return</process_fuseaction>
+		<process_module_name>Çek</process_module_name>
+		<process_chapter>9</process_chapter>
+		<invoice_type_code></invoice_type_code>
+		<profile_id></profile_id>
+		<dictionary_id>29602</dictionary_id>
+	</process>
+	<process>
+		<process_module_id>21</process_module_id>
+		<process_cat>Senet Çıkış Tahsil</process_cat>
+		<process_cat_eng>Note Output Collection</process_cat_eng>
+		<process_type>104</process_type>
+		<process_multi_type></process_multi_type>
+		<process_fuseaction>cheque.form_add_voucher_payroll_revenue,cheque.form_upd_payroll_voucher_revenue,cheque.list_payment_voucher</process_fuseaction>
+		<process_module_name>Çek</process_module_name>
+		<process_chapter>9</process_chapter>
+		<invoice_type_code></invoice_type_code>
+		<profile_id></profile_id>
+		<dictionary_id>49469</dictionary_id>
+	</process>
+	<process>
+		<process_module_id>21</process_module_id>
+		<process_cat>Çek Giriş İade Bordrosu(Banka)</process_cat>
+		<process_cat_eng>Cheque Input Return Payroll (Bank)</process_cat_eng>
+		<process_type>105</process_type>
+		<process_multi_type></process_multi_type>
+		<process_fuseaction>cheque.form_add_payroll_bank_guaranty_return,cheque.form_upd_payroll_bank_guaranty_return</process_fuseaction>
+		<process_module_name>Çek</process_module_name>
+		<process_chapter>9</process_chapter>
+		<invoice_type_code></invoice_type_code>
+		<profile_id></profile_id>
+		<dictionary_id>49470</dictionary_id>
+	</process>
+	<process>
+		<process_module_id>21</process_module_id>
+		<process_cat>Çek Açılış Devir</process_cat>
+		<process_cat_eng>Cheque Opening Turnover</process_cat_eng>
+		<process_type>106</process_type>
+		<process_multi_type></process_multi_type>
+		<process_fuseaction></process_fuseaction>
+		<process_module_name>Çek</process_module_name>
+		<process_chapter>9</process_chapter>
+		<invoice_type_code></invoice_type_code>
+		<profile_id></profile_id>
+		<dictionary_id>29621</dictionary_id>
+	</process>
+	<process>
+		<process_module_id>21</process_module_id>
+		<process_cat>Senet Açılış Devir</process_cat>
+		<process_cat_eng>Note Opening Turnover</process_cat_eng>
+		<process_type>107</process_type>
+		<process_multi_type></process_multi_type>
+		<process_fuseaction></process_fuseaction>
+		<process_module_name>Çek</process_module_name>
+		<process_chapter>9</process_chapter>
+		<invoice_type_code></invoice_type_code>
+		<profile_id></profile_id>
+		<dictionary_id>29622</dictionary_id>
+	</process>
+	<process>
+		<process_module_id>21</process_module_id>
+		<process_cat>Senet Giriş İade Bordrosu</process_cat>
+		<process_cat_eng>Note Entry Return Payroll</process_cat_eng>
+		<process_type>108</process_type>
+		<process_multi_type></process_multi_type>
+		<process_fuseaction>cheque.add_voucher_payroll_entry_return,cheque.upd_voucher_payroll_entry_return</process_fuseaction>
+		<process_module_name>Çek</process_module_name>
+		<process_chapter>9</process_chapter>
+		<invoice_type_code></invoice_type_code>
+		<profile_id></profile_id>
+		<dictionary_id>58921</dictionary_id>
+	</process>
+	<process>
+		<process_module_id>21</process_module_id>
+		<process_cat>Senet Giriş İade Bordrosu (Banka)</process_cat>
+		<process_cat_eng>Note Entry Return Payroll (Bank)</process_cat_eng>
+		<process_type>109</process_type>
+		<process_multi_type></process_multi_type>
+		<process_fuseaction>cheque.form_add_voucher_bank_guaranty_return,cheque.form_upd_voucher_bank_guaranty_return</process_fuseaction>
+		<process_module_name>Çek</process_module_name>
+		<process_chapter>9</process_chapter>
+		<invoice_type_code></invoice_type_code>
+		<profile_id></profile_id>
+		<dictionary_id>49475</dictionary_id>
+	</process>
+	<process>
+		<process_module_id>13</process_module_id>
+		<process_cat>Üretimden Çıkış Fişi</process_cat>
+		<process_cat_eng>Production Output Receipt</process_cat_eng>
+		<process_type>110</process_type>
+		<process_multi_type></process_multi_type>
+		<process_fuseaction>stock.form_add_fis,stock.form_upd_fis</process_fuseaction>
+		<process_module_name>Stok</process_module_name>
+		<process_chapter>11</process_chapter>
+		<invoice_type_code></invoice_type_code>
+		<profile_id></profile_id>
+		<dictionary_id>29627</dictionary_id>
+	</process>
+	<process>
+		<process_module_id>13</process_module_id>
+		<process_cat>Sarf Fişi</process_cat>
+		<process_cat_eng>Expendable Item Receipt</process_cat_eng>
+		<process_type>111</process_type>
+		<process_multi_type></process_multi_type>
+		<process_fuseaction>stock.form_add_fis,stock.form_upd_fis,stock.popup_dsp_form_upd_fis</process_fuseaction>
+		<process_module_name>Stok</process_module_name>
+		<process_chapter>11</process_chapter>
+		<invoice_type_code></invoice_type_code>
+		<profile_id></profile_id>
+		<dictionary_id>29628</dictionary_id>
+	</process>
+	<process>
+		<process_module_id>13</process_module_id>
+		<process_cat>Fire Fişi</process_cat>
+		<process_cat_eng>Waste Receipt</process_cat_eng>
+		<process_type>112</process_type>
+		<process_multi_type></process_multi_type>
+		<process_fuseaction>stock.form_add_fis,stock.form_upd_fis</process_fuseaction>
+		<process_module_name>Stok</process_module_name>
+		<process_chapter>11</process_chapter>
+		<invoice_type_code></invoice_type_code>
+		<profile_id></profile_id>
+		<dictionary_id>49692</dictionary_id>
+	</process>
+	<process>
+		<process_module_id>13</process_module_id>
+		<process_cat>Ambar Fişi (Depolararası)</process_cat>
+		<process_cat_eng>Warehouse Receipt (Between Warehouses)</process_cat_eng>
+		<process_type>113</process_type>
+		<process_multi_type></process_multi_type>
+		<process_fuseaction>stock.form_add_fis,stock.form_upd_fis</process_fuseaction>
+		<process_module_name>Stok</process_module_name>
+		<process_chapter>11</process_chapter>
+		<invoice_type_code></invoice_type_code>
+		<profile_id></profile_id>
+		<dictionary_id>49480</dictionary_id>
+	</process>
+	<process>
+		<process_module_id>13</process_module_id>
+		<process_cat>Devir Fişi (Dönemlerarası)</process_cat>
+		<process_cat_eng>Carry Over Receipt (Between Terms)</process_cat_eng>
+		<process_type>114</process_type>
+		<process_multi_type></process_multi_type>
+		<process_fuseaction>stock.form_add_ship_open_fis,stock.form_upd_open_fis</process_fuseaction>
+		<process_module_name>Stok</process_module_name>
+		<process_chapter>11</process_chapter>
+		<invoice_type_code></invoice_type_code>
+		<profile_id></profile_id>
+		<dictionary_id>49489</dictionary_id>
+	</process>
+	<process>
+		<process_module_id>50</process_module_id>
+		<process_cat>Pos Devir Fişi</process_cat>
+		<process_cat_eng>Pos Carry Over Receipt</process_cat_eng>
+		<process_type>114</process_type>
+		<process_multi_type></process_multi_type>
+		<process_fuseaction>pos.popup_add_sayim_to_stock_receipt,stock.form_upd_open_fis</process_fuseaction>
+		<process_module_name>POS</process_module_name>
+		<process_chapter/>
+		<invoice_type_code></invoice_type_code>
+		<profile_id></profile_id>
+		<dictionary_id>49491</dictionary_id>
+	</process>
+	<process>
+		<process_module_id>13</process_module_id>
+		<process_cat>Sayım Fişi</process_cat>
+		<process_cat_eng>Physical Counting Receipt</process_cat_eng>
+		<process_type>115</process_type>
+		<process_multi_type></process_multi_type>
+		<process_fuseaction>stock.form_add_fis,stock.form_upd_fis</process_fuseaction>
+		<process_module_name>Stok</process_module_name>
+		<process_chapter>11</process_chapter>
+		<invoice_type_code></invoice_type_code>
+		<profile_id></profile_id>
+		<dictionary_id>49690</dictionary_id>
+	</process>
+	<process>
+		<process_module_id>13</process_module_id>
+		<process_cat>Stok Virman</process_cat>
+		<process_cat_eng>Inventory and Shelf Status Options</process_cat_eng>
+		<process_type>116</process_type>
+		<process_multi_type></process_multi_type>
+		<process_fuseaction>stock.form_add_spec_exchange,stock.form_add_stock_exchange,stock.form_upd_spec_exchange,stock.form_upd_stock_exchange</process_fuseaction>
+		<process_module_name>Stok</process_module_name>
+		<process_chapter>11</process_chapter>
+		<invoice_type_code></invoice_type_code>
+		<profile_id></profile_id>
+		<dictionary_id>49494</dictionary_id>
+	</process>
+	<process>
+		<process_module_id>31</process_module_id>
+		<process_cat>Demirbaş Stok Fişi</process_cat>
+		<process_cat_eng>Fixed Asset Inventory Receipt</process_cat_eng>
+		<process_type>118</process_type>
+		<process_multi_type></process_multi_type>
+		<process_fuseaction>invent.add_invent_stock_fis,invent.upd_invent_stock_fis</process_fuseaction>
+		<process_module_name>Stok</process_module_name>
+		<process_chapter>11</process_chapter>
+		<invoice_type_code></invoice_type_code>
+		<profile_id></profile_id>
+		<dictionary_id>29635</dictionary_id>
+	</process>
+	<process>
+		<process_module_id>31</process_module_id>
+		<process_cat>Demirbaş Stok İade Fişi</process_cat>
+		<process_cat_eng>Fixed Asset Inventory Return Receipt</process_cat_eng>
+		<process_type>1182</process_type>
+		<process_multi_type></process_multi_type>
+		<process_fuseaction>invent.add_invent_stock_fis_return,invent.upd_invent_stock_fis_return</process_fuseaction>
+		<process_module_name>Stok</process_module_name>
+		<process_chapter>11</process_chapter>
+		<invoice_type_code></invoice_type_code>
+		<profile_id></profile_id>
+		<dictionary_id>29637</dictionary_id>
+	</process>
+	<process>
+		<process_module_id>13</process_module_id>
+		<process_cat>Üretimden Giriş Fişi(Demontaj)</process_cat>
+		<process_cat_eng>Production Input Receipt (Disassembly)</process_cat_eng>
+		<process_type>119</process_type>
+		<process_multi_type></process_multi_type>
+		<process_fuseaction>stock.form_add_fis,stock.form_upd_fis</process_fuseaction>
+		<process_module_name>Stok</process_module_name>
+		<process_chapter>11</process_chapter>
+		<invoice_type_code></invoice_type_code>
+		<profile_id></profile_id>
+		<dictionary_id>49498</dictionary_id>
+	</process>
+	<process>
+		<process_module_id>47</process_module_id>
+		<process_cat>Harcama Fişi + Mal Alımında Ek Maliyet</process_cat>
+		<process_cat_eng>Expenditure Receipt + Additional Cost in Purchasing Goods</process_cat_eng>
+		<process_type>120</process_type>
+		<process_multi_type></process_multi_type>
+		<process_fuseaction>cost.form_add_expense_cost,cost.form_add_expense_cost_copy,cost.form_upd_expense_cost,objects.form_add_copy_cost_fish,objects.form_add_expense_cost,objects.form_upd_expense_cost,objects.popup_form_add_copy_cost_fish,objects.popup_form_add_expense_cost,objects.popup_form_add_expense_cost_copy,objects.popup_form_upd_expense_cost,cost.list_expense_requests,objects.popup_list_cost </process_fuseaction>
+		<process_module_name>Objects</process_module_name>
+		<process_chapter>12</process_chapter>
+		<invoice_type_code></invoice_type_code>
+		<profile_id></profile_id>
+		<dictionary_id>48840</dictionary_id>
+	</process>
+	<process>
+		<process_module_id>70</process_module_id>
+		<process_cat>Anlaşmalı Kurum Sağlık Faturaları</process_cat>
+		<process_cat_eng>Health Expense</process_cat_eng>
+		<process_type>1201</process_type>
+		<process_multi_type></process_multi_type>
+		<process_fuseaction>health.expenses</process_fuseaction>
+		<process_module_name>Medicine</process_module_name>
+		<process_chapter></process_chapter>
+		<invoice_type_code></invoice_type_code>
+		<profile_id></profile_id>
+		<dictionary_id>33706</dictionary_id>
+	</process>
+	<process>
+		<process_module_id>48</process_module_id>
+		<process_cat>Harcırah</process_cat>
+		<process_cat_eng>Allowance Expense</process_cat_eng>
+		<process_type>1202</process_type>
+		<process_multi_type></process_multi_type>
+		<process_fuseaction>hr.allowance_expense,myhome.allowance_expense</process_fuseaction>
+		<process_module_name>Bordro ve Puantaj</process_module_name>
+		<process_chapter></process_chapter>
+		<invoice_type_code></invoice_type_code>
+		<profile_id></profile_id>
+		<dictionary_id>47073</dictionary_id>
+	</process>
+	<process>
+		<process_module_id>81</process_module_id>
+		<process_cat>Self Servis Harcama</process_cat>
+		<process_cat_eng>Expense Demand</process_cat_eng>
+		<process_type>1203</process_type>
+		<process_multi_type></process_multi_type>
+		<process_fuseaction>myhome.list_my_expense_request,cost.list_expense_request</process_fuseaction>
+		<process_module_name>Bordro ve Puantaj</process_module_name>
+		<process_chapter></process_chapter>
+		<invoice_type_code></invoice_type_code>
+		<profile_id></profile_id>
+		<dictionary_id>47630</dictionary_id>
+	</process>
+	<process>
+		<process_module_id>47</process_module_id>
+		<process_cat>Gelir Fişi</process_cat>
+		<process_cat_eng>Income Receipt</process_cat_eng>
+		<process_type>121</process_type>
+		<process_multi_type></process_multi_type>
+		<process_fuseaction>cost.add_income_cost,cost.popup_add_income_cost,cost.popup_upd_income_cost,cost.upd_income_cost,objects.popup_add_income_cost,objects.popup_upd_income_cost</process_fuseaction>
+		<process_module_name>Objects</process_module_name>
+		<process_chapter>12</process_chapter>
+		<invoice_type_code>SATIS</invoice_type_code>
+		<profile_id></profile_id>
+		<dictionary_id>58065</dictionary_id>
+	</process>
+	<process>
+		<process_module_id>40</process_module_id>
+		<process_cat>Bakım Fişi</process_cat>
+		<process_cat_eng>Maintenance Receipt</process_cat_eng>
+		<process_type>122</process_type>
+		<process_multi_type></process_multi_type>
+		<process_fuseaction>assetcare.form_add_expense_cost,assetcare.form_upd_expense_cost,assetcare.popup_add_asset_care</process_fuseaction>
+		<process_module_name>Fiziki Varlıklar</process_module_name>
+		<process_chapter>13</process_chapter>
+		<invoice_type_code></invoice_type_code>
+		<profile_id></profile_id>
+		<dictionary_id>29644</dictionary_id>
+	</process>
+	<process>
+		<process_module_id>3</process_module_id>
+		<process_cat>Bordro İşlemleri</process_cat>
+		<process_cat_eng>Payroll Transactions</process_cat_eng>
+		<process_type>130</process_type>
+		<process_multi_type></process_multi_type>
+		<process_fuseaction/>
+		<process_module_name>İnsan Kaynakları</process_module_name>
+		<process_chapter/>
+		<invoice_type_code></invoice_type_code>
+		<profile_id></profile_id>
+		<dictionary_id>29645</dictionary_id>
+	</process>
+	<process>
+		<process_module_id>48</process_module_id>
+		<process_cat>Ücret Dekontu</process_cat>
+		<process_cat_eng>Pay Slip</process_cat_eng>
+		<process_type>131</process_type>
+		<process_multi_type></process_multi_type>
+		<process_fuseaction>ehesap.popup_add_collacted_dekont,ehesap.popup_upd_collacted_dekont</process_fuseaction>
+		<process_module_name>E-Hesap</process_module_name>
+		<process_chapter/>
+		<invoice_type_code></invoice_type_code>
+		<profile_id></profile_id>
+		<dictionary_id>29946</dictionary_id>
+	</process>
+	<process>
+		<process_module_id>21</process_module_id>
+		<process_cat>Çek Çıkış B. (Banka Teminat)</process_cat>
+		<process_cat_eng>Cheque Exit Payroll (Bank Guarantee)</process_cat_eng>
+		<process_type>133</process_type>
+		<process_multi_type></process_multi_type>
+		<process_fuseaction>cheque.form_add_payroll_bank_guaranty_tem,cheque.form_upd_payroll_bank_guaranty_tem</process_fuseaction>
+		<process_module_name>Çek</process_module_name>
+		<process_chapter>9</process_chapter>
+		<invoice_type_code></invoice_type_code>
+		<profile_id></profile_id>
+		<dictionary_id>49512</dictionary_id>
+	</process>
+	<process>
+		<process_module_id>21</process_module_id>
+		<process_cat>Çek Transfer İşlemi(Çıkış)</process_cat>
+		<process_cat_eng>Cheque Transfer Operation (Output)</process_cat_eng>
+		<process_type>134</process_type>
+		<process_multi_type></process_multi_type>
+		<process_fuseaction>cheque.form_add_cheque_transfer,cheque.form_upd_cheque_transfer</process_fuseaction>
+		<process_module_name>Çek</process_module_name>
+		<process_chapter>9</process_chapter>
+		<invoice_type_code></invoice_type_code>
+		<profile_id></profile_id>
+		<dictionary_id>49513</dictionary_id>
+	</process>
+	<process>
+		<process_module_id>21</process_module_id>
+		<process_cat>Çek Transfer İşlemi(Giriş)</process_cat>
+		<process_cat_eng>Cheque Transfer Operation (Input)</process_cat_eng>
+		<process_type>135</process_type>
+		<process_multi_type></process_multi_type>
+		<process_fuseaction>cheque.form_add_cheque_transfer,cheque.form_upd_cheque_transfer</process_fuseaction>
+		<process_module_name>Çek</process_module_name>
+		<process_chapter>9</process_chapter>
+		<invoice_type_code></invoice_type_code>
+		<profile_id></profile_id>
+		<dictionary_id>49514</dictionary_id>
+	</process>
+	<process>
+		<process_module_id>21</process_module_id>
+		<process_cat>Senet Transfer İşlemi(Çıkış)</process_cat>
+		<process_cat_eng>Note Transfer Operation (Output)</process_cat_eng>
+		<process_type>136</process_type>
+		<process_multi_type></process_multi_type>
+		<process_fuseaction>cheque.form_add_voucher_transfer,cheque.form_upd_voucher_transfer</process_fuseaction>
+		<process_module_name>Çek</process_module_name>
+		<process_chapter>9</process_chapter>
+		<invoice_type_code></invoice_type_code>
+		<profile_id></profile_id>
+		<dictionary_id>49517</dictionary_id>
+	</process>
+	<process>
+		<process_module_id>21</process_module_id>
+		<process_cat>Senet Transfer İşlemi(Giriş)</process_cat>
+		<process_cat_eng>Note Transfer Operation (Input)</process_cat_eng>
+		<process_type>137</process_type>
+		<process_multi_type></process_multi_type>
+		<process_fuseaction>cheque.form_add_voucher_transfer,cheque.form_upd_voucher_transfer</process_fuseaction>
+		<process_module_name>Çek</process_module_name>
+		<process_chapter>9</process_chapter>
+		<invoice_type_code></invoice_type_code>
+		<profile_id></profile_id>
+		<dictionary_id>49518</dictionary_id>
+	</process>
+	<process>
+		<process_module_id>14</process_module_id>
+		<process_cat>Servis Stok Giriş İşlemi</process_cat>
+		<process_cat_eng>Service Inventory Input</process_cat_eng>
+		<process_type>140</process_type>
+		<process_multi_type></process_multi_type>
+		<process_fuseaction>service.popup_add_purchase_ship,service.popup_upd_purchase_ship,stock.form_add_purchase,stock.form_upd_purchase</process_fuseaction>
+		<process_module_name>Servis</process_module_name>
+		<process_chapter/>
+		<invoice_type_code></invoice_type_code>
+		<profile_id></profile_id>
+		<dictionary_id>49519</dictionary_id>
+	</process>
+	<process>
+		<process_module_id>14</process_module_id>
+		<process_cat>Servis Stok Çıkış İşlemi</process_cat>
+		<process_cat_eng>Service Inventory Output</process_cat_eng>
+		<process_type>141</process_type>
+		<process_multi_type></process_multi_type>
+		<process_fuseaction>service.add_sale_ship,service.add_sale_ship,service.popup_upd_sale_ship,stock.form_add_sale,stock.form_upd_sale</process_fuseaction>
+		<process_module_name>Servis</process_module_name>
+		<process_chapter/>
+		<invoice_type_code></invoice_type_code>
+		<profile_id></profile_id>
+		<dictionary_id>49520</dictionary_id>
+	</process>
+	<process>
+		<process_module_id>46</process_module_id>
+		<process_cat>Bütçe Planlama Fişi</process_cat>
+		<process_cat_eng>Budget Planning Note</process_cat_eng>
+		<process_type>160</process_type>
+		<process_multi_type></process_multi_type>
+		<process_fuseaction>budget.list_accrual_operations,budget.add_budget_plan,budget.upd_budget_plan</process_fuseaction>
+		<process_module_name>Bütçe</process_module_name>
+		<process_chapter>16</process_chapter>
+		<invoice_type_code></invoice_type_code>
+		<profile_id></profile_id>
+		<dictionary_id>29947</dictionary_id>
+	</process>
+	<process>
+		<process_module_id>46</process_module_id>
+		<process_cat>Bütçe Transfer Fişi</process_cat>
+		<process_cat_eng>Budget Transfer Note</process_cat_eng>
+		<process_type>1601</process_type>
+		<process_multi_type></process_multi_type>
+		<process_fuseaction>budget.list_accrual_operations,budget.add_budget_plan,budget.upd_budget_plan,budget.list_plan_rows</process_fuseaction>
+		<process_module_name>Bütçe</process_module_name>
+		<process_chapter>16</process_chapter>
+		<invoice_type_code></invoice_type_code>
+		<profile_id></profile_id>
+		<dictionary_id>61328</dictionary_id>
+	</process>
+	<process>
+		<process_module_id>46</process_module_id>
+		<process_cat>Tahakkuk Fişi</process_cat>
+		<process_cat_eng>Accruals Note</process_cat_eng>
+		<process_type>161</process_type>
+		<process_multi_type></process_multi_type>
+		<process_fuseaction>budget.list_accrual_operations,budget.add_budget_plan,budget.upd_budget_plan</process_fuseaction>
+		<process_module_name>Bütçe</process_module_name>
+		<process_chapter>16</process_chapter>
+		<invoice_type_code></invoice_type_code>
+		<profile_id></profile_id>
+		<dictionary_id>29650</dictionary_id>
+	</process>
+	<process>
+		<process_module_id>26</process_module_id>
+		<process_cat>Üretim Sonucu</process_cat>
+		<process_cat_eng>Production Result</process_cat_eng>
+		<process_type>171</process_type>
+		<process_multi_type></process_multi_type>
+		<process_fuseaction>prod.list_results,prod.add_prod_order_result,prod.upd_prod_order_result,prod.upd_prod_order_result_2,production.popup_ajax_production_orders_groups_operator</process_fuseaction>
+		<process_module_name>Üretim Planlama</process_module_name>
+		<process_chapter>2</process_chapter>
+		<invoice_type_code></invoice_type_code>
+		<profile_id></profile_id>
+		<dictionary_id>29651</dictionary_id>
+	</process>
+	<process>
+		<process_module_id>24</process_module_id>
+		<process_cat>İcra İşlemleri</process_cat>
+		<process_cat_eng>Execution Proceedings</process_cat_eng>
+		<process_type>190</process_type>
+		<process_multi_type></process_multi_type>
+		<process_fuseaction>ch.list_law_request,ch.form_add_law_request,ch.form_upd_law_request</process_fuseaction>
+		<process_module_name>Risk ve Teminat</process_module_name>
+		<process_chapter></process_chapter>
+		<invoice_type_code></invoice_type_code>
+		<profile_id></profile_id>
+		<dictionary_id>47124</dictionary_id>
+	</process>
+	<process>
+		<process_module_id>13</process_module_id>
+		<process_cat>Hal İrsaliyesi</process_cat>
+		<process_cat_eng>Food Market Packing Lists</process_cat_eng>
+		<process_type>761</process_type>
+		<process_multi_type></process_multi_type>
+		<process_fuseaction>stock.add_marketplace_ship,stock.upd_marketplace_ship</process_fuseaction>
+		<process_module_name>Stok</process_module_name>
+		<process_chapter>11</process_chapter>
+		<invoice_type_code></invoice_type_code>
+		<profile_id></profile_id>
+		<dictionary_id>49532</dictionary_id>
+	</process>
+	<process>
+		<process_module_id>13</process_module_id>
+		<process_cat>İthal Mal Girişi</process_cat>
+		<process_cat_eng>Imported Goods Entry</process_cat_eng>
+		<process_type>811</process_type>
+		<process_multi_type></process_multi_type>
+		<process_fuseaction>stock.add_stock_in_from_customs,stock.upd_stock_in_from_customs</process_fuseaction>
+		<process_module_name>Stok</process_module_name>
+		<process_chapter>11</process_chapter>
+		<invoice_type_code></invoice_type_code>
+		<profile_id></profile_id>
+		<dictionary_id>29588</dictionary_id>
+	</process>
+	<process>
+		<process_module_id>31</process_module_id>
+		<process_cat>Demirbaş Devir Fişi</process_cat>
+		<process_cat_eng>Fixed Asset Turnover Receipt</process_cat_eng>
+		<process_type>1181</process_type>
+		<process_multi_type></process_multi_type>
+		<process_fuseaction>invent.add_collacted_inventory</process_fuseaction>
+		<process_module_name>Stok</process_module_name>
+		<process_chapter>11</process_chapter>
+		<invoice_type_code></invoice_type_code>
+		<profile_id></profile_id>
+		<dictionary_id>29636</dictionary_id>
+	</process>
+	<process>
+		<process_module_id>18</process_module_id>
+		<process_cat>Kasa Kur Değerleme İşlemi</process_cat>
+		<process_cat_eng>Cash Exchange Rate Valuation Transaction</process_cat_eng>
+		<process_type>311</process_type>
+		<process_multi_type></process_multi_type>
+		<process_fuseaction>cash.form_add_cash_rate_valuation</process_fuseaction>
+		<process_module_name>Kasa</process_module_name>
+		<process_chapter>3</process_chapter>
+		<invoice_type_code></invoice_type_code>
+		<profile_id></profile_id>
+		<dictionary_id>48955</dictionary_id>
+	</process>
+	<process>
+		<process_module_id>19</process_module_id>
+		<process_cat>Banka Kur Değerleme İşlemi</process_cat>
+		<process_cat_eng>Bank Exchange Rate Valuation Transaction</process_cat_eng>
+		<process_type>254</process_type>
+		<process_multi_type></process_multi_type>
+		<process_fuseaction>bank.form_add_bank_rate_valuation</process_fuseaction>
+		<process_module_name>Bank</process_module_name>
+		<process_chapter>2</process_chapter>
+		<invoice_type_code></invoice_type_code>
+		<profile_id></profile_id>
+		<dictionary_id>49541</dictionary_id>
+	</process>
+	<process>
+		<process_module_id>19</process_module_id>
+		<process_cat>Giden Banka Talimatı</process_cat>
+		<process_cat_eng>Outgoing Bank Instruction</process_cat_eng>
+		<process_type>260</process_type>
+		<process_multi_type></process_multi_type>
+		<process_fuseaction>bank.list_assign_order,bank.popup_assign_order,bank.popup_upd_assign_order</process_fuseaction>
+		<process_module_name>Bank</process_module_name>
+		<process_chapter>2</process_chapter>
+		<invoice_type_code></invoice_type_code>
+		<profile_id></profile_id>
+		<dictionary_id>58167</dictionary_id>
+	</process>
+	<process>
+		<process_module_id>19</process_module_id>
+		<process_cat>Gelen Banka Talimatı</process_cat>
+		<process_cat_eng>Incoming Bank Instruction</process_cat_eng>
+		<process_type>251</process_type>
+		<process_multi_type></process_multi_type>
+		<process_fuseaction>bank.list_assign_order,bank.popup_incoming_bank_order,bank.popup_upd_bank_order</process_fuseaction>
+		<process_module_name>Bank</process_module_name>
+		<process_chapter>2</process_chapter>
+		<invoice_type_code></invoice_type_code>
+		<profile_id></profile_id>
+		<dictionary_id>49544</dictionary_id>
+	</process>
+	<process>
+		<process_module_id>20</process_module_id>
+		<process_cat>Hal Faturası</process_cat>
+		<process_cat_eng>Food Market Invoice</process_cat_eng>
+		<process_type>592</process_type>
+		<process_multi_type></process_multi_type>
+		<process_fuseaction>invoice.form_add_marketplace_bill,invoice.form_upd_marketplace_bill,invoice.marketplace_commands</process_fuseaction>
+		<process_module_name>Fatura</process_module_name>
+		<process_chapter>5</process_chapter>
+		<invoice_type_code></invoice_type_code>
+		<profile_id></profile_id>
+		<dictionary_id>57819</dictionary_id>
+	</process>
+	<process>
+		<process_module_id>20</process_module_id>
+		<process_cat>İhracat Faturası</process_cat>
+		<process_cat_eng>Export Invoice</process_cat_eng>
+		<process_type>531</process_type>
+		<process_multi_type></process_multi_type>
+		<process_fuseaction>invoice.form_add_bill,invoice.detail_invoice_sale,invoice.form_add_bill_from_ship</process_fuseaction>
+		<process_module_name>Fatura</process_module_name>
+		<process_chapter>5</process_chapter>
+		<invoice_type_code>SATIS</invoice_type_code>
+		<profile_id></profile_id>
+		<dictionary_id>57821</dictionary_id>
+	</process>
+	<process>
+		<process_module_id>20</process_module_id>
+		<process_cat>Konsinye Fatura</process_cat>
+		<process_cat_eng>Consignment Invoice</process_cat_eng>
+		<process_type>532</process_type>
+		<process_multi_type></process_multi_type>
+		<process_fuseaction>invoice.add_sale_invoice_from_order,invoice.detail_invoice_sale,invoice.form_add_bill,invoice.form_add_bill_from_ship,invoice.form_copy_bill,invoice.popup_form_add_sale_multi,invoice.add_consignment_bill</process_fuseaction>
+		<process_module_name>Fatura</process_module_name>
+		<process_chapter>5</process_chapter>
+		<invoice_type_code>SATIS</invoice_type_code>
+		<profile_id></profile_id>
+		<dictionary_id>49547</dictionary_id>
+	</process>
+	<process>
+		<process_module_id>20</process_module_id>
+		<process_cat>KDV den Muaf Satış Faturası</process_cat>
+		<process_cat_eng>Excluding VAT Sales Invoice</process_cat_eng>
+		<process_type>533</process_type>
+		<process_multi_type></process_multi_type>
+		<process_fuseaction>invoice.add_sale_invoice_from_order,invoice.add_sale_invoice_from_order,order,invoice.detail_invoice_sale,invoice.form_add_bill,invoice.form_add_bill_from_ship,invoice.form_copy_bill,invoice.form_copy_bill,invoice.popup_form_add_sale_multi</process_fuseaction>
+		<process_module_name>Fatura</process_module_name>
+		<process_chapter>5</process_chapter>
+		<invoice_type_code>SATIS</invoice_type_code>
+		<profile_id></profile_id>
+		<dictionary_id>49548</dictionary_id>
+	</process>
+	<process>
+		<process_module_id>20</process_module_id>
+		<process_cat>İhraç Kayıtlı Satış</process_cat>
+		<process_cat_eng>?</process_cat_eng>
+		<process_type>5311</process_type>
+		<process_multi_type></process_multi_type>
+		<process_fuseaction>invoice.add_sale_invoice_from_order,invoice.add_sale_invoice_from_order,order,invoice.detail_invoice_sale,invoice.form_add_bill,invoice.form_add_bill_from_ship,invoice.form_copy_bill,invoice.form_copy_bill,invoice.popup_form_add_sale_multi</process_fuseaction>
+		<process_module_name>Fatura</process_module_name>
+		<process_chapter>5</process_chapter>
+		<invoice_type_code>IHRACKAYITLI</invoice_type_code>
+		<profile_id></profile_id>
+		<dictionary_id>44214</dictionary_id>
+	</process>
+	<process>
+		<process_module_id>20</process_module_id>
+		<process_cat>Bavul Ticareti Satış</process_cat>
+		<process_cat_eng>?</process_cat_eng>
+		<process_type>5312</process_type>
+		<process_multi_type></process_multi_type>
+		<process_fuseaction>invoice.add_sale_invoice_from_order,invoice.add_sale_invoice_from_order,order,invoice.detail_invoice_sale,invoice.form_add_bill,invoice.form_add_bill_from_ship,invoice.form_copy_bill,invoice.form_copy_bill,invoice.popup_form_add_sale_multi</process_fuseaction>
+		<process_module_name>Fatura</process_module_name>
+		<process_chapter>5</process_chapter>
+		<invoice_type_code>SATIS</invoice_type_code>
+		<profile_id></profile_id>
+		<dictionary_id>60092</dictionary_id>
+	</process>
+	<process>
+		<process_module_id>20</process_module_id>
+		<process_cat>Bavul Ticareti Satış-İade</process_cat>
+		<process_cat_eng>?</process_cat_eng>
+		<process_type>5313</process_type>
+		<process_multi_type></process_multi_type>
+		<process_fuseaction>invoice.add_sale_invoice_from_order,invoice.add_sale_invoice_from_order,order,invoice.detail_invoice_sale,invoice.form_add_bill,invoice.form_add_bill_from_ship,invoice.form_copy_bill,invoice.form_copy_bill,invoice.popup_form_add_sale_multi</process_fuseaction>
+		<process_module_name>Fatura</process_module_name>
+		<process_chapter>5</process_chapter>
+		<invoice_type_code>SATIS</invoice_type_code>
+		<profile_id></profile_id>
+		<dictionary_id>60093</dictionary_id>
+	</process>
+	<process>
+		<process_module_id>22</process_module_id>
+		<process_cat>5 Boyutlu İşlem</process_cat>
+		<process_cat_eng>5 Dimension Transaction</process_cat_eng>
+		<process_type>555</process_type>
+		<process_multi_type></process_multi_type>
+		<process_fuseaction>finance.list_genel_virman,finance.add_genel_virman,finance.upd_genel_virman</process_fuseaction>
+		<process_module_name>Muhasebe</process_module_name>
+		<process_chapter>1</process_chapter>
+		<invoice_type_code></invoice_type_code>
+		<profile_id></profile_id>
+		<dictionary_id>60101</dictionary_id>
+	</process>
+	<process>
+		<process_module_id>20</process_module_id>
+		<process_cat>Verilen Hakediş Faturası</process_cat>
+		<process_cat_eng>Provided Progress Invoice</process_cat_eng>
+		<process_type>561</process_type>
+		<process_multi_type></process_multi_type>
+		<process_fuseaction>invoice.form_add_bill,invoice.detail_invoice_sale,invoice.form_add_bill_from_ship,invoice.popup_form_add_sale_multi,invoice.form_copy_bill</process_fuseaction>
+		<process_module_name>Fatura</process_module_name>
+		<process_chapter>5</process_chapter>
+		<invoice_type_code>SATIS</invoice_type_code>
+		<profile_id></profile_id>
+		<dictionary_id>49549</dictionary_id>
+	</process>
+	<process>
+		<process_module_id>20</process_module_id>
+		<process_cat>İthalat Faturası</process_cat>
+		<process_cat_eng>Importing Invoice</process_cat_eng>
+		<process_type>591</process_type>
+		<process_multi_type></process_multi_type>
+		<process_fuseaction>invoice.add_purchase_invoice_from_order,invoice.detail_invoice_purchase,invoice.form_add_bill_purchase,invoice.form_add_bill_purchase_from_ship</process_fuseaction>
+		<process_module_name>Fatura</process_module_name>
+		<process_chapter>5</process_chapter>
+		<invoice_type_code></invoice_type_code>
+		<profile_id></profile_id>
+		<dictionary_id>57820</dictionary_id>
+	</process>
+	<process>
+		<process_module_id>20</process_module_id>
+		<process_cat>Alınan Hakediş Faturası</process_cat>
+		<process_cat_eng>Received Progress Invoice</process_cat_eng>
+		<process_type>601</process_type>
+		<process_multi_type></process_multi_type>
+		<process_fuseaction>invoice.detail_invoice_purchase,invoice.form_add_bill_purchase,invoice.form_add_bill_purchase_from_ship,invoice.form_copy_bill_purchase</process_fuseaction>
+		<process_module_name>Fatura</process_module_name>
+		<process_chapter>5</process_chapter>
+		<invoice_type_code></invoice_type_code>
+		<profile_id></profile_id>
+		<dictionary_id>57812</dictionary_id>
+	</process>
+	<process>
+		<process_module_id>20</process_module_id>
+		<process_cat>Gider Pusulası Mal</process_cat>
+		<process_cat_eng>Expense Note Goods</process_cat_eng>
+		<process_type>690</process_type>
+		<process_multi_type></process_multi_type>
+		<process_fuseaction>invoice.form_add_bill_other,invoice.detail_invoice_other</process_fuseaction>
+		<process_module_name>Fatura</process_module_name>
+		<process_chapter>5</process_chapter>
+		<invoice_type_code></invoice_type_code>
+		<profile_id></profile_id>
+		<dictionary_id>40002</dictionary_id>
+	</process>
+	<process>
+		<process_module_id>20</process_module_id>
+		<process_cat>Gider Pusulası Hizmet</process_cat>
+		<process_cat_eng>Expense Note Service</process_cat_eng>
+		<process_type>691</process_type>
+		<process_multi_type></process_multi_type>
+		<process_fuseaction>invoice.form_add_bill_other,invoice.detail_invoice_other</process_fuseaction>
+		<process_module_name>Fatura</process_module_name>
+		<process_chapter>5</process_chapter>
+		<invoice_type_code></invoice_type_code>
+		<profile_id></profile_id>
+		<dictionary_id>49556</dictionary_id>
+	</process>
+	<process>
+		<process_module_id>21</process_module_id>
+		<process_cat>Çek İşlemi Tahsil Kasaya</process_cat>
+		<process_cat_eng>Cheque Collection Transaction to Cash</process_cat_eng>
+		<process_type>1040</process_type>
+		<process_multi_type></process_multi_type>
+		<process_fuseaction/>
+		<process_module_name>Çek</process_module_name>
+		<process_chapter>9</process_chapter>
+		<invoice_type_code></invoice_type_code>
+		<profile_id></profile_id>
+		<dictionary_id>29606</dictionary_id>
+	</process>
+	<process>
+		<process_module_id>21</process_module_id>
+		<process_cat>Çek İşlemi Tahsil Bankaya</process_cat>
+		<process_cat_eng>Cheque Collection Transaction to Bank</process_cat_eng>
+		<process_type>1043</process_type>
+		<process_multi_type></process_multi_type>
+		<process_fuseaction>cheque.popup_add_masraf,cheque.upd_status</process_fuseaction>
+		<process_module_name>Çek</process_module_name>
+		<process_chapter>9</process_chapter>
+		<invoice_type_code></invoice_type_code>
+		<profile_id></profile_id>
+		<dictionary_id>49561</dictionary_id>
+	</process>
+	<process>
+		<process_module_id>21</process_module_id>
+		<process_cat>Çek İşlemi Ödeme Bankadan</process_cat>
+		<process_cat_eng>Cheque Payment Transaction from Bank</process_cat_eng>
+		<process_type>1044</process_type>
+		<process_multi_type></process_multi_type>
+		<process_fuseaction>cheque.popup_add_masraf,cheque.popup_upd_masraf,cheque.upd_status </process_fuseaction>
+		<process_module_name>Çek</process_module_name>
+		<process_chapter>9</process_chapter>
+		<invoice_type_code></invoice_type_code>
+		<profile_id></profile_id>
+		<dictionary_id>49563</dictionary_id>
+	</process>
+	<process>
+		<process_module_id>21</process_module_id>
+		<process_cat>Çek İşlemi Karşılıksız Çek</process_cat>
+		<process_cat_eng>Cheque Transaction Bounced Cheque</process_cat_eng>
+		<process_type>1046</process_type>
+		<process_multi_type></process_multi_type>
+		<process_fuseaction>cheque.popup_add_masraf</process_fuseaction>
+		<process_module_name>Çek</process_module_name>
+		<process_chapter>9</process_chapter>
+		<invoice_type_code></invoice_type_code>
+		<profile_id></profile_id>
+		<dictionary_id>49569</dictionary_id>
+	</process>
+	<process>
+		<process_module_id>21</process_module_id>
+		<process_cat>Senet İşlemi Tahsil Kasadan</process_cat>
+		<process_cat_eng>Note Collection Transaction From Cash</process_cat_eng>
+		<process_type>1050</process_type>
+		<process_multi_type></process_multi_type>
+		<process_fuseaction/>
+		<process_module_name>Çek</process_module_name>
+		<process_chapter>9</process_chapter>
+		<invoice_type_code></invoice_type_code>
+		<profile_id></profile_id>
+		<dictionary_id>49570</dictionary_id>
+	</process>
+	<process>
+		<process_module_id>21</process_module_id>
+		<process_cat>Senet İşlemi Tahsil Bankaya</process_cat>
+		<process_cat_eng>Note Collection Transaction to Bank</process_cat_eng>
+		<process_type>1053</process_type>
+		<process_multi_type></process_multi_type>
+		<process_fuseaction>cheque.popup_add_masraf,cheque.upd_voucher_status</process_fuseaction>
+		<process_module_name>Çek</process_module_name>
+		<process_chapter>9</process_chapter>
+		<invoice_type_code></invoice_type_code>
+		<profile_id></profile_id>
+		<dictionary_id>49571</dictionary_id>
+	</process>
+	<process>
+		<process_module_id>21</process_module_id>
+		<process_cat>Senet İşlemi Ödeme Kasadan</process_cat>
+		<process_cat_eng>Note Payment Transaction From Cash</process_cat_eng>
+		<process_type>1054</process_type>
+		<process_multi_type></process_multi_type>
+		<process_fuseaction>cheque.popup_add_masraf,cheque.upd_voucher_status</process_fuseaction>
+		<process_module_name>Çek</process_module_name>
+		<process_chapter>9</process_chapter>
+		<invoice_type_code></invoice_type_code>
+		<profile_id></profile_id>
+		<dictionary_id>49572</dictionary_id>
+	</process>
+	<process>
+		<process_module_id>21</process_module_id>
+		<process_cat>Senet İşlemi Ödeme Bankadan</process_cat>
+		<process_cat_eng>Note Payment Transaction From Bank</process_cat_eng>
+		<process_type>1051</process_type>
+		<process_multi_type></process_multi_type>
+		<process_fuseaction>cheque.popup_add_masraf,cheque.upd_voucher_status</process_fuseaction>
+		<process_module_name>Çek</process_module_name>
+		<process_chapter>9</process_chapter>
+		<invoice_type_code></invoice_type_code>
+		<profile_id></profile_id>
+		<dictionary_id>29614</dictionary_id>
+	</process>
+	<process>
+		<process_module_id>21</process_module_id>
+		<process_cat>Senet İşlemi Karşılıksız Senet</process_cat>
+		<process_cat_eng>Note Transaction - Bounced Note</process_cat_eng>
+		<process_type>1056</process_type>
+		<process_multi_type></process_multi_type>
+		<process_fuseaction>cheque.popup_add_masraf,cheque.upd_voucher_status</process_fuseaction>
+		<process_module_name>Çek</process_module_name>
+		<process_chapter>9</process_chapter>
+		<invoice_type_code></invoice_type_code>
+		<profile_id></profile_id>
+		<dictionary_id>29619</dictionary_id>
+	</process>
+	<process>
+		<process_module_id>21</process_module_id>
+		<process_cat>Senet Tahsilat İşlemi</process_cat>
+		<process_cat_eng>Note Collection Transaction</process_cat_eng>
+		<process_type>1057</process_type>
+		<process_multi_type></process_multi_type>
+		<process_fuseaction>cheque.list_payment_voucher</process_fuseaction>
+		<process_module_name>Çek</process_module_name>
+		<process_chapter>9</process_chapter>
+		<invoice_type_code></invoice_type_code>
+		<profile_id></profile_id>
+		<dictionary_id>29620</dictionary_id>
+	</process>
+	<process>
+		<process_module_id>23</process_module_id>
+		<process_cat>Toplu Borç Dekontu</process_cat>
+		<process_cat_eng>Group Debt Receipt</process_cat_eng>
+		<process_type>410</process_type>
+		<process_multi_type></process_multi_type>
+		<process_fuseaction>ch.add_collacted_dekont,ch.upd_collacted_dekont</process_fuseaction>
+		<process_module_name>Cari Hesaplar</process_module_name>
+		<process_chapter>4</process_chapter>
+		<invoice_type_code></invoice_type_code>
+		<profile_id></profile_id>
+		<dictionary_id>29570</dictionary_id>
+	</process>
+	<process>
+		<process_module_id>23</process_module_id>
+		<process_cat>Toplu Alacak Dekontu</process_cat>
+		<process_cat_eng>Group Credit Receipt</process_cat_eng>
+		<process_type>420</process_type>
+		<process_multi_type></process_multi_type>
+		<process_fuseaction>ch.add_collacted_dekont,ch.upd_collacted_dekont</process_fuseaction>
+		<process_module_name>Cari Hesaplar</process_module_name>
+		<process_chapter>4</process_chapter>
+		<invoice_type_code></invoice_type_code>
+		<profile_id></profile_id>
+		<dictionary_id>29571</dictionary_id>
+	</process>
+	<process>
+		<process_module_id>19</process_module_id>
+		<process_cat>Kredi Kartı Tahsilat</process_cat>
+		<process_cat_eng>Credit Card Collection</process_cat_eng>
+		<process_type>241</process_type>
+		<process_multi_type></process_multi_type>
+		<process_fuseaction>bank.list_creditcard_revenue,bank.popup_add_creditcard_revenue,bank.popup_form_upd_creditcard_revenue,bank.popup_add_provision_import,bank.popup_add_online_pos</process_fuseaction>
+		<process_module_name>Banka</process_module_name>
+		<process_chapter>2</process_chapter>
+		<invoice_type_code></invoice_type_code>
+		<profile_id></profile_id>
+		<dictionary_id>57836</dictionary_id>
+	</process>
+	<process>
+		<process_module_id>19</process_module_id>
+		<process_cat>Kredi Kartı Tahsilat İptal</process_cat>
+		<process_cat_eng>Cancel Credit Card Collection</process_cat_eng>
+		<process_type>245</process_type>
+		<process_multi_type></process_multi_type>
+		<process_fuseaction>bank.list_creditcard_revenue,bank.popup_add_creditcard_revenue,bank.popup_form_upd_creditcard_revenue,bank.popup_list_bank_pos_rows</process_fuseaction>
+		<process_module_name>Banka</process_module_name>
+		<process_chapter>2</process_chapter>
+		<invoice_type_code></invoice_type_code>
+		<profile_id></profile_id>
+		<dictionary_id>29552</dictionary_id>
+	</process>
+	<process>
+		<process_module_id>19</process_module_id>
+		<process_cat>Toplu Kredi Kartı Tahsilat</process_cat>
+		<process_cat_eng>Group Credit Card Collection</process_cat_eng>
+		<process_type>2410</process_type>
+		<process_multi_type></process_multi_type>
+		<process_fuseaction>bank.list_creditcard_revenue,bank.add_collacted_creditcard_revenue,bank.upd_collacted_creditcard_revenue</process_fuseaction>
+		<process_module_name>Banka</process_module_name>
+		<process_chapter>2</process_chapter>
+		<invoice_type_code></invoice_type_code>
+		<profile_id></profile_id>
+		<dictionary_id>49592</dictionary_id>
+	</process>
+	<process>
+		<process_module_id>19</process_module_id>
+		<process_cat>Kredi Kartıyla Ödeme</process_cat>
+		<process_cat_eng>Payments With Credit Card</process_cat_eng>
+		<process_type>242</process_type>
+		<process_multi_type></process_multi_type>
+		<process_fuseaction>bank.list_credit_card_expense,bank.popup_add_credit_card_payment,bank.popup_form_upd_credit_card_payment,bank.popup_add_credit_card_payment,bank.popup_add_creditcard_bank_expense,bank.popup_form_upd_credit_card_payment,bank.popup_upd_creditcard_bank_expense</process_fuseaction>
+		<process_module_name>Banka</process_module_name>
+		<process_chapter>2</process_chapter>
+		<invoice_type_code></invoice_type_code>
+		<profile_id></profile_id>
+		<dictionary_id>48959</dictionary_id>
+	</process>
+	<process>
+		<process_module_id>19</process_module_id>
+		<process_cat>Kredi Kartıyla Ödeme İade</process_cat>
+		<process_cat_eng>Payments With Credit Card Return</process_cat_eng>
+		<process_type>249</process_type>
+		<process_multi_type></process_multi_type>
+		<process_fuseaction>bank.list_credit_card_expense,bank.popup_add_credit_card_payment,bank.popup_form_upd_credit_card_payment,bank.popup_add_credit_card_payment,bank.popup_add_creditcard_bank_expense,bank.popup_form_upd_credit_card_payment,bank.popup_upd_creditcard_bank_expense</process_fuseaction>
+		<process_module_name>Banka</process_module_name>
+		<process_chapter>2</process_chapter>
+		<invoice_type_code></invoice_type_code>
+		<profile_id></profile_id>
+		<dictionary_id>48959</dictionary_id>
+	</process>
+	<process>
+		<process_module_id>19</process_module_id>
+		<process_cat>Kredi Kartıyla Ödeme İptal</process_cat>
+		<process_cat_eng>Payment Cancellation With Credit Card</process_cat_eng>
+		<process_type>246</process_type>
+		<process_multi_type></process_multi_type>
+		<process_fuseaction>bank.list_credit_card_expense,bank.popup_add_credit_card_payment,bank.popup_form_upd_credit_card_payment,bank.popup_add_credit_card_payment,bank.popup_add_creditcard_bank_expense,bank.popup_form_upd_credit_card_payment,bank.popup_upd_creditcard_bank_expense</process_fuseaction>
+		<process_module_name>Banka</process_module_name>
+		<process_chapter>2</process_chapter>
+		<invoice_type_code></invoice_type_code>
+		<profile_id></profile_id>
+		<dictionary_id>49594</dictionary_id>
+	</process>
+	<process>
+		<process_module_id>19</process_module_id>
+		<process_cat>Kredi Kartı Hesaba Geçiş</process_cat>
+		<process_cat_eng>Process to Credit Card Account</process_cat_eng>
+		<process_type>243</process_type>
+		<process_multi_type></process_multi_type>
+		<process_fuseaction>bank.list_payment_credit_cards,bank.popup_add_cc_bank_action</process_fuseaction>
+		<process_module_name>Banka</process_module_name>
+		<process_chapter>2</process_chapter>
+		<invoice_type_code></invoice_type_code>
+		<profile_id></profile_id>
+		<dictionary_id>49595</dictionary_id>
+	</process>
+	<process>
+		<process_module_id>19</process_module_id>
+		<process_cat>Kredi Kartı Hesaba Geçiş İptal</process_cat>
+		<process_cat_eng>Cancel Process to Credit Card Account</process_cat_eng>
+		<process_type>247</process_type>
+		<process_multi_type></process_multi_type>
+		<process_fuseaction>bank.list_payment_credit_cards,bank.popup_add_cc_bank_action</process_fuseaction>
+		<process_module_name>Banka</process_module_name>
+		<process_chapter>2</process_chapter>
+		<invoice_type_code></invoice_type_code>
+		<profile_id></profile_id>
+		<dictionary_id>49596</dictionary_id>
+	</process>
+	<process>
+		<process_module_id>19</process_module_id>
+		<process_cat>Kredi Kartı Borcu Ödeme</process_cat>
+		<process_cat_eng>Credit Card Payment</process_cat_eng>
+		<process_type>244</process_type>
+		<process_multi_type></process_multi_type>
+		<process_fuseaction>bank.list_credit_card_expense,bank.popup_add_cc_debit_payment,bank.popup_upd_cc_debit_payment</process_fuseaction>
+		<process_module_name>Banka</process_module_name>
+		<process_chapter>2</process_chapter>
+		<invoice_type_code></invoice_type_code>
+		<profile_id></profile_id>
+		<dictionary_id>29550</dictionary_id>
+	</process>
+	<process>
+		<process_module_id>19</process_module_id>
+		<process_cat>Kredi Kartı Borcu Ödeme İptal</process_cat>
+		<process_cat_eng>Credit Card Payment Cancellation</process_cat_eng>
+		<process_type>248</process_type>
+		<process_multi_type></process_multi_type>
+		<process_fuseaction>bank.list_credit_card_expense,bank.popup_add_cc_debit_payment,bank.popup_upd_cc_debit_payment</process_fuseaction>
+		<process_module_name>Banka</process_module_name>
+		<process_chapter>2</process_chapter>
+		<invoice_type_code></invoice_type_code>
+		<profile_id></profile_id>
+		<dictionary_id>29551</dictionary_id>
+	</process>
+	<process>
+		<process_module_id>51</process_module_id>
+		<process_cat>Kredi Sözleşmesi</process_cat>
+		<process_cat_eng>Loan Contract</process_cat_eng>
+		<process_type>290</process_type>
+		<process_multi_type></process_multi_type>
+		<process_fuseaction>credit.list_credit_contract,credit.add_credit_contract,credit.upd_credit_contract</process_fuseaction>
+		<process_module_name>Kredi ve Fon Yönetimi</process_module_name>
+		<process_chapter>18</process_chapter>
+		<invoice_type_code></invoice_type_code>
+		<profile_id></profile_id>
+		<dictionary_id>49612</dictionary_id>
+	</process>
+	<process>
+		<process_module_id>51</process_module_id>
+		<process_cat>Kredi Ödemesi</process_cat>
+		<process_cat_eng>Credit Payment</process_cat_eng>
+		<process_type>291</process_type>
+		<process_multi_type></process_multi_type>
+		<process_fuseaction>credit.popup_add_credit_payment,credit.popup_upd_credit_payment</process_fuseaction>
+		<process_module_name>Kredi ve Fon Yönetimi</process_module_name>
+		<process_chapter>18</process_chapter>
+		<invoice_type_code></invoice_type_code>
+		<profile_id></profile_id>
+		<dictionary_id>49616</dictionary_id>
+	</process>
+	<process>
+		<process_module_id>51</process_module_id>
+		<process_cat>Kredi Tahsilatı</process_cat>
+		<process_cat_eng>Credit Collection</process_cat_eng>
+		<process_type>292</process_type>
+		<process_multi_type></process_multi_type>
+		<process_fuseaction>credit.popup_add_credit_revenue,credit.popup_upd_credit_revenue</process_fuseaction>
+		<process_module_name>Kredi ve Fon Yönetimi</process_module_name>
+		<process_chapter>18</process_chapter>
+		<invoice_type_code></invoice_type_code>
+		<profile_id></profile_id>
+		<dictionary_id>57839</dictionary_id>
+	</process>
+	<process>
+		<process_module_id>51</process_module_id>
+		<process_cat>Menkul Kıymet Alış</process_cat>
+		<process_cat_eng>Security Purchase</process_cat_eng>
+		<process_type>293</process_type>
+		<process_multi_type></process_multi_type>
+		<process_fuseaction>credit.add_stockbond_purchase,credit.list_stockbond_actions,credit.upd_stockbond_purchase</process_fuseaction>
+		<process_module_name>Kredi ve Fon Yönetimi</process_module_name>
+		<process_chapter>18</process_chapter>
+		<invoice_type_code></invoice_type_code>
+		<profile_id></profile_id>
+		<dictionary_id>49619</dictionary_id>
+	</process>
+	<process>
+		<process_module_id>51</process_module_id>
+		<process_cat>Menkul Kıymet Satış</process_cat>
+		<process_cat_eng>Security Sales</process_cat_eng>
+		<process_type>294</process_type>
+		<process_multi_type></process_multi_type>
+		<process_fuseaction>credit.add_stockbond_sale,credit.list_stockbond_actions,credit.upd_stockbond_sale</process_fuseaction>
+		<process_module_name>Kredi ve Fon Yönetimi</process_module_name>
+		<process_chapter>18</process_chapter>
+		<invoice_type_code></invoice_type_code>
+		<profile_id></profile_id>
+		<dictionary_id>57841</dictionary_id>
+	</process>
+	<process>
+		<process_module_id>51</process_module_id>
+		<process_cat>Menkul Kıymet Alış Hesaba Geçiş</process_cat>
+		<process_cat_eng>Transition to Account Securities Buying</process_cat_eng>
+		<process_type>2931</process_type>
+		<process_multi_type></process_multi_type>
+		<process_fuseaction>credit.list_stockbonds</process_fuseaction>
+		<process_module_name>Kredi ve Fon Yönetimi</process_module_name>
+		<process_chapter>18</process_chapter>
+		<invoice_type_code></invoice_type_code>
+		<profile_id></profile_id>
+		<dictionary_id>40997</dictionary_id>
+	</process>
+	<process>
+		<process_module_id>51</process_module_id>
+		<process_cat>Menkul Kıymet Değer Artış ve Düşüşü</process_cat>
+		<process_cat_eng>Securities Value Increase and Decrease</process_cat_eng>
+		<process_type>2932</process_type>
+		<process_multi_type></process_multi_type>
+		<process_fuseaction>credit.securities_dad</process_fuseaction>
+		<process_module_name>Kredi ve Fon Yönetimi</process_module_name>
+		<process_chapter>18</process_chapter>
+		<invoice_type_code></invoice_type_code>
+		<profile_id></profile_id>
+		<dictionary_id>59920</dictionary_id>
+	</process>
+	<process>
+		<process_module_id>51</process_module_id>
+		<process_cat>Menkul Kıymet Reeskont</process_cat>
+		<process_cat_eng>Securities Reeskont</process_cat_eng>
+		<process_type>2933</process_type>
+		<process_multi_type></process_multi_type>
+		<process_fuseaction>credit.securities_list_interest</process_fuseaction>
+		<process_module_name>Kredi ve Fon Yönetimi</process_module_name>
+		<process_chapter>18</process_chapter>
+		<invoice_type_code></invoice_type_code>
+		<profile_id></profile_id>
+		<dictionary_id>61015</dictionary_id>
+	</process>
+	<process>
+		<process_module_id>51</process_module_id>
+		<process_cat>Finansal Kiralama Sözleşmesi</process_cat>
+		<process_cat_eng>Financial Leasing Contract</process_cat_eng>
+		<process_type>296</process_type>
+		<process_multi_type></process_multi_type>
+		<process_fuseaction>credit.list_credit_contract,credit.add_credit_contract,credit.upd_credit_contract</process_fuseaction>
+		<process_module_name>Kredi ve Fon Yönetimi</process_module_name>
+		<process_chapter>18</process_chapter>
+		<invoice_type_code></invoice_type_code>
+		<profile_id></profile_id>
+		<dictionary_id>49622</dictionary_id>
+	</process>
+	<process>
+		<process_module_id>4</process_module_id>
+		<process_cat>Teminat</process_cat>
+		<process_cat_eng>Guarantee</process_cat_eng>
+		<process_type>300</process_type>
+		<process_multi_type></process_multi_type>
+		<process_fuseaction>finance.list_securefund,member.popup_form_add_securefund,member.popup_form_upd_securefund</process_fuseaction>
+		<process_module_name>Üye</process_module_name>
+		<process_chapter>20</process_chapter>
+		<invoice_type_code></invoice_type_code>
+		<profile_id></profile_id>
+		<dictionary_id>58689</dictionary_id>
+	</process>
+	<process>
+		<process_module_id>4</process_module_id>
+		<process_cat>Teminat İade</process_cat>
+		<process_cat_eng>Guarantee Return</process_cat_eng>
+		<process_type>301</process_type>
+		<process_multi_type></process_multi_type>
+		<process_fuseaction>member.popup_add_securefund_return</process_fuseaction>
+		<process_module_name>Üye</process_module_name>
+		<process_chapter>20</process_chapter>
+		<invoice_type_code></invoice_type_code>
+		<profile_id></profile_id>
+		<dictionary_id>29655</dictionary_id>
+	</process>
+	<process>
+		<process_module_id>12</process_module_id>
+		<process_cat>MBC Olmayan Satın Alma</process_cat>
+		<process_cat_eng></process_cat_eng>
+		<process_type>2502</process_type>
+		<process_multi_type></process_multi_type>
+		<process_fuseaction>purchase.list_offer,purchase.list_purchasedemand</process_fuseaction>
+		<process_module_name>Satın Alma</process_module_name>
+		<process_chapter></process_chapter>
+		<invoice_type_code></invoice_type_code>
+		<profile_id></profile_id>
+		<dictionary_id>59524</dictionary_id>
+	</process>
+	<process>
+		<process_module_id>17</process_module_id>
+		<process_cat>MBC Olmayan Anlaşma</process_cat>
+		<process_cat_eng></process_cat_eng>
+		<process_type>2513</process_type>
+		<process_multi_type></process_multi_type>
+		<process_fuseaction>contract.list_related_contracts,contract.form_add_contract,contract.form_upd_contract</process_fuseaction>
+		<process_module_name>Anlaşmalar-Koşullar</process_module_name>
+		<process_chapter></process_chapter>
+		<invoice_type_code></invoice_type_code>
+		<profile_id></profile_id>
+		<dictionary_id>60716</dictionary_id>
+	</process>
+	<process>
+		<process_module_id>70</process_module_id>
+		<process_cat>Sağlık Harcamaları</process_cat>
+		<process_cat_eng></process_cat_eng>
+		<process_type>2503</process_type>
+		<process_multi_type></process_multi_type>
+		<process_fuseaction>hr.health_expense_approve</process_fuseaction>
+		<process_module_name>Medicine</process_module_name>
+		<process_chapter></process_chapter>
+		<invoice_type_code></invoice_type_code>
+		<profile_id></profile_id>
+		<dictionary_id>59525</dictionary_id>
+	</process>
+	<process>
+		<process_module_id>3</process_module_id>
+		<process_cat>MBC Olmayan IK</process_cat>
+		<process_cat_eng></process_cat_eng>
+		<process_type>2504</process_type>
+		<process_multi_type></process_multi_type>
+		<process_fuseaction>hr.allowance_expense</process_fuseaction>
+		<process_module_name>İnsan Kaynakları</process_module_name>
+		<process_chapter></process_chapter>
+		<invoice_type_code></invoice_type_code>
+		<profile_id></profile_id>
+		<dictionary_id>59526</dictionary_id>
+	</process>
+	<process>
+		<process_module_id>35</process_module_id>
+		<process_cat>MBC Olmayan Üretim</process_cat>
+		<process_cat_eng></process_cat_eng>
+		<process_type>2505</process_type>
+		<process_multi_type></process_multi_type>
+		<process_fuseaction></process_fuseaction>
+		<process_module_name>Üretim</process_module_name>
+		<process_chapter></process_chapter>
+		<invoice_type_code></invoice_type_code>
+		<profile_id></profile_id>
+		<dictionary_id>59527</dictionary_id>
+	</process>
+	<process>
+		<process_module_id>16</process_module_id>
+		<process_cat>MBC Olmayan Finans</process_cat>
+		<process_cat_eng></process_cat_eng>
+		<process_type>2506</process_type>
+		<process_multi_type></process_multi_type>
+		<process_fuseaction>finance.list_payment_actions,finance.list_payment_actions_demand</process_fuseaction>
+		<process_module_name>Finans</process_module_name>
+		<process_chapter></process_chapter>
+		<invoice_type_code></invoice_type_code>
+		<profile_id></profile_id>
+		<dictionary_id>59528</dictionary_id>
+	</process>
+	<process>
+		<process_module_id>40</process_module_id>
+		<process_cat>MBC Olmayan Fiziki Varlık</process_cat>
+		<process_cat_eng></process_cat_eng>
+		<process_type>2507</process_type>
+		<process_multi_type></process_multi_type>
+		<process_fuseaction></process_fuseaction>
+		<process_module_name>Fiziki Varlık</process_module_name>
+		<process_chapter></process_chapter>
+		<invoice_type_code></invoice_type_code>
+		<profile_id></profile_id>
+		<dictionary_id>59529</dictionary_id>
+	</process>
+	<process>
+		<process_module_id>1</process_module_id>
+		<process_cat>MBC Olmayan Proje</process_cat>
+		<process_cat_eng></process_cat_eng>
+		<process_type>2508</process_type>
+		<process_multi_type></process_multi_type>
+		<process_fuseaction></process_fuseaction>
+		<process_module_name>Proje</process_module_name>
+		<process_chapter></process_chapter>
+		<invoice_type_code></invoice_type_code>
+		<profile_id></profile_id>
+		<dictionary_id>59530</dictionary_id>
+	</process>
+	<process>
+		<process_module_id>2</process_module_id>
+		<process_cat>MBC Olmayan CMS</process_cat>
+		<process_cat_eng></process_cat_eng>
+		<process_type>2509</process_type>
+		<process_multi_type></process_multi_type>
+		<process_fuseaction></process_fuseaction>
+		<process_module_name>İçerik</process_module_name>
+		<process_chapter></process_chapter>
+		<invoice_type_code></invoice_type_code>
+		<profile_id></profile_id>
+		<dictionary_id>59531</dictionary_id>
+	</process>
+	<process>
+		<process_module_id>79</process_module_id>
+		<process_cat>MBC Olmayan Abone</process_cat>
+		<process_cat_eng></process_cat_eng>
+		<process_type>2510</process_type>
+		<process_multi_type></process_multi_type>
+		<process_fuseaction></process_fuseaction>
+		<process_module_name>Abone</process_module_name>
+		<process_chapter></process_chapter>
+		<invoice_type_code></invoice_type_code>
+		<profile_id></profile_id>
+		<dictionary_id>59532</dictionary_id>
+	</process>
+	<process>
+		<process_module_id>34</process_module_id>
+		<process_cat>MBC Olmayan Eğitim</process_cat>
+		<process_cat_eng></process_cat_eng>
+		<process_type>2511</process_type>
+		<process_multi_type></process_multi_type>
+		<process_fuseaction></process_fuseaction>
+		<process_module_name>Eğitim</process_module_name>
+		<process_chapter></process_chapter>
+		<invoice_type_code></invoice_type_code>
+		<profile_id></profile_id>
+		<dictionary_id>59533</dictionary_id>
+	</process>
+	<process>
+		<process_module_id>75</process_module_id>
+		<process_cat>MBC Olmayan Satış</process_cat>
+		<process_cat_eng></process_cat_eng>
+		<process_type>2512</process_type>
+		<process_multi_type></process_multi_type>
+		<process_fuseaction></process_fuseaction>
+		<process_module_name>Satış</process_module_name>
+		<process_chapter></process_chapter>
+		<invoice_type_code></invoice_type_code>
+		<profile_id></profile_id>
+		<dictionary_id>59534</dictionary_id>
+	</process>
+	<process>
+		<process_module_id>48</process_module_id>
+		<process_cat>Prim</process_cat>
+		<process_cat_eng></process_cat_eng>
+		<process_type>318</process_type>
+		<process_multi_type></process_multi_type>
+		<process_fuseaction></process_fuseaction>
+		<process_module_name>E-Hesap</process_module_name>
+		<process_chapter></process_chapter>
+		<invoice_type_code></invoice_type_code>
+		<profile_id></profile_id>
+		<dictionary_id>55776</dictionary_id>
+	</process>
+	<process>
+		<process_module_id>20</process_module_id>
+		<process_cat>Gümrük İşlemi-İhracat</process_cat>
+		<process_cat_eng>Customs Transaction -Export</process_cat_eng>
+		<process_type>5310</process_type>
+		<process_multi_type></process_multi_type>
+		<process_fuseaction>invoice.list_bill_FTexport</process_fuseaction>
+		<process_module_name>Dış Ticaret</process_module_name>
+		<process_chapter></process_chapter>
+		<invoice_type_code>SATIS</invoice_type_code>
+		<profile_id></profile_id>
+		<dictionary_id>60303</dictionary_id>
+	</process>
+	<process>
+		<process_module_id>20</process_module_id>
+		<process_cat>Gümrük İşlemi-İthalat</process_cat>
+		<process_cat_eng>Customs Transaction-Importing</process_cat_eng>
+		<process_type>5910</process_type>
+		<process_multi_type></process_multi_type>
+		<process_fuseaction></process_fuseaction>
+		<process_module_name>Dış Ticaret</process_module_name>
+		<process_chapter></process_chapter>
+		<invoice_type_code></invoice_type_code>
+		<profile_id></profile_id>
+		<dictionary_id>60304</dictionary_id>
+	</process>
+	<process>
+		<process_module_id>46</process_module_id>
+		<process_cat>Bütçe Transfer</process_cat>
+		<process_cat_eng>Budget Transfer</process_cat_eng>
+		<process_type>162</process_type>
+		<process_multi_type></process_multi_type>
+		<process_fuseaction>budget.MagicbudgeterRun</process_fuseaction>
+		<process_module_name>Bütçe</process_module_name>
+		<process_chapter>16</process_chapter>
+		<invoice_type_code></invoice_type_code>
+		<profile_id></profile_id>
+		<dictionary_id>60995</dictionary_id>
+	</process>
+	<process>
+		<process_module_id>92</process_module_id>
+		<process_cat>Atık Kabul</process_cat>
+		<process_cat_eng>Waste In</process_cat_eng>
+		<process_type>921</process_type>
+		<process_multi_type></process_multi_type>
+		<process_fuseaction>recycle.waste_operation</process_fuseaction>
+		<process_module_name>Geri Dönüşüm</process_module_name>
+		<process_chapter></process_chapter>
+		<invoice_type_code></invoice_type_code>
+		<profile_id></profile_id>
+		<dictionary_id>62157</dictionary_id>
+	</process>
+	<process>
+		<process_module_id>92</process_module_id>
+		<process_cat>Atık Gönderim</process_cat>
+		<process_cat_eng>Waste Out</process_cat_eng>
+		<process_type>922</process_type>
+		<process_multi_type></process_multi_type>
+		<process_fuseaction>recycle.waste_operation</process_fuseaction>
+		<process_module_name>Geri Dönüşüm</process_module_name>
+		<process_chapter></process_chapter>
+		<invoice_type_code></invoice_type_code>
+		<profile_id></profile_id>
+		<dictionary_id>62965</dictionary_id>
+	</process>
+	<process>
+		<process_module_id>92</process_module_id>
+		<process_cat>Atık Bertaraf</process_cat>
+		<process_cat_eng>Waste Disposal</process_cat_eng>
+		<process_type>923</process_type>
+		<process_multi_type></process_multi_type>
+		<process_fuseaction>recycle.waste_operation</process_fuseaction>
+		<process_module_name>Geri Dönüşüm</process_module_name>
+		<process_chapter></process_chapter>
+		<invoice_type_code></invoice_type_code>
+		<profile_id></profile_id>
+		<dictionary_id>62966</dictionary_id>
+	</process>
+	<process>
+		<process_module_id>92</process_module_id>
+		<process_cat>Atık Değerlendirme</process_cat>
+		<process_cat_eng>Waste Utilization</process_cat_eng>
+		<process_type>924</process_type>
+		<process_multi_type></process_multi_type>
+		<process_fuseaction>recycle.waste_operation</process_fuseaction>
+		<process_module_name>Geri Dönüşüm</process_module_name>
+		<process_chapter></process_chapter>
+		<invoice_type_code></invoice_type_code>
+		<profile_id></profile_id>
+		<dictionary_id>62967</dictionary_id>
+	</process>
+	<process>
+		<process_module_id>92</process_module_id>
+		<process_cat>Numune Alımı</process_cat>
+		<process_cat_eng>Sampling</process_cat_eng>
+		<process_type>961</process_type>
+		<process_multi_type></process_multi_type>
+		<process_fuseaction>lab.sampling</process_fuseaction>
+		<process_module_name>Laboratuvar</process_module_name>
+		<process_chapter></process_chapter>
+		<invoice_type_code></invoice_type_code>
+		<profile_id></profile_id>
+		<dictionary_id>64054</dictionary_id>
+	</process>
+	<process>
+		<process_module_id>31</process_module_id>
+		<process_cat>Sabit Kıymet Değer Artışı-Düşüşü</process_cat>
+		<process_cat_eng>Fixed Asset Value Increase-Decrease</process_cat_eng>
+		<process_type>530</process_type>
+		<process_multi_type></process_multi_type>
+		<process_fuseaction>invent.valuation,invent.maintenance_valuation</process_fuseaction>
+		<process_module_name>Inventory</process_module_name>
+		<process_chapter>5</process_chapter>
+		<invoice_type_code></invoice_type_code>
+		<profile_id></profile_id>
+		<dictionary_id>56464</dictionary_id>
+	</process>
+</workcube_process_types>

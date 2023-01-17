@@ -1,0 +1,4 @@
+INSERT INTO [SETUP_WARNINGS]([SETUP_WARNING],[DETAIL]) Values( 'Bilgi Veriyorum',Null);
+INSERT INTO [SETUP_WARNINGS]([SETUP_WARNING],[DETAIL]) Values( 'Kontrol Ediniz',Null);
+INSERT INTO [SETUP_WARNINGS]([SETUP_WARNING],[DETAIL]) Values( 'Onay İstiyorum',Null);
+

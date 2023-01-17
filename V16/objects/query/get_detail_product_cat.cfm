@@ -1,0 +1,15 @@
+<cfquery name="GET_PRODUCT_CAT" datasource="#DSN3#">
+	SELECT 
+		PRODUCT_CATID, 
+		HIERARCHY, 
+		PRODUCT_CAT 
+	FROM 
+		PRODUCT_CAT
+	WHERE 
+		PRODUCT_CATID IS NOT NULL
+	<cfif isDefined("URL.ID")>
+		AND PRODUCT_CATID = #URL.ID#
+	</cfif>
+	ORDER BY
+		HIERARCHY
+</cfquery>

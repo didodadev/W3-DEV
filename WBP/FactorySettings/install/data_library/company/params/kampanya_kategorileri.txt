@@ -1,0 +1,7 @@
+INSERT INTO [CAMPAIGN_TYPES]([CAMP_TYPE]) Values( 'Satış');
+INSERT INTO [CAMPAIGN_TYPES]([CAMP_TYPE]) Values( 'Kurumsal İmaj');
+INSERT INTO [CAMPAIGN_TYPES]([CAMP_TYPE]) Values( 'Ürün Lansmanı');
+INSERT INTO [CAMPAIGN_TYPES]([CAMP_TYPE]) Values( 'Tedarikçi Geliştirme');
+INSERT INTO [CAMPAIGN_TYPES]([CAMP_TYPE]) Values( 'Çalışan');
+INSERT INTO [CAMPAIGN_TYPES]([CAMP_TYPE]) Values( 'Sosyal Sorumluluk');
+

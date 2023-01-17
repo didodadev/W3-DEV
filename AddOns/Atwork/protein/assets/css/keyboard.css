@@ -1,0 +1,29 @@
+.keypadlogin_div{background-color:#cccccc;}
+
+.border{border-left:#093682 2px solid;background-color:#f4f4f5;border-right:#093682 2px solid}
+.sk_mini{font-family:Arial, Helvetica, sans-serif;color:#004774;font-size:9px;font-weight:bold}
+.sk_regular{font-family:Arial, Helvetica, sans-serif;color:#093682;font-size:11px;font-weight:bold}
+.tdbuton{border-bottom:#a5a5a6 1px solid;border-left:#fff 1px solid;background-color:#d9dadc;border-top:#fff 1px solid;border-right:#a5a5a6 1px solid}
+.buton{border-bottom:0;text-align:center;border-left:0;background-color:#d9dadc;width:16px;font-family:Arial, Helvetica, sans-serif;height:16px;color:#000;font-size:11px;vertical-align:middle;border-top:0;cursor:hand;font-weight:700;border-right:0;text-decoration:none}
+.text{font-family:Tahoma}
+.keypadHeader{background-color:#6e00a4;font-family:Tahoma, Verdana, Helvetica, sans-serif;margin-bottom:0;color:#fff;font-size:11px;cursor:move;font-weight:700;text-decoration:none}
+.keypadButton{width:30px; height:30px;font-family:Tahoma, Verdana, Helvetica, sans-serif;color:#f5f5f5;text-decoration:none;text-align:center}
+.keypadButtonNum{width:30px; height:30px; font-family:Tahoma, Verdana, Helvetica, sans-serif;color:#004774;text-decoration:none;text-align:center}
+.keypadButton3{background-color:#CCC;width:94px;font-family:Tahoma, Verdana, Helvetica, sans-serif;height:19px;color:#067ec7;font-size:10px;vertical-align:middle;font-weight:700;text-decoration:none}
+.buttonErase{background-color:#CCC;width:48px;font-family:Tahoma, Verdana, Helvetica, sans-serif;height:19px;color:#067ec7;font-size:10px;vertical-align:middle;font-weight:700;text-decoration:none}
+.yellowtext{font-family:Arial, Helvetica, sans-serif;color:#ffea5c;font-size:11px}
+.LColor1{z-index:2;border-bottom:1px solid;border-left:1px solid;background-color:#06b5d7;font-family:Tahoma, Verdana, Arial, Helvetica;color:#fff;font-size:13px;border-top:1px solid;font-weight:700;border-right:1px solid;padding:5px}
+.LColor2{z-index:3;border-bottom:1px solid;border-left:1px solid;background-color:#f2074f;font-family:Tahoma, Verdana, Arial, Helvetica;color:#fff;font-size:13px;border-top:1px solid;font-weight:700;border-right:1px solid;padding:5px}
+.LColor3{z-index:4;border-bottom:1px solid;border-left:1px solid;background-color:#e715cf;font-family:Tahoma, Verdana, Arial, Helvetica;color:#fff;font-size:13px;border-top:1px solid;font-weight:700;border-right:1px solid;padding:5px}
+.LColor4{z-index:1;border-bottom:1px solid;border-left:1px solid;background-color:#828282;font-family:Tahoma, Verdana, Arial, Helvetica;color:#fff;font-size:13px;border-top:1px solid;font-weight:700;border-right:1px solid;padding:5px}
+.LColor5{z-index:6;border-bottom:1px solid;border-left:1px solid;background-color:#4ec964;font-family:Tahoma, Verdana, Arial, Helvetica;color:#fff;font-size:13px;border-top:1px solid;font-weight:700;border-right:1px solid;padding:5px}
+.LColor6{z-index:5;border-bottom:1px solid;border-left:1px solid;background-color:#fbae56;font-family:Tahoma, Verdana, Arial, Helvetica;color:#fff;font-size:13px;border-top:1px solid;font-weight:700;border-right:1px solid;padding:5px}
+.LColor7{z-index:7;border-bottom:1px solid;border-left:1px solid;background-color:#97a0a5;font-family:Tahoma, Verdana, Arial, Helvetica;color:#fff;font-size:13px;border-top:1px solid;font-weight:700;border-right:1px solid;padding:5px}
+.keypadButton2,.keypadButtonOK{background-color:#CCC;width:70px;font-family:Tahoma, Verdana, Helvetica, sans-serif;height:19px;color:#067ec7;font-size:10px;vertical-align:middle;font-weight:700;text-decoration:none}
+
+.yellowtext{font-family:Verdana, Arial, Helvetica, sans-serif;color:#fff;font-size:10px}
+.keypadText{font-family:Verdana, Arial, Helvetica, sans-serif;color:#fff;font-size:9px}
+.bluetext{font-family:Arial, Helvetica, sans-serif;color:#00f;font-size:11px}
+.blueTitle1{font-family:Arial, Helvetica, sans-serif;color:#067ac7;font-size:12px}
+.blueTextExp{font-family:Arial, Helvetica, sans-serif;color:#067ac7;font-size:11px}
+A.ustsag:link,A.ustsag:visited,A.ustsag:hover,A.ustsag:active{color:#fff;text-decoration:none}

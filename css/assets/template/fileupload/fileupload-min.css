@@ -1,0 +1,97 @@
+.fileupload-body{
+    min-height: 259px;
+}
+
+        .modals-content{
+            font-size:30px;
+            background-color:#ececec;
+            margin: auto;
+            padding:2% 2% 8% 2%;
+            border: 8px solid #888;
+            width: 60%;
+            margin-top:10%; 
+        }
+        .modals-content p{
+            text-align:left;
+            color:red;
+            font-weight:500;
+            padding-left:2%;
+            font-size:18px;
+        }
+        .modals-content h3{
+            text-align:left;
+            margin-top:3%;
+            font-weight:440;
+            padding-left:2%;
+            font-size:18px;
+        }
+        .content-span{
+            color:red;
+            font-size:17px;
+            font-weight:600;
+        }
+        /* The Close Button */
+        .close {
+            color:#000000;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+        .close:hover,
+        .close:focus {
+            color: #000;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        .upload-btn-wrapper {
+            position: relative;
+            overflow: hidden;
+            display: inline-block;
+          }
+          
+          .inptbtn {
+            color: #525252;
+            background-color: #d6d6d6;
+            padding:5% 11% 5% 11%;
+            font-size: 18px;
+            margin-top:20%;
+          }
+          
+          .upload-btn-wrapper input[type=file] {
+            font-size: 100px;
+            position: absolute;
+            left: 0;
+            top: 0;
+            opacity: 0;
+          }
+          .foothelp{
+              margin-top:2%;
+              padding:1%;
+              border-top:1px solid #716b6b61;
+              color:#716b6b;
+              font-weight:bold;
+          }
+
+@media screen and (max-width:768px){
+    .fileupload-body{
+        min-height: 135px;
+        margin-left: 0 !important;
+    }
+
+    .dropzone{
+        min-height: 95px;
+        height: auto;
+    }
+
+    .dropzone .dz-message{
+
+        margin: 2em 1em;
+
+    }
+}
+
+@media (min-width:768px) and (max-width:1200px) {
+    .fileupload-body{
+        min-height: 325px;
+    }
+}

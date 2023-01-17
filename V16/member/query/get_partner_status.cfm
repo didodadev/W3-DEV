@@ -1,0 +1,15 @@
+<cfquery name="GET_STATUS" datasource="#DSN#">
+	SELECT 
+		CPS_ID,
+		STATUS_NAME,
+		RECORD_DATE,
+		RECORD_EMP,
+		RECORD_IP,
+		UPDATE_DATE,
+		UPDATE_IP,
+		UPDATE_EMP
+	 FROM 
+	 	COMPANY_PARTNER_STATUS 
+	 ORDER BY 
+	 	STATUS_NAME
+</cfquery>

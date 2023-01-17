@@ -1,0 +1,12 @@
+<cfquery name="GET_PRODUCT_CAT" datasource="#dsn3#">
+	SELECT 
+		PRODUCT_CATID, 
+		HIERARCHY, 
+		PRODUCT_CAT 
+	FROM 
+		PRODUCT_CAT
+	WHERE
+		PRODUCT_CATID IS NOT NULL
+	ORDER BY
+		HIERARCHY
+</cfquery>

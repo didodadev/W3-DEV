@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<OBJECT_PROPERTIES>
+  <OBJECT_PROPERTY>
+		<PROPERTY>xml_acc_department_info</PROPERTY>
+		<PROPERTY_DETAIL>Departman Seçilebilsin</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>select</PROPERTY_TYPE>
+		<PROPERTY_VALUES>0,1,2</PROPERTY_VALUES>
+		<PROPERTY_NAMES>Hayır,Evet,Zorunlu</PROPERTY_NAMES>
+		<PROPERTY_DEFAULT>0</PROPERTY_DEFAULT>
+		<PROPERTY_HELP>Muhasebe İşlemi İçin Departman Seçilebilir. Zorunlu Seçilirse Departman Bilgisi Boş Bırakılamaz</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+	<OBJECT_PROPERTY>
+		<PROPERTY>xml_money_type</PROPERTY>
+		<PROPERTY_DETAIL>Kur Tipi</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>select</PROPERTY_TYPE>
+		<PROPERTY_VALUES>0,1,2,3,4</PROPERTY_VALUES>
+		<PROPERTY_NAMES>Seçiniz,Alış,Satış,Efektif Alış,Efektif Satış</PROPERTY_NAMES>
+		<PROPERTY_DEFAULT>0</PROPERTY_DEFAULT>
+		<PROPERTY_HELP>Değerleme işleminde kullanılmak istenilen kur tipi seçilir.</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+</OBJECT_PROPERTIES>

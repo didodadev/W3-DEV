@@ -1,0 +1,433 @@
+@import "../w3-assets/scss/font-face";
+
+@include font-face(raleway, Raleway-ExtraLight, raleway, sans-serif, 200);
+@include font-face(raleway, Raleway-Regular, raleway, sans-serif, 400);
+@include font-face(raleway, Raleway-SemiBold, raleway, sans-serif, 600);
+@include font-face(raleway, Raleway-ExtraBold, raleway, sans-serif, 800);
+@include font-face(roboto, Roboto-Regular, roboto, sans-serif, 400);
+@include font-face(roboto, Roboto-Bold, roboto, sans-serif, 700);
+@include font-face(wrk-icon, wrk-icon, wrk-icon, sans-serif, 400);
+
+
+.w3-intranet{
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box !important;
+  }
+  @import "../w3-assets/scss/workcube";
+  
+
+  
+  .w3-filtre{ 
+
+    section{
+      @include rem(font-size, 14px);
+    }
+    span{
+      
+    }
+    ul{
+      list-style-type: none;
+      @include rem(font-size, 13px);
+
+    }
+    li{
+      display: block;
+      float: left;
+    }
+    a {
+      @include transition(all 0.2s ease-in-out);
+      text-decoration: none;
+    }
+    p{
+
+    }
+    input, select, button{
+      @include rem(font-size,14px);
+    }
+
+    select{
+      @include rem(font-size,14px);
+      height: 35px !important;
+      width: 300px;
+      float:left;
+      border-color: $gray-lighter;
+      border-right:none;
+      color:$gray;
+      background-color: #ffcc58;
+      font-weight: 600;
+
+      @include media-breakpoint-down(sm) {
+        width: 100%;
+        border:1px solid $gray-lighter;
+      }
+
+
+    }
+
+  
+    .form-control{
+      &:focus {
+        border-color:$brand-primary;
+      }
+    }
+
+
+    input{
+      @include rem(font-size,14px);
+      height: 35px;
+      width: 350px;
+      border-color: $gray-lighter;
+      border-right:none;
+      color:$gray-light;
+      @include media-breakpoint-down(sm) {
+        width: 100%;
+        border:1px solid $gray-lighter;
+        @include rem(margin-top, 5px);
+      }
+    }
+
+    button{
+      @include rem(font-size,14px);
+      height: 35px;
+
+      float:left;
+      background: none;
+      border-color: $gray-lighter;
+      border-left: none;
+      color:$gray-light;
+      @include media-breakpoint-down(sm){
+        width: 100%;
+        border:1px solid $gray-lighter;
+        @include rem(margin-top, 5px);
+        span{
+          &:hover{
+            color:$white;
+          }
+        }
+
+      }
+    }
+
+    .searchCombo{
+
+    }
+    .searchInput{
+
+    }
+    .searchButton{
+
+    }
+  }
+
+  .w3-menu{
+    @include rem(margin-top, 20px);
+    font-family: roboto, sans-serif;
+    .df-start {
+        display: flex;
+        justify-content:start;
+        align-items: center;
+      }
+
+    .df-center {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+    .df-end {
+        display: flex;
+        justify-content:end;
+        align-items: center;
+    }
+    ul {
+        
+        list-style-type: none;
+        @include rem(font-size, 18px);
+        
+
+        .navLite{
+          &:hover{
+            border-color: $intr-green;
+          }
+        }
+         .navFor{
+          &:hover{
+            border-color: $brand-success;
+          }
+        }
+         .navDij{
+          &:hover{
+            border-color: $intr-orange;
+          }
+        }
+         .navEgi{
+          &:hover{
+            border-color: $intr-yellow;
+          }
+        }
+         .navKim{
+          &:hover{
+            border-color: $intr-purple;
+          }
+        }
+         .navSos{
+          &:hover{
+            border-color: $intr-blue;
+          }
+        }
+         .navDig{
+          &:hover{
+            border-color: $intr-red;
+          }
+        }
+
+        li {
+          line-height: 42px;
+          border-bottom: 5px solid transparent;
+          display: block;
+          float: left;
+          a {
+            text-decoration: none;
+            color: $gray;
+            font-weight: 800;
+
+
+            @include rem(padding, 10px 15px);
+            &:before {
+              @include rem(margin-right, 5px);
+            }
+            &:hover{
+              color: darken($gray, 20%);
+            }
+          }
+          
+          .menuDropdown {
+            @include opacity(0);
+            position: absolute;
+            top: 47px;
+            background-color: #f3f3f3;
+            border: 1px solid $intr-green;
+            width: 100%;
+            z-index: -1000;
+            left: 0;
+            padding: 15px;
+            @include transition(all 800ms);
+            font-family: raleway,sans-serif;
+            ul{
+                @include rem(margin-bottom, 10px);
+              h4{
+                color: $brand-danger;
+                line-height: 30px;
+                @include rem (font-size, 16px);
+                &:before {
+                  @include rem(margin-right, 3px);
+                }
+              }
+              li{
+                float: none;
+                background: none;                
+                padding: 0;
+                border-bottom: none;
+                
+                a{
+                  font-weight: 400;
+                  color: $gray-light;
+                  line-height: 20px;
+                  
+                  @include rem(font-size,14px); 
+                  &:hover{
+                    color: darken($gray, 20%);
+                    
+                  }
+                   
+                }
+                
+              }
+                            
+            }
+          } 
+          &:hover {
+            
+            border-bottom: 5px solid;
+            cursor: pointer;
+            @include transition(background-color 1s ease-out);
+            .menuDropdown {
+              @include opacity(1);z-index: 1000;
+            }
+          }
+        }
+      } 
+  }
+
+
+
+  .w3-ruleWho{
+
+	  .who-header{
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      h4{
+					margin-top: auto;
+					margin-bottom: auto;
+					color:$intr-purple;
+        }
+			.who-title{
+				h4{
+					margin-top: auto;
+					margin-bottom: auto;
+					color:$intr-purple;
+				}
+			}
+    }
+    .who-search{
+      @include rem(margin-top, 15px);
+      text-align: right;
+        span{
+          text-decoration: none;					
+          color:$white;
+          text-align: center;
+          .search-dropdown {
+            @include rem(padding-top, 30px);
+            @include rem(padding-bottom, 30px); 
+            position: absolute;
+            @include opacity(0);
+            z-index:-888;
+            background-color: #f3f3f3;
+            border: 3px solid $intr-purple;
+            width: 100%;          
+            left: 0;
+            top:10px !important;
+            @include transition(all 800ms);
+            .form-control{
+              @include rem(font-size, 12px);
+              @include rem(padding, 20px);
+              border:none;
+              background:none;
+              input{
+                height: 35px;
+                color: $gray-light;
+                border:none;
+                @include rem (font-size,12px);
+                &:hover{                
+                  border-color :$intr-purple;
+                  outline-style: none;
+                }
+                &:focus{
+                  border-color: $intr-purple;
+                  outline-style: none;
+                }
+                
+              }
+              select{
+                height: 35px;
+                color: $gray-light;
+                border:none;
+                @include rem (font-size,12px);
+                &:hover{
+                  border-color:$intr-purple;
+                  outline-style: none;
+                }
+                &:focus{
+                  border-color:$intr-purple;
+                  outline-style: none;
+                }
+                  &:active{
+                  border-color:$intr-purple;
+                  outline-style: none;
+                }
+              }
+              button{
+                height: 30px;
+                line-height: 14px;
+                background-color: $intr-purple;
+                border:none;
+                &:hover{
+                  background-color: darken($intr-purple, 10%);
+                }
+              }
+            }
+            .s-checkbox{
+              display: flex;
+              justify-content: flex-start;
+              align-items: center;
+              label{
+                @include rem(font-size, 14px);
+                margin-top: auto;
+                margin-bottom: auto;
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                @include rem(padding-right, 10px);
+                color:$gray-light;            
+              }
+            } 
+          }
+            
+          i{
+            background-color: $intr-green;
+            @include rem(border-radius, 10px);
+            margin-top: auto;
+            margin-bottom: auto;
+            @include rem(font-size, 16px);
+            @include rem(padding, 8px);
+          }
+        &:hover{
+          cursor: pointer;
+          @include transition(background-color 1s ease-out);
+          .search-dropdown {
+            @include opacity(1);
+            z-index: 1000;
+          }		
+        } 
+      }
+    }
+	  .who-content{
+      .who-person{
+        padding-left: 0;
+        padding-right: 0;
+        min-height: 260px;
+        background-color: #e4f0f9;
+        @include rem( padding, 2px);
+        img{
+
+        }
+        a{
+          @include rem(font-size, 16px);
+          display: block;
+          text-decoration: none;
+          color:$intr-purple;
+          font-weight: 600;
+          @include rem(margin-left, 15px);
+          @include rem(margin-top, 10px);
+          @include rem(margin-bottom, 5px);
+          &:hover{
+            color: darken($intr-purple, 10%);
+          }
+        }
+        span{
+          @include rem(font-size, 12px);
+          color: $gray;
+          font-weight: 600;
+        }
+        p{
+          margin-top: 5px;
+          color: $gray-light;
+          font-size: 12px;
+        }
+      }
+
+    }
+    .person-undefined{
+        text-align: center;
+        @include rem(font-size, 24px);
+        color: $gray-lighter;
+        @include rem(padding-top, 50px);
+        @include rem(padding-bottom, 50px); 
+    }
+
+  }
+
+}

@@ -1,0 +1,8 @@
+INSERT INTO [SETUP_CARE_CAT]([HIERARCHY],[CARE_CAT],[DETAIL],[IS_SUB_CARE_CAT]) Values( 'A1','Arıza','Arıza çıktığında yapılan bakımlar','1');
+INSERT INTO [SETUP_CARE_CAT]([HIERARCHY],[CARE_CAT],[DETAIL],[IS_SUB_CARE_CAT]) Values( 'OB.YD','Parça Değişimi','','0');
+INSERT INTO [SETUP_CARE_CAT]([HIERARCHY],[CARE_CAT],[DETAIL],[IS_SUB_CARE_CAT]) Values( 'A1.YB','Yerinde Bakım','','0');
+INSERT INTO [SETUP_CARE_CAT]([HIERARCHY],[CARE_CAT],[DETAIL],[IS_SUB_CARE_CAT]) Values( 'A1.SV','Serviste Bakım','','0');
+INSERT INTO [SETUP_CARE_CAT]([HIERARCHY],[CARE_CAT],[DETAIL],[IS_SUB_CARE_CAT]) Values( 'OB','Önleyici Bakım','','1');
+INSERT INTO [SETUP_CARE_CAT]([HIERARCHY],[CARE_CAT],[DETAIL],[IS_SUB_CARE_CAT]) Values( 'OB.MN','Uzaktan İzleme','','0');
+INSERT INTO [SETUP_CARE_CAT]([HIERARCHY],[CARE_CAT],[DETAIL],[IS_SUB_CARE_CAT]) Values( 'OB.TK','Test ve Kalibrasyon','','0');
+

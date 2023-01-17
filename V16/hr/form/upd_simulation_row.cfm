@@ -1,0 +1,87 @@
+<cfquery name="GET_POSITION_CATS" datasource="#dsn#">
+	SELECT * FROM SETUP_POSITION_CAT ORDER BY  POSITION_CAT 
+</cfquery>
+<cfquery name="GET_ORGANIZATION_STEPS" datasource="#dsn#">
+	SELECT ORGANIZATION_STEP_ID, ORGANIZATION_STEP_NAME FROM SETUP_ORGANIZATION_STEPS ORDER BY ORGANIZATION_STEP_NAME
+</cfquery>
+<cfquery name="GET_ROW" datasource="#dsn#">
+	SELECT * FROM ORGANIZATION_SIMULATION_ROWS WHERE ROW_ID = #attributes.row_id#
+</cfquery>
+<cfsavecontent variable="right_">
+	<a href="javascript://" onClick="windowopen('<cfoutput>#request.self#?fuseaction=hr.popup_add_simulation_row&simulation_id=#get_row.simulation_id#&up_position_id=#get_row.up_position_id#</cfoutput>','page');"><img src="/images/plus1.gif" title="<cf_get_lang_main no='170.Ekle'>"></a>
+</cfsavecontent>
+<cfsavecontent variable="message"><cf_get_lang dictionary_id="30141.Çalışan Ekle"></cfsavecontent>
+<div class="col col-12 col-md-12 col-sm-12 col-xs-12">
+    <cf_box title="#message#" add_href="#request.self#?fuseaction=hr.popup_add_simulation_row&simulation_id=#get_row.simulation_id#&up_position_id=#get_row.up_position_id#">
+        <cfform name="add_notes" method="post" action="#request.self#?fuseaction=hr.emptypopup_upd_simulation_row">
+            <cf_box_elements vertical="1">
+                <input type="hidden" name="simulation_id" id="simulation_id" value="<cfoutput>#get_row.simulation_id#</cfoutput>">
+                <input type="hidden" name="row_id" id="row_id" value="<cfoutput>#attributes.row_id#</cfoutput>">
+                <cfquery name="GET_POSITION" datasource="#dsn#">
+                    SELECT POSITION_ID, POSITION_NAME, EMPLOYEE_NAME, EMPLOYEE_SURNAME FROM EMPLOYEE_POSITIONS WHERE POSITION_ID = #get_row.up_position_id#
+                </cfquery>
+                <cfquery name="GET_NAME" datasource="#dsn#">
+                    SELECT POSITION_NAME FROM EMPLOYEE_POSITIONS WHERE POSITION_ID = #get_row.position_code#
+                </cfquery>
+                <div class="form-group col col-3 col-md-3 col-sm-6 col-xs-12">
+                    <label><cf_get_lang dictionary_id='55978.Üst Pozisyon'></label>
+                    <input type="hidden" name="up_position_id" id="up_position_id" value="<cfoutput>#get_row.up_position_id#</cfoutput>">
+                    <input type="text" readonly="" name="up_employee_name" id="up_employee_name"value="<cfoutput>#get_position.position_name# - #get_position.employee_name# #get_position.employee_surname#</cfoutput>">
+                </div>
+                <div class="form-group col col-3 col-md-3 col-sm-6 col-xs-12">
+                    <label><cf_get_lang dictionary_id='58497.Pozisyon'> *</label>
+                    <div class="input-group">
+                        <input type="hidden" name="position_code" id="position_code" value="<cfoutput>#get_row.position_code#</cfoutput>">
+                        <input type="hidden" name="employee_id" id="employee_id" value="<cfoutput>#get_row.employee_id#</cfoutput>" />
+                        <input type="text" name="position_name" id="position_name"  onFocus="AutoComplete_Create('position_name','FULLNAME','POSITION_NAME','get_emp_pos','','POSITION_CODE,POSITION_NAME,EMPLOYEE_ID','position_code,position_name,employee_id','add_notes','3','162');" value="<cfoutput>#get_name.position_name# - #get_emp_info(get_row.employee_id,0,0)#</cfoutput>">
+                        <span class="input-group-addon icon-ellipsis" href="javascript://" onClick="windowopen('<cfoutput>#request.self#</cfoutput>?fuseaction=hr.popup_list_positions&field_code=add_notes.position_code&position_employee=add_notes.position_name&field_emp_id=add_notes.employee_id&show_empty_pos=1','list','popup_list_positions');return false"></span>
+                    </div>
+                </div>
+                
+                <div class="form-group col col-3 col-md-3 col-sm-6 col-xs-12">
+                    <label><cf_get_lang dictionary_id='59004.Pozisyon Tipi'> *</label>
+                    <select name="position_cat_id" id="position_cat_id">
+                        <option value=""><cf_get_lang dictionary_id='57734.Seçiniz'></option>
+                        <cfoutput query="get_position_cats">
+                            <option value="#position_cat_id#" <cfif position_cat_id eq get_row.position_type>selected</cfif>>#position_cat#</option>
+                        </cfoutput>
+                    </select>
+                </div>
+                <div class="form-group col col-3 col-md-3 col-sm-6 col-xs-12">
+                    <label><cf_get_lang dictionary_id='58710.Kademe'> *</label>
+                    <select name="organization_step_id" id="organization_step_id">
+                        <option value=""><cf_get_lang dictionary_id='57734.Seçiniz'>
+                        <cfoutput query="get_organization_steps">
+                            <option value="#organization_step_id#" <cfif get_row.stage_id eq organization_step_id>selected</cfif>>#organization_step_name#
+                        </cfoutput>
+                    </select>
+                </div>
+            </cf_box_elements>
+            <div class="ui-form-list-btn">
+                <cf_workcube_buttons is_upd='1' is_delete='0' add_function='kontrol()'>
+            </div>
+        </cfform>
+    </cf_box>
+</div>
+<script type="text/javascript">
+	function kontrol()
+	{	
+		if(add_notes.position_name.value == "")
+		{
+			alert("<cf_get_lang dictionary_id='56321.Lütfen Pozisyon Giriniz'> !");
+			return false;
+		}
+		x = document.add_notes.position_cat_id.selectedIndex;
+		if (document.add_notes.position_cat_id[x].value == "")
+		{ 
+			alert ("<cf_get_lang dictionary_id='56323.Lütfen Pozisyon Tipi Seçiniz'> !");
+			return false;
+		}	
+		x = document.add_notes.organization_step_id.selectedIndex;
+		if (document.add_notes.organization_step_id[x].value == "")
+		{ 
+			alert ("<cf_get_lang dictionary_id='56322.Lütfen Kademe Seçiniz'> !");
+			return false;
+		}	
+	}
+</script>

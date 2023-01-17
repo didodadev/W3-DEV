@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SETUP_IDENTYCARD>
+		  
+			  <IDENTITY>
+				    <IDENTYCAT_ID>1</IDENTYCAT_ID>
+			  		<IDENTYCAT>Nüfus Cüzdanı</IDENTYCAT>
+			 </IDENTITY>
+		  
+			  <IDENTITY>
+				    <IDENTYCAT_ID>2</IDENTYCAT_ID>
+			  		<IDENTYCAT>Sürücü Belgesi</IDENTYCAT>
+			 </IDENTITY>
+		  
+			  <IDENTITY>
+				    <IDENTYCAT_ID>3</IDENTYCAT_ID>
+			  		<IDENTYCAT>Pasaport</IDENTYCAT>
+			 </IDENTITY>
+		  
+			  <IDENTITY>
+				    <IDENTYCAT_ID>5</IDENTYCAT_ID>
+			  		<IDENTYCAT>Öğrenci Belgesi</IDENTYCAT>
+			 </IDENTITY>
+		  
+	   </SETUP_IDENTYCARD>

@@ -1,0 +1,7 @@
+<cfquery name="GET_SALE_ADD_OPTION" datasource="#DSN3#">
+	SELECT
+		SALES_ADD_OPTION_ID,
+		SALES_ADD_OPTION_NAME
+	FROM
+		SETUP_SALES_ADD_OPTIONS
+</cfquery>

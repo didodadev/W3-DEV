@@ -1,0 +1,9 @@
+<cfquery name="GET_CUSTOMER_TYPE" datasource="#DSN#">
+	SELECT 
+		CUSTOMER_TYPE_ID, 
+		CUSTOMER_TYPE 
+	FROM 
+		SETUP_CUSTOMER_TYPE 
+	ORDER BY
+		CUSTOMER_TYPE
+</cfquery>

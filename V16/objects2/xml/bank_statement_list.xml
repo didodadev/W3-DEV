@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<OBJECT_PROPERTIES>
+	<OBJECT_PROPERTY>
+		<PROPERTY>is_process_type</PROPERTY>
+		<PROPERTY_DETAIL>İşlem Tipi Detay Boxu Açılsın mı ? </PROPERTY_DETAIL>
+		<PROPERTY_TYPE>select</PROPERTY_TYPE>
+		<PROPERTY_VALUES>0,1</PROPERTY_VALUES>
+		<PROPERTY_NAMES>Hayır,Evet</PROPERTY_NAMES>
+		<PROPERTY_DEFAULT>0</PROPERTY_DEFAULT>
+		<PROPERTY_HELP>İşlem tipi üzerine tıklandığında detay boxunun aktif / pasif olma durumu</PROPERTY_HELP>
+	</OBJECT_PROPERTY>	
+	<OBJECT_PROPERTY>
+		<PROPERTY>selected_company</PROPERTY>
+		<PROPERTY_DETAIL>Cari Hareketler hangi şirketten gelsin? </PROPERTY_DETAIL>
+		<PROPERTY_TYPE>select</PROPERTY_TYPE>
+		<PROPERTY_VALUES></PROPERTY_VALUES>
+		<PROPERTY_NAMES></PROPERTY_NAMES>
+		<PROPERTY_DEFAULT></PROPERTY_DEFAULT>
+		<PROPERTY_HELP>Seçilen şirket üzerinde hesap özeti yapılacaktır.</PROPERTY_HELP>
+		<QUERY_SELECT>our_company</QUERY_SELECT>
+	</OBJECT_PROPERTY>
+</OBJECT_PROPERTIES>

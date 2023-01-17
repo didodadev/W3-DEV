@@ -1,0 +1,19 @@
+﻿<p style="text-align:justify; font-family:Geneva, Arial, Helvetica, sans-serif;">
+    <strong>Dosya uzantısı csv olacak ve alanlar noktalı virgül (;) ile ayrılacaktır.</strong><br /><br />
+    <strong>Dosya Satır Formatı : "Hesap Kodu; Açıklama; B/A; Tutar(float); Sistem İkinci Döviz Tutarı; Diğer Döviz Birimi; Diğer Döviz Birimi Tutarı(float),Şube ID,Departman ID,Proje ID" şeklinde olmalıdır.</strong><br /><br />
+    <strong>Dosya satırlarında Sistem İkinci Döviz Tutarı, Diğer Döviz Birimi ve Diğer Döviz Birimi Tutarı(float) bilgilerinden verilmeyecek olanların yerine 0(sıfır) yazılmalıdır.  </strong><br /><br />
+    <strong>Hesap Kodu * :</strong> Zorunlu alandır, boş bırakılamaz. Tediye ve Tahsil Fişlerinde seçilen kasa hesabı muhasebe kodu için de bu alan kullanılır.<br />
+    <strong>Açıklama :</strong> Muhasebe fişi satır açıklamalarını gösterir.<br />
+    <strong>B/A :</strong> B ilgili satırın borc, A ise alacak olduğunu gösterir.Bu alan boş bırakılamaz. <br />
+    <strong>Tutar :</strong> Sıfır (0) tutarlı satırlar muhasebe fişine işlenmeyecektir. <br />
+    <strong>Sistem İkinci Döviz Tutarı :</strong> Borç - Alacak Tutarının sistem 2.para birimi karşılığını gösterir. Boş bırakıldığı durumlarda, sistem 2.para birimi kuruna bağlı olarak otomatik hesaplanır.<br />
+    <strong>Diğer Para Birimi :</strong> İşlem Döviz Birimi.<br />
+    <strong>Diğer Para Birimi Tutarı(float) :</strong> İşlem Dövizi Tutarı.<br />
+    <strong>Şube ID(int)</strong><br />
+    <strong>Departman ID(int)</strong><br />
+    <strong>Proje ID(int)</strong><br /><br />
+    <strong>Örnek :</strong><br /> 
+        &nbsp;&nbsp;&nbsp;100.01;Muhasebe Fişi Satır Örn.;A;100;85;EURO;67;1;4;45;<br />
+        &nbsp;&nbsp;&nbsp;100.02;Muhasebe Fişi Satır Örn2.;A;25.70;0;0;0;3;;44;<br />
+        &nbsp;&nbsp;&nbsp;120.01;Muhasebe Fişi Satır Örn3.;B;125.70;85;EURO;67;;5;;<br />
+</p>

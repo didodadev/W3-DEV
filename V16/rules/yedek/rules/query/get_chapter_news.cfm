@@ -1,0 +1,38 @@
+<cfquery name="GET_CHAPTER_NEWS" datasource="#DSN#">
+	SELECT 
+		CCH.CONTENTCAT_ID, 
+		CCH.CHAPTER,
+		CC.CONTENTCAT, 
+		C.CONTENT_ID,
+		C.CONT_HEAD,
+		C.PRIORITY,
+		C.COMPANY_CAT,
+		C.RECORD_MEMBER,
+		C.RECORD_DATE,
+		C.CONT_SUMMARY,
+		C.CONT_POSITION,
+		C.CONSUMER_CAT,
+		C.COMPANY_CAT,
+		C.CONTENT_PROPERTY_ID,
+		C.CHAPTER_ID
+    FROM 
+		CONTENT C,
+		CONTENT_CAT CC, 
+		CONTENT_CHAPTER CCH
+    WHERE 	
+		EMPLOYEE_VIEW = 1 AND	
+		C.CHAPTER_ID = CCH.CHAPTER_ID AND	
+		CCH.CONTENTCAT_ID = CC.CONTENTCAT_ID AND
+		CC.LANGUAGE_ID = <cfqueryparam cfsqltype="cf_sql_varchar" value="#session.ep.language#"> AND 
+		C.STAGE_ID = -2 AND
+		C.CONTENT_STATUS = 1 AND
+		CAST(C.CONT_POSITION AS CHAR(6)) LIKE '%5%' AND
+		CCH.CHAPTER_ID = <cfqueryparam cfsqltype="cf_sql_integer" value="#url.chapter_id#">
+    ORDER BY
+	  	(CASE ISNULL(C.PRIORITY,0)
+		 WHEN 0 THEN 100
+		 ELSE C.PRIORITY
+		 END), 
+		C.RECORD_DATE DESC
+</cfquery>
+

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<setup_warning_all>
+	<setup_warning_detail>
+		<setup_warning>Bilgi Veriyorum</setup_warning>
+	</setup_warning_detail>
+	<setup_warning_detail>
+		<setup_warning>Kontrol Ediniz</setup_warning>
+	</setup_warning_detail>
+	<setup_warning_detail>
+		<setup_warning>Onay İstiyorum</setup_warning>
+	</setup_warning_detail>
+</setup_warning_all>

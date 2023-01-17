@@ -1,0 +1,14 @@
+<!-- Description : holistic 21.5 sürümü tablolar ve kolon değişiklikleri
+Developer: Fatih Kara
+Company : Workcube
+Destination: Period -->
+<querytag>  
+    IF NOT EXISTS ( SELECT * FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_SCHEMA = '@_dsn_period_@' AND TABLE_NAME='INVOICE' AND COLUMN_NAME='IS_CREDIT_CARD')
+    BEGIN
+        ALTER TABLE INVOICE ADD IS_CREDIT_CARD bit;
+    END;
+    IF NOT EXISTS ( SELECT * FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_SCHEMA = '@_dsn_period_@' AND TABLE_NAME='GET_ALL_SHIP_TEMP_TABLE_TRANSFER' AND COLUMN_NAME='TRANSFER_ID')
+    BEGIN
+        ALTER TABLE GET_ALL_SHIP_TEMP_TABLE_TRANSFER ADD TRANSFER_ID int;
+    END;
+</querytag>

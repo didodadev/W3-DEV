@@ -1,0 +1,19 @@
+<cfquery name="HIGH_SALES_PRODUCTS" datasource="#dsn3#" maxrows="#attributes.maxrows#">
+	SELECT 	
+		SUM(SS.SATIS) AS SATIS,
+		SS.PRODUCT_ID,
+		SS.PRODUCT_NAME,
+		PU.MAIN_UNIT 
+	FROM 
+		#dsn2_alias#.STOCKS_SALES SS,
+		PRODUCT_UNIT PU
+ 	WHERE 
+		SS.PRODUCT_ID = PU.PRODUCT_ID AND
+		PU.IS_MAIN = 1
+	GROUP BY
+		SS.PRODUCT_ID,
+		SS.PRODUCT_NAME,
+		PU.MAIN_UNIT
+	ORDER BY 
+		SATIS DESC
+</cfquery>

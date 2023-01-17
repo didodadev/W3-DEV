@@ -1,0 +1,10 @@
+<cfquery name="GET_APP_PERF_RESULT" datasource="#dsn#">
+	SELECT 
+		APP_PER_ID,
+		PERFORM_POINT,
+		USER_POINT
+	FROM 
+		EMPLOYEE_PERFORMANCE_APP
+	WHERE
+		EMP_APP_QUIZ_ID = #EMP_APP_QUIZ_ID#
+</cfquery>

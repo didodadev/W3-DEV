@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<OBJECT_PROPERTIES>
+	<OBJECT_PROPERTY>
+		<PROPERTY>xml_process_cat</PROPERTY>
+		<PROPERTY_DETAIL>Tevkifata Tabi Ödeme İşlem Kategorileri</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>input</PROPERTY_TYPE>
+		<PROPERTY_VALUES></PROPERTY_VALUES>
+		<PROPERTY_NAMES></PROPERTY_NAMES>
+		<PROPERTY_DEFAULT>64,68,690,691</PROPERTY_DEFAULT>
+		<PROPERTY_HELP>Tevkifata Tabi ödemeler için işlem kategorilerini virgül(,) ile ayırarak yazın</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+</OBJECT_PROPERTIES>

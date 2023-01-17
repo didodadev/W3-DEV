@@ -1,0 +1,58 @@
+<cfquery name="get_class_attender" datasource="#dsn#">
+	SELECT
+		'employee' AS TYPE,
+		EP.EMPLOYEE_NAME+' '+EP.EMPLOYEE_SURNAME AS AD,
+		TCA.EMP_ID,
+		TCA.PAR_ID,
+		TCA.CON_ID
+	FROM
+		TRAINING_CLASS_ATTENDER TCA,
+		EMPLOYEE_POSITIONS EP,
+		DEPARTMENT,
+		BRANCH,
+		OUR_COMPANY C
+	WHERE
+		EP.DEPARTMENT_ID = DEPARTMENT.DEPARTMENT_ID AND
+		DEPARTMENT.BRANCH_ID=BRANCH.BRANCH_ID AND 
+		C.COMP_ID=BRANCH.COMPANY_ID AND 
+		EP.EMPLOYEE_ID = TCA.EMP_ID AND 
+		TCA.EMP_ID IS NOT NULL AND 
+		BRANCH.BRANCH_ID IN (
+                                SELECT
+                                    BRANCH_ID
+                                FROM
+                                    EMPLOYEE_POSITION_BRANCHES
+                                WHERE
+                                    POSITION_CODE = #SESSION.EP.POSITION_CODE#	
+                            ) AND
+		TCA.CLASS_ID = #attributes.class_id#
+	UNION
+	SELECT 
+		'partner' AS TYPE,
+		COMP.COMPANY_PARTNER_NAME+' '+COMP.COMPANY_PARTNER_SURNAME AS AD,
+		TCA.EMP_ID,
+		TCA.PAR_ID,
+		TCA.CON_ID
+	FROM
+		TRAINING_CLASS_ATTENDER TCA,
+		COMPANY_PARTNER COMP
+	WHERE	
+		TCA.CLASS_ID = #attributes.class_id# AND 
+		COMP.PARTNER_ID = TCA.PAR_ID  AND 
+		TCA.PAR_ID IS NOT NULL
+	UNION
+	SELECT
+		'consumer' AS TYPE,
+		CON.CONSUMER_NAME+' '+CON.CONSUMER_SURNAME AS AD,
+		TCA.EMP_ID,
+		TCA.PAR_ID,
+		TCA.CON_ID
+	FROM
+		TRAINING_CLASS_ATTENDER TCA,
+		CONSUMER CON
+	WHERE
+		TCA.CLASS_ID = #attributes.class_id# AND 
+		CON.CONSUMER_ID = TCA.CON_ID AND 
+		TCA.CON_ID IS NOT NULL
+</cfquery>
+

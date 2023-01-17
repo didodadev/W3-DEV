@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<language>
+	<liveChat>LIVE CHAT</liveChat>
+	<historyFilename>Live Chat History</historyFilename>
+	<writeHere>Type your message here..</writeHere>
+	<welcome>Hello %s, welcome!</welcome>
+	<userJoin>%s joined to conversation.</userJoin>
+	<userLeft>%s left the conversation!</userLeft>
+	<error>Error</error>
+	<connectionFailed>Connection failed! Please be sure that a valid address is specified. Please see</connectionFailed>
+	<connectionClosed>Connection closed!</connectionClosed>
+	<originalError>Original error</originalError>
+	<typo>%s is typing..</typo>
+	<youAreInvited>%s is inviting you to Live Chat.</youAreInvited>
+	<clickToJoin>Click to join</clickToJoin>
+	<join>Join</join>
+	<weAreSorry>We Are Sorry</weAreSorry>
+	<visitorNotExists>The visitor that requested Live Chat does not exist in the system!</visitorNotExists>
+	<supportIsOffline>Our sales representative that you can make Live Chat are currently offline!</supportIsOffline>
+	<tryAgainLater>Please try again later.</tryAgainLater>
+	<youAreTalkingTo>You are talking with %s right now.</youAreTalkingTo>
+	<waitForSupport>Your request has been received. Our sales operator %s will soon join the conversation. In some occasions, our operators are chating with multiple customers at the same time. You may have to wait half a minute for a reply. Thanks for your patience.</waitForSupport>
+	<exit>Exit safely</exit>
+	<saveHistory>Save conversation history as file</saveHistory>
+	<soundAlerts>Sound alerts</soundAlerts>
+	<activateWindow>Activate the window when new message received</activateWindow>
+	<loginDescription>Thank you for contacting us. You can start the chat via filling the fields below:</loginDescription>
+	<live>live</live>
+	<chat>chat</chat>
+	<name>Name</name>
+	<email>E-mail</email>
+	<startChat>Start Chat</startChat>
+	<invalidName>Please type a valid name!</invalidName>
+	<invalidEmail>Please type a valid e-mail address!</invalidEmail>
+	<send>Send</send>
+	<matchingFailed>The user is chatting with another representative right now!</matchingFailed>
+</language>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<OBJECT_PROPERTIES>
+	<OBJECT_PROPERTY>
+		<PROPERTY>xml_order_list_rows</PROPERTY>
+		<PROPERTY_DETAIL>Satırlarda Öncelik Sıralaması</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>input</PROPERTY_TYPE>
+		<PROPERTY_VALUES></PROPERTY_VALUES>
+		<PROPERTY_NAMES></PROPERTY_NAMES>
+		<PROPERTY_DEFAULT>1,2,3,4,5,6,7,8,9,10,11,12,13,32,33,34,35,36,37,38,14,15,16,17,18,19,20,21,22,23,24,26,27</PROPERTY_DEFAULT>
+		<PROPERTY_HELP>1.Tarih, 2.Açıklama, 3.Masraf Merkezi, 4.Gelir Kalemi, 5.Muhasebe Kodu, 6.Ürün, 7.Birim, 8.Miktar, 9.Tutar, 10.Kdv %, 11.Ötv %, 12.Kdv, 13.Ötv, 14.Genel Toplam, 15.Para Br, 16.Dövizli Tutar, 17.Aktivite Tipi, 18.İş Grubu, 19.İş, 20.Fırsat, 21.Proje, 22.Sistem, 23.Harcama Yapan, 24.Fiziki Varlık ,26. Vergi Kodu ,27.Döviz Tutar, 28.Döviz, 29.İskonto%, 30.Tutar, 31.İskonto, 32.BSMV Oran, 33.BSMV Tutar, 34.BSMV Döviz, 35.OIV Oran, 36.OIV Tutar, 37.Tevkifat Oranı, 38.Tevkifat Tutar/ Nosu Yazılmayan Kolonlar  Listede Görüntülenmeyecektir. (2,4,8,9,14,15,16,27) Alanları Zorunlu Olarak Görüntülenmelidir.</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+	<OBJECT_PROPERTY>
+		<PROPERTY>xml_satir_number</PROPERTY>
+		<PROPERTY_DETAIL>Satırlardaki Tutarların Yuvarlama Sayısı</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>select</PROPERTY_TYPE>
+		<PROPERTY_VALUES>1,2,3,4,5,6,7,8</PROPERTY_VALUES>
+		<PROPERTY_NAMES>1,2,3,4,5,6,7,8</PROPERTY_NAMES>
+		<PROPERTY_DEFAULT>5</PROPERTY_DEFAULT>
+		<PROPERTY_HELP>Satırlarda yer alan tutarların, virgülden sonra kaç basamağının görüntüleneceğini belirler.</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+	<OBJECT_PROPERTY>
+		<PROPERTY>xml_genel_number</PROPERTY>
+		<PROPERTY_DETAIL>Genel Toplam Alanındaki Tutarların Yuvarlama Sayısı</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>select</PROPERTY_TYPE>
+		<PROPERTY_VALUES>1,2,3,4,5,6,7,8</PROPERTY_VALUES>
+		<PROPERTY_NAMES>1,2,3,4,5,6,7,8</PROPERTY_NAMES>
+		<PROPERTY_DEFAULT>2</PROPERTY_DEFAULT>
+		<PROPERTY_HELP>Genel toplam alanında hesaplanan tutarların, virgülden sonra kaç basamağının görüntüleneceğini belirler.</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+</OBJECT_PROPERTIES>

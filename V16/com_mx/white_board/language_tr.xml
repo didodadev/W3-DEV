@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<language>
+	<errors>
+		<errorTitle>Hata:</errorTitle>
+		<missedParameter>Gerekli parametrelerden biri ya da birkaçı eksik. İlgili parametreler:</missedParameter>
+		<connectionError>Bağlantı sağlanamadı! Lütfen geçerli bir adres belirtildiğinden emin olun. İlgili parametre için bkz:</connectionError>
+		<connectionClose>Bağlantı sonlandı! Lütfen uygulamayı kapatıp daha sonra tekrar deneyin..</connectionClose>
+		<originalErrorCode>Teknik hata kodu:</originalErrorCode>
+		<alreadyLoggedIn>Şu an kullanıcı zaten sistemde !</alreadyLoggedIn>
+		<componentError>Bir bileşen hatası oluştu</componentError>
+		<notFoundError>Eğitim bilgilerine ulaşılamadı! Lütfen geçerli bir ID belirtildiğinden emin olun. İlgili parametre için bkz:</notFoundError>
+		<fileLoadError>Dosya yüklenirken bir hata oluştu !</fileLoadError>
+		<forbiddenFileType>Sadece SWF, JPG, PNG, GIF ve FLV dosyaları Sunum Alanı 'nda paylaşılabilir !</forbiddenFileType>
+		<validationError>İstemci doğrulanamadı!</validationError>
+	</errors>
+			
+	<messages>
+		<pleaseWait>lütfen bekleyiniz ..</pleaseWait>
+		<connecting>sunucuya bağlanılıyor</connecting>
+		<starting>uygulama başlatılıyor</starting>
+		<writeHere>Metni buraya yazınız ..</writeHere>
+		<userJoined>eğitime katıldı.</userJoined>
+		<userLeft>eğitimden ayrıldı.</userLeft>
+		<writeHereNotes>Notlarınızı buraya yazabilirsiniz..</writeHereNotes>
+		<downloaded>Dosya indirme işlemi tamamlandı.</downloaded>
+		<authorityChangedAsOwner>Yetkileriniz "Toplantı Sahibi" olarak değiştirildi.</authorityChangedAsOwner>
+		<authorityChangedAsPresenter>Yetkileriniz "Sunucu" olarak değiştirildi.</authorityChangedAsPresenter>
+		<authorityChangedAsParticipant>Yetkileriniz "Katılımcı" olarak değiştirildi.</authorityChangedAsParticipant>
+		<cameraPublishReachedMax>Aynı anda en fazla 4 kişi kamera ve mikrofon paylaşımı yapabilir. Lütfen daha sonra tekrar deneyin !</cameraPublishReachedMax>
+	</messages>
+	
+	<titles>
+		<bar>WORKCUBE CLASS ROOM</bar>
+		<board>Sunum Alanı</board>
+		<view>Video ve Ses</view>
+		<users>Katılımcılar</users>
+		<chat>Sohbet</chat>
+		<files>Dosyalar</files>
+		<note>Notlar</note>
+	</titles>
+	
+	<words>
+		<sendTo>Herkese</sendTo>
+		<to>Kime</to>
+		<send>Gönder</send>
+		<cameraSettings>Kamera ayarları</cameraSettings>
+		<microphoneSettings>Mikrofon ayarları</microphoneSettings>
+		<publish>Kamera ve mikrofonumu paylaş</publish>
+		<unpublish>Kamera ve mikrofonumu paylaşmayı durdur</unpublish>
+		<clear>Temizle</clear>
+		<tools>Çizim araçları</tools>
+		<selectTool>Seçim aracı</selectTool>
+		<penTool>Kalem aracı</penTool>
+		<markTool>İşaretleme aracı</markTool>
+		<lineTool>Çizgi aracı</lineTool>
+		<rectTool>Dikdörtgen aracı</rectTool>
+		<circleTool>Daire aracı</circleTool>
+		<textTool>Metin aracı</textTool>
+		<stampTool>Damga aracı</stampTool>
+		<print>Yazdır</print>
+		<previousPresentation>Önceki sunum</previousPresentation>
+		<nextPresentation>Sonraki sunum</nextPresentation>
+		<previousPage>Önceki sayfa</previousPage>
+		<nextPage>Sonraki sayfa</nextPage>
+		<shareOnPresentationArea>Sunum alanında paylaş</shareOnPresentationArea>
+		<authorityList>Toplantı Sahibi olarak tayin et,Sunucu olarak tayin et,Katılımcı olarak tayin et</authorityList>
+		<userStatusList>Aktif,Meşgul,Dışarıda</userStatusList>
+		<myStatus>Durumum</myStatus>
+		<expressionList>Aktif,Söz hakkı iste,Katıl,Karşı Çık,Daha yüksek sesle konuş,Daha yumuşak konuş,Hızlan,Yavaşla</expressionList>
+		<expression>İfade</expression>
+		<userRoleAndAuthority>Kullanıcı rol ve yetkilerini belirle</userRoleAndAuthority>
+		<download>Bilgisayarıma indir</download>
+		<downloading>İndiriliyor</downloading>
+		<enlarge>Büyüt</enlarge>
+		<minimize>Küçült</minimize>
+		<contentLoading>içerik yükleniyor, lütfen bekleyiniz ..</contentLoading>
+		<playVideo>Videoyu oynat</playVideo>
+		<pauseVideo>Videoyu duraklat</pauseVideo>
+		<file>dosyası</file>
+		<shareHint>Anında paylaşmak için seçin ve '' Sunum alanında paylaş '' butonuna tıklayın.</shareHint>
+		<downloadHint>İndirmek için seçin ve '' Bilgisayarıma indir '' butonuna tıklayın.</downloadHint>
+		<refresh>Listeyi yenile</refresh>
+	</words>
+</language>

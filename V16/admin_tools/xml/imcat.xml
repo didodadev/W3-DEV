@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SETUP_IM>
+	  <CAT>
+			<IMCAT_ID>1</IMCAT_ID>
+			<IMCAT>Whatsapp</IMCAT>
+	  </CAT>
+	  <CAT>
+			<IMCAT_ID>2</IMCAT_ID>
+			<IMCAT>Skype</IMCAT>
+	  </CAT>
+	  <CAT>
+			<IMCAT_ID>3</IMCAT_ID>
+			<IMCAT>Hangouts</IMCAT>
+	  </CAT>
+	  <CAT>
+			<IMCAT_ID>4</IMCAT_ID>
+			<IMCAT>Telegram</IMCAT>
+	  </CAT>	  
+</SETUP_IM>

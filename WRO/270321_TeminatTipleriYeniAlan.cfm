@@ -1,0 +1,17 @@
+<!-- Description :  Teminat tipleri tablosuna is_main ve main_assurance_type alanları eklendi
+Developer: Botan Kayğan
+Company : Workcube
+Destination: Main -->
+<querytag>
+    IF NOT EXISTS( SELECT 'Y' FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME='SETUP_HEALTH_ASSURANCE_TYPE' AND TABLE_SCHEMA = '@_dsn_main_@' AND COLUMN_NAME='IS_MAIN')
+    BEGIN
+        ALTER TABLE SETUP_HEALTH_ASSURANCE_TYPE
+        ADD IS_MAIN bit NULL
+    END;
+
+    IF NOT EXISTS( SELECT 'Y' FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME='SETUP_HEALTH_ASSURANCE_TYPE' AND TABLE_SCHEMA = '@_dsn_main_@' AND COLUMN_NAME='MAIN_ASSURANCE_TYPE_ID')
+    BEGIN
+        ALTER TABLE SETUP_HEALTH_ASSURANCE_TYPE
+        ADD MAIN_ASSURANCE_TYPE_ID int NULL
+    END;
+</querytag>

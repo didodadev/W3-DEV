@@ -1,0 +1,9 @@
+body{
+  background: white;  
+}
+.hoverSelected:hover,hoverSelected:focus{
+    background: #E6E6E6 none repeat scroll 0 0 ;
+}
+.catalyst-user{
+    color:black;
+}

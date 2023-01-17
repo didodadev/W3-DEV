@@ -1,0 +1,25 @@
+// Font Face
+@mixin font-face($style-name, $file, $family, $category:"", $weight:normal) {
+  $filepath: "../w3-assets/fonts/" + $family + "/" + $file;
+  @font-face {
+    font-family: "#{$style-name}";
+    font-weight: $weight;
+    src: url($filepath + ".eot");
+    src: url($filepath + ".eot?#iefix") format('embedded-opentype'), url($filepath + ".woff") format('woff'), url($filepath + ".ttf") format('truetype'), url($filepath + ".svg#" + $style-name + "") format('svg');
+  }
+  %#{$style-name} {
+    font: {
+      @if $category != "" {
+        family: "#{$style-name}", #{$category};
+      } @else {
+        family: "#{$style-name}";
+        weight: normal;
+      }
+    }
+  }
+
+  .font-#{$style-name}-#{$weight} {
+    font-family: $style-name;
+    font-weight: $weight !important;
+  }
+}

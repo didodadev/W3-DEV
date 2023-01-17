@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SETUP_SITE>
+	<SETUPSITE>
+		<LINK_NAME>Mal Alım İrsaliyesi Ekle</LINK_NAME>
+		<LINK_FOLDER>form</LINK_FOLDER>
+		<LINK_FILE>add_purchase.cfm</LINK_FILE>
+		<LINK_DETAIL></LINK_DETAIL>
+		<LINK_XML>form_add_purchase.xml</LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Üretim Sonucu Ekle</LINK_NAME>
+		<LINK_FOLDER>form</LINK_FOLDER>
+		<LINK_FILE>add_production_result.cfm</LINK_FILE>
+		<LINK_DETAIL></LINK_DETAIL>
+		<LINK_XML>add_production_result.xml</LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Üretim Sonucu Güncelle</LINK_NAME>
+		<LINK_FOLDER>form</LINK_FOLDER>
+		<LINK_FILE>upd_production_result.cfm</LINK_FILE>
+		<LINK_DETAIL></LINK_DETAIL>
+		<LINK_XML>add_production_result.xml</LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Kontrollü Alım İrsaliyesi Ekle</LINK_NAME>
+		<LINK_FOLDER>form</LINK_FOLDER>
+		<LINK_FILE>add_purchase.cfm</LINK_FILE>
+		<LINK_DETAIL></LINK_DETAIL>
+		<LINK_XML>form_add_purchase_control.xml</LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Depolararası Sevk İrsaliyesi Ekle</LINK_NAME>
+		<LINK_FOLDER>form</LINK_FOLDER>
+		<LINK_FILE>add_ship_dispatch.cfm</LINK_FILE>
+		<LINK_DETAIL></LINK_DETAIL>
+		<LINK_XML>form_add_ship_dispatch.xml</LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Alım İade İrsaliyesi Ekle</LINK_NAME>
+		<LINK_FOLDER>form</LINK_FOLDER>
+		<LINK_FILE>add_sale.cfm</LINK_FILE>
+		<LINK_DETAIL></LINK_DETAIL>
+		<LINK_XML>form_add_purchase_return.xml</LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Satış Siparişi Ekle</LINK_NAME>
+		<LINK_FOLDER>form</LINK_FOLDER>
+		<LINK_FILE>add_order_sale.cfm</LINK_FILE>
+		<LINK_DETAIL></LINK_DETAIL>
+		<LINK_XML>form_add_order_sale.xml</LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>İç Talep Ekle</LINK_NAME>
+		<LINK_FOLDER>form</LINK_FOLDER>
+		<LINK_FILE>add_internaldemand.cfm</LINK_FILE>
+		<LINK_DETAIL></LINK_DETAIL>
+		<LINK_XML>form_add_internaldemand.xml</LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>İç Talep Listesi</LINK_NAME>
+		<LINK_FOLDER>display</LINK_FOLDER>
+		<LINK_FILE>list_internaldemand.cfm</LINK_FILE>
+		<LINK_DETAIL></LINK_DETAIL>
+		<LINK_XML>list_internaldemand.xml</LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Stok Fişi Listesi</LINK_NAME>
+		<LINK_FOLDER>display</LINK_FOLDER>
+		<LINK_FILE>list_stock_receipts.cfm</LINK_FILE>
+		<LINK_DETAIL></LINK_DETAIL>
+		<LINK_XML></LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Sayım Ekle</LINK_NAME>
+		<LINK_FOLDER>form</LINK_FOLDER>
+		<LINK_FILE>add_stock_count_file.cfm</LINK_FILE>
+		<LINK_DETAIL></LINK_DETAIL>
+		<LINK_XML>form_add_stock_count_file.xml</LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Sistem Listesi</LINK_NAME>
+		<LINK_FOLDER>display</LINK_FOLDER>
+		<LINK_FILE>list_subscriptions.cfm</LINK_FILE>
+		<LINK_DETAIL></LINK_DETAIL>
+		<LINK_XML></LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>İlişkili Belgeler</LINK_NAME>
+		<LINK_FOLDER>display</LINK_FOLDER>
+		<LINK_FILE>relation_assets.cfm</LINK_FILE>
+		<LINK_DETAIL></LINK_DETAIL>
+		<LINK_XML>relation_assets.xml</LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Fiyat Gör</LINK_NAME>
+		<LINK_FOLDER>form</LINK_FOLDER>
+		<LINK_FILE>list_price.cfm</LINK_FILE>
+		<LINK_DETAIL></LINK_DETAIL>
+		<LINK_XML>list_price.xml</LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Etiket Bas</LINK_NAME>
+		<LINK_FOLDER>form</LINK_FOLDER>
+		<LINK_FILE>add_label_print_file.cfm</LINK_FILE>
+		<LINK_DETAIL></LINK_DETAIL>
+		<LINK_XML>form_add_label_print_file.xml</LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Satış İrsaliyesi Ekle</LINK_NAME>
+		<LINK_FOLDER>form</LINK_FOLDER>
+		<LINK_FILE>add_sale.cfm</LINK_FILE>
+		<LINK_DETAIL></LINK_DETAIL>
+		<LINK_XML>form_add_sale.xml</LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Bireysel Üye Ekle</LINK_NAME>
+		<LINK_FOLDER>form</LINK_FOLDER>
+		<LINK_FILE>add_consumer.cfm</LINK_FILE>
+		<LINK_DETAIL></LINK_DETAIL>
+		<LINK_XML>add_consumer.xml</LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Bireysel Üye Güncelle</LINK_NAME>
+		<LINK_FOLDER>form</LINK_FOLDER>
+		<LINK_FILE>upd_consumer.cfm</LINK_FILE>
+		<LINK_DETAIL></LINK_DETAIL>
+		<LINK_XML>add_consumer.xml</LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Üretim Emirleri Listesi</LINK_NAME>
+		<LINK_FOLDER>display</LINK_FOLDER>
+		<LINK_FILE>list_production_order.cfm</LINK_FILE>
+		<LINK_DETAIL></LINK_DETAIL>
+		<LINK_XML>list_production_order.xml</LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Zaman Harcaması Ekle</LINK_NAME>
+		<LINK_FOLDER>display</LINK_FOLDER>
+		<LINK_FILE>time_cost.cfm</LINK_FILE>
+		<LINK_DETAIL></LINK_DETAIL>
+		<LINK_XML>time_cost.xml</LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>İçerik Listesi</LINK_NAME>
+		<LINK_FOLDER>display</LINK_FOLDER>
+		<LINK_FILE>list_contents.cfm</LINK_FILE>
+		<LINK_DETAIL></LINK_DETAIL>
+		<LINK_XML>list_contents.xml</LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Siparişler Listesi</LINK_NAME>
+		<LINK_FOLDER>display</LINK_FOLDER>
+		<LINK_FILE>list_orders.cfm</LINK_FILE>
+		<LINK_DETAIL></LINK_DETAIL>
+		<LINK_XML>list_orders.xml</LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>İş Ekle</LINK_NAME>
+		<LINK_FOLDER>form</LINK_FOLDER>
+		<LINK_FILE>add_work.cfm</LINK_FILE>
+		<LINK_DETAIL></LINK_DETAIL>
+		<LINK_XML>add_work.xml</LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Fırsat Listesi</LINK_NAME>
+		<LINK_FOLDER>display</LINK_FOLDER>
+		<LINK_FILE>list_opportunities.cfm</LINK_FILE>
+		<LINK_DETAIL></LINK_DETAIL>
+		<LINK_XML></LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Satınalma Teklifleri Listesi</LINK_NAME>
+		<LINK_FOLDER>display</LINK_FOLDER>
+		<LINK_FILE>list_purchase_offers.cfm</LINK_FILE>
+		<LINK_DETAIL></LINK_DETAIL>
+		<LINK_XML>list_offers.xml</LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Teklifler Listesi</LINK_NAME>
+		<LINK_FOLDER>display</LINK_FOLDER>
+		<LINK_FILE>list_offers.cfm</LINK_FILE>
+		<LINK_DETAIL></LINK_DETAIL>
+		<LINK_XML></LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>İş Güncelle</LINK_NAME>
+		<LINK_FOLDER>form</LINK_FOLDER>
+		<LINK_FILE>upd_work.cfm</LINK_FILE>
+		<LINK_DETAIL></LINK_DETAIL>
+		<LINK_XML>upd_work.xml</LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Üyeler Listesi</LINK_NAME>
+		<LINK_FOLDER>display</LINK_FOLDER>
+		<LINK_FILE>list_members.cfm</LINK_FILE>
+		<LINK_DETAIL></LINK_DETAIL>
+		<LINK_XML>list_members.xml</LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Proje Listesi</LINK_NAME>
+		<LINK_FOLDER>display</LINK_FOLDER>
+		<LINK_FILE>list_projects.cfm</LINK_FILE>
+		<LINK_DETAIL></LINK_DETAIL>
+		<LINK_XML></LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Proje Malzeme Ekle</LINK_NAME>
+		<LINK_FOLDER>form</LINK_FOLDER>
+		<LINK_FILE>add_project_material.cfm</LINK_FILE>
+		<LINK_DETAIL></LINK_DETAIL>
+		<LINK_XML>add_project_material.xml</LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Proje Detayı</LINK_NAME>
+		<LINK_FOLDER>display</LINK_FOLDER>
+		<LINK_FILE>dsp_project.cfm</LINK_FILE>
+		<LINK_DETAIL></LINK_DETAIL>
+		<LINK_XML></LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Servis Detayı</LINK_NAME>
+		<LINK_FOLDER>display</LINK_FOLDER>
+		<LINK_FILE>dsp_service.cfm</LINK_FILE>
+		<LINK_DETAIL></LINK_DETAIL>
+		<LINK_XML>dsp_service.xml</LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Günlük Ajanda</LINK_NAME>
+		<LINK_FOLDER>display</LINK_FOLDER>
+		<LINK_FILE>view_daily.cfm</LINK_FILE>
+		<LINK_DETAIL></LINK_DETAIL>
+		<LINK_XML></LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Kurumsal Üye Ekle</LINK_NAME>
+		<LINK_FOLDER>form</LINK_FOLDER>
+		<LINK_FILE>add_company.cfm</LINK_FILE>
+		<LINK_DETAIL></LINK_DETAIL>
+		<LINK_XML>add_company.xml</LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Doğum Günleri</LINK_NAME>
+		<LINK_FOLDER>display</LINK_FOLDER>
+		<LINK_FILE>dsp_employee_birthdates.cfm</LINK_FILE>
+		<LINK_DETAIL></LINK_DETAIL>
+		<LINK_XML></LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Servis Ekle</LINK_NAME>
+		<LINK_FOLDER>form</LINK_FOLDER>
+		<LINK_FILE>add_service.cfm</LINK_FILE>
+		<LINK_DETAIL></LINK_DETAIL>
+		<LINK_XML>add_service.xml</LINK_XML>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Seri G/Ç Ekle</LINK_NAME>
+		<LINK_FOLDER>form</LINK_FOLDER>
+		<LINK_FILE>add_serial_io.cfm</LINK_FILE>
+		<LINK_DETAIL></LINK_DETAIL>
+		<LINK_XML>add_serial_io.xml</LINK_XML>
+	</SETUPSITE>
+</SETUP_SITE>

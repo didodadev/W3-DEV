@@ -1,0 +1,17 @@
+<cfquery name="get_depos" datasource="#dsn#">
+	SELECT 
+		D.DEPARTMENT_ID,
+		D.DEPARTMENT_HEAD
+	FROM
+		BRANCH B,
+		DEPARTMENT D
+	WHERE 
+		B.COMPANY_ID = #session.ep.company_id# AND
+		B.BRANCH_ID = D.BRANCH_ID AND
+		D.IS_STORE <> 2
+		<cfif session.ep.OUR_COMPANY_INFO.IS_LOCATION_FOLLOW eq 1>
+			AND D.DEPARTMENT_ID IN (SELECT DEPARTMENT_ID FROM EMPLOYEE_POSITION_BRANCHES WHERE POSITION_CODE = #session.ep.position_code# AND LOCATION_ID IS NULL)
+		</cfif>
+	ORDER BY 
+		D.DEPARTMENT_HEAD
+</cfquery>

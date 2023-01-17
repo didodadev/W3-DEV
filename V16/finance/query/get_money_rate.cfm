@@ -1,0 +1,20 @@
+<cfquery name="GET_MONEY_RATE" datasource="#dsn#">
+	SELECT
+		RATE1,RATE2
+	FROM
+		SETUP_MONEY
+	WHERE
+		PERIOD_ID = #SESSION.EP.PERIOD_ID# AND
+		MONEY='#CURRENCY#' AND
+		MONEY_STATUS=1
+</cfquery>
+<cfquery name="GET_LOCAL_MONEY" datasource="#dsn#">
+	SELECT
+		MONEY
+	FROM
+		SETUP_MONEY
+	WHERE
+		RATE1=RATE2 AND
+		PERIOD_ID = #SESSION.EP.PERIOD_ID# AND
+		MONEY_STATUS=1
+</cfquery>

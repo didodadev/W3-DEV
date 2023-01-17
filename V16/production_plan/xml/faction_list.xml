@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SETUP_SITE>
+	<SETUPSITE>
+		<LINK_NAME>Ürün Ağacı XML Setup</LINK_NAME> 
+		<LINK_FILE>prod.add_product_tree</LINK_FILE> 
+		<LINK_DETAIL>Ürün Ağacı Gösterim Detayları</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Sipariş XML Setup</LINK_NAME> 
+		<LINK_FILE>prod.tracking</LINK_FILE>
+		<LINK_DETAIL>Sipariş Gösterim Detayları</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Üretim Emri XML Setup</LINK_NAME> 
+		<LINK_FILE>prod.add_prod_order</LINK_FILE> 
+		<LINK_DETAIL>Üretim Emri Gösterim Detayları</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Toplu Üretim Emri XML Setup</LINK_NAME> 
+		<LINK_FILE>prod.add_prod_order_demand</LINK_FILE> 
+		<LINK_DETAIL>Toplu Üretim Emri Gösterim Detayları</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Üretim Emri Detayı XML Setup</LINK_NAME> 
+		<LINK_FILE>prod.form_upd_prod_order</LINK_FILE> 
+		<LINK_DETAIL>Üretim Emri Gösterim Detayları</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Üretim Sonucu XML Setup</LINK_NAME> 
+		<LINK_FILE>prod.upd_prod_order_result</LINK_FILE> 
+		<LINK_DETAIL>Üretim Sonucu Gösterim Detayları</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Üretim Emirleri XML Setup</LINK_NAME> 
+		<LINK_FILE>prod.order</LINK_FILE> 
+		<LINK_DETAIL>Üretim Emirleri Liste Detayları</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Üretim Emirleri XML Setup</LINK_NAME> 
+		<LINK_FILE>prod.order_new</LINK_FILE> 
+		<LINK_DETAIL>Üretim Emirleri Liste Detayları</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Talepler Listesi XML Setup </LINK_NAME> 
+		<LINK_FILE>prod.demands</LINK_FILE> 
+		<LINK_DETAIL>Üretim Emirleri Liste Detayları</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Üretimdekiler Listesi XML Setup </LINK_NAME> 
+		<LINK_FILE>prod.in_productions</LINK_FILE> 
+		<LINK_DETAIL>Üretimdekiler Liste Detayları</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Operasyonlar Listesi XML Setup </LINK_NAME> 
+		<LINK_FILE>prod.operations</LINK_FILE> 
+		<LINK_DETAIL>Operasyonlar Liste Detayları</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Malzeme İhtiyaçları XML Setup</LINK_NAME> 
+		<LINK_FILE>prod.list_materials_total</LINK_FILE> 
+		<LINK_DETAIL>Malzeme İhtiyaçları Liste Detayları</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>İstasyon Tanımlama XML Setup</LINK_NAME> 
+		<LINK_FILE>prod.popup_add_ws_product</LINK_FILE> 
+		<LINK_DETAIL>İstasyon Tanımlama Detayları</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Üretim İşçilik Maliyetleri Yansıtma  XML Setup</LINK_NAME> 
+		<LINK_FILE>prod.product_labor_cost_paper</LINK_FILE> 
+		<LINK_DETAIL>Üretim İşçilik Maliyetleri Yansıtma  Detayları</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>İstasyonlar XML Setup</LINK_NAME> 
+		<LINK_FILE>prod.list_workstation</LINK_FILE> 
+		<LINK_DETAIL>İstasyonlar listesi</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Kalite Kontrol XML Setup</LINK_NAME> 
+		<LINK_FILE>prod.popup_add_quality_control_report</LINK_FILE> 
+		<LINK_DETAIL>Kalite Kontrol</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Kalite İşlemleri XML Setup</LINK_NAME> 
+		<LINK_FILE>prod.list_quality_controls</LINK_FILE> 
+		<LINK_DETAIL>Kalite Kontrol</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Ürün Ağacı Maliyeti XML Setup</LINK_NAME> 
+		<LINK_FILE>prod.product_tree_costs</LINK_FILE> 
+		<LINK_DETAIL>Ürün Ağacı Maliyeti</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Ürün Ağacı Revizyon Yönetimi XML Setup</LINK_NAME> 
+		<LINK_FILE>prod.manage_product_tree</LINK_FILE> 
+		<LINK_DETAIL>Ürün Ağacı Revizyon Yönetimi</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Tedarik Planlama ve Maliyet Hesabı XML Setup</LINK_NAME> 
+		<LINK_FILE>prod.tree_purchase_plan</LINK_FILE> 
+		<LINK_DETAIL>Tedarik Planlama ve Maliyet Hesabı</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Fiyatlama XML Setup</LINK_NAME> 
+		<LINK_FILE>prod.tree_purchase_plan_pricing</LINK_FILE> 
+		<LINK_DETAIL>Fiyatlama</LINK_DETAIL>
+	</SETUPSITE>
+</SETUP_SITE>

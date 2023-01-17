@@ -1,0 +1,17 @@
+<cfquery name="GET_BRANCH" datasource="#DSN#">
+	SELECT 
+		BRANCH_ID,
+		BRANCH_NAME,
+		ZONE.ZONE_ID,
+		ZONE_NAME
+	FROM 
+		BRANCH,
+		ZONE 
+	WHERE 
+		BRANCH_STATUS = 1 AND
+		ZONE.ZONE_ID = BRANCH.ZONE_ID AND
+		ZONE.ZONE_STATUS = 1 AND
+		BRANCH.COMPANY_ID = #session.ep.company_id#
+	ORDER BY
+		BRANCH_NAME
+</cfquery>

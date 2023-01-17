@@ -1,0 +1,14 @@
+<cfquery name="get_emp_att" datasource="#dsn#">
+  SELECT 
+	  	TCA.EMP_ID,
+		EMPLOYEE_NAME,
+		EMPLOYEE_SURNAME
+  FROM 
+  		TRAINING_CLASS_ATTENDER TCA, 
+		EMPLOYEES E
+  WHERE 
+  		TCA.CLASS_ID=#attributes.CLASS_ID#
+		AND TCA.EMP_ID =E.EMPLOYEE_ID	
+		AND TCA.PAR_ID IS NULL AND TCA.CON_ID IS NULL
+</cfquery>
+

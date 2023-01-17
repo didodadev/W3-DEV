@@ -1,0 +1,1 @@
+﻿1. Kurumsal Üye ID (*);2. Adı (*);3. Soyadı (*);4. Doğum Tarihi ( Örnek : 21/09/2011);5. TC Kimlik No;6. Ünvan;7. Görev / Pozisyon ID;8. Şube ID;9. Departman ID;10. Cinsiyet (1: Erkek , 2: Kadın );11. Dahili;12. E-Mail;13. Adres ( Kişisel Adresi );14. Ülke ( ID );15. Şehir ( ID );16. İlçe ( ID );17. Semt (Kişisel Adresi);18. Posta Kodu ( Kişisel Adresi );19. Dil ( ID )

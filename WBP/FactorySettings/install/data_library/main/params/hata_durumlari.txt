@@ -1,0 +1,4 @@
+INSERT INTO [PACKETSHIP_ERROR_CASE]([ERROR_CASE_NAME]) Values( 'Paket kırılmış');
+INSERT INTO [PACKETSHIP_ERROR_CASE]([ERROR_CASE_NAME]) Values( 'Eksik/fazla ürün');
+INSERT INTO [PACKETSHIP_ERROR_CASE]([ERROR_CASE_NAME]) Values( 'Yanlış içerik');
+INSERT INTO [PACKETSHIP_ERROR_CASE]([ERROR_CASE_NAME]) Values( 'Etiket/tanımlama hataları');

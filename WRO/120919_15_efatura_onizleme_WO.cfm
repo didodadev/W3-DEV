@@ -1,0 +1,10 @@
+<!-- Description : E-fatura ön izleme ekranı için WBO kaydı
+Developer: Mahmut Çifçi
+Company : Gramoni
+Destination: Main -->
+<querytag>
+    IF NOT EXISTS(SELECT WRK_OBJECTS_ID FROM WRK_OBJECTS WHERE FULL_FUSEACTION = 'invoice.popup_preview_invoice')
+    BEGIN
+    INSERT INTO WRK_OBJECTS (IS_ACTIVE, MODULE_NO, HEAD, DICTIONARY_ID, FRIENDLY_URL, FULL_FUSEACTION, FULL_FUSEACTION_VARIABLES, FILE_PATH, CONTROLLER_FILE_PATH, STANDART_ADDON, LICENCE, EVENT_TYPE, STATUS, IS_DEFAULT, IS_MENU, WINDOW, VERSION, IS_CATALYST_MOD, MENU_SORT_NO, USE_PROCESS_CAT, USE_SYSTEM_NO, USE_WORKFLOW, DETAIL, AUTHOR, OBJECTS_COUNT, DESTINATION_MODUL, RECORD_IP, RECORD_EMP, RECORD_DATE, UPDATE_IP, UPDATE_EMP, UPDATE_DATE, SECURITY, STAGE, MODUL, BASE, MODUL_SHORT_NAME, FUSEACTION, FUSEACTION2, FOLDER, FILE_NAME, IS_ADD, IS_UPDATE, IS_DELETE, LEFT_MENU_NAME, IS_WBO_DENIED, IS_WBO_FORM_LOCK, IS_WBO_LOCK, IS_WBO_LOG, IS_SPECIAL, IS_TEMP, EVENT_ADD, EVENT_DASHBOARD, EVENT_DEFAULT, EVENT_DETAIL, EVENT_LIST, EVENT_UPD, TYPE, POPUP_TYPE, RANK_NUMBER, EXTERNAL_FUSEACTION, IS_LEGACY, ADDOPTIONS_CONTROLLER_FILE_PATH) VALUES (CONVERT(bit, 'True'), 28, N'Ön İzleme', 44564, NULL, N'invoice.popup_preview_invoice', NULL, N'e_government/display/preview_invoice.cfm', NULL, NULL, 1, NULL, N'Deployment', NULL, CONVERT(bit, 'False'), NULL, N'1.0', NULL, NULL, CONVERT(bit, 'False'), CONVERT(bit, 'False'), CONVERT(bit, 'False'), N'<p>E-fatura&nbsp;ve&nbsp;E-arşiv&nbsp;fatura&nbsp;ön&nbsp;izleme&nbsp;için&nbsp;kullanılır.</p><p>Fatura gönderilmeden önce xml oluşturulur.</p><p>Gramoni-Mahmut&nbsp;Çifçi&nbsp;mahmut.cifci@gramoni.com</p>', N'Workcube Core', NULL, NULL, N'127.0.0.1', 48, '2019-12-07 23:53:47.000', NULL, NULL, NULL, N'HTTPS', 2176, NULL, NULL, N'invoice', N'popup_preview_invoice', NULL, N'W3WorkDev', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, CONVERT(bit, 'False'), CONVERT(bit, 'False'), NULL, CONVERT(bit, 'False'), CONVERT(bit, 'True'), CONVERT(bit, 'False'), 0, NULL, NULL, NULL, 0, NULL)
+    END;
+</querytag>

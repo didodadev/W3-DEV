@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SETUP_SITE>
+	<SETUPSITE>
+		<LINK_NAME>Yazışma Sayfası Ayarları XML Setup</LINK_NAME> 
+		<LINK_FILE>correspondence.list_correspondence</LINK_FILE> 
+		<LINK_DETAIL>Yazışma Liste Sayfası Ayarları</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>İç Talep Ekleme-Güncelleme Sayfası Ayarları XML Setup</LINK_NAME> 
+		<LINK_FILE>correspondence.add_internaldemand,correspondence.upd_internaldemand</LINK_FILE> 
+		<LINK_DETAIL>Talep Ekleme-Güncelleme Sayfası Ayarları</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>İç Talep Liste Sayfası Ayarları XML Setup</LINK_NAME> 
+		<LINK_FILE>correspondence.list_internaldemand</LINK_FILE> 
+		<LINK_DETAIL>İç Talep Liste Sayfası Ayarları</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Satın Alma Talebi Ekleme-Güncelleme Sayfası Ayarları XML Setup</LINK_NAME> 
+		<LINK_FILE>correspondence.add_purchasedemand,correspondence.upd_purchasedemand</LINK_FILE> 
+		<LINK_DETAIL>Talep Ekleme-Güncelleme Sayfası Ayarları</LINK_DETAIL>
+	</SETUPSITE>	
+	<SETUPSITE>
+		<LINK_NAME>Satın Alma Talepler Liste Sayfası Ayarları XML Setup</LINK_NAME> 
+		<LINK_FILE>correspondence.list_purchasedemand</LINK_FILE> 
+		<LINK_DETAIL>Satın Alma Talepler Liste Sayfası Ayarları</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Adres Defteri Sayfası Ayarları XML Setup</LINK_NAME> 
+		<LINK_FILE>correspondence.addressbook</LINK_FILE> 
+		<LINK_DETAIL>Adres Defteri Sayfası Ayarları</LINK_DETAIL>
+	</SETUPSITE>	
+	<SETUPSITE>
+		<LINK_NAME>Cubemail XML Setup</LINK_NAME> 
+		<LINK_FILE>correspondence.cubemail</LINK_FILE> 
+		<LINK_DETAIL>Cubemail Ayarları Xml</LINK_DETAIL>
+	</SETUPSITE>	
+</SETUP_SITE>

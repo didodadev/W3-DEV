@@ -1,0 +1,138 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<OBJECT_PROPERTIES>
+	<OBJECT_PROPERTY>
+		<PROPERTY>is_date_kontrol</PROPERTY>
+		<PROPERTY_DETAIL>Tarih Aralığı Kontrolü Yapılmasın</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>select</PROPERTY_TYPE>
+		<PROPERTY_VALUES>1,0</PROPERTY_VALUES>
+		<PROPERTY_NAMES>Evet,Hayır</PROPERTY_NAMES>
+		<PROPERTY_DEFAULT>0</PROPERTY_DEFAULT>
+		<PROPERTY_HELP>Eğer evet olarak seçilirse tek cari için ekstre alınırken tarih kontrolü yapılmaz , toplu ekstrede tarih kontrolü çalışmaya devam eder.</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+	<OBJECT_PROPERTY>
+		<PROPERTY>is_revenue_duedate</PROPERTY>
+		<PROPERTY_DETAIL>Kredi Kartı Tahsilatlarını İşlem Tarihinden Hesapla</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>select</PROPERTY_TYPE>
+		<PROPERTY_VALUES>1,0</PROPERTY_VALUES>
+		<PROPERTY_NAMES>Evet,Hayır</PROPERTY_NAMES>
+		<PROPERTY_DEFAULT>0</PROPERTY_DEFAULT>
+		<PROPERTY_HELP>Kredi Kartı Tahsilatlarını İşlem Tarihinden Hesapla; Evet ise ve ödeme performansı seçilmişse,kredi kartı tahsilatında seçilen işlem tarihinden vade farkı ve ortalama vade hesaplamaları yapılır;hayır ise ve ödeme performansı seçilmişse kredi kartı tahsilatında seçilen vade tarihinden vade farkı ve ortalama vade hesaplamaları yapılır.</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+	<OBJECT_PROPERTY>
+		<PROPERTY>is_make_age_date</PROPERTY>
+		<PROPERTY_DETAIL>Ödeme Performansı Tarih Aralığına Göre Çalışsın Mı?</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>select</PROPERTY_TYPE>
+		<PROPERTY_VALUES>1,0</PROPERTY_VALUES>
+		<PROPERTY_NAMES>Evet,Hayır</PROPERTY_NAMES>
+		<PROPERTY_DEFAULT>0</PROPERTY_DEFAULT>
+		<PROPERTY_HELP>Ödeme Performansının tarih aralığına göre çalışmasını sağlar. İşlem tarihine bakarken ödenmiş çek senetler için ödeme tarihinden ,diğer işlemler için de işlem tarihinden filtreleme yapar. Sadece ödeme performansı kısmında geçerlidir, açık işlemlerdeki bloğu etkilemez.</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+	<OBJECT_PROPERTY>
+		<PROPERTY>is_show_member_address</PROPERTY>
+		<PROPERTY_DETAIL>Cari Hesabın Adres Bilgileri Gösterilsin Mi?</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>select</PROPERTY_TYPE>
+		<PROPERTY_VALUES>1,0</PROPERTY_VALUES>
+		<PROPERTY_NAMES>Evet,Hayır</PROPERTY_NAMES>
+		<PROPERTY_DEFAULT>0</PROPERTY_DEFAULT>
+		<PROPERTY_HELP>Cari Hesabın Adres Bilgilerinin Ekranda Görünmesini Sağlar.</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+	<OBJECT_PROPERTY>
+		<PROPERTY>is_show_spect_name</PROPERTY>
+		<PROPERTY_DETAIL>Fatura Satırında Spec Adı Gösterilsin Mi?</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>select</PROPERTY_TYPE>
+		<PROPERTY_VALUES>1,0</PROPERTY_VALUES>
+		<PROPERTY_NAMES>Evet,Hayır</PROPERTY_NAMES>
+		<PROPERTY_DEFAULT>0</PROPERTY_DEFAULT>
+		<PROPERTY_HELP>Fatura detaylı seçildiğinde satır bazında spec adının görüntülenmesini sağlar. Eğer main specse, spec adı görüntülenmez.</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+	<OBJECT_PROPERTY>
+		<PROPERTY>is_select_process_cat</PROPERTY>
+		<PROPERTY_DETAIL>İşlem Tipleri Detaylı Seçilsin mi?</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>select</PROPERTY_TYPE>
+		<PROPERTY_VALUES>1,0</PROPERTY_VALUES>
+		<PROPERTY_NAMES>Evet,Hayır</PROPERTY_NAMES>
+		<PROPERTY_DEFAULT>0</PROPERTY_DEFAULT>
+		<PROPERTY_HELP>İşlem Tipleri Detaylı Seçilsin mi? Evet ise işlem kategorilerinin altındaki işlem tipleri de ilgili çoklu selectboxta görülebilir.</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+	<OBJECT_PROPERTY>
+		<PROPERTY>is_show_store_acts</PROPERTY>
+		<PROPERTY_DETAIL>Şube Modülünde Tüm İşlemler Gösterilsin mi?</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>select</PROPERTY_TYPE>
+		<PROPERTY_VALUES>1,0</PROPERTY_VALUES>
+		<PROPERTY_NAMES>Evet,Hayır</PROPERTY_NAMES>
+		<PROPERTY_DEFAULT>0</PROPERTY_DEFAULT>
+		<PROPERTY_HELP>Eğer evet olarak seçilirse şube modülünde şube yetkisine bakmadan tüm işlemleri gösterir.</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+	<OBJECT_PROPERTY>
+		<PROPERTY>is_show_inv_ship</PROPERTY>
+		<PROPERTY_DETAIL>Fatura Satırında İlişkili İrsaliye Gösterilsin mi?</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>select</PROPERTY_TYPE>
+		<PROPERTY_VALUES>1,0</PROPERTY_VALUES>
+		<PROPERTY_NAMES>Evet,Hayır</PROPERTY_NAMES>
+		<PROPERTY_DEFAULT>0</PROPERTY_DEFAULT>
+		<PROPERTY_HELP>Fatura detaylı seçildiğinde satırın ilişkili olduğu irsaliye numarasının görünmesini sağlar.</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+	<OBJECT_PROPERTY>
+		<PROPERTY>is_show_inv_order_no</PROPERTY>
+		<PROPERTY_DETAIL>Fatura Satırında İlişkili Sipariş Numarası Gösterilsin mi?</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>select</PROPERTY_TYPE>
+		<PROPERTY_VALUES>1,0</PROPERTY_VALUES>
+		<PROPERTY_NAMES>Evet,Hayır</PROPERTY_NAMES>
+		<PROPERTY_DEFAULT>0</PROPERTY_DEFAULT>
+		<PROPERTY_HELP>Fatura detaylı seçildiğinde satırın ilişkili olduğu siparişin numarasının görünmesini sağlar.</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+	<OBJECT_PROPERTY>
+		<PROPERTY>is_show_inv_order_head</PROPERTY>
+		<PROPERTY_DETAIL>Fatura Satırında İlişkili Sipariş Konusu Gösterilsin mi?</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>select</PROPERTY_TYPE>
+		<PROPERTY_VALUES>1,0</PROPERTY_VALUES>
+		<PROPERTY_NAMES>Evet,Hayır</PROPERTY_NAMES>
+		<PROPERTY_DEFAULT>0</PROPERTY_DEFAULT>
+		<PROPERTY_HELP>Fatura detaylı seçildiğinde satırın ilişkili olduğu siparişin konusunun görünmesini sağlar.</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+	<OBJECT_PROPERTY>
+		<PROPERTY>is_show_discount</PROPERTY>
+		<PROPERTY_DETAIL>Fatura Satırında İskontolar Gösterilsin Mi?</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>select</PROPERTY_TYPE>
+		<PROPERTY_VALUES>1,0</PROPERTY_VALUES>
+		<PROPERTY_NAMES>Evet,Hayır</PROPERTY_NAMES>
+		<PROPERTY_DEFAULT>0</PROPERTY_DEFAULT>
+		<PROPERTY_HELP>Fatura detaylı seçildiğinde satır bazında iskontoların görüntülenmesini sağlar.</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+	<OBJECT_PROPERTY>
+		<PROPERTY>discount_count</PROPERTY>
+		<PROPERTY_DETAIL>Fatura Satırında Gösterilecek İskonto Sayısı</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>select</PROPERTY_TYPE>
+		<PROPERTY_VALUES>1,2,3,4,5,6,7,8,9,10</PROPERTY_VALUES>
+		<PROPERTY_NAMES>1,2,3,4,5,6,7,8,9,10</PROPERTY_NAMES>
+		<PROPERTY_DEFAULT>1</PROPERTY_DEFAULT>
+		<PROPERTY_HELP>Fatura detaylı ve iskonto göster seçildiğinde gösterilecek iskonto sayısını belirler.</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+	<OBJECT_PROPERTY>
+		<PROPERTY>round_number</PROPERTY>
+		<PROPERTY_DETAIL>Fatura Satırında Fiyat Yuvarlama Sayısı</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>select</PROPERTY_TYPE>
+		<PROPERTY_VALUES>1,2,3,4,5,6,7,8</PROPERTY_VALUES>
+		<PROPERTY_NAMES>1,2,3,4,5,6,7,8</PROPERTY_NAMES>
+		<PROPERTY_DEFAULT>2</PROPERTY_DEFAULT>
+		<PROPERTY_HELP>Fatura detaylı seçildiğinde fiyatların virgülden sonraki hane sayısını belirler.</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+	<OBJECT_PROPERTY>
+		<PROPERTY>xml_list_options_selected</PROPERTY>
+		<PROPERTY_DETAIL>Liste Seçeneklerinin Hangileri Seçili Gelsin?</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>input</PROPERTY_TYPE>
+		<PROPERTY_VALUES></PROPERTY_VALUES>
+		<PROPERTY_NAMES></PROPERTY_NAMES>
+		<PROPERTY_DEFAULT>1,2,3</PROPERTY_DEFAULT>
+		<PROPERTY_HELP>Liste seçeneklerinden default olarak seçili gelmesi gerekenleri virgül ile ayırarak yazınız. 1-İşlem Dövizli, 2-2.Dövizli, 3-2.Döviz Bakiyeli, 4-Vadeli, 5-Proje, 6-Renkli, 7-İşlem tipi, 8-Açıklama,  9-Finansal Özet, 10-Fatura Detaylı -- Ör: 1,2,4</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+	<OBJECT_PROPERTY>
+		<PROPERTY>is_show_special_definition</PROPERTY>
+		<PROPERTY_DETAIL>Tahsilat/Ödeme Tipi Seçilebilsin</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>select</PROPERTY_TYPE>
+		<PROPERTY_VALUES>1,0</PROPERTY_VALUES>
+		<PROPERTY_NAMES>Evet,Hayır</PROPERTY_NAMES>
+		<PROPERTY_DEFAULT>0</PROPERTY_DEFAULT>
+		<PROPERTY_HELP>Cari Hesap Ekstresinde Tahsilat/Ödeme Tipinin Seçilebilmesini Sağlar.</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+</OBJECT_PROPERTIES>

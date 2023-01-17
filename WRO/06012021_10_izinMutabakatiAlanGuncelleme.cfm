@@ -1,0 +1,14 @@
+<!-- Description :  İzin Mutabakatı Record Emp field type düzeltildi.
+Developer: Botan Kayğan
+Company : Workcube
+Destination: Main -->
+<querytag>
+    IF NOT EXISTS( SELECT 'Y' FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME='EMPLOYEES_OFFTIME_CONTRACT' AND TABLE_SCHEMA = '@_dsn_main_@' AND COLUMN_NAME='RECORD_EMP')
+    BEGIN
+        UPDATE EMPLOYEES_OFFTIME_CONTRACT SET RECORD_EMP = NULL;
+        ALTER TABLE EMPLOYEES_OFFTIME_CONTRACT
+        ALTER COLUMN RECORD_EMP nvarchar(250) NULL;
+        ALTER TABLE EMPLOYEES_OFFTIME_CONTRACT
+        ALTER COLUMN RECORD_EMP int NULL;
+    END;
+</querytag>

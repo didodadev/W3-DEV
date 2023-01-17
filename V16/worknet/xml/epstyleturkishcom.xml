@@ -1,0 +1,2080 @@
+<?xml version="1.0" encoding="utf-8"?>
+<worknet_objects>
+	<fuseaction>
+		<fuseaction_definition>Tekstil</fuseaction_definition>
+		<fuseaction_keyword>Tekstil,İplik</fuseaction_keyword>
+		<fuseaction_title>Style Turkish</fuseaction_title>
+		<fuseaction_name>worknet.welcome</fuseaction_name>
+		<fuseaction_userfriendly></fuseaction_userfriendly>
+		<objects>
+			<id>objects1</id>
+			<class_name></class_name>
+			<include>/worknet/objects/news.cfm</include>
+			<path></path>
+			<width></width>
+			<top>0px</top>
+			<left>0px</left>
+			<xml_parameters>
+				<special_parameter>
+					<parameter_name>contentCatId1</parameter_name>
+					<parameter_detail>Haberler İçerik Kategori Id si</parameter_detail>
+					<parameter_type>input</parameter_type>
+					<parameter_values>2</parameter_values>
+					<parameter_value_names></parameter_value_names>
+					<parameter_default></parameter_default>
+				</special_parameter>
+				<special_parameter>
+					<parameter_name>contentChapterId1</parameter_name>
+					<parameter_detail>Etkinlikler Bölüm Id si</parameter_detail>
+					<parameter_type>input</parameter_type>
+					<parameter_values>1</parameter_values>
+					<parameter_value_names></parameter_value_names>
+					<parameter_default></parameter_default>
+				</special_parameter>
+				<special_parameter>
+					<parameter_name>contentCatId2</parameter_name>
+					<parameter_detail>3. Sekme Kategori ID</parameter_detail>
+					<parameter_type>input</parameter_type>
+					<parameter_values>2</parameter_values>
+					<parameter_value_names></parameter_value_names>
+					<parameter_default></parameter_default>
+				</special_parameter>
+				<special_parameter>
+					<parameter_name>contentCatId3</parameter_name>
+					<parameter_detail>İlk Sekme Kategori ID</parameter_detail>
+					<parameter_type>input</parameter_type>
+					<parameter_values>2</parameter_values>
+					<parameter_value_names></parameter_value_names>
+					<parameter_default></parameter_default>
+				</special_parameter>
+				<special_parameter>
+					<parameter_name>contentMaxrows</parameter_name>
+					<parameter_detail>İçerik Sayısı</parameter_detail>
+					<parameter_type>input</parameter_type>
+					<parameter_values>15</parameter_values>
+					<parameter_value_names></parameter_value_names>
+					<parameter_default></parameter_default>
+				</special_parameter>
+			</xml_parameters>
+		</objects>
+		<objects>
+			<id>objects2</id>
+			<class_name></class_name>
+			<include>/worknet/objects/katalog.cfm</include>
+			<path></path>
+			<width></width>
+			<top>0px</top>
+			<left>0px</left>
+			<xml_parameters>
+				<special_parameter>
+					<parameter_name>userContentId</parameter_name>
+					<parameter_detail>Üye girişi varken gelecek İçerik ID leri</parameter_detail>
+					<parameter_type>input</parameter_type>
+					<parameter_values></parameter_values>
+					<parameter_value_names></parameter_value_names>
+					<parameter_default></parameter_default>
+				</special_parameter>
+				<special_parameter>
+					<parameter_name>notUserContentId</parameter_name>
+					<parameter_detail>Üye girişi yokken gelecek İçerik ID leri</parameter_detail>
+					<parameter_type>input</parameter_type>
+					<parameter_values></parameter_values>
+					<parameter_value_names></parameter_value_names>
+					<parameter_default></parameter_default>
+				</special_parameter>
+			</xml_parameters>
+		</objects>
+		<objects>
+			<id>objects1</id>
+			<class_name></class_name>
+			<include>/worknet/objects/detail_content.cfm</include>
+			<path></path>
+			<width></width>
+			<top>0px</top>
+			<left>0px</left>
+			<xml_parameters>
+				<special_parameter>
+					<parameter_name>cid</parameter_name>
+					<parameter_detail>İçerik Id</parameter_detail>
+					<parameter_type>input</parameter_type>
+					<parameter_values>89</parameter_values>
+					<parameter_value_names></parameter_value_names>
+					<parameter_default></parameter_default>
+				</special_parameter>
+			</xml_parameters>
+		</objects>
+		<objects>
+			<id>objects1</id>
+			<class_name></class_name>
+			<include>/worknet/objects/product_slayt.cfm</include>
+			<path></path>
+			<width></width>
+			<top>0px</top>
+			<left>0px</left>
+		</objects>
+		<objects>
+			<id>objects1</id>
+			<class_name></class_name>
+			<include>/worknet/objects/detail_content.cfm</include>
+			<path></path>
+			<width></width>
+			<top>0px</top>
+			<left>0px</left>
+			<xml_parameters>
+				<special_parameter>
+					<parameter_name>cid</parameter_name>
+					<parameter_detail>İçerik Id</parameter_detail>
+					<parameter_type>input</parameter_type>
+					<parameter_values>1107,1153,1154</parameter_values>
+					<parameter_value_names></parameter_value_names>
+					<parameter_default></parameter_default>
+				</special_parameter>
+			</xml_parameters>
+		</objects>
+		<objects>
+			<id>objects1</id>
+			<class_name></class_name>
+			<include>/worknet/objects/detail_content.cfm</include>
+			<path></path>
+			<width></width>
+			<top>0px</top>
+			<left>0px</left>
+			<xml_parameters>
+				<special_parameter>
+					<parameter_name>cid</parameter_name>
+					<parameter_detail>İçerik Id</parameter_detail>
+					<parameter_type>input</parameter_type>
+					<parameter_values>1108,1155,1156</parameter_values>
+					<parameter_value_names></parameter_value_names>
+					<parameter_default></parameter_default>
+				</special_parameter>
+			</xml_parameters>
+		</objects>
+		<objects>
+			<id>objects1</id>
+			<class_name></class_name>
+			<include>/worknet/objects/notices.cfm</include>
+			<path></path>
+			<width></width>
+			<top>0px</top>
+			<left>0px</left>
+			<xml_parameters>
+				<special_parameter>
+					<parameter_name>contentCatId2</parameter_name>
+					<parameter_detail>Duyurular İçerik Kategori Id si</parameter_detail>
+					<parameter_type>input</parameter_type>
+					<parameter_values>47</parameter_values>
+					<parameter_value_names></parameter_value_names>
+					<parameter_default></parameter_default>
+				</special_parameter>
+				<special_parameter>
+					<parameter_name>contentMaxrows</parameter_name>
+					<parameter_detail>İçerik Sayısı</parameter_detail>
+					<parameter_type>input</parameter_type>
+					<parameter_values>5</parameter_values>
+					<parameter_value_names></parameter_value_names>
+					<parameter_default></parameter_default>
+				</special_parameter>
+			</xml_parameters>
+		</objects>
+		<objects>
+			<id>objects1</id>
+			<class_name></class_name>
+			<include>/worknet/objects/etkinlik.cfm</include>
+			<path></path>
+			<width></width>
+			<top>0px</top>
+			<left>0px</left>
+			<xml_parameters>
+				<special_parameter>
+					<parameter_name>contentChapterId2</parameter_name>
+					<parameter_detail>Etkinlikler Bölüm Id si</parameter_detail>
+					<parameter_type>input</parameter_type>
+					<parameter_values>81</parameter_values>
+					<parameter_value_names></parameter_value_names>
+					<parameter_default></parameter_default>
+				</special_parameter>
+				<special_parameter>
+					<parameter_name>contentMaxrows</parameter_name>
+					<parameter_detail>İçerik Sayısı</parameter_detail>
+					<parameter_type>input</parameter_type>
+					<parameter_values>5</parameter_values>
+					<parameter_value_names></parameter_value_names>
+					<parameter_default></parameter_default>
+				</special_parameter>
+			</xml_parameters>
+		</objects>
+		<objects>
+			<id>objects1</id>
+			<class_name></class_name>
+			<include>/worknet/objects/firm_logos.cfm</include>
+			<path></path>
+			<width></width>
+			<top>0px</top>
+			<left>0px</left>
+			<xml_parameters>
+				<special_parameter>
+					<parameter_name>stage_id_list</parameter_name>
+					<parameter_detail>Listede gelmesini istediğimiz Aşama ID'leri</parameter_detail>
+					<parameter_type>input</parameter_type>
+					<parameter_values>89</parameter_values>
+					<parameter_value_names></parameter_value_names>
+					<parameter_default></parameter_default>
+				</special_parameter>
+			</xml_parameters>
+		</objects>
+	</fuseaction>
+	<fuseaction>
+		<fuseaction_definition>Style Turkish</fuseaction_definition>
+		<fuseaction_keyword>Style Turkish</fuseaction_keyword>
+		<fuseaction_title>Style Turkish</fuseaction_title>
+		<fuseaction_name>worknet.detail_content</fuseaction_name>
+		<fuseaction_userfriendly></fuseaction_userfriendly>
+		<objects>
+			<id>objects1</id>
+			<class_name></class_name>
+			<include>/worknet/objects/detail_content.cfm</include>
+			<path></path>
+			<width></width>
+			<top>0px</top>
+			<left>0px</left>
+			<xml_parameters>
+				<special_parameter>
+					<parameter_name>is_form_generator</parameter_name>
+					<parameter_detail>Form generator gelsin</parameter_detail>
+					<parameter_type>select</parameter_type>
+					<parameter_values>1,0</parameter_values>
+					<parameter_value_names>Evet,hayır</parameter_value_names>
+					<parameter_default>1</parameter_default>
+				</special_parameter>
+				<special_parameter>
+					<parameter_name>add_this_view</parameter_name>
+					<parameter_detail>Sosyal Medya Paylaşım</parameter_detail>
+					<parameter_type>select</parameter_type>
+					<parameter_values>1,0</parameter_values>
+					<parameter_value_names>Evet,hayır</parameter_value_names>
+					<parameter_default>1</parameter_default>
+				</special_parameter>
+				<special_parameter>
+					<parameter_name>is_navigate</parameter_name>
+					<parameter_detail>Navigasyon</parameter_detail>
+					<parameter_type>select</parameter_type>
+					<parameter_values>1,0</parameter_values>
+					<parameter_value_names>Evet,hayır</parameter_value_names>
+					<parameter_default>1</parameter_default>
+				</special_parameter>
+			</xml_parameters>
+		</objects>
+	</fuseaction>
+	<fuseaction>
+		<fuseaction_definition>Style Turkish</fuseaction_definition>
+		<fuseaction_keyword>Style Turkish</fuseaction_keyword>
+		<fuseaction_title>Style Turkish</fuseaction_title>
+		<fuseaction_name>worknet.add_consumer</fuseaction_name>
+		<fuseaction_userfriendly>add_consumer</fuseaction_userfriendly>
+		<objects>
+			<id>objects1</id>
+			<class_name></class_name>
+			<include>/worknet/form/add_consumer.cfm</include>
+			<path></path>
+			<width></width>
+			<top>0px</top>
+			<left>0px</left>
+		</objects>
+	</fuseaction>
+	<fuseaction>
+		<fuseaction_definition>Style Turkish</fuseaction_definition>
+		<fuseaction_keyword>Style Turkish</fuseaction_keyword>
+		<fuseaction_title>Style Turkish</fuseaction_title>
+		<fuseaction_name>worknet.emptypopup_add_consumer</fuseaction_name>
+		<fuseaction_userfriendly></fuseaction_userfriendly>
+		<objects>
+			<id>objects1</id>
+			<class_name></class_name>
+			<include>/worknet/query/add_consumer.cfm</include>
+			<path></path>
+			<width></width>
+			<top>0px</top>
+			<left>0px</left>
+		</objects>
+	</fuseaction>
+	<fuseaction>
+		<fuseaction_definition>Style Turkish</fuseaction_definition>
+		<fuseaction_keyword>Style Turkish</fuseaction_keyword>
+		<fuseaction_title>Style Turkish</fuseaction_title>
+		<fuseaction_name>worknet.detail_consumer</fuseaction_name>
+		<fuseaction_userfriendly>detail_consumer</fuseaction_userfriendly>
+		<objects>
+			<id>objects1</id>
+			<class_name></class_name>
+			<include>/worknet/form/detail_consumer.cfm</include>
+			<path></path>
+			<width></width>
+			<top>0px</top>
+			<left>0px</left>
+		</objects>
+	</fuseaction>
+	<fuseaction>
+		<fuseaction_definition>Style Turkish</fuseaction_definition>
+		<fuseaction_keyword>Style Turkish</fuseaction_keyword>
+		<fuseaction_title>Style Turkish</fuseaction_title>
+		<fuseaction_name>worknet.emptypopup_upd_consumer</fuseaction_name>
+		<fuseaction_userfriendly></fuseaction_userfriendly>
+		<objects>
+			<id>objects1</id>
+			<class_name></class_name>
+			<include>/worknet/query/upd_consumer.cfm</include>
+			<path></path>
+			<width></width>
+			<top>0px</top>
+			<left>0px</left>
+		</objects>
+	</fuseaction>
+	<fuseaction>
+		<fuseaction_definition>Projeler</fuseaction_definition>
+		<fuseaction_keyword>Style Turkish Projeler</fuseaction_keyword>
+		<fuseaction_title>Style Turkish</fuseaction_title>
+		<fuseaction_name>worknet.projects</fuseaction_name>
+		<fuseaction_userfriendly>projects</fuseaction_userfriendly>
+		<objects>
+			<id>objects1</id>
+			<class_name></class_name>
+			<include>/worknet/objects/list_content.cfm</include>
+			<path></path>
+			<width></width>
+			<top>0px</top>
+			<left>0px</left>
+			<xml_parameters>
+				<special_parameter>
+					<parameter_name>contentCatId</parameter_name>
+					<parameter_detail>İçerik Kategori ID si</parameter_detail>
+					<parameter_type>input</parameter_type>
+					<parameter_values>46</parameter_values>
+					<parameter_value_names></parameter_value_names>
+					<parameter_default></parameter_default>
+				</special_parameter>
+				<special_parameter>
+					<parameter_name>contentChapterId</parameter_name>
+					<parameter_detail>İçerik Bölüm ID si</parameter_detail>
+					<parameter_type>input</parameter_type>
+					<parameter_values></parameter_values>
+					<parameter_value_names></parameter_value_names>
+					<parameter_default></parameter_default>
+				</special_parameter>
+			</xml_parameters>
+		</objects>
+	</fuseaction>
+	<fuseaction>
+		<fuseaction_definition>Etkinlikler</fuseaction_definition>
+		<fuseaction_keyword>Style Turkish Etkinlikler</fuseaction_keyword>
+		<fuseaction_title>Style Turkish</fuseaction_title>
+		<fuseaction_name>worknet.events</fuseaction_name>
+		<fuseaction_userfriendly>events</fuseaction_userfriendly>
+		<objects>
+			<id>objects1</id>
+			<class_name></class_name>
+			<include>/worknet/objects/list_content.cfm</include>
+			<path></path>
+			<width></width>
+			<top>0px</top>
+			<left>0px</left>
+			<xml_parameters>
+				<special_parameter>
+					<parameter_name>contentChapterId</parameter_name>
+					<parameter_detail>İçerik Bölüm ID si</parameter_detail>
+					<parameter_type>input</parameter_type>
+					<parameter_values>80</parameter_values>
+					<parameter_value_names></parameter_value_names>
+					<parameter_default></parameter_default>
+				</special_parameter>
+				<special_parameter>
+					<parameter_name>contentCatId</parameter_name>
+					<parameter_detail>İçerik Kategori ID si</parameter_detail>
+					<parameter_type>input</parameter_type>
+					<parameter_values></parameter_values>
+					<parameter_value_names></parameter_value_names>
+					<parameter_default></parameter_default>
+				</special_parameter>
+			</xml_parameters>
+		</objects>
+	</fuseaction>
+	<fuseaction>
+		<fuseaction_definition>Üyeler</fuseaction_definition>
+		<fuseaction_keyword>Üyeler</fuseaction_keyword>
+		<fuseaction_title>Style Turkish</fuseaction_title>
+		<fuseaction_name>worknet.list_member</fuseaction_name>
+		<fuseaction_userfriendly>list_member</fuseaction_userfriendly>
+		<objects>
+			<id>objects1</id>
+			<class_name></class_name>
+			<include>/worknet/objects/list_member.cfm</include>
+			<path></path>
+			<width></width>
+			<top>0px</top>
+			<left>0px</left>
+			<xml_parameters>
+				<special_parameter>
+					<parameter_name>content_head_id</parameter_name>
+					<parameter_detail>İçerik ID</parameter_detail>
+					<parameter_type>input</parameter_type>
+					<parameter_values>114</parameter_values>
+					<parameter_value_names></parameter_value_names>
+					<parameter_default></parameter_default>
+				</special_parameter>
+			</xml_parameters>
+		</objects>
+	</fuseaction>
+	<fuseaction>
+		<fuseaction_definition>Şirket Profili Güncelle</fuseaction_definition>
+		<fuseaction_keyword>Şirket Profili Güncelle</fuseaction_keyword>
+		<fuseaction_title>Style Turkish</fuseaction_title>
+		<fuseaction_name>worknet.detail_company</fuseaction_name>
+		<fuseaction_userfriendly>detail_company</fuseaction_userfriendly>
+		<objects>
+			<id>objects1</id>
+			<class_name></class_name>
+			<include>/worknet/objects/detail_member.cfm</include>
+			<path></path>
+			<width></width>
+			<top>0px</top>
+			<left>0px</left>
+			<xml_parameters>
+				<special_parameter>
+					<parameter_name>info_content_id</parameter_name>
+					<parameter_detail>Bilgilendirme İçerik ID</parameter_detail>
+					<parameter_type>input</parameter_type>
+					<parameter_values>62,63,64</parameter_values>
+					<parameter_value_names></parameter_value_names>
+					<parameter_default></parameter_default>
+				</special_parameter>
+			</xml_parameters>
+		</objects>
+	</fuseaction>
+	<fuseaction>
+		<fuseaction_definition>Üye Detay</fuseaction_definition>
+		<fuseaction_keyword>Üye Detay</fuseaction_keyword>
+		<fuseaction_title>Style Turkish</fuseaction_title>
+		<fuseaction_name>worknet.dsp_member</fuseaction_name>
+		<fuseaction_userfriendly>dsp_member</fuseaction_userfriendly>
+		<objects>
+			<id>objects1</id>
+			<class_name></class_name>
+			<include>/worknet/objects/dsp_member.cfm</include>
+			<path></path>
+			<width></width>
+			<top>0px</top>
+			<left>0px</left>
+			<xml_parameters>
+				<special_parameter>
+					<parameter_name>info_content_id</parameter_name>
+					<parameter_detail>Bilgilendirme İçerik ID</parameter_detail>
+					<parameter_type>input</parameter_type>
+					<parameter_values>62,63,64</parameter_values>
+					<parameter_value_names></parameter_value_names>
+					<parameter_default></parameter_default>
+				</special_parameter>
+			</xml_parameters>
+		</objects>
+	</fuseaction>
+	<fuseaction>
+		<fuseaction_definition>Üye Çalışan Detay</fuseaction_definition>
+		<fuseaction_keyword>Üye Çalışan Detay</fuseaction_keyword>
+		<fuseaction_title>Style Turkish</fuseaction_title>
+		<fuseaction_name>worknet.dsp_partner</fuseaction_name>
+		<fuseaction_userfriendly>dsp_partner</fuseaction_userfriendly>
+		<objects>
+			<id>objects1</id>
+			<class_name></class_name>
+			<include>/worknet/objects/dsp_partner.cfm</include>
+			<path></path>
+			<width></width>
+			<top>0px</top>
+			<left>0px</left>
+			<xml_parameters>
+				<special_parameter>
+					<parameter_name>info_content_id</parameter_name>
+					<parameter_detail>Bilgilendirme İçerik ID</parameter_detail>
+					<parameter_type>input</parameter_type>
+					<parameter_values>62,63,64</parameter_values>
+					<parameter_value_names></parameter_value_names>
+					<parameter_default></parameter_default>
+				</special_parameter>
+			</xml_parameters>
+		</objects>
+	</fuseaction>
+	<fuseaction>
+		<fuseaction_definition>Çalışan Ekle</fuseaction_definition>
+		<fuseaction_keyword>Çalışan Ekle</fuseaction_keyword>
+		<fuseaction_title>Style Turkish</fuseaction_title>
+		<fuseaction_name>worknet.add_partner</fuseaction_name>
+		<fuseaction_userfriendly>add_partner</fuseaction_userfriendly>
+		<objects>
+			<id>objects1</id>
+			<class_name></class_name>
+			<include>/worknet/objects/add_partner.cfm</include>
+			<path></path>
+			<width></width>
+			<top>0px</top>
+			<left>0px</left>
+			<xml_parameters>
+				<special_parameter>
+					<parameter_name>info_content_id</parameter_name>
+					<parameter_detail>Bilgilendirme İçerik ID</parameter_detail>
+					<parameter_type>input</parameter_type>
+					<parameter_values>62,63,64</parameter_values>
+					<parameter_value_names></parameter_value_names>
+					<parameter_default></parameter_default>
+				</special_parameter>
+			</xml_parameters>
+		</objects>
+	</fuseaction>
+	<fuseaction>
+		<fuseaction_definition>Çalışan Güncelle</fuseaction_definition>
+		<fuseaction_keyword>Çalışan Güncelle</fuseaction_keyword>
+		<fuseaction_title>Style Turkish Çalışan Güncelle</fuseaction_title>
+		<fuseaction_name>worknet.detail_partner</fuseaction_name>
+		<fuseaction_userfriendly>detail_partner</fuseaction_userfriendly>
+		<objects>
+			<id>objects1</id>
+			<class_name></class_name>
+			<include>/worknet/objects/detail_partner.cfm</include>
+			<path></path>
+			<width></width>
+			<top>0px</top>
+			<left>0px</left>
+			<xml_parameters>
+				<special_parameter>
+					<parameter_name>info_content_id</parameter_name>
+					<parameter_detail>Bilgilendirme İçerik ID</parameter_detail>
+					<parameter_type>input</parameter_type>
+					<parameter_values>62,63,64</parameter_values>
+					<parameter_value_names></parameter_value_names>
+					<parameter_default></parameter_default>
+				</special_parameter>
+			</xml_parameters>
+		</objects>
+	</fuseaction>
+	<fuseaction>
+		<fuseaction_definition>Şube Ekle</fuseaction_definition>
+		<fuseaction_keyword>Şube Ekle</fuseaction_keyword>
+		<fuseaction_title>Style Turkish</fuseaction_title>
+		<fuseaction_name>worknet.add_branch</fuseaction_name>
+		<fuseaction_userfriendly>add_branch</fuseaction_userfriendly>
+		<objects>
+			<id>objects1</id>
+			<class_name></class_name>
+			<include>/worknet/objects/add_branch.cfm</include>
+			<path></path>
+			<width></width>
+			<top>0px</top>
+			<left>0px</left>
+		</objects>
+	</fuseaction>
+	<fuseaction>
+		<fuseaction_definition>Şube Güncelle</fuseaction_definition>
+		<fuseaction_keyword>Şube Güncelle</fuseaction_keyword>
+		<fuseaction_title>Style Turkish</fuseaction_title>
+		<fuseaction_name>worknet.detail_branch</fuseaction_name>
+		<fuseaction_userfriendly>detail_branch</fuseaction_userfriendly>
+		<objects>
+			<id>objects1</id>
+			<class_name></class_name>
+			<include>/worknet/objects/detail_branch.cfm</include>
+			<path></path>
+			<width></width>
+			<top>0px</top>
+			<left>0px</left>
+		</objects>
+	</fuseaction>
+	<fuseaction>
+		<fuseaction_definition>Üye Girişi</fuseaction_definition>
+		<fuseaction_keyword>Üye Girişi</fuseaction_keyword>
+		<fuseaction_title>Style Turkish</fuseaction_title>
+		<fuseaction_name>worknet.member_login</fuseaction_name>
+		<fuseaction_userfriendly>login</fuseaction_userfriendly>
+		<objects>
+			<id>objects1</id>
+			<class_name></class_name>
+			<include>/worknet/objects/member_login.cfm</include>
+			<path></path>
+			<width></width>
+			<top>0px</top>
+			<left>0px</left>
+		</objects>
+	</fuseaction>
+	<fuseaction>
+		<fuseaction_definition>Üye Dashboard</fuseaction_definition>
+		<fuseaction_keyword>Style Turkish Üye Dashboard</fuseaction_keyword>
+		<fuseaction_title>Style Turkish</fuseaction_title>
+		<fuseaction_name>worknet.dashboard</fuseaction_name>
+		<fuseaction_userfriendly>dashboard</fuseaction_userfriendly>
+		<objects>
+			<id>objects1</id>
+			<class_name></class_name>
+			<include>/worknet/objects/dashboard.cfm</include>
+			<path></path>
+			<width></width>
+			<top>0px</top>
+			<left>0px</left>
+		</objects>
+	</fuseaction>
+	<fuseaction>
+		<fuseaction_definition>Talepler</fuseaction_definition>
+		<fuseaction_keyword>Talepler</fuseaction_keyword>
+		<fuseaction_title>Style Turkish</fuseaction_title>
+		<fuseaction_name>worknet.list_demand</fuseaction_name>
+		<fuseaction_userfriendly>list_demand</fuseaction_userfriendly>
+		<objects>
+			<id>objects1</id>
+			<class_name></class_name>
+			<include>/worknet/objects/list_demand.cfm</include>
+			<path></path>
+			<width></width>
+			<top>0px</top>
+			<left>0px</left>
+			<xml_parameters>
+				<special_parameter>
+					<parameter_name>content_head_id</parameter_name>
+					<parameter_detail>Talep Kurallar</parameter_detail>
+					<parameter_type>input</parameter_type>
+					<parameter_values>92,93,94</parameter_values>
+					<parameter_value_names></parameter_value_names>
+					<parameter_default></parameter_default>
+				</special_parameter>
+			</xml_parameters>
+		</objects>
+	</fuseaction>
+	<fuseaction>
+		<fuseaction_definition>Taleplerim</fuseaction_definition>
+		<fuseaction_keyword>Taleplerim</fuseaction_keyword>
+		<fuseaction_title>Style Turkish</fuseaction_title>
+		<fuseaction_name>worknet.my_demand</fuseaction_name>
+		<fuseaction_userfriendly>my_demand</fuseaction_userfriendly>
+		<objects>
+			<id>objects1</id>
+			<class_name></class_name>
+			<include>/worknet/objects/my_demand.cfm</include>
+			<path></path>
+			<width></width>
+			<top>0px</top>
+			<left>0px</left>
+		</objects>
+	</fuseaction>
+	<fuseaction>
+		<fuseaction_definition>Talep Ekle</fuseaction_definition>
+		<fuseaction_keyword>Talep Ekle</fuseaction_keyword>
+		<fuseaction_title>Style Turkish</fuseaction_title>
+		<fuseaction_name>worknet.add_demand</fuseaction_name>
+		<fuseaction_userfriendly>add_demand</fuseaction_userfriendly>
+		<objects>
+			<id>objects1</id>
+			<class_name></class_name>
+			<include>/worknet/objects/add_demand.cfm</include>
+			<path></path>
+			<width></width>
+			<top>0px</top>
+			<left>0px</left>
+		</objects>
+	</fuseaction>
+	<fuseaction>
+		<fuseaction_definition>Talep Güncelle</fuseaction_definition>
+		<fuseaction_keyword>Talep Ekle</fuseaction_keyword>
+		<fuseaction_title>Style Turkish</fuseaction_title>
+		<fuseaction_name>worknet.detail_demand</fuseaction_name>
+		<fuseaction_userfriendly></fuseaction_userfriendly>
+		<objects>
+			<id>objects1</id>
+			<class_name></class_name>
+			<include>/worknet/objects/detail_demand.cfm</include>
+			<path></path>
+			<width></width>
+			<top>0px</top>
+			<left>0px</left>
+			<xml_parameters>
+				<special_parameter>
+					<parameter_name>info_content_id</parameter_name>
+					<parameter_detail>Bilgi İçerik ID</parameter_detail>
+					<parameter_type>input</parameter_type>
+					<parameter_values>62,63,64</parameter_values>
+					<parameter_value_names></parameter_value_names>
+					<parameter_default></parameter_default>
+				</special_parameter>
+			</xml_parameters>
+		</objects>
+	</fuseaction>
+	<fuseaction>
+		<fuseaction_definition>Talep Detay</fuseaction_definition>
+		<fuseaction_keyword>Talep Detayı</fuseaction_keyword>
+		<fuseaction_title>Style Turkish</fuseaction_title>
+		<fuseaction_name>worknet.dsp_demand</fuseaction_name>
+		<fuseaction_userfriendly></fuseaction_userfriendly>
+		<objects>
+			<id>objects1</id>
+			<class_name></class_name>
+			<include>/worknet/objects/dsp_demand.cfm</include>
+			<path></path>
+			<width></width>
+			<top>0px</top>
+			<left>0px</left>
+		</objects>
+		<objects>
+			<id>objects2</id>
+			<class_name></class_name>
+			<include>/worknet/objects/firm_info.cfm</include>
+			<path></path>
+			<width></width>
+			<top>0px</top>
+			<left>0px</left>
+		</objects>
+	</fuseaction>
+	<fuseaction>
+		<fuseaction_definition>Ürünler</fuseaction_definition>
+		<fuseaction_keyword>Ürünler</fuseaction_keyword>
+		<fuseaction_title>Style Turkish Ürünler</fuseaction_title>
+		<fuseaction_name>worknet.list_product</fuseaction_name>
+		<fuseaction_userfriendly>list_product</fuseaction_userfriendly>
+		<objects>
+			<id>objects1</id>
+			<class_name></class_name>
+			<include>/worknet/objects/list_product.cfm</include>
+			<path></path>
+			<width></width>
+			<top>0px</top>
+			<left>0px</left>
+			<xml_parameters>
+				<special_parameter>
+					<parameter_name>content_head_id</parameter_name>
+					<parameter_detail>Ürün Kurallar</parameter_detail>
+					<parameter_type>input</parameter_type>
+					<parameter_values></parameter_values>
+					<parameter_value_names></parameter_value_names>
+					<parameter_default></parameter_default>
+				</special_parameter>
+			</xml_parameters>
+		</objects>
+	</fuseaction>
+	<fuseaction>
+		<fuseaction_definition>Ürünlerim</fuseaction_definition>
+		<fuseaction_keyword>Ürünlerim</fuseaction_keyword>
+		<fuseaction_title>Style Turkish Ürünlerim</fuseaction_title>
+		<fuseaction_name>worknet.my_product</fuseaction_name>
+		<fuseaction_userfriendly>my_product</fuseaction_userfriendly>
+		<objects>
+			<id>objects1</id>
+			<class_name></class_name>
+			<include>/worknet/objects/my_product.cfm</include>
+			<path></path>
+			<width></width>
+			<top>0px</top>
+			<left>0px</left>
+		</objects>
+	</fuseaction>
+	<fuseaction>
+		<fuseaction_definition>Ürün Ekle</fuseaction_definition>
+		<fuseaction_keyword>Ürün Ekle</fuseaction_keyword>
+		<fuseaction_title>Style Turkish Ürün Ekle</fuseaction_title>
+		<fuseaction_name>worknet.add_product</fuseaction_name>
+		<fuseaction_userfriendly>add_product</fuseaction_userfriendly>
+		<objects>
+			<id>objects1</id>
+			<class_name></class_name>
+			<include>/worknet/objects/add_product.cfm</include>
+			<path></path>
+			<width></width>
+			<top>0px</top>
+			<left>0px</left>
+			<xml_parameters>
+				<special_parameter>
+					<parameter_name>info_content_id</parameter_name>
+					<parameter_detail>Bilgilendirme İçerik ID</parameter_detail>
+					<parameter_type>input</parameter_type>
+					<parameter_values>62,63,64</parameter_values>
+					<parameter_value_names></parameter_value_names>
+					<parameter_default></parameter_default>
+				</special_parameter>
+			</xml_parameters>
+		</objects>
+	</fuseaction>
+	<fuseaction>
+		<fuseaction_definition>Ürün Detay</fuseaction_definition>
+		<fuseaction_keyword>Ürün Detay</fuseaction_keyword>
+		<fuseaction_title>Style Turkish Ürün Detay</fuseaction_title>
+		<fuseaction_name>worknet.dsp_product</fuseaction_name>
+		<fuseaction_userfriendly></fuseaction_userfriendly>
+		<objects>
+			<id></id>
+			<class_name></class_name>
+			<include>/worknet/objects/dsp_product.cfm</include>
+			<path></path>
+			<width></width>
+			<top>0px</top>
+			<left>0px</left>
+		</objects>
+	</fuseaction>
+	<fuseaction>
+		<fuseaction_definition>Ürün Düzenle</fuseaction_definition>
+		<fuseaction_keyword>Ürün Düzenle</fuseaction_keyword>
+		<fuseaction_title>Style Turkish Ürün Düzenle</fuseaction_title>
+		<fuseaction_name>worknet.detail_product</fuseaction_name>
+		<fuseaction_userfriendly></fuseaction_userfriendly>
+		<objects>
+			<id></id>
+			<class_name></class_name>
+			<include>/worknet/objects/detail_product.cfm</include>
+			<path></path>
+			<width></width>
+			<top>0px</top>
+			<left>0px</left>
+			<xml_parameters>
+				<special_parameter>
+					<parameter_name>info_content_id</parameter_name>
+					<parameter_detail>Bilgi İçerik ID</parameter_detail>
+					<parameter_type>input</parameter_type>
+					<parameter_values>62,63,64</parameter_values>
+					<parameter_value_names></parameter_value_names>
+					<parameter_default></parameter_default>
+				</special_parameter>
+			</xml_parameters>
+		</objects>
+	</fuseaction>
+	<fuseaction>
+		<fuseaction_definition>Video Detay</fuseaction_definition>
+		<fuseaction_keyword>Video Detay</fuseaction_keyword>
+		<fuseaction_title>Video Detay</fuseaction_title>
+		<fuseaction_name>worknet.detail_video</fuseaction_name>
+		<fuseaction_userfriendly></fuseaction_userfriendly>
+		<objects>
+			<id>objects1</id>
+			<class_name></class_name>
+			<include>/worknet/objects/detail_video.cfm</include>
+			<path></path>
+			<width></width>
+			<top>0px</top>
+			<left>0px</left>
+		</objects>
+	</fuseaction>
+	<fuseaction>
+		<fuseaction_definition>Kontak Kişilerim</fuseaction_definition>
+		<fuseaction_keyword>Kontak Kişilerim</fuseaction_keyword>
+		<fuseaction_title>Kontak Kişilerim</fuseaction_title>
+		<fuseaction_name>worknet.contact_list</fuseaction_name>
+		<fuseaction_userfriendly>contact_list</fuseaction_userfriendly>
+		<objects>
+			<id>objects1</id>
+			<class_name></class_name>
+			<include>/worknet/objects/list_partner.cfm</include>
+			<path></path>
+			<width></width>
+			<top>0px</top>
+			<left>0px</left>
+		</objects>
+	</fuseaction>
+	<fuseaction>
+		<fuseaction_definition>Kontak Kişilerime Ekle</fuseaction_definition>
+		<fuseaction_keyword>Kontak Kişilerime Ekle</fuseaction_keyword>
+		<fuseaction_title>Kontak Kişilerime Ekle</fuseaction_title>
+		<fuseaction_name>worknet.emptypopup_add_contact</fuseaction_name>
+		<fuseaction_userfriendly></fuseaction_userfriendly>
+		<objects>
+			<id>objects1</id>
+			<class_name></class_name>
+			<include>/worknet/query/add_contact.cfm</include>
+			<path></path>
+			<width></width>
+			<top>0px</top>
+			<left>0px</left>
+		</objects>
+	</fuseaction>
+	<fuseaction>
+		<fuseaction_definition>İletişim</fuseaction_definition>
+		<fuseaction_keyword>İletişim</fuseaction_keyword>
+		<fuseaction_title>İletişim</fuseaction_title>
+		<fuseaction_name>worknet.contact</fuseaction_name>
+		<fuseaction_userfriendly>contact</fuseaction_userfriendly>
+		<objects>
+			<id>objects1</id>
+			<class_name></class_name>
+			<include>/worknet/objects/contact.cfm</include>
+			<path></path>
+			<width></width>
+			<top>0px</top>
+			<left>0px</left>
+		</objects>
+	</fuseaction>
+	<fuseaction>
+		<fuseaction_definition>Katalog Ekle</fuseaction_definition>
+		<fuseaction_keyword>Katalog Ekle</fuseaction_keyword>
+		<fuseaction_title>Style Turkish Katalog Ekle</fuseaction_title>
+		<fuseaction_name>worknet.form_catalog</fuseaction_name>
+		<fuseaction_userfriendly>form_catalog</fuseaction_userfriendly>
+		<objects>
+			<id>objects1</id>
+			<class_name></class_name>
+			<include>/worknet/objects/form_catalog.cfm</include>
+			<path></path>
+			<width></width>
+			<top>0px</top>
+			<left>0px</left>
+			<xml_parameters>
+				<special_parameter>
+					<parameter_name>info_content_id</parameter_name>
+					<parameter_detail>İmaj Bilgi İçerik ID</parameter_detail>
+					<parameter_type>input</parameter_type>
+					<parameter_values>62,63,64</parameter_values>
+					<parameter_value_names></parameter_value_names>
+					<parameter_default></parameter_default>
+				</special_parameter>
+				<special_parameter>
+					<parameter_name>info_content_id_2</parameter_name>
+					<parameter_detail>Belge Bilgi İçerik ID</parameter_detail>
+					<parameter_type>input</parameter_type>
+					<parameter_values>177,178,179</parameter_values>
+					<parameter_value_names></parameter_value_names>
+					<parameter_default></parameter_default>
+				</special_parameter>
+			</xml_parameters>
+		</objects>
+	</fuseaction>
+	<fuseaction>
+		<fuseaction_definition>Katalog Ekle Action</fuseaction_definition>
+		<fuseaction_keyword>Katalog Ekle Action</fuseaction_keyword>
+		<fuseaction_title>Style Turkish Katalog Ekle Action</fuseaction_title>
+		<fuseaction_name>worknet.emptypopup_query_catalog</fuseaction_name>
+		<fuseaction_userfriendly></fuseaction_userfriendly>
+		<objects>
+			<id>objects1</id>
+			<class_name></class_name>
+			<include>/worknet/objects/query_catalog.cfm</include>
+			<path></path>
+			<width></width>
+			<top>0px</top>
+			<left>0px</left>
+		</objects>
+	</fuseaction>
+	<fuseaction>
+		<fuseaction_definition>Katalog Detay</fuseaction_definition>
+		<fuseaction_keyword>Katalog Detay</fuseaction_keyword>
+		<fuseaction_title>Style Turkish Katalog Detay</fuseaction_title>
+		<fuseaction_name>worknet.dsp_catalog</fuseaction_name>
+		<fuseaction_userfriendly></fuseaction_userfriendly>
+		<objects>
+			<id></id>
+			<class_name></class_name>
+			<include>/worknet/objects/dsp_catalog.cfm</include>
+			<path></path>
+			<width></width>
+			<top>0px</top>
+			<left>0px</left>
+		</objects>
+	</fuseaction>
+	<fuseaction>
+		<fuseaction_definition>Mesaj Gönder</fuseaction_definition>
+		<fuseaction_keyword>Mesaj Gönder</fuseaction_keyword>
+		<fuseaction_title>Style Turkish Mesaj Gönder</fuseaction_title>
+		<fuseaction_name>worknet.sent_message</fuseaction_name>
+		<fuseaction_userfriendly>sent_message</fuseaction_userfriendly>
+		<objects>
+			<id>objects1</id>
+			<class_name></class_name>
+			<include>/worknet/objects/sent_message.cfm</include>
+			<path></path>
+			<width></width>
+			<top>0px</top>
+			<left>0px</left>
+		</objects>
+	</fuseaction>
+	<fuseaction>
+		<fuseaction_definition>Mesaj Gönder</fuseaction_definition>
+		<fuseaction_keyword>Mesaj Gönder</fuseaction_keyword>
+		<fuseaction_title>Style Turkish Mesaj Gönder</fuseaction_title>
+		<fuseaction_name>worknet.popup_sent_message</fuseaction_name>
+		<fuseaction_userfriendly>popup_sent_message</fuseaction_userfriendly>
+		<objects>
+			<id>objects1</id>
+			<class_name></class_name>
+			<include>/worknet/objects/sent_message.cfm</include>
+			<path></path>
+			<width></width>
+			<top>0px</top>
+			<left>0px</left>
+		</objects>
+	</fuseaction>
+	<fuseaction>
+		<fuseaction_definition>Mesaj Gönder Action</fuseaction_definition>
+		<fuseaction_keyword>Mesaj Gönder Action</fuseaction_keyword>
+		<fuseaction_title>Style Turkish Mesaj Gönder Action</fuseaction_title>
+		<fuseaction_name>worknet.emptypopup_query_message</fuseaction_name>
+		<fuseaction_userfriendly></fuseaction_userfriendly>
+		<objects>
+			<id>objects1</id>
+			<class_name></class_name>
+			<include>/worknet/objects/query_message.cfm</include>
+			<path></path>
+			<width></width>
+			<top>0px</top>
+			<left>0px</left>
+		</objects>
+	</fuseaction>
+	<fuseaction>
+		<fuseaction_definition>Gelen Mesajlar</fuseaction_definition>
+		<fuseaction_keyword>Gelen Mesajlar</fuseaction_keyword>
+		<fuseaction_title>Style Turkish Gelen Mesajlar</fuseaction_title>
+		<fuseaction_name>worknet.inbox</fuseaction_name>
+		<fuseaction_userfriendly>inbox</fuseaction_userfriendly>
+		<objects>
+			<id>objects1</id>
+			<class_name></class_name>
+			<include>/worknet/objects/list_messages.cfm</include>
+			<path></path>
+			<width></width>
+			<top>0px</top>
+			<left>0px</left>
+			<xml_parameters>
+				<special_parameter>
+					<parameter_name>type</parameter_name>
+					<parameter_detail>Mesaj Type</parameter_detail>
+					<parameter_type>input</parameter_type>
+					<parameter_values>inbox</parameter_values>
+					<parameter_value_names></parameter_value_names>
+					<parameter_default></parameter_default>
+				</special_parameter>
+			</xml_parameters>
+		</objects>
+	</fuseaction>
+	<fuseaction>
+		<fuseaction_definition>Gönderilen Mesajlar</fuseaction_definition>
+		<fuseaction_keyword>Gönderilen Mesajlar</fuseaction_keyword>
+		<fuseaction_title>Style Turkish Gönderilen Mesajlar</fuseaction_title>
+		<fuseaction_name>worknet.sentbox</fuseaction_name>
+		<fuseaction_userfriendly>sentbox</fuseaction_userfriendly>
+		<objects>
+			<id>objects1</id>
+			<class_name></class_name>
+			<include>/worknet/objects/list_messages.cfm</include>
+			<path></path>
+			<width></width>
+			<top>0px</top>
+			<left>0px</left>
+			<xml_parameters>
+				<special_parameter>
+					<parameter_name>type</parameter_name>
+					<parameter_detail>Mesaj Type</parameter_detail>
+					<parameter_type>input</parameter_type>
+					<parameter_values>sentbox</parameter_values>
+					<parameter_value_names></parameter_value_names>
+					<parameter_default></parameter_default>
+				</special_parameter>
+			</xml_parameters>
+		</objects>
+	</fuseaction>
+	<fuseaction>
+		<fuseaction_definition>Silinen Mesajlar</fuseaction_definition>
+		<fuseaction_keyword>Silinen Mesajlar</fuseaction_keyword>
+		<fuseaction_title>Style Turkish Silinen Mesajlar</fuseaction_title>
+		<fuseaction_name>worknet.trash</fuseaction_name>
+		<fuseaction_userfriendly>trash</fuseaction_userfriendly>
+		<objects>
+			<id>objects1</id>
+			<class_name></class_name>
+			<include>/worknet/objects/list_messages.cfm</include>
+			<path></path>
+			<width></width>
+			<top>0px</top>
+			<left>0px</left>
+			<xml_parameters>
+				<special_parameter>
+					<parameter_name>type</parameter_name>
+					<parameter_detail>Mesaj Type</parameter_detail>
+					<parameter_type>input</parameter_type>
+					<parameter_values>trash</parameter_values>
+					<parameter_value_names></parameter_value_names>
+					<parameter_default></parameter_default>
+				</special_parameter>
+			</xml_parameters>
+		</objects>
+	</fuseaction>
+	<fuseaction>
+		<fuseaction_definition>Mesaj Detay</fuseaction_definition>
+		<fuseaction_keyword>Mesaj Detay</fuseaction_keyword>
+		<fuseaction_title>Style Turkish Mesaj Detay</fuseaction_title>
+		<fuseaction_name>worknet.dsp_message</fuseaction_name>
+		<fuseaction_userfriendly>dsp_message</fuseaction_userfriendly>
+		<objects>
+			<id>objects1</id>
+			<class_name></class_name>
+			<include>/worknet/objects/dsp_message.cfm</include>
+			<path></path>
+			<width></width>
+			<top>0px</top>
+			<left>0px</left>
+		</objects>
+	</fuseaction>
+	<fuseaction>
+		<fuseaction_definition>Video Konferans</fuseaction_definition>
+		<fuseaction_keyword>Video Konferans</fuseaction_keyword>
+		<fuseaction_title>Style Turkish Video Konferans</fuseaction_title>
+		<fuseaction_name>worknet.popup_video_conferans</fuseaction_name>
+		<fuseaction_userfriendly></fuseaction_userfriendly>
+		<objects>
+			<id>objects1</id>
+			<class_name></class_name>
+			<include>/worknet/objects/video_conferans.cfm</include>
+			<path></path>
+			<width></width>
+			<top>0px</top>
+			<left>0px</left>
+		</objects>
+	</fuseaction>
+	<fuseaction>
+		<fuseaction_definition>Raporlar</fuseaction_definition>
+		<fuseaction_keyword>Style Turkish Raporlar</fuseaction_keyword>
+		<fuseaction_title>Style Turkish Raporlar</fuseaction_title>
+		<fuseaction_name>worknet.Raporlar</fuseaction_name>
+		<fuseaction_userfriendly>Raporlar</fuseaction_userfriendly>
+		<objects>
+			<id>objects1</id>
+			<class_name></class_name>
+			<include>/worknet/objects/list_content.cfm</include>
+			<path></path>
+			<width></width>
+			<top>0px</top>
+			<left>0px</left>
+			<xml_parameters>
+				<special_parameter>
+					<parameter_name>contentCatId</parameter_name>
+					<parameter_detail>İçerik Kategori ID si</parameter_detail>
+					<parameter_type>input</parameter_type>
+					<parameter_values></parameter_values>
+					<parameter_value_names></parameter_value_names>
+					<parameter_default></parameter_default>
+				</special_parameter>
+				<special_parameter>
+					<parameter_name>contentChapterId</parameter_name>
+					<parameter_detail>İçerik Bölüm ID si</parameter_detail>
+					<parameter_type>input</parameter_type>
+					<parameter_values>8</parameter_values>
+					<parameter_value_names></parameter_value_names>
+					<parameter_default></parameter_default>
+				</special_parameter>
+			</xml_parameters>
+		</objects>
+	</fuseaction>
+	<fuseaction>
+		<fuseaction_definition>İstatistikler</fuseaction_definition>
+		<fuseaction_keyword>Style Turkish İstatistikler</fuseaction_keyword>
+		<fuseaction_title>Style Turkish İstatistikler</fuseaction_title>
+		<fuseaction_name>worknet.istatistikler</fuseaction_name>
+		<fuseaction_userfriendly>istatistikler</fuseaction_userfriendly>
+		<objects>
+			<id>objects1</id>
+			<class_name></class_name>
+			<include>/worknet/objects/list_content.cfm</include>
+			<path></path>
+			<width></width>
+			<top>0px</top>
+			<left>0px</left>
+			<xml_parameters>
+				<special_parameter>
+					<parameter_name>contentCatId</parameter_name>
+					<parameter_detail>İçerik Kategori ID si</parameter_detail>
+					<parameter_type>input</parameter_type>
+					<parameter_values></parameter_values>
+					<parameter_value_names></parameter_value_names>
+					<parameter_default></parameter_default>
+				</special_parameter>
+				<special_parameter>
+					<parameter_name>contentChapterId</parameter_name>
+					<parameter_detail>İçerik Bölüm ID si</parameter_detail>
+					<parameter_type>input</parameter_type>
+					<parameter_values>9</parameter_values>
+					<parameter_value_names></parameter_value_names>
+					<parameter_default></parameter_default>
+				</special_parameter>
+			</xml_parameters>
+		</objects>
+	</fuseaction>
+	<fuseaction>
+		<fuseaction_definition>Dokumanlar</fuseaction_definition>
+		<fuseaction_keyword>Style Turkish Dokumanlar</fuseaction_keyword>
+		<fuseaction_title>Style Turkish Dokumanlar</fuseaction_title>
+		<fuseaction_name>worknet.dokumanlar</fuseaction_name>
+		<fuseaction_userfriendly>dokumanlar</fuseaction_userfriendly>
+		<objects>
+			<id>objects1</id>
+			<class_name></class_name>
+			<include>/worknet/objects/list_content.cfm</include>
+			<path></path>
+			<width></width>
+			<top>0px</top>
+			<left>0px</left>
+			<xml_parameters>
+				<special_parameter>
+					<parameter_name>contentCatId</parameter_name>
+					<parameter_detail>İçerik Kategori ID si</parameter_detail>
+					<parameter_type>input</parameter_type>
+					<parameter_values></parameter_values>
+					<parameter_value_names></parameter_value_names>
+					<parameter_default></parameter_default>
+				</special_parameter>
+				<special_parameter>
+					<parameter_name>contentChapterId</parameter_name>
+					<parameter_detail>İçerik Bölüm ID si</parameter_detail>
+					<parameter_type>input</parameter_type>
+					<parameter_values>10</parameter_values>
+					<parameter_value_names></parameter_value_names>
+					<parameter_default></parameter_default>
+				</special_parameter>
+			</xml_parameters>
+		</objects>
+	</fuseaction>
+	<fuseaction>
+		<fuseaction_definition>Haberler</fuseaction_definition>
+		<fuseaction_keyword>Style Turkish Haberler</fuseaction_keyword>
+		<fuseaction_title>Style Turkish Haberler</fuseaction_title>
+		<fuseaction_name>worknet.haberler</fuseaction_name>
+		<fuseaction_userfriendly>haberler</fuseaction_userfriendly>
+		<objects>
+			<id>objects1</id>
+			<class_name></class_name>
+			<include>/worknet/objects/list_content.cfm</include>
+			<path></path>
+			<width></width>
+			<top>0px</top>
+			<left>0px</left>
+			<xml_parameters>
+				<special_parameter>
+					<parameter_name>contentCatId</parameter_name>
+					<parameter_detail>İçerik Kategori ID si</parameter_detail>
+					<parameter_type>input</parameter_type>
+					<parameter_values>4</parameter_values>
+					<parameter_value_names></parameter_value_names>
+					<parameter_default></parameter_default>
+				</special_parameter>
+				<special_parameter>
+					<parameter_name>contentChapterId</parameter_name>
+					<parameter_detail>İçerik Bölüm ID si</parameter_detail>
+					<parameter_type>input</parameter_type>
+					<parameter_values></parameter_values>
+					<parameter_value_names></parameter_value_names>
+					<parameter_default></parameter_default>
+				</special_parameter>
+			</xml_parameters>
+		</objects>
+	</fuseaction>
+	<fuseaction>
+		<fuseaction_definition>Duyurular</fuseaction_definition>
+		<fuseaction_keyword>Style Turkish Duyurular</fuseaction_keyword>
+		<fuseaction_title>Style Turkish Duyurular</fuseaction_title>
+		<fuseaction_name>worknet.duyurular</fuseaction_name>
+		<fuseaction_userfriendly>duyurular</fuseaction_userfriendly>
+		<objects>
+			<id>objects1</id>
+			<class_name></class_name>
+			<include>/worknet/objects/list_content.cfm</include>
+			<path></path>
+			<width></width>
+			<top>0px</top>
+			<left>0px</left>
+			<xml_parameters>
+				<special_parameter>
+					<parameter_name>contentCatId</parameter_name>
+					<parameter_detail>İçerik Kategori ID si</parameter_detail>
+					<parameter_type>input</parameter_type>
+					<parameter_values>1</parameter_values>
+					<parameter_value_names></parameter_value_names>
+					<parameter_default></parameter_default>
+				</special_parameter>
+				<special_parameter>
+					<parameter_name>contentChapterId</parameter_name>
+					<parameter_detail>İçerik Bölüm ID si</parameter_detail>
+					<parameter_type>input</parameter_type>
+					<parameter_values></parameter_values>
+					<parameter_value_names></parameter_value_names>
+					<parameter_default></parameter_default>
+				</special_parameter>
+			</xml_parameters>
+		</objects>
+	</fuseaction>
+	<fuseaction>
+		<fuseaction_definition>Tekliflerim</fuseaction_definition>
+		<fuseaction_keyword>Tekliflerim</fuseaction_keyword>
+		<fuseaction_title>Style Turkish Teklifler</fuseaction_title>
+		<fuseaction_name>worknet.my_offers</fuseaction_name>
+		<fuseaction_userfriendly>my_offers</fuseaction_userfriendly>
+		<objects>
+			<id>objects1</id>
+			<class_name></class_name>
+			<include>/worknet/objects/my_offers.cfm</include>
+			<path></path>
+			<width></width>
+			<top>0px</top>
+			<left>0px</left>
+		</objects>
+	</fuseaction>
+	<fuseaction>
+		<fuseaction_definition>Videolar</fuseaction_definition>
+		<fuseaction_keyword>Videolar</fuseaction_keyword>
+		<fuseaction_title>Style Turkish Videolar</fuseaction_title>
+		<fuseaction_name>worknet.list_videos</fuseaction_name>
+		<fuseaction_userfriendly>list_videos</fuseaction_userfriendly>
+		<objects>
+			<id>objects1</id>
+			<class_name></class_name>
+			<include>/worknet/objects/list_videos.cfm</include>
+			<path></path>
+			<width></width>
+			<top>0px</top>
+			<left>0px</left>
+		</objects>
+	</fuseaction>
+	<fuseaction>
+		<fuseaction_definition>Devam Eden Projeler</fuseaction_definition>
+		<fuseaction_keyword>Style Turkish Devam Eden Projeler</fuseaction_keyword>
+		<fuseaction_title>Style Turkish Devam Eden Projeler</fuseaction_title>
+		<fuseaction_name>worknet.active_projects</fuseaction_name>
+		<fuseaction_userfriendly>active_projects</fuseaction_userfriendly>
+		<objects>
+			<id>objects1</id>
+			<class_name></class_name>
+			<include>/worknet/objects/list_content.cfm</include>
+			<path></path>
+			<width></width>
+			<top>0px</top>
+			<left>0px</left>
+			<xml_parameters>
+				<special_parameter>
+					<parameter_name>contentCatId</parameter_name>
+					<parameter_detail>İçerik Kategori ID si</parameter_detail>
+					<parameter_type>input</parameter_type>
+					<parameter_values>6</parameter_values>
+					<parameter_value_names></parameter_value_names>
+					<parameter_default></parameter_default>
+				</special_parameter>
+				<special_parameter>
+					<parameter_name>contentChapterId</parameter_name>
+					<parameter_detail>İçerik Bölüm ID si</parameter_detail>
+					<parameter_type>input</parameter_type>
+					<parameter_values></parameter_values>
+					<parameter_value_names></parameter_value_names>
+					<parameter_default></parameter_default>
+				</special_parameter>
+			</xml_parameters>
+		</objects>
+	</fuseaction>
+	<fuseaction>
+		<fuseaction_definition>Biten Projeler</fuseaction_definition>
+		<fuseaction_keyword>Style Turkish Biten Projeler</fuseaction_keyword>
+		<fuseaction_title>Style Turkish Biten Projeler</fuseaction_title>
+		<fuseaction_name>worknet.finished_projects</fuseaction_name>
+		<fuseaction_userfriendly>finished_projects</fuseaction_userfriendly>
+		<objects>
+			<id>objects1</id>
+			<class_name></class_name>
+			<include>/worknet/objects/list_content.cfm</include>
+			<path></path>
+			<width></width>
+			<top>0px</top>
+			<left>0px</left>
+			<xml_parameters>
+				<special_parameter>
+					<parameter_name>contentCatId</parameter_name>
+					<parameter_detail>İçerik Kategori ID si</parameter_detail>
+					<parameter_type>input</parameter_type>
+					<parameter_values>15</parameter_values>
+					<parameter_value_names></parameter_value_names>
+					<parameter_default></parameter_default>
+				</special_parameter>
+				<special_parameter>
+					<parameter_name>contentChapterId</parameter_name>
+					<parameter_detail>İçerik Bölüm ID si</parameter_detail>
+					<parameter_type>input</parameter_type>
+					<parameter_values></parameter_values>
+					<parameter_value_names></parameter_value_names>
+					<parameter_default></parameter_default>
+				</special_parameter>
+			</xml_parameters>
+		</objects>
+	</fuseaction>
+	<fuseaction>
+		<fuseaction_definition>Şikayet Et</fuseaction_definition>
+		<fuseaction_keyword>Style Turkish Şikayet Et</fuseaction_keyword>
+		<fuseaction_title>Style Turkish Şikayet Et</fuseaction_title>
+		<fuseaction_name>worknet.popup_add_help</fuseaction_name>
+		<fuseaction_userfriendly>popup_add_help</fuseaction_userfriendly>
+		<objects>
+			<id>objects1</id>
+			<class_name></class_name>
+			<include>/worknet/objects/add_help.cfm</include>
+			<path></path>
+			<width></width>
+			<top>0px</top>
+			<left>0px</left>
+			<xml_parameters>
+				<special_parameter>
+					<parameter_name>is_security</parameter_name>
+					<parameter_detail>Güvenlik Kodu Gelsin</parameter_detail>
+					<parameter_type>select</parameter_type>
+					<parameter_values>1,0</parameter_values>
+					<parameter_value_names>Evet,Hayır</parameter_value_names>
+					<parameter_default>1</parameter_default>
+				</special_parameter>
+				<special_parameter>
+					<parameter_name>cat_id</parameter_name>
+					<parameter_detail>Default Kategori Id</parameter_detail>
+					<parameter_type>input</parameter_type>
+					<parameter_values>1</parameter_values>
+					<parameter_value_names></parameter_value_names>
+					<parameter_default>1</parameter_default>
+				</special_parameter>
+			</xml_parameters>
+		</objects>
+	</fuseaction>
+	<fuseaction>
+		<fuseaction_definition>Kataloglar</fuseaction_definition>
+		<fuseaction_keyword>Kataloglar</fuseaction_keyword>
+		<fuseaction_title>Style TurkishKataloglar</fuseaction_title>
+		<fuseaction_name>worknet.list_catalog</fuseaction_name>
+		<fuseaction_userfriendly>list_catalog</fuseaction_userfriendly>
+		<objects>
+			<id>objects1</id>
+			<class_name></class_name>
+			<include>/worknet/objects/list_product.cfm</include>
+			<path></path>
+			<width></width>
+			<top>0px</top>
+			<left>0px</left>
+		</objects>
+	</fuseaction>
+	<fuseaction>
+		<fuseaction_definition>Kataloglarım</fuseaction_definition>
+		<fuseaction_keyword>Kataloglarım</fuseaction_keyword>
+		<fuseaction_title>Style Turkish Kataloglarım</fuseaction_title>
+		<fuseaction_name>worknet.my_catalog</fuseaction_name>
+		<fuseaction_userfriendly>my_catalog</fuseaction_userfriendly>
+		<objects>
+			<id>objects1</id>
+			<class_name></class_name>
+			<include>/worknet/objects/my_product.cfm</include>
+			<path></path>
+			<width></width>
+			<top>0px</top>
+			<left>0px</left>
+		</objects>
+	</fuseaction>
+	<fuseaction>
+		<fuseaction_definition>Kişiler</fuseaction_definition>
+		<fuseaction_keyword>Kişiler</fuseaction_keyword>
+		<fuseaction_title>Style Turkish</fuseaction_title>
+		<fuseaction_name>worknet.list_partner</fuseaction_name>
+		<fuseaction_userfriendly>list_partner</fuseaction_userfriendly>
+		<objects>
+			<id>objects1</id>
+			<class_name></class_name>
+			<include>/worknet/objects/list_partner.cfm</include>
+			<path></path>
+			<width></width>
+			<top>0px</top>
+			<left>0px</left>
+		</objects>
+	</fuseaction>
+	<fuseaction>
+		<fuseaction_definition>Kontalarım popup</fuseaction_definition>
+		<fuseaction_keyword>Kontaklarım</fuseaction_keyword>
+		<fuseaction_title>Style Turkish</fuseaction_title>
+		<fuseaction_name>worknet.popup_contact_list</fuseaction_name>
+		<fuseaction_userfriendly>popup_contact_list</fuseaction_userfriendly>
+		<objects>
+			<id>objects1</id>
+			<class_name></class_name>
+			<include>/worknet/objects/contact_list.cfm</include>
+			<path></path>
+			<width></width>
+			<top>0px</top>
+			<left>0px</left>
+		</objects>
+	</fuseaction>
+	<fuseaction>
+		<fuseaction_definition>Güncel Eğitimler</fuseaction_definition>
+		<fuseaction_keyword>Güncel Eğitimler</fuseaction_keyword>
+		<fuseaction_title>Style Turkish Güncel Eğitimler</fuseaction_title>
+		<fuseaction_name>worknet.list_training</fuseaction_name>
+		<fuseaction_userfriendly>list_training</fuseaction_userfriendly>
+		<objects>
+			<id>objects1</id>
+			<class_name></class_name>
+			<include>/worknet/objects/list_training.cfm</include>
+			<path></path>
+			<width></width>
+			<top>0px</top>
+			<left>0px</left>
+			<xml_parameters>
+				<special_parameter>
+					<parameter_name>training_type</parameter_name>
+					<parameter_detail>Eğitim Türü</parameter_detail>
+					<parameter_type>input</parameter_type>
+					<parameter_values>0</parameter_values>
+					<parameter_value_names></parameter_value_names>
+					<parameter_default></parameter_default>
+				</special_parameter>
+				<special_parameter>
+					<parameter_name>content_head_id</parameter_name>
+					<parameter_detail>İçerik ID</parameter_detail>
+					<parameter_type>input</parameter_type>
+					<parameter_values>122</parameter_values>
+					<parameter_value_names></parameter_value_names>
+					<parameter_default></parameter_default>
+				</special_parameter>
+			</xml_parameters>
+		</objects>
+	</fuseaction>
+	<fuseaction>
+		<fuseaction_definition>Online Eğitimler</fuseaction_definition>
+		<fuseaction_keyword>Online Eğitimler</fuseaction_keyword>
+		<fuseaction_title>Style Turkish Güncel Eğitimler</fuseaction_title>
+		<fuseaction_name>worknet.online_training</fuseaction_name>
+		<fuseaction_userfriendly>online_training</fuseaction_userfriendly>
+		<objects>
+			<id>objects1</id>
+			<class_name></class_name>
+			<include>/worknet/objects/list_training.cfm</include>
+			<path></path>
+			<width></width>
+			<top>0px</top>
+			<left>0px</left>
+			<xml_parameters>
+				<special_parameter>
+					<parameter_name>training_type</parameter_name>
+					<parameter_detail>Eğitim Türü</parameter_detail>
+					<parameter_type>input</parameter_type>
+					<parameter_values>1</parameter_values>
+					<parameter_value_names></parameter_value_names>
+					<parameter_default></parameter_default>
+				</special_parameter>
+				<special_parameter>
+					<parameter_name>content_head_id</parameter_name>
+					<parameter_detail>İçerik ID</parameter_detail>
+					<parameter_type>input</parameter_type>
+					<parameter_values>122</parameter_values>
+					<parameter_value_names></parameter_value_names>
+					<parameter_default></parameter_default>
+				</special_parameter>
+			</xml_parameters>
+		</objects>
+	</fuseaction>
+	<fuseaction>
+		<fuseaction_definition>Aldığım Eğitimler</fuseaction_definition>
+		<fuseaction_keyword>Aldığım Eğitimler</fuseaction_keyword>
+		<fuseaction_title>Style Turkish Aldığım Eğitimler</fuseaction_title>
+		<fuseaction_name>worknet.my_training</fuseaction_name>
+		<fuseaction_userfriendly>my_training</fuseaction_userfriendly>
+		<objects>
+			<id>objects1</id>
+			<class_name></class_name>
+			<include>/worknet/objects/my_training.cfm</include>
+			<path></path>
+			<width></width>
+			<top>0px</top>
+			<left>0px</left>
+		</objects>
+	</fuseaction>
+	<fuseaction>
+		<fuseaction_definition>Eğitim Detayları</fuseaction_definition>
+		<fuseaction_keyword>Eğitim Detayları</fuseaction_keyword>
+		<fuseaction_title>Style Turkish Eğitim Detayları</fuseaction_title>
+		<fuseaction_name>worknet.dsp_training</fuseaction_name>
+		<fuseaction_userfriendly>dsp_training</fuseaction_userfriendly>
+		<objects>
+			<id>objects1</id>
+			<class_name></class_name>
+			<include>/worknet/objects/dsp_training.cfm</include>
+			<path></path>
+			<width></width>
+			<top>0px</top>
+			<left>0px</left>
+		</objects>
+	</fuseaction>
+	<fuseaction>
+		<fuseaction_definition>Eğitim Önerisi Gönder</fuseaction_definition>
+		<fuseaction_keyword>Eğitim Önerisi Gönder</fuseaction_keyword>
+		<fuseaction_title>Style Turkish Eğitim Önerisi Gönder</fuseaction_title>
+		<fuseaction_name>worknet.popup_add_training_suggested</fuseaction_name>
+		<fuseaction_userfriendly>popup_add_training_suggested</fuseaction_userfriendly>
+		<objects>
+			<id>objects1</id>
+			<class_name></class_name>
+			<include>/worknet/objects/add_training_suggested.cfm</include>
+			<path></path>
+			<width></width>
+			<top>0px</top>
+			<left>0px</left>
+		</objects>
+	</fuseaction>
+	<fuseaction>
+		<fuseaction_definition>Eğitim Önerileri</fuseaction_definition>
+		<fuseaction_keyword>Eğitim Önerileri</fuseaction_keyword>
+		<fuseaction_title>Style Turkish Eğitim Önerileri</fuseaction_title>
+		<fuseaction_name>worknet.training_recommendations</fuseaction_name>
+		<fuseaction_userfriendly>training_recommendations</fuseaction_userfriendly>
+		<objects>
+			<id>objects1</id>
+			<class_name></class_name>
+			<include>/worknet/objects/training_recommendations.cfm</include>
+			<path></path>
+			<width></width>
+			<top>0px</top>
+			<left>0px</left>
+		</objects>
+	</fuseaction>
+	<fuseaction>
+		<fuseaction_definition>Eğitim White Board</fuseaction_definition>
+		<fuseaction_keyword>Eğitim White Board</fuseaction_keyword>
+		<fuseaction_title>Style Turkish Eğitim White Board</fuseaction_title>
+		<fuseaction_name>worknet.popup_online_white_board</fuseaction_name>
+		<fuseaction_userfriendly>popup_online_white_board</fuseaction_userfriendly>
+		<objects>
+			<id>objects1</id>
+			<class_name></class_name>
+			<include>/training_management/display/online_white_board.cfm</include>
+			<path></path>
+			<width></width>
+			<top>0px</top>
+			<left>0px</left>
+		</objects>
+	</fuseaction>
+	<fuseaction>
+		<fuseaction_definition>Forumlar</fuseaction_definition>
+		<fuseaction_keyword>Forumlar</fuseaction_keyword>
+		<fuseaction_title>Style Turkish Forumlar</fuseaction_title>
+		<fuseaction_name>worknet.forums</fuseaction_name>
+		<fuseaction_userfriendly>forums</fuseaction_userfriendly>
+		<objects>
+			<id>objects1</id>
+			<class_name></class_name>
+			<include>/worknet/objects/list_forums.cfm</include>
+			<path></path>
+			<width></width>
+			<top>0px</top>
+			<left>0px</left>
+			<xml_parameters>
+				<special_parameter>
+					<parameter_name>forum_rules_id</parameter_name>
+					<parameter_detail>Forum Kuralları</parameter_detail>
+					<parameter_type>input</parameter_type>
+					<parameter_values>1175,1177,1178</parameter_values>
+					<parameter_value_names></parameter_value_names>
+					<parameter_default></parameter_default>
+				</special_parameter>
+				<special_parameter>
+					<parameter_name>content_head_id</parameter_name>
+					<parameter_detail>İçerik ID</parameter_detail>
+					<parameter_type>input</parameter_type>
+					<parameter_values>116</parameter_values>
+					<parameter_value_names></parameter_value_names>
+					<parameter_default></parameter_default>
+				</special_parameter>
+			</xml_parameters>
+		</objects>
+	</fuseaction>
+	<fuseaction>
+		<fuseaction_definition>Forum Konular</fuseaction_definition>
+		<fuseaction_keyword>Forum Konular</fuseaction_keyword>
+		<fuseaction_title>Style Turkish Forum Konular</fuseaction_title>
+		<fuseaction_name>worknet.forum_topics</fuseaction_name>
+		<fuseaction_userfriendly>forum_topics</fuseaction_userfriendly>
+		<objects>
+			<id>objects1</id>
+			<class_name></class_name>
+			<include>/worknet/objects/list_forum_topics.cfm</include>
+			<path></path>
+			<width></width>
+			<top>0px</top>
+			<left>0px</left>
+			<xml_parameters>
+				<special_parameter>
+					<parameter_name>forum_rules_id</parameter_name>
+					<parameter_detail>Forum Kuralları</parameter_detail>
+					<parameter_type>input</parameter_type>
+					<parameter_values>1175,1177,1178</parameter_values>
+					<parameter_value_names></parameter_value_names>
+					<parameter_default></parameter_default>
+				</special_parameter>
+			</xml_parameters>
+		</objects>
+	</fuseaction>
+	<fuseaction>
+		<fuseaction_definition>Forum Cevaplar</fuseaction_definition>
+		<fuseaction_keyword>Forum Cevaplar</fuseaction_keyword>
+		<fuseaction_title>Style Turkish Forum Cevaplar</fuseaction_title>
+		<fuseaction_name>worknet.forum_replies</fuseaction_name>
+		<fuseaction_userfriendly>forum_replies</fuseaction_userfriendly>
+		<objects>
+			<id>objects1</id>
+			<class_name></class_name>
+			<include>/worknet/objects/list_topic_replies.cfm</include>
+			<path></path>
+			<width></width>
+			<top>0px</top>
+			<left>0px</left>
+			<xml_parameters>
+				<special_parameter>
+					<parameter_name>forum_rules_id</parameter_name>
+					<parameter_detail>Forum Kuralları</parameter_detail>
+					<parameter_type>input</parameter_type>
+					<parameter_values>1175,1177,1178</parameter_values>
+					<parameter_value_names></parameter_value_names>
+					<parameter_default></parameter_default>
+				</special_parameter>
+			</xml_parameters>
+		</objects>
+	</fuseaction>
+	<fuseaction>
+		<fuseaction_definition>Forum Cevap Gönder Action</fuseaction_definition>
+		<fuseaction_keyword>Forum Cevap Gönder Action</fuseaction_keyword>
+		<fuseaction_title>Style Turkish Forum Cevap Gönder Action</fuseaction_title>
+		<fuseaction_name>worknet.emptypopup_query_forum_reply</fuseaction_name>
+		<fuseaction_userfriendly></fuseaction_userfriendly>
+		<objects>
+			<id>objects1</id>
+			<class_name></class_name>
+			<include>/worknet/objects/query_forum_reply.cfm</include>
+			<path></path>
+			<width></width>
+			<top>0px</top>
+			<left>0px</left>
+		</objects>
+	</fuseaction>
+	<fuseaction>
+		<fuseaction_definition>Üye Ol</fuseaction_definition>
+		<fuseaction_keyword>Style Turkish Üye Ol</fuseaction_keyword>
+		<fuseaction_title>Style Turkish</fuseaction_title>
+		<fuseaction_name>worknet.form_add_member</fuseaction_name>
+		<fuseaction_userfriendly>form_add_member</fuseaction_userfriendly>
+		<objects>
+			<id>objects1</id>
+			<class_name></class_name>
+			<include>/worknet/objects/add_member.cfm</include>
+			<path></path>
+			<width></width>
+			<top>0px</top>
+			<left>0px</left>
+			<xml_parameters>
+				<special_parameter>
+					<parameter_name>cid</parameter_name>
+					<parameter_detail>İçerik ID</parameter_detail>
+					<parameter_type>input</parameter_type>
+					<parameter_values>1140,1142</parameter_values>
+					<parameter_value_names></parameter_value_names>
+					<parameter_default></parameter_default>
+				</special_parameter>
+				<special_parameter>
+					<parameter_name>info_content_id</parameter_name>
+					<parameter_detail>Bilgilendirme İçerik ID</parameter_detail>
+					<parameter_type>input</parameter_type>
+					<parameter_values>62,63,64</parameter_values>
+					<parameter_value_names></parameter_value_names>
+					<parameter_default></parameter_default>
+				</special_parameter>
+				<special_parameter>
+					<parameter_name>info_content_id_2</parameter_name>
+					<parameter_detail>Bilgilendirme İçerik ID 2</parameter_detail>
+					<parameter_type>input</parameter_type>
+					<parameter_values>62,63,64</parameter_values>
+					<parameter_value_names></parameter_value_names>
+					<parameter_default></parameter_default>
+				</special_parameter>
+			</xml_parameters>
+		</objects>
+	</fuseaction>
+	<fuseaction>
+		<fuseaction_definition>Yeni Üyelik Kontrolü</fuseaction_definition>
+		<fuseaction_keyword>Yeni Üyelik Kontrolü</fuseaction_keyword>
+		<fuseaction_title>Style Turkish Yeni Üyelik Kontrolü</fuseaction_title>
+		<fuseaction_name>worknet.add_member</fuseaction_name>
+		<fuseaction_userfriendly>add_member</fuseaction_userfriendly>
+		<objects>
+			<id>objects1</id>
+			<class_name></class_name>
+			<include>/worknet/objects/add_member_check.cfm</include>
+			<path></path>
+			<width></width>
+			<top>0px</top>
+			<left>0px</left>
+			<xml_parameters>
+				<special_parameter>
+					<parameter_name>content_head_id</parameter_name>
+					<parameter_detail>Tanım İçerik ID</parameter_detail>
+					<parameter_type>input</parameter_type>
+					<parameter_values>113</parameter_values>
+					<parameter_value_names></parameter_value_names>
+					<parameter_default></parameter_default>
+				</special_parameter>
+			</xml_parameters>
+		</objects>
+	</fuseaction>
+	<fuseaction>
+		<fuseaction_definition>Yeni Üyelik İletişim Sayfası</fuseaction_definition>
+		<fuseaction_keyword>Yeni Üyelik İletişim Sayfası</fuseaction_keyword>
+		<fuseaction_title>Style Turkish Yeni Üyelik İletişim Sayfası</fuseaction_title>
+		<fuseaction_name>worknet.form_add_help</fuseaction_name>
+		<fuseaction_userfriendly>form_add_help</fuseaction_userfriendly>
+		<objects>
+			<id>objects1</id>
+			<class_name></class_name>
+			<include>/worknet/objects/form_add_help.cfm</include>
+			<path></path>
+			<width></width>
+			<top>0px</top>
+			<left>0px</left>
+		</objects>
+	</fuseaction>
+	<fuseaction>
+		<fuseaction_definition>Abonelik Sayfası</fuseaction_definition>
+		<fuseaction_keyword>Abonelik Sayfası</fuseaction_keyword>
+		<fuseaction_title>Style Turkish Abonelik Sayfası</fuseaction_title>
+		<fuseaction_name>worknet.abonelik</fuseaction_name>
+		<fuseaction_userfriendly>abonelik</fuseaction_userfriendly>
+		<objects>
+			<id>objects1</id>
+			<class_name></class_name>
+			<include>/worknet/objects/abonelik.cfm</include>
+			<path></path>
+			<width></width>
+			<top>0px</top>
+			<left>0px</left>
+			<xml_parameters>
+				<special_parameter>
+					<parameter_name>content_head_id</parameter_name>
+					<parameter_detail>Açıklama Yazısı</parameter_detail>
+					<parameter_type>input</parameter_type>
+					<parameter_values>105</parameter_values>
+					<parameter_value_names></parameter_value_names>
+					<parameter_default></parameter_default>
+				</special_parameter>
+			</xml_parameters>
+		</objects>
+	</fuseaction>
+	<fuseaction>
+		<fuseaction_definition>Eğitim Katılım Belgesi</fuseaction_definition>
+		<fuseaction_keyword>Eğitim Katılım Belgesi</fuseaction_keyword>
+		<fuseaction_title>Style Turkish Eğitim Katılım Belgesi</fuseaction_title>
+		<fuseaction_name>worknet.popup_katilim_belgesi</fuseaction_name>
+		<fuseaction_userfriendly>popup_katilim_belgesi</fuseaction_userfriendly>
+		<objects>
+			<id>objects1</id>
+			<class_name></class_name>
+			<include>/worknet/objects/egitim_katilim_belgesi.cfm</include>
+			<path></path>
+			<width></width>
+			<top>0px</top>
+			<left>0px</left>
+		</objects>
+	</fuseaction>
+	<fuseaction>
+		<fuseaction_definition>Anasayfa Açılan Popup</fuseaction_definition>
+		<fuseaction_keyword>Anasayfa Açılan Popup</fuseaction_keyword>
+		<fuseaction_title>Anasayfa Açılan Popup</fuseaction_title>
+		<fuseaction_name>worknet.emptypopup_message_cookie</fuseaction_name>
+		<fuseaction_userfriendly>emptypopup_message_cookie</fuseaction_userfriendly>
+		<objects>
+			<id>objects1</id>
+			<class_name></class_name>
+			<include>/worknet/objects/message_cookie.cfm</include>
+			<path></path>
+			<width></width>
+			<top>0px</top>
+			<left>0px</left>
+		</objects>
+	</fuseaction>
+	<fuseaction>
+		<fuseaction_definition>Finans Anasayfa</fuseaction_definition>
+		<fuseaction_keyword>Finans Anasayfa</fuseaction_keyword>
+		<fuseaction_title>Finans Anasayfa</fuseaction_title>
+		<fuseaction_name>worknet.finance_mainpage</fuseaction_name>
+		<fuseaction_userfriendly>finance_mainpage</fuseaction_userfriendly>
+		<objects>
+			<id>objects1</id>
+			<class_name></class_name>
+			<include>/worknet/objects/finance_mainpage.cfm</include>
+			<path></path>
+			<width></width>
+			<top>0px</top>
+			<left>0px</left>
+		</objects>
+	</fuseaction>
+	<fuseaction>
+		<fuseaction_definition>Son İncelediklerim</fuseaction_definition>
+		<fuseaction_keyword>Son İncelediklerim</fuseaction_keyword>
+		<fuseaction_title>Style Turkish Son İncelediklerim</fuseaction_title>
+		<fuseaction_name>worknet.my_visited</fuseaction_name>
+		<fuseaction_userfriendly>my_visited</fuseaction_userfriendly>
+		<objects>
+			<id>objects1</id>
+			<class_name></class_name>
+			<include>/worknet/objects/my_visited.cfm</include>
+			<path></path>
+			<width></width>
+			<top>0px</top>
+			<left>0px</left>
+		</objects>
+	</fuseaction>
+	<fuseaction>
+		<fuseaction_definition>Favori Ürünlerim</fuseaction_definition>
+		<fuseaction_keyword>Favori Ürünlerim</fuseaction_keyword>
+		<fuseaction_title>Style Turkish Favorilerim</fuseaction_title>
+		<fuseaction_name>worknet.my_favorites_product</fuseaction_name>
+		<fuseaction_userfriendly>my_favorites_product</fuseaction_userfriendly>
+		<objects>
+			<id>objects1</id>
+			<class_name></class_name>
+			<include>/worknet/objects/my_favorites_product.cfm</include>
+			<path></path>
+			<width></width>
+			<top>0px</top>
+			<left>0px</left>
+		</objects>
+	</fuseaction>
+	<fuseaction>
+		<fuseaction_definition>Favori Taleplerim</fuseaction_definition>
+		<fuseaction_keyword>Favori Taleplerim</fuseaction_keyword>
+		<fuseaction_title>Style Turkish Favorilerim</fuseaction_title>
+		<fuseaction_name>worknet.my_favorites_demand</fuseaction_name>
+		<fuseaction_userfriendly>my_favorites_demand</fuseaction_userfriendly>
+		<objects>
+			<id>objects1</id>
+			<class_name></class_name>
+			<include>/worknet/objects/my_favorites_demand.cfm</include>
+			<path></path>
+			<width></width>
+			<top>0px</top>
+			<left>0px</left>
+		</objects>
+	</fuseaction>
+	<fuseaction>
+		<fuseaction_definition>Favorilerime Ekle Çıkar Action</fuseaction_definition>
+		<fuseaction_keyword>Favorilerime Ekle Çıkar Action</fuseaction_keyword>
+		<fuseaction_title>Favorilerime Ekle Çıkar Action</fuseaction_title>
+		<fuseaction_name>worknet.emptypopup_add_remove_relation_objects</fuseaction_name>
+		<fuseaction_userfriendly></fuseaction_userfriendly>
+		<objects>
+			<id>objects1</id>
+			<class_name></class_name>
+			<include>/worknet/objects/add_remove_relation_objects.cfm</include>
+			<path></path>
+			<width></width>
+			<top>0px</top>
+			<left>0px</left>
+		</objects>
+	</fuseaction>
+	<fuseaction>
+		<fuseaction_definition>Sanal Pos Abonelik Query</fuseaction_definition>
+		<fuseaction_keyword>Sanal Pos Query</fuseaction_keyword>
+		<fuseaction_title>Sanal Pos Query</fuseaction_title>
+		<fuseaction_name>worknet.emptypopup_add_abonelik_action</fuseaction_name>
+		<fuseaction_userfriendly></fuseaction_userfriendly>
+		<objects>
+			<id>objects1</id>
+			<class_name></class_name>
+			<include>/worknet/objects/abonelik_query.cfm</include>
+			<path></path>
+			<width></width>
+			<top>0px</top>
+			<left>0px</left>
+		</objects>
+	</fuseaction>,
+	<fuseaction>
+		<fuseaction_definition>Sanal Pos Eğitim Query</fuseaction_definition>
+		<fuseaction_keyword>Sanal Pos Eğitim Query</fuseaction_keyword>
+		<fuseaction_title>Sanal Pos Eğitim Query</fuseaction_title>
+		<fuseaction_name>worknet.emptypopup_add_training_payment_action</fuseaction_name>
+		<fuseaction_userfriendly></fuseaction_userfriendly>
+		<objects>
+			<id>objects1</id>
+			<class_name></class_name>
+			<include>/worknet/objects/training_payment_query.cfm</include>
+			<path></path>
+			<width></width>
+			<top>0px</top>
+			<left>0px</left>
+		</objects>
+	</fuseaction>
+	<fuseaction>
+		<fuseaction_definition>Genel Arama Sonuçları</fuseaction_definition>
+		<fuseaction_keyword>Genel Arama Sonuçları</fuseaction_keyword>
+		<fuseaction_title>Style Turkish Genel Arama Sonuçları</fuseaction_title>
+		<fuseaction_name>worknet.general_search</fuseaction_name>
+		<fuseaction_userfriendly>general_search</fuseaction_userfriendly>
+		<objects>
+			<id>objects1</id>
+			<class_name></class_name>
+			<include>/worknet/objects/general_search.cfm</include>
+			<path></path>
+			<width></width>
+			<top>0px</top>
+			<left>0px</left>
+		</objects>
+	</fuseaction>
+	<fuseaction>
+		<fuseaction_definition>Uyarı Sayfası</fuseaction_definition>
+		<fuseaction_keyword>Uyarı Sayfası</fuseaction_keyword>
+		<fuseaction_title>Style Turkish Uyarı Sayfası</fuseaction_title>
+		<fuseaction_name>worknet.warning_page</fuseaction_name>
+		<fuseaction_userfriendly>warning_page</fuseaction_userfriendly>
+		<objects>
+			<id>objects1</id>
+			<class_name></class_name>
+			<include>/worknet/objects/warning_page.cfm</include>
+			<path></path>
+			<width></width>
+			<top>0px</top>
+			<left>0px</left>
+		</objects>
+	</fuseaction>
+	<fuseaction>
+		<fuseaction_definition>Detaylı Arama Sayfası</fuseaction_definition>
+		<fuseaction_keyword>Detaylı Arama Sayfası</fuseaction_keyword>
+		<fuseaction_title>Style Turkish Detaylı Arama Sayfası</fuseaction_title>
+		<fuseaction_name>worknet.detail_search</fuseaction_name>
+		<fuseaction_userfriendly>detail_search</fuseaction_userfriendly>
+		<objects>
+			<id>objects1</id>
+			<class_name></class_name>
+			<include>/worknet/objects/detail_search.cfm</include>
+			<path></path>
+			<width></width>
+			<top>0px</top>
+			<left>0px</left>
+		</objects>
+	</fuseaction>
+	<fuseaction>
+		<fuseaction_definition>Eğitim Raporu</fuseaction_definition>
+		<fuseaction_keyword>Eğitim Raporu</fuseaction_keyword>
+		<fuseaction_title>Style Turkish Eğitim Raporu</fuseaction_title>
+		<fuseaction_name>worknet.training_report</fuseaction_name>
+		<fuseaction_userfriendly>training_report</fuseaction_userfriendly>
+		<objects>
+			<id>objects1</id>
+			<class_name></class_name>
+			<include>/worknet/objects/training_report.cfm</include>
+			<path></path>
+			<width></width>
+			<top>0px</top>
+			<left>0px</left>
+		</objects>
+	</fuseaction>
+	<fuseaction>
+		<fuseaction_definition>İçerik Listesi</fuseaction_definition>
+		<fuseaction_keyword>İçerik Listesi</fuseaction_keyword>
+		<fuseaction_title>Style Turkish İçerik Listesi</fuseaction_title>
+		<fuseaction_name>worknet.list_content</fuseaction_name>
+		<fuseaction_userfriendly>list_content</fuseaction_userfriendly>
+		<objects>
+			<id>objects1</id>
+			<class_name></class_name>
+			<include>/worknet/objects/list_content.cfm</include>
+			<path></path>
+			<width></width>
+			<top>0px</top>
+			<left>0px</left>
+		</objects>
+	</fuseaction>
+</worknet_objects>

@@ -1,0 +1,6 @@
+INSERT INTO [SETUP_NOTICE_GROUP]([NOTICE],[DETAIL]) Values( 'Genel İlan','Genel İlan');
+INSERT INTO [SETUP_NOTICE_GROUP]([NOTICE],[DETAIL]) Values( 'Eleman',' ');
+INSERT INTO [SETUP_NOTICE_GROUP]([NOTICE],[DETAIL]) Values( 'Satış Temsilciliği','Satış Temsilciliği');
+INSERT INTO [SETUP_NOTICE_GROUP]([NOTICE],[DETAIL]) Values( 'Ön Muhasebe Uzmanı','Ön Muhasebe Uzmanı');
+INSERT INTO [SETUP_NOTICE_GROUP]([NOTICE],[DETAIL]) Values( 'İnsan Kaynakları Uzmanı','İnsan Kaynakları Uzmanı');
+

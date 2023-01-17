@@ -1,0 +1,3 @@
+<cfquery name="GET_PROBABILITY_RATE" datasource="#dsn3#">
+	SELECT * FROM SETUP_PROBABILITY_RATE ORDER BY PROBABILITY_RATE ASC
+</cfquery>

@@ -1,0 +1,17 @@
+<!-- Description : OFFER tablosuna TENDER_TYPE_ID ve BARGAINING_TYPE_ID alanı eklendi.
+Developer: Botan Kayğan
+Company : Workcube
+Destination: Company -->
+<querytag>
+    IF NOT EXISTS (SELECT 'Y' FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME = 'OFFER' AND TABLE_SCHEMA = '@_dsn_company_@' AND COLUMN_NAME = 'TENDER_TYPE_ID')
+    BEGIN
+        ALTER TABLE OFFER ADD
+        TENDER_TYPE_ID int NULL
+    END;
+
+    IF NOT EXISTS (SELECT 'Y' FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME = 'OFFER' AND TABLE_SCHEMA = '@_dsn_company_@' AND COLUMN_NAME = 'BARGAINING_TYPE_ID')
+    BEGIN
+        ALTER TABLE OFFER ADD
+        BARGAINING_TYPE_ID int NULL
+    END;
+</querytag>

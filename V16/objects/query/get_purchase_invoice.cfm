@@ -1,0 +1,10 @@
+<cfquery name="PURCHASE_INVOICE" datasource="#dsn2#">
+	SELECT
+		INVOICE_ROW.SHIP_ROW_ID
+	FROM
+		INVOICE_ROW,
+		SHIP_ROW
+	WHERE
+		SHIP_ROW.SHIP_ID = #attributes.UPD_ID# AND
+		INVOICE_ROW.SHIP_ROW_ID = SHIP_ROW.SHIP_ROW_ID
+</cfquery>

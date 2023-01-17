@@ -1,0 +1,673 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SETUP_SWITCH>
+	<SETUPSWITCH>
+		<LINK_NAME>Ana Sayfa</LINK_NAME>
+		<LINK_SWITCH>welcome</LINK_SWITCH>
+		<LINK_DETAIL>Ana Sayfa</LINK_DETAIL> 
+	</SETUPSWITCH>
+	<SETUPSWITCH>
+		<LINK_NAME>İçerik Kategori Sayfası</LINK_NAME>
+		<LINK_SWITCH>view_content</LINK_SWITCH>
+		<LINK_DETAIL>Kategoriye, bölüme veya tek bir konunun yayınlanmasını sağlar.</LINK_DETAIL> 
+	</SETUPSWITCH>
+	<SETUPSWITCH>
+		<LINK_NAME>İçeriğin Kategorileri ve İçerik Sayfası</LINK_NAME>
+		<LINK_SWITCH>view_content_category</LINK_SWITCH>
+		<LINK_DETAIL>İçeriğin Kategorileri ve İçerik Sayfası.</LINK_DETAIL> 
+	</SETUPSWITCH>
+	<SETUPSWITCH>
+		<LINK_NAME>İçeriğin Bölümleri ve İçerik Sayfası</LINK_NAME>
+		<LINK_SWITCH>view_content_chapter</LINK_SWITCH>
+		<LINK_DETAIL>İçeriğin Bölümleri ve İçerik Sayfası.</LINK_DETAIL> 
+	</SETUPSWITCH>
+	<SETUPSWITCH>
+		<LINK_NAME>İçerik Detay Sayfası</LINK_NAME> 
+		<LINK_SWITCH>detail_content</LINK_SWITCH>
+		<LINK_DETAIL>İçerik Detayı</LINK_DETAIL> 
+	</SETUPSWITCH>
+	<SETUPSWITCH>
+		<LINK_NAME>Not Ekleme Popubu</LINK_NAME> 
+		<LINK_SWITCH>add_notes</LINK_SWITCH>
+		<LINK_DETAIL>Not Ekleme Popubu</LINK_DETAIL> 
+	</SETUPSWITCH>
+	<SETUPSWITCH>
+		<LINK_NAME>Siparişlerim Göster</LINK_NAME> 
+		<LINK_SWITCH>view_list_order</LINK_SWITCH>
+		<LINK_DETAIL>Siparişlerim Göster</LINK_DETAIL> 
+	</SETUPSWITCH>
+	<SETUPSWITCH>
+		<LINK_NAME>Üst Şirketi Olduğum Siparişleri Getirir</LINK_NAME> 
+		<LINK_SWITCH>view_list_order_hierarchy</LINK_SWITCH>
+		<LINK_DETAIL>Üst Şirketi Olduğum Siparişleri Getirir</LINK_DETAIL> 
+	</SETUPSWITCH>
+	<SETUPSWITCH>
+		<LINK_NAME>Sipariş Detay</LINK_NAME> 
+		<LINK_SWITCH>order_detail</LINK_SWITCH>
+		<LINK_DETAIL>Siparişin Detayını Gösterir.</LINK_DETAIL> 
+	</SETUPSWITCH>
+	<SETUPSWITCH>
+		<LINK_NAME>Ürün: Vitrindeki Ürünler</LINK_NAME> 
+		<LINK_SWITCH>view_vision</LINK_SWITCH>
+		<LINK_DETAIL>Vitrin ürünlerini yayınlamak için kullanılır.</LINK_DETAIL> 
+	</SETUPSWITCH>
+	<SETUPSWITCH>
+		<LINK_NAME>Ürün: Vitrindeki Ürünler Sade</LINK_NAME> 
+		<LINK_SWITCH>view_vision_simple</LINK_SWITCH>
+		<LINK_DETAIL>Vitrin ürünlerini yayınlamak için kullanılır ve sade halidir.</LINK_DETAIL> 
+	</SETUPSWITCH>
+	<SETUPSWITCH>
+		<LINK_NAME>Ürün Listesini Göster</LINK_NAME> 
+		<LINK_SWITCH>view_product_list</LINK_SWITCH>
+		<LINK_DETAIL>Ürün Listesini Göster</LINK_DETAIL> 
+	</SETUPSWITCH>
+	<SETUPSWITCH>
+		<LINK_NAME>Basit Ürün Listesini Göster</LINK_NAME> 
+		<LINK_SWITCH>list_product_simple</LINK_SWITCH>
+		<LINK_DETAIL>Basit Ürün Listesini Göster</LINK_DETAIL> 
+	</SETUPSWITCH>
+	<SETUPSWITCH>
+		<LINK_NAME>Karma Koli Listesini Göster</LINK_NAME> 
+		<LINK_SWITCH>view_product_list_bundle</LINK_SWITCH>
+		<LINK_DETAIL>Karma Koli Listesini Göster</LINK_DETAIL> 
+	</SETUPSWITCH>
+	<SETUPSWITCH>
+		<LINK_NAME>Ürün Konfifüre ve Özelleştirme</LINK_NAME> 
+		<LINK_SWITCH>view_product_configure</LINK_SWITCH>
+		<LINK_DETAIL>Ürün Konfifüre ve Özelleştirme</LINK_DETAIL> 
+	</SETUPSWITCH>
+	<SETUPSWITCH>
+		<LINK_NAME>Ürün Fiyat Listesi</LINK_NAME> 
+		<LINK_SWITCH>list_price</LINK_SWITCH>
+		<LINK_DETAIL>Ürün Fiyat Listesi</LINK_DETAIL> 
+	</SETUPSWITCH>
+	<SETUPSWITCH>
+		<LINK_NAME>Promosyon Ürünleri</LINK_NAME> 
+		<LINK_SWITCH>list_promotions</LINK_SWITCH>
+		<LINK_DETAIL>Promosyon Ürün Listesi</LINK_DETAIL> 
+	</SETUPSWITCH>
+	<SETUPSWITCH>
+		<LINK_NAME>Ürün Kategorileri ve Markaları İmajlı</LINK_NAME> 
+		<LINK_SWITCH>product_category_brand_image</LINK_SWITCH>
+		<LINK_DETAIL>Ürün Kategorileri ve Markaları İmajlı</LINK_DETAIL> 
+	</SETUPSWITCH>
+	<SETUPSWITCH>
+		<LINK_NAME>Markalar</LINK_NAME> 
+		<LINK_SWITCH>list_brands</LINK_SWITCH>
+		<LINK_DETAIL>Markalar</LINK_DETAIL> 
+	</SETUPSWITCH>
+	<SETUPSWITCH>
+		<LINK_NAME>Kampanyalar</LINK_NAME> 
+		<LINK_SWITCH>list_campaign</LINK_SWITCH>
+		<LINK_DETAIL>Aktif kampanyaların listelenmesini sağlar.</LINK_DETAIL> 
+	</SETUPSWITCH>
+	<SETUPSWITCH>
+		<LINK_NAME>Kampanya Detay Sayfası</LINK_NAME> 
+		<LINK_SWITCH>dsp_campaign</LINK_SWITCH>
+		<LINK_DETAIL>Kampanya Detay Sayfası.</LINK_DETAIL> 
+	</SETUPSWITCH>
+	<SETUPSWITCH>
+		<LINK_NAME>Public Kampanyalar</LINK_NAME> 
+		<LINK_SWITCH>list_campaign_ww</LINK_SWITCH>
+		<LINK_DETAIL>Public Aktif kampanyaların listelenmesini sağlar.</LINK_DETAIL> 
+	</SETUPSWITCH>
+	<SETUPSWITCH>
+		<LINK_NAME>Ürün Detay</LINK_NAME> 
+		<LINK_SWITCH>detail_product</LINK_SWITCH>
+		<LINK_DETAIL>Ürün Detay</LINK_DETAIL> 
+	</SETUPSWITCH>
+	<SETUPSWITCH>
+		<LINK_NAME>Basit Ürün Detayı</LINK_NAME> 
+		<LINK_SWITCH>detail_product_simple</LINK_SWITCH>
+		<LINK_DETAIL>Basit Ürün Detay</LINK_DETAIL> 
+	</SETUPSWITCH>
+	<SETUPSWITCH>
+		<LINK_NAME>Marka Detay Göster</LINK_NAME> 
+		<LINK_SWITCH>view_brand_page</LINK_SWITCH>
+		<LINK_DETAIL>Marka Detay Göster</LINK_DETAIL> 
+	</SETUPSWITCH>
+	<SETUPSWITCH>
+		<LINK_NAME>Sepet</LINK_NAME> 
+		<LINK_SWITCH>list_basket</LINK_SWITCH>
+		<LINK_DETAIL>Sepet</LINK_DETAIL> 
+	</SETUPSWITCH>
+	<SETUPSWITCH>
+		<LINK_NAME>Kampanya Sepet</LINK_NAME> 
+		<LINK_SWITCH>list_basket_camp</LINK_SWITCH>
+		<LINK_DETAIL>Kampanya Sepet</LINK_DETAIL> 
+	</SETUPSWITCH>
+	<SETUPSWITCH>
+		<LINK_NAME>Kampanya Sepetini Sipariş Olarak Kaydet</LINK_NAME> 
+		<LINK_SWITCH>form_add_orderww_camp</LINK_SWITCH>
+		<LINK_DETAIL>Kampanya Sepetini Sipariş Olarak Kaydet</LINK_DETAIL> 
+	</SETUPSWITCH>
+	<SETUPSWITCH>
+		<LINK_NAME>Katalog Göster</LINK_NAME> 
+		<LINK_SWITCH>view_action</LINK_SWITCH>
+		<LINK_DETAIL>Katalog Göster</LINK_DETAIL> 
+	</SETUPSWITCH>
+	<SETUPSWITCH>
+		<LINK_NAME>Ürün Karşılaştırması</LINK_NAME> 
+		<LINK_SWITCH>product_compare</LINK_SWITCH>
+		<LINK_DETAIL>Ürün Karşılaştırması</LINK_DETAIL> 
+	</SETUPSWITCH>
+	<SETUPSWITCH>
+		<LINK_NAME>Şirket Bilgilerini Güncelleme</LINK_NAME> 
+		<LINK_SWITCH>me</LINK_SWITCH>
+		<LINK_DETAIL>Şirket Bilgilerini Güncelleme</LINK_DETAIL> 
+	</SETUPSWITCH>
+	<SETUPSWITCH>
+		<LINK_NAME>Şirkete Partner Ekle</LINK_NAME> 
+		<LINK_SWITCH>form_add_partner</LINK_SWITCH>
+		<LINK_DETAIL>Şirkete Partner Ekle</LINK_DETAIL> 
+	</SETUPSWITCH>
+	<SETUPSWITCH>
+		<LINK_NAME>Partner Bilgilerini Güncelle</LINK_NAME> 
+		<LINK_SWITCH>form_upd_partner</LINK_SWITCH>
+		<LINK_DETAIL>Partner Bilgilerini Güncelle</LINK_DETAIL> 
+	</SETUPSWITCH>
+	<SETUPSWITCH>
+		<LINK_NAME>Şirket Bilgilerinin Detayını Gösterir</LINK_NAME> 
+		<LINK_SWITCH>form_upd_my_company</LINK_SWITCH>
+		<LINK_DETAIL>Şirket Bilgilerinn Detayını Gösterir</LINK_DETAIL> 
+	</SETUPSWITCH>
+	<SETUPSWITCH>
+		<LINK_NAME>Üye Girişi</LINK_NAME> 
+		<LINK_SWITCH>member_login</LINK_SWITCH>
+		<LINK_DETAIL>Üye Girişi</LINK_DETAIL> 
+	</SETUPSWITCH>
+	<SETUPSWITCH>
+		<LINK_NAME>Kurumsal Üye Kayıt</LINK_NAME> 
+		<LINK_SWITCH>add_member</LINK_SWITCH>
+		<LINK_DETAIL>Üye Kayıt</LINK_DETAIL> 
+	</SETUPSWITCH>
+	<SETUPSWITCH>
+		<LINK_NAME>Bireysel Üye Kayıt Başvurusu</LINK_NAME> 
+		<LINK_SWITCH>add_member_consumer</LINK_SWITCH>
+		<LINK_DETAIL>Bireysel Üye Kayıt Başvurusu</LINK_DETAIL> 
+	</SETUPSWITCH>
+	<SETUPSWITCH>
+		<LINK_NAME>Kurumsal Üye Kayıt Başvurusu</LINK_NAME> 
+		<LINK_SWITCH>add_member_company</LINK_SWITCH>
+		<LINK_DETAIL>Kurumsal Üye Kayıt Başvurusu</LINK_DETAIL> 
+	</SETUPSWITCH>
+	<SETUPSWITCH>
+		<LINK_NAME>İlişkili Kurumsal Üye Kayıt</LINK_NAME> 
+		<LINK_SWITCH>add_my_member</LINK_SWITCH>
+		<LINK_DETAIL>İlişkili Üye Kayıt</LINK_DETAIL> 
+	</SETUPSWITCH>
+	<SETUPSWITCH>
+		<LINK_NAME>İlişkili Kurumsal Üye Detay</LINK_NAME> 
+		<LINK_SWITCH>upd_my_member</LINK_SWITCH>
+		<LINK_DETAIL>İlişkili Üye Detay</LINK_DETAIL> 
+	</SETUPSWITCH>
+	<SETUPSWITCH>
+		<LINK_NAME>İlişkili Bireysel Üye Kayıt</LINK_NAME> 
+		<LINK_SWITCH>add_my_consumer</LINK_SWITCH>
+		<LINK_DETAIL>İlişkili Bireysel Üye Kayıt</LINK_DETAIL> 
+	</SETUPSWITCH>
+	<SETUPSWITCH>
+		<LINK_NAME>İlişkili Bireysel Üye Detay</LINK_NAME> 
+		<LINK_SWITCH>upd_my_consumer</LINK_SWITCH>
+		<LINK_DETAIL>İlişkili Bireysel Üye Detay</LINK_DETAIL> 
+	</SETUPSWITCH>
+	<SETUPSWITCH>
+		<LINK_NAME>İlişkili Partner Detay</LINK_NAME> 
+		<LINK_SWITCH>upd_my_partner</LINK_SWITCH>
+		<LINK_DETAIL>İlişkili Partner Detay</LINK_DETAIL> 
+	</SETUPSWITCH>
+	<SETUPSWITCH>
+		<LINK_NAME>Üyelerim</LINK_NAME> 
+		<LINK_SWITCH>list_my_member</LINK_SWITCH>
+		<LINK_DETAIL>Üyelerim</LINK_DETAIL> 
+	</SETUPSWITCH>
+	<SETUPSWITCH>
+		<LINK_NAME>Bireysel Üye Kayıt</LINK_NAME> 
+		<LINK_SWITCH>add_consumer</LINK_SWITCH>
+		<LINK_DETAIL>Tüketici Kayıt</LINK_DETAIL> 
+	</SETUPSWITCH>
+	<SETUPSWITCH>
+		<LINK_NAME>Bireysel Üye Detay</LINK_NAME> 
+		<LINK_SWITCH>upd_consumer</LINK_SWITCH>
+		<LINK_DETAIL>Tüketici Detay</LINK_DETAIL> 
+	</SETUPSWITCH>
+	<SETUPSWITCH>
+		<LINK_NAME>Bireysel Üye Girişi</LINK_NAME> 
+		<LINK_SWITCH>public_login</LINK_SWITCH>
+		<LINK_DETAIL>Bireysel üye şifre-password kutusu.</LINK_DETAIL> 
+	</SETUPSWITCH>
+	<SETUPSWITCH>
+		<LINK_NAME>Kurumsal Üye Girişi</LINK_NAME> 
+		<LINK_SWITCH>partner_login</LINK_SWITCH>
+		<LINK_DETAIL>Kurumsal üye şifre-password kutusu.</LINK_DETAIL> 
+	</SETUPSWITCH>
+	<SETUPSWITCH>
+		<LINK_NAME>Fırsat Kayıt Başvurusu</LINK_NAME> 
+		<LINK_SWITCH>add_member_opportunity</LINK_SWITCH>
+		<LINK_DETAIL>Fırsat Kayıt Başvurusu</LINK_DETAIL> 
+	</SETUPSWITCH>
+	<SETUPSWITCH>
+		<LINK_NAME>Tedarikçi Kayıt Başvurusu</LINK_NAME> 
+		<LINK_SWITCH>add_supplier</LINK_SWITCH>
+		<LINK_DETAIL>Tedarikçi Kayıt Başvurusu</LINK_DETAIL> 
+	</SETUPSWITCH>
+	<SETUPSWITCH>
+		<LINK_NAME>Destek</LINK_NAME> 
+		<LINK_SWITCH>support</LINK_SWITCH>
+		<LINK_DETAIL>Destek</LINK_DETAIL> 
+	</SETUPSWITCH>	
+	<SETUPSWITCH>
+		<LINK_NAME>İletişim</LINK_NAME> 
+		<LINK_SWITCH>communication</LINK_SWITCH>
+		<LINK_DETAIL>İletişim</LINK_DETAIL> 
+	</SETUPSWITCH>
+	<SETUPSWITCH>
+		<LINK_NAME>Ürün Arama</LINK_NAME> 
+		<LINK_SWITCH>search_product_result</LINK_SWITCH>
+		<LINK_DETAIL>Ürün Arama</LINK_DETAIL> 
+	</SETUPSWITCH>
+	<SETUPSWITCH>
+		<LINK_NAME>Ürün Anasayfa</LINK_NAME> 
+		<LINK_SWITCH>product_homepage</LINK_SWITCH>
+		<LINK_DETAIL>Ürün Anasayfa</LINK_DETAIL> 
+	</SETUPSWITCH>
+	<SETUPSWITCH>
+		<LINK_NAME>Bug Kayıt</LINK_NAME> 
+		<LINK_SWITCH>add_bug</LINK_SWITCH>
+		<LINK_DETAIL>Bug Kayıt</LINK_DETAIL> 
+	</SETUPSWITCH>
+	<SETUPSWITCH>
+		<LINK_NAME>Bug Listesi</LINK_NAME> 
+		<LINK_SWITCH>bug</LINK_SWITCH>
+		<LINK_DETAIL>Bug Listesi</LINK_DETAIL> 
+	</SETUPSWITCH>
+	<SETUPSWITCH>
+		<LINK_NAME>Bug Göster</LINK_NAME> 
+		<LINK_SWITCH>view_bug</LINK_SWITCH>
+		<LINK_DETAIL>Bug Göster</LINK_DETAIL> 
+	</SETUPSWITCH>
+	<SETUPSWITCH>
+		<LINK_NAME>Workcube iletişim</LINK_NAME> 
+		<LINK_SWITCH>login_desc</LINK_SWITCH>
+		<LINK_DETAIL>Workcube iletişim</LINK_DETAIL> 
+	</SETUPSWITCH>
+	<SETUPSWITCH>
+		<LINK_NAME>Workcube Arama Sonuçları</LINK_NAME> 
+		<LINK_SWITCH>search_result</LINK_SWITCH>
+		<LINK_DETAIL>Workcube Arama Sonuçları</LINK_DETAIL> 
+	</SETUPSWITCH>
+	<SETUPSWITCH>
+		<LINK_NAME>Servis Detay</LINK_NAME> 
+		<LINK_SWITCH>detail_service</LINK_SWITCH>
+		<LINK_DETAIL>Servis Detay</LINK_DETAIL> 
+	</SETUPSWITCH>
+	<SETUPSWITCH>
+		<LINK_NAME>Katalog Detay</LINK_NAME> 
+		<LINK_SWITCH>detail_catalog</LINK_SWITCH>
+		<LINK_DETAIL>Katalog Detay</LINK_DETAIL> 
+	</SETUPSWITCH>
+	<SETUPSWITCH>
+		<LINK_NAME>Demo Göster</LINK_NAME> 
+		<LINK_SWITCH>view_demo</LINK_SWITCH>
+		<LINK_DETAIL>Demo Göster</LINK_DETAIL> 
+	</SETUPSWITCH>
+	<SETUPSWITCH>
+		<LINK_NAME>Ben</LINK_NAME> 
+		<LINK_SWITCH>me</LINK_SWITCH>
+		<LINK_DETAIL>Ben</LINK_DETAIL> 
+	</SETUPSWITCH>
+	<SETUPSWITCH>
+		<LINK_NAME>Analiz</LINK_NAME> 
+		<LINK_SWITCH>analysis_results</LINK_SWITCH>
+		<LINK_DETAIL>Analiz</LINK_DETAIL> 
+	</SETUPSWITCH>
+	<SETUPSWITCH>
+		<LINK_NAME>Yardım Arama</LINK_NAME> 
+		<LINK_SWITCH>helpdesk_search_results</LINK_SWITCH>
+		<LINK_DETAIL>Yardım Arama</LINK_DETAIL> 
+	</SETUPSWITCH>
+	<SETUPSWITCH>
+		<LINK_NAME>Satış Analiz</LINK_NAME> 
+		<LINK_SWITCH>sale_analyse</LINK_SWITCH>
+		<LINK_DETAIL>Satış Analiz</LINK_DETAIL> 
+	</SETUPSWITCH>
+	<SETUPSWITCH>
+		<LINK_NAME>Seri No Arama</LINK_NAME> 
+		<LINK_SWITCH>serial_number_result</LINK_SWITCH>
+		<LINK_DETAIL>Seri No Arama</LINK_DETAIL> 
+	</SETUPSWITCH>
+	<SETUPSWITCH>
+		<LINK_NAME>sepeti sipariş olarak kaydet</LINK_NAME> 
+		<LINK_SWITCH>form_add_orderww</LINK_SWITCH>
+		<LINK_DETAIL>sepeti sipariş olarak kaydet</LINK_DETAIL> 
+	</SETUPSWITCH>
+	<SETUPSWITCH>
+		<LINK_NAME>Servis Detaylı Arama Sonuçları</LINK_NAME> 
+		<LINK_SWITCH>search_all_result</LINK_SWITCH>
+		<LINK_DETAIL>Servis Detaylı Arama Sonuçları</LINK_DETAIL> 
+	</SETUPSWITCH>
+	<SETUPSWITCH>
+		<LINK_NAME>Kişi Ekle</LINK_NAME> 
+		<LINK_SWITCH>form_add_partner</LINK_SWITCH>
+		<LINK_DETAIL>Kişi Ekle</LINK_DETAIL> 
+	</SETUPSWITCH>
+	<SETUPSWITCH>
+		<LINK_NAME>Kişi Güncelle</LINK_NAME> 
+		<LINK_SWITCH>form_upd_partner</LINK_SWITCH>
+		<LINK_DETAIL>Kişi Güncelle</LINK_DETAIL> 
+	</SETUPSWITCH>
+	<SETUPSWITCH>
+		<LINK_NAME>Analiz Liste</LINK_NAME> 
+		<LINK_SWITCH>list_analyses</LINK_SWITCH>
+		<LINK_DETAIL>Analiz Liste</LINK_DETAIL> 
+	</SETUPSWITCH>
+	<SETUPSWITCH>
+		<LINK_NAME>Analiz Detay</LINK_NAME> 
+		<LINK_SWITCH>dsp_analyses</LINK_SWITCH>
+		<LINK_DETAIL>Analiz Detay</LINK_DETAIL> 
+	</SETUPSWITCH>
+	<SETUPSWITCH>
+		<LINK_NAME>Analiz Yap</LINK_NAME> 
+		<LINK_SWITCH>make_analyse</LINK_SWITCH>
+		<LINK_DETAIL>Analiz Yapmak İçin Kullanılan Sayfa</LINK_DETAIL> 
+	</SETUPSWITCH>
+	<SETUPSWITCH>
+		<LINK_NAME>Başvurular</LINK_NAME> 
+		<LINK_SWITCH>list_service</LINK_SWITCH>
+		<LINK_DETAIL>Başvurular</LINK_DETAIL> 
+	</SETUPSWITCH>
+	<SETUPSWITCH>
+		<LINK_NAME>Başvuru Detay</LINK_NAME> 
+		<LINK_SWITCH>upd_service</LINK_SWITCH>
+		<LINK_DETAIL>Başvuru Detay</LINK_DETAIL> 
+	</SETUPSWITCH>
+	<SETUPSWITCH>
+		<LINK_NAME>Seri No Sorgula</LINK_NAME> 
+		<LINK_SWITCH>serial_no</LINK_SWITCH>
+		<LINK_DETAIL>Seri No Sorgula</LINK_DETAIL> 
+	</SETUPSWITCH>
+	<SETUPSWITCH>
+		<LINK_NAME>Seri No Sorgula Public</LINK_NAME> 
+		<LINK_SWITCH>serial_noww</LINK_SWITCH>
+		<LINK_DETAIL>Seri No Sorgula Public</LINK_DETAIL> 
+	</SETUPSWITCH>
+	<SETUPSWITCH>
+		<LINK_NAME>Başvuru Ekle</LINK_NAME> 
+		<LINK_SWITCH>add_service</LINK_SWITCH>
+		<LINK_DETAIL>Başvuru Ekle</LINK_DETAIL> 
+	</SETUPSWITCH>
+	<SETUPSWITCH>
+		<LINK_NAME>Başvuru Ekle</LINK_NAME> 
+		<LINK_SWITCH>add_service_party</LINK_SWITCH>
+		<LINK_DETAIL>Başvuru Ekle</LINK_DETAIL> 
+	</SETUPSWITCH>
+	<SETUPSWITCH>
+		<LINK_NAME>Ürün İadeleri</LINK_NAME> 
+		<LINK_SWITCH>list_return</LINK_SWITCH>
+		<LINK_DETAIL>Ürün İadeleri</LINK_DETAIL> 
+	</SETUPSWITCH>
+	<SETUPSWITCH>
+		<LINK_NAME>Ürün iade Ekle</LINK_NAME> 
+		<LINK_SWITCH>add_return</LINK_SWITCH>
+		<LINK_DETAIL>Ürün iade Ekle</LINK_DETAIL> 
+	</SETUPSWITCH>
+	<SETUPSWITCH>
+		<LINK_NAME>Ürün iade Detay</LINK_NAME> 
+		<LINK_SWITCH>upd_return</LINK_SWITCH>
+		<LINK_DETAIL>Ürün iade Detay</LINK_DETAIL> 
+	</SETUPSWITCH>
+	<SETUPSWITCH>
+		<LINK_NAME>Cari İşlemler</LINK_NAME> 
+		<LINK_SWITCH>list_caris</LINK_SWITCH>
+		<LINK_DETAIL>Cari İşlemler</LINK_DETAIL> 
+	</SETUPSWITCH>
+	<SETUPSWITCH>
+		<LINK_NAME>Hesap Extresi Al</LINK_NAME> 
+		<LINK_SWITCH>list_extre</LINK_SWITCH>
+		<LINK_DETAIL>Hesap Extresi Al</LINK_DETAIL> 
+	</SETUPSWITCH>
+	<SETUPSWITCH>
+		<LINK_NAME>Ödemeler</LINK_NAME> 
+		<LINK_SWITCH>list_payments</LINK_SWITCH>
+		<LINK_DETAIL>Ödemeler</LINK_DETAIL> 
+	</SETUPSWITCH>
+	<SETUPSWITCH>
+		<LINK_NAME>Anketler</LINK_NAME> 
+		<LINK_SWITCH>list_survey</LINK_SWITCH>
+		<LINK_DETAIL>Anketler</LINK_DETAIL> 
+	</SETUPSWITCH>
+	<SETUPSWITCH>
+		<LINK_NAME>Anket Sonuçları</LINK_NAME> 
+		<LINK_SWITCH>form_vote_survey</LINK_SWITCH>
+		<LINK_DETAIL>Anket Sonuçları</LINK_DETAIL> 
+	</SETUPSWITCH>
+	<SETUPSWITCH>
+		<LINK_NAME>Destek Yardım</LINK_NAME> 
+		<LINK_SWITCH>online_information</LINK_SWITCH>
+		<LINK_DETAIL>Destek Yardım</LINK_DETAIL> 
+	</SETUPSWITCH>
+	<SETUPSWITCH>
+		<LINK_NAME>İlanlar</LINK_NAME> 
+		<LINK_SWITCH>list_notices</LINK_SWITCH>
+		<LINK_DETAIL>İlanlar</LINK_DETAIL> 
+	</SETUPSWITCH>
+	<SETUPSWITCH>
+		<LINK_NAME>Kariyer Kullanıcı Girişi</LINK_NAME> 
+		<LINK_SWITCH>kariyer_login</LINK_SWITCH>
+		<LINK_DETAIL>Kariyer Kullanıcı Girişi</LINK_DETAIL> 
+	</SETUPSWITCH>
+	<SETUPSWITCH>
+		<LINK_NAME>Yeni Kullanıcı Girişi</LINK_NAME> 
+		<LINK_SWITCH>form_add_new_user</LINK_SWITCH>
+		<LINK_DETAIL>Yeni Kullanıcı Girişi</LINK_DETAIL> 
+	</SETUPSWITCH>
+	<SETUPSWITCH>
+		<LINK_NAME>Başvurular</LINK_NAME> 
+		<LINK_SWITCH>list_app_pos</LINK_SWITCH>
+		<LINK_DETAIL>Başvurular</LINK_DETAIL> 
+	</SETUPSWITCH>
+	<SETUPSWITCH>
+		<LINK_NAME>Özgeçmişim</LINK_NAME> 
+		<LINK_SWITCH>form_upd_cv_1</LINK_SWITCH>
+		<LINK_DETAIL>Özgeçmişim</LINK_DETAIL> 
+	</SETUPSWITCH>
+	<SETUPSWITCH>
+		<LINK_NAME>Özgeçmişim 2</LINK_NAME> 
+		<LINK_SWITCH>form_upd_cv_2</LINK_SWITCH>
+		<LINK_DETAIL>Özgeçmişim 2</LINK_DETAIL> 
+	</SETUPSWITCH>
+	<SETUPSWITCH>
+		<LINK_NAME>Özgeçmişim 3</LINK_NAME> 
+		<LINK_SWITCH>form_upd_cv_3</LINK_SWITCH>
+		<LINK_DETAIL>Özgeçmişim 3</LINK_DETAIL> 
+	</SETUPSWITCH>
+	<SETUPSWITCH>
+		<LINK_NAME>Özgeçmişim 4</LINK_NAME> 
+		<LINK_SWITCH>form_upd_cv_4</LINK_SWITCH>
+		<LINK_DETAIL>Özgeçmişim 4</LINK_DETAIL> 
+	</SETUPSWITCH>
+	<SETUPSWITCH>
+		<LINK_NAME>Özgeçmişim 5</LINK_NAME> 
+		<LINK_SWITCH>form_upd_cv_5</LINK_SWITCH>
+		<LINK_DETAIL>Özgeçmişim 5</LINK_DETAIL> 
+	</SETUPSWITCH>
+	<SETUPSWITCH>
+		<LINK_NAME>Özgeçmişim 6</LINK_NAME> 
+		<LINK_SWITCH>form_upd_cv_6</LINK_SWITCH>
+		<LINK_DETAIL>Özgeçmişim 6</LINK_DETAIL> 
+	</SETUPSWITCH>
+	<SETUPSWITCH>
+		<LINK_NAME>Özgeçmişim 7</LINK_NAME> 
+		<LINK_SWITCH>form_upd_cv_7</LINK_SWITCH>
+		<LINK_DETAIL>Özgeçmişim 7</LINK_DETAIL> 
+	</SETUPSWITCH>
+	<SETUPSWITCH>
+		<LINK_NAME>Özgeçmişim 8</LINK_NAME> 
+		<LINK_SWITCH>form_upd_cv_8</LINK_SWITCH>
+		<LINK_DETAIL>Özgeçmişim 8</LINK_DETAIL> 
+	</SETUPSWITCH>
+	<SETUPSWITCH>
+		<LINK_NAME>Özgeçmişim 9</LINK_NAME> 
+		<LINK_SWITCH>form_upd_cv_9</LINK_SWITCH>
+		<LINK_DETAIL>Özgeçmişim 9</LINK_DETAIL> 
+	</SETUPSWITCH>
+	<SETUPSWITCH>
+		<LINK_NAME>Özgeçmişim 10</LINK_NAME> 
+		<LINK_SWITCH>form_upd_cv_10</LINK_SWITCH>
+		<LINK_DETAIL>Özgeçmişim 10</LINK_DETAIL> 
+	</SETUPSWITCH>
+	<SETUPSWITCH>
+		<LINK_NAME>Özgeçmiş Önizleme</LINK_NAME> 
+		<LINK_SWITCH>dsp_cv</LINK_SWITCH>
+		<LINK_DETAIL>Özgeçmiş Önizleme</LINK_DETAIL> 
+	</SETUPSWITCH>
+	<SETUPSWITCH>
+		<LINK_NAME>Üye Bilgilerim</LINK_NAME> 
+		<LINK_SWITCH>change_pass</LINK_SWITCH>
+		<LINK_DETAIL>Üye Bilgilerim</LINK_DETAIL> 
+	</SETUPSWITCH>
+	<SETUPSWITCH>
+		<LINK_NAME>Mail Gönder</LINK_NAME> 
+		<LINK_SWITCH>add_service_help</LINK_SWITCH>
+		<LINK_DETAIL>Bize Yazın</LINK_DETAIL> 
+	</SETUPSWITCH>
+	<SETUPSWITCH>
+		<LINK_NAME>İletişim</LINK_NAME> 
+		<LINK_SWITCH>dsp_contact</LINK_SWITCH>
+		<LINK_DETAIL>İletişim</LINK_DETAIL> 
+	</SETUPSWITCH>
+	<SETUPSWITCH>
+		<LINK_NAME>İş Ortakları</LINK_NAME> 
+		<LINK_SWITCH>list_partner</LINK_SWITCH>
+		<LINK_DETAIL>İş Ortakları</LINK_DETAIL> 
+	</SETUPSWITCH>
+	<SETUPSWITCH>
+		<LINK_NAME>Sektörlere Göre Firmalar</LINK_NAME> 
+		<LINK_SWITCH>list_sector</LINK_SWITCH>
+		<LINK_DETAIL>Sektörlere Göre Firmalar</LINK_DETAIL> 
+	</SETUPSWITCH>
+	<SETUPSWITCH>
+		<LINK_NAME>Sektörlere Göre Firma Sayısı</LINK_NAME> 
+		<LINK_SWITCH>list_sector_company</LINK_SWITCH>
+		<LINK_DETAIL>Sektörlere Göre Firma Sayısı</LINK_DETAIL> 
+	</SETUPSWITCH>
+	<SETUPSWITCH>
+		<LINK_NAME>Üst Şirketi Olduğum Üyelerimin Servis Başvuruları</LINK_NAME> 
+		<LINK_SWITCH>list_service_hierarchy</LINK_SWITCH>
+		<LINK_DETAIL>Üst Şirketi Olduğum Üyelerimin Başvurular listesini gösterir.</LINK_DETAIL> 
+	</SETUPSWITCH>
+	<SETUPSWITCH>
+		<LINK_NAME>İş Ortağı Olduğum Servis Başvuruları</LINK_NAME> 
+		<LINK_SWITCH>list_incoming_services</LINK_SWITCH>
+		<LINK_DETAIL>İş Ortağı Olduğum Servis Başvuruları.</LINK_DETAIL> 
+	</SETUPSWITCH>
+	<SETUPSWITCH>
+		<LINK_NAME>İş Ortağı Olduğum Servis Başvurularının Detayı</LINK_NAME> 
+		<LINK_SWITCH>dsp_service_incoming</LINK_SWITCH>
+		<LINK_DETAIL>İş Ortağı Olduğum Servis Başvurularının Detayı.</LINK_DETAIL> 
+	</SETUPSWITCH>
+	<SETUPSWITCH>
+		<LINK_NAME>Workcube Yardım</LINK_NAME> 
+		<LINK_SWITCH>add_customer_help</LINK_SWITCH>
+		<LINK_DETAIL>Workcube destek form sayfasını gösterir.</LINK_DETAIL> 
+	</SETUPSWITCH>
+	<SETUPSWITCH>
+		<LINK_NAME>Fırsatlarım</LINK_NAME> 
+		<LINK_SWITCH>list_opportunities</LINK_SWITCH>
+		<LINK_DETAIL>Fırsatlarımı Getirir.</LINK_DETAIL> 
+	</SETUPSWITCH>
+	<SETUPSWITCH>
+		<LINK_NAME>Sistemlerim</LINK_NAME> 
+		<LINK_SWITCH>list_subscription</LINK_SWITCH>
+		<LINK_DETAIL>Sistemlerimi Getirir.</LINK_DETAIL> 
+	</SETUPSWITCH>
+	<SETUPSWITCH>
+		<LINK_NAME>Referansı Olduğum Sistemler</LINK_NAME> 
+		<LINK_SWITCH>list_subscription_ref</LINK_SWITCH>
+		<LINK_DETAIL>Referansı Olduğum Sistemler.</LINK_DETAIL> 
+	</SETUPSWITCH>
+	<SETUPSWITCH>
+		<LINK_NAME>Sistem Detay</LINK_NAME> 
+		<LINK_SWITCH>dsp_subscription</LINK_SWITCH>
+		<LINK_DETAIL>Sistemin Detayını Getirir.</LINK_DETAIL> 
+	</SETUPSWITCH>
+	<SETUPSWITCH>
+		<LINK_NAME>Forumlar</LINK_NAME> 
+		<LINK_SWITCH>list_forums</LINK_SWITCH>
+		<LINK_DETAIL>Forumlar.</LINK_DETAIL> 
+	</SETUPSWITCH>
+	<SETUPSWITCH>
+		<LINK_NAME>Forum Konuları</LINK_NAME> 
+		<LINK_SWITCH>view_reply</LINK_SWITCH>
+		<LINK_DETAIL>Forum Konularını Getirir.</LINK_DETAIL> 
+	</SETUPSWITCH>
+	<SETUPSWITCH>
+		<LINK_NAME>Forum Cevapları</LINK_NAME> 
+		<LINK_SWITCH>view_topic</LINK_SWITCH>
+		<LINK_DETAIL>Forum Cevaplarını Getirir.</LINK_DETAIL> 
+	</SETUPSWITCH>
+	<SETUPSWITCH>
+		<LINK_NAME>Ajandaya Olay Ekle</LINK_NAME> 
+		<LINK_SWITCH>form_add_event</LINK_SWITCH>
+		<LINK_DETAIL>Ajandaya Olay Ekle.</LINK_DETAIL> 
+	</SETUPSWITCH>
+	<SETUPSWITCH>
+		<LINK_NAME>Ajandaya Olay Güncelle</LINK_NAME> 
+		<LINK_SWITCH>form_upd_event</LINK_SWITCH>
+		<LINK_DETAIL>Ajandaya Olay Güncelle.</LINK_DETAIL> 
+	</SETUPSWITCH>
+	<SETUPSWITCH>
+		<LINK_NAME>Günlük Ajanda</LINK_NAME> 
+		<LINK_SWITCH>view_daily</LINK_SWITCH>
+		<LINK_DETAIL>Günlük Ajanda.</LINK_DETAIL> 
+	</SETUPSWITCH>
+	<SETUPSWITCH>
+		<LINK_NAME>Haftalık Ajanda</LINK_NAME> 
+		<LINK_SWITCH>view_weekly</LINK_SWITCH>
+		<LINK_DETAIL>Haftalık Ajanda.</LINK_DETAIL> 
+	</SETUPSWITCH>
+	<SETUPSWITCH>
+		<LINK_NAME>Aylık Ajanda</LINK_NAME> 
+		<LINK_SWITCH>view_monthly</LINK_SWITCH>
+		<LINK_DETAIL>Aylık Ajanda.</LINK_DETAIL> 
+	</SETUPSWITCH>
+	<SETUPSWITCH>
+		<LINK_NAME>Aylık Ajanda</LINK_NAME> 
+		<LINK_SWITCH>view_monthly</LINK_SWITCH>
+		<LINK_DETAIL>Aylık Ajanda.</LINK_DETAIL> 
+	</SETUPSWITCH>
+	<SETUPSWITCH>
+		<LINK_NAME>İlanlarım</LINK_NAME> 
+		<LINK_SWITCH>list_notices_partner</LINK_SWITCH>
+		<LINK_DETAIL>İlanlarım.</LINK_DETAIL> 
+	</SETUPSWITCH>
+	<SETUPSWITCH>
+		<LINK_NAME>İlan Ekle</LINK_NAME> 
+		<LINK_SWITCH>form_add_notice</LINK_SWITCH>
+		<LINK_DETAIL>İlan Ekle.</LINK_DETAIL> 
+	</SETUPSWITCH>
+	<SETUPSWITCH>
+		<LINK_NAME>İlan Güncelle</LINK_NAME> 
+		<LINK_SWITCH>form_upd_notice</LINK_SWITCH>
+		<LINK_DETAIL>İlan Güncelle.</LINK_DETAIL> 
+	</SETUPSWITCH>
+	<SETUPSWITCH>
+		<LINK_NAME>Başvurular</LINK_NAME> 
+		<LINK_SWITCH>list_apps</LINK_SWITCH>
+		<LINK_DETAIL>Başvurular.</LINK_DETAIL> 
+	</SETUPSWITCH>
+	<SETUPSWITCH>
+		<LINK_NAME>Başvuru Detay</LINK_NAME> 
+		<LINK_SWITCH>upd_app_pos</LINK_SWITCH>
+		<LINK_DETAIL>Başvuru Detay.</LINK_DETAIL> 
+	</SETUPSWITCH>
+	<SETUPSWITCH>
+		<LINK_NAME>Üst Sektörler</LINK_NAME> 
+		<LINK_SWITCH>sector_upper</LINK_SWITCH>
+		<LINK_DETAIL>Üst Sektörler.</LINK_DETAIL> 
+	</SETUPSWITCH>
+	<SETUPSWITCH>
+		<LINK_NAME>Alt Sektörler</LINK_NAME> 
+		<LINK_SWITCH>sector_cats</LINK_SWITCH>
+		<LINK_DETAIL>Alt Sektörler.</LINK_DETAIL> 
+	</SETUPSWITCH>
+</SETUP_SWITCH>

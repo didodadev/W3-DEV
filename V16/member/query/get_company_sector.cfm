@@ -1,0 +1,9 @@
+<cfquery name="GET_COMPANY_SECTOR" datasource="#DSN#">
+	SELECT 
+		SECTOR_CAT_ID,
+		SECTOR_CAT
+	FROM 
+		SETUP_SECTOR_CATS WITH (NOLOCK) 
+	ORDER BY 
+		SECTOR_CAT
+</cfquery>

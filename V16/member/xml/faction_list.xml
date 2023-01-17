@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SETUP_SITE>
+	<SETUPSITE>
+		<LINK_NAME>Bireysel Üye Listesi XML Setup</LINK_NAME> 
+		<LINK_FILE>member.consumer_list</LINK_FILE> 
+		<LINK_DETAIL>Bireysel üye listesi ayarlarının düzenlenmesi</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Bireysel Üye Ekleme/Güncelleme XML Setup</LINK_NAME> 
+		<LINK_FILE>member.form_add_consumer</LINK_FILE> 
+		<LINK_DETAIL>Bireysel üye ekleme ve güncelleme ayarlarının düzenlenmesi</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Kurumsal Üye Ekleme/Güncelleme XML Setup</LINK_NAME> 
+		<LINK_FILE>member.form_add_company</LINK_FILE> 
+		<LINK_DETAIL>Kurumsal Üyede Ek Bilgiler Gösterim Detayı</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Kurumsal Üye Ekleme/Güncelleme XML Setup</LINK_NAME> 
+		<LINK_FILE>member.form_add_company</LINK_FILE> 
+		<LINK_DETAIL>Kurumsal Üye Action</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Kurumsal Üye Ekleme/Güncelleme XML Setup</LINK_NAME> 
+		<LINK_FILE>member.detail_company</LINK_FILE> 
+		<LINK_DETAIL>Kurumsal Üye Action</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Bireysel Üye Adres Ekleme/Güncelleme XML Setup</LINK_NAME> 
+		<LINK_FILE>member.add_consumer_contact,member.upd_consumer_contact</LINK_FILE> 
+		<LINK_DETAIL>Bireysel üye adres ekleme ve güncelleme ayarlarının düzenlenmesi</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Üye Giriş Sayfası XML Setup</LINK_NAME> 
+		<LINK_FILE>member.welcome</LINK_FILE> 
+		<LINK_DETAIL>Üye Giriş Sayfası ayarlarının düzenlenmesi</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Kurumsal Üye Banka Hesabı Tanımlama</LINK_NAME> 
+		<LINK_FILE>member.popup_form_add_bank_comp</LINK_FILE> 
+		<LINK_DETAIL>Kurumsal Üye Banka Hesabı Tanımlama ayarlarının düzenlenmesi</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Bireysel Üye Banka Hesabı Tanımlama</LINK_NAME> 
+		<LINK_FILE>member.popup_form_add_bank_cons</LINK_FILE> 
+		<LINK_DETAIL>Bireysel Üye Banka Hesabı Tanımlama ayarlarının düzenlenmesi</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Kurumsal Üye Çalışan Detayı Tanımlama</LINK_NAME> 
+		<LINK_FILE>member.detail_partner</LINK_FILE> 
+		<LINK_DETAIL>Kurumsal Üye Çalışan Detayı Ayarlarının düzenlenmesi</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Bireysel Üye Ekleme XML Setup</LINK_NAME> 
+		<LINK_FILE>member.add_multiple_consumer_form</LINK_FILE> 
+		<LINK_DETAIL>Bireysel Üye Ekleme Parametreleri</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Kurumsal Üye Listesi XML Setup</LINK_NAME> 
+		<LINK_FILE>member.list_company</LINK_FILE> 
+		<LINK_DETAIL>Kurumsal Üye Listesi</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>İlişkili Sistemler Listesi XML Setup</LINK_NAME> 
+		<LINK_FILE>member.popup_list_subscription_contract</LINK_FILE> 
+		<LINK_DETAIL>İlişkili Sistemler Listesi</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Kredi Kartı XML Setup</LINK_NAME> 
+		<LINK_FILE>member.popup_form_add_credit_cart</LINK_FILE> 
+		<LINK_DETAIL>Kredi Kartı Ekleme</LINK_DETAIL>
+	</SETUPSITE>
+</SETUP_SITE>

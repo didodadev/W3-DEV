@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="22" height="23" viewBox="0 0 22 23">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_331" data-name="Rectangle 331" width="22" height="23" transform="translate(-0.124 -0.431)" fill="none"/>
+    </clipPath>
+  </defs>
+  <g id="call_icon" transform="translate(0.124 0.431)">
+    <g id="call_icon-2" data-name="call_icon" transform="translate(0 0)">
+      <g id="Group_765" data-name="Group 765" transform="translate(0 0)">
+        <g id="Group_764" data-name="Group 764" clip-path="url(#clip-path)">
+          <path id="Path_1715" data-name="Path 1715" d="M21.118,0H12.409a1.248,1.248,0,0,0-1.244,1.244v11.2L14.9,8.709h6.221a1.249,1.249,0,0,0,1.244-1.244V1.244A1.249,1.249,0,0,0,21.118,0M20.16,15.253,17,14.892a2.481,2.481,0,0,0-2.042.709l-2.289,2.289a18.716,18.716,0,0,1-8.2-8.2l2.3-2.3a2.485,2.485,0,0,0,.709-2.04L7.122,2.215A2.492,2.492,0,0,0,4.645.012H2.492A2.469,2.469,0,0,0,0,2.588a21.142,21.142,0,0,0,19.77,19.77,2.47,2.47,0,0,0,2.577-2.488V17.717a2.466,2.466,0,0,0-2.19-2.463" transform="translate(0 0)"/>
+        </g>
+      </g>
+    </g>
+    <path id="Color_Overlay" data-name="Color Overlay" d="M19.553,22l-.1,0A20.8,20.8,0,0,1,0,2.546l0-.1v-.1A2.437,2.437,0,0,1,2.451.012H4.569A2.451,2.451,0,0,1,7.006,2.179l.356,3.083a2.445,2.445,0,0,1-.7,2.006L4.4,9.534A18.414,18.414,0,0,0,12.464,17.6l2.253-2.252a2.436,2.436,0,0,1,2.008-.7l3.109.354a2.423,2.423,0,0,1,2.154,2.423v2.118A2.438,2.438,0,0,1,19.641,22ZM10.983,1.224A1.228,1.228,0,0,1,12.208,0h8.567A1.229,1.229,0,0,1,22,1.224v6.12a1.23,1.23,0,0,1-1.225,1.225H14.656L10.983,12.24Z" transform="translate(-0.124 -0.431)" fill="#faa61a"/>
+  </g>
+</svg>

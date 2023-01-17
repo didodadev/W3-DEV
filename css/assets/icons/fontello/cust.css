@@ -1,0 +1,11 @@
+.special_icon_set h1{padding:10px;border-bottom:1px solid #eaeaea;}
+.special_icon_set h2{padding:10px;border-top:1px solid #eaeaea;border-bottom:1px solid #eaeaea;}
+.special_icon_set h2:first-child{border-top:none;}
+
+
+.special_icon_set .col-2 ,.special_icon_set .col-3{float:left;}
+.special_icon_set .col-2 a{display:block;height:95px;overflow: hidden;text-decoration:none;}
+.special_icon_set .col-2 a > span{display:block;line-height:50px;}
+.special_icon_set .col-2 a > img , .special_icon_set .col-3 > img{display:block;margin:0 auto;}
+
+.special_icon_set .row{padding:15px 0;margin:0;}

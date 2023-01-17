@@ -1,0 +1,11 @@
+<cfquery name="get_forum_subjects" datasource="#DSN#">
+	SELECT
+		FM.FORUMNAME,
+		COUNT(FT.TOPICID) AS SUB_NUMBER
+	FROM
+		FORUM_MAIN AS FM,
+		FORUM_TOPIC AS FT
+	WHERE
+		FT.FORUMID = FM.FORUMID
+	GROUP BY FM.FORUMNAME
+</cfquery>

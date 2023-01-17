@@ -1,0 +1,8 @@
+<cfquery name="DIRECTMAIL_CONT" datasource="#dsn3#">
+	SELECT
+		*
+	FROM
+		CAMPAIGN_DIRECTMAIL_CONT
+	WHERE
+		DIRECTMAIL_CONT_ID = #DIRECTMAIL_CONT_ID#
+</cfquery>

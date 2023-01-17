@@ -1,0 +1,2 @@
+files klasörü -> addon klasörü
+Wro altında güncelleme kodları gelecek

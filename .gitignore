@@ -1,0 +1,149 @@
+# Workcube #
+documents/*
+add_options/*
+V16/add_options/*
+web_services/*
+B2B2C/*
+dsn.txt
+mailsetting.cfm
+AddOns/Yazilimsa/Protein/extend_files/*
+cf_scripts/*
+test/*
+
+# ColdFusion #
+CFIDE/*
+META-INF/*
+WEB-INF/*
+# except
+!WEB-INF/web.xml
+
+# Compiled source #
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.so
+
+# Packages #
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+*.bzip
+*.bz2
+*.xz
+*.lzma
+*.xpi
+*.gem
+*.egg
+*.deb
+*.rpm
+
+# Logs and databases #
+*.log
+*.sqlite
+
+# OS generated files #
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+.AppleDouble
+.LSOverride
+.Spotlight-V100
+$RECYCLE.BIN/
+Desktop.ini
+
+# Eclipse #
+.project
+
+# Subversion #
+*.svn
+**/.svn
+
+# Ignore all dotfiles�
+.*
+# except
+!.gitignore
+
+# Flex Builder #
+bin/
+bin-debug/
+
+# Eclipse #
+*.pydevproject
+.project
+.metadata
+bin/**
+gen/**
+tmp/**
+tmp/**/*
+*.tmp
+*.bak
+*.swp
+*~.nib
+local.properties
+.classpath
+.settings/
+.loadpath
+*.launch
+.cproject
+.buildpath
+
+# IntelliJ #
+*.iml
+*.ipr
+*.iws
+.idea/
+
+# NetBeans #
+nbproject/private/
+build/
+nbbuild/
+nbdist/
+nbactions.xml
+nb-configuration.xml
+
+# built application files
+*.apk
+*.ap_
+
+# Local configuration file (sdk path, etc)
+local.properties
+
+# Xcode
+.DS_Store
+*/build/*
+*.pbxuser
+!default.pbxuser
+*.mode1v3
+!default.mode1v3
+*.mode2v3
+!default.mode2v3
+*.perspectivev3
+!default.perspectivev3
+xcuserdata
+profile
+*.moved-aside
+DerivedData
+.idea/
+*.hmap
+
+# Others
+[Bb]in
+[Oo]bj
+TestResults
+*.Cache
+ClientBin
+stylecop.*
+~$*
+*.dbmdl
+AddOns/Yazilimsa/Protein/reactor/src/includes/manifest/

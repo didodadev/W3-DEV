@@ -1,0 +1,449 @@
+
+
+
+//Responsive Font Weight
+$font-weight-list: 100, 200, 300, 400, 500, 600, 700, 800, 900;
+@each $breakpoint in map-keys($grid-breakpoints) {
+  @include media-breakpoint-up($breakpoint) {
+    $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+    @each $fw in $font-weight-list {
+      .font-weight#{$infix}-#{$fw} {
+        font-weight: $fw !important;
+      }
+    }
+  }
+}
+
+// Responsive 100% Width
+@each $breakpoint in map-keys($grid-breakpoints) {
+  @include media-breakpoint-only($breakpoint) {
+    $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+    .w#{$infix}-100 {
+      width: 100% !important;
+    }
+  }
+}
+
+//Responsive Text
+$wrk-font-size: (5, .1), (4, .08), (3, .06), (2, .04), (1, .02), (0, .005);
+@each $size, $size-px in $wrk-font-size {
+  $intervals: 20 !default;
+  $interval-size: 30 !default;
+  .responsive-#{$size}-text {
+    font-weight: 300;
+    line-height: normal;
+    font-size: 1.2rem;
+    $i: 0;
+    @while $i <= $intervals {
+      @media only screen and (min-width: 360 + ($i * $interval-size) + px) {
+        font-size: (1.2rem + $size-px*3) * (1 + ($size-px * $i));
+      }
+      $i: $i + 1;
+    }
+  }
+}
+
+//Font-Size PX ve Rem olarak veriyor.
+$pixelBase: 16;
+@mixin font-size($sizeValue: 16) {
+  font-size: ($sizeValue * 1) + px;
+  font-size: (($sizeValue * 1) / $pixelBase)  + rem;
+}
+
+//PX bir değeri REM'e çeviriyor
+@function remy($pxsize,$rembase:16) {
+  @return ($pxsize/$rembase)+rem;
+}
+
+//Örnek kullanım: "@include rem(margin-top,15px)" PX ve REM olarak çıkarıyor.
+$baseline-px: 16px;
+@mixin rem($property, $px-values) {
+  $baseline-rem: $baseline-px / 1rem;
+  #{$property}: $px-values;
+  @if type-of($px-values) == "number" {
+    #{$property}: $px-values / $baseline-rem;
+  } @else {
+    $rem-values: unquote("");
+    @each $value in $px-values {
+      @if $value == 0 or type-of($value) == "string" or type-of($value) == "color" {
+        $rem-values: append($rem-values, $value);
+      } @else {
+        $rem-values: append($rem-values, $value / $baseline-rem);
+      }
+    }
+    #{$property}: $rem-values;
+  }
+}
+
+//Border Radius
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  -ms-border-radius: $radius;
+  border-radius: $radius;
+}
+
+//Gradient Background Color
+@mixin backgroundGradient($top-color, $bottom-color, $deg:90, $radial:FALSE) {
+  @if $radial == TRUE {
+    background: $top-color;
+    background: -ms-radial-gradient(circle, $top-color 0%, $bottom-color 100%);
+    background: -o-radial-gradient(circle, $top-color 0%, $bottom-color 100%);
+    background: -moz-radial-gradient(circle, $top-color 0%, $bottom-color 100%);
+    background: -webkit-radial-gradient(circle, $top-color 0%, $bottom-color 100%);
+    background: radial-gradient(circle, $top-color 0%, $bottom-color 100%);
+  } @else {
+    background: $top-color;
+    background: -ms-linear-gradient($deg+deg, $top-color 0%, $bottom-color 100%);
+    background: -o-linear-gradient($deg+deg, $top-color 0%, $bottom-color 100%);
+    background: -moz-linear-gradient($deg+deg, $top-color 0%, $bottom-color 100%);
+    background: -webkit-linear-gradient($deg+deg, $top-color 0%, $bottom-color 100%);
+    background: linear-gradient($deg+deg, $top-color 0%, $bottom-color 100%);
+  }
+}
+
+//Webkit ScrollBar
+@mixin scrollbarStyle($scrollColor:$brand-danger) {
+  &::-webkit-scrollbar {
+    width: 10px;
+    height: 100px;
+  }
+  &::-webkit-scrollbar-button {
+    width: 0px;
+    height: 0px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: $scrollColor;
+    border: 0px none transparent;
+    border-radius: 0px;
+  }
+  &::-webkit-scrollbar-thumb:hover {
+    background: darken($scrollColor, 5%);
+  }
+  &::-webkit-scrollbar-thumb:active {
+    background: $scrollColor;
+  }
+  &::-webkit-scrollbar-track {
+    background: darken(grayscale($scrollColor), 20%);
+    border: 0px none transparent;
+    border-radius: 0px;
+  }
+  &::-webkit-scrollbar-track:hover {
+    background: darken(grayscale($scrollColor), 20%);;
+  }
+  &::-webkit-scrollbar-track:active {
+    background: darken(grayscale($scrollColor), 20%);
+  }
+  &::-webkit-scrollbar-corner {
+    background: transparent;
+  }
+}
+
+//Place Holder
+@mixin input-placeholder {
+  &.placeholder {
+    @content;
+  }
+  &:-moz-placeholder {
+    @content;
+  }
+  &::-moz-placeholder {
+    @content;
+  }
+  &:-ms-input-placeholder {
+    @content;
+  }
+  &::-webkit-input-placeholder {
+    @content;
+  }
+}
+
+//Transition
+@mixin transition($args...) {
+  -webkit-transition: $args;
+  -moz-transition: $args;
+  -ms-transition: $args;
+  -o-transition: $args;
+  transition: $args;
+}
+
+// 1 'den 20'ye kadar Z-Index üretiyor
+@for $i from 1 through 20 {
+  .z-index-#{$i} {
+    z-index: #{$i}
+  }
+}
+
+//Site Renklerini Oluşturuyor
+$colors-site: (primary, $brand-primary),
+        (success, $brand-success),
+        (info, $brand-info),
+        (warning, $brand-warning),
+        (danger, $brand-danger),
+        (grayblue, $grayblue),
+        ('gray', $gray);
+
+
+@each $colorname, $color in $colors-site {
+  .text-#{$colorname} {
+    color: $color;
+  }
+  .#{$colorname} {
+    background-color: $color;
+  }
+  @for $i from 1 through 15 {
+    $multiple: 4%;
+    .#{$colorname}-darken-#{$i} {
+      background-color: darken($color, $i*$multiple);
+    }
+    .#{$colorname}-lighten-#{$i} {
+      background-color: lighten($color, $i*$multiple);
+    }
+    .text-#{$colorname}-lighten-#{$i} {
+      color: lighten($color, $i*$multiple);
+    }
+    .text-#{$colorname}-darken-#{$i} {
+      color: darken($color, $i*$multiple);
+    }
+  }
+}
+
+// More Button
+@mixin more-button($brand-color:$brand-success) {
+  .more-button {
+    @include transition(background-color .5s);
+    background-color: $brand-color;
+    @include rem(padding, 10px 45px);
+    color: $white;
+    white-space: nowrap;
+    font-weight: $header-bold;
+    font-family: $headings-font-family;
+    display: inline-block;
+    @include rem(margin-top, 20px);
+    &:hover {
+      text-decoration: none;
+      background-color: darken($brand-color, 5%);
+    }
+  }
+}
+
+// Objelerin Before için margin padding özelliklerini oluşturuyor.
+//.mr-3-b:before { margin-right: 15px !important; }
+$spacer: 1rem !default;
+$spacer-x: $spacer !default;
+$spacer-y: $spacer !default;
+$spacers: (
+        0: (
+                x: 0,
+                y: 0
+        ),
+        1: (
+                x: ($spacer-x * .25),
+                y: ($spacer-y * .25)
+        ),
+        2: (
+                x: ($spacer-x * .5),
+                y: ($spacer-y * .5)
+        ),
+        3: (
+                x: $spacer-x,
+                y: $spacer-y
+        ),
+        4: (
+                x: ($spacer-x * 1.5),
+                y: ($spacer-y * 1.5)
+        ),
+        5: (
+                x: ($spacer-x * 3),
+                y: ($spacer-y * 3)
+        )
+) !default;
+
+@each $breakpoint in map-keys($grid-breakpoints) {
+  @include media-breakpoint-up($breakpoint) {
+    $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+
+    @each $prop, $abbrev in (margin: m, padding: p) {
+      @each $size, $lengths in $spacers {
+        $length-x: map-get($lengths, x);
+        $length-y: map-get($lengths, y);
+        $before: "b";
+        .#{$abbrev}#{$infix}-#{$size}-#{$before}:before {
+          #{$prop}: $length-y $length-x !important;
+        }
+        .#{$abbrev}t#{$infix}-#{$size}-#{$before}:before {
+          #{$prop}-top: $length-y !important;
+        }
+        .#{$abbrev}r#{$infix}-#{$size}-#{$before}:before {
+          #{$prop}-right: $length-x !important;
+        }
+        .#{$abbrev}b#{$infix}-#{$size}-#{$before}:before {
+          #{$prop}-bottom: $length-y !important;
+        }
+        .#{$abbrev}l#{$infix}-#{$size}-#{$before}:before {
+          #{$prop}-left: $length-x !important;
+        }
+        .#{$abbrev}x#{$infix}-#{$size}-#{$before}:before {
+          #{$prop}-right: $length-x !important;
+          #{$prop}-left: $length-x !important;
+        }
+        .#{$abbrev}y#{$infix}-#{$size}-#{$before}:before {
+          #{$prop}-top: $length-y !important;
+          #{$prop}-bottom: $length-y !important;
+        }
+      }
+    }
+
+  }
+}
+
+//Opacity Mixin
+@mixin opacity($value) {
+  $ie-value: $value * 100;
+  opacity: $value;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity="+$ie-value+")";
+  filter: alpha(opacity=$ie-value);
+}
+
+//Social Medya
+@mixin social-media($radius: 0px, $social-media-width: 40px, $social-media-font-size: 1.2rem, $ul-padding-left:15px, $ul-padding-right:15px, $ul-width:100%, $ul-direction:none, $li-mt:0, $li-mr:0, $li-mb:0, $li-ml:0, $float:none, $tone:colored) {
+  ul.social-media {
+    padding-left: $ul-padding-left;
+    padding-right: $ul-padding-right;
+    width: $ul-width;
+    float: $ul-direction;
+    li {
+      float: $float;
+      .social-item {
+        width: $social-media-width;
+        height: $social-media-width;
+        text-align: center;
+        line-height: $social-media-width;
+        font-size: $social-media-font-size;
+        color: white;
+        display: block;
+        -webkit-border-radius: $radius;
+        -moz-border-radius: $radius;
+        -ms-border-radius: $radius;
+        border-radius: $radius;
+        i {
+          &:before {
+            line-height: $social-media-width;
+          }
+        }
+      }
+      $social: (facebook, $facebook-color),
+              (twitter, $twitter-color),
+              (instagram, $instagram-color),
+              (linkedin, $linkedin-color),
+              (googleplus, $googleplus-color),
+              (youtube, $youtube-color),
+              (pinterest, $pinterest-color),
+              (whatsapp, $whatsapp-color),
+              (envelope, $envelope-color);
+      @if $tone == gray-tone {
+        @each $socialnetwork, $color in $social {
+          .#{$socialnetwork} {
+            @extend .social-item;
+            background-color: grayscale($color);
+            &:hover {
+              background-color: $color;
+              color: white;
+            }
+          }
+        }
+      }
+      @if $tone == grayopac-tone {
+        @each $socialnetwork, $color in $social {
+          .#{$socialnetwork} {
+            @extend .social-item;
+            background-color: rgba(grayscale($color), 0.2);
+            &:hover {
+              background-color: $color;
+              color: white;
+            }
+          }
+        }
+      }
+      @if $tone == colored-tone {
+        @each $socialnetwork, $color in $social {
+          .#{$socialnetwork} {
+            @extend .social-item;
+            background-color: $color;
+            &:hover {
+              background-color: darken($color, 5%);
+              color: lighten($color, 50%);
+            }
+          }
+        }
+      }
+      margin: $li-mt $li-mr $li-mb $li-ml;
+    }
+    li:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+// 1'den 50'ye font-size oluşturuyor. Responsive 100% Font-Size - Örnek Kullanımı class="fs-10 fs-sm-15 fs-md-20 fs-lg-25 fs-xs-30"
+@for $i from 7 through 50 {
+  @each $breakpoint in map-keys($grid-breakpoints) {
+    @include media-breakpoint-up($breakpoint) {
+      $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+      .fs#{$infix}-#{$i} {
+        @include font-size($i);
+      }
+    }
+  }
+}
+
+// Responsive Border Kalınlığı : 0 - 1 - 2
+//.br-3 { border-right: 3px !important; }
+$border-line: (
+        0: (
+                x: 0px,
+                y: 0px
+        ),
+        1: (
+                x: 1px,
+                y: 1px
+        ),
+        2: (
+                x: 2px,
+                y: 2px
+        )
+) !default;
+
+@each $breakpoint in map-keys($grid-breakpoints) {
+  @include media-breakpoint-up($breakpoint) {
+    $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+
+    @each $prop, $abbrev in (border: b) {
+      @each $size, $lengths in $border-line {
+        $length-x: map-get($lengths, x);
+        $length-y: map-get($lengths, y);
+        .#{$abbrev}t#{$infix}-#{$size} {
+          #{$prop}-top-width: $length-y !important;
+        }
+        .#{$abbrev}r#{$infix}-#{$size} {
+          #{$prop}-right-width: $length-x !important;
+        }
+        .#{$abbrev}b#{$infix}-#{$size} {
+          #{$prop}-bottom-width: $length-y !important;
+        }
+        .#{$abbrev}l#{$infix}-#{$size} {
+          #{$prop}-left-width: $length-x !important;
+        }
+        .#{$abbrev}x#{$infix}-#{$size} {
+          #{$prop}-right-width: $length-x !important;
+          #{$prop}-left-width: $length-x !important;
+        }
+        .#{$abbrev}y#{$infix}-#{$size}{
+          #{$prop}-top-width: $length-y !important;
+          #{$prop}-bottom-width: $length-y !important;
+        }
+      }
+    }
+
+  }
+}

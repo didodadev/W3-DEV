@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<OBJECT_PROPERTIES>
+	<OBJECT_PROPERTY>
+		<PROPERTY>is_total</PROPERTY>
+		<PROPERTY_DETAIL>Alt Toplamlar Gösterilsin</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>select</PROPERTY_TYPE>
+		<PROPERTY_VALUES>1,0</PROPERTY_VALUES>
+		<PROPERTY_NAMES>Evet,Hayır</PROPERTY_NAMES>
+		<PROPERTY_DEFAULT>0</PROPERTY_DEFAULT>
+		<PROPERTY_HELP>Alt toplamlar gösterilsin:Her listeleme sayfas sonunda kümülatif olarak ve işlem dövizi cinsinden toplamların görülmesini sağlar.</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+	<OBJECT_PROPERTY>
+		<PROPERTY>x_select_type_info</PROPERTY>
+		<PROPERTY_DETAIL>Tahsilat\Ödeme Tipi Seçilebilsin</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>select</PROPERTY_TYPE>
+		<PROPERTY_VALUES>1,0</PROPERTY_VALUES>
+		<PROPERTY_NAMES>Evet,Hayır</PROPERTY_NAMES>
+		<PROPERTY_DEFAULT>0</PROPERTY_DEFAULT>
+		<PROPERTY_HELP>Tahsilat/Ödeme Tipi Seçilebilsin;Tahsilat/ödeme tipi selectboxının listeleme sayfasındaki görünürlüğü ile ilgilidir.Evet seçilirse görülür.</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+	<OBJECT_PROPERTY>
+		<PROPERTY>x_project_info</PROPERTY>
+		<PROPERTY_DETAIL>Proje Sütunu Görünsün</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>select</PROPERTY_TYPE>
+		<PROPERTY_VALUES>1,0</PROPERTY_VALUES>
+		<PROPERTY_NAMES>Evet,Hayır</PROPERTY_NAMES>
+		<PROPERTY_DEFAULT>0</PROPERTY_DEFAULT>
+		<PROPERTY_HELP>Proje sütunu görünsün:Listeleme sayfasında proje sütununun görülmesini sağlar.Hayır ise proje popupı görülmeye devam eder.</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+	<OBJECT_PROPERTY>
+		<PROPERTY>x_branch_info</PROPERTY>
+		<PROPERTY_DETAIL>Şube Sütunu Görünsün</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>select</PROPERTY_TYPE>
+		<PROPERTY_VALUES>1,0</PROPERTY_VALUES>
+		<PROPERTY_NAMES>Evet,Hayır</PROPERTY_NAMES>
+		<PROPERTY_DEFAULT>0</PROPERTY_DEFAULT>
+		<PROPERTY_HELP>Şube sütunu görünsün:Listeleme sayfasında şube sütununun görülmesini sağlar.Hayır ise şube filtresi görülmeye devam eder.</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+	<OBJECT_PROPERTY>
+		<PROPERTY>x_masraf_alacak</PROPERTY>
+		<PROPERTY_DETAIL>Kredi Ödemesinde Masraf Tutarı ve Alacak Birlikte Görünsün</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>select</PROPERTY_TYPE>
+		<PROPERTY_VALUES>1,0</PROPERTY_VALUES>
+		<PROPERTY_NAMES>Evet,Hayır</PROPERTY_NAMES>
+		<PROPERTY_DEFAULT>0</PROPERTY_DEFAULT>
+		<PROPERTY_HELP>Kredi ödemesinde masraf tutarı ve alacak tutarının birlikte veya ayrı görülmesini sağlar.</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+	<OBJECT_PROPERTY>
+		<PROPERTY>x_ehesap_records_show</PROPERTY>
+		<PROPERTY_DETAIL>E-Hesap Tarafından Yapılan Havalelerin Görüntülenmesi Cari Hesap Tipi Yetkilerine Göre Çalışır</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>select</PROPERTY_TYPE>
+		<PROPERTY_VALUES>1,0</PROPERTY_VALUES>
+		<PROPERTY_NAMES>Evet,Hayır</PROPERTY_NAMES>
+		<PROPERTY_DEFAULT>0</PROPERTY_DEFAULT>
+		<PROPERTY_HELP>Cari Hesap Tipi Yetkisine Bakılmaksızın E-Hesap Tarafından Gönderilen Havalelerin Görüntülenmesini Sağlar.</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+</OBJECT_PROPERTIES>

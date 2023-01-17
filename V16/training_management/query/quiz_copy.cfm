@@ -1,0 +1,98 @@
+<cfquery name="ADD_QUIZ" datasource="#dsn#">
+	INSERT INTO
+		QUIZ
+	(
+		QUIZ_STARTDATE, 
+		QUIZ_FINISHDATE, 
+		PROCESS_STAGE,
+		SCORE1,
+		SCORE2,
+		SCORE3,
+		SCORE4,
+		SCORE5,
+		COMMENT1,
+		COMMENT2,
+		COMMENT3,
+		COMMENT4,
+		COMMENT5,
+		QUIZ_PARTNERS,
+		QUIZ_CONSUMERS,
+		QUIZ_DEPARTMENTS,
+		QUIZ_POSITION_CATS,
+		QUIZ_OBJECTIVE,
+		TRAINING_SEC_ID, 
+		TRAINING_CAT_ID, 
+		TRAINING_ID,
+		CLASS_ID,
+		QUIZ_AVERAGE,
+		TAKE_LIMIT,
+		TOTAL_TIME,
+		TOTAL_POINTS,
+		TIMING_STYLE, 
+		GRADE_STYLE, 
+		QUIZ_HEAD, 
+		QUIZ_TYPE, 
+		RANDOM, 
+		MAX_QUESTIONS, 
+		RECORD_EMP, 
+		RECORD_IP
+	)
+	SELECT 
+		QUIZ_STARTDATE,
+		QUIZ_FINISHDATE,
+		PROCESS_STAGE,
+		SCORE1,
+		SCORE2,
+		SCORE3,
+		SCORE4,
+		SCORE5,
+		COMMENT1,
+		COMMENT2,
+		COMMENT3,
+		COMMENT4,
+		COMMENT5,
+		QUIZ_PARTNERS,
+		QUIZ_CONSUMERS,
+		QUIZ_DEPARTMENTS,
+		QUIZ_POSITION_CATS,
+		QUIZ_OBJECTIVE,
+		TRAINING_SEC_ID, 
+		TRAINING_CAT_ID,
+		TRAINING_ID,
+		CLASS_ID,
+		QUIZ_AVERAGE,
+		TAKE_LIMIT,
+		TOTAL_TIME,
+		TOTAL_POINTS,
+		TIMING_STYLE,
+		GRADE_STYLE, 
+		QUIZ_HEAD, 
+		QUIZ_TYPE, 
+		RANDOM, 
+		MAX_QUESTIONS, 
+		#session.ep.userid#, 
+		'#cgi.remote_addr#'	
+	FROM
+		QUIZ
+	WHERE 
+		QUIZ_ID=#attributes.quiz_id#
+</cfquery>
+<cfquery name="GET_MAX_ID" datasource="#dsn#">
+	SELECT MAX(QUIZ_ID) AS QUIZ_ID FROM QUIZ
+</cfquery>
+<cfquery name="ADD_QUIZ_QUESTIONS" datasource="#DSN#">
+    INSERT INTO
+        QUIZ_QUESTIONS
+    (
+        QUIZ_ID,
+        QUESTION_ID
+    )
+    SELECT
+        #GET_MAX_ID.QUIZ_ID#,
+        QUESTION_ID
+    FROM
+        QUIZ_QUESTIONS
+    WHERE
+        QUIZ_ID = #attributes.quiz_id#
+</cfquery>
+<cflocation url="#request.self#?fuseaction=training_management.form_upd_quiz&quiz_id=#GET_MAX_ID.QUIZ_ID#" addtoken="no">

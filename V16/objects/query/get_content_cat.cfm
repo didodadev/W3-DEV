@@ -1,0 +1,11 @@
+<cfquery name="GET_CONTENT_CAT" datasource="#dsn#">
+	SELECT 
+		CONTENTCAT_ID,
+		CONTENTCAT 
+	FROM 
+		CONTENT_CAT 
+	WHERE 
+		CONTENTCAT_ID <> 0
+	ORDER BY 
+		CONTENTCAT
+</cfquery>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OBJECT_PROPERTIES>
+	<OBJECT_PROPERTY>
+		<PROPERTY>xml_employee_id_list</PROPERTY>
+		<PROPERTY_DETAIL>Employee ID Değerleri</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>input</PROPERTY_TYPE>
+		<PROPERTY_VALUES></PROPERTY_VALUES>
+		<PROPERTY_NAMES></PROPERTY_NAMES>
+		<PROPERTY_DEFAULT></PROPERTY_DEFAULT>
+		<PROPERTY_HELP>Zaman Harcamasında Listelenecek Çalışanların Gelmesini Sağlar, Virgül ile Ayrılarak Yazılmalıdır.</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+	<OBJECT_PROPERTY>
+		<PROPERTY>xml_department_id_list</PROPERTY>
+		<PROPERTY_DETAIL>Departman ID Değerleri</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>input</PROPERTY_TYPE>
+		<PROPERTY_VALUES></PROPERTY_VALUES>
+		<PROPERTY_NAMES></PROPERTY_NAMES>
+		<PROPERTY_DEFAULT></PROPERTY_DEFAULT>
+		<PROPERTY_HELP>Zaman Harcamasında Listelenecek Çalışanların Departmanlara Göre Gelmesini Sağlar, Virgül ile Ayrılarak Yazılmalıdır.</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+</OBJECT_PROPERTIES>

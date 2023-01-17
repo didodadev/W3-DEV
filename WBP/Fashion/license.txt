@@ -1,0 +1,105 @@
+Uygulama Adı: Workcube Fashion
+******************************
+Uygulama Amacı: Moda ve tekstil sektöründe çalışan işletmeler için geliştirilmiş Workcube üzerinde geliştirilen sektörel eklentidir.
+******************************
+Telif hakları içermektedir. Lisansız kullanılamaz.
+*******************************
+1. WPCL/Workcube Partner Cooperation Licence: 
+Workcube frameworkü üzerinde Workcube iş ortakları ve geliştiricileri tarafından
+geliştirilmiş olan dikey çözüm veya eklentilerin telif haklarını belirlemek ve korumak için
+belirlenen lisanslama modelidir.
+
+a. WBP -Dikey Çözüm / Best Practise: Workcube altyapısı üzerinde geliştirilmiş olan, Workcube altyapısı
+olmadan çalışamayan, bir sektör veya özel bir uzmanlık alanı için geliştirilmiş yazılımlar dikey
+çözüm olarak kabul edilir.
+
+b. Eklenti / Add-On: Workcube altyapısı üzerinde geliştirilmiş olan, Workcube altyapısı olmadan
+çalışamayan uygulamalar eklenti olarak adlandırılır.
+
+c. Workcube altyapısı ve framework telif hakları Workcube’e aittir. Özel olarak
+geliştirilmiş olan Dikey Çözüm veya eklentilerin telif hakları Geliştirici’lere aittir. Geliştirici v
+Workcube’e ait telif haklarını ihlal etmeyeceğini münferit veya 3. Kişi ve kuruluşlarla birlikte
+Workcube aleyhine olacak hiçbir eylemi yapmayacağını, rekabet yaratacak hiçbir eylemde
+bulunmayacağını kabul, beyan ve taahhüt eder. Workcube; aynı alanda iki farklı iş ortağına
+geliştirim yetkisi vermez ve geliştiricinin telif haklarını koruma altına alır.
+
+d. Workcube Fashion Lisans Sahibi: Workcube Catalyst Inc. Chicago ve Halit Yurttaş ortaklığıyla geliştirilmektedir.
+
+e. Ana Lisans ve Altyapı Sağlayıcı: Katalizör Bilgi Teknoloji Hizmetleri A.Ş. - Katip Salih Sok. No:2 Koşuyolu,
+Kadıköy, İstanbul
+
+Müşteri: Workcube hizmetlerinden yararlanan ve bu belgeye ek olarak düzenlenen sipariş formunda
+yer alan müşteridir.
+
+2. WORKCUBE FASHION UYGULAMASI KULLLANIM ŞARTLARI
+
+a. Kullanım lisansı Workcube Fashion yazılımlarının mevcut özellikleri ve oldukları halde (as is) kullanımını
+kapsar. Lisans Kullanım Sertifikasında detaylandırılan paketin dışında kalan ürün, modül ve fonksiyonları, yazılım üzerinde müşteriye özel yapılmış veya
+yapılacak özelleştirme ve geliştirimleri kapsamaz. Müşteri Workcube Sipariş Formu’nda belirtilen
+lisanslama modeli, ürün kapsamına sayısına uygun olarak sisteme erişir.
+
+b. Kullanıma geçiş için Müşteri admin-yönetici kullanıcı adı, soyadı, şirket adı, domain adı, telefon
+numarası, e-mail adresi ve şifre tanımlaması gerekmektedir. Şifre paylaşımı ve erişim yetkilerinin
+kötü niyetli (şirketinize zarar verir nitelikte) kişilere paylaşımında kaynaklı kayıplardan Hizmet
+Sağlayıcı sorumlu değildir. Kullanıcı erişim yetkilerini yönetmek müşterinin sorumluluğundadır
+Müşteri sistem yöneticisi (admin kullanıcı) işten ayrılan çalışanın sistem ile ilişkisini kesmek, yeni
+çalışanı onun yerine atamak için kullanıcı sayfasından isim, soy isim, kullanıcı adı, şifre v.b.
+değişiklikleri yapmak veya kullanıcı hesabını pasif hale getirmek veya iptal etmekle yükümlüdür.
+
+c. Müşteri Workcube Fashion hizmetleriyle bağlantılı sunuculara herhangi bir virüs, casus yazılım, kötü amaçlı
+yazılım, yıkıcı veya tahrip edici mahiyette diğer herhangi bir kod yükleyemez. Otomatik yazılım,
+cihaz, script, robot, örümcek (spider), böcek (crawler) dahil ve bunlarla sınırlı olmamak üzere
+herhangi bir araç kullanarak hesaplar yaratamaz.
+
+d. Lisans ve Altyapı Sağlayıcı ve Yetkili İş Ortağı hiçbir şekilde Müşteri verileri üzerinde sahiplik
+hakkı iddia etmez ve verileri koruyacağını ve hiçbir surette 3. Kişi ve kurumlarla
+paylaşmayacağını, bunun için gereken tedbirleri alacağını beyan kabul ve taahhüt eder. Yazılımın
+performans ölçmek maksadıyla kullanıcıları izleme, verileri derleme, kullanma ve analiz etme
+hakkına sahiptir. Bu bilgileri Müşteriyi ifşa eder biçimde ve müşterinin yazılı izni olmaksızın
+yayınlayamaz.
+
+e. Müşteri; Workcube Fashion ürün ve hizmetlerinden faydalanabilmesi için elektronik ortamda veri işleme ve
+transferinin temel bir gereklilik olduğunu kabul eder. Müşteri yüksek hızlı internet bağlantısı ve
+güncel internet tarayıcılar ile Workcube’e erişeceğini bilmektedir.
+
+f. Müşteri yazılı onay almadan kullanım lisansı haklarını ve yükümlülüklerinden herhangi birini
+veya Workcube Fashion  materyallerini bir başka kuruluşa devredemez, rehin veremez ve aktaramaz.
+Müşteri’nin unvan değişikliği söz konusu olduğunda yeni bir kullanım lisansı sertifikası düzenlenir.
+
+g. Workcube Fashion ve beraberinde gelen her türlü doküman, kod, tasarım ve teknik bilgi ilgili ülkedeki Telif
+Hakları, Patent ve Markalar hakkındaki kanunlar, Ticaret Kanunları ve Muhtelif Vergi Kanunu
+hükümleri ile koruma altına alınmıştır. Kullanım Lisansı; pazarlama, dağıtma, lisansını verme, alt
+lisansını verme, aktarma, devretme hakkı vermez.
+
+3. GARANTİ ve PERFORMANS
+a.Workcube Fashion kullanım lisansına sahip olmak Workcube’ü tüm iş süreçlerinde başarıyla kullanmak
+anlamına gelmez. Workcube Catalyst danışmanlık, uygulama, eğitim, uyumlaştırma ve özelleştirme
+faaliyetleri sonucu implemente edilir. Workcube Fashion “As Is” olduğu gibidir.
+Kusursuz, hatasız, mükemmel olduğu ve mevcut haliyle Müşteri’nin tüm özel ihtiyaçlarını tamamen 
+karşılayacağı şeklinde bir iddia ve taahhütde bulunmaz. Danışmanlık, eğitim, özelleştirme,
+ek kod geliştirimi, kullanım yardımı ve destek hizmetleri Workcube Yetkili İş Ortakları tarafından verilir. 
+
+b.Workcube Fashion yazılımının “yardım dosyalarında, kullanım kılavuzlarında veya diğer basılı
+dokümanlarında belirtilen bir veya birden çok fonksiyonun, aynı şartlar altında tekrarlanabilir 
+bir şekilde yerine getirilememesi”  hata olarak tanımlanır. Bu tanıma giren hatalar Workcube Fashion
+alım tarihinden itibaren 2 – İki yıl boyuna garanti altındadır. Özel geliştirimler, eklentiler garanti
+kapsamı dışındadır. Müşterinin kendi namına yaptığı veya 3. Parti kişilere yaptırdığı kodlar veya 
+eklentilerden doğabilecek problemler garanti kapsamında değildir. 
+
+c.Workcube yazılımlarının garanti kapsamında kalması olası hatalardan azade tutulması, 
+değişen teknoloji ve mevzuata uyumlu olarak sürdürülmesi için Müşteri yetkili Workcube İş Ortağından Yıllık Lisans Yenileme ve Koruma Paketi (LYKP) satın alması gerektiğini, iki yıldan daha önce alınmış yazılımların garanti kapsamında olmadığını peşinen kabul ve beyan eder.  
+
+d.LYKP (Lisans Yenileme ve Koruma Paketi) satın alan Workcube kullanıcısı, 1 (bir) yıllık süre
+içerisinde Workcube ürün ve çözümlerindeki tüm güncellemelerden, yeni sürüm veya versiyonları 
+yükleyebilir, kullanabilir. Müşteri her yıl yeni bir LYKP alarak bu hakkı devam ettirir. 
+
+e.LYKP satın alma tarihinden itibaren 1 yıl süre ile karşılaşılabilecek hatalar ücretsiz olarak
+
+f.Garanti ve LYKP kapsamında Workcube sertifikalı sistem yöneticileri veya hizmet aldıkları 
+yetkili iş ortakları Workcube Catalyst sürümlerine ve yamalarına erişebilir yeni sürümlere geçebilirler.  
+
+g.Müşterilerin hata bildirimleri destek hizmeti aldığı iş ortağı tarafından yapılır. 
+Hata ayıklama işlemi için hata bildirimlerinin mutlaka Workcube Başvuru Yönetim Sistemi üzerinden yapılması, sorunun yazılı olarak ve ekran görüntüleri ile desteklenerek, başvuru formunda talep edilen tüm bilgilerle (hatanın oluştuğu sayfa, şirket, dönem, kullanıcı v.b.) birlikte aktarılması zorunludur. 
+
+*****************************************************
+Copyright WPCL - Workcube Partner Cooperation Lisence

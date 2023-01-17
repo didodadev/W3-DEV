@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SETUP_SITE>
+	<SETUPSITE>
+		<LINK_NAME>Eğitim Detayı XML Setup</LINK_NAME> 
+		<LINK_FILE>training_management.form_upd_class</LINK_FILE> 
+		<LINK_DETAIL>Eğitim Detayı Düzenlemesi</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Eğitim Talebi Ekle</LINK_NAME>
+		<LINK_FILE>training_management.form_add_training_request</LINK_FILE>
+		<LINK_DETAIL>Eğitim Talebi Ekle</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Eğitim Ekle</LINK_NAME>
+		<LINK_FILE>training_management.form_add_class</LINK_FILE>
+		<LINK_DETAIL>Eğitim Ekle</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Eğitim Test Sonuç</LINK_NAME>
+		<LINK_FILE>training_management.popup_form_upd_class_results,training_management.popup_form_add_class_results</LINK_FILE>
+		<LINK_DETAIL>Eğitim Test Sonuç</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Eğitim Yoklama Kaydı</LINK_NAME>
+		<LINK_FILE>training_management.popup_form_add_class_attendance,training_management.popup_form_upd_class_attendance</LINK_FILE>
+		<LINK_DETAIL>Eğitim Yoklama Kaydı</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Katılımcılar</LINK_NAME>
+		<LINK_FILE>training_management.popup_list_class_attenders</LINK_FILE>
+		<LINK_DETAIL>Katılımcılar</LINK_DETAIL>
+	</SETUPSITE>
+		<SETUPSITE>
+		<LINK_NAME>Eğitim Kataloğu-Müfredat</LINK_NAME>
+		<LINK_FILE>training_management.form_add_training_subject</LINK_FILE>
+		<LINK_DETAIL>Eğitim Kataloğu-Müfredat</LINK_DETAIL>
+	</SETUPSITE>
+
+	<SETUPSITE>
+		<LINK_NAME>Soru Bankası</LINK_NAME>
+		<LINK_FILE>training_management.popup_form_add_question</LINK_FILE>
+		<LINK_DETAIL>Soru Bankası</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Soru Bankası</LINK_NAME>
+		<LINK_FILE>training_management.popup_form_upd_question</LINK_FILE>
+		<LINK_DETAIL>Soru Bankası</LINK_DETAIL>
+	</SETUPSITE>
+
+</SETUP_SITE>

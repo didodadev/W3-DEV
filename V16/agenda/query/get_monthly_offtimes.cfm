@@ -1,0 +1,9 @@
+<cfquery name="GET_MONTHLY_OFFTIMES" datasource="#dsn#">
+	SELECT 
+		DAY(START_DATE)		
+	FROM 
+		SETUP_GENERAL_OFFTIMES 
+	WHERE
+		( MONTH(START_DATE) = #AY# AND YEAR(START_DATE) = #YIL# ) OR
+		( MONTH(FINISH_DATE) = #AY# AND YEAR(FINISH_DATE) = #YIL# )
+</cfquery> 

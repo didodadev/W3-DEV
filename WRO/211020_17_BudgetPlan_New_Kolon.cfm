@@ -1,0 +1,14 @@
+<!-- Description : Bütçe planlama fişine IS_TRANSFER,DEMAND_ID alanLARI eklendi.
+Developer: Melek KOCABEY
+Company : Workcube
+Destination: Main -->
+<querytag>
+    IF NOT EXISTS (SELECT 'Y' FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME = 'BUDGET_PLAN' AND COLUMN_NAME = 'IS_TRANSFER')
+        BEGIN
+            ALTER TABLE BUDGET_PLAN ADD IS_TRANSFER bit NULL
+        END;
+    IF NOT EXISTS (SELECT 'Y' FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME = 'BUDGET_PLAN' AND COLUMN_NAME = 'DEMAND_ID')
+        BEGIN
+            ALTER TABLE BUDGET_PLAN ADD DEMAND_ID int NULL
+        END;
+</querytag>

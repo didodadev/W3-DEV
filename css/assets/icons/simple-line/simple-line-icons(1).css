@@ -1,0 +1,526 @@
+@font-face {
+	font-family: 'Simple-Line-Icons';
+	src:url('fonts/Simple-Line-Icons.eot');
+	src:url('fonts/Simple-Line-Icons.eot?#iefix') format('embedded-opentype'),
+		url('fonts/Simple-Line-Icons.woff') format('woff'),
+		url('fonts/Simple-Line-Icons.ttf') format('truetype'),
+		url('fonts/Simple-Line-Icons.svg#Simple-Line-Icons') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+/* Use the following CSS code if you want to use data attributes for inserting your icons */
+[data-catalyst]:before {
+	font-family: 'Simple-Line-catalysts';
+	content: attr(data-catalyst);
+	speak: none;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+/* Use the following CSS code if you want to have a class per catalyst */
+/*
+Instead of a list of all class selectors,
+you can use the generic selector below, but it's slower:
+[class*="catalyst-"] {
+*/
+.catalyst-user-female, .catalyst-user-follow, .catalyst-user-following, .catalyst-user-unfollow, .catalyst-trophy, .catalyst-screen-smartphone, .catalyst-screen-desktop, .catalyst-plane, .catalyst-notebook, .catalyst-moustache, .catalyst-mouse, .catalyst-magnet, .catalyst-energy, .catalyst-emotcatalyst-smile, .catalyst-disc, .catalyst-cursor-move, .catalyst-crop, .catalyst-credit-card, .catalyst-chemistry, .catalyst-user, .catalyst-speedometer, .catalyst-social-youtube, .catalyst-social-twitter, .catalyst-social-tumblr, .catalyst-social-facebook, .catalyst-social-dropbox, .catalyst-social-dribbble, .catalyst-shield, .catalyst-screen-tablet, .catalyst-magic-wand, .catalyst-hourglass, .catalyst-graduation, .catalyst-ghost, .catalyst-game-controller, .catalyst-fire, .catalyst-eyeglasses, .catalyst-envelope-open, .catalyst-envelope-letter, .catalyst-bell, .catalyst-badge, .catalyst-anchor, .catalyst-wallet, .catalyst-vector, .catalyst-speech, .catalyst-puzzle, .catalyst-printer, .catalyst-present, .catalyst-playlist, .catalyst-pin, .catalyst-picture, .catalyst-map, .catalyst-layers, .catalyst-handbag, .catalyst-globe-alt, .catalyst-globe, .catalyst-frame, .catalyst-folder-alt, .catalyst-film, .catalyst-feed, .catalyst-earphones-alt, .catalyst-earphones, .catalyst-drop, .catalyst-drawer, .catalyst-docs, .catalyst-directions, .catalyst-direction, .catalyst-diamond, .catalyst-cup, .catalyst-compass, .catalyst-call-out, .catalyst-call-in, .catalyst-call-end, .catalyst-calculator, .catalyst-bubbles, .catalyst-briefcase, .catalyst-book-open, .catalyst-basket-loaded, .catalyst-basket, .catalyst-bag, .catalyst-action-undo, .catalyst-action-redo, .catalyst-wrench, .catalyst-umbrella, .catalyst-trash, .catalyst-tag, .catalyst-support, .catalyst-size-fullscreen, .catalyst-size-actual, .catalyst-shuffle, .catalyst-share-alt, .catalyst-share, .catalyst-rocket, .catalyst-question, .catalyst-pie-chart, .catalyst-pencil, .catalyst-note, .catalyst-music-tone-alt, .catalyst-music-tone, .catalyst-microphone, .catalyst-loop, .catalyst-logout, .catalyst-login, .catalyst-list, .catalyst-like, .catalyst-home, .catalyst-grid, .catalyst-graph, .catalyst-equalizer, .catalyst-dislike, .catalyst-cursor, .catalyst-control-start, .catalyst-control-rewind, .catalyst-control-play, .catalyst-control-pause, .catalyst-control-forward, .catalyst-control-end, .catalyst-calendar, .catalyst-bulb, .catalyst-bar-chart, .catalyst-arrow-up, .catalyst-arrow-right, .catalyst-arrow-left, .catalyst-arrow-down, .catalyst-ban, .catalyst-bubble, .catalyst-camcorder, .catalyst-camera, .catalyst-check, .catalyst-clock, .catalyst-close, .catalyst-cloud-download, .catalyst-cloud-upload, .catalyst-doc, .catalyst-envelope, .catalyst-eye, .catalyst-flag, .catalyst-folder, .catalyst-heart, .catalyst-info, .catalyst-key, .catalyst-link, .catalyst-lock, .catalyst-lock-open, .catalyst-magnifier, .catalyst-magnifier-add, .catalyst-magnifier-remove, .catalyst-paper-clip, .catalyst-paper-plane, .catalyst-plus, .catalyst-pointer, .catalyst-power, .catalyst-refresh, .catalyst-reload, .catalyst-settings, .catalyst-star, .catalyst-symbol-female, .catalyst-symbol-male, .catalyst-target, .catalyst-volume-1, .catalyst-volume-2, .catalyst-volume-off, .catalyst-users {
+	font-family: 'Simple-Line-icons';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+}
+.catalyst-user-female:before {
+	content: "\e000";
+}
+.catalyst-user-follow:before {
+	content: "\e002";
+}
+.catalyst-user-following:before {
+	content: "\e003";
+}
+.catalyst-user-unfollow:before {
+	content: "\e004";
+}
+.catalyst-trophy:before {
+	content: "\e006";
+}
+.catalyst-screen-smartphone:before {
+	content: "\e010";
+}
+.catalyst-screen-desktop:before {
+	content: "\e011";
+}
+.catalyst-plane:before {
+	content: "\e012";
+}
+.catalyst-notebook:before {
+	content: "\e013";
+}
+.catalyst-moustache:before {
+	content: "\e014";
+}
+.catalyst-mouse:before {
+	content: "\e015";
+}
+.catalyst-magnet:before {
+	content: "\e016";
+}
+.catalyst-energy:before {
+	content: "\e020";
+}
+.catalyst-emoticon-smile:before {
+	content: "\e021";
+}
+.catalyst-disc:before {
+	content: "\e022";
+}
+.catalyst-cursor-move:before {
+	content: "\e023";
+}
+.catalyst-crop:before {
+	content: "\e024";
+}
+.catalyst-credit-card:before {
+	content: "\e025";
+}
+.catalyst-chemistry:before {
+	content: "\e026";
+}
+.catalyst-user:before {
+	content: "\e005";
+}
+.catalyst-speedometer:before {
+	content: "\e007";
+}
+.catalyst-social-youtube:before {
+	content: "\e008";
+}
+.catalyst-social-twitter:before {
+	content: "\e009";
+}
+.catalyst-social-tumblr:before {
+	content: "\e00a";
+}
+.catalyst-social-facebook:before {
+	content: "\e00b";
+}
+.catalyst-social-dropbox:before {
+	content: "\e00c";
+}
+.catalyst-social-dribbble:before {
+	content: "\e00d";
+}
+.catalyst-shield:before {
+	content: "\e00e";
+}
+.catalyst-screen-tablet:before {
+	content: "\e00f";
+}
+.catalyst-magic-wand:before {
+	content: "\e017";
+}
+.catalyst-hourglass:before {
+	content: "\e018";
+}
+.catalyst-graduation:before {
+	content: "\e019";
+}
+.catalyst-ghost:before {
+	content: "\e01a";
+}
+.catalyst-game-controller:before {
+	content: "\e01b";
+}
+.catalyst-fire:before {
+	content: "\e01c";
+}
+.catalyst-eyeglasses:before {
+	content: "\e01d";
+}
+.catalyst-envelope-open:before {
+	content: "\e01e";
+}
+.catalyst-envelope-letter:before {
+	content: "\e01f";
+}
+.catalyst-bell:before {
+	content: "\e027";
+}
+.catalyst-badge:before {
+	content: "\e028";
+}
+.catalyst-anchor:before {
+	content: "\e029";
+}
+.catalyst-wallet:before {
+	content: "\e02a";
+}
+.catalyst-vector:before {
+	content: "\e02b";
+}
+.catalyst-speech:before {
+	content: "\e02c";
+}
+.catalyst-puzzle:before {
+	content: "\e02d";
+}
+.catalyst-printer:before {
+	content: "\e02e";
+}
+.catalyst-present:before {
+	content: "\e02f";
+}
+.catalyst-playlist:before {
+	content: "\e030";
+}
+.catalyst-pin:before {
+	content: "\e031";
+}
+.catalyst-picture:before {
+	content: "\e032";
+}
+.catalyst-map:before {
+	content: "\e033";
+}
+.catalyst-layers:before {
+	content: "\e034";
+}
+.catalyst-handbag:before {
+	content: "\e035";
+}
+.catalyst-globe-alt:before {
+	content: "\e036";
+}
+.catalyst-globe:before {
+	content: "\e037";
+}
+.catalyst-frame:before {
+	content: "\e038";
+}
+.catalyst-folder-alt:before {
+	content: "\e039";
+}
+.catalyst-film:before {
+	content: "\e03a";
+}
+.catalyst-feed:before {
+	content: "\e03b";
+}
+.catalyst-earphones-alt:before {
+	content: "\e03c";
+}
+.catalyst-earphones:before {
+	content: "\e03d";
+}
+.catalyst-drop:before {
+	content: "\e03e";
+}
+.catalyst-drawer:before {
+	content: "\e03f";
+}
+.catalyst-docs:before {
+	content: "\e040";
+}
+.catalyst-directions:before {
+	content: "\e041";
+}
+.catalyst-direction:before {
+	content: "\e042";
+}
+.catalyst-diamond:before {
+	content: "\e043";
+}
+.catalyst-cup:before {
+	content: "\e044";
+}
+.catalyst-compass:before {
+	content: "\e045";
+}
+.catalyst-call-out:before {
+	content: "\e046";
+}
+.catalyst-call-in:before {
+	content: "\e047";
+}
+.catalyst-call-end:before {
+	content: "\e048";
+}
+.catalyst-calculator:before {
+	content: "\e049";
+}
+.catalyst-bubbles:before {
+	content: "\e04a";
+}
+.catalyst-briefcase:before {
+	content: "\e04b";
+}
+.catalyst-book-open:before {
+	content: "\e04c";
+}
+.catalyst-basket-loaded:before {
+	content: "\e04d";
+}
+.catalyst-basket:before {
+	content: "\e04e";
+}
+.catalyst-bag:before {
+	content: "\e04f";
+}
+.catalyst-action-undo:before {
+	content: "\e050";
+}
+.catalyst-action-redo:before {
+	content: "\e051";
+}
+.catalyst-wrench:before {
+	content: "\e052";
+}
+.catalyst-umbrella:before {
+	content: "\e053";
+}
+.catalyst-trash:before {
+	content: "\e054";
+}
+.catalyst-tag:before {
+	content: "\e055";
+}
+.catalyst-support:before {
+	content: "\e056";
+}
+.catalyst-size-fullscreen:before {
+	content: "\e057";
+}
+.catalyst-size-actual:before {
+	content: "\e058";
+}
+.catalyst-shuffle:before {
+	content: "\e059";
+}
+.catalyst-share-alt:before {
+	content: "\e05a";
+}
+.catalyst-share:before {
+	content: "\e05b";
+}
+.catalyst-rocket:before {
+	content: "\e05c";
+}
+.catalyst-question:before {
+	content: "\e05d";
+}
+.catalyst-pie-chart:before {
+	content: "\e05e";
+}
+.catalyst-pencil:before {
+	content: "\e05f";
+}
+.catalyst-note:before {
+	content: "\e060";
+}
+.catalyst-music-tone-alt:before {
+	content: "\e061";
+}
+.catalyst-music-tone:before {
+	content: "\e062";
+}
+.catalyst-microphone:before {
+	content: "\e063";
+}
+.catalyst-loop:before {
+	content: "\e064";
+}
+.catalyst-logout:before {
+	content: "\e065";
+}
+.catalyst-login:before {
+	content: "\e066";
+}
+.catalyst-list:before {
+	content: "\e067";
+}
+.catalyst-like:before {
+	content: "\e068";
+}
+.catalyst-home:before {
+	content: "\e069";
+}
+.catalyst-grid:before {
+	content: "\e06a";
+}
+.catalyst-graph:before {
+	content: "\e06b";
+}
+.catalyst-equalizer:before {
+	content: "\e06c";
+}
+.catalyst-dislike:before {
+	content: "\e06d";
+}
+.catalyst-cursor:before {
+	content: "\e06e";
+}
+.catalyst-control-start:before {
+	content: "\e06f";
+}
+.catalyst-control-rewind:before {
+	content: "\e070";
+}
+.catalyst-control-play:before {
+	content: "\e071";
+}
+.catalyst-control-pause:before {
+	content: "\e072";
+}
+.catalyst-control-forward:before {
+	content: "\e073";
+}
+.catalyst-control-end:before {
+	content: "\e074";
+}
+.catalyst-calendar:before {
+	content: "\e075";
+}
+.catalyst-bulb:before {
+	content: "\e076";
+}
+.catalyst-bar-chart:before {
+	content: "\e077";
+}
+.catalyst-arrow-up:before {
+	content: "\e078";
+}
+.catalyst-arrow-right:before {
+	content: "\e079";
+}
+.catalyst-arrow-left:before {
+	content: "\e07a";
+}
+.catalyst-arrow-down:before {
+	content: "\e604";
+}
+.catalyst-ban:before {
+	content: "\e07c";
+}
+.catalyst-bubble:before {
+	content: "\e07d";
+}
+.catalyst-camcorder:before {
+	content: "\e07e";
+}
+.catalyst-camera:before {
+	content: "\e07f";
+}
+.catalyst-check:before {
+	content: "\e080";
+}
+.catalyst-clock:before {
+	content: "\e081";
+}
+.catalyst-close:before {
+	content: "\e082";
+}
+.catalyst-cloud-download:before {
+	content: "\e083";
+}
+.catalyst-cloud-upload:before {
+	content: "\e084";
+}
+.catalyst-doc:before {
+	content: "\e085";
+}
+.catalyst-envelope:before {
+	content: "\e086";
+}
+.catalyst-eye:before {
+	content: "\e087";
+}
+.catalyst-flag:before {
+	content: "\e088";
+}
+.catalyst-folder:before {
+	content: "\e089";
+}
+.catalyst-heart:before {
+	content: "\e08a";
+}
+.catalyst-info:before {
+	content: "\e08b";
+}
+.catalyst-key:before {
+	content: "\e08c";
+}
+.catalyst-link:before {
+	content: "\e08d";
+}
+.catalyst-lock:before {
+	content: "\e08e";
+}
+.catalyst-lock-open:before {
+	content: "\e08f";
+}
+.catalyst-magnifier:before {
+	content: "\e090";
+}
+.catalyst-magnifier-add:before {
+	content: "\e091";
+}
+.catalyst-magnifier-remove:before {
+	content: "\e092";
+}
+.catalyst-paper-clip:before {
+	content: "\e093";
+}
+.catalyst-paper-plane:before {
+	content: "\e094";
+}
+.catalyst-plus:before {
+	content: "\e095";
+}
+.catalyst-pointer:before {
+	content: "\e096";
+}
+.catalyst-power:before {
+	content: "\e097";
+}
+.catalyst-refresh:before {
+	content: "\e098";
+}
+.catalyst-reload:before {
+	content: "\e099";
+}
+.catalyst-settings:before {
+	content: "\e09a";
+}
+.catalyst-star:before {
+	content: "\e09b";
+}
+.catalyst-symbol-female:before {
+	content: "\e09c";
+}
+.catalyst-symbol-male:before {
+	content: "\e09d";
+}
+.catalyst-target:before {
+	content: "\e09e";
+}
+.catalyst-volume-1:before {
+	content: "\e09f";
+}
+.catalyst-volume-2:before {
+	content: "\e0a0";
+}
+.catalyst-volume-off:before {
+	content: "\e0a1";
+}
+.catalyst-users:before {
+	content: "\e001";
+}

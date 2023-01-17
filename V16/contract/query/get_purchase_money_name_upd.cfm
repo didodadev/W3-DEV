@@ -1,0 +1,10 @@
+<cfquery name="GET_PURCHASE_MONEY_NAME_UPD" datasource="#dsn#">
+	SELECT 
+		MONEY_ID,
+		MONEY
+	FROM 
+		SETUP_MONEY 
+	WHERE
+		PERIOD_ID = #SESSION.EP.PERIOD_ID# AND
+		MONEY_ID=#GET_PURCHASE_ID.MONEY#
+</cfquery>

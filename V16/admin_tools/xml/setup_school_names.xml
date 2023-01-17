@@ -1,0 +1,898 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<setup_school xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<school>
+		<school_id>1</school_id>
+		<school_name>Abant İzzet Baysal Üniversitesi</school_name>
+		<school_type>0</school_type>
+	</school>
+	<school>
+		<school_id>2</school_id>
+		<school_name>Abdullah Gül Üniversitesi</school_name>
+		<school_type>0</school_type>
+	</school>
+	<school>
+		<school_id>3</school_id>
+		<school_name>Adnan Menderes Üniversitesi</school_name>
+		<school_type>0</school_type>
+	</school>
+	<school>
+		<school_id>4</school_id>
+		<school_name>Afyon Kocatepe Üniversitesi</school_name>
+		<school_type>0</school_type>
+	</school>
+	<school>
+		<school_id>5</school_id>
+		<school_name>Akdeniz Üniversitesi</school_name>
+		<school_type>0</school_type>
+	</school>
+	<school>
+		<school_id>6</school_id>
+		<school_name>Alanya Hamdullah Emin Paşa Üniversitesi</school_name>
+		<school_type>0</school_type>
+	</school>
+	<school>
+		<school_id>7</school_id>
+		<school_name>Atılım Üniversitesi(Vakıf)</school_name>
+		<school_type>1</school_type>
+	</school>
+	<school>
+		<school_id>8</school_id>
+		<school_name>Bahçeşehir Üniversitesi(Vakıf)</school_name>
+		<school_type>1</school_type>
+	</school>
+	<school>
+		<school_id>9</school_id>
+		<school_name>Balıkesir Üniversitesi</school_name>
+		<school_type>0</school_type>
+	</school>
+	<school>
+		<school_id>10</school_id>
+		<school_name>Bülent Ecevit Üniversitesi</school_name>
+		<school_type>0</school_type>
+	</school>
+	<school>
+		<school_id>11</school_id>
+		<school_name>Marmara Üniversitesi</school_name>
+		<school_type>0</school_type>
+	</school>
+	<school>
+		<school_id>12</school_id>
+		<school_name>Mersin Üniversitesi</school_name>
+		<school_type>0</school_type>
+	</school>
+	<school>
+		<school_id>13</school_id>
+		<school_name>Mimar Sinan Üniversitesi</school_name>
+		<school_type>0</school_type>
+	</school>
+	<school>
+		<school_id>14</school_id>
+		<school_name>Muğla Üniversitesi</school_name>
+		<school_type>0</school_type>
+	</school>
+	<school>
+		<school_id>15</school_id>
+		<school_name>Mustafa Kemal Üniversitesi</school_name>
+		<school_type>0</school_type>
+	</school>
+	<school>
+		<school_id>16</school_id>
+		<school_name>Niğde Üniversitesi</school_name>
+		<school_type>0</school_type>
+	</school>
+	<school>
+		<school_id>17</school_id>
+		<school_name>Okan Üniversitesi (Özel)</school_name>
+		<school_type>1</school_type>
+	</school>
+	<school>
+		<school_id>18</school_id>
+		<school_name>Ondukuz Mayıs Üniversitesi</school_name>
+		<school_type>0</school_type>
+	</school>
+	<school>
+		<school_id>19</school_id>
+		<school_name>Orta Doğu Teknik Üniversitesi</school_name>
+		<school_type>0</school_type>
+	</school>
+	<school>
+		<school_id>20</school_id>
+		<school_name>Osmangazi Üniversitesi</school_name>
+		<school_type>0</school_type>
+	</school>
+	<school>
+		<school_id>21</school_id>
+		<school_name>Pamukkale Üniversitesi</school_name>
+		<school_type>0</school_type>
+	</school>
+	<school>
+		<school_id>22</school_id>
+		<school_name>Sabancı Üniversitesi(Vakıf)</school_name>
+		<school_type>1</school_type>
+	</school>
+	<school>
+		<school_id>23</school_id>
+		<school_name>Sakarya Üniversitesi</school_name>
+		<school_type>0</school_type>
+	</school>
+	<school>
+		<school_id>24</school_id>
+		<school_name>Selçuk Üniversitesi</school_name>
+		<school_type>0</school_type>
+	</school>
+	<school>
+		<school_id>25</school_id>
+		<school_name>Süleyman Demirel Üniversitesi</school_name>
+		<school_type>0</school_type>
+	</school>
+	<school>
+		<school_id>26</school_id>
+		<school_name>Trakya Üniversitesi</school_name>
+		<school_type>0</school_type>
+	</school>
+	<school>
+		<school_id>27</school_id>
+		<school_name>Ufuk Üniversitesi(Vakıf)</school_name>
+		<school_type>1</school_type>
+	</school>
+	<school>
+		<school_id>28</school_id>
+		<school_name>Uludağ Üniversitesi</school_name>
+		<school_type>0</school_type>
+	</school>
+	<school>
+		<school_id>29</school_id>
+		<school_name>Uluslararası Amerikan Üni.(Vakıf)</school_name>
+		<school_type>1</school_type>
+	</school>
+	<school>
+		<school_id>30</school_id>
+		<school_name>Uluslararası Kıbrıs Üniversitesi</school_name>
+		<school_type>1</school_type>
+	</school>
+	<school>
+		<school_id>31</school_id>
+		<school_name>Yakındoğu Üniversitesi(Vakıf)</school_name>
+		<school_type>1</school_type>
+	</school>
+	<school>
+		<school_id>32</school_id>
+		<school_name>Yaşar Üniversitesi(Vakıf)</school_name>
+		<school_type>1</school_type>
+	</school>
+	<school>
+		<school_id>33</school_id>
+		<school_name>Yeditepe Üniversitesi(Vakıf)</school_name>
+		<school_type>1</school_type>
+	</school>
+	<school>
+		<school_id>34</school_id>
+		<school_name>Yıldız Teknik Üniversitesi</school_name>
+		<school_type>0</school_type>
+	</school>
+	<school>
+		<school_id>35</school_id>
+		<school_name>Yüzüncü Yıl Üniversitesi</school_name>
+		<school_type>0</school_type>
+	</school>
+	<school>
+		<school_id>36</school_id>
+		<school_name>Zonguldak Karaelmas Üni.</school_name>
+		<school_type>0</school_type>
+	</school>
+	<school>
+		<school_id>37</school_id>
+		<school_name>Anadolu Üniversitesi</school_name>
+		<school_type>0</school_type>
+	</school>
+	<school>
+		<school_id>38</school_id>
+		<school_name>Ankara Üniversitesi</school_name>
+		<school_type>0</school_type>
+	</school>
+	<school>
+		<school_id>39</school_id>
+		<school_name>Atatürk Üniversitesi</school_name>
+		<school_type>0</school_type>
+	</school>
+	<school>
+		<school_id>40</school_id>
+		<school_name>Başkent Üniversitesi(Vakıf)</school_name>
+		<school_type>1</school_type>
+	</school>
+	<school>
+		<school_id>41</school_id>
+		<school_name>Çağ Üniversitesi(Vakıf)</school_name>
+		<school_type>1</school_type>
+	</school>
+	<school>
+		<school_id>42</school_id>
+		<school_name>Çankaya Üniversitesi(Vakıf)</school_name>
+		<school_type>1</school_type>
+	</school>
+	<school>
+		<school_id>43</school_id>
+		<school_name>Doğuş Üniversitesi(Vakıf)</school_name>
+		<school_type>1</school_type>
+	</school>
+	<school>
+		<school_id>44</school_id>
+		<school_name>Dokuz Eylül Üniversitesi</school_name>
+		<school_type>0</school_type>
+	</school>
+	<school>
+		<school_id>45</school_id>
+		<school_name>Dumlupınar Üniversitesi</school_name>
+		<school_type>0</school_type>
+	</school>
+	<school>
+		<school_id>46</school_id>
+		<school_name>Ege Üniversitesi</school_name>
+		<school_type>0</school_type>
+	</school>
+	<school>
+		<school_id>47</school_id>
+		<school_name>Erciyes Üniversitesi</school_name>
+		<school_type>0</school_type>
+	</school>
+	<school>
+		<school_id>48</school_id>
+		<school_name>Fatih Üniversitesi(Vakıf)</school_name>
+		<school_type>1</school_type>
+	</school>
+	<school>
+		<school_id>49</school_id>
+		<school_name>Fırat Üniversitesi</school_name>
+		<school_type>0</school_type>
+	</school>
+	<school>
+		<school_id>50</school_id>
+		<school_name>Galatasaray Üniversitesi</school_name>
+		<school_type>0</school_type>
+	</school>
+	<school>
+		<school_id>51</school_id>
+		<school_name>Gazi Üniversitesi</school_name>
+		<school_type>0</school_type>
+	</school>
+	<school>
+		<school_id>52</school_id>
+		<school_name>Gaziantep Üniversitesi</school_name>
+		<school_type>0</school_type>
+	</school>
+	<school>
+		<school_id>53</school_id>
+		<school_name>Gaziosmanpaşa Üniversitesi</school_name>
+		<school_type>0</school_type>
+	</school>
+	<school>
+		<school_id>54</school_id>
+		<school_name>Gebze Yüksek Teknoloji Ens.</school_name>
+		<school_type>0</school_type>
+	</school>
+	<school>
+		<school_id>55</school_id>
+		<school_name>Girne Amerikan Üniversitesi</school_name>
+		<school_type>1</school_type>
+	</school>
+	<school>
+		<school_id>56</school_id>
+		<school_name>Hacettepe Üniversitesi</school_name>
+		<school_type>0</school_type>
+	</school>
+	<school>
+		<school_id>57</school_id>
+		<school_name>Haliç Üniversitesi(Vakıf)</school_name>
+		<school_type>1</school_type>
+	</school>
+	<school>
+		<school_id>58</school_id>
+		<school_name>Harran Üniversitesi</school_name>
+		<school_type>0</school_type>
+	</school>
+	<school>
+		<school_id>59</school_id>
+		<school_name>Işık Üniversitesi</school_name>
+		<school_type>0</school_type>
+	</school>
+	<school>
+		<school_id>60</school_id>
+		<school_name>İnönü Üniversitesi</school_name>
+		<school_type>0</school_type>
+	</school>
+	<school>
+		<school_id>61</school_id>
+		<school_name>İstanbul Üniversitesi</school_name>
+		<school_type>0</school_type>
+	</school>
+	<school>
+		<school_id>62</school_id>
+		<school_name>İstanbul Bilgi Üniversitesi(Vakıf)</school_name>
+		<school_type>1</school_type>
+	</school>
+	<school>
+		<school_id>63</school_id>
+		<school_name>İstanbul Kültür Üniversitesi(Vakıf)</school_name>
+		<school_type>1</school_type>
+	</school>
+	<school>
+		<school_id>64</school_id>
+		<school_name>İstanbul Teknik Üniversitesi</school_name>
+		<school_type>0</school_type>
+	</school>
+	<school>
+		<school_id>65</school_id>
+		<school_name>İstanbul Ticaret Üniversitesi(Vakıf)</school_name>
+		<school_type>1</school_type>
+	</school>
+	<school>
+		<school_id>66</school_id>
+		<school_name>İstanbul 29 Mayıs Üniversitesi</school_name>
+		<school_type>0</school_type>
+	</school>
+	<school>
+		<school_id>67</school_id>
+		<school_name>İzmir Ekonomi Üniversitesi(Vakıf)</school_name>
+		<school_type>1</school_type>
+	</school>
+	<school>
+		<school_id>68</school_id>
+		<school_name>Kadir Has Üniversitesi(Vakıf)</school_name>
+		<school_type>1</school_type>
+	</school>
+	<school>
+		<school_id>69</school_id>
+		<school_name>Kafkas Üniversitesi</school_name>
+		<school_type>0</school_type>
+	</school>
+	<school>
+		<school_id>70</school_id>
+		<school_name>K.Maraş Sütçü İmam Üni.</school_name>
+		<school_type>0</school_type>
+	</school>
+	<school>
+		<school_id>71</school_id>
+		<school_name>Karadeniz Teknik Üniversitesi</school_name>
+		<school_type>0</school_type>
+	</school>
+	<school>
+		<school_id>72</school_id>
+		<school_name>Kırıkkale Üniversitesi</school_name>
+		<school_type>0</school_type>
+	</school>
+	<school>
+		<school_id>73</school_id>
+		<school_name>Kocaeli Üniversitesi</school_name>
+		<school_type>0</school_type>
+	</school>
+	<school>
+		<school_id>74</school_id>
+		<school_name>Koç Üniversitesi(Vakıf)</school_name>
+		<school_type>1</school_type>
+	</school>
+	<school>
+		<school_id>75</school_id>
+		<school_name>Lefke Avrupa Üniversitesi(Vakıf)</school_name>
+		<school_type>1</school_type>
+	</school>
+	<school>
+		<school_id>76</school_id>
+		<school_name>Maltepe Üniversitesi(Vakıf)</school_name>
+		<school_type>1</school_type>
+	</school>
+	<school>
+		<school_id>77</school_id>
+		<school_name>Beykent Üniversitesi(Vakıf)</school_name>
+		<school_type>1</school_type>
+	</school>
+	<school>
+		<school_id>78</school_id>
+		<school_name>Bilkent Üniversitesi(Vakıf)</school_name>
+		<school_type>1</school_type>
+	</school>
+	<school>
+		<school_id>79</school_id>
+		<school_name>Boğaziçi Üniversitesi</school_name>
+		<school_type>0</school_type>
+	</school>
+	<school>
+		<school_id>80</school_id>
+		<school_name>Celal Bayar Üniversitesi</school_name>
+		<school_type>0</school_type>
+	</school>
+	<school>
+		<school_id>81</school_id>
+		<school_name>Cumhuriyet Üniversitesi</school_name>
+		<school_type>0</school_type>
+	</school>
+	<school>
+		<school_id>82</school_id>
+		<school_name>Çanakkale 18 Mart Üniversitesi</school_name>
+		<school_type>0</school_type>
+	</school>
+	<school>
+		<school_id>83</school_id>
+		<school_name>Çukurova Üniversitesi</school_name>
+		<school_type>0</school_type>
+	</school>
+	<school>
+		<school_id>84</school_id>
+		<school_name>Dicle Üniversitesi</school_name>
+		<school_type>0</school_type>
+	</school>
+	<school>
+		<school_id>85</school_id>
+		<school_name>Doğu Akdeniz Üniversitesi</school_name>
+		<school_type>0</school_type>
+	</school>
+	<school>
+		<school_id>86</school_id>
+		<school_name>Acıbadem Üniversitesi(Vakıf)</school_name>
+		<school_type>1</school_type>
+	</school>
+	<school>
+		<school_id>87</school_id>
+		<school_name>Ağrı İbrahim Çeçen Üniversitesi</school_name>
+		<school_type>0</school_type>
+	</school>
+	<school>
+		<school_id>88</school_id>
+		<school_name>Ahi Evran Üniversitesi</school_name>
+		<school_type>0</school_type>
+	</school>
+	<school>
+		<school_id>89</school_id>
+		<school_name>Ahmet Yesevi Türk Kazak Üniversitesi</school_name>
+		<school_type>0</school_type>
+	</school>
+	<school>
+		<school_id>90</school_id>
+		<school_name>Aksaray Üniversitesi</school_name>
+		<school_type>0</school_type>
+	</school>
+	<school>
+		<school_id>91</school_id>
+		<school_name>Amasya Üniversitesi</school_name>
+		<school_type>0</school_type>
+	</school>
+	<school>
+		<school_id>92</school_id>
+		<school_name>Ardahan Üniversitesi</school_name>
+		<school_type>0</school_type>
+	</school>
+	<school>
+		<school_id>93</school_id>
+		<school_name>Artvin Çoruh Üniversitesi</school_name>
+		<school_type>0</school_type>
+	</school>
+	<school>
+		<school_id>94</school_id>
+		<school_name>Bartın Üniversitesi</school_name>
+		<school_type>0</school_type>
+	</school>
+	<school>
+		<school_id>95</school_id>
+		<school_name>Batman Üniversitesi</school_name>
+		<school_type>0</school_type>
+	</school>
+	<school>
+		<school_id>96</school_id>
+		<school_name>Bayburt Üniversitesi</school_name>
+		<school_type>0</school_type>
+	</school>
+	<school>
+		<school_id>97</school_id>
+		<school_name>Beykoz Lojistik Meslek Yüksekokulu(Vakıf)</school_name>
+		<school_type>1</school_type>
+	</school>
+	<school>
+		<school_id>98</school_id>
+		<school_name>Bilecik Üniversitesi</school_name>
+		<school_type>0</school_type>
+	</school>
+	<school>
+		<school_id>99</school_id>
+		<school_name>Bingöl Üniversitesi</school_name>
+		<school_type>0</school_type>
+	</school>
+	<school>
+		<school_id>100</school_id>
+		<school_name>Bitlis Eren Üniversitesi</school_name>
+		<school_type>0</school_type>
+	</school>
+	<school>
+		<school_id>101</school_id>
+		<school_name>Bozok Üniversitesi</school_name>
+		<school_type>0</school_type>
+	</school>
+	<school>
+		<school_id>102</school_id>
+		<school_name>Çankırı Karatekin Üniversitesi</school_name>
+		<school_type>0</school_type>
+	</school>
+	<school>
+		<school_id>103</school_id>
+		<school_name>Deniz Harp Okulu Komutanlığı(Askeri)</school_name>
+		<school_type>0</school_type>
+	</school>
+	<school>
+		<school_id>104</school_id>
+		<school_name>Düzce Üniversitesi</school_name>
+		<school_type>0</school_type>
+	</school>
+	<school>
+		<school_id>105</school_id>
+		<school_name>Erzincan Üniversitesi</school_name>
+		<school_type>0</school_type>
+	</school>
+	<school>
+		<school_id>106</school_id>
+		<school_name>Eskişehir Osmangazi Üniversitesi</school_name>
+		<school_type>0</school_type>
+	</school>
+	<school>
+		<school_id>107</school_id>
+		<school_name>Gazikent Üniversitesi(Vakıf)</school_name>
+		<school_type>1</school_type>
+	</school>
+	<school>
+		<school_id>108</school_id>
+		<school_name>Gediz Üniversitesi(Vakıf)</school_name>
+		<school_type>1</school_type>
+	</school>
+	<school>
+		<school_id>109</school_id>
+		<school_name>Giresun Üniversitesi</school_name>
+		<school_type>0</school_type>
+	</school>
+	<school>
+		<school_id>110</school_id>
+		<school_name>Gülhane Askeri Tıp Akademisi(Askeri)</school_name>
+		<school_type>0</school_type>
+	</school>
+	<school>
+		<school_id>111</school_id>
+		<school_name>Gümüşhane Üniversitesi</school_name>
+		<school_type>0</school_type>
+	</school>
+	<school>
+		<school_id>112</school_id>
+		<school_name>Hakkari Üniversitesi</school_name>
+		<school_type>0</school_type>
+	</school>
+	<school>
+		<school_id>113</school_id>
+		<school_name>Hava Astsubay Meslek Yüksek Okulu(Askeri)</school_name>
+		<school_type>0</school_type>
+	</school>
+	<school>
+		<school_id>114</school_id>
+		<school_name>Hava Harp Okulu Komutanlığı(Askeri)</school_name>
+		<school_type>0</school_type>
+	</school>
+	<school>
+		<school_id>115</school_id>
+		<school_name>Hitit Üniversitesi</school_name>
+		<school_type>0</school_type>
+	</school>
+	<school>
+		<school_id>116</school_id>
+		<school_name>Iğdır Üniversitesi</school_name>
+		<school_type>0</school_type>
+	</school>
+	<school>
+		<school_id>117</school_id>
+		<school_name>İstanbul Arel Üniversitesi(Vakıf)</school_name>
+		<school_type>1</school_type>
+	</school>
+	<school>
+		<school_id>118</school_id>
+		<school_name>İstanbul Aydın Üniversitesi(Vakıf)</school_name>
+		<school_type>1</school_type>
+	</school>
+	<school>
+		<school_id>119</school_id>
+		<school_name>İstanbul Bilim Üniversitesi(Vakıf)</school_name>
+		<school_type>1</school_type>
+	</school>
+	<school>
+		<school_id>120</school_id>
+		<school_name>İstanbul Gelişim Meslek Yüksekokulu(Vakıf)</school_name>
+		<school_type>1</school_type>
+	</school>
+	<school>
+		<school_id>121</school_id>
+		<school_name>İstanbul Kavram Meslek Yüksekokulu(Vakıf)</school_name>
+		<school_type>1</school_type>
+	</school>
+	<school>
+		<school_id>122</school_id>
+		<school_name>İstanbul Kemerburgaz Üniversitesi(Vakıf)</school_name>
+		<school_type>1</school_type>
+	</school>
+	<school>
+		<school_id>123</school_id>
+		<school_name>İstanbul Şehir Üniversitesi(Vakıf)</school_name>
+		<school_type>1</school_type>
+	</school>
+	<school>
+		<school_id>124</school_id>
+		<school_name>İzmir Üniversitesi(Vakıf)</school_name>
+		<school_type>1</school_type>
+	</school>
+	<school>
+		<school_id>125</school_id>
+		<school_name>İzmir Yüksek Teknoloji Enstitüsü</school_name>
+		<school_type>0</school_type>
+	</school>
+	<school>
+		<school_id>126</school_id>
+		<school_name>Kapadokya Meslek Yüksekokulu(Vakıf)</school_name>
+		<school_type>1</school_type>
+	</school>
+	<school>
+		<school_id>127</school_id>
+		<school_name>Kara Harp Okulu Komutanlığı(Askeri)</school_name>
+		<school_type>0</school_type>
+	</school>
+	<school>
+		<school_id>128</school_id>
+		<school_name>Karabük Üniversitesi</school_name>
+		<school_type>0</school_type>
+	</school>
+	<school>
+		<school_id>129</school_id>
+		<school_name>Karamanoğlu Mehmetbey Üniversitesi</school_name>
+		<school_type>0</school_type>
+	</school>
+	<school>
+		<school_id>130</school_id>
+		<school_name>Kastamonu Üniversitesi</school_name>
+		<school_type>0</school_type>
+	</school>
+	<school>
+		<school_id>131</school_id>
+		<school_name>Kırgızistan Türkiye Manas Üniversitesi(Özel)</school_name>
+		<school_type>1</school_type>
+	</school>
+	<school>
+		<school_id>132</school_id>
+		<school_name>Kırklareli Üniversitesi</school_name>
+		<school_type>0</school_type>
+	</school>
+	<school>
+		<school_id>133</school_id>
+		<school_name>Kilis 7 Aralık Üniversitesi</school_name>
+		<school_type>0</school_type>
+	</school>
+	<school>
+		<school_id>134</school_id>
+		<school_name>Mardin Artuklu Üniversitesi</school_name>
+		<school_type>0</school_type>
+	</school>
+	<school>
+		<school_id>135</school_id>
+		<school_name>Mehmet Akif Ersoy Üniversitesi</school_name>
+		<school_type>0</school_type>
+	</school>
+	<school>
+		<school_id>136</school_id>
+		<school_name>Melikşah Üniversitesi(Vakıf)</school_name>
+		<school_type>1</school_type>
+	</school>
+	<school>
+		<school_id>137</school_id>
+		<school_name>Muş Alparslan Üniversitesi</school_name>
+		<school_type>0</school_type>
+	</school>
+	<school>
+		<school_id>138</school_id>
+		<school_name>Namık Kemal Üniversitesi</school_name>
+		<school_type>0</school_type>
+	</school>
+	<school>
+		<school_id>139</school_id>
+		<school_name>Necmettin Erbakan Üniversitesi</school_name>
+		<school_type>0</school_type>
+	</school>
+	<school>
+		<school_id>140</school_id>
+		<school_name>Nevşehir Üniversitesi</school_name>
+		<school_type>0</school_type>
+	</school>
+	<school>
+		<school_id>141</school_id>
+		<school_name>Ordu Üniversitesi</school_name>
+		<school_type>0</school_type>
+	</school>
+	<school>
+		<school_id>142</school_id>
+		<school_name>Osmaniye Korkut Ata Üniversitesi</school_name>
+		<school_type>0</school_type>
+	</school>
+	<school>
+		<school_id>143</school_id>
+		<school_name>Özyeğin Üniversitesi(Vakıf)</school_name>
+		<school_type>1</school_type>
+	</school>
+	<school>
+		<school_id>144</school_id>
+		<school_name>Piri Reis Üniversitesi(Vakıf)</school_name>
+		<school_type>1</school_type>
+	</school>
+	<school>
+		<school_id>145</school_id>
+		<school_name>Polis Akademisi(Emniyet)</school_name>
+		<school_type>0</school_type>
+	</school>
+	<school>
+		<school_id>146</school_id>
+		<school_name>Recep Tayyip Erdoğan Üniversitesi</school_name>
+		<school_type>0</school_type>
+	</school>
+	<school>
+		<school_id>147</school_id>
+		<school_name>Siirt Üniversitesi</school_name>
+		<school_type>0</school_type>
+	</school>
+	<school>
+		<school_id>148</school_id>
+		<school_name>Sinop Üniversitesi</school_name>
+		<school_type>0</school_type>
+	</school>
+	<school>
+		<school_id>149</school_id>
+		<school_name>Şırnak Üniversitesi</school_name>
+		<school_type>0</school_type>
+	</school>
+	<school>
+		<school_id>150</school_id>
+		<school_name>TOBB Ekonomi Ve Teknoloji Üniversitesi(Vakıf)</school_name>
+		<school_type>1</school_type>
+	</school>
+	<school>
+		<school_id>151</school_id>
+		<school_name>Tunceli Üniversitesi</school_name>
+		<school_type>0</school_type>
+	</school>
+	<school>
+		<school_id>152</school_id>
+		<school_name>Uluslararası Kıbrıs Üniversitesi</school_name>
+		<school_type>1</school_type>
+	</school>
+	<school>
+		<school_id>153</school_id>
+		<school_name>Uşak Üniversitesi</school_name>
+		<school_type>0</school_type>
+	</school>
+	<school>
+		<school_id>154</school_id>
+		<school_name>Yalova Üniversitesi</school_name>
+		<school_type>0</school_type>
+	</school>
+	<school>
+		<school_id>155</school_id>
+		<school_name>Adıyaman Üniversitesi</school_name>
+		<school_type>0</school_type>
+	</school>
+	<school>
+		<school_id>156</school_id>
+		<school_name>Avrasya Üniversitesi</school_name>
+		<school_type>1</school_type>
+	</school>
+	<school>
+		<school_id>157</school_id>
+		<school_name>Bezm-i Alem Vakıf Üniversitesi</school_name>
+		<school_type>1</school_type>
+	</school>
+	<school>
+		<school_id>158</school_id>
+		<school_name>Bursa Teknik Üniversitesi</school_name>
+		<school_type>0</school_type>
+	</school>
+	<school>
+		<school_id>159</school_id>
+		<school_name>Canik Başarı Üniversitesi</school_name>
+		<school_type>1</school_type>
+	</school>
+	<school>
+		<school_id>160</school_id>
+		<school_name>Erzurum Teknik Üniversitesi</school_name>
+		<school_type>0</school_type>
+	</school>
+	<school>
+		<school_id>161</school_id>
+		<school_name>Fatih Sultan Mehmet Üniversitesi</school_name>
+		<school_type>1</school_type>
+	</school>
+	<school>
+		<school_id>162</school_id>
+		<school_name>İstanbul Medeniyet Üniversitesi</school_name>
+		<school_type>0</school_type>
+	</school>
+	<school>
+		<school_id>163</school_id>
+		<school_name>İstanbul Medipol Üniversitesi</school_name>
+		<school_type>1</school_type>
+	</school>
+	<school>
+		<school_id>164</school_id>
+		<school_name>Sabahattin Zaim Üniversitesi</school_name>
+		<school_type>1</school_type>
+	</school>
+	<school>
+		<school_id>165</school_id>
+		<school_name>İzmir Kâtip Çelebi Üniversitesi</school_name>
+		<school_type>0</school_type>
+	</school>
+	<school>
+		<school_id>166</school_id>
+		<school_name>Konya Üniversitesi</school_name>
+		<school_type>0</school_type>
+	</school>
+	<school>
+		<school_id>167</school_id>
+		<school_name>MEF Üniversitesi</school_name>
+		<school_type>1</school_type>
+	</school>
+	<school>
+		<school_id>168</school_id>
+		<school_name>Mevlana Üniversitesi</school_name>
+		<school_type>1</school_type>
+	</school>
+	<school>
+		<school_id>169</school_id>
+		<school_name>Nuh Naci Yazgan Üniversitesi</school_name>
+		<school_type>1</school_type>
+	</school>
+	<school>
+		<school_id>170</school_id>
+		<school_name>Süleyman Şah Üniversitesi</school_name>
+		<school_type>1</school_type>
+	</school>
+	<school>
+		<school_id>171</school_id>
+		<school_name>Sütçü İmam Üniversitesi</school_name>
+		<school_type>0</school_type>
+	</school>
+	<school>
+		<school_id>172</school_id>
+		<school_name>TED Üniversitesi</school_name>
+		<school_type>1</school_type>
+	</school>
+	<school>
+		<school_id>173</school_id>
+		<school_name>Toros Üniversitesi</school_name>
+		<school_type>1</school_type>
+	</school>
+	<school>
+		<school_id>174</school_id>
+		<school_name>Turgut Özal Üniversitesi</school_name>
+		<school_type>1</school_type>
+	</school>
+	<school>
+		<school_id>175</school_id>
+		<school_name>Türk-Alman Üniversitesi</school_name>
+		<school_type>1</school_type>
+	</school>
+	<school>
+		<school_id>176</school_id>
+		<school_name>Uluslararası Antalya Üniversitesi</school_name>
+		<school_type>1</school_type>
+	</school>
+	<school>
+		<school_id>177</school_id>
+		<school_name>Yeni Yüzyıl Üniversitesi</school_name>
+		<school_type>1</school_type>
+	</school>
+	<school>
+		<school_id>178</school_id>
+		<school_name>Yıldırım Beyazıt Üniversitesi</school_name>
+		<school_type>0</school_type>
+	</school>
+	<school>
+		<school_id>179</school_id>
+		<school_name>Zirve Üniversitesi</school_name>
+		<school_type>1</school_type>
+	</school>
+</setup_school>

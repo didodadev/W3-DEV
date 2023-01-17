@@ -1,0 +1,16 @@
+<!-- Description : Tablolara yeni alanlar eklendi.
+Developer: Gülbahar Inan
+Company : Workcube
+Destination: main -->
+<querytag>
+    IF NOT EXISTS (SELECT 'Y' FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME = 'COMPANY' AND COLUMN_NAME = 'IS_CIVIL_COMPANY')
+    BEGIN
+        ALTER TABLE COMPANY ADD
+        IS_CIVIL_COMPANY bit NULL
+    END;
+    IF NOT EXISTS (SELECT 'Y' FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME = 'PROCESS_TYPE_ROWS' AND COLUMN_NAME = 'DESTINATION_EVENT')
+    BEGIN
+        ALTER TABLE PROCESS_TYPE_ROWS ADD
+        DESTINATION_EVENT nvarchar(MAX) NULL
+    END;
+</querytag>

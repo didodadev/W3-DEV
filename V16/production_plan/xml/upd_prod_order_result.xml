@@ -1,0 +1,381 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<OBJECT_PROPERTIES>
+	<OBJECT_PROPERTY>
+		<PROPERTY>is_change_sarf_cost</PROPERTY>
+		<PROPERTY_DETAIL>Sarf ve Fire Ürünlerinin Maliyeti Değiştirebilsin !</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>select</PROPERTY_TYPE>
+		<PROPERTY_VALUES>1,0</PROPERTY_VALUES>
+		<PROPERTY_NAMES>Evet,Hayır</PROPERTY_NAMES>
+		<PROPERTY_DEFAULT>0</PROPERTY_DEFAULT>
+		<PROPERTY_HELP>Evet Seçildiğinde Sarf ve Fire Ürünlerin Maliyetleri Manuel Olarak Değiştirilebilir.</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+	<OBJECT_PROPERTY>
+		<PROPERTY>is_change_station</PROPERTY>
+		<PROPERTY_DETAIL>İstasyon Değiştirilebilir!</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>select</PROPERTY_TYPE>
+		<PROPERTY_VALUES>1,0</PROPERTY_VALUES>
+		<PROPERTY_NAMES>Evet,Hayır</PROPERTY_NAMES>
+		<PROPERTY_DEFAULT>1</PROPERTY_DEFAULT>
+		<PROPERTY_HELP>Evet Seçildiğinde Üretimin İstasyon Bilgisi Değiştirilebilir.</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+	<OBJECT_PROPERTY>
+		<PROPERTY>is_show_two_units</PROPERTY>
+		<PROPERTY_DETAIL>2.Birimlerle Çalış</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>select</PROPERTY_TYPE>
+		<PROPERTY_VALUES>1,0</PROPERTY_VALUES>
+		<PROPERTY_NAMES>Evet,Hayır</PROPERTY_NAMES>
+		<PROPERTY_DEFAULT>0</PROPERTY_DEFAULT>
+		<PROPERTY_HELP>Evet Seçildiğinde Ürün Detayında Tanımlı Olan 2. Birimlerle Çalışması Sağlanır.</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+	<OBJECT_PROPERTY>
+		<PROPERTY>is_show_spec_id</PROPERTY>
+		<PROPERTY_DETAIL>Spec ID Görüntülensin</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>select</PROPERTY_TYPE>
+		<PROPERTY_VALUES>1,0</PROPERTY_VALUES>
+		<PROPERTY_NAMES>Evet,Hayır</PROPERTY_NAMES>
+		<PROPERTY_DEFAULT>1</PROPERTY_DEFAULT>
+		<PROPERTY_HELP>Evet Seçildiğinde Spec ID Görüntülenir.</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+	<OBJECT_PROPERTY>
+		<PROPERTY>is_show_spec_name</PROPERTY>
+		<PROPERTY_DETAIL>Spec Adı Görüntülensin</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>select</PROPERTY_TYPE>
+		<PROPERTY_VALUES>1,0</PROPERTY_VALUES>
+		<PROPERTY_NAMES>Evet,Hayır</PROPERTY_NAMES>
+		<PROPERTY_DEFAULT>1</PROPERTY_DEFAULT>
+		<PROPERTY_HELP>Evet Seçildiğinde Spec İsmi Görüntülenir.</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+	<OBJECT_PROPERTY>
+		<PROPERTY>is_show_product_name2</PROPERTY>
+		<PROPERTY_DETAIL>2.Açıklama Alanı Göster</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>select</PROPERTY_TYPE>
+		<PROPERTY_VALUES>1,0</PROPERTY_VALUES>
+		<PROPERTY_NAMES>Evet,Hayır</PROPERTY_NAMES>
+		<PROPERTY_DEFAULT>0</PROPERTY_DEFAULT>
+		<PROPERTY_HELP>Evet Seçildiğinde Sarf ve Firelere Ait 2. Açıklama Alanı Ek Bir Sütun Olarak Açılır.</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+	<OBJECT_PROPERTY>
+		<PROPERTY>is_change_amount_demontaj</PROPERTY>
+		<PROPERTY_DETAIL>Demontajda Miktarlar Değiştirilebilir</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>select</PROPERTY_TYPE>
+		<PROPERTY_VALUES>1,0</PROPERTY_VALUES>
+		<PROPERTY_NAMES>Evet,Hayır</PROPERTY_NAMES>
+		<PROPERTY_DEFAULT>1</PROPERTY_DEFAULT>
+		<PROPERTY_HELP>Demontaj İşlemleri Yapılırken Miktarın Değiştirilebilmesine İzin Verir.</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+	<OBJECT_PROPERTY>
+		<PROPERTY>is_stock_control_with_spec</PROPERTY>
+		<PROPERTY_DETAIL>Stok Kontrolü Specli Yapılsın!</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>select</PROPERTY_TYPE>
+		<PROPERTY_VALUES>1,0</PROPERTY_VALUES>
+		<PROPERTY_NAMES>Evet,Hayır</PROPERTY_NAMES>
+		<PROPERTY_DEFAULT>1</PROPERTY_DEFAULT>
+		<PROPERTY_HELP>Evet Seçildiğinde Ürünün İlgili Spec'indeki Stok Kontrolünü Yapar.</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+	<OBJECT_PROPERTY>
+		<PROPERTY>is_changed_spec_main</PROPERTY>
+		<PROPERTY_DETAIL>Sarf Miktarları Değişirse Yeni Main Spec Oluşsun.</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>select</PROPERTY_TYPE>
+		<PROPERTY_VALUES>1,0</PROPERTY_VALUES>
+		<PROPERTY_NAMES>Evet,Hayır</PROPERTY_NAMES>
+		<PROPERTY_DEFAULT>1</PROPERTY_DEFAULT>
+		<PROPERTY_HELP>Operasyonlu Ürün Ağaçlarında Operasyon Bilgisi Gönderilemeyeceği İçin Mükerrer Spec Kayıtları Oluşacaktır.</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+	<OBJECT_PROPERTY>
+		<PROPERTY>x_is_show_refl_cost</PROPERTY>
+		<PROPERTY_DETAIL>Yansıyan Maliyetleri Göster</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>select</PROPERTY_TYPE>
+		<PROPERTY_VALUES>1,0</PROPERTY_VALUES>
+		<PROPERTY_NAMES>Evet,Hayır</PROPERTY_NAMES>
+		<PROPERTY_DEFAULT>0</PROPERTY_DEFAULT>
+		<PROPERTY_HELP>Üretim Sonucuna Masraf Merkezlerinden Yansıtılmış Olan Maliyeti Gösterir.</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+	<OBJECT_PROPERTY>
+		<PROPERTY>x_is_show_labor_cost</PROPERTY>
+		<PROPERTY_DETAIL>İşçilik Maliyetlerini Göster</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>select</PROPERTY_TYPE>
+		<PROPERTY_VALUES>1,0</PROPERTY_VALUES>
+		<PROPERTY_NAMES>Evet,Hayır</PROPERTY_NAMES>
+		<PROPERTY_DEFAULT>0</PROPERTY_DEFAULT>
+		<PROPERTY_HELP>Evet Seçildiğinde Maliyet Muhasebesinden Yansıtılan İşçilik Maliyetlerini Gösterir.</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+	<OBJECT_PROPERTY>
+		<PROPERTY>x_is_show_total_cost_price</PROPERTY>
+		<PROPERTY_DETAIL>Toplam Maliyeti Göster</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>select</PROPERTY_TYPE>
+		<PROPERTY_VALUES>1,0</PROPERTY_VALUES>
+		<PROPERTY_NAMES>Evet,Hayır</PROPERTY_NAMES>
+		<PROPERTY_DEFAULT>0</PROPERTY_DEFAULT>
+		<PROPERTY_HELP>Evet Seçildiğinde Ürünün Toplam Maliyetini Gösterir.</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+	<OBJECT_PROPERTY>
+		<PROPERTY>x_por_amount_lte_po</PROPERTY>
+		<PROPERTY_DETAIL>Sonuç Miktarı Üretim Miktarından Fazla Olabilir.</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>select</PROPERTY_TYPE>
+		<PROPERTY_VALUES>1,0</PROPERTY_VALUES>
+		<PROPERTY_NAMES>Evet,Hayır</PROPERTY_NAMES>
+		<PROPERTY_DEFAULT>1</PROPERTY_DEFAULT>
+		<PROPERTY_HELP>Bir Üretim Emri İçin Girilen Üretim Sonuçlarının Toplamı,Üretim Emrindeki Miktardan Fazla Olabilir...</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+	<OBJECT_PROPERTY>
+		<PROPERTY>x_is_show_sb</PROPERTY>
+		<PROPERTY_DETAIL>Sevkte Birleştir Göster</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>select</PROPERTY_TYPE>
+		<PROPERTY_VALUES>1,0</PROPERTY_VALUES>
+		<PROPERTY_NAMES>Evet,Hayır</PROPERTY_NAMES>
+		<PROPERTY_DEFAULT>1</PROPERTY_DEFAULT>
+		<PROPERTY_HELP>Sevkte Birleştir Kutucuklarının Gösterimi Yapılır ya da Yapılmaz.</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+	<OBJECT_PROPERTY>
+		<PROPERTY>x_is_add_operation_result</PROPERTY>
+		<PROPERTY_DETAIL>Sonuç Girilmemiş Operasyonlar İçin Otomatik Sonuç Oluşturulsun</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>select</PROPERTY_TYPE>
+		<PROPERTY_VALUES>1,0</PROPERTY_VALUES>
+		<PROPERTY_NAMES>Evet,Hayır</PROPERTY_NAMES>
+		<PROPERTY_DEFAULT>0</PROPERTY_DEFAULT>
+		<PROPERTY_HELP>Eğer Seçilirse Üretim Emrine Bağlı Operasyonlara Sonuç Girilmemişse Otomatik Olarak Operasyonun Bağlı Olduğu İstasyona Toplam Miktar Kadar Sonuç Girişi Yapılır.</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+	<OBJECT_PROPERTY>
+		<PROPERTY>x_is_show_abh</PROPERTY>
+		<PROPERTY_DETAIL>a*b*h Göster</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>select</PROPERTY_TYPE>
+		<PROPERTY_VALUES>1,0</PROPERTY_VALUES>
+		<PROPERTY_NAMES>Evet,Hayır</PROPERTY_NAMES>
+		<PROPERTY_DEFAULT>1</PROPERTY_DEFAULT>
+		<PROPERTY_HELP>a*b*h Gösterimi Yapılır ya da Yapılmaz.</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+	<OBJECT_PROPERTY>
+		<PROPERTY>x_pro_add_barkod_and_seri_no</PROPERTY>
+		<PROPERTY_DETAIL>Barkod ve Seri Nodan Ürün Ekle Gelsin</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>select</PROPERTY_TYPE>
+		<PROPERTY_VALUES>1,0</PROPERTY_VALUES>
+		<PROPERTY_NAMES>Evet,Hayır</PROPERTY_NAMES>
+		<PROPERTY_DEFAULT>1</PROPERTY_DEFAULT>
+		<PROPERTY_HELP>Evet Seçilirse Sarf ve Fireler İçin Barkod Numarası ya da Seri Numarası Yazılarak Ürün Eklenebilir.</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+	<OBJECT_PROPERTY>
+		<PROPERTY>x_is_barkod_col</PROPERTY>
+		<PROPERTY_DETAIL>Barkod Sütunu Gelsin</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>select</PROPERTY_TYPE>
+		<PROPERTY_VALUES>1,0</PROPERTY_VALUES>
+		<PROPERTY_NAMES>Evet,Hayır</PROPERTY_NAMES>
+		<PROPERTY_DEFAULT>1</PROPERTY_DEFAULT>
+		<PROPERTY_HELP>Evet Seçilirse, Barkod Bilgisinin Gösterilmesini Sağlar.</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+	<OBJECT_PROPERTY>
+		<PROPERTY>x_is_fire_product</PROPERTY>
+		<PROPERTY_DETAIL>Üretilen Ürün İçin Fire Sütunu Gelsin</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>select</PROPERTY_TYPE>
+		<PROPERTY_VALUES>1,0</PROPERTY_VALUES>
+		<PROPERTY_NAMES>Evet,Hayır</PROPERTY_NAMES>
+		<PROPERTY_DEFAULT>0</PROPERTY_DEFAULT>
+		<PROPERTY_HELP>Üretilen Ürün Satırında Fire Sütunu Açılır ve Üretilen Üründen Kaç Adet Fire Olduğu Bu Alana Yazılabilir.</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+	<OBJECT_PROPERTY>
+		<PROPERTY>x_is_cost_price_2</PROPERTY>
+		<PROPERTY_DETAIL>Sistem 2. Dövizine Göre Birim Maliyet Gelsin</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>select</PROPERTY_TYPE>
+		<PROPERTY_VALUES>1,0</PROPERTY_VALUES>
+		<PROPERTY_NAMES>Evet,Hayır</PROPERTY_NAMES>
+		<PROPERTY_DEFAULT>0</PROPERTY_DEFAULT>
+		<PROPERTY_HELP>Sistem 2. Para Birimine Göre Maliyetler Hesaplanır.</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+	<OBJECT_PROPERTY>
+		<PROPERTY>x_add_fire_product</PROPERTY>
+		<PROPERTY_DETAIL>Sarf Satırları Fire Olarak da Gelsin</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>select</PROPERTY_TYPE>
+		<PROPERTY_VALUES>1,0</PROPERTY_VALUES>
+		<PROPERTY_NAMES>Evet,Hayır</PROPERTY_NAMES>
+		<PROPERTY_DEFAULT>0</PROPERTY_DEFAULT>
+		<PROPERTY_HELP>Sarf Satırlarının Fire Olarak da Gelmesini Sağlar.</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+	<OBJECT_PROPERTY>
+		<PROPERTY>x_update_result</PROPERTY>
+		<PROPERTY_DETAIL>Fiş Oluşmuşsa Güncelleme Yapılamasın</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>select</PROPERTY_TYPE>
+		<PROPERTY_VALUES>1,0</PROPERTY_VALUES>
+		<PROPERTY_NAMES>Evet,Hayır</PROPERTY_NAMES>
+		<PROPERTY_DEFAULT>1</PROPERTY_DEFAULT>
+		<PROPERTY_HELP>Evet Seçildiğinde Stok Fişi Oluşturulduysa Üretim Sonucunun Güncellenmesine İzin Vermez.</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+	<OBJECT_PROPERTY>
+		<PROPERTY>x_fis_kontrol</PROPERTY>
+		<PROPERTY_DETAIL>Silme İşleminde Teslim Alınmış Sevk İrsaliyeleri Kontrol Edilsin</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>select</PROPERTY_TYPE>
+		<PROPERTY_VALUES>1,0</PROPERTY_VALUES>
+		<PROPERTY_NAMES>Evet,Hayır</PROPERTY_NAMES>
+		<PROPERTY_DEFAULT>0</PROPERTY_DEFAULT>
+		<PROPERTY_HELP>Eğer Evet Olarak Seçilirse Üretim Sonucu Silinirken Eğer Teslim Alınmış Sevk İrsaliyesi Varsa Uyarı Verir.</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+	<OBJECT_PROPERTY>
+		<PROPERTY>x_lot_no</PROPERTY>
+		<PROPERTY_DETAIL>Lot No Değiştirilebilsin</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>select</PROPERTY_TYPE>
+		<PROPERTY_VALUES>1,0</PROPERTY_VALUES>
+		<PROPERTY_NAMES>Evet,Hayır</PROPERTY_NAMES>
+		<PROPERTY_DEFAULT>0</PROPERTY_DEFAULT>
+		<PROPERTY_HELP>Evet Seçilirse Ürünlerin Lot No Değişikliklerine İzin Verir.</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+	<OBJECT_PROPERTY>
+		<PROPERTY>x_quality_control</PROPERTY>
+		<PROPERTY_DETAIL>Stok Fişi Oluştururken Kalite Kontrol Bilgisine Baksın</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>select</PROPERTY_TYPE>
+		<PROPERTY_VALUES>1,0</PROPERTY_VALUES>
+		<PROPERTY_NAMES>Evet,Hayır</PROPERTY_NAMES>
+		<PROPERTY_DEFAULT>1</PROPERTY_DEFAULT>
+		<PROPERTY_HELP>Bu Seçim Ürüne Ait Kalite Kontrol Girişi Yapılmadan Stok Fişi Oluşturulmasına İzin Vermez. Stok Fişi Kaydedebilmek İçin İlgili Üretim Sonucundaki Üretilen Ürüne Ait Kalite Kontrol Girişi Yapılması ve Kalite Kontrol Sürecindeki Aşamada Onay Seçiminin Yapılması Gerekir.</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+	<OBJECT_PROPERTY>
+		<PROPERTY>x_lot_no_in_stocks_row</PROPERTY>
+		<PROPERTY_DETAIL>Lot No Bazında Stok Hareketi Yapılsın</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>select</PROPERTY_TYPE>
+		<PROPERTY_VALUES>1,0</PROPERTY_VALUES>
+		<PROPERTY_NAMES>Evet,Hayır</PROPERTY_NAMES>
+		<PROPERTY_DEFAULT>0</PROPERTY_DEFAULT>
+		<PROPERTY_HELP>Stok Hareketlerinin İlgili Lot Bazında Yapılmasını Sağlar.</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+	<OBJECT_PROPERTY>
+		<PROPERTY>x_calc_sub_pro_amount</PROPERTY>
+		<PROPERTY_DETAIL>Sarf Miktarı Malzeme İhtiyacına Göre Hesaplansın</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>select</PROPERTY_TYPE>
+		<PROPERTY_VALUES>1,0</PROPERTY_VALUES>
+		<PROPERTY_NAMES>Evet,Hayır</PROPERTY_NAMES>
+		<PROPERTY_DEFAULT>0</PROPERTY_DEFAULT>
+		<PROPERTY_HELP>Sarf Miktarının Üretim Emri ve Sonucunda Eşit Olmadığı Durumlarda, Evet Denildiğinde Üretim Sonucunda Kullanılan Sarf Miktarını Baz Alarak İhtiyacı Hesaplar. Hayır Denildiğinde ise Üretim Sonucundaki Sarf Miktarının Değiştirilmediğini Varsayarak İhtiyacı Getirir. Evet Seçili Olduğunda Üretim Emrindeki Sarf Miktarı İle Kalan Üretim Emri Miktarı Çarpılıp Üretim Emri Miktarına Bölünür.(Örn: Üretim emrinde A ürününde 100 adet sarf girildi. Üretim sonucununun miktarında da 80 adet sarf kullanılması gerekirken 85 adet sarf kullanıldıysa, evet seçildiğinde malzeme ihtiyacını 15 adet getirir. Hayır seçildiğinde ise malzeme ihtiyacını 20 adet getirir.)</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+	<OBJECT_PROPERTY>
+		<PROPERTY>process_type_111</PROPERTY>
+		<PROPERTY_DETAIL>Sarf Fişi İşlem Kategori ID</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>input</PROPERTY_TYPE>
+		<PROPERTY_VALUES></PROPERTY_VALUES>
+		<PROPERTY_NAMES></PROPERTY_NAMES>
+		<PROPERTY_DEFAULT></PROPERTY_DEFAULT>
+		<PROPERTY_HELP>ID'si Yazılan İşlem Tipinde Sarf Fişi Oluşur. Sistem>Sistem Yönetimi>İşlem Kategorileri Altında Seçilecek İşlem Tipinin process_cat_id Alanında Yazan Değerdir.</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+	<OBJECT_PROPERTY>
+		<PROPERTY>process_type_112</PROPERTY>
+		<PROPERTY_DETAIL>Fire Fişi İşlem Kategori ID</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>input</PROPERTY_TYPE>
+		<PROPERTY_VALUES></PROPERTY_VALUES>
+		<PROPERTY_NAMES></PROPERTY_NAMES>
+		<PROPERTY_DEFAULT></PROPERTY_DEFAULT>
+		<PROPERTY_HELP>ID'si Yazılan İşlem Tipinde Fire Fişi Oluşur. Sistem>Sistem Yönetimi>İşlem Kategorileri Altında Seçilecek İşlem Tipinin process_cat_id  alanında Yazan Değerdir.</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+	<OBJECT_PROPERTY>
+		<PROPERTY>process_type_81</PROPERTY>
+		<PROPERTY_DETAIL>Depolararası Sevk İrsaliyesi İşlem Kategori ID</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>input</PROPERTY_TYPE>
+		<PROPERTY_VALUES></PROPERTY_VALUES>
+		<PROPERTY_NAMES></PROPERTY_NAMES>
+		<PROPERTY_DEFAULT></PROPERTY_DEFAULT>
+		<PROPERTY_HELP>ID'si Yazılan İşlem Tipinde Depolararası Sevk İrsaliyesi Oluşur. Sistem>Sistem Yönetimi>İşlem Kategorileri Altında Seçilecek İşlem Tipinin process_cat_id  alanında Yazan Değerdir.</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+	<OBJECT_PROPERTY>
+		<PROPERTY>process_type_110</PROPERTY>
+		<PROPERTY_DETAIL>Üretimden Çıkış Fişi İşlem Kategori ID</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>input</PROPERTY_TYPE>
+		<PROPERTY_VALUES></PROPERTY_VALUES>
+		<PROPERTY_NAMES></PROPERTY_NAMES>
+		<PROPERTY_DEFAULT></PROPERTY_DEFAULT>
+		<PROPERTY_HELP>ID'si Yazılan İşlem Tipinde Üretimden Çıkış Fişi Oluşur. Sistem>Sistem Yönetimi>İşlem Kategorileri Altında Seçilecek İşlem Tipinin process_cat_id  alanında Yazan Değerdir.</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+	<OBJECT_PROPERTY>
+		<PROPERTY>process_type_119</PROPERTY>
+		<PROPERTY_DETAIL>Üretimden Giriş Fişi(Demontaj) İşlem Kategori ID</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>input</PROPERTY_TYPE>
+		<PROPERTY_VALUES></PROPERTY_VALUES>
+		<PROPERTY_NAMES></PROPERTY_NAMES>
+		<PROPERTY_DEFAULT></PROPERTY_DEFAULT>
+		<PROPERTY_HELP>ID'si Yazılan İşlem Tipinde Demontaj Fişi Oluşur. Sistem>Sistem Yönetimi>İşlem Kategorileri Altında Seçilecek İşlem Tipinin process_cat_id  alanında Yazan Değerdir.</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+	<OBJECT_PROPERTY>
+		<PROPERTY>zero_stock_control_date</PROPERTY>
+		<PROPERTY_DETAIL>Sıfır Stok Kontrolünü Belge Tarihine Göre Yapsın</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>select</PROPERTY_TYPE>
+		<PROPERTY_VALUES>1,0</PROPERTY_VALUES>
+		<PROPERTY_NAMES>Evet,Hayır</PROPERTY_NAMES>
+		<PROPERTY_DEFAULT>0</PROPERTY_DEFAULT>
+		<PROPERTY_HELP>Eğer Hayır Seçilirse İleriye Tarihlerdeki Üretimlerin Sonuçlandırılmasında Günümüz Tarihinin Stok Bilgisine Göre Sıfır Stok Kontrolü Yapar. (Örn: 1 ay sonrası için 50 adetlik bir üretim sonucum var. Ancak bugün yarımamüllere ait stokum yok ve yarı mamüllerin de 1 ay sonrası için üretim sonuçları girildi. Sistem bugünün tarihini baz alarak yarı mamül stokumun bulunmadığını söyler ve üretim sonuçlandırmama izin vermez.) Evet seçildiğinde belgenin tarihindeki stok'u baz alır.</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+	<OBJECT_PROPERTY>
+		<PROPERTY>is_line_number</PROPERTY>
+		<PROPERTY_DETAIL>Sarf ve Fireler Ağaçtaki Sıra Numarasına Bağlı Olarak Gelsin mi?</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>select</PROPERTY_TYPE>
+		<PROPERTY_VALUES>1,0</PROPERTY_VALUES>
+		<PROPERTY_NAMES>Evet,Hayır</PROPERTY_NAMES>
+		<PROPERTY_DEFAULT>0</PROPERTY_DEFAULT>
+		<PROPERTY_HELP>Evet Seçildiğinde Ağaçtaki Sıra Numarasına Göre Sarf ve Fireler Gösterilmektedir.</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+	<OBJECT_PROPERTY>
+		<PROPERTY>x_is_show_mc</PROPERTY>
+		<PROPERTY_DETAIL>Manuel Maliyet Göster</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>select</PROPERTY_TYPE>
+		<PROPERTY_VALUES>1,0</PROPERTY_VALUES>
+		<PROPERTY_NAMES>Evet,Hayır</PROPERTY_NAMES>
+		<PROPERTY_DEFAULT>1</PROPERTY_DEFAULT>
+		<PROPERTY_HELP>Manuel Maliyet Kutucuklarının Gösterimi Yapılır Yada Yapılmaz.</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+	<OBJECT_PROPERTY>
+		<PROPERTY>round_number</PROPERTY>
+		<PROPERTY_DETAIL>Miktarda Virgülden Sonra Kaç Basamak Gelsin? </PROPERTY_DETAIL>
+		<PROPERTY_TYPE>select</PROPERTY_TYPE>
+		<PROPERTY_VALUES>8,7,6,5,4</PROPERTY_VALUES>
+		<PROPERTY_NAMES>8,7,6,5,4</PROPERTY_NAMES>
+		<PROPERTY_DEFAULT>4</PROPERTY_DEFAULT>
+		<PROPERTY_HELP>Miktar Alanında Virgülden Sonra Kaç Basamak Geleceğinin Seçimi Yapılır.</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+	<OBJECT_PROPERTY>
+		<PROPERTY>x_exit_amount_change_auto</PROPERTY>
+		<PROPERTY_DETAIL>Sarf Miktarı Üretim Sonucundaki Miktara Göre Otomatik Güncellensin Mi?</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>select</PROPERTY_TYPE>
+		<PROPERTY_VALUES>1,0</PROPERTY_VALUES>
+		<PROPERTY_NAMES>Evet,Hayır</PROPERTY_NAMES>
+		<PROPERTY_DEFAULT>1</PROPERTY_DEFAULT>
+		<PROPERTY_HELP>Hayır Seçilirse; Üretim Sonucundaki Miktar İçin Sadece Butona Basılarak Güncelleme Sağlanır, Aksi Taktirde Sarf Hesaplaması Yapmaz. Evet Seçilirse Standart Hali ile Çalışmaya Devam Eder, Miktar Değiştiğinde Otomatik Sarflar Güncellenir.</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+	<OBJECT_PROPERTY>
+		<PROPERTY>xml_location_auth_entry</PROPERTY>
+		<PROPERTY_DETAIL>Giriş Depo Lokasyon Yetkisi</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>select</PROPERTY_TYPE>
+		<PROPERTY_VALUES>-1,1,0</PROPERTY_VALUES>
+		<PROPERTY_NAMES>Default,Tüm Lokasyonlar,Yetkili Lokasyonlar</PROPERTY_NAMES>
+		<PROPERTY_DEFAULT></PROPERTY_DEFAULT>
+		<PROPERTY_HELP>Eğer Tüm Lokasyonlar Seçilirse Yetki Kontrollerinden Bağımsız Olarak Tüm Lokasyonlar Seçilebilir.</PROPERTY_HELP>
+	</OBJECT_PROPERTY>	
+	<OBJECT_PROPERTY>
+		<PROPERTY>xml_location_auth_outer</PROPERTY>
+		<PROPERTY_DETAIL>Çıkış Depo Lokasyon Yetkisi</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>select</PROPERTY_TYPE>
+		<PROPERTY_VALUES>-1,1,0</PROPERTY_VALUES>
+		<PROPERTY_NAMES>Default,Tüm Lokasyonlar,Yetkili Lokasyonlar</PROPERTY_NAMES>
+		<PROPERTY_DEFAULT></PROPERTY_DEFAULT>
+		<PROPERTY_HELP>Eğer Tüm Lokasyonlar Seçilirse Yetki Kontrollerinden Bağımsız Olarak Tüm Lokasyonlar Seçilebilir.</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+	<OBJECT_PROPERTY>
+		<PROPERTY>xml_location_auth_prod</PROPERTY>
+		<PROPERTY_DETAIL>Üretim Depo Lokasyon Yetkisi</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>select</PROPERTY_TYPE>
+		<PROPERTY_VALUES>-1,1,0</PROPERTY_VALUES>
+		<PROPERTY_NAMES>Default,Tüm Lokasyonlar,Yetkili Lokasyonlar</PROPERTY_NAMES>
+		<PROPERTY_DEFAULT></PROPERTY_DEFAULT>
+		<PROPERTY_HELP>Eğer Tüm Lokasyonlar Seçilirse Yetki Kontrollerinden Bağımsız Olarak Tüm Lokasyonlar Seçilebilir.</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+		<OBJECT_PROPERTY>
+		<PROPERTY>xml_specific_weight</PROPERTY>
+		<PROPERTY_DETAIL>Özgül Ağırlık Gösterilsin mi?</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>select</PROPERTY_TYPE>
+		<PROPERTY_VALUES>1,0</PROPERTY_VALUES>
+		<PROPERTY_NAMES>Evet,Hayır</PROPERTY_NAMES>
+		<PROPERTY_DEFAULT>1</PROPERTY_DEFAULT>
+		<PROPERTY_HELP>Özgül Ağırlık Kolonunu Görüntüler.</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+		<OBJECT_PROPERTY>
+		<PROPERTY>xml_work</PROPERTY>
+		<PROPERTY_DETAIL>Satırlarda İş Gösterilsin mi?</PROPERTY_DETAIL>
+		<PROPERTY_TYPE>select</PROPERTY_TYPE>
+		<PROPERTY_VALUES>1,0</PROPERTY_VALUES>
+		<PROPERTY_NAMES>Evet,Hayır</PROPERTY_NAMES>
+		<PROPERTY_DEFAULT>1</PROPERTY_DEFAULT>
+		<PROPERTY_HELP>Satırlarda iş İnputunu Görüntüler.</PROPERTY_HELP>
+	</OBJECT_PROPERTY>
+</OBJECT_PROPERTIES>

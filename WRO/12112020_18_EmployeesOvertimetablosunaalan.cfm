@@ -1,0 +1,18 @@
+<!-- Description : Fazla Mesai tablosuna alan eklendi
+Developer: Gülbahar İnan
+Company : Workcube
+Destination: main -->
+<querytag>  
+    BEGIN
+        IF NOT EXISTS(SELECT 'Y' FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_SCHEMA = '@_dsn_main_@' and TABLE_NAME='EMPLOYEES_OVERTIME' AND COLUMN_NAME='PROCESS_STAGE')
+        BEGIN   
+            ALTER TABLE EMPLOYEES_OVERTIME ADD PROCESS_STAGE int NULL 
+        END;
+    END;
+    BEGIN
+    IF NOT EXISTS(SELECT 'Y' FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_SCHEMA = '@_dsn_main_@' and TABLE_NAME='EMPLOYEES_OVERTIME' AND COLUMN_NAME='WORKTIME_WAGE_STATU')
+        BEGIN   
+            ALTER TABLE EMPLOYEES_OVERTIME ADD WORKTIME_WAGE_STATU int NULL 
+        END;
+    END;
+</querytag>

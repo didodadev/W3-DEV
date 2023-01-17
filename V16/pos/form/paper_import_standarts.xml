@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wrk_xml_import>
+	<title>Workcube Data Service Collect</title>
+	<data_type>invoice,ship,order,offer</data_type>
+	<paper>
+			<header>
+					<member_type>company/consumer</member_type>
+					<member_code></member_code>
+					<member_special_code></member_special_code>
+					<member_account_code></member_account_code>
+					<tax_office></tax_office>
+					<tax_no></tax_no>
+					<fullname></fullname>
+					<adress></adress>
+					<zip_code></zip_code>
+					<county></county>
+					<city></city>
+					<action_date></action_date>
+					<due_date></due_date>
+					<paper_type>sale/purchase</paper_type>
+					<paper_no></paper_no>
+					<paper_discount></paper_discount>
+					<paper_total_price></paper_total_price>
+			</header>
+			<rows>
+					<rows_detail>
+							<stock_code></stock_code>
+							<stock_special_code></stock_special_code>
+							<account_code></account_code>
+							<description></description>
+							<amount></amount>
+							<unit></unit>
+							<price></price>
+							<price_money></price_money>
+							<discount_rate></discount_rate>
+							<rebate></rebate>
+							<tax_rate></tax_rate>
+							<special_tax_rate></special_tax_rate>
+					</rows_detail>
+			</rows>
+			<payment>
+					<payment_type>creditcard/bank/cash</payment_type>
+					<paper_no></paper_no>
+					<cash_account_code></cash_account_code>
+					<bank_account_code></bank_account_code>
+					<payment_price></payment_price>
+					<price_money></price_money>
+					<paper_description></paper_description>
+			</payment>
+	</paper>
+</wrk_xml_import>

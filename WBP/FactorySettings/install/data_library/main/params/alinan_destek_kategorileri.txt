@@ -1,0 +1,5 @@
+INSERT INTO [ASSET_TAKE_SUPPORT_CAT]([TAKE_SUP_CAT],[DETAIL]) Values( '7/24 Yol Desteği','  ');
+INSERT INTO [ASSET_TAKE_SUPPORT_CAT]([TAKE_SUP_CAT],[DETAIL]) Values( 'Yerinde Tamir','  ');
+INSERT INTO [ASSET_TAKE_SUPPORT_CAT]([TAKE_SUP_CAT],[DETAIL]) Values( 'Serviste Tamir','  ');
+INSERT INTO [ASSET_TAKE_SUPPORT_CAT]([TAKE_SUP_CAT],[DETAIL]) Values( 'Uzaktan İzleme','  ');
+

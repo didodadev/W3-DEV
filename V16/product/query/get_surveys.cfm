@@ -1,0 +1,21 @@
+<cfquery name="GET_SURVEYS" datasource="#dsn#">
+	SELECT
+		SURVEY.SURVEY_ID,
+		SURVEY.SURVEY,
+		SURVEY.SURVEY_HEAD,
+		SURVEY.RECORD_DATE,
+		SURVEY.STAGE_ID,
+		(SELECT STAGE FROM PROCESS_TYPE_ROWS WHERE PROCESS_ROW_ID = SURVEY.STAGE_ID) STAGE_NAME,
+		RECORD_EMP
+	FROM
+		SURVEY
+	WHERE
+		PRODUCT_ID = #attributes.PRODUCT_ID#
+	<cfif isDefined("attributes.KEYWORD")>
+		AND
+		(
+		SURVEY.SURVEY LIKE '%#attributes.KEYWORD#%' OR
+		SURVEY.SURVEY_HEAD LIKE '%#attributes.KEYWORD#%'
+		)
+	</cfif>
+</cfquery>

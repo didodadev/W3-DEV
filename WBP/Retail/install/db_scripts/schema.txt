@@ -1,0 +1,3338 @@
+USE [workcube_devcatalyst]
+GO
+ CREATE LOGIN [workcube_devcatalyst_retail] WITH PASSWORD = '#PASSWORD#' 
+
+    CREATE SCHEMA [workcube_devcatalyst_retail]
+
+    CREATE USER [workcube_devcatalyst_retail] FOR LOGIN [workcube_devcatalyst_retail] WITH DEFAULT_SCHEMA=[workcube_devcatalyst_retail]
+    ALTER ROLE [db_owner] ADD MEMBER [workcube_devcatalyst_retail]
+GO
+/****** Object:  UserDefinedFunction [workcube_devcatalyst_retail].[fnc_get_gunluk_satis_stok]    Script Date: 4.11.2020 12:51:25 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE FUNCTION [workcube_devcatalyst_retail].[fnc_get_gunluk_satis_stok]
+(
+@sno int,
+@dept_id int,
+@date1 datetime,
+@yil nvarchar(4)
+)
+RETURNS float
+AS
+BEGIN
+
+	DECLARE @SQL NVARCHAR(max), @ParmDefinition NVARCHAR(1024)
+	DECLARE @ortalama float = 0
+	SET @SQL =       N'	SELECT
+        @ortalama_c = ISNULL(SUM(STOCK_OUT),0)
+        FROM
+			workcube_devcatalyst_' + @yil + '_1.STOCKS_ROW
+        WHERE
+            STOCK_ID = @stock_id AND 
+            PROCESS_DATE= @process_date AND 
+            PROCESS_TYPE IN (67,52,70) AND
+            STORE = @store'
+            
+	SET @ParmDefinition = N'@stock_id int,
+						@process_date datetime,
+                        @store int,
+                        @ortalama_c float OUTPUT
+                        '
+	EXECUTE sp_executeSQL      -- Dynamic T-SQL
+            @SQL,
+            @ParmDefinition,
+            @stock_id = @sno,
+            @store = @dept_id,
+            @process_date = @date1,
+            @ortalama_c = @ortalama OUTPUT
+return(@ortalama)
+END
+GO
+/****** Object:  UserDefinedFunction [workcube_devcatalyst_retail].[fnc_get_ortalama_satis_stok]    Script Date: 4.11.2020 12:51:25 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE FUNCTION [workcube_devcatalyst_retail].[fnc_get_ortalama_satis_stok]
+(
+@stock_id_list  NVARCHAR(MAX),
+@store int,
+@date1 datetime,
+@date2 datetime
+)
+RETURNS float
+AS
+BEGIN
+  DECLARE @Result float
+  
+  IF @store <> 13
+    BEGIN
+		SET @Result = (SELECT ISNULL(fnc_get_ortalama_satis_stok_depo(@stock_id_list,@store,@date1,@date2),0) AS ORAN)
+	END
+	ELSE
+		SET @Result = 
+			(
+				SELECT 
+					SUM(
+						ISNULL(fnc_get_ortalama_satis_stok_depo(@stock_id_list,1,@date1,@date2),0) +
+						ISNULL(fnc_get_ortalama_satis_stok_depo(@stock_id_list,3,@date1,@date2),0) +
+						ISNULL(fnc_get_ortalama_satis_stok_depo(@stock_id_list,4,@date1,@date2),0) +
+						ISNULL(fnc_get_ortalama_satis_stok_depo(@stock_id_list,6,@date1,@date2),0) +
+						ISNULL(fnc_get_ortalama_satis_stok_depo(@stock_id_list,7,@date1,@date2),0) +
+						ISNULL(fnc_get_ortalama_satis_stok_depo(@stock_id_list,9,@date1,@date2),0) +
+						ISNULL(fnc_get_ortalama_satis_stok_depo(@stock_id_list,10,@date1,@date2),0) +
+						ISNULL(fnc_get_ortalama_satis_stok_depo(@stock_id_list,11,@date1,@date2),0) +
+						ISNULL(fnc_get_ortalama_satis_stok_depo(@stock_id_list,12,@date1,@date2),0) +
+						ISNULL(fnc_get_ortalama_satis_stok_depo(@stock_id_list,21,@date1,@date2),0) +
+						ISNULL(fnc_get_ortalama_satis_stok_depo(@stock_id_list,22,@date1,@date2),0)
+						) 
+						AS ORAN)
+		
+RETURN(@Result)
+END
+GO
+/****** Object:  UserDefinedFunction [workcube_devcatalyst_retail].[fnc_get_ortalama_satis_stok_1742016]    Script Date: 4.11.2020 12:51:25 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE FUNCTION [workcube_devcatalyst_retail].[fnc_get_ortalama_satis_stok_1742016]
+(
+@sno int,
+@dept_id int,
+@date1 datetime,
+@date2 datetime
+)
+RETURNS float
+AS
+BEGIN
+  DECLARE @Result float
+  SET @Result = ( 
+				SELECT
+					SUM(ORTALAMA_1+ORTALAMA_3+ORTALAMA_4+ORTALAMA_6+ORTALAMA_7+ORTALAMA_9+ORTALAMA_10+ORTALAMA_11+ORTALAMA_12+ORTALAMA_21+ORTALAMA_22)
+				FROM
+					(
+					SELECT
+						CASE WHEN TOPLAM_GUN_1 > 0 THEN ROUND(TOPLAM_SATIS_1/TOPLAM_GUN_1,2) ELSE 0 END AS ORTALAMA_1,
+						CASE WHEN TOPLAM_GUN_3 > 0 THEN ROUND(TOPLAM_SATIS_3/TOPLAM_GUN_3,2) ELSE 0 END AS ORTALAMA_3,
+						CASE WHEN TOPLAM_GUN_4 > 0 THEN ROUND(TOPLAM_SATIS_4/TOPLAM_GUN_4,2) ELSE 0 END AS ORTALAMA_4,
+						CASE WHEN TOPLAM_GUN_6 > 0 THEN ROUND(TOPLAM_SATIS_6/TOPLAM_GUN_6,2) ELSE 0 END AS ORTALAMA_6,
+						CASE WHEN TOPLAM_GUN_7 > 0 THEN ROUND(TOPLAM_SATIS_7/TOPLAM_GUN_7,2) ELSE 0 END AS ORTALAMA_7,
+						CASE WHEN TOPLAM_GUN_9 > 0 THEN ROUND(TOPLAM_SATIS_9/TOPLAM_GUN_9,2) ELSE 0 END AS ORTALAMA_9,
+						CASE WHEN TOPLAM_GUN_10 > 0 THEN ROUND(TOPLAM_SATIS_10/TOPLAM_GUN_10,2) ELSE 0 END AS ORTALAMA_10,
+						CASE WHEN TOPLAM_GUN_11 > 0 THEN ROUND(TOPLAM_SATIS_11/TOPLAM_GUN_11,2) ELSE 0 END AS ORTALAMA_11,
+						CASE WHEN TOPLAM_GUN_12 > 0 THEN ROUND(TOPLAM_SATIS_12/TOPLAM_GUN_12,2) ELSE 0 END AS ORTALAMA_12,
+						CASE WHEN TOPLAM_GUN_21 > 0 THEN ROUND(TOPLAM_SATIS_21/TOPLAM_GUN_21,2) ELSE 0 END AS ORTALAMA_21,
+						CASE WHEN TOPLAM_GUN_22 > 0 THEN ROUND(TOPLAM_SATIS_22/TOPLAM_GUN_22,2) ELSE 0 END AS ORTALAMA_22
+					FROM
+						(
+						SELECT
+							CASE WHEN (@dept_id = 13 OR @dept_id = 1) THEN SUM(SALES_COUNT_1) ELSE 0 END AS TOPLAM_SATIS_1,
+							SUM(CASE WHEN ((@dept_id = 13 OR @dept_id = 1)) AND STOCK_APPLY_1 = 1 THEN 1 ELSE 0 END) AS TOPLAM_GUN_1,
+							
+							CASE WHEN (@dept_id = 13 OR @dept_id = 3) THEN SUM(SALES_COUNT_3) ELSE 0 END AS TOPLAM_SATIS_3,
+							SUM(CASE WHEN ((@dept_id = 13 OR @dept_id = 3)) AND STOCK_APPLY_3 = 1 THEN 1 ELSE 0 END) AS TOPLAM_GUN_3,
+							
+							CASE WHEN (@dept_id = 13 OR @dept_id = 4) THEN SUM(SALES_COUNT_4) ELSE 0 END AS TOPLAM_SATIS_4,
+							SUM(CASE WHEN ((@dept_id = 13 OR @dept_id = 4)) AND STOCK_APPLY_4 = 1 THEN 1 ELSE 0 END) AS TOPLAM_GUN_4,
+							
+							CASE WHEN (@dept_id = 13 OR @dept_id = 6) THEN SUM(SALES_COUNT_6) ELSE 0 END AS TOPLAM_SATIS_6,
+							SUM(CASE WHEN ((@dept_id = 13 OR @dept_id = 6)) AND STOCK_APPLY_6 = 1 THEN 1 ELSE 0 END) AS TOPLAM_GUN_6,
+							
+							CASE WHEN (@dept_id = 13 OR @dept_id = 7) THEN SUM(SALES_COUNT_7) ELSE 0 END AS TOPLAM_SATIS_7,
+							SUM(CASE WHEN ((@dept_id = 13 OR @dept_id = 7)) AND STOCK_APPLY_7 = 1 THEN 1 ELSE 0 END) AS TOPLAM_GUN_7,
+							
+							CASE WHEN (@dept_id = 13 OR @dept_id = 9) THEN SUM(SALES_COUNT_9) ELSE 0 END AS TOPLAM_SATIS_9,
+							SUM(CASE WHEN ((@dept_id = 13 OR @dept_id = 9)) AND STOCK_APPLY_9 = 1 THEN 1 ELSE 0 END) AS TOPLAM_GUN_9,
+							
+							CASE WHEN (@dept_id = 13 OR @dept_id = 10) THEN SUM(SALES_COUNT_10) ELSE 0 END AS TOPLAM_SATIS_10,
+							SUM(CASE WHEN ((@dept_id = 13 OR @dept_id = 10)) AND STOCK_APPLY_10 = 1 THEN 1 ELSE 0 END) AS TOPLAM_GUN_10,
+							
+							CASE WHEN (@dept_id = 13 OR @dept_id = 11) THEN SUM(SALES_COUNT_11) ELSE 0 END AS TOPLAM_SATIS_11,
+							SUM(CASE WHEN ((@dept_id = 13 OR @dept_id = 11)) AND STOCK_APPLY_11 = 1 THEN 1 ELSE 0 END) AS TOPLAM_GUN_11,
+							
+							CASE WHEN (@dept_id = 13 OR @dept_id = 12) THEN SUM(SALES_COUNT_12) ELSE 0 END AS TOPLAM_SATIS_12,
+							SUM(CASE WHEN ((@dept_id = 13 OR @dept_id = 12)) AND STOCK_APPLY_12 = 1 THEN 1 ELSE 0 END) AS TOPLAM_GUN_12,
+							
+							CASE WHEN (@dept_id = 13 OR @dept_id = 21) THEN SUM(SALES_COUNT_21) ELSE 0 END AS TOPLAM_SATIS_21,
+							SUM(CASE WHEN ((@dept_id = 13 OR @dept_id = 21)) AND STOCK_APPLY_21 = 1 THEN 1 ELSE 0 END) AS TOPLAM_GUN_21,
+							
+							CASE WHEN (@dept_id = 13 OR @dept_id = 22) THEN SUM(SALES_COUNT_22) ELSE 0 END AS TOPLAM_SATIS_22,
+							SUM(CASE WHEN ((@dept_id = 13 OR @dept_id = 22)) AND STOCK_APPLY_22 = 1 THEN 1 ELSE 0 END) AS TOPLAM_GUN_22							
+						FROM
+							(
+								SELECT
+									S_TARIH TARIH,
+									*
+								FROM
+									DAILY_ACTIONS
+								WHERE
+									STOCK_ID = @sno AND
+									S_TARIH BETWEEN @date1 AND  @date2
+							 ) TSON1
+					   ) TSON
+				) T1 
+			)
+RETURN(@Result)
+END
+GO
+/****** Object:  UserDefinedFunction [workcube_devcatalyst_retail].[fnc_get_ortalama_satis_stok_all]    Script Date: 4.11.2020 12:51:25 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE FUNCTION [workcube_devcatalyst_retail].[fnc_get_ortalama_satis_stok_all]
+(
+@sno int,
+@date1 datetime,
+@date2 datetime
+)
+RETURNS float 
+AS
+BEGIN
+  DECLARE @Result float
+  SET @Result = 	(
+			SELECT
+				ROUND(SUM(GUNLUK_SATIS) / COUNT(TARIH),2) AS ORT
+			FROM
+				(
+					SELECT
+						PPD.TARIH,
+						ISNULL(DAILY_STOCK,0) AS GUNLUK_STOK,
+						ISNULL(DAILY_SALES,0) GUNLUK_SATIS
+					FROM
+						PRODUCT_PRICE_DATES PPD,
+						PRODUCT_ACTIONS_DAILY_NOTE PADN
+					WHERE
+						PADN.STOCK_ID = @sno AND
+						PADN.YIL = PPD.YIL AND 
+						PADN.AY = PPD.AY AND 
+						PADN.GUN = PPD.GUN AND
+						PPD.TARIH BETWEEN @date1 AND @date2
+				
+			) A
+		WHERE
+			GUNLUK_STOK <> 0 OR GUNLUK_SATIS > 0
+	) 
+RETURN(@Result)
+END
+GO
+/****** Object:  UserDefinedFunction [workcube_devcatalyst_retail].[fnc_get_ortalama_satis_stok_depo]    Script Date: 4.11.2020 12:51:25 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE FUNCTION [workcube_devcatalyst_retail].[fnc_get_ortalama_satis_stok_depo]
+(
+@stock_id_list  NVARCHAR(MAX),
+@store int,
+@date1 datetime,
+@date2 datetime
+)
+RETURNS float
+AS
+BEGIN
+  DECLARE @Result float
+  SET @Result = ( 
+				SELECT TOP 1
+					ROUND(workcube_devcatalyst.IS_ZERO(SUM(SATIS),0)/ workcube_devcatalyst.IS_ZERO(SUM(GECERLI_GUN),1),2) AS ORAN
+				FROM
+				(
+					SELECT T1.*,
+							CASE WHEN T1.StokMiktarı > 0 THEN  1 
+								 WHEN T1.SATIS > 0 THEN 1
+								 WHEN T2.StokMiktarı + T2.SATIS = T1.StokMiktarı AND (T1.StokMiktarı <= 0 ) THEN 1 else 0 end as GECERLI_GUN 
+					FROM
+					(
+					SELECT D.FULLDATE,xxx.STOCK_ID,xxx.StokMiktarı, 
+					case when D.FULLDATE = xxx.TARIH THEN xxx.SATIS ELSE 0 END AS SATIS
+					FROM DimDate D CROSS  JOIN workcube_devcatalyst.fnSplit(@stock_id_list,',') AS TB1
+					outer apply
+					(
+						select 
+							TOP 1 *
+						from
+							STOK_GUNLUK_DURUM  t
+						where
+							t.STOCK_ID = TB1.item  AND t.STORE = @STORE AND D.FullDate >= t.TARIH
+						order by 
+							t.TARIH DESC 
+					) as xxx
+					WHERE
+						D.FULLDATE BETWEEN @DATE1 AND @DATE2
+					) AS T1
+
+					OUTER APPLY 
+
+					(
+						select 
+							TOP 1 *
+						from
+							STOK_GUNLUK_DURUM  t
+						where
+							t.STOCK_ID = T1.STOCK_ID  AND  t.STORE = @STORE AND T1.FullDate < t.TARIH AND t.SATIS > 0 
+						order by 
+							t.TARIH DESC 
+					) T2 
+				) AS LAST_TABLE
+				WHERE
+					STOCK_ID = @stock_id_list
+				GROUP BY STOCK_ID
+			)
+RETURN(@Result)
+END
+GO
+/****** Object:  UserDefinedFunction [workcube_devcatalyst_retail].[fnc_get_ortalama_satis_stok_n]    Script Date: 4.11.2020 12:51:25 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE FUNCTION [workcube_devcatalyst_retail].[fnc_get_ortalama_satis_stok_n]
+(
+@sno int,
+@dept_id int,
+@date1 datetime,
+@date2 datetime
+)
+RETURNS float
+AS
+BEGIN
+  DECLARE @Result float
+  SET @Result = ( 
+				SELECT
+					SUM(ORTALAMA_1+ORTALAMA_3+ORTALAMA_4+ORTALAMA_6+ORTALAMA_7+ORTALAMA_9+ORTALAMA_10+ORTALAMA_11+ORTALAMA_12+ORTALAMA_21+ORTALAMA_22)
+				FROM
+					(
+					SELECT
+						CASE WHEN TOPLAM_GUN_1 > 0 THEN ROUND(TOPLAM_SATIS_1/TOPLAM_GUN_1,2) ELSE 0 END AS ORTALAMA_1,
+						CASE WHEN TOPLAM_GUN_3 > 0 THEN ROUND(TOPLAM_SATIS_3/TOPLAM_GUN_3,2) ELSE 0 END AS ORTALAMA_3,
+						CASE WHEN TOPLAM_GUN_4 > 0 THEN ROUND(TOPLAM_SATIS_4/TOPLAM_GUN_4,2) ELSE 0 END AS ORTALAMA_4,
+						CASE WHEN TOPLAM_GUN_6 > 0 THEN ROUND(TOPLAM_SATIS_6/TOPLAM_GUN_6,2) ELSE 0 END AS ORTALAMA_6,
+						CASE WHEN TOPLAM_GUN_7 > 0 THEN ROUND(TOPLAM_SATIS_7/TOPLAM_GUN_7,2) ELSE 0 END AS ORTALAMA_7,
+						CASE WHEN TOPLAM_GUN_9 > 0 THEN ROUND(TOPLAM_SATIS_9/TOPLAM_GUN_9,2) ELSE 0 END AS ORTALAMA_9,
+						CASE WHEN TOPLAM_GUN_10 > 0 THEN ROUND(TOPLAM_SATIS_10/TOPLAM_GUN_10,2) ELSE 0 END AS ORTALAMA_10,
+						CASE WHEN TOPLAM_GUN_11 > 0 THEN ROUND(TOPLAM_SATIS_11/TOPLAM_GUN_11,2) ELSE 0 END AS ORTALAMA_11,
+						CASE WHEN TOPLAM_GUN_12 > 0 THEN ROUND(TOPLAM_SATIS_12/TOPLAM_GUN_12,2) ELSE 0 END AS ORTALAMA_12,
+						CASE WHEN TOPLAM_GUN_21 > 0 THEN ROUND(TOPLAM_SATIS_21/TOPLAM_GUN_21,2) ELSE 0 END AS ORTALAMA_21,
+						CASE WHEN TOPLAM_GUN_22 > 0 THEN ROUND(TOPLAM_SATIS_22/TOPLAM_GUN_22,2) ELSE 0 END AS ORTALAMA_22
+					FROM
+						(
+						SELECT
+							CASE WHEN (@dept_id = 13 OR @dept_id = 1) THEN SUM(SALES_COUNT_1) ELSE 0 END AS TOPLAM_SATIS_1,
+							SUM(CASE WHEN ((@dept_id = 13 OR @dept_id = 1)) AND STOCK_APPLY_1 = 1 THEN 1 ELSE 0 END) AS TOPLAM_GUN_1,
+							
+							CASE WHEN (@dept_id = 13 OR @dept_id = 3) THEN SUM(SALES_COUNT_3) ELSE 0 END AS TOPLAM_SATIS_3,
+							SUM(CASE WHEN ((@dept_id = 13 OR @dept_id = 3)) AND STOCK_APPLY_3 = 1 THEN 1 ELSE 0 END) AS TOPLAM_GUN_3,
+							
+							CASE WHEN (@dept_id = 13 OR @dept_id = 4) THEN SUM(SALES_COUNT_4) ELSE 0 END AS TOPLAM_SATIS_4,
+							SUM(CASE WHEN ((@dept_id = 13 OR @dept_id = 4)) AND STOCK_APPLY_4 = 1 THEN 1 ELSE 0 END) AS TOPLAM_GUN_4,
+							
+							CASE WHEN (@dept_id = 13 OR @dept_id = 6) THEN SUM(SALES_COUNT_6) ELSE 0 END AS TOPLAM_SATIS_6,
+							SUM(CASE WHEN ((@dept_id = 13 OR @dept_id = 6)) AND STOCK_APPLY_6 = 1 THEN 1 ELSE 0 END) AS TOPLAM_GUN_6,
+							
+							CASE WHEN (@dept_id = 13 OR @dept_id = 7) THEN SUM(SALES_COUNT_7) ELSE 0 END AS TOPLAM_SATIS_7,
+							SUM(CASE WHEN ((@dept_id = 13 OR @dept_id = 7)) AND STOCK_APPLY_7 = 1 THEN 1 ELSE 0 END) AS TOPLAM_GUN_7,
+							
+							CASE WHEN (@dept_id = 13 OR @dept_id = 9) THEN SUM(SALES_COUNT_9) ELSE 0 END AS TOPLAM_SATIS_9,
+							SUM(CASE WHEN ((@dept_id = 13 OR @dept_id = 9)) AND STOCK_APPLY_9 = 1 THEN 1 ELSE 0 END) AS TOPLAM_GUN_9,
+							
+							CASE WHEN (@dept_id = 13 OR @dept_id = 10) THEN SUM(SALES_COUNT_10) ELSE 0 END AS TOPLAM_SATIS_10,
+							SUM(CASE WHEN ((@dept_id = 13 OR @dept_id = 10)) AND STOCK_APPLY_10 = 1 THEN 1 ELSE 0 END) AS TOPLAM_GUN_10,
+							
+							CASE WHEN (@dept_id = 13 OR @dept_id = 11) THEN SUM(SALES_COUNT_11) ELSE 0 END AS TOPLAM_SATIS_11,
+							SUM(CASE WHEN ((@dept_id = 13 OR @dept_id = 11)) AND STOCK_APPLY_11 = 1 THEN 1 ELSE 0 END) AS TOPLAM_GUN_11,
+							
+							CASE WHEN (@dept_id = 13 OR @dept_id = 12) THEN SUM(SALES_COUNT_12) ELSE 0 END AS TOPLAM_SATIS_12,
+							SUM(CASE WHEN ((@dept_id = 13 OR @dept_id = 12)) AND STOCK_APPLY_12 = 1 THEN 1 ELSE 0 END) AS TOPLAM_GUN_12,
+							
+							CASE WHEN (@dept_id = 13 OR @dept_id = 21) THEN SUM(SALES_COUNT_21) ELSE 0 END AS TOPLAM_SATIS_21,
+							SUM(CASE WHEN ((@dept_id = 13 OR @dept_id = 21)) AND STOCK_APPLY_21 = 1 THEN 1 ELSE 0 END) AS TOPLAM_GUN_21,
+							
+							CASE WHEN (@dept_id = 13 OR @dept_id = 22) THEN SUM(SALES_COUNT_22) ELSE 0 END AS TOPLAM_SATIS_22,
+							SUM(CASE WHEN ((@dept_id = 13 OR @dept_id = 22)) AND STOCK_APPLY_22 = 1 THEN 1 ELSE 0 END) AS TOPLAM_GUN_22							
+						FROM
+							(
+								SELECT
+									S_TARIH TARIH,
+									*
+								FROM
+									DAILY_ACTIONS
+								WHERE
+									STOCK_ID = @sno AND
+									S_TARIH BETWEEN @date1 AND  @date2
+							 ) TSON1
+					   ) TSON
+				) T1 
+			)
+RETURN(@Result)
+END
+GO
+/****** Object:  UserDefinedFunction [workcube_devcatalyst_retail].[fnc_get_rival_avg]    Script Date: 4.11.2020 12:51:25 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE FUNCTION [workcube_devcatalyst_retail].[fnc_get_rival_avg]
+(
+@product_id int
+)
+RETURNS float
+AS
+BEGIN
+  DECLARE @Result float
+  SET @Result =   (
+          SELECT
+   				AVG(P) AS PRICE
+		   FROM
+   				(
+					SELECT 
+						ISNULL(PRICE_RIVAL.PRICE,0) + ISNULL(PRICE_RIVAL.PRICE_2,0) AS P
+					FROM 
+						PRICE_RIVAL 
+					WHERE
+						PRICE_RIVAL.PRODUCT_ID = @product_id AND 
+						PRICE_RIVAL.STARTDATE <= GETDATE() AND PRICE_RIVAL.FINISHDATE >= GETDATE()
+			   ) AS RAKIP_FIYATLAR
+      )
+RETURN(@Result)
+END
+GO
+/****** Object:  UserDefinedFunction [workcube_devcatalyst_retail].[fnSplit]    Script Date: 4.11.2020 12:51:25 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE FUNCTION [workcube_devcatalyst_retail].[fnSplit](
+        @sInputList VARCHAR(8000) -- List of delimited items
+      , @sDelimiter VARCHAR(8000) = ',' -- delimiter that separates items
+    ) RETURNS @List TABLE (item VARCHAR(8000))
+    
+    BEGIN
+    DECLARE @sItem VARCHAR(8000)
+    WHILE CHARINDEX(@sDelimiter,@sInputList,0) <> 0
+     BEGIN
+     SELECT
+      @sItem=RTRIM(LTRIM(SUBSTRING(@sInputList,1,CHARINDEX(@sDelimiter,@sInputList,0)-1))),
+      @sInputList=RTRIM(LTRIM(SUBSTRING(@sInputList,CHARINDEX(@sDelimiter,@sInputList,0)+LEN(@sDelimiter),LEN(@sInputList))))
+    
+     IF LEN(@sItem) > 0
+      INSERT INTO @List SELECT @sItem
+     END
+    
+    IF LEN(@sInputList) > 0
+     INSERT INTO @List SELECT @sInputList -- Put the last item in
+    RETURN
+    END
+GO
+/****** Object:  UserDefinedFunction [workcube_devcatalyst_retail].[get_product_rate]    Script Date: 4.11.2020 12:51:25 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE FUNCTION [workcube_devcatalyst_retail].[get_product_rate]
+(
+@pid int,
+@date1 datetime,
+@company_id int,
+@project_id int,
+@rate_period int
+)
+RETURNS nvarchar(50)
+AS
+BEGIN
+ DECLARE @Result nvarchar(50)
+  SET @Result = (
+				SELECT
+					CASE 
+						WHEN URETICI_CAT_RATE <> '0'
+							THEN URETICI_CAT_RATE
+						WHEN URETICI_RATE <> '0'
+							THEN URETICI_RATE
+						WHEN DIRECT_RATE <> '0'
+							THEN DIRECT_RATE
+						WHEN URETICISIZ_CAT_RATE <> '0'
+							THEN URETICISIZ_CAT_RATE
+						ELSE
+							'0' END AS PRODUCT_REVENUE_RATE
+				FROM	
+				(	
+					SELECT
+						ISNULL((
+							SELECT TOP 1
+								CAST(REVENUE_RATE AS FLOAT)
+							FROM
+								PROCESS_ROWS
+							WHERE
+								PERIOD = @rate_period AND
+								PROCESS_STARTDATE <= @date1 AND
+								PROCESS_FINISHDATE >= @date1 AND
+								COMPANY_ID = @company_id AND
+								ISNULL(PROJECT_ID,0) =  @project_id AND
+								REVENUE_RATE IS NOT NULL AND
+								REVENUE_RATE <> '' AND
+								URETICI_ID IS NULL AND
+								ROW_ID NOT IN (SELECT ROW_ID FROM PROCESS_ROWS_CATS)
+						),'0') AS DIRECT_RATE,
+						ISNULL((
+							SELECT TOP 1
+								CAST(REVENUE_RATE AS FLOAT)
+							FROM
+								PROCESS_ROWS
+							WHERE
+								PERIOD = @rate_period AND
+								PROCESS_STARTDATE <= @date1 AND
+								PROCESS_FINISHDATE >= @date1 AND
+								COMPANY_ID = @company_id AND
+								ISNULL(PROJECT_ID,0) =  @project_id AND
+								URETICI_ID =  T1.SUB_TYPE_ID AND
+								REVENUE_RATE IS NOT NULL AND
+								REVENUE_RATE <> '' AND
+								ROW_ID NOT IN (SELECT ROW_ID FROM PROCESS_ROWS_CATS)
+						),0) AS URETICI_RATE,
+						ISNULL((
+							SELECT TOP 1
+								CAST(PR.REVENUE_RATE AS FLOAT)
+							FROM
+								PROCESS_ROWS PR,
+								PROCESS_ROWS_CATS PRC
+							WHERE
+								PERIOD = @rate_period AND
+								PROCESS_STARTDATE <= @date1 AND
+								PROCESS_FINISHDATE >= @date1 AND
+								COMPANY_ID = @company_id AND
+								ISNULL(PROJECT_ID,0) =  @project_id AND
+								URETICI_ID =  T1.SUB_TYPE_ID AND
+								REVENUE_RATE IS NOT NULL AND
+								REVENUE_RATE <> '' AND
+								PR.ROW_ID = PRC.ROW_ID AND
+								T1.PRODUCT_CODE LIKE PRC.HIERARCHY + '.%'
+						),'0') AS URETICI_CAT_RATE,
+						ISNULL((
+							SELECT TOP 1
+								CAST(PR.REVENUE_RATE AS FLOAT)
+							FROM
+								PROCESS_ROWS PR,
+								PROCESS_ROWS_CATS PRC
+							WHERE
+								PERIOD = @rate_period AND
+								PROCESS_STARTDATE <= @date1 AND
+								PROCESS_FINISHDATE >= @date1 AND
+								COMPANY_ID = @company_id AND
+								ISNULL(PROJECT_ID,0) =  @project_id AND
+								URETICI_ID IS NULL AND
+								REVENUE_RATE IS NOT NULL AND
+								REVENUE_RATE <> '' AND
+								PR.ROW_ID = PRC.ROW_ID AND
+								T1.PRODUCT_CODE LIKE PRC.HIERARCHY + '.%'
+						),'0') AS URETICISIZ_CAT_RATE
+					FROM
+						(
+						SELECT
+							ISNULL((SELECT TOP 1 ETR.SUB_TYPE_ID FROM EXTRA_PRODUCT_TYPES_ROWS ETR WHERE P.PRODUCT_ID = ETR.PRODUCT_ID AND ETR.TYPE_ID = 4),0) AS SUB_TYPE_ID,
+							P.PRODUCT_CODE,
+							P.PRODUCT_NAME,
+							P.PROJECT_ID,
+							P.COMPANY_ID
+						FROM
+							workcube_devcatalyst_product.PRODUCT P
+						WHERE
+							P.PRODUCT_ID = @pid
+						) T1
+				) T2				
+	) 
+RETURN(@Result)
+END
+GO
+/****** Object:  UserDefinedFunction [workcube_devcatalyst_retail].[get_product_rate_iade]    Script Date: 4.11.2020 12:51:25 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE FUNCTION [workcube_devcatalyst_retail].[get_product_rate_iade]
+(
+@pid int,
+@date1 datetime,
+@company_id int,
+@project_id int,
+@rate_period int
+)
+RETURNS nvarchar(50)
+AS
+BEGIN
+ DECLARE @Result nvarchar(50)
+  SET @Result = (
+				SELECT
+					CASE 
+						WHEN URETICI_CAT_RATE <> -1
+							THEN URETICI_CAT_RATE
+						WHEN URETICI_RATE <> -1
+							THEN URETICI_RATE
+						WHEN DIRECT_RATE <> -1
+							THEN DIRECT_RATE
+						WHEN URETICISIZ_CAT_RATE <> -1
+							THEN URETICISIZ_CAT_RATE
+						ELSE
+							1 END AS PRODUCT_REVENUE_RATE
+				FROM	
+				(	
+					SELECT
+						ISNULL((
+							SELECT TOP 1
+								CASE WHEN ISNULL(STPT.IS_IADE,0) = 1 THEN 1 ELSE 0 END AS IADE_DAHIL
+							FROM
+								SEARCH_TABLE_PROCESS_TYPES STPT,
+								PROCESS_ROWS PR
+							WHERE
+								STPT.TYPE_ID = PR.PROCESS_TYPE AND
+								PERIOD = @rate_period AND
+								PROCESS_STARTDATE <= @date1 AND
+								PROCESS_FINISHDATE >= @date1 AND
+								COMPANY_ID = @company_id AND
+								ISNULL(PROJECT_ID,0) =  @project_id AND
+								REVENUE_RATE IS NOT NULL AND
+								REVENUE_RATE <> '' AND
+								URETICI_ID IS NULL AND
+								ROW_ID NOT IN (SELECT ROW_ID FROM PROCESS_ROWS_CATS)
+						),-1) AS DIRECT_RATE,
+						ISNULL((
+							SELECT TOP 1
+								CASE WHEN ISNULL(STPT.IS_IADE,0) = 1 THEN 1 ELSE 0 END AS IADE_DAHIL
+							FROM
+								SEARCH_TABLE_PROCESS_TYPES STPT,
+								PROCESS_ROWS PR
+							WHERE
+								STPT.TYPE_ID = PR.PROCESS_TYPE AND
+								PERIOD = @rate_period AND
+								PROCESS_STARTDATE <= @date1 AND
+								PROCESS_FINISHDATE >= @date1 AND
+								COMPANY_ID = @company_id AND
+								ISNULL(PROJECT_ID,0) =  @project_id AND
+								URETICI_ID =  T1.SUB_TYPE_ID AND
+								REVENUE_RATE IS NOT NULL AND
+								REVENUE_RATE <> '' AND
+								ROW_ID NOT IN (SELECT ROW_ID FROM PROCESS_ROWS_CATS)
+						),-1) AS URETICI_RATE,
+						ISNULL((
+							SELECT TOP 1
+								CASE WHEN ISNULL(STPT.IS_IADE,0) = 1 THEN 1 ELSE 0 END AS IADE_DAHIL
+							FROM
+								SEARCH_TABLE_PROCESS_TYPES STPT,
+								PROCESS_ROWS PR,
+								PROCESS_ROWS_CATS PRC
+							WHERE
+								STPT.TYPE_ID = PR.PROCESS_TYPE AND
+								PERIOD = @rate_period AND
+								PROCESS_STARTDATE <= @date1 AND
+								PROCESS_FINISHDATE >= @date1 AND
+								COMPANY_ID = @company_id AND
+								ISNULL(PROJECT_ID,0) =  @project_id AND
+								URETICI_ID =  T1.SUB_TYPE_ID AND
+								REVENUE_RATE IS NOT NULL AND
+								REVENUE_RATE <> '' AND
+								PR.ROW_ID = PRC.ROW_ID AND
+								T1.PRODUCT_CODE LIKE PRC.HIERARCHY + '.%'
+						),-1) AS URETICI_CAT_RATE,
+						ISNULL((
+							SELECT TOP 1
+								CASE WHEN ISNULL(STPT.IS_IADE,0) = 1 THEN 1 ELSE 0 END AS IADE_DAHIL
+							FROM
+								SEARCH_TABLE_PROCESS_TYPES STPT,
+								PROCESS_ROWS PR,
+								PROCESS_ROWS_CATS PRC
+							WHERE
+								STPT.TYPE_ID = PR.PROCESS_TYPE AND
+								PERIOD = @rate_period AND
+								PROCESS_STARTDATE <= @date1 AND
+								PROCESS_FINISHDATE >= @date1 AND
+								COMPANY_ID = @company_id AND
+								ISNULL(PROJECT_ID,0) =  @project_id AND
+								URETICI_ID IS NULL AND
+								REVENUE_RATE IS NOT NULL AND
+								REVENUE_RATE <> '' AND
+								PR.ROW_ID = PRC.ROW_ID AND
+								T1.PRODUCT_CODE LIKE PRC.HIERARCHY + '.%'
+						),-1) AS URETICISIZ_CAT_RATE
+					FROM
+						(
+						SELECT
+							ISNULL((SELECT TOP 1 ETR.SUB_TYPE_ID FROM EXTRA_PRODUCT_TYPES_ROWS ETR WHERE P.PRODUCT_ID = ETR.PRODUCT_ID AND ETR.TYPE_ID = 4),0) AS SUB_TYPE_ID,
+							P.PRODUCT_CODE,
+							P.PRODUCT_NAME,
+							P.PROJECT_ID,
+							P.COMPANY_ID
+						FROM
+							workcube_devcatalyst_product.PRODUCT P
+						WHERE
+							P.PRODUCT_ID = @pid
+						) T1
+				) T2				
+	) 
+RETURN(@Result)
+END
+GO
+/****** Object:  UserDefinedFunction [workcube_devcatalyst_retail].[get_product_rate_period]    Script Date: 4.11.2020 12:51:25 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE FUNCTION [workcube_devcatalyst_retail].[get_product_rate_period]
+(
+@pid int,
+@date1 datetime,
+@company_id int,
+@project_id int
+)
+RETURNS nvarchar(50)
+AS
+BEGIN
+ DECLARE @Result nvarchar(50)
+  SET @Result = (
+				SELECT
+					CASE 
+						WHEN URETICI_CAT_RATE <> '0'
+							THEN URETICI_CAT_RATE
+						WHEN URETICI_RATE <> '0'
+							THEN URETICI_RATE
+						WHEN DIRECT_RATE <> '0'
+							THEN DIRECT_RATE
+						WHEN URETICISIZ_CAT_RATE <> '0'
+							THEN URETICISIZ_CAT_RATE
+						ELSE
+							'0' END AS PRODUCT_REVENUE_RATE
+				FROM	
+				(	
+					SELECT
+						ISNULL((
+							SELECT TOP 1
+								PERIOD
+							FROM
+								PROCESS_ROWS
+							WHERE
+								PROCESS_STARTDATE <= @date1 AND
+								PROCESS_FINISHDATE >= @date1 AND
+								COMPANY_ID = @company_id AND
+								ISNULL(PROJECT_ID,0) =  @project_id AND
+								REVENUE_RATE IS NOT NULL AND
+								URETICI_ID IS NULL AND
+								ROW_ID NOT IN (SELECT ROW_ID FROM PROCESS_ROWS_CATS)
+						),'0') AS DIRECT_RATE,
+						ISNULL((
+							SELECT TOP 1
+								PERIOD
+							FROM
+								PROCESS_ROWS
+							WHERE
+								PROCESS_STARTDATE <= @date1 AND
+								PROCESS_FINISHDATE >= @date1 AND
+								COMPANY_ID = @company_id AND
+								ISNULL(PROJECT_ID,0) =  @project_id AND
+								URETICI_ID =  T1.SUB_TYPE_ID AND
+								REVENUE_RATE IS NOT NULL AND
+								ROW_ID NOT IN (SELECT ROW_ID FROM PROCESS_ROWS_CATS)
+						),0) AS URETICI_RATE,
+						ISNULL((
+							SELECT TOP 1
+								PR.PERIOD
+							FROM
+								PROCESS_ROWS PR,
+								PROCESS_ROWS_CATS PRC
+							WHERE
+								PROCESS_STARTDATE <= @date1 AND
+								PROCESS_FINISHDATE >= @date1 AND
+								COMPANY_ID = @company_id AND
+								ISNULL(PROJECT_ID,0) =  @project_id AND
+								URETICI_ID =  T1.SUB_TYPE_ID AND
+								REVENUE_RATE IS NOT NULL AND
+								PR.ROW_ID = PRC.ROW_ID AND
+								T1.PRODUCT_CODE LIKE PRC.HIERARCHY + '.%'
+						),'0') AS URETICI_CAT_RATE,
+						ISNULL((
+							SELECT TOP 1
+								PR.PERIOD
+							FROM
+								PROCESS_ROWS PR,
+								PROCESS_ROWS_CATS PRC
+							WHERE
+								PROCESS_STARTDATE <= @date1 AND
+								PROCESS_FINISHDATE >= @date1 AND
+								COMPANY_ID = @company_id AND
+								ISNULL(PROJECT_ID,0) =  @project_id AND
+								URETICI_ID IS NULL AND
+								REVENUE_RATE IS NOT NULL AND
+								REVENUE_RATE <> '' AND
+								PR.ROW_ID = PRC.ROW_ID AND
+								T1.PRODUCT_CODE LIKE PRC.HIERARCHY + '.%'
+						),'0') AS URETICISIZ_CAT_RATE
+					FROM
+						(
+						SELECT
+							ISNULL((SELECT TOP 1 ETR.SUB_TYPE_ID FROM EXTRA_PRODUCT_TYPES_ROWS ETR WHERE P.PRODUCT_ID = ETR.PRODUCT_ID AND ETR.TYPE_ID = 4),0) AS SUB_TYPE_ID,
+							P.PRODUCT_CODE,
+							P.PRODUCT_NAME,
+							P.PROJECT_ID,
+							P.COMPANY_ID
+						FROM
+							workcube_devcatalyst_product.PRODUCT P
+						WHERE
+							P.PRODUCT_ID = @pid
+						) T1
+				) T2				
+	) 
+RETURN(@Result)
+END
+GO
+/****** Object:  UserDefinedFunction [workcube_devcatalyst_retail].[uf_listgetat]    Script Date: 4.11.2020 12:51:25 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE FUNCTION [workcube_devcatalyst_retail].[uf_listgetat] (
+    @list varchar(2000), @pos smallint, @delimiter char(1)
+)
+RETURNS varchar(500) 
+
+AS
+BEGIN 
+    DECLARE @listitem varchar(500), @cpos smallint, @loop smallint; 
+    SET @listitem = NULL; 
+    SET @list = LTRIM(RTRIM(@list))+ @delimiter; 
+    SET @cpos = CHARINDEX(@delimiter,@list, 1); 
+    SET @loop = 0; 
+    IF LEN(REPLACE(@list,@delimiter, '')) > 0 -- we have a list of some length
+    BEGIN
+        WHILE @cpos > 0
+        BEGIN
+            SET @listitem = LTRIM(RTRIM(LEFT(@list, @cpos - 1))) 
+            SET @loop = @loop + 1
+            IF @loop = @pos RETURN @listitem  
+            SET @list = RIGHT(@list, LEN(@list) - @cpos)
+            SET @cpos = CHARINDEX(@delimiter, @list, 1)
+        END
+    END    
+    SET @listitem = NULL -- if we got here, the position specifed exceeds the list length
+    RETURN @listitem 
+END
+GO
+/****** Object:  Table [workcube_devcatalyst_retail].[__SEARCH_TABLES_LAYOUTS]    Script Date: 4.11.2020 12:51:25 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [workcube_devcatalyst_retail].[SEARCH_TABLES_LAYOUTS](
+	[LAYOUT_ID] [int] IDENTITY(1,1) NOT NULL,
+	[LAYOUT_NAME] [nvarchar](200) NULL,
+	[HIDE_COLS] [nvarchar](max) NULL,
+	[SORT_LIST] [nvarchar](max) NULL,
+	[RECORD_DATE] [datetime] NULL,
+	[RECORD_EMP] [int] NULL,
+	[RECORD_IP] [nvarchar](50) NULL,
+	[UPDATE_DATE] [datetime] NULL,
+	[UPDATE_EMP] [int] NULL,
+	[UPDATE_IP] [nvarchar](50) NULL
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+GO
+/****** Object:  Table [workcube_devcatalyst_retail].[__SEARCH_TABLES_ROWS]    Script Date: 4.11.2020 12:51:25 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [workcube_devcatalyst_retail].[SEARCH_TABLES_ROWS](
+	[ROW_ID] [int] IDENTITY(1,1) NOT NULL,
+	[ATT_NAME] [nvarchar](300) NULL,
+	[ATT_VALUE] [nvarchar](max) NULL,
+	[TABLE_ID] [int] NULL,
+	[TABLE_CODE] [nvarchar](50) NULL,
+	[PRODUCT_ID] [int] NULL
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+GO
+/****** Object:  Table [workcube_devcatalyst_retail].[__SEARCH_TABLES_ROWS_HISTORY]    Script Date: 4.11.2020 12:51:25 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [workcube_devcatalyst_retail].[SEARCH_TABLES_ROWS_HISTORY](
+	[ROW_ID] [int] IDENTITY(1,1) NOT NULL,
+	[ATT_NAME] [nvarchar](300) NULL,
+	[ATT_VALUE] [nvarchar](max) NULL,
+	[TABLE_ID] [int] NULL,
+	[TABLE_CODE] [nvarchar](50) NULL,
+	[HISTORY_DATE] [datetime] NULL
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+GO
+/****** Object:  Table [workcube_devcatalyst_retail].[BANKNOTE_TYPES]    Script Date: 4.11.2020 12:51:25 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [workcube_devcatalyst_retail].[BANKNOTE_TYPES](
+	[TYPE_ID] [int] IDENTITY(1,1) NOT NULL,
+	[TYPE_NAME] [nvarchar](250) NULL,
+	[TYPE_MULTIPLIER] [float] NULL,
+	[RECORD_EMP] [int] NULL,
+	[RECORD_DATE] [datetime] NULL,
+	[RECORD_IP] [nvarchar](50) NULL,
+	[UPDATE_EMP] [int] NULL,
+	[UPDATE_DATE] [datetime] NULL,
+	[UPDATE_IP] [nvarchar](50) NULL
+) ON [PRIMARY]
+GO
+/****** Object:  Table [workcube_devcatalyst_retail].[BARCODE_PRINT_LIST]    Script Date: 4.11.2020 12:51:25 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [workcube_devcatalyst_retail].[BARCODE_PRINT_LIST](
+	[TABLE_ID] [int] IDENTITY(1,1) NOT NULL,
+	[BARCODE] [nvarchar](50) NULL,
+	[STOCK_ID] [int] NULL,
+	[AMOUNT] [float] NULL,
+	[RECORD_DATE] [datetime] NULL,
+	[RECORD_EMP] [int] NULL,
+	[DEPARTMENT] [int] NULL,
+	[PRINT_NO] [int] NULL
+) ON [PRIMARY]
+GO
+/****** Object:  Table [workcube_devcatalyst_retail].[BARCODE_PRINT_NO]    Script Date: 4.11.2020 12:51:25 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [workcube_devcatalyst_retail].[BARCODE_PRINT_NO](
+	[ROW_ID] [int] IDENTITY(1,1) NOT NULL,
+	[PRINT_NO] [int] NULL
+) ON [PRIMARY]
+GO
+/****** Object:  Table [workcube_devcatalyst_retail].[BRANCH_EXTRA_INFO]    Script Date: 4.11.2020 12:51:25 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [workcube_devcatalyst_retail].[BRANCH_EXTRA_INFO](
+	[ROW_ID] [int] IDENTITY(1,1) NOT NULL,
+	[BRANCH_ID] [int] NULL,
+	[LOCAL_FOLDER] [nvarchar](100) NULL
+) ON [PRIMARY]
+GO
+/****** Object:  Table [workcube_devcatalyst_retail].[BUDGET_CODES]    Script Date: 4.11.2020 12:51:25 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [workcube_devcatalyst_retail].[BUDGET_CODES](
+	[CODE_ID] [int] IDENTITY(1,1) NOT NULL,
+	[CODE] [nvarchar](50) NULL,
+	[RECORD_DATE] [datetime] NULL,
+	[RECORD_EMP] [int] NULL,
+	[UPDATE_DATE] [datetime] NULL,
+	[UPDATE_EMP] [int] NULL,
+	[CODE_NAME] [nvarchar](max) NULL
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+GO
+/****** Object:  Table [workcube_devcatalyst_retail].[CARD_TYPES]    Script Date: 4.11.2020 12:51:25 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [workcube_devcatalyst_retail].[CARD_TYPES](
+	[TYPE_ID] [int] IDENTITY(1,1) NOT NULL,
+	[TYPE_STATUS] [bit] NULL,
+	[TYPE_NAME] [nvarchar](250) NULL,
+	[TYPE_DETAIL] [nvarchar](250) NULL,
+	[RECORD_EMP] [int] NULL,
+	[RECORD_DATE] [datetime] NULL,
+	[RECORD_IP] [nvarchar](50) NULL,
+	[UPDATE_EMP] [int] NULL,
+	[UPDATE_DATE] [datetime] NULL,
+	[UPDATE_IP] [nvarchar](50) NULL
+) ON [PRIMARY]
+GO
+/****** Object:  Table [workcube_devcatalyst_retail].[CARI_ROW_RELATIONS]    Script Date: 4.11.2020 12:51:25 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [workcube_devcatalyst_retail].[CARI_ROW_RELATIONS](
+	[ROW_ID] [int] IDENTITY(1,1) NOT NULL,
+	[IN_CARI_ACTION_ID] [int] NULL,
+	[IN_ACTION_VALUE] [float] NULL,
+	[OUT_CARI_ACTION_VALUE] [float] NULL,
+	[OUT_CARI_ACTION_ID] [int] NULL,
+	[PERIOD_ID] [int] NULL,
+	[RELATED_VALUE] [float] NULL,
+	[PERIOD_ID_OUT] [int] NULL
+) ON [PRIMARY]
+GO
+/****** Object:  Table [workcube_devcatalyst_retail].[CC_NUMBERS]    Script Date: 4.11.2020 12:51:25 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [workcube_devcatalyst_retail].[CC_NUMBERS](
+	[ROW_ID] [int] IDENTITY(1,1) NOT NULL,
+	[CREDITCARD_NUMBER] [nvarchar](50) NULL,
+	[REAL_NUMBER] [nvarchar](50) NULL
+) ON [PRIMARY]
+GO
+/****** Object:  Table [workcube_devcatalyst_retail].[CUSTOMER_BONUS]    Script Date: 4.11.2020 12:51:25 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [workcube_devcatalyst_retail].[CUSTOMER_BONUS](
+	[ID] [bigint] IDENTITY(1,1) NOT NULL,
+	[FK_STORE] [bigint] NOT NULL,
+	[FK_POS] [bigint] NOT NULL,
+	[FK_CARD] [bigint] NOT NULL,
+	[FK_USER] [bigint] NOT NULL,
+	[TRANSACTION_DATE] [datetime] NOT NULL,
+	[FK_CARD_CHEQUE] [bigint] NOT NULL,
+	[FK_REASON_TYPE] [bigint] NOT NULL,
+	[REASON_PARAM] [nvarchar](60) NULL,
+	[AMOUNT] [money] NOT NULL,
+	[CHEQUE_USED_COUNT] [bigint] NOT NULL,
+	[CHEQUE_RETURN_PARAM] [nvarchar](60) NULL,
+	[USED_DATE] [datetime] NULL,
+	[POS_TRANSACTION_DATE] [bigint] NULL,
+	[POS_SEQUENCE_NUMBER] [bigint] NULL,
+	[CASH] [money] NULL,
+	[CREDIT_CARD] [money] NULL,
+	[TRY_COUNT] [int] NOT NULL,
+	[CUSTOMER_CARD] [varchar](50) NOT NULL,
+	[STATUS_FLAG] [bigint] NOT NULL,
+	[TRANSACTION_NUM] [int] NULL,
+	[TRANSACTION_TOTAL] [money] NULL,
+	[CREATE_DATE] [smalldatetime] NOT NULL,
+	[FK_USER_CREATE] [bigint] NOT NULL,
+	[MODIFY_DATE] [smalldatetime] NOT NULL,
+	[FK_USER_MODIFY] [bigint] NOT NULL,
+	[FK_STORE_LU] [bigint] NOT NULL,
+	[FK_STORE_LS] [bigint] NOT NULL,
+	[UPDATESEQ] [int] NOT NULL,
+ CONSTRAINT [PK_CUSTOMER_BONUS] PRIMARY KEY CLUSTERED 
+(
+	[ID] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+/****** Object:  Table [workcube_devcatalyst_retail].[DAILY_STOCKS]    Script Date: 4.11.2020 12:51:25 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [workcube_devcatalyst_retail].[DAILY_STOCKS](
+	[ROW_ID] [int] IDENTITY(1,1) NOT NULL,
+	[TARIH] [datetime] NULL,
+	[EMTIANO] [nvarchar](50) NULL,
+	[SONSTOK] [float] NULL,
+	[LOKASYON_ID] [int] NULL,
+	[FIFOFIY] [float] NULL,
+	[SONALIS_FIYATI] [float] NULL,
+	[DAILY_SALES] [float] NULL,
+	[STOCK_ID] [int] NULL,
+	[YIL] [int] NULL,
+	[AY] [int] NULL,
+	[GUN] [int] NULL,
+	[DEPARTMENT_ID] [int] NULL
+) ON [PRIMARY]
+GO
+/****** Object:  Table [workcube_devcatalyst_retail].[DimDate]    Script Date: 4.11.2020 12:51:25 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [workcube_devcatalyst_retail].[DimDate](
+	[DateKey] [int] NULL,
+	[FullDate] [date] NULL,
+	[DayNumberOfWeek] [int] NULL,
+	[DayNameOfWeek] [nvarchar](30) NULL,
+	[WeekDayType] [varchar](7) NULL,
+	[DayNumberOfMonth] [int] NULL,
+	[DayNumberOfYear] [int] NULL,
+	[WeekNumberOfYear] [int] NULL,
+	[MonthNameOfYear] [nvarchar](30) NULL,
+	[MonthNumberOfYear] [int] NULL,
+	[QuarterNumberCalendar] [int] NULL,
+	[QuarterNameCalendar] [nvarchar](31) NULL,
+	[SemesterNumberCalendar] [int] NULL,
+	[SemesterNameCalendar] [varchar](15) NULL,
+	[YearCalendar] [int] NULL,
+	[MonthNumberFiscal] [int] NULL,
+	[QuarterNumberFiscal] [int] NULL,
+	[QuarterNameFiscal] [nvarchar](31) NULL,
+	[SemesterNumberFiscal] [int] NULL,
+	[SemesterNameFiscal] [varchar](15) NULL,
+	[YearFiscal] [int] NULL
+) ON [PRIMARY]
+GO
+/****** Object:  Table [workcube_devcatalyst_retail].[EXTRA_PRODUCT_TYPES]    Script Date: 4.11.2020 12:51:25 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [workcube_devcatalyst_retail].[EXTRA_PRODUCT_TYPES](
+	[TYPE_ID] [int] IDENTITY(1,1) NOT NULL,
+	[TYPE_STATUS] [bit] NULL,
+	[TYPE_NAME] [nvarchar](250) NULL,
+	[TYPE_DETAIL] [nvarchar](250) NULL,
+	[RECORD_EMP] [int] NULL,
+	[RECORD_DATE] [datetime] NULL,
+	[RECORD_IP] [nvarchar](50) NULL,
+	[UPDATE_EMP] [int] NULL,
+	[UPDATE_DATE] [datetime] NULL,
+	[UPDATE_IP] [nvarchar](50) NULL
+) ON [PRIMARY]
+GO
+/****** Object:  Table [workcube_devcatalyst_retail].[EXTRA_PRODUCT_TYPES_ROWS]    Script Date: 4.11.2020 12:51:25 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [workcube_devcatalyst_retail].[EXTRA_PRODUCT_TYPES_ROWS](
+	[ROW_ID] [int] IDENTITY(1,1) NOT NULL,
+	[TYPE_ID] [int] NULL,
+	[SUB_TYPE_ID] [int] NULL,
+	[SUB_TYPE_NAME] [nvarchar](max) NULL,
+	[PRODUCT_ID] [int] NULL
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+GO
+/****** Object:  Table [workcube_devcatalyst_retail].[EXTRA_PRODUCT_TYPES_SUBS]    Script Date: 4.11.2020 12:51:25 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [workcube_devcatalyst_retail].[EXTRA_PRODUCT_TYPES_SUBS](
+	[SUB_TYPE_ID] [int] IDENTITY(1,1) NOT NULL,
+	[SUB_TYPE_NAME] [nvarchar](max) NULL,
+	[TYPE_ID] [int] NULL,
+	[RECORD_EMP] [int] NULL,
+	[RECORD_DATE] [datetime] NULL,
+	[RECORD_IP] [nvarchar](50) NULL,
+	[UPDATE_EMP] [int] NULL,
+	[UPDATE_DATE] [datetime] NULL,
+	[UPDATE_IP] [nvarchar](50) NULL
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+GO
+/****** Object:  Table [workcube_devcatalyst_retail].[FON_ROWS]    Script Date: 4.11.2020 12:51:25 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [workcube_devcatalyst_retail].[FON_ROWS](
+	[ROW_ID] [int] IDENTITY(1,1) NOT NULL,
+	[KOLON_AD] [nvarchar](50) NULL,
+	[KOLON_DEGER] [nvarchar](50) NULL
+) ON [PRIMARY]
+GO
+/****** Object:  Table [workcube_devcatalyst_retail].[GENIUS_ACTION_TYPES]    Script Date: 4.11.2020 12:51:25 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [workcube_devcatalyst_retail].[GENIUS_ACTION_TYPES](
+	[ROW_ID] [int] IDENTITY(1,1) NOT NULL,
+	[TYPE_ID] [nvarchar](1) NULL,
+	[TYPE_NAME] [nvarchar](50) NULL
+) ON [PRIMARY]
+GO
+/****** Object:  Table [workcube_devcatalyst_retail].[GENIUS_ACTIONS]    Script Date: 4.11.2020 12:51:25 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [workcube_devcatalyst_retail].[GENIUS_ACTIONS](
+	[ACTION_ID] [int] IDENTITY(1,1) NOT NULL,
+	[BELGE_TURU] [nvarchar](1) NULL,
+	[FIS_IPTAL] [int] NULL,
+	[FIS_NUMARASI] [nvarchar](50) NULL,
+	[FIS_TARIHI] [datetime] NULL,
+	[FIS_TARIHI_BITIS] [datetime] NULL,
+	[FIS_TOPLAM] [float] NULL,
+	[FIS_TOPLAM_KDV] [float] NULL,
+	[KASA_NUMARASI] [int] NULL,
+	[KASIYER_NO] [int] NULL,
+	[KDV0] [float] NULL,
+	[KDV1] [float] NULL,
+	[KDV8] [float] NULL,
+	[KDV18] [float] NULL,
+	[MALIYE_NO] [nvarchar](50) NULL,
+	[MUSTERI_NO] [nvarchar](50) NULL,
+	[SUBE_KODU] [nvarchar](50) NULL,
+	[FIS_PROMOSYON_INDIRIM] [float] NULL,
+	[FIS_SATIR_ALTI_INDIRIM] [float] NULL,
+	[KAZANILAN_PUAN] [float] NULL,
+	[KULLANILAN_PUAN] [float] NULL,
+	[RECORD_DATE] [datetime] NULL,
+	[ACTION_DATE] [datetime] NULL,
+	[HAREKET_SAYISI] [int] NULL,
+	[ODEME_SAYISI] [int] NULL,
+	[ZNO] [nvarchar](50) NULL,
+	[IS_OFFLINE] [bit] NULL,
+	[RECORD_EMP] [int] NULL,
+	[BRANCH_ID] [int] NULL,
+	[DEPARTMENT_ID] [int] NULL
+) ON [PRIMARY]
+GO
+/****** Object:  Table [workcube_devcatalyst_retail].[GENIUS_ACTIONS_PAYMENTS]    Script Date: 4.11.2020 12:51:25 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [workcube_devcatalyst_retail].[GENIUS_ACTIONS_PAYMENTS](
+	[ACTION_ID] [int] NULL,
+	[ACTION_PAYMENT_ID] [int] IDENTITY(1,1) NOT NULL,
+	[ODEME_TURU] [int] NULL,
+	[ODEME_TUTAR] [float] NULL,
+	[ODEME_TIPI] [int] NULL,
+	[ODEME_IPTALMI] [int] NULL,
+	[ODEME_TUTAR_OTHER] [float] NULL
+) ON [PRIMARY]
+GO
+/****** Object:  Table [workcube_devcatalyst_retail].[GENIUS_ACTIONS_ROWS]    Script Date: 4.11.2020 12:51:25 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [workcube_devcatalyst_retail].[GENIUS_ACTIONS_ROWS](
+	[ACTION_ROW_ID] [int] IDENTITY(1,1) NOT NULL,
+	[ACTION_ID] [int] NULL,
+	[BARCODE] [nvarchar](50) NULL,
+	[BIRIM] [int] NULL,
+	[BIRIM_ADI] [nvarchar](50) NULL,
+	[BIRIM_FIYAT] [float] NULL,
+	[MIKTAR] [float] NULL,
+	[SATIR_IPTALMI] [int] NULL,
+	[SATIR_KDV] [int] NULL,
+	[SATIR_KDV_TUTAR] [float] NULL,
+	[SATIR_TIPI] [nvarchar](50) NULL,
+	[SATIR_TOPLAM] [float] NULL,
+	[SATIR_INDIRIM] [float] NULL,
+	[STOCK_ID] [int] NULL,
+	[SATIR_PROMOSYON_INDIRIM] [float] NULL,
+	[FIS_TARIHI] [datetime] NULL
+) ON [PRIMARY]
+GO
+/****** Object:  Table [workcube_devcatalyst_retail].[GENIUS_GENERAL]    Script Date: 4.11.2020 12:51:25 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [workcube_devcatalyst_retail].[GENIUS_GENERAL](
+	[MAIN_COMPUTER_IP] [nvarchar](100) NULL,
+	[MAIN_FOLDER] [nvarchar](100) NULL
+) ON [PRIMARY]
+GO
+/****** Object:  Table [workcube_devcatalyst_retail].[GENIUS_GIVES]    Script Date: 4.11.2020 12:51:25 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [workcube_devcatalyst_retail].[GENIUS_GIVES](
+	[GIVE_ID] [int] IDENTITY(1,1) NOT NULL,
+	[GIVE_DATE] [datetime] NULL,
+	[KASA_NUMARASI] [int] NULL,
+	[KASIYER_NO] [int] NULL,
+	[ZNO] [nvarchar](50) NULL,
+	[BRANCH_ID] [int] NULL,
+	[RECORD_DATE] [datetime] NULL,
+	[RECORD_EMP] [int] NULL,
+	[UPDATE_DATE] [datetime] NULL,
+	[UPDATE_EMP] [int] NULL,
+	[SATIS_TOPLAM] [float] NULL,
+	[TESLIM_TOPLAM] [float] NULL,
+	[KASIYER_FAZLA_TOPLAM] [float] NULL,
+	[KASIYER_ACIK_TOPLAM] [float] NULL
+) ON [PRIMARY]
+GO
+/****** Object:  Table [workcube_devcatalyst_retail].[GENIUS_POINT_ADDS]    Script Date: 4.11.2020 12:51:25 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [workcube_devcatalyst_retail].[GENIUS_POINT_ADDS](
+	[ROW_ID] [int] IDENTITY(1,1) NOT NULL,
+	[WRK_ID] [nvarchar](50) NULL,
+	[RECORD_EMP] [int] NULL,
+	[RECORD_DATE] [datetime] NULL,
+	[DETAIL] [nvarchar](max) NULL,
+	[IS_CLEAR] [bit] NULL
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+GO
+/****** Object:  Table [workcube_devcatalyst_retail].[GENIUS_POINT_ADDS_ROWS]    Script Date: 4.11.2020 12:51:25 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [workcube_devcatalyst_retail].[GENIUS_POINT_ADDS_ROWS](
+	[SUB_ROW_ID] [int] IDENTITY(1,1) NOT NULL,
+	[ROW_ID] [int] NULL,
+	[WRK_ID] [nvarchar](50) NULL,
+	[CARD_NO] [nvarchar](50) NULL,
+	[ADD_POINT] [float] NULL,
+	[DEL_POINT] [float] NULL
+) ON [PRIMARY]
+GO
+/****** Object:  Table [workcube_devcatalyst_retail].[INVOICE_FF_ROWS]    Script Date: 4.11.2020 12:51:25 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [workcube_devcatalyst_retail].[INVOICE_FF_ROWS](
+	[FF_ROW_ID] [int] IDENTITY(1,1) NOT NULL,
+	[INVOICE_ID] [int] NULL,
+	[INVOICE_NUMBER] [nvarchar](50) NULL,
+	[INVOICE_ROW_ID] [int] NULL,
+	[PRODUCT_ID] [int] NULL,
+	[STOCK_ID] [int] NULL,
+	[INVOICE_DATE] [datetime] NULL,
+	[AMOUNT] [float] NULL,
+	[FF_GROSS] [float] NULL,
+	[FF_BASE] [float] NULL,
+	[PERIOD_ID] [int] NULL,
+	[WRK_ROW_ID] [nvarchar](50) NULL,
+	[COMPANY_ID] [int] NULL,
+	[PROJECT_ID] [int] NULL,
+	[COMP_CODE] [nvarchar](50) NULL,
+	[FF_NET] [float] NULL,
+	[FF_PAID] [float] NULL,
+	[FF_TYPE] [int] NULL,
+	[PAID_DATE] [datetime] NULL,
+	[PRICE_TYPE] [int] NULL,
+	[TABLE_CODE] [nvarchar](50) NULL,
+	[TABLE_ROW_ID] [int] NULL,
+	[TAX] [int] NULL,
+	[FF_DAILY_COST] [float] NULL,
+	[FF_DAILY_NET] [float] NULL,
+	[FF_DAILY_AMOUNT] [float] NULL,
+	[CODE] [nvarchar](50) NULL,
+	[STATUS] [bit] NULL
+) ON [PRIMARY]
+GO
+/****** Object:  Table [workcube_devcatalyst_retail].[INVOICE_REPAIR]    Script Date: 4.11.2020 12:51:25 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [workcube_devcatalyst_retail].[INVOICE_REPAIR](
+	[ROW_ID] [int] IDENTITY(1,1) NOT NULL,
+	[ACTION_ID] [int] NULL,
+	[ACTION_TYPE] [nvarchar](50) NULL,
+	[UUID] [nvarchar](200) NULL,
+	[OLD_INVOICE_NUMBER] [nvarchar](200) NULL,
+	[NEW_INVOICE_NUMBER] [nvarchar](200) NULL,
+	[PERIOD_ID] [int] NULL
+) ON [PRIMARY]
+GO
+/****** Object:  Table [workcube_devcatalyst_retail].[INVOICE_REVENUE_ROWS]    Script Date: 4.11.2020 12:51:25 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [workcube_devcatalyst_retail].[INVOICE_REVENUE_ROWS](
+	[C_ROW_ID] [int] IDENTITY(1,1) NOT NULL,
+	[INVOICE_ID] [int] NULL,
+	[INVOICE_NUMBER] [nvarchar](50) NULL,
+	[INVOICE_ROW_ID] [int] NULL,
+	[PRODUCT_ID] [int] NULL,
+	[STOCK_ID] [int] NULL,
+	[INVOICE_DATE] [datetime] NULL,
+	[AMOUNT] [float] NULL,
+	[REVENUE_GROSS] [float] NULL,
+	[PERIOD_ID] [int] NULL,
+	[WRK_ROW_ID] [nvarchar](50) NULL,
+	[COMPANY_ID] [int] NULL,
+	[PROJECT_ID] [int] NULL,
+	[COMP_CODE] [nvarchar](50) NULL,
+	[REVENUE_NET] [float] NULL,
+	[REVENUE_RATE] [nvarchar](50) NULL,
+	[REVENUE_PAID] [float] NULL,
+	[PAID_DATE] [datetime] NULL,
+	[REVENUE_PERIOD] [int] NULL,
+	[CODE] [nvarchar](50) NULL,
+	[STATUS] [bit] NULL,
+	[IS_UPDATE] [int] NULL,
+	[OLD_VALUE] [float] NULL
+) ON [PRIMARY]
+GO
+/****** Object:  Table [workcube_devcatalyst_retail].[INVOICE_ROW_CLOSED]    Script Date: 4.11.2020 12:51:25 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [workcube_devcatalyst_retail].[INVOICE_ROW_CLOSED](
+	[ROW_ID] [int] IDENTITY(1,1) NOT NULL,
+	[INVOICE_ID] [int] NULL,
+	[PERIOD_ID] [int] NULL,
+	[INVOICE_ROW_ID] [int] NULL,
+	[WRK_ROW_ID] [nvarchar](150) NULL,
+	[TYPE] [int] NULL,
+	[RELATED_ROW_ID] [int] NULL,
+	[PAID_COST] [float] NULL,
+	[CODE] [nvarchar](50) NULL,
+	[RECORD_EMP] [int] NULL,
+	[RECORD_DATE] [datetime] NULL
+) ON [PRIMARY]
+GO
+/****** Object:  Table [workcube_devcatalyst_retail].[INVOICE_ROW_CLOSED_DELETES]    Script Date: 4.11.2020 12:51:25 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [workcube_devcatalyst_retail].[INVOICE_ROW_CLOSED_DELETES](
+	[DELETE_ROW_ID] [int] IDENTITY(1,1) NOT NULL,
+	[ROW_ID] [int] NULL,
+	[INVOICE_ID] [int] NULL,
+	[PERIOD_ID] [int] NULL,
+	[INVOICE_ROW_ID] [int] NULL,
+	[WRK_ROW_ID] [nvarchar](150) NULL,
+	[TYPE] [int] NULL,
+	[RELATED_ROW_ID] [int] NULL,
+	[PAID_COST] [float] NULL,
+	[CODE] [nvarchar](50) NULL,
+	[RECORD_EMP] [int] NULL,
+	[RECORD_DATE] [datetime] NULL,
+	[DELETE_EMP] [int] NULL,
+	[DELETE_DATE] [datetime] NULL
+) ON [PRIMARY]
+GO
+/****** Object:  Table [workcube_devcatalyst_retail].[KATEGORILER]    Script Date: 4.11.2020 12:51:25 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [workcube_devcatalyst_retail].[KATEGORILER](
+	[KOD] [nvarchar](50) NULL,
+	[AD] [nvarchar](150) NULL,
+	[OZEL_KOD] [nvarchar](50) NULL
+) ON [PRIMARY]
+GO
+/****** Object:  Table [workcube_devcatalyst_retail].[LABEL_TYPES]    Script Date: 4.11.2020 12:51:25 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [workcube_devcatalyst_retail].[LABEL_TYPES](
+	[TYPE_ID] [int] IDENTITY(1,1) NOT NULL,
+	[TYPE_NAME] [nvarchar](250) NULL,
+	[TYPE_CODE] [nvarchar](50) NULL,
+	[RECORD_EMP] [int] NULL,
+	[RECORD_DATE] [datetime] NULL,
+	[RECORD_IP] [nvarchar](50) NULL,
+	[UPDATE_EMP] [int] NULL,
+	[UPDATE_DATE] [datetime] NULL,
+	[UPDATE_IP] [nvarchar](50) NULL,
+	[TYPE_CODE_OUT] [nvarchar](50) NULL,
+	[IS_STANDART] [bit] NULL
+) ON [PRIMARY]
+GO
+/****** Object:  Table [workcube_devcatalyst_retail].[MARKET_PROMOTIONS]    Script Date: 4.11.2020 12:51:25 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [workcube_devcatalyst_retail].[MARKET_PROMOTIONS](
+	[PROMOTION_ID] [int] IDENTITY(1,1) NOT NULL,
+	[PROMOTION_HEAD] [nvarchar](500) NULL,
+	[PROMOTION_STATUS] [bit] NULL,
+	[PROMOTION_DAYS] [nvarchar](50) NULL,
+	[STARTDATE] [datetime] NULL,
+	[FINISHDATE] [datetime] NULL,
+	[PROMOTION_TYPE] [int] NULL,
+	[DISCOUNT_TYPE] [int] NULL,
+	[DISCOUNT_VALUE] [float] NULL,
+	[GIFT_TYPE] [int] NULL,
+	[RECORD_EMP] [int] NULL,
+	[RECORD_DATE] [datetime] NULL,
+	[UPDATE_EMP] [int] NULL,
+	[UPDATE_DATE] [datetime] NULL
+) ON [PRIMARY]
+GO
+/****** Object:  Table [workcube_devcatalyst_retail].[MARKET_PROMOTIONS_DEPARTMENTS]    Script Date: 4.11.2020 12:51:25 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [workcube_devcatalyst_retail].[MARKET_PROMOTIONS_DEPARTMENTS](
+	[ROW_ID] [int] IDENTITY(1,1) NOT NULL,
+	[DEPARTMENT_ID] [int] NULL,
+	[PROMOTION_ID] [int] NULL
+) ON [PRIMARY]
+GO
+/****** Object:  Table [workcube_devcatalyst_retail].[MARKET_PROMOTIONS_MEMBER_TYPES]    Script Date: 4.11.2020 12:51:25 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [workcube_devcatalyst_retail].[MARKET_PROMOTIONS_MEMBER_TYPES](
+	[ROW_ID] [int] IDENTITY(1,1) NOT NULL,
+	[MEMBER_TYPE_ID] [int] NULL,
+	[PROMOTION_ID] [int] NULL
+) ON [PRIMARY]
+GO
+/****** Object:  Table [workcube_devcatalyst_retail].[PAYMENT_GROUP]    Script Date: 4.11.2020 12:51:25 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [workcube_devcatalyst_retail].[PAYMENT_GROUP](
+	[PAYMENT_GROUP_ID] [int] IDENTITY(1,1) NOT NULL,
+	[PAYMENT_GROUP_NAME] [nvarchar](50) NULL,
+	[RECORD_EMP] [int] NULL,
+	[RECORD_DATE] [datetime] NULL,
+	[UPDATE_DATE] [datetime] NULL,
+	[UPDATE_EMP] [int] NULL
+) ON [PRIMARY]
+GO
+/****** Object:  Table [workcube_devcatalyst_retail].[PAYMENT_GROUP_ROW]    Script Date: 4.11.2020 12:51:25 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [workcube_devcatalyst_retail].[PAYMENT_GROUP_ROW](
+	[PAYMENT_GROUP_ROW_ID] [int] IDENTITY(1,1) NOT NULL,
+	[PAYMENT_GROUP_ID] [int] NULL,
+	[ALIM_START] [int] NULL,
+	[ALIM_FINISH] [int] NULL,
+	[ODEME_START] [int] NULL,
+	[ODEME_FINISH] [int] NULL,
+	[ODEME_MONTH] [bit] NULL
+) ON [PRIMARY]
+GO
+/****** Object:  Table [workcube_devcatalyst_retail].[PAYMENT_TABLE]    Script Date: 4.11.2020 12:51:25 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [workcube_devcatalyst_retail].[PAYMENT_TABLE](
+	[TABLE_ID] [int] IDENTITY(1,1) NOT NULL,
+	[TABLE_CODE] [nvarchar](50) NULL,
+	[TABLE_DETAIL] [nvarchar](max) NULL,
+	[ACTION_DATE] [datetime] NULL,
+	[ACTION_STARDATE] [datetime] NULL,
+	[ACTION_FINISHDATE] [datetime] NULL,
+	[ACTION_COMPANY_ID] [nvarchar](max) NULL,
+	[ACTION_LIMIT_ALT] [nvarchar](50) NULL,
+	[ACTION_LIMIT_UST] [nvarchar](50) NULL,
+	[ACTION_ORDER_TYPE] [int] NULL,
+	[UZATMA_EKLE] [nvarchar](50) NULL,
+	[ACTION_COMPANY_CATS] [nvarchar](100) NULL,
+	[IS_PAID] [bit] NULL,
+	[IS_BANK] [bit] NULL
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+GO
+/****** Object:  Table [workcube_devcatalyst_retail].[PAYMENT_TABLE_GROUPS]    Script Date: 4.11.2020 12:51:25 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [workcube_devcatalyst_retail].[PAYMENT_TABLE_GROUPS](
+	[ROW_ID] [int] IDENTITY(1,1) NOT NULL,
+	[TABLE_ID] [int] NULL,
+	[TABLE_CODE] [nvarchar](50) NULL,
+	[PAYMENT_GROUP_ID] [int] NULL
+) ON [PRIMARY]
+GO
+/****** Object:  Table [workcube_devcatalyst_retail].[PAYMENT_TABLE_ROWS]    Script Date: 4.11.2020 12:51:25 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [workcube_devcatalyst_retail].[PAYMENT_TABLE_ROWS](
+	[TABLE_ROW_ID] [int] IDENTITY(1,1) NOT NULL,
+	[TABLE_ID] [int] NULL,
+	[EVRAK_TARIHI] [datetime] NULL,
+	[VADE_TARIHI] [datetime] NULL,
+	[VADE_GUN] [int] NULL,
+	[ISLEM_TAR_VADE] [int] NULL,
+	[BAKIYE] [float] NULL,
+	[UZATMA_GUN] [int] NULL,
+	[UZATMA_TARIH] [datetime] NULL,
+	[ODEME_GUNU_TARIH] [datetime] NULL,
+	[SON_VADE_GUN] [int] NULL,
+	[VADE_ASIMI] [int] NULL,
+	[COMPANY_ID] [int] NULL,
+	[BANK_NAME] [nvarchar](150) NULL,
+	[BANK_IBAN] [nvarchar](50) NULL,
+	[PAYMENT_GROUP_ID] [int] NULL,
+	[PAYMENT_GROUP_ROW_ID] [int] NULL
+) ON [PRIMARY]
+GO
+/****** Object:  Table [workcube_devcatalyst_retail].[POS_CONS]    Script Date: 4.11.2020 12:51:25 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [workcube_devcatalyst_retail].[POS_CONS](
+	[CON_ID] [int] IDENTITY(1,1) NOT NULL,
+	[CON_DATE] [datetime] NULL,
+	[KASA_NUMARASI] [int] NULL,
+	[ZNO] [nvarchar](50) NULL,
+	[KASIYER_NO] [int] NULL,
+	[SATIS_TOPLAM] [float] NULL,
+	[TESLIMAT_TOPLAM] [float] NULL,
+	[ACIK_TOPLAM] [float] NULL,
+	[FAZLA_TOPLAM] [float] NULL,
+	[KDV_MATRAH0] [float] NULL,
+	[KDV_MATRAH1] [float] NULL,
+	[KDV_MATRAH8] [float] NULL,
+	[KDV_MATRAH18] [float] NULL,
+	[KDV0] [float] NULL,
+	[KDV8] [float] NULL,
+	[KDV1] [float] NULL,
+	[KDV18] [float] NULL,
+	[KDVLI0] [float] NULL,
+	[KDVLI1] [float] NULL,
+	[KDVLI8] [float] NULL,
+	[KDVLI18] [float] NULL,
+	[RECORD_DATE] [datetime] NULL,
+	[RECORD_EMP] [int] NULL,
+	[UPDATE_DATE] [datetime] NULL,
+	[UPDATE_EMP] [int] NULL,
+	[DOLAR_CARPAN] [float] NULL,
+	[EURO_CARPAN] [float] NULL,
+	[IADE_TOPLAM] [float] NULL,
+	[KASA_AVANS] [float] NULL,
+	[ODEME_ACIK_TUTAR] [float] NULL
+) ON [PRIMARY]
+GO
+/****** Object:  Table [workcube_devcatalyst_retail].[POS_CONS_ACTIONS]    Script Date: 4.11.2020 12:51:25 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [workcube_devcatalyst_retail].[POS_CONS_ACTIONS](
+	[ROW_ID] [int] IDENTITY(1,1) NOT NULL,
+	[CON_ID] [int] NULL,
+	[ACTION_ID] [int] NULL,
+	[ACTION_TABLE] [nvarchar](200) NULL,
+	[FIS_ACTION_ID] [int] NULL,
+	[PERIOD_ID] [int] NULL,
+	[ACTION_TYPE] [int] NULL
+) ON [PRIMARY]
+GO
+/****** Object:  Table [workcube_devcatalyst_retail].[POS_CONS_BANKNOTES]    Script Date: 4.11.2020 12:51:25 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [workcube_devcatalyst_retail].[POS_CONS_BANKNOTES](
+	[ROW_ID] [int] IDENTITY(1,1) NOT NULL,
+	[CON_ID] [int] NULL,
+	[TYPE_ID] [int] NULL,
+	[TYPE_ADET] [int] NULL,
+	[TYPE_TUTAR] [float] NULL,
+	[TYPE_MULTIPLIER] [float] NULL
+) ON [PRIMARY]
+GO
+/****** Object:  Table [workcube_devcatalyst_retail].[POS_CONS_PAYMENTS]    Script Date: 4.11.2020 12:51:25 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [workcube_devcatalyst_retail].[POS_CONS_PAYMENTS](
+	[ROW_ID] [int] IDENTITY(1,1) NOT NULL,
+	[CON_ID] [int] NULL,
+	[ODEME_TURU] [nvarchar](50) NULL,
+	[SATIS_TUTAR] [float] NULL,
+	[TESLIM_TUTAR] [float] NULL,
+	[IADE_TUTAR] [float] NULL,
+	[KASA_ACIK_TUTAR] [float] NULL,
+	[KASA_FAZLA_TUTAR] [float] NULL,
+	[DOLAR_TUTAR] [float] NULL,
+	[EURO_TUTAR] [float] NULL
+) ON [PRIMARY]
+GO
+/****** Object:  Table [workcube_devcatalyst_retail].[POS_USERS]    Script Date: 4.11.2020 12:51:25 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [workcube_devcatalyst_retail].[POS_USERS](
+	[ROW_ID] [int] IDENTITY(1,1) NOT NULL,
+	[EMPLOYEE_ID] [int] NULL,
+	[BRANCH_ID] [int] NULL,
+	[RECORD_DATE] [datetime] NULL,
+	[RECORD_EMP] [int] NULL,
+	[RECORD_IP] [nvarchar](50) NULL,
+	[USERNAME] [nvarchar](50) NULL,
+	[PASSWORD] [nvarchar](50) NULL,
+	[POS_TYPE] [int] NULL,
+	[UPDATE_DATE] [datetime] NULL,
+	[UPDATE_EMP] [int] NULL,
+	[UPDATE_IP] [nvarchar](50) NULL,
+	[EMPLOYEE_STATUS] [bit] NULL
+) ON [PRIMARY]
+GO
+/****** Object:  Table [workcube_devcatalyst_retail].[PRICE_TABLE]    Script Date: 4.11.2020 12:51:25 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [workcube_devcatalyst_retail].[PRICE_TABLE](
+	[ROW_ID] [int] IDENTITY(1,1) NOT NULL,
+	[AKDV] [float] NULL,
+	[SKDV] [float] NULL,
+	[DISCOUNT1] [float] NULL,
+	[DISCOUNT2] [float] NULL,
+	[DISCOUNT3] [float] NULL,
+	[DISCOUNT4] [float] NULL,
+	[DISCOUNT5] [float] NULL,
+	[DISCOUNT6] [float] NULL,
+	[DISCOUNT7] [float] NULL,
+	[DISCOUNT8] [float] NULL,
+	[DISCOUNT9] [float] NULL,
+	[DISCOUNT10] [float] NULL,
+	[MANUEL_DISCOUNT] [float] NULL,
+	[NEW_ALIS] [float] NULL,
+	[NEW_ALIS_KDV] [float] NULL,
+	[NEW_PRICE] [float] NULL,
+	[NEW_PRICE_KDV] [float] NULL,
+	[MARGIN] [float] NULL,
+	[STARTDATE] [datetime] NULL,
+	[FINISHDATE] [datetime] NULL,
+	[TABLE_ID] [int] NULL,
+	[TABLE_CODE] [nvarchar](50) NULL,
+	[RECORD_EMP] [int] NULL,
+	[RECORD_DATE] [datetime] NULL,
+	[PRODUCT_ID] [int] NULL,
+	[STOCK_ID] [int] NULL,
+	[IS_IMPORT] [bit] NULL,
+	[IMPORT_CODE] [nvarchar](50) NULL,
+	[PRICE_TYPE] [int] NULL,
+	[P_STARTDATE] [datetime] NULL,
+	[P_FINISHDATE] [datetime] NULL,
+	[CHANGE_RATE] [nvarchar](50) NULL,
+	[P_MARGIN] [float] NULL,
+	[DUEDAY] [int] NULL,
+	[PRODUCT_CODE_2] [nvarchar](50) NULL,
+	[STOCK_CODE_2] [nvarchar](50) NULL,
+	[IS_ACTIVE_S] [bit] NULL,
+	[IS_ACTIVE_P] [bit] NULL,
+	[BRUT_ALIS] [float] NULL,
+	[SALIS] [float] NULL,
+	[SALISKDV] [float] NULL,
+	[SSATIS] [float] NULL,
+	[SSATISKDV] [float] NULL,
+	[FIRST_RECORD_DATE] [datetime] NULL,
+	[ACTION_CODE] [nvarchar](50) NULL,
+	[COMPANY_ID] [int] NULL,
+	[PROJECT_ID] [int] NULL,
+	[UPDATE_EMP] [int] NULL,
+	[UPDATE_IP] [nvarchar](50) NULL,
+	[UPDATE_DATE] [datetime] NULL,
+	[WRK_ID] [nvarchar](50) NULL,
+	[P_PRODUCT_TYPE] [bit] NULL,
+	[RECORD_PAR] [int] NULL,
+	[UPDATE_PAR] [int] NULL,
+	[OLD_COMPANY_ID] [int] NULL,
+	[OLD_PROJECT_ID] [int] NULL
+) ON [PRIMARY]
+GO
+/****** Object:  Table [workcube_devcatalyst_retail].[PRICE_TABLE_DEPARTMENTS]    Script Date: 4.11.2020 12:51:25 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [workcube_devcatalyst_retail].[PRICE_TABLE_DEPARTMENTS](
+	[D_ROW_ID] [int] IDENTITY(1,1) NOT NULL,
+	[ROW_ID] [int] NULL,
+	[DEPARTMENT_ID] [int] NULL
+) ON [PRIMARY]
+GO
+/****** Object:  Table [workcube_devcatalyst_retail].[PRICE_TABLE_STANDART]    Script Date: 4.11.2020 12:51:25 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [workcube_devcatalyst_retail].[PRICE_TABLE_STANDART](
+	[ROW_ID] [int] IDENTITY(1,1) NOT NULL,
+	[TABLE_ID] [int] NULL,
+	[TABLE_CODE] [nvarchar](50) NULL,
+	[INFO_STANDART_ALIS] [float] NULL,
+	[INFO_STANDART_SATIS_KDVLI] [float] NULL,
+	[INFO_STANDART_ALIS_PRICE_RATE] [nvarchar](50) NULL,
+	[STD_P_STARTDATE] [datetime] NULL,
+	[STANDART_ALIS] [float] NULL,
+	[STD_SALES_DISCOUNT1] [float] NULL,
+	[STD_SALES_DISCOUNT2] [float] NULL,
+	[STD_SALES_DISCOUNT3] [float] NULL,
+	[STD_SALES_DISCOUNT4] [float] NULL,
+	[STD_SALES_DISCOUNT5] [float] NULL,
+	[STD_SALES_DISCOUNT6] [float] NULL,
+	[STD_SALES_DISCOUNT7] [float] NULL,
+	[STD_SALES_DISCOUNT8] [float] NULL,
+	[STD_SALES_DISCOUNT9] [float] NULL,
+	[STD_SALES_DISCOUNT10] [float] NULL,
+	[STD_P_DISCOUNT_MANUEL] [float] NULL,
+	[STANDART_ALIS_LISTE] [float] NULL,
+	[STANDART_ALIS_KDVLI] [float] NULL,
+	[STANDART_ALIS_PRICE_RATE] [nvarchar](50) NULL,
+	[STANDART_S_STARTDATE] [datetime] NULL,
+	[S_PROFIT] [float] NULL,
+	[READ_FIRST_SATIS_PRICE] [float] NULL,
+	[READ_FIRST_SATIS_PRICE_KDV] [float] NULL,
+	[READ_FIRST_SATIS_PRICE_RATE] [nvarchar](50) NULL,
+	[P_PROFIT] [float] NULL,
+	[IS_ACTIVE_S] [bit] NULL,
+	[RECORD_DATE] [datetime] NULL,
+	[RECORD_EMP] [int] NULL,
+	[STOCK_ID] [int] NULL,
+	[PRODUCT_ID] [int] NULL,
+	[INFO_S_DATE] [nvarchar](max) NULL,
+	[WRK_ID] [nvarchar](50) NULL,
+	[RECORD_PAR] [int] NULL
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+GO
+/****** Object:  Table [workcube_devcatalyst_retail].[PRICE_TYPES]    Script Date: 4.11.2020 12:51:25 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [workcube_devcatalyst_retail].[PRICE_TYPES](
+	[TYPE_ID] [int] IDENTITY(1,1) NOT NULL,
+	[TYPE_NAME] [nvarchar](250) NULL,
+	[TYPE_CODE] [nvarchar](50) NULL,
+	[RECORD_EMP] [int] NULL,
+	[RECORD_DATE] [datetime] NULL,
+	[RECORD_IP] [nvarchar](50) NULL,
+	[UPDATE_EMP] [int] NULL,
+	[UPDATE_DATE] [datetime] NULL,
+	[UPDATE_IP] [nvarchar](50) NULL,
+	[IS_STANDART] [bit] NULL,
+	[IS_PURCHASE_SALE] [bit] NULL,
+	[IS_CASH_OUT] [bit] NULL,
+	[LABEL_TYPE_ID] [int] NULL
+) ON [PRIMARY]
+GO
+/****** Object:  Table [workcube_devcatalyst_retail].[PROCESS_ROWS]    Script Date: 4.11.2020 12:51:25 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [workcube_devcatalyst_retail].[PROCESS_ROWS](
+	[ROW_ID] [int] IDENTITY(1,1) NOT NULL,
+	[COMPANY_ID] [int] NULL,
+	[PROJECT_ID] [int] NULL,
+	[TABLE_CODE] [nvarchar](50) NULL,
+	[TABLE_ID] [int] NULL,
+	[TABLE_SECRET_CODE] [nvarchar](50) NULL,
+	[DEPARTMENT_ID] [int] NULL,
+	[PROCESS_TYPE] [int] NULL,
+	[PROCESS_DETAIL] [nvarchar](200) NULL,
+	[PROCESS_STARTDATE] [datetime] NULL,
+	[PROCESS_FINISHDATE] [datetime] NULL,
+	[ACTION_STARTDATE] [datetime] NULL,
+	[ACTION_FINISHDATE] [datetime] NULL,
+	[PAYMENT_DATE] [datetime] NULL,
+	[PAID_DATE] [datetime] NULL,
+	[COST] [float] NULL,
+	[RECORD_DATE] [datetime] NULL,
+	[RECORD_EMP] [int] NULL,
+	[QUANTITY] [int] NULL,
+	[TAX] [int] NULL,
+	[PERIOD] [int] NULL,
+	[UPDATE_DATE] [datetime] NULL,
+	[UPDATE_EMP] [int] NULL,
+	[REVENUE_RATE] [nvarchar](50) NULL,
+	[COST_PAID] [float] NULL,
+	[URETICI_ID] [int] NULL,
+	[STATUS] [bit] NULL
+) ON [PRIMARY]
+GO
+/****** Object:  Table [workcube_devcatalyst_retail].[PROCESS_ROWS_CATS]    Script Date: 4.11.2020 12:51:25 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [workcube_devcatalyst_retail].[PROCESS_ROWS_CATS](
+	[R_ROW_ID] [int] IDENTITY(1,1) NOT NULL,
+	[ROW_ID] [int] NULL,
+	[HIERARCHY] [nvarchar](50) NULL
+) ON [PRIMARY]
+GO
+/****** Object:  Table [workcube_devcatalyst_retail].[PRODUCT_ACTIONS]    Script Date: 4.11.2020 12:51:25 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [workcube_devcatalyst_retail].[PRODUCT_ACTIONS](
+	[ROW_ID] [int] IDENTITY(1,1) NOT NULL,
+	[TARIH] [datetime] NULL,
+	[BIRIMNO] [int] NULL,
+	[EMTIANO] [nvarchar](50) NULL,
+	[BIRIM] [nvarchar](50) NULL,
+	[BIRIMIK] [float] NULL,
+	[HARGRUP] [int] NULL,
+	[HAREKET_TIP] [nvarchar](200) NULL,
+	[HAREKET_TIP_KOD] [int] NULL,
+	[HAREKET_GRUBU] [nvarchar](200) NULL,
+	[YIL] [int] NULL,
+	[AY] [int] NULL,
+	[GUN] [int] NULL,
+	[PRODUCT_ID] [int] NULL,
+	[STOCK_ID] [int] NULL,
+	[DEPARTMENT_ID] [int] NULL,
+	[DAILY_STOCK] [float] NULL,
+	[IS_AKTARIM] [bit] NULL,
+	[STOCK_IN] [int] NULL,
+	[STOCK_OUT] [int] NULL
+) ON [PRIMARY]
+GO
+/****** Object:  Table [workcube_devcatalyst_retail].[PRODUCT_PRICE_DATES]    Script Date: 4.11.2020 12:51:25 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [workcube_devcatalyst_retail].[PRODUCT_PRICE_DATES](
+	[TARIH] [datetime] NULL,
+	[ROW_ID] [int] IDENTITY(1,1) NOT NULL,
+	[YIL] [int] NULL,
+	[AY] [int] NULL,
+	[GUN] [int] NULL
+) ON [PRIMARY]
+GO
+/****** Object:  Table [workcube_devcatalyst_retail].[RIVAL_PRICE_TYPES]    Script Date: 4.11.2020 12:51:25 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [workcube_devcatalyst_retail].[RIVAL_PRICE_TYPES](
+	[TYPE_ID] [int] IDENTITY(1,1) NOT NULL,
+	[TYPE_NAME] [nvarchar](250) NULL,
+	[TYPE_CODE] [nvarchar](50) NULL,
+	[RECORD_EMP] [int] NULL,
+	[RECORD_DATE] [datetime] NULL,
+	[RECORD_IP] [nvarchar](50) NULL,
+	[UPDATE_EMP] [int] NULL,
+	[UPDATE_DATE] [datetime] NULL,
+	[UPDATE_IP] [nvarchar](50) NULL
+) ON [PRIMARY]
+GO
+/****** Object:  Table [workcube_devcatalyst_retail].[RIVAL_TABLE_NO]    Script Date: 4.11.2020 12:51:25 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [workcube_devcatalyst_retail].[RIVAL_TABLE_NO](
+	[ROW_ID] [int] IDENTITY(1,1) NOT NULL,
+	[TABLE_NUMBER] [int] NULL
+) ON [PRIMARY]
+GO
+/****** Object:  Table [workcube_devcatalyst_retail].[RIVAL_TABLES]    Script Date: 4.11.2020 12:51:25 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [workcube_devcatalyst_retail].[RIVAL_TABLES](
+	[TABLE_ID] [int] IDENTITY(1,1) NOT NULL,
+	[TABLE_CODE] [nvarchar](50) NULL,
+	[RECORD_DATE] [datetime] NULL,
+	[RECORD_EMP] [int] NULL,
+	[UPDATE_EMP] [int] NULL,
+	[UPDATE_DATE] [datetime] NULL,
+	[TABLE_INFO] [nvarchar](max) NULL,
+	[MAIN_PRICE_TYPE] [int] NULL
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+GO
+/****** Object:  Table [workcube_devcatalyst_retail].[SEARCH_LISTS]    Script Date: 4.11.2020 12:51:25 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [workcube_devcatalyst_retail].[SEARCH_LISTS](
+	[LIST_ID] [int] IDENTITY(1,1) NOT NULL,
+	[LIST_NAME] [nvarchar](150) NULL,
+	[RECORD_DATE] [datetime] NULL,
+	[RECORD_EMP] [int] NULL,
+	[RECORD_IP] [nvarchar](50) NULL,
+	[UPDATE_DATE] [datetime] NULL,
+	[UPDATE_EMP] [int] NULL,
+	[UPDATE_IP] [nvarchar](50) NULL
+) ON [PRIMARY]
+GO
+/****** Object:  Table [workcube_devcatalyst_retail].[SEARCH_LISTS_POINTS]    Script Date: 4.11.2020 12:51:25 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [workcube_devcatalyst_retail].[SEARCH_LISTS_POINTS](
+	[ROW_ID] [int] IDENTITY(1,1) NOT NULL,
+	[RECORD_DATE] [datetime] NULL,
+	[POINT] [float] NULL,
+	[PRODUCT_ID] [int] NULL,
+	[STOCK_ID] [int] NULL,
+	[DEPARTMENT_ID] [int] NULL,
+	[TOTAL_PRODUCT] [int] NULL
+) ON [PRIMARY]
+GO
+/****** Object:  Table [workcube_devcatalyst_retail].[SEARCH_LISTS_ROWS]    Script Date: 4.11.2020 12:51:25 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [workcube_devcatalyst_retail].[SEARCH_LISTS_ROWS](
+	[ROW_ID] [int] IDENTITY(1,1) NOT NULL,
+	[PRODUCT_ID] [int] NULL,
+	[LIST_ID] [int] NULL,
+	[LINE_NUMBER] [int] NULL
+) ON [PRIMARY]
+GO
+/****** Object:  Table [workcube_devcatalyst_retail].[SEARCH_TABLE_NO]    Script Date: 4.11.2020 12:51:25 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [workcube_devcatalyst_retail].[SEARCH_TABLE_NO](
+	[ROW_ID] [int] IDENTITY(1,1) NOT NULL,
+	[TABLE_NUMBER] [int] NULL,
+	[TABLE_CODE] [int] NULL,
+	[STOCK_NUMBER] [int] NULL,
+	[COUNT_NUMBER] [int] NULL,
+	[ORDER_NUMBER] [int] NULL,
+	[PDA_ORDER_NUMBER] [int] NULL
+) ON [PRIMARY]
+GO
+/****** Object:  Table [workcube_devcatalyst_retail].[SEARCH_TABLE_PROCESS_TYPES]    Script Date: 4.11.2020 12:51:25 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [workcube_devcatalyst_retail].[SEARCH_TABLE_PROCESS_TYPES](
+	[TYPE_ID] [int] IDENTITY(1,1) NOT NULL,
+	[TYPE_STATUS] [bit] NULL,
+	[TYPE_NAME] [nvarchar](250) NULL,
+	[TYPE_DETAIL] [nvarchar](250) NULL,
+	[RECORD_EMP] [int] NULL,
+	[RECORD_DATE] [datetime] NULL,
+	[RECORD_IP] [nvarchar](50) NULL,
+	[UPDATE_EMP] [int] NULL,
+	[UPDATE_DATE] [datetime] NULL,
+	[UPDATE_IP] [nvarchar](50) NULL,
+	[IS_RATE] [bit] NULL,
+	[IS_IADE] [bit] NULL
+) ON [PRIMARY]
+GO
+/****** Object:  Table [workcube_devcatalyst_retail].[SEARCH_TABLES]    Script Date: 4.11.2020 12:51:25 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [workcube_devcatalyst_retail].[SEARCH_TABLES](
+	[TABLE_ID] [int] IDENTITY(1,1) NOT NULL,
+	[TABLE_CODE] [nvarchar](50) NULL,
+	[RECORD_DATE] [datetime] NULL,
+	[RECORD_EMP] [int] NULL,
+	[UPDATE_EMP] [int] NULL,
+	[UPDATE_DATE] [datetime] NULL,
+	[TABLE_INFO] [nvarchar](max) NULL,
+	[TABLE_SECRET_CODE] [nvarchar](50) NULL,
+	[IS_MAIN] [bit] NULL,
+	[UPDATE_PAR] [int] NULL,
+ CONSTRAINT [PK_SEARCH_TABLES] PRIMARY KEY CLUSTERED 
+(
+	[TABLE_ID] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+GO
+/****** Object:  Table [workcube_devcatalyst_retail].[SEARCH_TABLES_COLOUMS]    Script Date: 4.11.2020 12:51:25 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [workcube_devcatalyst_retail].[SEARCH_TABLES_COLOUMS](
+	[KOLON_AD] [nvarchar](50) NULL,
+	[KOLON_TIP] [nvarchar](50) NULL,
+	[KOLON_OZELAD] [nvarchar](200) NULL,
+	[KOLON_FILTRE] [bit] NULL,
+	[KOLON_DUZENLEME] [bit] NULL,
+	[KOLON_EN] [nvarchar](50) NULL,
+	[KOLON_SABIT] [bit] NULL,
+	[KOLON_RENDER] [nvarchar](50) NULL,
+	[KOLON_FILTRE_TIPI] [nvarchar](50) NULL,
+	[KOLON_ALIGN] [nvarchar](50) NULL,
+	[ROW_ID] [int] IDENTITY(1,1) NOT NULL,
+	[KOLON_FORMAT] [nvarchar](50) NULL,
+	[KOLON_BEGIN_EDIT] [nvarchar](50) NULL,
+	[KOLON_ARKA] [nvarchar](6) NULL,
+	[KOLON_YAZI] [nvarchar](6) NULL,
+	[KOLON_HEADER] [nvarchar](50) NULL,
+	[KOLON_END_EDIT] [nvarchar](50) NULL,
+	[KOLON_AGG] [nvarchar](50) NULL,
+	[KOLON_HOVER] [nvarchar](50) NULL
+) ON [PRIMARY]
+GO
+SET IDENTITY_INSERT [workcube_devcatalyst_retail].[SEARCH_TABLES_COLOUMS] ON 
+
+GO
+INSERT [workcube_devcatalyst_retail].[SEARCH_TABLES_COLOUMS] ([KOLON_AD], [KOLON_TIP], [KOLON_OZELAD], [KOLON_FILTRE], [KOLON_DUZENLEME], [KOLON_EN], [KOLON_SABIT], [KOLON_RENDER], [KOLON_FILTRE_TIPI], [KOLON_ALIGN], [ROW_ID], [KOLON_FORMAT], [KOLON_BEGIN_EDIT], [KOLON_ARKA], [KOLON_YAZI], [KOLON_HEADER], [KOLON_END_EDIT], [KOLON_AGG], [KOLON_HOVER]) VALUES (N'barcode', NULL, N'2Barkod', 1, 0, N'50', 0, NULL, NULL, N'right', 2, NULL, NULL, N'1966FF', N'FAFFF0', NULL, NULL, NULL, NULL)
+GO
+INSERT [workcube_devcatalyst_retail].[SEARCH_TABLES_COLOUMS] ([KOLON_AD], [KOLON_TIP], [KOLON_OZELAD], [KOLON_FILTRE], [KOLON_DUZENLEME], [KOLON_EN], [KOLON_SABIT], [KOLON_RENDER], [KOLON_FILTRE_TIPI], [KOLON_ALIGN], [ROW_ID], [KOLON_FORMAT], [KOLON_BEGIN_EDIT], [KOLON_ARKA], [KOLON_YAZI], [KOLON_HEADER], [KOLON_END_EDIT], [KOLON_AGG], [KOLON_HOVER]) VALUES (N'product_code_r', NULL, N'3Ür.Kod', 1, 0, N'50', 0, NULL, NULL, N'right', 3, NULL, NULL, N'FFFFFF', N'000000', NULL, NULL, NULL, NULL)
+GO
+INSERT [workcube_devcatalyst_retail].[SEARCH_TABLES_COLOUMS] ([KOLON_AD], [KOLON_TIP], [KOLON_OZELAD], [KOLON_FILTRE], [KOLON_DUZENLEME], [KOLON_EN], [KOLON_SABIT], [KOLON_RENDER], [KOLON_FILTRE_TIPI], [KOLON_ALIGN], [ROW_ID], [KOLON_FORMAT], [KOLON_BEGIN_EDIT], [KOLON_ARKA], [KOLON_YAZI], [KOLON_HEADER], [KOLON_END_EDIT], [KOLON_AGG], [KOLON_HOVER]) VALUES (N'active_row', N'checkbox', N'4Seç', 1, 1, N'50', 0, NULL, N'bool', N'right', 4, NULL, N'cellbeginedit_stok_c', N'2E8A07', N'000000', NULL, NULL, NULL, NULL)
+GO
+INSERT [workcube_devcatalyst_retail].[SEARCH_TABLES_COLOUMS] ([KOLON_AD], [KOLON_TIP], [KOLON_OZELAD], [KOLON_FILTRE], [KOLON_DUZENLEME], [KOLON_EN], [KOLON_SABIT], [KOLON_RENDER], [KOLON_FILTRE_TIPI], [KOLON_ALIGN], [ROW_ID], [KOLON_FORMAT], [KOLON_BEGIN_EDIT], [KOLON_ARKA], [KOLON_YAZI], [KOLON_HEADER], [KOLON_END_EDIT], [KOLON_AGG], [KOLON_HOVER]) VALUES (N'product_name', NULL, N'5Ürün<br>Ad', 1, 1, N'300', 0, N'p_name_render', NULL, N'center', 5, NULL, NULL, N'CFE8FF', N'000000', N'product_name_header', NULL, NULL, NULL)
+GO
+INSERT [workcube_devcatalyst_retail].[SEARCH_TABLES_COLOUMS] ([KOLON_AD], [KOLON_TIP], [KOLON_OZELAD], [KOLON_FILTRE], [KOLON_DUZENLEME], [KOLON_EN], [KOLON_SABIT], [KOLON_RENDER], [KOLON_FILTRE_TIPI], [KOLON_ALIGN], [ROW_ID], [KOLON_FORMAT], [KOLON_BEGIN_EDIT], [KOLON_ARKA], [KOLON_YAZI], [KOLON_HEADER], [KOLON_END_EDIT], [KOLON_AGG], [KOLON_HOVER]) VALUES (N'is_purchase', N'checkbox', N'6Alş<br>Psf', 1, 1, N'50', 0, NULL, N'bool', N'right', 6, NULL, NULL, N'E63917', N'000000', NULL, NULL, NULL, NULL)
+GO
+INSERT [workcube_devcatalyst_retail].[SEARCH_TABLES_COLOUMS] ([KOLON_AD], [KOLON_TIP], [KOLON_OZELAD], [KOLON_FILTRE], [KOLON_DUZENLEME], [KOLON_EN], [KOLON_SABIT], [KOLON_RENDER], [KOLON_FILTRE_TIPI], [KOLON_ALIGN], [ROW_ID], [KOLON_FORMAT], [KOLON_BEGIN_EDIT], [KOLON_ARKA], [KOLON_YAZI], [KOLON_HEADER], [KOLON_END_EDIT], [KOLON_AGG], [KOLON_HOVER]) VALUES (N'is_purchase_c', N'checkbox', N'7D.Alş<br>Psf', 1, 1, N'50', 0, NULL, N'bool', N'right', 7, NULL, NULL, N'FFFFFF', N'000000', NULL, NULL, NULL, NULL)
+GO
+INSERT [workcube_devcatalyst_retail].[SEARCH_TABLES_COLOUMS] ([KOLON_AD], [KOLON_TIP], [KOLON_OZELAD], [KOLON_FILTRE], [KOLON_DUZENLEME], [KOLON_EN], [KOLON_SABIT], [KOLON_RENDER], [KOLON_FILTRE_TIPI], [KOLON_ALIGN], [ROW_ID], [KOLON_FORMAT], [KOLON_BEGIN_EDIT], [KOLON_ARKA], [KOLON_YAZI], [KOLON_HEADER], [KOLON_END_EDIT], [KOLON_AGG], [KOLON_HOVER]) VALUES (N'is_purchase_m', N'checkbox', N'8M.Alş<br>Psf', 1, 1, N'50', 0, NULL, N'bool', N'right', 8, NULL, NULL, N'FFFFFF', N'000000', NULL, NULL, NULL, NULL)
+GO
+INSERT [workcube_devcatalyst_retail].[SEARCH_TABLES_COLOUMS] ([KOLON_AD], [KOLON_TIP], [KOLON_OZELAD], [KOLON_FILTRE], [KOLON_DUZENLEME], [KOLON_EN], [KOLON_SABIT], [KOLON_RENDER], [KOLON_FILTRE_TIPI], [KOLON_ALIGN], [ROW_ID], [KOLON_FORMAT], [KOLON_BEGIN_EDIT], [KOLON_ARKA], [KOLON_YAZI], [KOLON_HEADER], [KOLON_END_EDIT], [KOLON_AGG], [KOLON_HOVER]) VALUES (N'is_sales', N'checkbox', N'9Stş<br>Psf', 1, 1, N'50', 0, NULL, N'bool', N'right', 9, NULL, NULL, N'E63917', N'000000', NULL, NULL, NULL, NULL)
+GO
+INSERT [workcube_devcatalyst_retail].[SEARCH_TABLES_COLOUMS] ([KOLON_AD], [KOLON_TIP], [KOLON_OZELAD], [KOLON_FILTRE], [KOLON_DUZENLEME], [KOLON_EN], [KOLON_SABIT], [KOLON_RENDER], [KOLON_FILTRE_TIPI], [KOLON_ALIGN], [ROW_ID], [KOLON_FORMAT], [KOLON_BEGIN_EDIT], [KOLON_ARKA], [KOLON_YAZI], [KOLON_HEADER], [KOLON_END_EDIT], [KOLON_AGG], [KOLON_HOVER]) VALUES (N'eski_standart_alis_kdvli', N'numberinput', N'10Es.StdF<br>Alş D', 1, 0, N'50', 0, NULL, N'number', N'right', 10, N'c2', NULL, N'BFFFE1', N'B5B5B5', NULL, NULL, NULL, NULL)
+GO
+INSERT [workcube_devcatalyst_retail].[SEARCH_TABLES_COLOUMS] ([KOLON_AD], [KOLON_TIP], [KOLON_OZELAD], [KOLON_FILTRE], [KOLON_DUZENLEME], [KOLON_EN], [KOLON_SABIT], [KOLON_RENDER], [KOLON_FILTRE_TIPI], [KOLON_ALIGN], [ROW_ID], [KOLON_FORMAT], [KOLON_BEGIN_EDIT], [KOLON_ARKA], [KOLON_YAZI], [KOLON_HEADER], [KOLON_END_EDIT], [KOLON_AGG], [KOLON_HOVER]) VALUES (N'eski_standart_satis_kdvli', NULL, N'11Es.StdF<br>Stş D', 1, 0, N'50', 0, NULL, NULL, N'right', 11, N'c2', NULL, N'78FFBB', N'B5B5B5', NULL, NULL, NULL, NULL)
+GO
+INSERT [workcube_devcatalyst_retail].[SEARCH_TABLES_COLOUMS] ([KOLON_AD], [KOLON_TIP], [KOLON_OZELAD], [KOLON_FILTRE], [KOLON_DUZENLEME], [KOLON_EN], [KOLON_SABIT], [KOLON_RENDER], [KOLON_FILTRE_TIPI], [KOLON_ALIGN], [ROW_ID], [KOLON_FORMAT], [KOLON_BEGIN_EDIT], [KOLON_ARKA], [KOLON_YAZI], [KOLON_HEADER], [KOLON_END_EDIT], [KOLON_AGG], [KOLON_HOVER]) VALUES (N'eski_kar', N'currency', N'12E.Kar', 0, 0, N'50', 0, NULL, NULL, N'right', 12, N'p', NULL, N'FFFFFF', N'000000', NULL, NULL, NULL, NULL)
+GO
+INSERT [workcube_devcatalyst_retail].[SEARCH_TABLES_COLOUMS] ([KOLON_AD], [KOLON_TIP], [KOLON_OZELAD], [KOLON_FILTRE], [KOLON_DUZENLEME], [KOLON_EN], [KOLON_SABIT], [KOLON_RENDER], [KOLON_FILTRE_TIPI], [KOLON_ALIGN], [ROW_ID], [KOLON_FORMAT], [KOLON_BEGIN_EDIT], [KOLON_ARKA], [KOLON_YAZI], [KOLON_HEADER], [KOLON_END_EDIT], [KOLON_AGG], [KOLON_HOVER]) VALUES (N'standart_alis_baslangic', NULL, N'13StdF.<br>Alş.Bş.Tar:', 1, 1, N'130', 0, NULL, NULL, N'right', 13, NULL, NULL, N'FFFFFF', N'000000', NULL, NULL, NULL, NULL)
+GO
+INSERT [workcube_devcatalyst_retail].[SEARCH_TABLES_COLOUMS] ([KOLON_AD], [KOLON_TIP], [KOLON_OZELAD], [KOLON_FILTRE], [KOLON_DUZENLEME], [KOLON_EN], [KOLON_SABIT], [KOLON_RENDER], [KOLON_FILTRE_TIPI], [KOLON_ALIGN], [ROW_ID], [KOLON_FORMAT], [KOLON_BEGIN_EDIT], [KOLON_ARKA], [KOLON_YAZI], [KOLON_HEADER], [KOLON_END_EDIT], [KOLON_AGG], [KOLON_HOVER]) VALUES (N'standart_alis', N'numberinput', N'14StdF<br>aliş H', 1, 1, N'75', 0, NULL, N'number', N'right', 14, N'c2', NULL, N'BFFFE1', N'1966FF', NULL, NULL, NULL, NULL)
+GO
+INSERT [workcube_devcatalyst_retail].[SEARCH_TABLES_COLOUMS] ([KOLON_AD], [KOLON_TIP], [KOLON_OZELAD], [KOLON_FILTRE], [KOLON_DUZENLEME], [KOLON_EN], [KOLON_SABIT], [KOLON_RENDER], [KOLON_FILTRE_TIPI], [KOLON_ALIGN], [ROW_ID], [KOLON_FORMAT], [KOLON_BEGIN_EDIT], [KOLON_ARKA], [KOLON_YAZI], [KOLON_HEADER], [KOLON_END_EDIT], [KOLON_AGG], [KOLON_HOVER]) VALUES (N'standart_alis_indirim_yuzde', NULL, N'15StdF.<br>İsk%', 0, 1, N'50', 0, NULL, N'number', N'right', 15, NULL, NULL, N'BFFFE1', N'1966FF', NULL, NULL, NULL, NULL)
+GO
+INSERT [workcube_devcatalyst_retail].[SEARCH_TABLES_COLOUMS] ([KOLON_AD], [KOLON_TIP], [KOLON_OZELAD], [KOLON_FILTRE], [KOLON_DUZENLEME], [KOLON_EN], [KOLON_SABIT], [KOLON_RENDER], [KOLON_FILTRE_TIPI], [KOLON_ALIGN], [ROW_ID], [KOLON_FORMAT], [KOLON_BEGIN_EDIT], [KOLON_ARKA], [KOLON_YAZI], [KOLON_HEADER], [KOLON_END_EDIT], [KOLON_AGG], [KOLON_HOVER]) VALUES (N'standart_alis_indirim_tutar', N'numberinput', N'16StdF.<br>T.İnd.', 0, 1, N'50', 0, NULL, N'number', N'right', 16, N'c2', NULL, N'BFFFE1', N'1966FF', NULL, NULL, NULL, NULL)
+GO
+INSERT [workcube_devcatalyst_retail].[SEARCH_TABLES_COLOUMS] ([KOLON_AD], [KOLON_TIP], [KOLON_OZELAD], [KOLON_FILTRE], [KOLON_DUZENLEME], [KOLON_EN], [KOLON_SABIT], [KOLON_RENDER], [KOLON_FILTRE_TIPI], [KOLON_ALIGN], [ROW_ID], [KOLON_FORMAT], [KOLON_BEGIN_EDIT], [KOLON_ARKA], [KOLON_YAZI], [KOLON_HEADER], [KOLON_END_EDIT], [KOLON_AGG], [KOLON_HOVER]) VALUES (N'standart_alis_liste', NULL, N'17StdF.<br>Nt Alş H', 1, 0, N'50', 0, NULL, N'number', N'right', 17, N'c2', NULL, N'BFFFE1', N'333333', NULL, NULL, NULL, NULL)
+GO
+INSERT [workcube_devcatalyst_retail].[SEARCH_TABLES_COLOUMS] ([KOLON_AD], [KOLON_TIP], [KOLON_OZELAD], [KOLON_FILTRE], [KOLON_DUZENLEME], [KOLON_EN], [KOLON_SABIT], [KOLON_RENDER], [KOLON_FILTRE_TIPI], [KOLON_ALIGN], [ROW_ID], [KOLON_FORMAT], [KOLON_BEGIN_EDIT], [KOLON_ARKA], [KOLON_YAZI], [KOLON_HEADER], [KOLON_END_EDIT], [KOLON_AGG], [KOLON_HOVER]) VALUES (N'standart_alis_kdv', NULL, N'18StdF.<br>Alş Kdv', 1, 0, N'50', 0, NULL, N'number', N'right', 18, NULL, NULL, N'FFFFFF', N'FFEBCD', NULL, NULL, NULL, NULL)
+GO
+INSERT [workcube_devcatalyst_retail].[SEARCH_TABLES_COLOUMS] ([KOLON_AD], [KOLON_TIP], [KOLON_OZELAD], [KOLON_FILTRE], [KOLON_DUZENLEME], [KOLON_EN], [KOLON_SABIT], [KOLON_RENDER], [KOLON_FILTRE_TIPI], [KOLON_ALIGN], [ROW_ID], [KOLON_FORMAT], [KOLON_BEGIN_EDIT], [KOLON_ARKA], [KOLON_YAZI], [KOLON_HEADER], [KOLON_END_EDIT], [KOLON_AGG], [KOLON_HOVER]) VALUES (N'standart_alis_kdvli', NULL, N'19StdF.<br>Alş.D', 1, 0, N'50', 0, NULL, N'number', N'right', 19, N'c2', NULL, N'BFFFE1', N'333333', NULL, NULL, NULL, NULL)
+GO
+INSERT [workcube_devcatalyst_retail].[SEARCH_TABLES_COLOUMS] ([KOLON_AD], [KOLON_TIP], [KOLON_OZELAD], [KOLON_FILTRE], [KOLON_DUZENLEME], [KOLON_EN], [KOLON_SABIT], [KOLON_RENDER], [KOLON_FILTRE_TIPI], [KOLON_ALIGN], [ROW_ID], [KOLON_FORMAT], [KOLON_BEGIN_EDIT], [KOLON_ARKA], [KOLON_YAZI], [KOLON_HEADER], [KOLON_END_EDIT], [KOLON_AGG], [KOLON_HOVER]) VALUES (N'standart_alis_oran', N'currency', N'20StdF.<br>Dğ.Or.', 1, 0, N'50', 0, NULL, N'number', N'right', 20, N'p', NULL, N'36648B', N'CDBE70', NULL, NULL, NULL, NULL)
+GO
+INSERT [workcube_devcatalyst_retail].[SEARCH_TABLES_COLOUMS] ([KOLON_AD], [KOLON_TIP], [KOLON_OZELAD], [KOLON_FILTRE], [KOLON_DUZENLEME], [KOLON_EN], [KOLON_SABIT], [KOLON_RENDER], [KOLON_FILTRE_TIPI], [KOLON_ALIGN], [ROW_ID], [KOLON_FORMAT], [KOLON_BEGIN_EDIT], [KOLON_ARKA], [KOLON_YAZI], [KOLON_HEADER], [KOLON_END_EDIT], [KOLON_AGG], [KOLON_HOVER]) VALUES (N'liste_oran', NULL, N'21Lst.<br>Stş Or.', 1, 0, N'50', 0, N'cellsrenderer2', N'number', N'right', 21, N'c2', NULL, N'000000', N'FF781F', NULL, NULL, NULL, NULL)
+GO
+INSERT [workcube_devcatalyst_retail].[SEARCH_TABLES_COLOUMS] ([KOLON_AD], [KOLON_TIP], [KOLON_OZELAD], [KOLON_FILTRE], [KOLON_DUZENLEME], [KOLON_EN], [KOLON_SABIT], [KOLON_RENDER], [KOLON_FILTRE_TIPI], [KOLON_ALIGN], [ROW_ID], [KOLON_FORMAT], [KOLON_BEGIN_EDIT], [KOLON_ARKA], [KOLON_YAZI], [KOLON_HEADER], [KOLON_END_EDIT], [KOLON_AGG], [KOLON_HOVER]) VALUES (N'standart_satis_baslangic', NULL, N'22StdF.<br>Stş.Bş.Tar:', 1, 1, N'130', 0, NULL, NULL, N'right', 22, NULL, NULL, N'CCFFFF', N'000000', NULL, NULL, NULL, NULL)
+GO
+INSERT [workcube_devcatalyst_retail].[SEARCH_TABLES_COLOUMS] ([KOLON_AD], [KOLON_TIP], [KOLON_OZELAD], [KOLON_FILTRE], [KOLON_DUZENLEME], [KOLON_EN], [KOLON_SABIT], [KOLON_RENDER], [KOLON_FILTRE_TIPI], [KOLON_ALIGN], [ROW_ID], [KOLON_FORMAT], [KOLON_BEGIN_EDIT], [KOLON_ARKA], [KOLON_YAZI], [KOLON_HEADER], [KOLON_END_EDIT], [KOLON_AGG], [KOLON_HOVER]) VALUES (N'standart_satis_kar', N'numberinput', N'23StdF.<br>S.Kar', 1, 1, N'80', 0, NULL, N'number', N'right', 23, N'p', NULL, N'78FFBB', N'1966FF', NULL, NULL, NULL, NULL)
+GO
+INSERT [workcube_devcatalyst_retail].[SEARCH_TABLES_COLOUMS] ([KOLON_AD], [KOLON_TIP], [KOLON_OZELAD], [KOLON_FILTRE], [KOLON_DUZENLEME], [KOLON_EN], [KOLON_SABIT], [KOLON_RENDER], [KOLON_FILTRE_TIPI], [KOLON_ALIGN], [ROW_ID], [KOLON_FORMAT], [KOLON_BEGIN_EDIT], [KOLON_ARKA], [KOLON_YAZI], [KOLON_HEADER], [KOLON_END_EDIT], [KOLON_AGG], [KOLON_HOVER]) VALUES (N'standart_satis', N'numberinput', N'24StdF.<br>Stş.H', 1, 1, N'50', 0, NULL, N'number', N'right', 24, N'c2', NULL, N'78FFBB', N'333333', NULL, NULL, NULL, NULL)
+GO
+INSERT [workcube_devcatalyst_retail].[SEARCH_TABLES_COLOUMS] ([KOLON_AD], [KOLON_TIP], [KOLON_OZELAD], [KOLON_FILTRE], [KOLON_DUZENLEME], [KOLON_EN], [KOLON_SABIT], [KOLON_RENDER], [KOLON_FILTRE_TIPI], [KOLON_ALIGN], [ROW_ID], [KOLON_FORMAT], [KOLON_BEGIN_EDIT], [KOLON_ARKA], [KOLON_YAZI], [KOLON_HEADER], [KOLON_END_EDIT], [KOLON_AGG], [KOLON_HOVER]) VALUES (N'satis_kdv', NULL, N'25Stş.<br>kdv', 1, 0, N'50', 0, NULL, N'number', N'right', 25, NULL, NULL, N'996666', N'000000', NULL, NULL, NULL, NULL)
+GO
+INSERT [workcube_devcatalyst_retail].[SEARCH_TABLES_COLOUMS] ([KOLON_AD], [KOLON_TIP], [KOLON_OZELAD], [KOLON_FILTRE], [KOLON_DUZENLEME], [KOLON_EN], [KOLON_SABIT], [KOLON_RENDER], [KOLON_FILTRE_TIPI], [KOLON_ALIGN], [ROW_ID], [KOLON_FORMAT], [KOLON_BEGIN_EDIT], [KOLON_ARKA], [KOLON_YAZI], [KOLON_HEADER], [KOLON_END_EDIT], [KOLON_AGG], [KOLON_HOVER]) VALUES (N'standart_satis_kdv', N'numberinput', N'26Stdf.<br>Stş.D', 1, 1, N'50', 0, NULL, N'number', N'right', 26, N'c2', NULL, N'78FFBB', N'1966FF', NULL, NULL, NULL, NULL)
+GO
+INSERT [workcube_devcatalyst_retail].[SEARCH_TABLES_COLOUMS] ([KOLON_AD], [KOLON_TIP], [KOLON_OZELAD], [KOLON_FILTRE], [KOLON_DUZENLEME], [KOLON_EN], [KOLON_SABIT], [KOLON_RENDER], [KOLON_FILTRE_TIPI], [KOLON_ALIGN], [ROW_ID], [KOLON_FORMAT], [KOLON_BEGIN_EDIT], [KOLON_ARKA], [KOLON_YAZI], [KOLON_HEADER], [KOLON_END_EDIT], [KOLON_AGG], [KOLON_HOVER]) VALUES (N'is_standart_satis_aktif', N'checkbox', N'27StdF.<br>sat.aktifmi ?', 1, 1, N'50', 0, NULL, N'bool', N'right', 27, NULL, NULL, N'F7E0D2', N'FFEBCD', NULL, NULL, NULL, NULL)
+GO
+INSERT [workcube_devcatalyst_retail].[SEARCH_TABLES_COLOUMS] ([KOLON_AD], [KOLON_TIP], [KOLON_OZELAD], [KOLON_FILTRE], [KOLON_DUZENLEME], [KOLON_EN], [KOLON_SABIT], [KOLON_RENDER], [KOLON_FILTRE_TIPI], [KOLON_ALIGN], [ROW_ID], [KOLON_FORMAT], [KOLON_BEGIN_EDIT], [KOLON_ARKA], [KOLON_YAZI], [KOLON_HEADER], [KOLON_END_EDIT], [KOLON_AGG], [KOLON_HOVER]) VALUES (N'standart_satis_oran', N'currency', N'28Std.<br>sat.or ?', 1, 0, N'50', 0, NULL, N'number', N'right', 28, N'p', NULL, N'CCFFFF', N'000000', NULL, NULL, NULL, NULL)
+GO
+INSERT [workcube_devcatalyst_retail].[SEARCH_TABLES_COLOUMS] ([KOLON_AD], [KOLON_TIP], [KOLON_OZELAD], [KOLON_FILTRE], [KOLON_DUZENLEME], [KOLON_EN], [KOLON_SABIT], [KOLON_RENDER], [KOLON_FILTRE_TIPI], [KOLON_ALIGN], [ROW_ID], [KOLON_FORMAT], [KOLON_BEGIN_EDIT], [KOLON_ARKA], [KOLON_YAZI], [KOLON_HEADER], [KOLON_END_EDIT], [KOLON_AGG], [KOLON_HOVER]) VALUES (N'standart_alis_kar', N'currency', N'29StdF<br>.A.Kar', 0, 0, N'50', 0, NULL, N'number', N'right', 29, N'p', NULL, N'36648B', N'CDBE70', NULL, NULL, NULL, NULL)
+GO
+INSERT [workcube_devcatalyst_retail].[SEARCH_TABLES_COLOUMS] ([KOLON_AD], [KOLON_TIP], [KOLON_OZELAD], [KOLON_FILTRE], [KOLON_DUZENLEME], [KOLON_EN], [KOLON_SABIT], [KOLON_RENDER], [KOLON_FILTRE_TIPI], [KOLON_ALIGN], [ROW_ID], [KOLON_FORMAT], [KOLON_BEGIN_EDIT], [KOLON_ARKA], [KOLON_YAZI], [KOLON_HEADER], [KOLON_END_EDIT], [KOLON_AGG], [KOLON_HOVER]) VALUES (N'price_type', N'dropdownlist', N'30F.Tip', 1, 1, N'148', 0, NULL, N'checkedlist', N'right', 30, NULL, NULL, N'FFFFFF', N'000000', NULL, NULL, NULL, NULL)
+GO
+INSERT [workcube_devcatalyst_retail].[SEARCH_TABLES_COLOUMS] ([KOLON_AD], [KOLON_TIP], [KOLON_OZELAD], [KOLON_FILTRE], [KOLON_DUZENLEME], [KOLON_EN], [KOLON_SABIT], [KOLON_RENDER], [KOLON_FILTRE_TIPI], [KOLON_ALIGN], [ROW_ID], [KOLON_FORMAT], [KOLON_BEGIN_EDIT], [KOLON_ARKA], [KOLON_YAZI], [KOLON_HEADER], [KOLON_END_EDIT], [KOLON_AGG], [KOLON_HOVER]) VALUES (N'alis_kar', NULL, N'31ÖF.<br>A.Kar', 1, 0, N'50', 0, NULL, N'number', N'right', 31, N'p', NULL, N'363636', N'333333', NULL, NULL, NULL, NULL)
+GO
+INSERT [workcube_devcatalyst_retail].[SEARCH_TABLES_COLOUMS] ([KOLON_AD], [KOLON_TIP], [KOLON_OZELAD], [KOLON_FILTRE], [KOLON_DUZENLEME], [KOLON_EN], [KOLON_SABIT], [KOLON_RENDER], [KOLON_FILTRE_TIPI], [KOLON_ALIGN], [ROW_ID], [KOLON_FORMAT], [KOLON_BEGIN_EDIT], [KOLON_ARKA], [KOLON_YAZI], [KOLON_HEADER], [KOLON_END_EDIT], [KOLON_AGG], [KOLON_HOVER]) VALUES (N'p_startdate', NULL, N'32.ÖF.<br>Alş.Bş.Tar:', 1, 1, N'148', 0, NULL, N'number', N'right', 32, NULL, NULL, N'F9F0D0', N'000000', NULL, NULL, NULL, NULL)
+GO
+INSERT [workcube_devcatalyst_retail].[SEARCH_TABLES_COLOUMS] ([KOLON_AD], [KOLON_TIP], [KOLON_OZELAD], [KOLON_FILTRE], [KOLON_DUZENLEME], [KOLON_EN], [KOLON_SABIT], [KOLON_RENDER], [KOLON_FILTRE_TIPI], [KOLON_ALIGN], [ROW_ID], [KOLON_FORMAT], [KOLON_BEGIN_EDIT], [KOLON_ARKA], [KOLON_YAZI], [KOLON_HEADER], [KOLON_END_EDIT], [KOLON_AGG], [KOLON_HOVER]) VALUES (N'p_finishdate', NULL, N'32.ÖF.<br>Alş.Bt.Tar:', 1, 1, N'148', 0, NULL, NULL, N'right', 33, NULL, NULL, N'F9F0D0', N'000000', NULL, NULL, NULL, NULL)
+GO
+INSERT [workcube_devcatalyst_retail].[SEARCH_TABLES_COLOUMS] ([KOLON_AD], [KOLON_TIP], [KOLON_OZELAD], [KOLON_FILTRE], [KOLON_DUZENLEME], [KOLON_EN], [KOLON_SABIT], [KOLON_RENDER], [KOLON_FILTRE_TIPI], [KOLON_ALIGN], [ROW_ID], [KOLON_FORMAT], [KOLON_BEGIN_EDIT], [KOLON_ARKA], [KOLON_YAZI], [KOLON_HEADER], [KOLON_END_EDIT], [KOLON_AGG], [KOLON_HOVER]) VALUES (N'product_id', NULL, N'33.F', 0, 0, N'80', 0, N'pricedetailrenderer', N'number', N'right', 34, NULL, NULL, N'F9F0D0', N'000000', NULL, NULL, NULL, NULL)
+GO
+INSERT [workcube_devcatalyst_retail].[SEARCH_TABLES_COLOUMS] ([KOLON_AD], [KOLON_TIP], [KOLON_OZELAD], [KOLON_FILTRE], [KOLON_DUZENLEME], [KOLON_EN], [KOLON_SABIT], [KOLON_RENDER], [KOLON_FILTRE_TIPI], [KOLON_ALIGN], [ROW_ID], [KOLON_FORMAT], [KOLON_BEGIN_EDIT], [KOLON_ARKA], [KOLON_YAZI], [KOLON_HEADER], [KOLON_END_EDIT], [KOLON_AGG], [KOLON_HOVER]) VALUES (N'new_alis_start', NULL, N'34.ÖF.<br>Alış H', 1, 1, N'50', 0, NULL, N'number', N'right', 35, N'c2', NULL, N'000000', N'54FF9F', NULL, NULL, NULL, NULL)
+GO
+INSERT [workcube_devcatalyst_retail].[SEARCH_TABLES_COLOUMS] ([KOLON_AD], [KOLON_TIP], [KOLON_OZELAD], [KOLON_FILTRE], [KOLON_DUZENLEME], [KOLON_EN], [KOLON_SABIT], [KOLON_RENDER], [KOLON_FILTRE_TIPI], [KOLON_ALIGN], [ROW_ID], [KOLON_FORMAT], [KOLON_BEGIN_EDIT], [KOLON_ARKA], [KOLON_YAZI], [KOLON_HEADER], [KOLON_END_EDIT], [KOLON_AGG], [KOLON_HOVER]) VALUES (N'sales_discount', NULL, N'35ÖF.<br>İnd.%', 0, 1, N'50', 0, NULL, NULL, N'right', 36, NULL, NULL, N'363636', N'B5B5B5', NULL, NULL, NULL, NULL)
+GO
+INSERT [workcube_devcatalyst_retail].[SEARCH_TABLES_COLOUMS] ([KOLON_AD], [KOLON_TIP], [KOLON_OZELAD], [KOLON_FILTRE], [KOLON_DUZENLEME], [KOLON_EN], [KOLON_SABIT], [KOLON_RENDER], [KOLON_FILTRE_TIPI], [KOLON_ALIGN], [ROW_ID], [KOLON_FORMAT], [KOLON_BEGIN_EDIT], [KOLON_ARKA], [KOLON_YAZI], [KOLON_HEADER], [KOLON_END_EDIT], [KOLON_AGG], [KOLON_HOVER]) VALUES (N'p_discount_manuel', N'numberinput', N'35ÖF.Tut<br>.İnd', 0, 1, N'50', 0, NULL, NULL, N'right', 37, N'c2', NULL, N'363636', N'B5B5B5', NULL, NULL, NULL, NULL)
+GO
+INSERT [workcube_devcatalyst_retail].[SEARCH_TABLES_COLOUMS] ([KOLON_AD], [KOLON_TIP], [KOLON_OZELAD], [KOLON_FILTRE], [KOLON_DUZENLEME], [KOLON_EN], [KOLON_SABIT], [KOLON_RENDER], [KOLON_FILTRE_TIPI], [KOLON_ALIGN], [ROW_ID], [KOLON_FORMAT], [KOLON_BEGIN_EDIT], [KOLON_ARKA], [KOLON_YAZI], [KOLON_HEADER], [KOLON_END_EDIT], [KOLON_AGG], [KOLON_HOVER]) VALUES (N'new_alis', NULL, N'36ÖF.<br>Nt.Alş.H', 1, 0, N'50', 0, NULL, N'number', N'right', 38, N'c2', NULL, N'363636', N'B5B5B5', NULL, NULL, NULL, NULL)
+GO
+INSERT [workcube_devcatalyst_retail].[SEARCH_TABLES_COLOUMS] ([KOLON_AD], [KOLON_TIP], [KOLON_OZELAD], [KOLON_FILTRE], [KOLON_DUZENLEME], [KOLON_EN], [KOLON_SABIT], [KOLON_RENDER], [KOLON_FILTRE_TIPI], [KOLON_ALIGN], [ROW_ID], [KOLON_FORMAT], [KOLON_BEGIN_EDIT], [KOLON_ARKA], [KOLON_YAZI], [KOLON_HEADER], [KOLON_END_EDIT], [KOLON_AGG], [KOLON_HOVER]) VALUES (N'new_alis_kdvli', NULL, N'37ÖF.<br>Net.Alş.D', 1, 0, N'50', 0, NULL, N'number', N'right', 39, N'c2', NULL, N'363636', N'FF781F', NULL, NULL, NULL, NULL)
+GO
+INSERT [workcube_devcatalyst_retail].[SEARCH_TABLES_COLOUMS] ([KOLON_AD], [KOLON_TIP], [KOLON_OZELAD], [KOLON_FILTRE], [KOLON_DUZENLEME], [KOLON_EN], [KOLON_SABIT], [KOLON_RENDER], [KOLON_FILTRE_TIPI], [KOLON_ALIGN], [ROW_ID], [KOLON_FORMAT], [KOLON_BEGIN_EDIT], [KOLON_ARKA], [KOLON_YAZI], [KOLON_HEADER], [KOLON_END_EDIT], [KOLON_AGG], [KOLON_HOVER]) VALUES (N'is_active_p', N'checkbox', N'38ÖF.<br>Alş Onay', 0, 1, N'50', 0, NULL, N'bool', N'right', 40, NULL, NULL, N'ADFF2F', N'000000', NULL, NULL, NULL, NULL)
+GO
+INSERT [workcube_devcatalyst_retail].[SEARCH_TABLES_COLOUMS] ([KOLON_AD], [KOLON_TIP], [KOLON_OZELAD], [KOLON_FILTRE], [KOLON_DUZENLEME], [KOLON_EN], [KOLON_SABIT], [KOLON_RENDER], [KOLON_FILTRE_TIPI], [KOLON_ALIGN], [ROW_ID], [KOLON_FORMAT], [KOLON_BEGIN_EDIT], [KOLON_ARKA], [KOLON_YAZI], [KOLON_HEADER], [KOLON_END_EDIT], [KOLON_AGG], [KOLON_HOVER]) VALUES (N'p_ss_marj', NULL, N'39ÖF.<br>Stş Kar', 1, 1, N'80', 0, NULL, N'number', N'right', 41, N'p', NULL, N'000000', N'54FF9F', NULL, NULL, NULL, NULL)
+GO
+INSERT [workcube_devcatalyst_retail].[SEARCH_TABLES_COLOUMS] ([KOLON_AD], [KOLON_TIP], [KOLON_OZELAD], [KOLON_FILTRE], [KOLON_DUZENLEME], [KOLON_EN], [KOLON_SABIT], [KOLON_RENDER], [KOLON_FILTRE_TIPI], [KOLON_ALIGN], [ROW_ID], [KOLON_FORMAT], [KOLON_BEGIN_EDIT], [KOLON_ARKA], [KOLON_YAZI], [KOLON_HEADER], [KOLON_END_EDIT], [KOLON_AGG], [KOLON_HOVER]) VALUES (N'startdate', NULL, N'40ÖF.<br>Stş Bş.Tar.', 1, 1, N'148', 0, NULL, NULL, N'right', 42, NULL, NULL, N'EAD899', N'000000', NULL, NULL, NULL, NULL)
+GO
+INSERT [workcube_devcatalyst_retail].[SEARCH_TABLES_COLOUMS] ([KOLON_AD], [KOLON_TIP], [KOLON_OZELAD], [KOLON_FILTRE], [KOLON_DUZENLEME], [KOLON_EN], [KOLON_SABIT], [KOLON_RENDER], [KOLON_FILTRE_TIPI], [KOLON_ALIGN], [ROW_ID], [KOLON_FORMAT], [KOLON_BEGIN_EDIT], [KOLON_ARKA], [KOLON_YAZI], [KOLON_HEADER], [KOLON_END_EDIT], [KOLON_AGG], [KOLON_HOVER]) VALUES (N'finishdate', NULL, N'41ÖF.<br>Stş Bt.Tar.', 1, 1, N'148', 0, NULL, NULL, N'right', 43, NULL, NULL, N'EAD899', N'000000', NULL, NULL, NULL, NULL)
+GO
+INSERT [workcube_devcatalyst_retail].[SEARCH_TABLES_COLOUMS] ([KOLON_AD], [KOLON_TIP], [KOLON_OZELAD], [KOLON_FILTRE], [KOLON_DUZENLEME], [KOLON_EN], [KOLON_SABIT], [KOLON_RENDER], [KOLON_FILTRE_TIPI], [KOLON_ALIGN], [ROW_ID], [KOLON_FORMAT], [KOLON_BEGIN_EDIT], [KOLON_ARKA], [KOLON_YAZI], [KOLON_HEADER], [KOLON_END_EDIT], [KOLON_AGG], [KOLON_HOVER]) VALUES (N'first_satis_price', NULL, N'42ÖF.<br>Stş H', 1, 0, N'50', 0, N'first_satis_price_renderer', N'number', N'right', 44, N'c2', NULL, N'363636', N'B5B5B5', NULL, NULL, NULL, NULL)
+GO
+INSERT [workcube_devcatalyst_retail].[SEARCH_TABLES_COLOUMS] ([KOLON_AD], [KOLON_TIP], [KOLON_OZELAD], [KOLON_FILTRE], [KOLON_DUZENLEME], [KOLON_EN], [KOLON_SABIT], [KOLON_RENDER], [KOLON_FILTRE_TIPI], [KOLON_ALIGN], [ROW_ID], [KOLON_FORMAT], [KOLON_BEGIN_EDIT], [KOLON_ARKA], [KOLON_YAZI], [KOLON_HEADER], [KOLON_END_EDIT], [KOLON_AGG], [KOLON_HOVER]) VALUES (N'first_satis_price_kdv', N'numberinput', N'43ÖF.<br>Stş D', 1, 1, N'50', 0, NULL, N'number', N'right', 45, N'c2', NULL, N'000000', N'FF781F', NULL, NULL, NULL, NULL)
+GO
+INSERT [workcube_devcatalyst_retail].[SEARCH_TABLES_COLOUMS] ([KOLON_AD], [KOLON_TIP], [KOLON_OZELAD], [KOLON_FILTRE], [KOLON_DUZENLEME], [KOLON_EN], [KOLON_SABIT], [KOLON_RENDER], [KOLON_FILTRE_TIPI], [KOLON_ALIGN], [ROW_ID], [KOLON_FORMAT], [KOLON_BEGIN_EDIT], [KOLON_ARKA], [KOLON_YAZI], [KOLON_HEADER], [KOLON_END_EDIT], [KOLON_AGG], [KOLON_HOVER]) VALUES (N'satis_standart_satis_oran', NULL, N'44std.<br>sat.or?', 1, 0, N'50', 0, NULL, N'number', N'right', 46, N'p', NULL, N'EAD899', N'000000', NULL, NULL, NULL, NULL)
+GO
+INSERT [workcube_devcatalyst_retail].[SEARCH_TABLES_COLOUMS] ([KOLON_AD], [KOLON_TIP], [KOLON_OZELAD], [KOLON_FILTRE], [KOLON_DUZENLEME], [KOLON_EN], [KOLON_SABIT], [KOLON_RENDER], [KOLON_FILTRE_TIPI], [KOLON_ALIGN], [ROW_ID], [KOLON_FORMAT], [KOLON_BEGIN_EDIT], [KOLON_ARKA], [KOLON_YAZI], [KOLON_HEADER], [KOLON_END_EDIT], [KOLON_AGG], [KOLON_HOVER]) VALUES (N'is_active_s', N'checkbox', N'45ÖF.<br>STŞ Onay', 0, 1, N'50', 0, NULL, N'bool', N'right', 47, NULL, NULL, N'217056', N'000000', NULL, NULL, NULL, NULL)
+GO
+INSERT [workcube_devcatalyst_retail].[SEARCH_TABLES_COLOUMS] ([KOLON_AD], [KOLON_TIP], [KOLON_OZELAD], [KOLON_FILTRE], [KOLON_DUZENLEME], [KOLON_EN], [KOLON_SABIT], [KOLON_RENDER], [KOLON_FILTRE_TIPI], [KOLON_ALIGN], [ROW_ID], [KOLON_FORMAT], [KOLON_BEGIN_EDIT], [KOLON_ARKA], [KOLON_YAZI], [KOLON_HEADER], [KOLON_END_EDIT], [KOLON_AGG], [KOLON_HOVER]) VALUES (N'dueday', NULL, N'46<br>vade', 1, 1, N'50', 0, NULL, N'number', N'right', 48, NULL, NULL, N'EAD899', N'000000', NULL, NULL, NULL, NULL)
+GO
+INSERT [workcube_devcatalyst_retail].[SEARCH_TABLES_COLOUMS] ([KOLON_AD], [KOLON_TIP], [KOLON_OZELAD], [KOLON_FILTRE], [KOLON_DUZENLEME], [KOLON_EN], [KOLON_SABIT], [KOLON_RENDER], [KOLON_FILTRE_TIPI], [KOLON_ALIGN], [ROW_ID], [KOLON_FORMAT], [KOLON_BEGIN_EDIT], [KOLON_ARKA], [KOLON_YAZI], [KOLON_HEADER], [KOLON_END_EDIT], [KOLON_AGG], [KOLON_HOVER]) VALUES (N'maliyet', NULL, N'47<br>maliyet?', 1, 0, N'50', 0, N'maliyetrenderer', N'number', N'right', 49, N'c2', NULL, N'FFFFFF', N'000000', NULL, NULL, NULL, NULL)
+GO
+INSERT [workcube_devcatalyst_retail].[SEARCH_TABLES_COLOUMS] ([KOLON_AD], [KOLON_TIP], [KOLON_OZELAD], [KOLON_FILTRE], [KOLON_DUZENLEME], [KOLON_EN], [KOLON_SABIT], [KOLON_RENDER], [KOLON_FILTRE_TIPI], [KOLON_ALIGN], [ROW_ID], [KOLON_FORMAT], [KOLON_BEGIN_EDIT], [KOLON_ARKA], [KOLON_YAZI], [KOLON_HEADER], [KOLON_END_EDIT], [KOLON_AGG], [KOLON_HOVER]) VALUES (N'avg_rival', NULL, N'48Rakip<br> Fiyat', 1, 0, N'50', 0, N'rivalrenderer', N'number', N'right', 50, N'c2', NULL, N'FFFFFF', N'000000', NULL, NULL, NULL, NULL)
+GO
+INSERT [workcube_devcatalyst_retail].[SEARCH_TABLES_COLOUMS] ([KOLON_AD], [KOLON_TIP], [KOLON_OZELAD], [KOLON_FILTRE], [KOLON_DUZENLEME], [KOLON_EN], [KOLON_SABIT], [KOLON_RENDER], [KOLON_FILTRE_TIPI], [KOLON_ALIGN], [ROW_ID], [KOLON_FORMAT], [KOLON_BEGIN_EDIT], [KOLON_ARKA], [KOLON_YAZI], [KOLON_HEADER], [KOLON_END_EDIT], [KOLON_AGG], [KOLON_HOVER]) VALUES (N'ortalama_satis_gunu', NULL, N'49Gün<br>Ort.Stş', 1, 0, N'50', 0, NULL, N'number', N'right', 51, N'c2', NULL, N'000000', N'FF781F', NULL, NULL, NULL, NULL)
+GO
+INSERT [workcube_devcatalyst_retail].[SEARCH_TABLES_COLOUMS] ([KOLON_AD], [KOLON_TIP], [KOLON_OZELAD], [KOLON_FILTRE], [KOLON_DUZENLEME], [KOLON_EN], [KOLON_SABIT], [KOLON_RENDER], [KOLON_FILTRE_TIPI], [KOLON_ALIGN], [ROW_ID], [KOLON_FORMAT], [KOLON_BEGIN_EDIT], [KOLON_ARKA], [KOLON_YAZI], [KOLON_HEADER], [KOLON_END_EDIT], [KOLON_AGG], [KOLON_HOVER]) VALUES (N'stok_yeterlilik_suresi', NULL, N'50Stk<br>Yeter', 1, 0, N'50', 0, NULL, N'number', N'right', 52, N'c2', NULL, N'000000', N'FF781F', NULL, NULL, NULL, NULL)
+GO
+INSERT [workcube_devcatalyst_retail].[SEARCH_TABLES_COLOUMS] ([KOLON_AD], [KOLON_TIP], [KOLON_OZELAD], [KOLON_FILTRE], [KOLON_DUZENLEME], [KOLON_EN], [KOLON_SABIT], [KOLON_RENDER], [KOLON_FILTRE_TIPI], [KOLON_ALIGN], [ROW_ID], [KOLON_FORMAT], [KOLON_BEGIN_EDIT], [KOLON_ARKA], [KOLON_YAZI], [KOLON_HEADER], [KOLON_END_EDIT], [KOLON_AGG], [KOLON_HOVER]) VALUES (N'stok_devir_hizi', NULL, N'51Stk<br>Dev.Hız', 1, 0, N'50', 0, NULL, N'number', N'right', 53, N'c2', NULL, N'BFBFBF', N'000000', NULL, NULL, NULL, NULL)
+GO
+INSERT [workcube_devcatalyst_retail].[SEARCH_TABLES_COLOUMS] ([KOLON_AD], [KOLON_TIP], [KOLON_OZELAD], [KOLON_FILTRE], [KOLON_DUZENLEME], [KOLON_EN], [KOLON_SABIT], [KOLON_RENDER], [KOLON_FILTRE_TIPI], [KOLON_ALIGN], [ROW_ID], [KOLON_FORMAT], [KOLON_BEGIN_EDIT], [KOLON_ARKA], [KOLON_YAZI], [KOLON_HEADER], [KOLON_END_EDIT], [KOLON_AGG], [KOLON_HOVER]) VALUES (N'gun_total', NULL, N'52min max <br>gün?', 1, 0, N'50', 0, N'cellsrenderer', N'number', N'right', 54, N'c2', NULL, N'BFBFBF', N'000000', NULL, NULL, NULL, NULL)
+GO
+INSERT [workcube_devcatalyst_retail].[SEARCH_TABLES_COLOUMS] ([KOLON_AD], [KOLON_TIP], [KOLON_OZELAD], [KOLON_FILTRE], [KOLON_DUZENLEME], [KOLON_EN], [KOLON_SABIT], [KOLON_RENDER], [KOLON_FILTRE_TIPI], [KOLON_ALIGN], [ROW_ID], [KOLON_FORMAT], [KOLON_BEGIN_EDIT], [KOLON_ARKA], [KOLON_YAZI], [KOLON_HEADER], [KOLON_END_EDIT], [KOLON_AGG], [KOLON_HOVER]) VALUES (N'genel_stok_tutar', NULL, N'53Stk<br>Gnl.Tut', 1, 0, N'50', 0, NULL, N'number', N'right', 55, N'c2', NULL, N'E6F8BA', N'000000', NULL, NULL, NULL, NULL)
+GO
+INSERT [workcube_devcatalyst_retail].[SEARCH_TABLES_COLOUMS] ([KOLON_AD], [KOLON_TIP], [KOLON_OZELAD], [KOLON_FILTRE], [KOLON_DUZENLEME], [KOLON_EN], [KOLON_SABIT], [KOLON_RENDER], [KOLON_FILTRE_TIPI], [KOLON_ALIGN], [ROW_ID], [KOLON_FORMAT], [KOLON_BEGIN_EDIT], [KOLON_ARKA], [KOLON_YAZI], [KOLON_HEADER], [KOLON_END_EDIT], [KOLON_AGG], [KOLON_HOVER]) VALUES (N'stok_dagitim', NULL, N'54stok dagıtım?', 0, 0, N'50', 0, NULL, NULL, N'right', 56, NULL, NULL, N'FFFFFF', N'000000', NULL, NULL, NULL, NULL)
+GO
+INSERT [workcube_devcatalyst_retail].[SEARCH_TABLES_COLOUMS] ([KOLON_AD], [KOLON_TIP], [KOLON_OZELAD], [KOLON_FILTRE], [KOLON_DUZENLEME], [KOLON_EN], [KOLON_SABIT], [KOLON_RENDER], [KOLON_FILTRE_TIPI], [KOLON_ALIGN], [ROW_ID], [KOLON_FORMAT], [KOLON_BEGIN_EDIT], [KOLON_ARKA], [KOLON_YAZI], [KOLON_HEADER], [KOLON_END_EDIT], [KOLON_AGG], [KOLON_HOVER]) VALUES (N'urun_stok', NULL, N'55Stok<br>Mk.Gnl', 1, 0, N'50', 0, N'stockdetayrenderer', N'number', N'right', 57, N'c2', NULL, N'444444', N'1E90FF', NULL, NULL, NULL, NULL)
+GO
+INSERT [workcube_devcatalyst_retail].[SEARCH_TABLES_COLOUMS] ([KOLON_AD], [KOLON_TIP], [KOLON_OZELAD], [KOLON_FILTRE], [KOLON_DUZENLEME], [KOLON_EN], [KOLON_SABIT], [KOLON_RENDER], [KOLON_FILTRE_TIPI], [KOLON_ALIGN], [ROW_ID], [KOLON_FORMAT], [KOLON_BEGIN_EDIT], [KOLON_ARKA], [KOLON_YAZI], [KOLON_HEADER], [KOLON_END_EDIT], [KOLON_AGG], [KOLON_HOVER]) VALUES (N'depo_stok', NULL, N'56Stok<br>Mk.Depo', 1, 0, N'50', 0, NULL, N'number', N'right', 58, N'c2', NULL, N'444444', N'E0FFFF', NULL, NULL, NULL, NULL)
+GO
+INSERT [workcube_devcatalyst_retail].[SEARCH_TABLES_COLOUMS] ([KOLON_AD], [KOLON_TIP], [KOLON_OZELAD], [KOLON_FILTRE], [KOLON_DUZENLEME], [KOLON_EN], [KOLON_SABIT], [KOLON_RENDER], [KOLON_FILTRE_TIPI], [KOLON_ALIGN], [ROW_ID], [KOLON_FORMAT], [KOLON_BEGIN_EDIT], [KOLON_ARKA], [KOLON_YAZI], [KOLON_HEADER], [KOLON_END_EDIT], [KOLON_AGG], [KOLON_HOVER]) VALUES (N'magaza_stok', NULL, N'57Stok<br>Mk.Şube', 1, 0, N'50', 0, NULL, N'number', N'right', 59, N'c2', NULL, N'444444', N'87CEFF', NULL, NULL, NULL, NULL)
+GO
+INSERT [workcube_devcatalyst_retail].[SEARCH_TABLES_COLOUMS] ([KOLON_AD], [KOLON_TIP], [KOLON_OZELAD], [KOLON_FILTRE], [KOLON_DUZENLEME], [KOLON_EN], [KOLON_SABIT], [KOLON_RENDER], [KOLON_FILTRE_TIPI], [KOLON_ALIGN], [ROW_ID], [KOLON_FORMAT], [KOLON_BEGIN_EDIT], [KOLON_ARKA], [KOLON_YAZI], [KOLON_HEADER], [KOLON_END_EDIT], [KOLON_AGG], [KOLON_HOVER]) VALUES (N'yoldaki_stok', NULL, N'58Sip.<br>Bakiye', 1, 0, N'50', 0, N'yoldakistokrenderer', N'number', N'right', 60, N'c2', NULL, N'000000', N'FF00CC', NULL, NULL, NULL, NULL)
+GO
+INSERT [workcube_devcatalyst_retail].[SEARCH_TABLES_COLOUMS] ([KOLON_AD], [KOLON_TIP], [KOLON_OZELAD], [KOLON_FILTRE], [KOLON_DUZENLEME], [KOLON_EN], [KOLON_SABIT], [KOLON_RENDER], [KOLON_FILTRE_TIPI], [KOLON_ALIGN], [ROW_ID], [KOLON_FORMAT], [KOLON_BEGIN_EDIT], [KOLON_ARKA], [KOLON_YAZI], [KOLON_HEADER], [KOLON_END_EDIT], [KOLON_AGG], [KOLON_HOVER]) VALUES (N'carpan', NULL, N'59Koli', 1, 0, N'50', 0, NULL, N'number', N'right', 61, NULL, NULL, N'FFFFFF', N'000000', NULL, NULL, NULL, NULL)
+GO
+INSERT [workcube_devcatalyst_retail].[SEARCH_TABLES_COLOUMS] ([KOLON_AD], [KOLON_TIP], [KOLON_OZELAD], [KOLON_FILTRE], [KOLON_DUZENLEME], [KOLON_EN], [KOLON_SABIT], [KOLON_RENDER], [KOLON_FILTRE_TIPI], [KOLON_ALIGN], [ROW_ID], [KOLON_FORMAT], [KOLON_BEGIN_EDIT], [KOLON_ARKA], [KOLON_YAZI], [KOLON_HEADER], [KOLON_END_EDIT], [KOLON_AGG], [KOLON_HOVER]) VALUES (N'carpan2', NULL, N'60Palet', 1, 0, N'50', 0, NULL, NULL, N'right', 62, NULL, NULL, N'FFFFFF', N'000000', NULL, NULL, NULL, NULL)
+GO
+INSERT [workcube_devcatalyst_retail].[SEARCH_TABLES_COLOUMS] ([KOLON_AD], [KOLON_TIP], [KOLON_OZELAD], [KOLON_FILTRE], [KOLON_DUZENLEME], [KOLON_EN], [KOLON_SABIT], [KOLON_RENDER], [KOLON_FILTRE_TIPI], [KOLON_ALIGN], [ROW_ID], [KOLON_FORMAT], [KOLON_BEGIN_EDIT], [KOLON_ARKA], [KOLON_YAZI], [KOLON_HEADER], [KOLON_END_EDIT], [KOLON_AGG], [KOLON_HOVER]) VALUES (N'add_stock_gun', NULL, N'61ilave gün?', 1, 1, N'50', 0, NULL, N'number', N'right', 63, N'c0', NULL, N'E6F8BA', N'FF150D', NULL, NULL, NULL, NULL)
+GO
+INSERT [workcube_devcatalyst_retail].[SEARCH_TABLES_COLOUMS] ([KOLON_AD], [KOLON_TIP], [KOLON_OZELAD], [KOLON_FILTRE], [KOLON_DUZENLEME], [KOLON_EN], [KOLON_SABIT], [KOLON_RENDER], [KOLON_FILTRE_TIPI], [KOLON_ALIGN], [ROW_ID], [KOLON_FORMAT], [KOLON_BEGIN_EDIT], [KOLON_ARKA], [KOLON_YAZI], [KOLON_HEADER], [KOLON_END_EDIT], [KOLON_AGG], [KOLON_HOVER]) VALUES (N'oneri_siparis', NULL, N'62sip.<br>Öneri', 0, 0, N'50', 0, NULL, N'number', N'right', 64, N'c2', NULL, N'458B74', N'CDB79E', NULL, NULL, NULL, NULL)
+GO
+INSERT [workcube_devcatalyst_retail].[SEARCH_TABLES_COLOUMS] ([KOLON_AD], [KOLON_TIP], [KOLON_OZELAD], [KOLON_FILTRE], [KOLON_DUZENLEME], [KOLON_EN], [KOLON_SABIT], [KOLON_RENDER], [KOLON_FILTRE_TIPI], [KOLON_ALIGN], [ROW_ID], [KOLON_FORMAT], [KOLON_BEGIN_EDIT], [KOLON_ARKA], [KOLON_YAZI], [KOLON_HEADER], [KOLON_END_EDIT], [KOLON_AGG], [KOLON_HOVER]) VALUES (N'siparis_tarih_1', NULL, N'63Sip.<br>Tar.', 1, 1, N'130', 0, NULL, NULL, N'right', 65, NULL, NULL, N'458B74', N'FFD700', NULL, NULL, NULL, NULL)
+GO
+INSERT [workcube_devcatalyst_retail].[SEARCH_TABLES_COLOUMS] ([KOLON_AD], [KOLON_TIP], [KOLON_OZELAD], [KOLON_FILTRE], [KOLON_DUZENLEME], [KOLON_EN], [KOLON_SABIT], [KOLON_RENDER], [KOLON_FILTRE_TIPI], [KOLON_ALIGN], [ROW_ID], [KOLON_FORMAT], [KOLON_BEGIN_EDIT], [KOLON_ARKA], [KOLON_YAZI], [KOLON_HEADER], [KOLON_END_EDIT], [KOLON_AGG], [KOLON_HOVER]) VALUES (N'siparis_onay', N'checkbox', N'64Sip.<br>Kayıt', 1, 1, N'50', 0, NULL, N'bool', N'right', 66, NULL, NULL, N'458B74', N'FFD700', NULL, NULL, NULL, NULL)
+GO
+INSERT [workcube_devcatalyst_retail].[SEARCH_TABLES_COLOUMS] ([KOLON_AD], [KOLON_TIP], [KOLON_OZELAD], [KOLON_FILTRE], [KOLON_DUZENLEME], [KOLON_EN], [KOLON_SABIT], [KOLON_RENDER], [KOLON_FILTRE_TIPI], [KOLON_ALIGN], [ROW_ID], [KOLON_FORMAT], [KOLON_BEGIN_EDIT], [KOLON_ARKA], [KOLON_YAZI], [KOLON_HEADER], [KOLON_END_EDIT], [KOLON_AGG], [KOLON_HOVER]) VALUES (N'siparis_miktar', N'numberinput', N'65Sip.<br>Mik.', 1, 1, N'50', 0, NULL, N'number', N'right', 67, N'c2', NULL, N'458B74', N'FFD700', NULL, NULL, NULL, NULL)
+GO
+INSERT [workcube_devcatalyst_retail].[SEARCH_TABLES_COLOUMS] ([KOLON_AD], [KOLON_TIP], [KOLON_OZELAD], [KOLON_FILTRE], [KOLON_DUZENLEME], [KOLON_EN], [KOLON_SABIT], [KOLON_RENDER], [KOLON_FILTRE_TIPI], [KOLON_ALIGN], [ROW_ID], [KOLON_FORMAT], [KOLON_BEGIN_EDIT], [KOLON_ARKA], [KOLON_YAZI], [KOLON_HEADER], [KOLON_END_EDIT], [KOLON_AGG], [KOLON_HOVER]) VALUES (N'siparis_miktar_k', N'numberinput', N'66Sip.<br>Kl.', 1, 1, N'110', 0, NULL, N'number', N'right', 68, N'c2', NULL, N'458B74', N'FFD700', NULL, NULL, NULL, NULL)
+GO
+INSERT [workcube_devcatalyst_retail].[SEARCH_TABLES_COLOUMS] ([KOLON_AD], [KOLON_TIP], [KOLON_OZELAD], [KOLON_FILTRE], [KOLON_DUZENLEME], [KOLON_EN], [KOLON_SABIT], [KOLON_RENDER], [KOLON_FILTRE_TIPI], [KOLON_ALIGN], [ROW_ID], [KOLON_FORMAT], [KOLON_BEGIN_EDIT], [KOLON_ARKA], [KOLON_YAZI], [KOLON_HEADER], [KOLON_END_EDIT], [KOLON_AGG], [KOLON_HOVER]) VALUES (N'siparis_miktar_p', N'numberinput', N'67Sip<br>Pl Mik', 1, 1, N'50', 0, NULL, N'number', N'right', 69, N'c2', NULL, N'458B74', N'FFD700', NULL, NULL, NULL, NULL)
+GO
+INSERT [workcube_devcatalyst_retail].[SEARCH_TABLES_COLOUMS] ([KOLON_AD], [KOLON_TIP], [KOLON_OZELAD], [KOLON_FILTRE], [KOLON_DUZENLEME], [KOLON_EN], [KOLON_SABIT], [KOLON_RENDER], [KOLON_FILTRE_TIPI], [KOLON_ALIGN], [ROW_ID], [KOLON_FORMAT], [KOLON_BEGIN_EDIT], [KOLON_ARKA], [KOLON_YAZI], [KOLON_HEADER], [KOLON_END_EDIT], [KOLON_AGG], [KOLON_HOVER]) VALUES (N'siparis_tutar_1', NULL, N'68Sip<br>Tut H', 1, 0, N'50', 0, NULL, N'number', N'right', 70, N'c2', NULL, N'458B74', N'FFD700', NULL, NULL, NULL, NULL)
+GO
+INSERT [workcube_devcatalyst_retail].[SEARCH_TABLES_COLOUMS] ([KOLON_AD], [KOLON_TIP], [KOLON_OZELAD], [KOLON_FILTRE], [KOLON_DUZENLEME], [KOLON_EN], [KOLON_SABIT], [KOLON_RENDER], [KOLON_FILTRE_TIPI], [KOLON_ALIGN], [ROW_ID], [KOLON_FORMAT], [KOLON_BEGIN_EDIT], [KOLON_ARKA], [KOLON_YAZI], [KOLON_HEADER], [KOLON_END_EDIT], [KOLON_AGG], [KOLON_HOVER]) VALUES (N'siparis_tutar_kdv_1', NULL, N'69Sip<br>Tut D', 1, 0, N'50', 0, NULL, N'number', N'right', 71, N'c2', NULL, N'458B74', N'FFD700', NULL, NULL, NULL, NULL)
+GO
+INSERT [workcube_devcatalyst_retail].[SEARCH_TABLES_COLOUMS] ([KOLON_AD], [KOLON_TIP], [KOLON_OZELAD], [KOLON_FILTRE], [KOLON_DUZENLEME], [KOLON_EN], [KOLON_SABIT], [KOLON_RENDER], [KOLON_FILTRE_TIPI], [KOLON_ALIGN], [ROW_ID], [KOLON_FORMAT], [KOLON_BEGIN_EDIT], [KOLON_ARKA], [KOLON_YAZI], [KOLON_HEADER], [KOLON_END_EDIT], [KOLON_AGG], [KOLON_HOVER]) VALUES (N'seviye_bilgisi', NULL, N'70seviye?', 0, 0, N'50', 0, NULL, NULL, N'right', 72, NULL, NULL, N'FFFFFF', N'000000', NULL, NULL, NULL, NULL)
+GO
+INSERT [workcube_devcatalyst_retail].[SEARCH_TABLES_COLOUMS] ([KOLON_AD], [KOLON_TIP], [KOLON_OZELAD], [KOLON_FILTRE], [KOLON_DUZENLEME], [KOLON_EN], [KOLON_SABIT], [KOLON_RENDER], [KOLON_FILTRE_TIPI], [KOLON_ALIGN], [ROW_ID], [KOLON_FORMAT], [KOLON_BEGIN_EDIT], [KOLON_ARKA], [KOLON_YAZI], [KOLON_HEADER], [KOLON_END_EDIT], [KOLON_AGG], [KOLON_HOVER]) VALUES (N'oneri_siparis2', NULL, N'71sip2<br>Öneri', 0, 0, N'50', 0, NULL, N'number', N'right', 73, N'c2', NULL, N'8B864E', N'CDB79E', NULL, NULL, NULL, NULL)
+GO
+INSERT [workcube_devcatalyst_retail].[SEARCH_TABLES_COLOUMS] ([KOLON_AD], [KOLON_TIP], [KOLON_OZELAD], [KOLON_FILTRE], [KOLON_DUZENLEME], [KOLON_EN], [KOLON_SABIT], [KOLON_RENDER], [KOLON_FILTRE_TIPI], [KOLON_ALIGN], [ROW_ID], [KOLON_FORMAT], [KOLON_BEGIN_EDIT], [KOLON_ARKA], [KOLON_YAZI], [KOLON_HEADER], [KOLON_END_EDIT], [KOLON_AGG], [KOLON_HOVER]) VALUES (N'siparis_tarih_2', NULL, N'72Sip2<br>Tarihi', 1, 1, N'130', 0, NULL, NULL, N'right', 74, NULL, NULL, N'F8EEB1', N'000000', NULL, NULL, NULL, NULL)
+GO
+INSERT [workcube_devcatalyst_retail].[SEARCH_TABLES_COLOUMS] ([KOLON_AD], [KOLON_TIP], [KOLON_OZELAD], [KOLON_FILTRE], [KOLON_DUZENLEME], [KOLON_EN], [KOLON_SABIT], [KOLON_RENDER], [KOLON_FILTRE_TIPI], [KOLON_ALIGN], [ROW_ID], [KOLON_FORMAT], [KOLON_BEGIN_EDIT], [KOLON_ARKA], [KOLON_YAZI], [KOLON_HEADER], [KOLON_END_EDIT], [KOLON_AGG], [KOLON_HOVER]) VALUES (N'siparis_onay_2', N'checkbox', N'73Sip2<br>Kayıt', 1, 1, N'50', 0, NULL, N'bool', N'right', 75, NULL, NULL, N'8B864E', N'E7FFBD', NULL, NULL, NULL, NULL)
+GO
+INSERT [workcube_devcatalyst_retail].[SEARCH_TABLES_COLOUMS] ([KOLON_AD], [KOLON_TIP], [KOLON_OZELAD], [KOLON_FILTRE], [KOLON_DUZENLEME], [KOLON_EN], [KOLON_SABIT], [KOLON_RENDER], [KOLON_FILTRE_TIPI], [KOLON_ALIGN], [ROW_ID], [KOLON_FORMAT], [KOLON_BEGIN_EDIT], [KOLON_ARKA], [KOLON_YAZI], [KOLON_HEADER], [KOLON_END_EDIT], [KOLON_AGG], [KOLON_HOVER]) VALUES (N'siparis_miktar_2', N'numberinput', N'73Sip2<br>Mik', 1, 1, N'50', 0, NULL, N'number', N'right', 76, N'c2', NULL, N'8B864E', N'E7FFBD', NULL, NULL, NULL, NULL)
+GO
+INSERT [workcube_devcatalyst_retail].[SEARCH_TABLES_COLOUMS] ([KOLON_AD], [KOLON_TIP], [KOLON_OZELAD], [KOLON_FILTRE], [KOLON_DUZENLEME], [KOLON_EN], [KOLON_SABIT], [KOLON_RENDER], [KOLON_FILTRE_TIPI], [KOLON_ALIGN], [ROW_ID], [KOLON_FORMAT], [KOLON_BEGIN_EDIT], [KOLON_ARKA], [KOLON_YAZI], [KOLON_HEADER], [KOLON_END_EDIT], [KOLON_AGG], [KOLON_HOVER]) VALUES (N'siparis_miktar_k_2', N'numberinput', N'74Sip2<br>koli', 1, 1, N'110', 0, NULL, N'number', N'right', 77, N'c2', NULL, N'8B864E', N'E7FFBD', NULL, NULL, NULL, NULL)
+GO
+INSERT [workcube_devcatalyst_retail].[SEARCH_TABLES_COLOUMS] ([KOLON_AD], [KOLON_TIP], [KOLON_OZELAD], [KOLON_FILTRE], [KOLON_DUZENLEME], [KOLON_EN], [KOLON_SABIT], [KOLON_RENDER], [KOLON_FILTRE_TIPI], [KOLON_ALIGN], [ROW_ID], [KOLON_FORMAT], [KOLON_BEGIN_EDIT], [KOLON_ARKA], [KOLON_YAZI], [KOLON_HEADER], [KOLON_END_EDIT], [KOLON_AGG], [KOLON_HOVER]) VALUES (N'siparis_miktar_p_2', N'numberinput', N'75Sip2<br>palet', 1, 1, N'50', 0, NULL, N'number', N'right', 78, N'c2', NULL, N'8B864E', N'E7FFBD', NULL, NULL, NULL, NULL)
+GO
+INSERT [workcube_devcatalyst_retail].[SEARCH_TABLES_COLOUMS] ([KOLON_AD], [KOLON_TIP], [KOLON_OZELAD], [KOLON_FILTRE], [KOLON_DUZENLEME], [KOLON_EN], [KOLON_SABIT], [KOLON_RENDER], [KOLON_FILTRE_TIPI], [KOLON_ALIGN], [ROW_ID], [KOLON_FORMAT], [KOLON_BEGIN_EDIT], [KOLON_ARKA], [KOLON_YAZI], [KOLON_HEADER], [KOLON_END_EDIT], [KOLON_AGG], [KOLON_HOVER]) VALUES (N'siparis_tutar_2', NULL, N'76Sip2<br>tut.H', 1, 0, N'50', 0, NULL, N'number', N'right', 79, N'c2', NULL, N'8B864E', N'E7FFBD', NULL, NULL, NULL, NULL)
+GO
+INSERT [workcube_devcatalyst_retail].[SEARCH_TABLES_COLOUMS] ([KOLON_AD], [KOLON_TIP], [KOLON_OZELAD], [KOLON_FILTRE], [KOLON_DUZENLEME], [KOLON_EN], [KOLON_SABIT], [KOLON_RENDER], [KOLON_FILTRE_TIPI], [KOLON_ALIGN], [ROW_ID], [KOLON_FORMAT], [KOLON_BEGIN_EDIT], [KOLON_ARKA], [KOLON_YAZI], [KOLON_HEADER], [KOLON_END_EDIT], [KOLON_AGG], [KOLON_HOVER]) VALUES (N'siparis_tutar_kdv_2', NULL, N'77Sip2<br>Tut.D', 1, 0, N'50', 0, NULL, N'number', N'right', 80, N'c2', NULL, N'8B864E', N'E7FFBD', NULL, NULL, NULL, NULL)
+GO
+INSERT [workcube_devcatalyst_retail].[SEARCH_TABLES_COLOUMS] ([KOLON_AD], [KOLON_TIP], [KOLON_OZELAD], [KOLON_FILTRE], [KOLON_DUZENLEME], [KOLON_EN], [KOLON_SABIT], [KOLON_RENDER], [KOLON_FILTRE_TIPI], [KOLON_ALIGN], [ROW_ID], [KOLON_FORMAT], [KOLON_BEGIN_EDIT], [KOLON_ARKA], [KOLON_YAZI], [KOLON_HEADER], [KOLON_END_EDIT], [KOLON_AGG], [KOLON_HOVER]) VALUES (N'alistan_maliyetli_marjli_fiyat', NULL, N'78Alistan maliyetli marjlı fiyar?', 1, 0, N'50', 0, NULL, N'number', N'right', 81, N'c2', NULL, N'FFFFFF', N'000000', NULL, NULL, NULL, NULL)
+GO
+INSERT [workcube_devcatalyst_retail].[SEARCH_TABLES_COLOUMS] ([KOLON_AD], [KOLON_TIP], [KOLON_OZELAD], [KOLON_FILTRE], [KOLON_DUZENLEME], [KOLON_EN], [KOLON_SABIT], [KOLON_RENDER], [KOLON_FILTRE_TIPI], [KOLON_ALIGN], [ROW_ID], [KOLON_FORMAT], [KOLON_BEGIN_EDIT], [KOLON_ARKA], [KOLON_YAZI], [KOLON_HEADER], [KOLON_END_EDIT], [KOLON_AGG], [KOLON_HOVER]) VALUES (N'company_name', NULL, N'79Tedarikçi Ad', 1, 0, N'230', 0, N'companyrenderer', NULL, N'right', 82, NULL, NULL, N'FFFFFF', N'000000', NULL, NULL, NULL, NULL)
+GO
+INSERT [workcube_devcatalyst_retail].[SEARCH_TABLES_COLOUMS] ([KOLON_AD], [KOLON_TIP], [KOLON_OZELAD], [KOLON_FILTRE], [KOLON_DUZENLEME], [KOLON_EN], [KOLON_SABIT], [KOLON_RENDER], [KOLON_FILTRE_TIPI], [KOLON_ALIGN], [ROW_ID], [KOLON_FORMAT], [KOLON_BEGIN_EDIT], [KOLON_ARKA], [KOLON_YAZI], [KOLON_HEADER], [KOLON_END_EDIT], [KOLON_AGG], [KOLON_HOVER]) VALUES (N'sira_no', NULL, N'1No', 0, 0, N'40', 1, N'treerenderer2', NULL, N'left', 1, NULL, NULL, N'FBFF7D', N'3B3B3B', NULL, NULL, NULL, NULL)
+GO
+INSERT [workcube_devcatalyst_retail].[SEARCH_TABLES_COLOUMS] ([KOLON_AD], [KOLON_TIP], [KOLON_OZELAD], [KOLON_FILTRE], [KOLON_DUZENLEME], [KOLON_EN], [KOLON_SABIT], [KOLON_RENDER], [KOLON_FILTRE_TIPI], [KOLON_ALIGN], [ROW_ID], [KOLON_FORMAT], [KOLON_BEGIN_EDIT], [KOLON_ARKA], [KOLON_YAZI], [KOLON_HEADER], [KOLON_END_EDIT], [KOLON_AGG], [KOLON_HOVER]) VALUES (N'product_cat', NULL, N'80Altgrup 2', 1, 0, N'100', 0, NULL, NULL, N'left', 83, NULL, NULL, N'FFFFFF', N'000000', NULL, NULL, NULL, NULL)
+GO
+INSERT [workcube_devcatalyst_retail].[SEARCH_TABLES_COLOUMS] ([KOLON_AD], [KOLON_TIP], [KOLON_OZELAD], [KOLON_FILTRE], [KOLON_DUZENLEME], [KOLON_EN], [KOLON_SABIT], [KOLON_RENDER], [KOLON_FILTRE_TIPI], [KOLON_ALIGN], [ROW_ID], [KOLON_FORMAT], [KOLON_BEGIN_EDIT], [KOLON_ARKA], [KOLON_YAZI], [KOLON_HEADER], [KOLON_END_EDIT], [KOLON_AGG], [KOLON_HOVER]) VALUES (N'avantaj_oran', NULL, N'81<br>Avtj', 0, 0, N'50', 0, NULL, N'number', N'right', 84, N'p', NULL, N'F8EEB1', N'000000', NULL, NULL, NULL, NULL)
+GO
+INSERT [workcube_devcatalyst_retail].[SEARCH_TABLES_COLOUMS] ([KOLON_AD], [KOLON_TIP], [KOLON_OZELAD], [KOLON_FILTRE], [KOLON_DUZENLEME], [KOLON_EN], [KOLON_SABIT], [KOLON_RENDER], [KOLON_FILTRE_TIPI], [KOLON_ALIGN], [ROW_ID], [KOLON_FORMAT], [KOLON_BEGIN_EDIT], [KOLON_ARKA], [KOLON_YAZI], [KOLON_HEADER], [KOLON_END_EDIT], [KOLON_AGG], [KOLON_HOVER]) VALUES (N'p_product_type', N'checkbox', N'82Puan Ver', 0, 1, N'50', 0, NULL, N'bool', N'left', 85, NULL, NULL, N'F8EEB1', N'000000', NULL, NULL, NULL, NULL)
+GO
+INSERT [workcube_devcatalyst_retail].[SEARCH_TABLES_COLOUMS] ([KOLON_AD], [KOLON_TIP], [KOLON_OZELAD], [KOLON_FILTRE], [KOLON_DUZENLEME], [KOLON_EN], [KOLON_SABIT], [KOLON_RENDER], [KOLON_FILTRE_TIPI], [KOLON_ALIGN], [ROW_ID], [KOLON_FORMAT], [KOLON_BEGIN_EDIT], [KOLON_ARKA], [KOLON_YAZI], [KOLON_HEADER], [KOLON_END_EDIT], [KOLON_AGG], [KOLON_HOVER]) VALUES (N'siparis_sevk', N'checkbox', N'64Sip.<br>Onay', 1, 1, N'50', 0, NULL, N'bool', N'right', 86, NULL, NULL, N'458B74', N'FFD700', NULL, NULL, NULL, NULL)
+GO
+INSERT [workcube_devcatalyst_retail].[SEARCH_TABLES_COLOUMS] ([KOLON_AD], [KOLON_TIP], [KOLON_OZELAD], [KOLON_FILTRE], [KOLON_DUZENLEME], [KOLON_EN], [KOLON_SABIT], [KOLON_RENDER], [KOLON_FILTRE_TIPI], [KOLON_ALIGN], [ROW_ID], [KOLON_FORMAT], [KOLON_BEGIN_EDIT], [KOLON_ARKA], [KOLON_YAZI], [KOLON_HEADER], [KOLON_END_EDIT], [KOLON_AGG], [KOLON_HOVER]) VALUES (N'siparis_sevk_2', N'checkbox', N'73Sip2<br>Onay', 1, 1, N'50', 0, NULL, N'bool', N'right', 87, NULL, NULL, N'8B864E', N'E7FFBD', NULL, NULL, NULL, NULL)
+GO
+INSERT [workcube_devcatalyst_retail].[SEARCH_TABLES_COLOUMS] ([KOLON_AD], [KOLON_TIP], [KOLON_OZELAD], [KOLON_FILTRE], [KOLON_DUZENLEME], [KOLON_EN], [KOLON_SABIT], [KOLON_RENDER], [KOLON_FILTRE_TIPI], [KOLON_ALIGN], [ROW_ID], [KOLON_FORMAT], [KOLON_BEGIN_EDIT], [KOLON_ARKA], [KOLON_YAZI], [KOLON_HEADER], [KOLON_END_EDIT], [KOLON_AGG], [KOLON_HOVER]) VALUES (N'stok_yeterlilik_suresi_order', NULL, N'96Stk<br>Yeter Sip', 1, 0, N'50', 0, NULL, N'number', N'right', 88, N'c2', NULL, N'000000', N'FF781F', NULL, NULL, NULL, NULL)
+GO
+INSERT [workcube_devcatalyst_retail].[SEARCH_TABLES_COLOUMS] ([KOLON_AD], [KOLON_TIP], [KOLON_OZELAD], [KOLON_FILTRE], [KOLON_DUZENLEME], [KOLON_EN], [KOLON_SABIT], [KOLON_RENDER], [KOLON_FILTRE_TIPI], [KOLON_ALIGN], [ROW_ID], [KOLON_FORMAT], [KOLON_BEGIN_EDIT], [KOLON_ARKA], [KOLON_YAZI], [KOLON_HEADER], [KOLON_END_EDIT], [KOLON_AGG], [KOLON_HOVER]) VALUES (N'std_p_control', NULL, N'97Kon', 1, 0, N'50', 0, N'std_renderer', N'number', N'right', 89, N'c2', NULL, N'CFDBC8', N'000000', NULL, NULL, NULL, NULL)
+GO
+INSERT [workcube_devcatalyst_retail].[SEARCH_TABLES_COLOUMS] ([KOLON_AD], [KOLON_TIP], [KOLON_OZELAD], [KOLON_FILTRE], [KOLON_DUZENLEME], [KOLON_EN], [KOLON_SABIT], [KOLON_RENDER], [KOLON_FILTRE_TIPI], [KOLON_ALIGN], [ROW_ID], [KOLON_FORMAT], [KOLON_BEGIN_EDIT], [KOLON_ARKA], [KOLON_YAZI], [KOLON_HEADER], [KOLON_END_EDIT], [KOLON_AGG], [KOLON_HOVER]) VALUES (N'unit_price', N'numberinput', N'98Birim <br>Fiyat', 0, 0, N'50', 0, NULL, N'number', N'right', 90, N'c2', NULL, N'458B74', N'FFD700', NULL, NULL, NULL, NULL)
+GO
+SET IDENTITY_INSERT [workcube_devcatalyst_retail].[SEARCH_TABLES_COLOUMS] OFF
+GO
+/****** Object:  Table [workcube_devcatalyst_retail].[SEARCH_TABLES_COMBINES]    Script Date: 4.11.2020 12:51:25 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [workcube_devcatalyst_retail].[SEARCH_TABLES_COMBINES](
+	[ROW_ID] [int] IDENTITY(1,1) NOT NULL,
+	[TABLE_ID] [int] NULL,
+	[NEW_TABLE_ID] [int] NULL,
+	[RECORD_EMP] [int] NULL,
+	[RECORD_DATE] [datetime] NULL,
+	[RECORD_IP] [nvarchar](50) NULL
+) ON [PRIMARY]
+GO
+/****** Object:  Table [workcube_devcatalyst_retail].[SEARCH_TABLES_DEFINES]    Script Date: 4.11.2020 12:51:25 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [workcube_devcatalyst_retail].[SEARCH_TABLES_DEFINES](
+	[ROW_ID] [int] NULL,
+	[LAYOUT_ID] [int] NULL,
+	[HOVER_COLOR] [nvarchar](50) NULL,
+	[FOCUS_COLOR] [nvarchar](50) NULL,
+	[GROUP_COLOR] [nvarchar](50) NULL,
+	[GROUP_FONT_COLOR] [nvarchar](50) NULL,
+	[STOCK_COLOR] [nvarchar](50) NULL,
+	[DEPARTMENT_COLOR] [nvarchar](50) NULL,
+	[ORDER_DAY] [int] NULL,
+	[ROW_FOCUS_COLOR] [nvarchar](50) NULL,
+	[ACTIVE_PRICE_COLOR] [nvarchar](50) NULL,
+	[NEXT_PRICE_COLOR] [nvarchar](50) NULL,
+	[ORDER_LAYOUT_ID] [int] NULL
+) ON [PRIMARY]
+GO
+/****** Object:  Table [workcube_devcatalyst_retail].[SEARCH_TABLES_DEPARTMENTS]    Script Date: 4.11.2020 12:51:26 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [workcube_devcatalyst_retail].[SEARCH_TABLES_DEPARTMENTS](
+	[ROW_ID] [int] IDENTITY(1,1) NOT NULL,
+	[DEPARTMENT_ID] [int] NULL,
+	[TABLE_ID] [int] NULL,
+	[TABLE_CODE] [nvarchar](50) NULL
+) ON [PRIMARY]
+GO
+/****** Object:  Table [workcube_devcatalyst_retail].[SEARCH_TABLES_LAYOUTS_NEW]    Script Date: 4.11.2020 12:51:26 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [workcube_devcatalyst_retail].[SEARCH_TABLES_LAYOUTS_NEW](
+	[LAYOUT_ID] [int] IDENTITY(1,1) NOT NULL,
+	[LAYOUT_NAME] [nvarchar](200) NULL,
+	[SORT_LIST] [nvarchar](max) NULL,
+	[RECORD_DATE] [datetime] NULL,
+	[RECORD_EMP] [int] NULL,
+	[RECORD_IP] [nvarchar](50) NULL,
+	[UPDATE_DATE] [datetime] NULL,
+	[UPDATE_EMP] [int] NULL,
+	[UPDATE_IP] [nvarchar](50) NULL
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+GO
+/****** Object:  Table [workcube_devcatalyst_retail].[SEARCH_TABLES_LAYOUTS_USERS]    Script Date: 4.11.2020 12:51:26 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [workcube_devcatalyst_retail].[SEARCH_TABLES_LAYOUTS_USERS](
+	[ROW_ID] [int] NULL,
+	[LAYOUT_ID] [int] NULL,
+	[USER_ID] [int] NULL
+) ON [PRIMARY]
+GO
+/****** Object:  Table [workcube_devcatalyst_retail].[SEARCH_TABLES_PRODUCTS]    Script Date: 4.11.2020 12:51:26 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [workcube_devcatalyst_retail].[SEARCH_TABLES_PRODUCTS](
+	[ROW_ID] [int] IDENTITY(1,1) NOT NULL,
+	[TABLE_ID] [int] NULL,
+	[TABLE_CODE] [nvarchar](50) NULL,
+	[PRODUCT_ID] [int] NULL,
+	[LINE_NUMBER] [int] NULL
+) ON [PRIMARY]
+GO
+/****** Object:  Table [workcube_devcatalyst_retail].[SEARCH_TABLES_ROWS_NEW]    Script Date: 4.11.2020 12:51:26 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [workcube_devcatalyst_retail].[SEARCH_TABLES_ROWS_NEW](
+	[ROW_ID] [int] IDENTITY(1,1) NOT NULL,
+	[ATT_NAME] [nvarchar](300) NULL,
+	[ATT_VALUE] [nvarchar](max) NULL,
+	[TABLE_ID] [int] NULL,
+	[TABLE_CODE] [nvarchar](50) NULL,
+	[PRODUCT_CODE] [nvarchar](50) NULL,
+	[PRODUCT_ID] [int] NULL
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+GO
+/****** Object:  Table [workcube_devcatalyst_retail].[SETUP_POS_PAYMETHODS]    Script Date: 4.11.2020 12:51:26 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [workcube_devcatalyst_retail].[SETUP_POS_PAYMETHODS](
+	[ROW_ID] [int] IDENTITY(1,1) NOT NULL,
+	[CODE] [nvarchar](50) NULL,
+	[HEADER] [nvarchar](250) NULL,
+	[SYMBOL] [nvarchar](50) NULL,
+	[PAY_LIMIT] [nvarchar](50) NULL,
+	[DECIMAL_COUNT] [nvarchar](50) NULL,
+	[DAILY_RATE] [nvarchar](50) NULL,
+	[PROVISITION] [int] NULL,
+	[PAY_SELECTS] [nvarchar](200) NULL,
+	[RECORD_EMP] [int] NULL,
+	[RECORD_DATE] [datetime] NULL,
+	[RECORD_IP] [nvarchar](50) NULL,
+	[UPDATE_EMP] [int] NULL,
+	[UPDATE_DATE] [datetime] NULL,
+	[UPDATE_IP] [nvarchar](50) NULL,
+	[WRK_POS_ID] [int] NULL
+) ON [PRIMARY]
+GO
+/****** Object:  Table [workcube_devcatalyst_retail].[STOCK_COUNT_ORDERS]    Script Date: 4.11.2020 12:51:26 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [workcube_devcatalyst_retail].[STOCK_COUNT_ORDERS](
+	[ORDER_ID] [int] IDENTITY(1,1) NOT NULL,
+	[RECORD_EMP] [int] NULL,
+	[RECORD_DATE] [datetime] NULL,
+	[UPDATE_EMP] [int] NULL,
+	[UPDATE_DATE] [datetime] NULL,
+	[RECORD_IP] [nvarchar](50) NULL,
+	[UPDATE_IP] [nvarchar](50) NULL,
+	[ORDER_TYPE] [int] NULL,
+	[MAIN_ORDER_ID] [int] NULL,
+	[COUNT_TYPE] [int] NULL,
+	[DEPARTMENT_ID] [int] NULL,
+	[ORDER_DATE] [datetime] NULL,
+	[STATUS] [bit] NULL,
+	[IS_CLOSED] [bit] NULL,
+	[IS_UPDATE] [bit] NULL,
+	[COMPANY_ID] [int] NULL,
+	[ORDER_DETAIL] [nvarchar](100) NULL
+) ON [PRIMARY]
+GO
+/****** Object:  Table [workcube_devcatalyst_retail].[STOCK_COUNT_ORDERS_PRODUCT_CATS]    Script Date: 4.11.2020 12:51:26 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [workcube_devcatalyst_retail].[STOCK_COUNT_ORDERS_PRODUCT_CATS](
+	[ROW_ID] [int] IDENTITY(1,1) NOT NULL,
+	[ORDER_ID] [int] NULL,
+	[PRODUCT_CAT] [nvarchar](50) NULL
+) ON [PRIMARY]
+GO
+/****** Object:  Table [workcube_devcatalyst_retail].[STOCK_COUNT_ORDERS_BRANDS]    Script Date: 4.11.2020 12:51:26 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [workcube_devcatalyst_retail].[STOCK_COUNT_ORDERS_BRANDS](
+	[ROW_ID] [int] IDENTITY(1,1) NOT NULL,
+	[ORDER_ID] [int] NULL,
+	[BRAND_ID] [int] NULL
+) ON [PRIMARY]
+GO
+/****** Object:  Table [workcube_devcatalyst_retail].[STOCK_COUNT_ORDERS_ROWS]    Script Date: 4.11.2020 12:51:26 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [workcube_devcatalyst_retail].[STOCK_COUNT_ORDERS_ROWS](
+	[ROW_ID] [int] IDENTITY(1,1) NOT NULL,
+	[ORDER_ID] [int] NULL,
+	[USER_CODE] [nvarchar](50) NULL,
+	[BARCODE] [nvarchar](50) NULL,
+	[AMOUNT] [float] NULL,
+	[RECORD_DATE] [datetime] NULL,
+	[RECORD_IP] [nvarchar](50) NULL,
+	[UPDATE_DATE] [datetime] NULL,
+	[UPDATE_EMP] [int] NULL,
+	[UPDATE_IP] [nvarchar](50) NULL,
+	[STOCK_ID] [int] NULL,
+	[STOCK_NAME] [nvarchar](300) NULL,
+	[RECORD_EMP] [int] NULL,
+	[IS_UPDATE] [bit] NULL,
+	[ADD_ROW] [float] NULL,
+	[IS_MANUEL] [bit] NULL,
+	[REAL_STOCK_ID] [int] NULL,
+	[REAL_STOCK_AMOUNT] [float] NULL,
+	[AMOUNT_FIRST] [float] NULL,
+	[GENERAL_USER_CODE] [nvarchar](50) NULL,
+	[USER_ID] [int] NULL,
+	[LOT_NO] [nvarchar](100) NULL,
+	[DETAIL] [nvarchar](300) NULL,
+	[RAF_INFO] [nvarchar](300) NULL,
+	[LAST_DATE] [datetime] NULL	
+) ON [PRIMARY]
+GO
+/****** Object:  Table [workcube_devcatalyst_retail].[STOCK_COUNT_ORDERS_ROWS_BACKUP]    Script Date: 4.11.2020 12:51:26 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [workcube_devcatalyst_retail].[STOCK_COUNT_ORDERS_ROWS_BACKUP](
+	[ROW_ID] [int] IDENTITY(1,1) NOT NULL,
+	[ORDER_ID] [int] NULL,
+	[USER_CODE] [nvarchar](50) NULL,
+	[BARCODE] [nvarchar](50) NULL,
+	[AMOUNT] [float] NULL,
+	[RECORD_DATE] [datetime] NULL,
+	[RECORD_IP] [nvarchar](50) NULL,
+	[UPDATE_DATE] [datetime] NULL,
+	[UPDATE_EMP] [int] NULL,
+	[UPDATE_IP] [nvarchar](50) NULL,
+	[STOCK_ID] [int] NULL,
+	[STOCK_NAME] [nvarchar](300) NULL,
+	[RECORD_EMP] [int] NULL,
+	[IS_UPDATE] [bit] NULL
+) ON [PRIMARY]
+GO
+/****** Object:  Table [workcube_devcatalyst_retail].[STOCK_COUNT_ORDERS_ROWS_BACKUP_30122015]    Script Date: 4.11.2020 12:51:26 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [workcube_devcatalyst_retail].[STOCK_COUNT_ORDERS_ROWS_BACKUP_30122015](
+	[ROW_ID] [int] IDENTITY(1,1) NOT NULL,
+	[ORDER_ID] [int] NULL,
+	[USER_CODE] [nvarchar](50) NULL,
+	[BARCODE] [nvarchar](50) NULL,
+	[AMOUNT] [float] NULL,
+	[RECORD_DATE] [datetime] NULL,
+	[RECORD_IP] [nvarchar](50) NULL,
+	[UPDATE_DATE] [datetime] NULL,
+	[UPDATE_EMP] [int] NULL,
+	[UPDATE_IP] [nvarchar](50) NULL,
+	[STOCK_ID] [int] NULL,
+	[STOCK_NAME] [nvarchar](300) NULL,
+	[RECORD_EMP] [int] NULL,
+	[IS_UPDATE] [bit] NULL,
+	[ADD_ROW] [float] NULL,
+	[IS_MANUEL] [bit] NULL,
+	[REAL_STOCK_ID] [int] NULL,
+	[REAL_STOCK_AMOUNT] [float] NULL,
+	[AMOUNT_FIRST] [float] NULL,
+	[GENERAL_USER_CODE] [nvarchar](50) NULL
+) ON [PRIMARY]
+GO
+/****** Object:  Table [workcube_devcatalyst_retail].[STOCK_COUNT_ORDERS_STOCKS]    Script Date: 4.11.2020 12:51:26 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [workcube_devcatalyst_retail].[STOCK_COUNT_ORDERS_STOCKS](
+	[ROW_ID] [int] IDENTITY(1,1) NOT NULL,
+	[ORDER_ID] [int] NULL,
+	[STOCK_ID] [int] NULL
+) ON [PRIMARY]
+GO
+/****** Object:  Table [workcube_devcatalyst_retail].[STOCK_MANAGE_TABLES]    Script Date: 4.11.2020 12:51:26 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [workcube_devcatalyst_retail].[STOCK_MANAGE_TABLES](
+	[TABLE_ID] [int] IDENTITY(1,1) NOT NULL,
+	[TABLE_CODE] [nvarchar](50) NULL,
+	[TABLE_INFO] [nvarchar](max) NULL,
+	[DEPARTMENT_ID] [int] NULL,
+	[LOCATION_ID] [int] NULL,
+	[RECORD_DATE] [datetime] NULL,
+	[RECORD_EMP] [int] NULL,
+	[UPDATE_DATE] [datetime] NULL,
+	[UPDATE_EMP] [int] NULL,
+	[PROCESS_DATE] [datetime] NULL,
+	[PERIOD_ID] [int] NULL,
+	[ORDER_ID] [int] NULL,
+	[IS_BRANCH_TRANSFER] [bit] NULL,
+	[UPPER_TABLE_CODE] [nvarchar](50) NULL
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+GO
+/****** Object:  Table [workcube_devcatalyst_retail].[STOCK_ORDERS_ROWS]    Script Date: 4.11.2020 12:51:26 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [workcube_devcatalyst_retail].[STOCK_ORDERS_ROWS](
+	[ROW_ID] [int] IDENTITY(1,1) NOT NULL,
+	[USER_CODE] [nvarchar](50) NULL,
+	[BARCODE] [nvarchar](50) NULL,
+	[AMOUNT] [float] NULL,
+	[RECORD_DATE] [datetime] NULL,
+	[RECORD_IP] [nvarchar](50) NULL,
+	[STOCK_ID] [int] NULL,
+	[STOCK_NAME] [nvarchar](300) NULL,
+	[RECORD_EMP] [int] NULL,
+	[ORTALAMA] [float] NULL,
+	[MAGAZA] [float] NULL,
+	[DEPO] [float] NULL,
+	[YOLDAKI] [float] NULL
+) ON [PRIMARY]
+GO
+/****** Object:  Table [workcube_devcatalyst_retail].[STOCK_ORDERS_ROWS_DIS]    Script Date: 4.11.2020 12:51:26 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [workcube_devcatalyst_retail].[STOCK_ORDERS_ROWS_DIS](
+	[ROW_ID] [int] IDENTITY(1,1) NOT NULL,
+	[USER_CODE] [nvarchar](50) NULL,
+	[BARCODE] [nvarchar](50) NULL,
+	[AMOUNT] [float] NULL,
+	[RECORD_DATE] [datetime] NULL,
+	[RECORD_IP] [nvarchar](50) NULL,
+	[STOCK_ID] [int] NULL,
+	[STOCK_NAME] [nvarchar](300) NULL,
+	[RECORD_EMP] [int] NULL,
+	[ORTALAMA] [float] NULL,
+	[MAGAZA] [float] NULL,
+	[DEPO] [float] NULL,
+	[YOLDAKI] [float] NULL,
+	[DEPARTMENT_ID] [int] NULL,
+	[LOCATION_ID] [int] NULL,
+	[DEPARTMENT_HEAD] [nvarchar](250) NULL
+) ON [PRIMARY]
+GO
+/****** Object:  Table [workcube_devcatalyst_retail].[STOCK_ORDERS_ROWS_DIS_TALEP]    Script Date: 4.11.2020 12:51:26 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [workcube_devcatalyst_retail].[STOCK_ORDERS_ROWS_DIS_TALEP](
+	[ROW_ID] [int] IDENTITY(1,1) NOT NULL,
+	[USER_CODE] [nvarchar](50) NULL,
+	[BARCODE] [nvarchar](50) NULL,
+	[AMOUNT] [float] NULL,
+	[AMOUNT_DIS] [float] NULL,
+	[RECORD_DATE] [datetime] NULL,
+	[RECORD_IP] [nvarchar](50) NULL,
+	[STOCK_ID] [int] NULL,
+	[STOCK_NAME] [nvarchar](300) NULL,
+	[RECORD_EMP] [int] NULL,
+	[ROW_TYPE] [int] NULL,
+	[SHIP_ID] [int] NULL,
+	[PERIOD_ID] [int] NULL,
+	[SHIP_ROW_ID] [int] NULL,
+	[WRK_ROW_ID] [nvarchar](100) NULL
+) ON [PRIMARY]
+GO
+/****** Object:  Table [workcube_devcatalyst_retail].[STOCK_ORDERS_ROWS_DIS_TALEP_SHIPS]    Script Date: 4.11.2020 12:51:26 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [workcube_devcatalyst_retail].[STOCK_ORDERS_ROWS_DIS_TALEP_SHIPS](
+	[ROW_ID] [int] IDENTITY(1,1) NOT NULL,
+	[USER_CODE] [nvarchar](50) NULL,
+	[RECORD_DATE] [datetime] NULL,
+	[RECORD_IP] [nvarchar](50) NULL,
+	[SHIP_ID] [int] NULL,
+	[DEPARTMENT_ID] [int] NULL,
+	[LOCATION_ID] [int] NULL,
+	[BRANCH_ID] [int] NULL,
+	[PERIOD_ID] [int] NULL,
+	[RECORD_EMP] [int] NULL
+) ON [PRIMARY]
+GO
+/****** Object:  Table [workcube_devcatalyst_retail].[STOCK_TRANSFER_LIST]    Script Date: 4.11.2020 12:51:26 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [workcube_devcatalyst_retail].[STOCK_TRANSFER_LIST](
+	[STOCK_ID] [int] NULL,
+	[DEPARTMENT_ID] [int] NULL,
+	[RECORD_EMP] [int] NULL,
+	[RECORD_DATE] [datetime] NULL,
+	[ROW_ID] [int] IDENTITY(1,1) NOT NULL,
+	[TO_DEPARTMENT_ID] [int] NULL,
+	[AMOUNT] [float] NULL
+) ON [PRIMARY]
+GO
+/****** Object:  Table [workcube_devcatalyst_retail].[STOK_GUNLUK_DURUM]    Script Date: 4.11.2020 12:51:26 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [workcube_devcatalyst_retail].[STOK_GUNLUK_DURUM](
+	[TARIH] [varchar](10) NULL,
+	[STOCK_ID] [int] NULL,
+	[STORE] [int] NULL,
+	[GIREN] [float] NULL,
+	[CIKAN] [float] NULL,
+	[SATIS] [float] NULL,
+	[StokMiktarı] [float] NULL
+) ON [PRIMARY]
+GO
+/****** Object:  Table [workcube_devcatalyst_retail].[TRANSFER_NOTE]    Script Date: 4.11.2020 12:51:26 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [workcube_devcatalyst_retail].[TRANSFER_NOTE](
+	[TRANSFER_NOTE] [nvarchar](max) NULL
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+GO
+ALTER TABLE [workcube_devcatalyst_retail].[CUSTOMER_BONUS] ADD  CONSTRAINT [DF_CUSTOMER_BONUS_FK_STORE]  DEFAULT ((0)) FOR [FK_STORE]
+GO
+ALTER TABLE [workcube_devcatalyst_retail].[CUSTOMER_BONUS] ADD  CONSTRAINT [DF_CUSTOMER_BONUS_FK_POS]  DEFAULT ((0)) FOR [FK_POS]
+GO
+ALTER TABLE [workcube_devcatalyst_retail].[CUSTOMER_BONUS] ADD  CONSTRAINT [DF_CUSTOMER_BONUS_FK_CARD]  DEFAULT ((0)) FOR [FK_CARD]
+GO
+ALTER TABLE [workcube_devcatalyst_retail].[CUSTOMER_BONUS] ADD  CONSTRAINT [DF_CUSTOMER_BONUS_FK_USER]  DEFAULT ((0)) FOR [FK_USER]
+GO
+ALTER TABLE [workcube_devcatalyst_retail].[CUSTOMER_BONUS] ADD  CONSTRAINT [DF_CUSTOMER_BONUS_FK_CARD_CHEQUE]  DEFAULT ((0)) FOR [FK_CARD_CHEQUE]
+GO
+ALTER TABLE [workcube_devcatalyst_retail].[CUSTOMER_BONUS] ADD  CONSTRAINT [DF_CUSTOMER_BONUS_FK_REASON_TYPE]  DEFAULT ((0)) FOR [FK_REASON_TYPE]
+GO
+ALTER TABLE [workcube_devcatalyst_retail].[CUSTOMER_BONUS] ADD  CONSTRAINT [DF_CUSTOMER_BONUS_CHEQUE_USED_COUNT_1]  DEFAULT ((0)) FOR [CHEQUE_USED_COUNT]
+GO
+ALTER TABLE [workcube_devcatalyst_retail].[CUSTOMER_BONUS] ADD  CONSTRAINT [DF_CUSTOMER_BONUS_CASH_1]  DEFAULT ((0)) FOR [CASH]
+GO
+ALTER TABLE [workcube_devcatalyst_retail].[CUSTOMER_BONUS] ADD  CONSTRAINT [DF_CUSTOMER_BONUS_CREDIT_CARD_1]  DEFAULT ((0)) FOR [CREDIT_CARD]
+GO
+ALTER TABLE [workcube_devcatalyst_retail].[CUSTOMER_BONUS] ADD  CONSTRAINT [DF_CUSTOMER_BONUS_TRY_COUNT]  DEFAULT ((0)) FOR [TRY_COUNT]
+GO
+ALTER TABLE [workcube_devcatalyst_retail].[CUSTOMER_BONUS] ADD  CONSTRAINT [DF_CUSTOMER_BONUS_CUSTOMER_CARD]  DEFAULT ('') FOR [CUSTOMER_CARD]
+GO
+ALTER TABLE [workcube_devcatalyst_retail].[CUSTOMER_BONUS] ADD  CONSTRAINT [DF_CUSTOMER_BONUS_STATUS_FLAG]  DEFAULT ((1)) FOR [STATUS_FLAG]
+GO
+ALTER TABLE [workcube_devcatalyst_retail].[CUSTOMER_BONUS] ADD  CONSTRAINT [DF_CUSTOMER_BONUS_TRANSACTION_NUM]  DEFAULT ((0)) FOR [TRANSACTION_NUM]
+GO
+ALTER TABLE [workcube_devcatalyst_retail].[CUSTOMER_BONUS] ADD  CONSTRAINT [DF_CUSTOMER_BONUS_TRANSACTION_TOTAL]  DEFAULT ((0)) FOR [TRANSACTION_TOTAL]
+GO
+ALTER TABLE [workcube_devcatalyst_retail].[CUSTOMER_BONUS] ADD  CONSTRAINT [DF_CUSTOMER_BONUS_CREATE_DATE]  DEFAULT (getdate()) FOR [CREATE_DATE]
+GO
+ALTER TABLE [workcube_devcatalyst_retail].[CUSTOMER_BONUS] ADD  CONSTRAINT [DF_CUSTOMER_BONUS_FK_USER_CREATE]  DEFAULT ((0)) FOR [FK_USER_CREATE]
+GO
+ALTER TABLE [workcube_devcatalyst_retail].[CUSTOMER_BONUS] ADD  CONSTRAINT [DF_CUSTOMER_BONUS_MODIFY_DATE]  DEFAULT (getdate()) FOR [MODIFY_DATE]
+GO
+ALTER TABLE [workcube_devcatalyst_retail].[CUSTOMER_BONUS] ADD  CONSTRAINT [DF_CUSTOMER_BONUS_FK_USER_MODIFY]  DEFAULT ((0)) FOR [FK_USER_MODIFY]
+GO
+ALTER TABLE [workcube_devcatalyst_retail].[CUSTOMER_BONUS] ADD  CONSTRAINT [DF_CUSTOMER_BONUS_FK_STORE_LU]  DEFAULT ((0)) FOR [FK_STORE_LU]
+GO
+ALTER TABLE [workcube_devcatalyst_retail].[CUSTOMER_BONUS] ADD  CONSTRAINT [DF_CUSTOMER_BONUS_FK_STORE_LS]  DEFAULT ((0)) FOR [FK_STORE_LS]
+GO
+ALTER TABLE [workcube_devcatalyst_retail].[CUSTOMER_BONUS] ADD  CONSTRAINT [DF_CUSTOMER_BONUS_UPDATESEQ]  DEFAULT ((1)) FOR [UPDATESEQ]
+GO
+ALTER TABLE [workcube_devcatalyst_retail].[INVOICE_FF_ROWS] ADD  CONSTRAINT [DF_INVOICE_FF_ROWS_STATUS]  DEFAULT ((1)) FOR [STATUS]
+GO
+ALTER TABLE [workcube_devcatalyst_retail].[INVOICE_REVENUE_ROWS] ADD  CONSTRAINT [DF_INVOICE_REVENUE_ROWS_STATUS]  DEFAULT ((1)) FOR [STATUS]
+GO
+ALTER TABLE [workcube_devcatalyst_retail].[PAYMENT_TABLE] ADD  CONSTRAINT [DF_PAYMENT_TABLE_IS_PAID]  DEFAULT ((0)) FOR [IS_PAID]
+GO
+ALTER TABLE [workcube_devcatalyst_retail].[PRICE_TABLE] ADD  CONSTRAINT [DF_PRICE_TABLE_P_PRODUCT_TYPE]  DEFAULT ((1)) FOR [P_PRODUCT_TYPE]
+GO
+ALTER TABLE [workcube_devcatalyst_retail].[PROCESS_ROWS] ADD  CONSTRAINT [DF_PROCESS_ROWS_STATUS]  DEFAULT ((1)) FOR [STATUS]
+GO
+ALTER TABLE [workcube_devcatalyst_retail].[PRODUCT_ACTIONS] ADD  CONSTRAINT [DF_PRODUCT_ACTIONS_IS_AKTARIM]  DEFAULT ((0)) FOR [IS_AKTARIM]
+GO
+ALTER TABLE [workcube_devcatalyst_retail].[SEARCH_TABLES] ADD  CONSTRAINT [DF_SEARCH_TABLES_IS_MAIN]  DEFAULT ((0)) FOR [IS_MAIN]
+GO
+ALTER TABLE [workcube_devcatalyst_retail].[SEARCH_TABLES_COLOUMS] ADD  CONSTRAINT [DF_SEARCH_TABLES_COLOUMS_KOLON_FILTRE]  DEFAULT ((0)) FOR [KOLON_FILTRE]
+GO
+ALTER TABLE [workcube_devcatalyst_retail].[SEARCH_TABLES_COLOUMS] ADD  CONSTRAINT [DF_SEARCH_TABLES_COLOUMS_KOLON_DUZENLEME]  DEFAULT ((0)) FOR [KOLON_DUZENLEME]
+GO
+ALTER TABLE [workcube_devcatalyst_retail].[SEARCH_TABLES_COLOUMS] ADD  CONSTRAINT [DF_SEARCH_TABLES_COLOUMS_KOLON_SABIT]  DEFAULT ((0)) FOR [KOLON_SABIT]
+GO
+ALTER TABLE [workcube_devcatalyst_retail].[SEARCH_TABLES_DEFINES] ADD  CONSTRAINT [DF_SEARCH_TABLES_LAYOUTS_B2B_HOVER_COLOR]  DEFAULT (N'FFFF66') FOR [HOVER_COLOR]
+GO
+ALTER TABLE [workcube_devcatalyst_retail].[SEARCH_TABLES_DEFINES] ADD  CONSTRAINT [DF_SEARCH_TABLES_LAYOUTS_B2B_FOCUS_COLOR]  DEFAULT (N'dcdcdc') FOR [FOCUS_COLOR]
+GO
+ALTER TABLE [workcube_devcatalyst_retail].[STOCK_COUNT_ORDERS] ADD  CONSTRAINT [DF_STOCK_COUNT_ORDERS_IS_CLOSED]  DEFAULT ((0)) FOR [IS_CLOSED]
+GO
+ALTER TABLE [workcube_devcatalyst_retail].[STOCK_COUNT_ORDERS] ADD  CONSTRAINT [DF_STOCK_COUNT_ORDERS_IS_UPDATE]  DEFAULT ((0)) FOR [IS_UPDATE]
+GO
+ALTER TABLE [workcube_devcatalyst_retail].[STOCK_COUNT_ORDERS_ROWS] ADD  CONSTRAINT [DF_STOCK_COUNT_ORDERS_ROWS_IS_UPDATE]  DEFAULT ((0)) FOR [IS_UPDATE]
+GO
+ALTER TABLE [workcube_devcatalyst_retail].[STOCK_COUNT_ORDERS_ROWS] ADD  CONSTRAINT [DF_STOCK_COUNT_ORDERS_ROWS_IS_MANUEL]  DEFAULT ((0)) FOR [IS_MANUEL]
+GO
+ALTER TABLE [workcube_devcatalyst_retail].[STOCK_COUNT_ORDERS_ROWS] ADD  CONSTRAINT [DF_STOCK_COUNT_ORDERS_ROWS_AMOUNT_FIRST]  DEFAULT ((0)) FOR [AMOUNT_FIRST]
+GO
+/****** Object:  StoredProcedure [workcube_devcatalyst_retail].[add_table_row]    Script Date: 4.11.2020 12:51:26 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE PROCEDURE [workcube_devcatalyst_retail].[add_table_row]	
+				@table_id integer,				
+				@table_code VARCHAR(50),
+				@att_name VARCHAR(200),
+				@att_value VARCHAR(500),
+				@product_id integer	
+			AS
+			BEGIN 
+				 SET NOCOUNT ON 
+				INSERT 
+					INTO 
+				SEARCH_TABLES_ROWS 
+					(
+					TABLE_ID,
+					TABLE_CODE,
+					ATT_NAME,
+					ATT_VALUE,
+					PRODUCT_ID
+					)
+				VALUES
+					(
+						@table_id,
+						@table_code,
+						@att_name,
+						@att_value,
+						@product_id
+					)
+				END
+GO
+/****** Object:  StoredProcedure [workcube_devcatalyst_retail].[get_product_of_prices]    Script Date: 4.11.2020 12:51:26 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE PROCEDURE [workcube_devcatalyst_retail].[get_product_of_prices]
+			(
+				@product_id int
+			)
+		AS
+		BEGIN 
+			SELECT 
+                    ISNULL((SELECT COUNT(*) FROM PRICE_TABLE_DEPARTMENTS WHERE PRICE_TABLE_DEPARTMENTS.ROW_ID = PT.ROW_ID),0) AS ALT_ROWS,
+                    ISNULL(PTY.TYPE_CODE,'AKTARIM') TYPE_NAME,
+                    ISNULL(PT.NEW_PRICE,(PT.NEW_PRICE_KDV/(1+SKDV/100))) NEW_PRICE_2,
+                    ST.TABLE_INFO,
+                    E.EMPLOYEE_NAME + ' ' + E.EMPLOYEE_SURNAME AS RECORDER,
+                    CP.COMPANY_PARTNER_NAME + ' ' + CP.COMPANY_PARTNER_NAME AS RECORDER_PAR,
+                    PT.*                 
+                FROM
+                    PRICE_TABLE PT
+                        LEFT JOIN PRICE_TYPES PTY ON PT.PRICE_TYPE = PTY.TYPE_ID
+                        LEFT JOIN SEARCH_TABLES ST ON ST.TABLE_ID = PT.TABLE_ID
+                        LEFT JOIN workcube_devcatalyst.EMPLOYEES E ON E.EMPLOYEE_ID = PT.RECORD_EMP
+                        LEFT JOIN workcube_devcatalyst.COMPANY_PARTNER CP ON CP.PARTNER_ID = PT.RECORD_PAR
+                WHERE
+                    PT.PRODUCT_ID = @product_id AND
+                    PT.ROW_ID NOT IN (SELECT PTD.ROW_ID FROM PRICE_TABLE_DEPARTMENTS PTD)
+                ORDER BY
+                    PT.FINISHDATE DESC,
+                    PT.STARTDATE DESC,
+                    PT.ROW_ID DESC
+      END
+GO
+/****** Object:  StoredProcedure [workcube_devcatalyst_retail].[get_product_of_prices_depts]    Script Date: 4.11.2020 12:51:26 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE PROCEDURE [workcube_devcatalyst_retail].[get_product_of_prices_depts]
+			(
+				@product_id int
+			)
+		AS
+		BEGIN 
+			SELECT 
+                    ISNULL((SELECT COUNT(*) FROM PRICE_TABLE_DEPARTMENTS WHERE PRICE_TABLE_DEPARTMENTS.ROW_ID = PT.ROW_ID),0) AS ALT_ROWS,
+                    ISNULL(PTY.TYPE_CODE,'AKTARIM') TYPE_NAME,
+                    ISNULL(PT.NEW_PRICE,(PT.NEW_PRICE_KDV/(1+SKDV/100))) NEW_PRICE_2,
+                    ST.TABLE_INFO,
+                    E.EMPLOYEE_NAME + ' ' + E.EMPLOYEE_SURNAME AS RECORDER,
+                    D.DEPARTMENT_HEAD,
+					D.DEPARTMENT_ID,
+                    PT.*                 
+                FROM
+                    PRICE_TABLE_DEPARTMENTS PTD,
+                    workcube_devcatalyst.DEPARTMENT D,
+                    PRICE_TABLE PT				
+                        LEFT JOIN PRICE_TYPES PTY ON PT.PRICE_TYPE = PTY.TYPE_ID
+                        LEFT JOIN SEARCH_TABLES ST ON ST.TABLE_ID = PT.TABLE_ID
+                        LEFT JOIN workcube_devcatalyst.EMPLOYEES E ON E.EMPLOYEE_ID = PT.RECORD_EMP
+                WHERE
+                    PT.PRODUCT_ID = @product_id AND
+                    PT.ROW_ID = PTD.ROW_ID AND
+                    PTD.DEPARTMENT_ID = D.DEPARTMENT_ID
+                ORDER BY
+                    D.DEPARTMENT_HEAD,
+					D.DEPARTMENT_ID,                 
+                    PT.FINISHDATE DESC,
+                    PT.STARTDATE DESC,
+                    PT.ROW_ID DESC
+      END
+GO
+/****** Object:  StoredProcedure [workcube_devcatalyst_retail].[get_product_standart_prices]    Script Date: 4.11.2020 12:51:26 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE PROCEDURE [workcube_devcatalyst_retail].[get_product_standart_prices]
+			(
+				@product_id int
+			)
+		AS
+		BEGIN 
+			SELECT TOP 50
+                ST.TABLE_INFO,
+                PT.*                    
+            FROM
+                PRICE_TABLE_STANDART PT
+                    LEFT JOIN SEARCH_TABLES ST ON (ST.TABLE_ID = PT.TABLE_ID)
+            WHERE
+                PT.PRODUCT_ID = @product_id
+            ORDER BY
+                PT.STANDART_S_STARTDATE DESC,
+                PT.ROW_ID DESC
+      END
+GO
+/****** Object:  StoredProcedure [workcube_devcatalyst_retail].[GET_SIP_DETAY_G]    Script Date: 4.11.2020 12:51:26 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE PROCEDURE [workcube_devcatalyst_retail].[GET_SIP_DETAY_G]
+
+@stock_id_list  NVARCHAR(MAX),
+@DATE1 DATE,
+@DATE2 DATE,
+@STORE INT
+AS
+BEGIN
+SELECT
+	STOCK_ID,
+	SUM(SATIS) AS SATIS,SUM(GECERLI_GUN) AS GECERLI_GUN,
+	workcube_devcatalyst.IS_ZERO(SUM(SATIS),1)/ workcube_devcatalyst.IS_ZERO(SUM(GECERLI_GUN),1) AS ORAN
+FROM
+(
+	SELECT T1.*,
+			CASE WHEN T1.StokMiktarı > 0 THEN  1 
+				 WHEN  T2.StokMiktarı + T2.SATIS = T1.StokMiktarı AND (T1.StokMiktarı < 0 OR T1.StokMiktarı= 0  ) THEN 1 else 0 end as GECERLI_GUN 
+	FROM
+	(
+	SELECT D.FULLDATE,xxx.STOCK_ID,xxx.StokMiktarı, 
+	case when D.FULLDATE = xxx.TARIH THEN xxx.SATIS ELSE 0 END AS SATIS
+	FROM DimDate D CROSS  JOIN workcube_devcatalyst.fnSplit(@stock_id_list,',') AS TB1
+	outer apply
+	(
+		select 
+			TOP 1 *
+		from
+			STOK_GUNLUK_DURUM  t
+		where
+			D.FullDate >= t.TARIH and t.STOCK_ID = TB1.item  AND t.STORE = @STORE
+		order by 
+			t.TARIH DESC 
+	) as xxx
+	WHERE
+		D.FULLDATE BETWEEN @DATE1 AND @DATE2
+	) AS T1
+
+	OUTER APPLY 
+
+	(
+		select 
+			TOP 1 *
+		from
+			STOK_GUNLUK_DURUM  t
+		where
+			T1.FullDate <= t.TARIH and t.STOCK_ID = T1.STOCK_ID  AND  t.SATIS <> 0 AND t.STORE = @STORE
+		order by 
+			t.TARIH ASC 
+	) T2 
+) AS LAST_TABLE
+GROUP BY STOCK_ID
+
+END
+GO
+/****** Object:  StoredProcedure [workcube_devcatalyst_retail].[GUNLUK_STOK_AKTARIM]    Script Date: 4.11.2020 12:51:26 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE PROCEDURE [workcube_devcatalyst_retail].[GUNLUK_STOK_AKTARIM] AS BEGIN
+
+IF EXISTS (SELECT * FROM tempdb.sys.tables WHERE name = '##TMP2')
+DROP TABLE ##TMP2
+
+SELECT 
+	SUM(STOCK_IN) AS GIREN,
+	SUM(STOCK_OUT) AS CIKAN,
+	SUM(STOCK_IN-STOCK_OUT) AS BAKIYE,
+	CONVERT(VARCHAR(10), PROCESS_DATE, 120) AS TARIH ,
+	SUM(
+		CASE 
+			WHEN PROCESS_TYPE IN (67,52,53,70,71,-1003,-1004,-1005) THEN STOCK_OUT 
+			WHEN (UPPER_PROCESS_TYPE IS NOT NULL AND UPPER_PROCESS_TYPE IN (67,52,53,70,71,-1003,-1004,-1005)) THEN STOCK_OUT
+			ELSE 0 END
+		)  AS SATIS,
+	STOCK_ID,
+	STORE
+INTO ##TMP2
+FROM 
+	GET_STOCK_ROWS
+WHERE 
+	PROCESS_DATE IS NOT NULL
+	AND
+	(
+	(YEAR(PROCESS_DATE) > 2014 AND PROCESS_TYPE <> 114)
+	OR
+	YEAR(PROCESS_DATE) = 2014
+	)
+GROUP BY 
+	CONVERT(VARCHAR(10), PROCESS_DATE, 120),
+	STOCK_ID,
+	STORE
+	
+	
+	
+	
+IF EXISTS (SELECT * FROM sys.tables WHERE name = 'STOK_GUNLUK_DURUM')
+DROP TABLE STOK_GUNLUK_DURUM
+
+SELECT a.TARIH, a.STOCK_ID,a.STORE,a.GIREN,a.CIKAN,a.SATIS ,(SELECT SUM(b.BAKIYE)
+                       FROM ##TMP2 b
+                       WHERE b.STORE = a.STORE AND b.STOCK_ID = a.STOCK_ID AND  b.TARIH <= a.TARIH ) AS StokMiktarı
+INTO STOK_GUNLUK_DURUM
+FROM   ##TMP2 a
+ORDER BY a.STOCK_ID,a.STORE,a.TARIH
+	
+END
+GO
+/****** Object:  StoredProcedure [workcube_devcatalyst_retail].[ortalama_satis_getir]    Script Date: 4.11.2020 12:51:26 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE PROCEDURE [workcube_devcatalyst_retail].[ortalama_satis_getir]
+
+@stock_id_list  NVARCHAR(MAX),
+@DATE1 DATE,
+@DATE2 DATE,
+@STORE INT
+AS
+BEGIN
+SELECT
+	STOCK_ID,
+	SUM(SATIS) AS SATIS,SUM(GECERLI_GUN) AS GECERLI_GUN,
+	ROUND(workcube_devcatalyst.IS_ZERO(SUM(SATIS),0)/ workcube_devcatalyst.IS_ZERO(SUM(GECERLI_GUN),1),2) AS ORAN
+FROM
+(
+	SELECT T1.*,
+			CASE WHEN T1.StokMiktarı > 0 THEN  1
+				 WHEN T1.SATIS > 0 THEN 1 
+				 WHEN  T2.StokMiktarı + T2.SATIS = T1.StokMiktarı AND (T1.StokMiktarı <= 0  ) THEN 1 else 0 end as GECERLI_GUN 
+	FROM
+	(
+		SELECT 
+			D.FULLDATE,
+			xxx.STOCK_ID,
+			xxx.StokMiktarı, 
+			case when D.FULLDATE = xxx.TARIH THEN xxx.SATIS ELSE 0 END AS SATIS
+		FROM 
+			DimDate D CROSS  JOIN workcube_devcatalyst.fnSplit(@stock_id_list,',') AS TB1
+			outer apply
+			(
+				select 
+					TOP 1 *
+				from
+					STOK_GUNLUK_DURUM  t
+				where
+					t.STOCK_ID = TB1.item  AND t.STORE = @STORE and D.FullDate >= t.TARIH
+				order by 
+					t.TARIH DESC 
+			) as xxx
+		WHERE
+			D.FULLDATE BETWEEN @DATE1 AND @DATE2
+	) AS T1
+
+	OUTER APPLY 
+	(
+		select 
+			TOP 1 *
+		from
+			STOK_GUNLUK_DURUM  t
+		where
+			t.STOCK_ID = T1.STOCK_ID  AND t.STORE = @STORE and T1.FullDate < t.TARIH AND t.SATIS > 0 
+		order by 
+			t.TARIH DESC 
+	) T2 
+) AS LAST_TABLE
+WHERE
+	STOCK_ID IS NOT NULL
+GROUP BY STOCK_ID
+
+END
+GO
+/****** Object:  StoredProcedure [workcube_devcatalyst_retail].[pro_get_ortalama_satis_stok_new]    Script Date: 4.11.2020 12:51:26 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE PROCEDURE [workcube_devcatalyst_retail].[pro_get_ortalama_satis_stok_new]
+			(
+				@sno int,
+				@dept_id int,
+				@date1 datetime,
+				@date2 datetime
+			)
+		AS
+		BEGIN 
+					SELECT
+						ROUND(SUM(TOPLAM_SATIS/TOPLAM_GUN),2)						
+					FROM
+						(
+						SELECT
+							SUM(SATIS_MIKTAR) AS TOPLAM_SATIS,
+							COUNT(CASE WHEN (STOCK_MIKTAR > 0 OR SATIS_MIKTAR <> 0) THEN 1 ELSE NULL END) AS TOPLAM_GUN,
+							DEPARTMENT_HEAD
+						FROM
+							(
+								SELECT
+									TARIH,
+									DEPARTMENT_HEAD,
+									ISNULL(SUM(SR4.STOCK_OUT - SR4.STOCK_IN),0) SATIS_MIKTAR,
+									STOCK_MIKTAR
+								FROM
+									(
+									SELECT
+										T1.TARIH,
+										T1.DEPARTMENT_HEAD,
+										T1.DEPARTMENT_ID,
+										ISNULL(SUM(SR3.STOCK_IN-SR3.STOCK_OUT),0) AS STOCK_MIKTAR
+									FROM
+										(
+											SELECT
+												PPD.TARIH,
+												D.DEPARTMENT_HEAD,
+												D.DEPARTMENT_ID,
+												D.IS_STORE
+											FROM
+												PRODUCT_PRICE_DATES PPD,
+												workcube_devcatalyst.DEPARTMENT D
+											WHERE
+												(
+													   (@dept_id = 13 AND D.DEPARTMENT_ID <> 13 ) OR
+													   (@dept_id <> 13 AND D.DEPARTMENT_ID = @dept_id)  
+												 )
+												 AND
+												D.IS_STORE IN (1,3) AND
+												ISNULL(D.IS_PRODUCTION,0) = 0 AND
+												D.DEPARTMENT_ID NOT IN (13,17) AND
+												PPD.TARIH BETWEEN @date1 AND @date2
+										) T1
+											LEFT JOIN GET_STOCK_ROWS SR3 ON 
+												(
+													SR3.STOCK_ID = @sno AND
+													SR3.PROCESS_DATE <= T1.TARIH AND
+													YEAR(SR3.PROCESS_DATE) = YEAR(T1.TARIH) AND
+													SR3.STORE = T1.DEPARTMENT_ID
+												)
+									GROUP BY
+										T1.TARIH,
+										T1.DEPARTMENT_HEAD,
+										T1.DEPARTMENT_ID
+									) 
+									GUNLER
+										 LEFT JOIN GET_STOCK_ROWS SR4 ON 
+											(
+												SR4.STOCK_ID = @sno AND 
+												YEAR(SR4.PROCESS_DATE) = YEAR(GUNLER.TARIH) AND
+												MONTH(SR4.PROCESS_DATE) = MONTH(GUNLER.TARIH) AND
+												DAY(SR4.PROCESS_DATE) = DAY(GUNLER.TARIH) AND
+												SR4.PROCESS_TYPE IN (67,52,70,-1003,-1005) AND
+												SR4.STORE = GUNLER.DEPARTMENT_ID
+											)
+								GROUP BY
+									TARIH,
+									DEPARTMENT_HEAD,
+									STOCK_MIKTAR
+							) TSON1
+					   GROUP BY
+							DEPARTMENT_HEAD
+						 ) TSON
+						WHERE
+							TOPLAM_GUN > 0
+      END
+GO
+/****** Object:  StoredProcedure [workcube_devcatalyst_retail].[pro_get_ortalama_satis_stok_new1]    Script Date: 4.11.2020 12:51:26 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+create PROCEDURE [workcube_devcatalyst_retail].[pro_get_ortalama_satis_stok_new1]
+			(
+				@sno int,
+				@dept_id int,
+				@date1 datetime,
+				@date2 datetime
+			)
+		AS
+		BEGIN 
+SELECT ROUND(SUM(TOPLAM_SATIS / TOPLAM_GUN), 2)
+FROM   (
+           SELECT SUM(SATIS_MIKTAR)  AS TOPLAM_SATIS,
+                  COUNT(
+                      CASE 
+                           WHEN (STOCK_MIKTAR > 0 OR SATIS_MIKTAR <> 0) THEN 1
+                           ELSE NULL
+                      END
+                  )                  AS TOPLAM_GUN,
+                  DEPARTMENT_HEAD
+           FROM   (
+                      SELECT TARIH,
+                             DEPARTMENT_HEAD,
+                             ISNULL(SUM(SR4.STOCK_OUT - SR4.STOCK_IN), 0) 
+                             SATIS_MIKTAR,
+                             STOCK_MIKTAR
+                      FROM   (
+                                 SELECT T1.TARIH,
+                                        T1.DEPARTMENT_HEAD,
+                                        T1.DEPARTMENT_ID,
+                                        ISNULL(SUM(SR3.STOCK_IN -SR3.STOCK_OUT), 0) AS 
+                                        STOCK_MIKTAR
+                                 FROM   (
+                                            SELECT PPD.TARIH,
+                                                   D.DEPARTMENT_HEAD,
+                                                   D.DEPARTMENT_ID,
+                                                   D.IS_STORE
+                                            FROM   PRODUCT_PRICE_DATES PPD,
+                                                   workcube_devcatalyst.DEPARTMENT 
+                                                   D
+                                            WHERE  (
+                                                       (@dept_id = 13 AND D.DEPARTMENT_ID < > 13)
+                                                       OR (@dept_id <> 13 AND D.DEPARTMENT_ID = @dept_id)
+                                                   )
+                                                   AND D.IS_STORE IN (1, 3)
+                                                   AND ISNULL(D.IS_PRODUCTION, 0) = 
+                                                       0
+                                                   AND D.DEPARTMENT_ID NOT IN (13, 17)
+                                                   AND PPD.TARIH BETWEEN @date1 
+                                                       AND @date2
+                                        ) T1
+                                        LEFT JOIN GET_STOCK_ROWS SR3
+                                             ON  (
+                                                     SR3.STOCK_ID = @sno
+                                                     AND SR3.PROCESS_DATE <= T1.TARIH
+                                                     AND YEAR(SR3.PROCESS_DATE) 
+                                                         = YEAR(T1.TARIH)
+                                                     AND SR3.STORE = T1.DEPARTMENT_ID
+                                                 )
+                                 GROUP BY
+                                        T1.TARIH,
+                                        T1.DEPARTMENT_HEAD,
+                                        T1.DEPARTMENT_ID
+                             ) GUNLER
+                             LEFT JOIN GET_STOCK_ROWS SR4
+                                  ON  (
+                                          SR4.STOCK_ID = @sno
+                                          AND YEAR(SR4.PROCESS_DATE) = YEAR(GUNLER.TARIH)
+                                          AND MONTH(SR4.PROCESS_DATE) = MONTH(GUNLER.TARIH)
+                                          AND DAY(SR4.PROCESS_DATE) = DAY(GUNLER.TARIH)
+                                          AND SR4.PROCESS_TYPE IN (67, 52, 70, - 1003, -1005)
+                                          AND SR4.STORE = GUNLER.DEPARTMENT_ID
+                                      )
+                      GROUP BY
+                             TARIH,
+                             DEPARTMENT_HEAD,
+                             STOCK_MIKTAR
+                  )                     TSON1
+           GROUP BY
+                  DEPARTMENT_HEAD
+       ) TSON
+WHERE  TOPLAM_GUN > 0
+
+end
+GO
+/****** Object:  StoredProcedure [workcube_devcatalyst_retail].[stock_devir_hizi_getir]    Script Date: 4.11.2020 12:51:26 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE PROCEDURE [workcube_devcatalyst_retail].[stock_devir_hizi_getir]
+
+@stock_id_list  NVARCHAR(MAX),
+@DATE1 DATE,
+@DATE2 DATE,
+@STORE INT
+AS
+BEGIN
+
+SELECT
+	STOCK_ID,
+	ROUND(CASE WHEN (BASLANGIC_STOK + BITIS_STOK) > 0 THEN SATIS_TOPLAM / ((BASLANGIC_STOK + BITIS_STOK) / 2) ELSE 0 END,2) AS STOK_DEVIR_HIZI,
+	SATIS_TOPLAM,
+	BASLANGIC_STOK,
+	BITIS_STOK
+FROM
+	(
+	SELECT 
+		TB1.item AS STOCK_ID,
+		ISNULL(SATIS_TOPLAM_TABLO.SATIS_TOPLAM,0) AS SATIS_TOPLAM,
+		ISNULL(BASLANGIC_STOK_TABLO.BASLANGIC_STOK,0) AS BASLANGIC_STOK,
+		ISNULL(BITIS_STOK_TABLO.BITIS_STOK,0) AS BITIS_STOK
+	FROM 
+		workcube_devcatalyst.fnSplit(@stock_id_list,',') AS TB1
+			outer apply
+			(
+				select 
+					SUM(SATIS) AS SATIS_TOPLAM
+				from
+					STOK_GUNLUK_DURUM  t
+				where
+					t.STOCK_ID = TB1.item  AND t.STORE = @STORE and t.TARIH >= @DATE1 AND t.TARIH <= @DATE2
+			) as SATIS_TOPLAM_TABLO		
+			outer apply
+			(
+				select 
+					StokMiktarı AS BASLANGIC_STOK
+				from
+					STOK_GUNLUK_DURUM  t2
+				where
+					t2.STOCK_ID = TB1.item  AND t2.STORE = @STORE and t2.TARIH = @DATE1
+			) as BASLANGIC_STOK_TABLO	
+			outer apply
+			(
+				select 
+					StokMiktarı AS BITIS_STOK
+				from
+					STOK_GUNLUK_DURUM  t3
+				where
+					t3.STOCK_ID = TB1.item  AND t3.STORE = @STORE and t3.TARIH = @DATE2
+			) as BITIS_STOK_TABLO
+	) T1
+WHERE
+	STOCK_ID IS NOT NULL
+END
+GO
+INSERT INTO [workcube_devcatalyst_retail].SEARCH_TABLE_NO
+(
+TABLE_NUMBER,
+TABLE_CODE,
+STOCK_NUMBER,
+COUNT_NUMBER,
+ORDER_NUMBER,
+PDA_ORDER_NUMBER
+
+)
+VALUES
+(
+1,
+1,
+1,
+1,
+1,
+1
+)
+GO
+
+
+SET IDENTITY_INSERT [workcube_devcatalyst_retail].[GENIUS_ACTION_TYPES] ON 
+
+GO
+INSERT [workcube_devcatalyst_retail].[GENIUS_ACTION_TYPES] ([ROW_ID], [TYPE_ID], [TYPE_NAME]) VALUES (1, N'0', N'Fiş')
+GO
+INSERT [workcube_devcatalyst_retail].[GENIUS_ACTION_TYPES] ([ROW_ID], [TYPE_ID], [TYPE_NAME]) VALUES (2, N'1', N'Fatura')
+GO
+INSERT [workcube_devcatalyst_retail].[GENIUS_ACTION_TYPES] ([ROW_ID], [TYPE_ID], [TYPE_NAME]) VALUES (3, N'2', N'Gider Pusulası')
+GO
+INSERT [workcube_devcatalyst_retail].[GENIUS_ACTION_TYPES] ([ROW_ID], [TYPE_ID], [TYPE_NAME]) VALUES (4, N'3', N'Diplomatik')
+GO
+INSERT [workcube_devcatalyst_retail].[GENIUS_ACTION_TYPES] ([ROW_ID], [TYPE_ID], [TYPE_NAME]) VALUES (5, N'4', N'İrsaliye')
+GO
+INSERT [workcube_devcatalyst_retail].[GENIUS_ACTION_TYPES] ([ROW_ID], [TYPE_ID], [TYPE_NAME]) VALUES (7, N'L', N'Avans')
+GO
+INSERT [workcube_devcatalyst_retail].[GENIUS_ACTION_TYPES] ([ROW_ID], [TYPE_ID], [TYPE_NAME]) VALUES (8, N'P', N'Çekme')
+GO
+SET IDENTITY_INSERT [workcube_devcatalyst_retail].[GENIUS_ACTION_TYPES] OFF
+GO
+
+INSERT INTO [workcube_devcatalyst_retail].SEARCH_TABLES_DEFINES
+(
+ORDER_DAY
+)
+VALUES
+(15)

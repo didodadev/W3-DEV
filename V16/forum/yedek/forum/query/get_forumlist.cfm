@@ -1,0 +1,24 @@
+<cfquery name="FORUMLIST" datasource="#dsn#">
+	SELECT 
+		FORUMID, 
+		FORUMNAME,
+		ADMIN_POS,
+		ADMIN_CONS,
+		ADMIN_PARS,
+		FORUM_CONS_CATS, 
+		FORUM_COMP_CATS,
+		FORUM_EMPS,
+		DESCRIPTION,
+		LAST_MSG_USERKEY,
+		LAST_MSG_DATE,
+		REPLY_COUNT,
+        RECORD_EMP,
+		TOPIC_COUNT
+	FROM 
+		FORUM_MAIN
+	ORDER BY
+		RECORD_DATE DESC
+	<!--- WHERE
+		FORUM_EMPS = 1 OR
+		ADMIN_POS LIKE '%,#session.ep.position_code#,%'  --->
+</cfquery>

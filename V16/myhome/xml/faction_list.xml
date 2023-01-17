@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<SETUP_SITE>
+	<SETUPSITE>
+		<LINK_NAME>İmaj Büyüklükleri XML Setup</LINK_NAME>
+		<LINK_FILE>myhome.my_detail</LINK_FILE>
+		<LINK_DETAIL>XML Setup: İmaj</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Bireysel Üye-Üye Bilgileri Detayı XML Setup</LINK_NAME>
+		<LINK_FILE>myhome.my_consumer_details</LINK_FILE>
+		<LINK_DETAIL>XML Setup: Bireysel Üye</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Kurumsal Üye-Üye Bilgileri Detayı XML Setup</LINK_NAME>
+		<LINK_FILE>myhome.my_company_details,myhome.my_company_opportunities,myhome.my_company_offers,,myhome.my_company_orders</LINK_FILE>
+		<LINK_DETAIL>XML Setup: Kurumsal Üye</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Haftalık Zaman Harcaması XML Setup</LINK_NAME>
+		<LINK_FILE>myhome.list_myweek,myhome.upd_myweek</LINK_FILE>
+		<LINK_DETAIL>XML Setup: Haftalık Zaman Harcaması</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Dönem Değiştirme XML Setup</LINK_NAME>
+		<LINK_FILE>myhome.welcome</LINK_FILE>
+		<LINK_DETAIL>XML Setup:Ders Tarih Aralığı</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Toplu Zaman Harcaması Setup</LINK_NAME>
+		<LINK_FILE>myhome.popup_add_timecost_project_all</LINK_FILE>
+		<LINK_DETAIL>XML Setup:Zaman harcaması zaman kısıtı</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Pozisyonum Setup</LINK_NAME>
+		<LINK_FILE>myhome.my_position</LINK_FILE>
+		<LINK_DETAIL>XML Setup:Pozisyonumda Yetki ve Sorumluluklar</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Zaman Harcaması Setup</LINK_NAME>
+		<LINK_FILE>myhome.emptypopup_form_add_timecost</LINK_FILE>
+		<LINK_DETAIL>XML Setup:Zaman Harcaması Proje Kısıtı</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Uyarılar ve Onaylar Setup</LINK_NAME>
+		<LINK_FILE>myhome.popup_list_warning</LINK_FILE>
+		<LINK_DETAIL>XML Setup:Uyarılar ve Onaylar </LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Hesap Ekstresi Setup</LINK_NAME>
+		<LINK_FILE>myhome.my_extre</LINK_FILE>
+		<LINK_DETAIL>XML Setup:Hesap Ekstresi</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Toplu Fazla Mesai Setup</LINK_NAME>
+		<LINK_FILE>myhome.list_extra_worktimes</LINK_FILE>
+		<LINK_DETAIL>XML Setup:Toplu Fazla Mesai</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Harcama Taleplerim</LINK_NAME>
+		<LINK_FILE>myhome.list_my_expense_requests</LINK_FILE>
+		<LINK_DETAIL>XML Setup:Harcama Taleplerim</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Avans Talebi Ekle</LINK_NAME>
+		<LINK_FILE>myhome.form_add_payment_request</LINK_FILE>
+		<LINK_DETAIL>Avans Talebi Ekle</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Eğitimler</LINK_NAME>
+		<LINK_FILE>myhome.list_my_trainings</LINK_FILE>
+		<LINK_DETAIL>Eğitimler</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>İzinler</LINK_NAME>
+		<LINK_FILE>myhome.my_offtimes</LINK_FILE>
+		<LINK_DETAIL>İzinler</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Varlık Talepleri</LINK_NAME>
+		<LINK_FILE>myhome.popup_form_upd_assetp_demand</LINK_FILE>
+		<LINK_DETAIL>Varlık Talepleri</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Personel Talepleri</LINK_NAME>
+		<LINK_FILE>myhome.from_upd_personel_requirement_form</LINK_FILE>
+		<LINK_DETAIL>Personel Talepleri</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Sağlık Harcama Formu</LINK_NAME>
+		<LINK_FILE>myhome.health_expense_form</LINK_FILE>
+		<LINK_DETAIL>Sağlık Harcama Formu</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Fazla Mesailerim</LINK_NAME>
+		<LINK_FILE>myhome.list_my_extra_worktimes</LINK_FILE>
+		<LINK_DETAIL>Fazla Mesailerim</LINK_DETAIL>
+	</SETUPSITE>
+	<SETUPSITE>
+		<LINK_NAME>Bütçe Planı XML Setup</LINK_NAME>
+		<LINK_FILE>myhome.budget_transfer_demand</LINK_FILE>
+		<LINK_DETAIL>Bütçe Aktarım Talepleri Ayarlarının Düzenlenmesi</LINK_DETAIL>
+	</SETUPSITE>
+</SETUP_SITE>

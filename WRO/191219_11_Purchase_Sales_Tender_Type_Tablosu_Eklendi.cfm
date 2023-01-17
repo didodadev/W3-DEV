@@ -1,0 +1,20 @@
+
+<!-- Description : PURCHASE_SALES_TENDER_TYPE tablosu eklendi
+Developer: Gulbahar Inan
+Company : Workcube
+Destination: Company-->
+<querytag>   
+        IF NOT EXISTS (SELECT 'Y' FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_SCHEMA = '@_dsn_company_@' AND TABLE_NAME = 'PURCHASE_SALES_TENDER_TYPE')
+        BEGIN
+        CREATE TABLE [PURCHASE_SALES_TENDER_TYPE](
+        [TENDER_TYPE_ID] [int] IDENTITY(1,1) NOT NULL,
+        [TENDER_TYPE] [nvarchar](100) NULL,
+        [TENDER_TYPE_DETAIL] [nvarchar](250) NULL,
+        CONSTRAINT [PK__PURCHASE__9D2B1E89DFE19760] PRIMARY KEY CLUSTERED 
+        (
+        [TENDER_TYPE_ID] ASC
+        )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+        ) ON [PRIMARY]
+        END;
+</querytag>
+

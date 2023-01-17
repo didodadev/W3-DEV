@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<workcube_main_process_types>
+	<process>
+		<process_module_id>1</process_module_id>
+		<process_cat>Standart</process_cat>
+		<process_cat_eng/>
+		<process_type>150</process_type>
+		<process_fuseaction>project.addpro,project.popup_updpro,project.prodetail,project.graph,project.popup_project_history,project.projects</process_fuseaction>
+		<process_module_name>Proje</process_module_name>
+		<process_chapter>15</process_chapter>
+	</process>
+</workcube_main_process_types>

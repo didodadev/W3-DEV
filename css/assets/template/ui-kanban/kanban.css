@@ -1,0 +1,70 @@
+.ListContent{background-color:transparent!important;overflow:initial!important}
+.big_list_head{display:none;}
+
+a:hover{text-decoration:none!important;}
+
+#kanban_board{display:flex;display: -webkit-box;display: -moz-box;display: -ms-flexbox;display: -webkit-flex;flex-direction:row;align-items:flex-start;flex-wrap:nowrap;overflow-x: scroll;max-height: 500px;scrollbar-width: none;position: relative;}
+#kanban_board::-webkit-scrollbar{width: 8px;height:8px;}
+#kanban_board::-webkit-scrollbar-thumb {background-color: #edd3d3;border-radius:5px;}
+#kanban_board::-webkit-scrollbar-thumb:hover{background-color:#FF9800;}
+
+.kanban_grid{padding:0!important;margin:0 10px 10px 0;}
+
+.kanban_box{position: relative;border: 10px solid transparent;border-top:0;border-bottom:5px solid transparent;background-color:#ebf5ff;border-radius:4px;border-top-left-radius:0;border-top-right-radius:0;}
+.mb{margin-bottom:0;}
+.kanban_total{margin-left:3px;}
+.kanban_total{padding:0 5px;min-width:20px;height: 20px;border-radius: 4px;line-height: 20px;text-align: center;background-color: #f9f9f9;border: 1px solid #eee;font-size: 10px;color: #333;letter-spacing: 1px;font-weight: bold;}
+.kanban_title h2{flex:1;font-size:14px;color:#4fbab3;font-weight:bold;text-transform:uppercase;letter-spacing:1px;margin:0;}
+.kanban_title{display:flex;display: -webkit-box;display: -moz-box;display: -ms-flexbox;display: -webkit-flex;flex-direction:row-reverse;align-items:center;border-top:5px solid #b9dcff;background-color:#ebf5ff;border-radius:4px;border-bottom-left-radius:0;border-bottom-right-radius:0;padding:5px 10px 0 10px;}
+
+.kanban_title_2 h2{flex:1;font-size:14px;color:#4fbab3;font-weight:bold;text-transform:uppercase;letter-spacing:1px;margin:0;}
+.kanban_title_2{display:flex;display: -webkit-box;display: -moz-box;display: -ms-flexbox;display: -webkit-flex;flex-direction:row;align-items:center;background-color:#ebf5ff;border-radius:4px;border-bottom-left-radius:0;border-bottom-right-radius:0;padding:5px 10px;}
+
+
+.kanban_hide_btn{margin-left:3px;}
+.kanban_hide_btn a{display:block;border-radius: 4px;width: 20px;min-width:20px;height:20px;text-align: center;background-color: #f9f9f9;border:1px solid #eee;transition:.4s;}
+.kanban_hide_btn a i{font-size:8px;color:#333;line-height: 20px!important;}
+.kanban_hide_btn a:hover{background-color:#eaeaea;transition:.4s;}
+
+.kanban_add_btn{margin-left:3px;}
+.kanban_add_btn a{display:block;border-radius: 4px;width: 20px;min-width:20px;height:20px;text-align: center;background-color: #f9f9f9;border:1px solid #eee;transition:.4s;}
+.kanban_add_btn a i{font-size:8px;color:#333;line-height: 20px!important;}
+.kanban_add_btn a:hover{background-color:#eaeaea;transition:.4s;}
+
+.kanban_detail{position: absolute;left:0;right:0;margin:0 0 5px 0;background-color:#fff;border:1px solid #eaeaea;border-radius:4px;padding:10px;transition:.4s;}
+.kanban_detail:hover{transition:.4s;}
+
+.kanban_detail_body{float:left;width:100%;padding:10px 0;}
+.kanban_detail_title > a{display:inline-block;font-size: 10px;color: #333;background-color: #eaeaea;padding: 5px 15px;font-weight:bold;border-radius:4px;}
+
+.kanban_name{float:left;width:100%;margin-bottom:25px;}
+.kanban_name p{font-size:11px;margin:0 0 5px 0;color:black}
+.kanban_name p:last-child{margin:0;}
+
+.kanban_user{float:left;width:100%;margin-bottom:25px;}
+.kanban_user ul{margin:0;padding:0;}
+.kanban_user ul{padding-left:10px;}
+.kanban_user ul li{list-style-type:none;font-size:10px;color:#333;position:relative;padding-left:10px;margin-bottom:5px;}
+.kanban_user ul li:last-child{margin:0;}
+.kanban_user ul li .line{position:absolute;top:50%;left:0;margin-top:-2.5px;width:5px;height:5px;border-radius:5px;}
+
+.progress{float:left;width:100%;background-color:#f2f2f2!important;margin:0!important;height:2px!important;box-shadow:none!important;border-radius:4px!important;overflow:inherit!important;position:relative;}
+.progress span{display:none;position: absolute;text-align: right;font-size: 10px;color: #333;top: -15px;font-weight: bold;}
+.progress-bar{position:relative;width:0;transition:.2s!important;}
+
+.kanban_bottom{float:right;}
+.kanban_comment{margin-right:10px;}
+.kanban_comment, .kanban_document{float:left;}
+.icon_type i{font-size:10px;color:#555;margin-right:3px;font-weight:bold;}
+.icon_type span{font-size:10px;color:#555;font-weight:bold;}
+.kanban_staff{float:right;width:25px;height:25px;border-radius:25px;background-color:#eaeaea;border:1px solid #f9f9f9;position:relative;}
+.custom_tooltip{display:none;position: absolute;font-size: 10px;min-width: 70px;background-color: #eaeaea;z-index: 99999;padding:5px;text-align: center;border-radius: 4px;top: 32px;left: 50%;transform: translateX(-50%);box-shadow: 0 0 8px #f9f9f9;}
+.custom_tooltip::before{content:'';position:absolute;top:-6px;left:50%;margin-left:-7px;width: 0;height: 0;border-style: solid;border-width: 0 7px 7px 7px;border-color: transparent transparent #eaeaea transparent;}
+
+.custom_tooltip p{margin:0;}
+.fsToggle #kanban_board{overflow:inherit!important;max-height:inherit!important;}
+.fsToggle .portBoxBodyStandart{margin-top:40px;}
+
+@media only screen and (max-width:767px){
+    .kanban_grid{padding:0!important;}
+}

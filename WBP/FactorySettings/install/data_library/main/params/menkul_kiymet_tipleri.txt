@@ -1,0 +1,9 @@
+INSERT INTO [SETUP_STOCKBOND_TYPE]([STOCKBOND_TYPE],[DETAIL]) Values( 'Hisse Senedi','Hisse Senedi');
+INSERT INTO [SETUP_STOCKBOND_TYPE]([STOCKBOND_TYPE],[DETAIL]) Values( 'Devlet Tahvili','Devlet Tahvili');
+INSERT INTO [SETUP_STOCKBOND_TYPE]([STOCKBOND_TYPE],[DETAIL]) Values( 'Katılım Fonu','Katılım Fonu');
+INSERT INTO [SETUP_STOCKBOND_TYPE]([STOCKBOND_TYPE],[DETAIL]) Values( 'Para Piyasası-Likit Fon','Para Piyasası-Likit Fon');
+INSERT INTO [SETUP_STOCKBOND_TYPE]([STOCKBOND_TYPE],[DETAIL]) Values( 'Kıymetli Maden Fonu','Kıymetli Maden Fonu');
+INSERT INTO [SETUP_STOCKBOND_TYPE]([STOCKBOND_TYPE],[DETAIL]) Values( 'Sukuk','Kira Getiren Menkul Kıynet');
+INSERT INTO [SETUP_STOCKBOND_TYPE]([STOCKBOND_TYPE],[DETAIL]) Values( 'Eurobond','Döviz Eurobond Tahviller');
+INSERT INTO [SETUP_STOCKBOND_TYPE]([STOCKBOND_TYPE],[DETAIL]) Values( 'Banka Fonları','Banka Tahvili');
+

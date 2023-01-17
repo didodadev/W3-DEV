@@ -1,0 +1,156 @@
+<!---
+	Aşağıdaki sorgu, bu listeyi açan çalışanın, listelenen çalışanların şubesinde yetkili olup olmadığını kontrol ediyordu
+	Buna gerek görülmedi.
+--->
+
+<!--- <cfquery name="get_branchs" datasource="#dsn#">
+	SELECT 
+		BRANCH_ID,
+		BRANCH_NAME 
+	FROM 
+		BRANCH
+	WHERE
+		BRANCH_ID IN (
+					SELECT
+						BRANCH_ID
+					FROM
+						EMPLOYEE_POSITION_BRANCHES
+					WHERE
+						POSITION_CODE = #SESSION.EP.POSITION_CODE#	
+					)
+	ORDER BY BRANCH_ID
+</cfquery> --->
+
+<!--- <cfif get_branchs.recordcount>
+	<cfset branch_id_list = listsort(valuelist(get_branchs.branch_id,','),"Numeric","Desc")>
+<cfelse>
+	<cfset branch_id_list = 0>
+</cfif> --->
+
+<cfif not len(listsort(attributes.employee_ids,"numeric"))>
+	<cfset attributes.employee_ids = 0>
+</cfif>
+<cfif not len(LISTSORT(attributes.partner_ids,"NUMERIC"))>
+	<cfset attributes.partner_ids = 0> 
+</cfif>
+<cfif not len(LISTSORT(attributes.consumer_ids,"NUMERIC"))>
+	<cfset attributes.consumer_ids = 0>
+</cfif>
+<cfif not len(LISTSORT(attributes.group_ids,"NUMERIC"))>
+	<cfset attributes.group_ids = 0>
+</cfif>
+
+<cfquery name="get_class_attender" datasource="#DSN#">
+	SELECT
+		'employee' AS TYPE,
+		TRAINING_CLASS_ATTENDER.CLASS_ID,
+		TRAINING_CLASS_ATTENDER.IS_SELFSERVICE SELF_SERVICE,
+		TRAINING_CLASS_ATTENDER.EMP_ID AS K_ID,
+        TRAINING_CLASS_ATTENDER.STATUS,
+        TRAINING_CLASS_ATTENDER.COMMENT,
+        TRAINING_CLASS_ATTENDER.CLASS_ATTENDER_ID,
+        TRAINING_CLASS_ATTENDER.PARTICIPATION_RATE,
+		EMPLOYEES.EMPLOYEE_NAME AS AD,
+		EMPLOYEES.EMPLOYEE_SURNAME AS SOYAD,
+		EMPLOYEES.EMPLOYEE_ID AS IDS,
+		EMPLOYEE_POSITIONS.POSITION_NAME AS POSITION,
+		DEPARTMENT.DEPARTMENT_HEAD AS DEPARTMAN,
+		C.NICK_NAME AS NICK_NAME,
+		BRANCH.BRANCH_NAME AS BRANCH_NAME
+	FROM
+		TRAINING_CLASS_ATTENDER INNER JOIN EMPLOYEES ON TRAINING_CLASS_ATTENDER.EMP_ID = EMPLOYEES.EMPLOYEE_ID 
+		LEFT JOIN EMPLOYEE_POSITIONS ON EMPLOYEE_POSITIONS.EMPLOYEE_ID = TRAINING_CLASS_ATTENDER.EMP_ID
+		LEFT JOIN DEPARTMENT ON EMPLOYEE_POSITIONS.DEPARTMENT_ID = DEPARTMENT.DEPARTMENT_ID
+		LEFT JOIN BRANCH ON DEPARTMENT.BRANCH_ID=BRANCH.BRANCH_ID
+		LEFT JOIN OUR_COMPANY C ON C.COMP_ID=BRANCH.COMPANY_ID
+	WHERE
+		EMP_ID IS NOT NULL
+		<cfif isdefined("attributes.EX_CLASS_ID") and len(attributes.EX_CLASS_ID)>
+			AND TRAINING_CLASS_ATTENDER.EX_CLASS_ID = #attributes.EX_CLASS_ID#
+		</cfif>
+		AND TRAINING_CLASS_ATTENDER.EMP_ID IN (<cfqueryparam cfsqltype="cf_sql_integer" list="true" value="#listsort(attributes.employee_ids,'numeric')#">)
+		<!---AND EMPLOYEE_POSITIONS.DEPARTMENT_ID = DEPARTMENT.DEPARTMENT_ID
+		 AND EMPLOYEE_POSITIONS.IS_MASTER = 1 --->
+		AND TRAINING_CLASS_ATTENDER.EMP_ID IS NOT NULL
+		<cfif isdefined("attributes.class_id") and len(attributes.class_id)>
+			AND TRAINING_CLASS_ATTENDER.CLASS_ID=<cfqueryparam cfsqltype="cf_sql_integer" value="#attributes.class_id#">
+		</cfif>
+		<!--- AND BRANCH.BRANCH_ID IN (#branch_id_list#) --->
+UNION
+	SELECT 
+		'partner' AS TYPE,
+		TRAINING_CLASS_ATTENDER.CLASS_ID,
+		TRAINING_CLASS_ATTENDER.IS_SELFSERVICE SELF_SERVICE,
+		TRAINING_CLASS_ATTENDER.PAR_ID K_ID,
+        TRAINING_CLASS_ATTENDER.STATUS,
+        TRAINING_CLASS_ATTENDER.COMMENT,
+        TRAINING_CLASS_ATTENDER.CLASS_ATTENDER_ID,
+        TRAINING_CLASS_ATTENDER.PARTICIPATION_RATE,
+		COMPANY_PARTNER.COMPANY_PARTNER_NAME AS AD,
+		COMPANY_PARTNER.COMPANY_PARTNER_SURNAME AS SOYAD,
+		COMPANY_PARTNER.PARTNER_ID AS IDS,
+		COMPANY_PARTNER.TITLE AS POSITION,
+		' ' AS DEPARTMAN, 	
+		COMPANY.NICKNAME AS NICK_NAME,
+		' ' AS BRANCH_NAME
+	FROM
+		TRAINING_CLASS_ATTENDER,
+		COMPANY_PARTNER,
+		COMPANY
+	WHERE
+		TRAINING_CLASS_ATTENDER.CLASS_ID = <cfqueryparam cfsqltype="cf_sql_integer" value="#attributes.class_id#">
+		AND TRAINING_CLASS_ATTENDER.PAR_ID IN (<cfqueryparam cfsqltype="cf_sql_integer" list="true" value="#listsort(attributes.partner_ids,'numeric')#">)
+		AND COMPANY_PARTNER.PARTNER_ID = TRAINING_CLASS_ATTENDER.PAR_ID
+		AND COMPANY_PARTNER.COMPANY_ID = COMPANY.COMPANY_ID
+UNION
+	SELECT
+		'consumer' AS TYPE,
+		TRAINING_CLASS_ATTENDER.CLASS_ID,
+		TRAINING_CLASS_ATTENDER.IS_SELFSERVICE SELF_SERVICE,
+		TRAINING_CLASS_ATTENDER.CON_ID AS K_ID,
+        TRAINING_CLASS_ATTENDER.STATUS,
+        TRAINING_CLASS_ATTENDER.COMMENT,
+        TRAINING_CLASS_ATTENDER.CLASS_ATTENDER_ID,
+        TRAINING_CLASS_ATTENDER.PARTICIPATION_RATE,
+		CONSUMER.CONSUMER_NAME AS AD,
+		CONSUMER.CONSUMER_SURNAME AS SOYAD,
+		CONSUMER.CONSUMER_ID AS IDS,
+		CONSUMER.TITLE AS POSITION,
+		' ' AS DEPARTMAN,
+		CONSUMER.COMPANY AS NICK_NAME,
+		' ' AS BRANCH_NAME
+	FROM
+		TRAINING_CLASS_ATTENDER,
+		CONSUMER
+	WHERE
+		TRAINING_CLASS_ATTENDER.CLASS_ID = <cfqueryparam cfsqltype="cf_sql_integer" value="#attributes.class_id#">
+		AND TRAINING_CLASS_ATTENDER.CON_ID IN (<cfqueryparam cfsqltype="cf_sql_integer" list="true" value="#listsort(attributes.consumer_ids,'numeric')#">)
+		AND CONSUMER.CONSUMER_ID = TRAINING_CLASS_ATTENDER.CON_ID
+		AND TRAINING_CLASS_ATTENDER.CON_ID IS NOT NULL
+UNION 
+	SELECT
+			'group' AS TYPE,
+			TRAINING_CLASS_ATTENDER.CLASS_ID,
+			TRAINING_CLASS_ATTENDER.IS_SELFSERVICE SELF_SERVICE,
+			TRAINING_CLASS_ATTENDER.GRP_ID K_ID,
+            TRAINING_CLASS_ATTENDER.STATUS,
+            TRAINING_CLASS_ATTENDER.COMMENT,
+            TRAINING_CLASS_ATTENDER.CLASS_ATTENDER_ID,
+            TRAINING_CLASS_ATTENDER.PARTICIPATION_RATE,
+			USERS.GROUP_NAME AS AD,
+			' ' AS SOYAD,
+			USERS.GROUP_ID AS IDS,
+			' ' AS POSITION,
+			' ' AS DEPARTMAN,
+			' ' AS NICK_NAME,
+			' ' AS BRANCH_NAME
+		FROM
+			TRAINING_CLASS_ATTENDER,
+			USERS
+		WHERE
+			TRAINING_CLASS_ATTENDER.CLASS_ID = <cfqueryparam cfsqltype="cf_sql_integer" value="#attributes.class_id#">
+			AND TRAINING_CLASS_ATTENDER.GRP_ID IN (<cfqueryparam cfsqltype="cf_sql_integer" list="true" value="#listsort(attributes.group_ids,'numeric')#">)
+			AND USERS.GROUP_ID = TRAINING_CLASS_ATTENDER.GRP_ID
+			AND TRAINING_CLASS_ATTENDER.GRP_ID IS NOT NULL
+		ORDER BY AD,SOYAD
+</cfquery>

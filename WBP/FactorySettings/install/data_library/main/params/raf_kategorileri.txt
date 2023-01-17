@@ -1,0 +1,4 @@
+INSERT INTO [SHELF]([SHELF_ID],[SHELF_NAME]) Values( '1','Ağır Yük');
+INSERT INTO [SHELF]([SHELF_ID],[SHELF_NAME]) Values( '2','Hafif Yük');
+INSERT INTO [SHELF]([SHELF_ID],[SHELF_NAME]) Values( '3','Kapaklı');
+

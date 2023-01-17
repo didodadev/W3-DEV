@@ -1,0 +1,82 @@
+<cffunction name="get_training_request_fnc" returntype="query">
+	<cfargument name="train_req_id" default="">
+    <cfquery name="get_train_req" datasource="#this.DSN#">
+		SELECT 
+			REQUEST_TYPE,
+			PROCESS_STAGE,
+			PURPOSE,
+			(SELECT TOP 1 OTHER_TRAIN_NAME FROM TRAINING_REQUEST_ROWS WHERE TRAIN_REQUEST_ID = TRAINING_REQUEST.TRAIN_REQUEST_ID) AS OTHER_TRAIN_NAME,
+			(SELECT TOP 1 TRAINING_ID FROM TRAINING_REQUEST_ROWS WHERE TRAIN_REQUEST_ID = TRAINING_REQUEST.TRAIN_REQUEST_ID) AS TRAIN_ID,
+			(SELECT TOP 1 T.TRAIN_HEAD FROM TRAINING_REQUEST_ROWS TRR,TRAINING T  WHERE T.TRAIN_ID = TRR.TRAINING_ID AND  TRAIN_REQUEST_ID = TRAINING_REQUEST.TRAIN_REQUEST_ID) AS TRAIN_HEAD,
+			START_DATE,
+			FINISH_DATE,
+			TOTAL_HOUR,
+			TRAINING_PLACE,
+			TRAINER,
+			TRAINING_COST,
+			TRAINING_MONEY,
+			EMPLOYEE_ID,
+			POSITION_CODE,
+			TRAIN_REQUEST_ID,
+			FIRST_BOSS_CODE,
+			FIRST_BOSS_VALID_DATE,
+			SECOND_BOSS_CODE,
+			SECOND_BOSS_VALID_DATE,
+			DETAIL,
+			EMP_VALIDDATE,
+			FIRST_BOSS_DETAIL,
+			SECOND_BOSS_DETAIL,
+			REQUEST_YEAR,
+			THIRD_BOSS_CODE,
+			THIRD_BOSS_VALID_DATE,
+			THIRD_BOSS_DETAIL,
+			THIRD_BOSS_ID,
+			FOURTH_BOSS_CODE,
+			FOURTH_BOSS_VALID_DATE,
+			FOURTH_BOSS_DETAIL,
+			FOURTH_BOSS_ID,
+			EMP_VALIDDATE,
+			RECORD_EMP,
+			RECORD_DATE,
+			UPDATE_EMP,
+			UPDATE_DATE
+		FROM 
+			TRAINING_REQUEST
+		WHERE
+			TRAIN_REQUEST_ID IS NOT NULL
+			<cfif isdefined("arguments.train_req_id") and len (arguments.train_req_id)>
+			AND TRAIN_REQUEST_ID = <cfqueryparam cfsqltype="cf_sql_integer" value="#arguments.train_req_id#">
+			</cfif>
+		ORDER BY 
+			RECORD_DATE DESC
+    </cfquery>
+    <cfreturn get_train_req>
+</cffunction>
+<cffunction name="get_request_rows_fnc" returntype="query">
+	<cfargument name="train_req_id" default="">
+    <cfquery name="get_request_rows" datasource="#this.DSN#">
+		SELECT
+			E.EMPLOYEE_ID,
+			E.EMPLOYEE_NAME+' '+E.EMPLOYEE_SURNAME AS NAMESURNAME,
+			(SELECT POSITION_NAME FROM EMPLOYEE_POSITIONS WHERE EMPLOYEE_ID = E.EMPLOYEE_ID AND EMPLOYEE_POSITIONS.IS_MASTER = 1) AS POSITION_NAME,
+			TRR.TRAIN_REQUEST_ID,
+			TRR.IS_VALID,
+			TRR.IS_VALID2,
+			TRR.IS_VALID3,
+			TRR.IS_VALID4,
+			TRR.REQUEST_TYPE,
+			(SELECT TRAIN_HEAD FROM TRAINING WHERE TRAINING.TRAIN_ID = TRR.TRAINING_ID) AS TRAIN_HEAD,
+			(SELECT TRAIN_ID FROM TRAINING WHERE TRAINING.TRAIN_ID = TRR.TRAINING_ID) AS TRAIN_ID,
+			TRAINING_PRIORITY
+		FROM 
+			TRAINING_REQUEST_ROWS TRR
+			INNER JOIN EMPLOYEES E
+			ON TRR.EMPLOYEE_ID = E.EMPLOYEE_ID
+		WHERE
+			TRR.REQUEST_ROW_ID IS NOT NULL
+			<cfif isdefined("arguments.train_req_id") and len (arguments.train_req_id)>
+			AND TRR.TRAIN_REQUEST_ID = <cfqueryparam cfsqltype="cf_sql_integer" value="#arguments.train_req_id#">
+			</cfif>
+	</cfquery>
+	<cfreturn get_request_rows>
+</cffunction>

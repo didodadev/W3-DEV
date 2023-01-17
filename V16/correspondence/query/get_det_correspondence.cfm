@@ -1,0 +1,31 @@
+<cfquery name="GET_DET_CORRESPONDENCE" datasource="#DSN#">
+	SELECT 
+    	ID,
+        TO_EMP,
+        TO_PARS,
+        TO_CONS,
+        TO_ADR,
+        CC_EMP,
+        CC_PARS,
+        CC_CONS,
+        CC_ADR,
+        CATEGORY,
+        COR_STAGE,
+        SPECIAL_DEFINITION_ID,
+        COR_STARTDATE,
+        CORRESPONDENCE_NUMBER,
+        MAIL_TO,
+        MAIL_CC,
+        SUBJECT,
+        ATTACHMENT_FILE,
+        RECORD_EMP,
+        RECORD_DATE,
+        UPDATE_EMP,
+        UPDATE_DATE,
+        IS_READ,
+        MESSAGE 
+    FROM  
+    	CORRESPONDENCE 
+    WHERE 
+    	ID = <cfqueryparam cfsqltype="cf_sql_integer" value="#attributes.id#">
+</cfquery>

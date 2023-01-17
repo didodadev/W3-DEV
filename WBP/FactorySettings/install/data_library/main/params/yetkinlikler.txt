@@ -1,0 +1,5 @@
+INSERT INTO [SETUP_REQ_TYPE]([REQ_NAME],[REQ_DETAIL]) Values( 'İkna Kabiliyeti','İkna Kabiliyeti');
+INSERT INTO [SETUP_REQ_TYPE]([REQ_NAME],[REQ_DETAIL]) Values( 'Problem Çözme ve Karar Alma','Problem Çözme ve Karar Alma');
+INSERT INTO [SETUP_REQ_TYPE]([REQ_NAME],[REQ_DETAIL]) Values( 'Müşteri Bulma','Müşteri Bulma');
+INSERT INTO [SETUP_REQ_TYPE]([REQ_NAME],[REQ_DETAIL]) Values( 'Satış (Sunum) Yapabilme','Satış (Sunum) Yapabilme');
+

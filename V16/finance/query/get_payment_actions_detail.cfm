@@ -1,0 +1,750 @@
+<cfquery name="GET_CARI_CLOSED_ROW_1" datasource="#DSN2#">
+	SELECT 
+		*
+	FROM 
+	(	
+		SELECT
+			CR.CARI_ACTION_ID,
+			CR.ACTION_TABLE,
+			CR.ACTION_NAME,
+			CR.ACTION_ID,
+			CR.PAPER_NO,
+			CR.ACTION_TYPE_ID,
+			CR.TO_CMP_ID,
+			CR.FROM_CMP_ID,
+			CR.TO_CONSUMER_ID,
+			CR.FROM_CONSUMER_ID,
+			CR.TO_EMPLOYEE_ID,
+			CR.FROM_EMPLOYEE_ID,
+			CR.ACTION_VALUE CR_ACTION_VALUE,
+			CR.ACTION_DATE,
+			CR.DUE_DATE,
+			CR.OTHER_CASH_ACT_VALUE,
+			CR.OTHER_MONEY,
+			ICR.CLOSED_ROW_ID CLOSED_ROW_ID,
+		<cfif attributes.act_type eq 1>
+			ISNULL(ICR.CLOSED_AMOUNT,0) CLOSED_AMOUNT,
+			SUM(ISNULL(ICR.CLOSED_AMOUNT,0)) TOTAL_CLOSED_AMOUNT,
+			SUM(ISNULL(ICR.OTHER_CLOSED_AMOUNT,0)) OTHER_CLOSED_AMOUNT,
+		<cfelseif attributes.act_type eq 2>
+			ISNULL(ICR.PAYMENT_VALUE,0) CLOSED_AMOUNT,
+			SUM(ISNULL(ICR.PAYMENT_VALUE,0)) TOTAL_CLOSED_AMOUNT,
+			SUM(ISNULL(ICR.OTHER_PAYMENT_VALUE,0)) OTHER_CLOSED_AMOUNT,
+		<cfelse>
+			ISNULL(ICR.P_ORDER_VALUE,0) CLOSED_AMOUNT,
+			SUM(ISNULL(ICR.P_ORDER_VALUE,0)) TOTAL_CLOSED_AMOUNT,
+			SUM(ISNULL(ICR.OTHER_P_ORDER_VALUE,0)) OTHER_CLOSED_AMOUNT,
+		</cfif>
+			SUM(ISNULL(ICR.PAYMENT_VALUE,0)) TOTAL_PAYMENT_VALUE,
+			SUM(ISNULL(ICR.OTHER_PAYMENT_VALUE,0)) OTHER_PAYMENT_VALUE,
+			SUM(ISNULL(ICR.P_ORDER_VALUE,0)) TOTAL_P_ORDER_VALUE,
+			SUM(ISNULL(ICR.OTHER_P_ORDER_VALUE,0)) OTHER_P_ORDER_VALUE,
+			ICR.OTHER_MONEY I_OTHER_MONEY
+		FROM 
+			CARI_ROWS CR,
+			CARI_CLOSED_ROW ICR
+		WHERE
+			ICR.CLOSED_ID = #attributes.closed_id# AND
+			CR.ACTION_TYPE_ID NOT IN (45,46) AND
+			CR.ACTION_ID = ICR.ACTION_ID AND
+			((CR.ACTION_TABLE <> 'INVOICE' AND CR.ACTION_TABLE <> 'EXPENSE_ITEM_PLANS' AND CR.CARI_ACTION_ID = ICR.CARI_ACTION_ID) OR (CR.ACTION_TABLE = 'INVOICE' OR CR.ACTION_TABLE = 'EXPENSE_ITEM_PLANS')) AND
+			(((CR.ACTION_TABLE = 'INVOICE' OR CR.ACTION_TABLE = 'EXPENSE_ITEM_PLANS') AND CR.DUE_DATE = ICR.DUE_DATE) OR (CR.ACTION_TABLE <> 'INVOICE' AND CR.ACTION_TABLE <> 'EXPENSE_ITEM_PLANS')) AND
+			CR.OTHER_MONEY = ICR.OTHER_MONEY AND	
+			CR.ACTION_TYPE_ID = ICR.ACTION_TYPE_ID AND
+			CR.CARI_ACTION_ID = ICR.CARI_ACTION_ID
+		GROUP BY
+			CR.CARI_ACTION_ID,
+			CR.ACTION_TABLE,
+			CR.ACTION_NAME,
+			CR.ACTION_ID,
+			CR.PAPER_NO,
+			CR.ACTION_TYPE_ID,
+			CR.TO_CMP_ID,
+			CR.FROM_CMP_ID,
+			CR.TO_CONSUMER_ID,
+			CR.FROM_CONSUMER_ID,
+			CR.TO_EMPLOYEE_ID,
+			CR.FROM_EMPLOYEE_ID,
+			CR.ACTION_VALUE,
+			CR.ACTION_DATE,
+			CR.DUE_DATE,
+			CR.OTHER_CASH_ACT_VALUE,
+			CR.OTHER_MONEY,
+			ICR.CLOSED_ROW_ID,
+		<cfif attributes.act_type eq 1>
+			ICR.CLOSED_AMOUNT,
+		<cfelseif attributes.act_type eq 2>
+			ICR.PAYMENT_VALUE,
+		<cfelse>
+			ICR.P_ORDER_VALUE,
+		</cfif>
+			ICR.OTHER_MONEY
+	UNION ALL
+		SELECT
+			0 CARI_ACTION_ID,
+			'' ACTION_TABLE,
+			'' ACTION_NAME,
+			0 ACTION_ID,
+			'' PAPER_NO,
+			0 ACTION_TYPE_ID,
+			CC.COMPANY_ID TO_CMP_ID,
+			'' FROM_CMP_ID,
+			CC.CONSUMER_ID TO_CONSUMER_ID,
+			'' FROM_CONSUMER_ID,
+			CC.CONSUMER_ID TO_EMPLOYEE_ID,
+			'' FROM_EMPLOYEE_ID,
+			SUM(ISNULL(ICR.PAYMENT_VALUE,0)) CR_ACTION_VALUE,
+			CC.PAPER_ACTION_DATE ACTION_DATE,
+			CC.PAPER_DUE_DATE DUE_DATE,
+			SUM(ISNULL(ICR.OTHER_PAYMENT_VALUE,0)) OTHER_CASH_ACT_VALUE,
+			ICR.OTHER_MONEY,
+			ICR.CLOSED_ROW_ID CLOSED_ROW_ID,
+		<cfif attributes.act_type eq 1>
+			ISNULL(ICR.CLOSED_AMOUNT,0) CLOSED_AMOUNT,
+			SUM(ISNULL(ICR.CLOSED_AMOUNT,0)) TOTAL_CLOSED_AMOUNT,
+			SUM(ISNULL(ICR.OTHER_CLOSED_AMOUNT,0)) OTHER_CLOSED_AMOUNT,
+		<cfelseif attributes.act_type eq 2>
+			ISNULL(ICR.PAYMENT_VALUE,0) CLOSED_AMOUNT,
+			SUM(ISNULL(ICR.PAYMENT_VALUE,0)) TOTAL_CLOSED_AMOUNT,
+			SUM(ISNULL(ICR.OTHER_PAYMENT_VALUE,0)) OTHER_CLOSED_AMOUNT,
+		<cfelse>
+			ISNULL(ICR.P_ORDER_VALUE,0) CLOSED_AMOUNT,
+			SUM(ISNULL(ICR.P_ORDER_VALUE,0)) TOTAL_CLOSED_AMOUNT,
+			SUM(ISNULL(ICR.OTHER_P_ORDER_VALUE,0)) OTHER_CLOSED_AMOUNT,
+		</cfif>
+			SUM(ISNULL(ICR.PAYMENT_VALUE,0)) TOTAL_PAYMENT_VALUE,
+			SUM(ISNULL(ICR.OTHER_PAYMENT_VALUE,0)) OTHER_PAYMENT_VALUE,
+			SUM(ISNULL(ICR.P_ORDER_VALUE,0)) TOTAL_P_ORDER_VALUE,
+			SUM(ISNULL(ICR.OTHER_P_ORDER_VALUE,0)) OTHER_P_ORDER_VALUE,
+			ICR.OTHER_MONEY I_OTHER_MONEY
+		FROM 
+			CARI_CLOSED CC,
+			CARI_CLOSED_ROW ICR
+		WHERE
+			ICR.CLOSED_ID = #attributes.closed_id# AND
+			CC.CLOSED_ID = ICR.CLOSED_ID AND
+			ICR.ACTION_ID = 0
+		GROUP BY
+			CC.COMPANY_ID,
+			CC.CONSUMER_ID,
+			CC.EMPLOYEE_ID,
+			CC.PAPER_ACTION_DATE,
+			CC.PAPER_DUE_DATE,
+			ICR.CLOSED_ROW_ID,
+		<cfif attributes.act_type eq 1>
+			ICR.CLOSED_AMOUNT,
+		<cfelseif attributes.act_type eq 2>
+			ICR.PAYMENT_VALUE,
+		<cfelse>
+			ICR.P_ORDER_VALUE,
+		</cfif>
+			ICR.OTHER_MONEY
+	  ) 
+		MAIN_GET_CLOSED
+	ORDER BY DUE_DATE
+</cfquery>
+<cfif attributes.act_type eq 1>	
+	<cfquery name="GET_CARI_CLOSED_ROW_2" datasource="#DSN2#">
+		SELECT 
+			*
+		FROM 
+		(
+			<!--- Fatura dışında kısmi kapanmış olan işlemler --->
+			SELECT
+				CR.CARI_ACTION_ID,
+				CR.ACTION_TABLE,
+				CR.ACTION_NAME,
+				CR.ACTION_ID,
+				CR.PAPER_NO,
+				CR.ACTION_TYPE_ID,
+				CR.TO_CMP_ID,
+				CR.FROM_CMP_ID,
+				CR.TO_CONSUMER_ID,
+				CR.FROM_CONSUMER_ID,
+				CR.TO_EMPLOYEE_ID,
+				CR.FROM_EMPLOYEE_ID,
+				CR.ACTION_VALUE CR_ACTION_VALUE,
+				CR.ACTION_DATE,
+				CR.DUE_DATE,
+				CR.OTHER_CASH_ACT_VALUE,
+				CR.OTHER_MONEY,	
+				SUM(ISNULL(ICR.CLOSED_AMOUNT,0)) TOTAL_CLOSED_AMOUNT,
+				SUM(ISNULL(ICR.OTHER_CLOSED_AMOUNT,0)) OTHER_CLOSED_AMOUNT,
+				SUM(ISNULL(ICR.PAYMENT_VALUE,0)) TOTAL_PAYMENT_VALUE,
+				SUM(ISNULL(ICR.OTHER_PAYMENT_VALUE,0)) OTHER_PAYMENT_VALUE,
+				SUM(ISNULL(ICR.P_ORDER_VALUE,0)) TOTAL_P_ORDER_VALUE,
+				SUM(ISNULL(ICR.OTHER_P_ORDER_VALUE,0)) OTHER_P_ORDER_VALUE,				
+				ICR.OTHER_MONEY I_OTHER_MONEY,
+				0 CLOSED_ROW_ID,
+				0 CLOSED_AMOUNT
+			FROM 
+				CARI_ROWS CR,
+				CARI_CLOSED_ROW ICR,
+				CARI_CLOSED
+			WHERE
+				CR.ACTION_TABLE <> 'INVOICE' AND
+				<cfif not show_rev_paym_actions and attributes.act_type neq 1>
+					CR.ACTION_TYPE_ID IN (120,121,122) AND
+				</cfif>
+				<cfif len(get_invoice_close.company_id)>
+					(TO_CMP_ID =  #get_invoice_close.company_id# OR FROM_CMP_ID =  #get_invoice_close.company_id#) AND
+					CARI_CLOSED.COMPANY_ID = #get_invoice_close.company_id#  AND 
+				<cfelseif len(get_invoice_close.consumer_id)>
+					(TO_CONSUMER_ID =  #get_invoice_close.consumer_id# OR FROM_CONSUMER_ID =  #get_invoice_close.consumer_id#) AND
+					CARI_CLOSED.CONSUMER_ID = #get_invoice_close.consumer_id#  AND 
+				<cfelse>
+					(TO_EMPLOYEE_ID =  #get_invoice_close.employee_id# OR FROM_EMPLOYEE_ID =  #get_invoice_close.employee_id#) AND
+					CARI_CLOSED.EMPLOYEE_ID = #get_invoice_close.employee_id#  AND 
+				</cfif>				
+				CARI_CLOSED.CLOSED_ID = ICR.CLOSED_ID AND				
+				CR.ACTION_ID = ICR.ACTION_ID AND
+				CR.ACTION_TYPE_ID = ICR.ACTION_TYPE_ID AND
+				CR.ACTION_TYPE_ID NOT IN (45,46) AND
+				((CR.ACTION_TABLE <> 'INVOICE' AND CR.ACTION_TABLE <> 'EXPENSE_ITEM_PLANS' AND CR.CARI_ACTION_ID = ICR.CARI_ACTION_ID) OR (CR.ACTION_TABLE = 'INVOICE' OR CR.ACTION_TABLE = 'EXPENSE_ITEM_PLANS')) AND
+				(((CR.ACTION_TABLE = 'INVOICE' OR CR.ACTION_TABLE = 'EXPENSE_ITEM_PLANS') AND CR.DUE_DATE = ICR.DUE_DATE) OR (CR.ACTION_TABLE <> 'INVOICE' AND CR.ACTION_TABLE <> 'EXPENSE_ITEM_PLANS')) AND
+				CR.OTHER_MONEY = ICR.OTHER_MONEY AND
+				<cfif len(get_invoice_close.company_id)>
+					ICR.ACTION_ID NOT IN (SELECT ICRR.ACTION_ID FROM CARI_CLOSED_ROW ICRR,CARI_CLOSED IC WHERE ICRR.CLOSED_ID = IC.CLOSED_ID AND IC.COMPANY_ID = #get_invoice_close.company_id# AND ((CR.ACTION_TABLE <> 'INVOICE' AND CR.ACTION_TABLE <> 'EXPENSE_ITEM_PLANS' AND CR.CARI_ACTION_ID = ICRR.CARI_ACTION_ID) OR (CR.ACTION_TABLE = 'INVOICE' OR CR.ACTION_TABLE = 'EXPENSE_ITEM_PLANS')) AND (((CR.ACTION_TABLE = 'INVOICE' OR CR.ACTION_TABLE = 'EXPENSE_ITEM_PLANS') AND CR.DUE_DATE = ICRR.DUE_DATE) OR (CR.ACTION_TABLE <> 'INVOICE' AND CR.ACTION_TABLE <> 'EXPENSE_ITEM_PLANS')) AND CR.ACTION_TYPE_ID = ICRR.ACTION_TYPE_ID AND IC.OTHER_MONEY = CR.OTHER_MONEY) AND
+				<cfelseif len(get_invoice_close.consumer_id)>
+					ICR.ACTION_ID NOT IN (SELECT ICRR.ACTION_ID FROM CARI_CLOSED_ROW ICRR,CARI_CLOSED IC WHERE ICRR.CLOSED_ID = IC.CLOSED_ID AND IC.CONSUMER_ID = #get_invoice_close.consumer_id# AND ((CR.ACTION_TABLE <> 'INVOICE' AND CR.ACTION_TABLE <> 'EXPENSE_ITEM_PLANS' AND CR.CARI_ACTION_ID = ICRR.CARI_ACTION_ID) OR (CR.ACTION_TABLE = 'INVOICE' OR CR.ACTION_TABLE = 'EXPENSE_ITEM_PLANS')) AND (((CR.ACTION_TABLE = 'INVOICE' OR CR.ACTION_TABLE = 'EXPENSE_ITEM_PLANS') AND CR.DUE_DATE = ICRR.DUE_DATE) OR (CR.ACTION_TABLE <> 'INVOICE' AND CR.ACTION_TABLE <> 'EXPENSE_ITEM_PLANS')) AND CR.ACTION_TYPE_ID = ICRR.ACTION_TYPE_ID AND IC.OTHER_MONEY = CR.OTHER_MONEY) AND
+				<cfelse>
+					ICR.ACTION_ID NOT IN (SELECT ICRR.ACTION_ID FROM CARI_CLOSED_ROW ICRR,CARI_CLOSED IC WHERE ICRR.CLOSED_ID = IC.CLOSED_ID AND IC.EMPLOYEE_ID = #get_invoice_close.employee_id# AND ((CR.ACTION_TABLE <> 'INVOICE' AND CR.ACTION_TABLE <> 'EXPENSE_ITEM_PLANS' AND CR.CARI_ACTION_ID = ICRR.CARI_ACTION_ID) OR (CR.ACTION_TABLE = 'INVOICE' OR CR.ACTION_TABLE = 'EXPENSE_ITEM_PLANS')) AND (((CR.ACTION_TABLE = 'INVOICE' OR CR.ACTION_TABLE = 'EXPENSE_ITEM_PLANS') AND CR.DUE_DATE = ICRR.DUE_DATE) OR (CR.ACTION_TABLE <> 'INVOICE' AND CR.ACTION_TABLE <> 'EXPENSE_ITEM_PLANS')) AND CR.ACTION_TYPE_ID = ICRR.ACTION_TYPE_ID AND IC.OTHER_MONEY = CR.OTHER_MONEY) AND
+				</cfif>
+				<cfif attributes.act_type eq 1><!--- Kapama İşlemi İse --->
+					ISNULL(ICR.CLOSED_AMOUNT,0)>0 AND							
+				<cfelseif attributes.act_type eq 2><!--- Ödeme talebi İse --->
+					ISNULL(ICR.PAYMENT_VALUE,0)>0 AND
+				<cfelseif attributes.act_type eq 3><!--- Ödeme emri İse --->
+					ISNULL(ICR.P_ORDER_VALUE,0)>0 AND
+				</cfif>
+				ICR.CLOSED_ID <> #attributes.closed_id#
+				<cfif isdefined("attributes.due_date1") and len(attributes.due_date1)>
+					AND (CR.DUE_DATE >= #attributes.due_date1#
+					OR CR.DUE_DATE IS NULL)
+				</cfif>
+				<cfif isdefined("attributes.due_date2") and len(attributes.due_date2)>
+					AND (CR.DUE_DATE <= #attributes.due_date2#
+					OR CR.DUE_DATE IS NULL)
+				</cfif>
+				<cfif isdefined("attributes.action_type") and len(attributes.action_type)>
+					AND CR.ACTION_TYPE_ID = #attributes.action_type#
+				</cfif>
+				<cfif isdefined("attributes.start_date") and isdefined("attributes.finish_date") and isdate(attributes.start_date) and isdate(attributes.finish_date)>
+					AND CR.ACTION_DATE BETWEEN #attributes.start_date# AND #attributes.finish_date#
+				<cfelseif isdefined("attributes.start_date") and isdate(attributes.start_date)>
+					AND CR.ACTION_DATE >= #attributes.start_date#
+				<cfelseif isdefined("attributes.finish_date") and isdate(attributes.finish_date)>
+					AND CR.ACTION_DATE <= #attributes.finish_date#
+				</cfif>
+					AND CR.OTHER_MONEY = '#get_invoice_close.other_money#'
+				<cfif isdefined("attributes.project_id") and len(attributes.project_id) and len(attributes.project_head)>
+					AND CR.PROJECT_ID = #attributes.project_id#
+				</cfif>
+			GROUP BY
+				CR.CARI_ACTION_ID,
+				CR.ACTION_TABLE,
+				CR.ACTION_NAME,
+				CR.ACTION_ID,
+				CR.PAPER_NO,
+				CR.ACTION_TYPE_ID,
+				CR.TO_CMP_ID,
+				CR.FROM_CMP_ID,
+				CR.TO_CONSUMER_ID,
+				CR.FROM_CONSUMER_ID,
+				CR.TO_EMPLOYEE_ID,
+				CR.FROM_EMPLOYEE_ID,
+				CR.ACTION_VALUE,
+				CR.ACTION_DATE,
+				CR.DUE_DATE,
+				CR.OTHER_CASH_ACT_VALUE,
+				CR.OTHER_MONEY,
+				ICR.OTHER_MONEY				
+			UNION ALL
+			<!--- Fatura dışında kapanmamış olan işlemler --->
+			SELECT
+				CR.CARI_ACTION_ID,
+				CR.ACTION_TABLE,
+				CR.ACTION_NAME,
+				CR.ACTION_ID,
+				CR.PAPER_NO,
+				CR.ACTION_TYPE_ID,
+				CR.TO_CMP_ID,
+				CR.FROM_CMP_ID,
+				CR.TO_CONSUMER_ID,
+				CR.FROM_CONSUMER_ID,
+				CR.TO_EMPLOYEE_ID,
+				CR.FROM_EMPLOYEE_ID,
+				CR.ACTION_VALUE CR_ACTION_VALUE,
+				CR.ACTION_DATE,
+				CR.DUE_DATE,
+				CR.OTHER_CASH_ACT_VALUE,
+				CR.OTHER_MONEY,				
+				0 TOTAL_CLOSED_AMOUNT,
+				0 OTHER_CLOSED_AMOUNT,
+				0 TOTAL_PAYMENT_VALUE,
+				0 OTHER_PAYMENT_VALUE,
+				0 TOTAL_P_ORDER_VALUE,
+				0 OTHER_P_ORDER_VALUE,
+				'' I_OTHER_MONEY,
+				0 CLOSED_ROW_ID,
+				0 CLOSED_AMOUNT
+			FROM 
+				CARI_ROWS CR
+			WHERE
+				CR.ACTION_TABLE <> 'INVOICE' AND
+				<cfif not show_rev_paym_actions and attributes.act_type neq 1>
+					CR.ACTION_TYPE_ID IN (120,121,122) AND
+				</cfif>
+				<cfif len(get_invoice_close.company_id)>
+					(TO_CMP_ID = #get_invoice_close.company_id# OR FROM_CMP_ID =  #get_invoice_close.company_id#) AND
+				<cfelseif len(get_invoice_close.consumer_id)>
+					(TO_CONSUMER_ID =  #get_invoice_close.consumer_id# OR FROM_CONSUMER_ID =  #get_invoice_close.consumer_id#) AND
+				<cfelse>
+					(TO_EMPLOYEE_ID =  #get_invoice_close.employee_id# OR FROM_EMPLOYEE_ID =  #get_invoice_close.employee_id#) AND
+				</cfif>
+					CR.ACTION_TYPE_ID NOT IN (45,46) AND
+				<cfif len(get_invoice_close.company_id)>
+					CR.ACTION_ID NOT IN (SELECT ICRR.ACTION_ID FROM CARI_CLOSED_ROW ICRR,CARI_CLOSED IC WHERE ICRR.CLOSED_ID = IC.CLOSED_ID AND IC.COMPANY_ID = #get_invoice_close.company_id# AND ((CR.ACTION_TABLE <> 'INVOICE' AND CR.ACTION_TABLE <> 'EXPENSE_ITEM_PLANS' AND CR.CARI_ACTION_ID = ICRR.CARI_ACTION_ID) OR (CR.ACTION_TABLE = 'INVOICE' OR CR.ACTION_TABLE = 'EXPENSE_ITEM_PLANS')) AND (((CR.ACTION_TABLE = 'INVOICE' OR CR.ACTION_TABLE = 'EXPENSE_ITEM_PLANS') AND CR.DUE_DATE = ICRR.DUE_DATE) OR (CR.ACTION_TABLE <> 'INVOICE' AND CR.ACTION_TABLE <> 'EXPENSE_ITEM_PLANS')) AND CR.ACTION_TYPE_ID = ICRR.ACTION_TYPE_ID AND IC.OTHER_MONEY = CR.OTHER_MONEY)
+				<cfelseif len(get_invoice_close.consumer_id)>
+					CR.ACTION_ID NOT IN (SELECT ICRR.ACTION_ID FROM CARI_CLOSED_ROW ICRR,CARI_CLOSED IC WHERE ICRR.CLOSED_ID = IC.CLOSED_ID AND IC.CONSUMER_ID = #get_invoice_close.consumer_id# AND ((CR.ACTION_TABLE <> 'INVOICE' AND CR.ACTION_TABLE <> 'EXPENSE_ITEM_PLANS' AND CR.CARI_ACTION_ID = ICRR.CARI_ACTION_ID) OR (CR.ACTION_TABLE = 'INVOICE' OR CR.ACTION_TABLE = 'EXPENSE_ITEM_PLANS')) AND (((CR.ACTION_TABLE = 'INVOICE' OR CR.ACTION_TABLE = 'EXPENSE_ITEM_PLANS') AND CR.DUE_DATE = ICRR.DUE_DATE) OR (CR.ACTION_TABLE <> 'INVOICE' AND CR.ACTION_TABLE <> 'EXPENSE_ITEM_PLANS')) AND CR.ACTION_TYPE_ID = ICRR.ACTION_TYPE_ID AND IC.OTHER_MONEY = CR.OTHER_MONEY)
+				<cfelse>
+					CR.ACTION_ID NOT IN (SELECT ICRR.ACTION_ID FROM CARI_CLOSED_ROW ICRR,CARI_CLOSED IC WHERE ICRR.CLOSED_ID = IC.CLOSED_ID AND IC.EMPLOYEE_ID = #get_invoice_close.employee_id# AND ((CR.ACTION_TABLE <> 'INVOICE' AND CR.ACTION_TABLE <> 'EXPENSE_ITEM_PLANS' AND CR.CARI_ACTION_ID = ICRR.CARI_ACTION_ID) OR (CR.ACTION_TABLE = 'INVOICE' OR CR.ACTION_TABLE = 'EXPENSE_ITEM_PLANS')) AND (((CR.ACTION_TABLE = 'INVOICE' OR CR.ACTION_TABLE = 'EXPENSE_ITEM_PLANS') AND CR.DUE_DATE = ICRR.DUE_DATE) OR (CR.ACTION_TABLE <> 'INVOICE' AND CR.ACTION_TABLE <> 'EXPENSE_ITEM_PLANS')) AND CR.ACTION_TYPE_ID = ICRR.ACTION_TYPE_ID AND IC.OTHER_MONEY = CR.OTHER_MONEY)
+				</cfif>
+				<cfif isdefined("attributes.due_date1") and len(attributes.due_date1)>
+					AND (CR.DUE_DATE >= #attributes.due_date1#
+					OR CR.DUE_DATE IS NULL)
+				</cfif>
+				<cfif isdefined("attributes.due_date2") and len(attributes.due_date2)>
+					AND (CR.DUE_DATE <= #attributes.due_date2#
+					OR CR.DUE_DATE IS NULL)
+				</cfif>
+				<cfif isdefined("attributes.action_type") and len(attributes.action_type)>
+					AND CR.ACTION_TYPE_ID = #attributes.action_type#
+				</cfif>
+				<cfif isdefined("attributes.start_date") and isdefined("attributes.finish_date") and isdate(attributes.start_date) and isdate(attributes.finish_date)>
+					AND CR.ACTION_DATE BETWEEN #attributes.start_date# AND #attributes.finish_date#
+				<cfelseif isdefined("attributes.start_date") and isdate(attributes.start_date)>
+					AND CR.ACTION_DATE >= #attributes.start_date#
+				<cfelseif isdefined("attributes.finish_date") and isdate(attributes.finish_date)>
+					AND CR.ACTION_DATE <= #attributes.finish_date#
+				</cfif>
+					AND CR.OTHER_MONEY = '#get_invoice_close.other_money#'
+				<cfif isdefined("attributes.project_id") and len(attributes.project_id) and len(attributes.project_head)>
+					AND CR.PROJECT_ID = #attributes.project_id#
+				</cfif>	
+			UNION ALL
+			<!--- Kısmi Kapanmış Satış faturaları --->
+			SELECT 
+				CR.CARI_ACTION_ID,
+				CR.ACTION_TABLE,
+				CR.ACTION_NAME,
+				CR.ACTION_ID,
+				CR.PAPER_NO,
+				CR.ACTION_TYPE_ID,
+				CR.TO_CMP_ID,
+				CR.FROM_CMP_ID,
+				CR.TO_CONSUMER_ID,
+				CR.FROM_CONSUMER_ID,
+				CR.TO_EMPLOYEE_ID,
+				CR.FROM_EMPLOYEE_ID,
+				CR.ACTION_VALUE CR_ACTION_VALUE,
+				CR.ACTION_DATE,
+				CR.DUE_DATE,
+				CR.OTHER_CASH_ACT_VALUE,
+				CR.OTHER_MONEY,				
+				SUM(ISNULL(ICR.CLOSED_AMOUNT,0)) TOTAL_CLOSED_AMOUNT,
+				SUM(ISNULL(ICR.OTHER_CLOSED_AMOUNT,0)) OTHER_CLOSED_AMOUNT,
+				SUM(ISNULL(ICR.PAYMENT_VALUE,0)) TOTAL_PAYMENT_VALUE,
+				SUM(ISNULL(ICR.OTHER_PAYMENT_VALUE,0)) OTHER_PAYMENT_VALUE,
+				SUM(ISNULL(ICR.P_ORDER_VALUE,0)) TOTAL_P_ORDER_VALUE,
+				SUM(ISNULL(ICR.OTHER_P_ORDER_VALUE,0)) OTHER_P_ORDER_VALUE,
+				'' I_OTHER_MONEY,
+				0 CLOSED_ROW_ID,
+				0 CLOSED_AMOUNT
+			FROM 
+				INVOICE I,
+				CARI_ROWS CR,
+				CARI_CLOSED_ROW ICR,
+				CARI_CLOSED
+			WHERE
+				CARI_CLOSED.CLOSED_ID = ICR.CLOSED_ID AND				
+				CR.ACTION_ID = ICR.ACTION_ID AND
+				CR.ACTION_TYPE_ID = ICR.ACTION_TYPE_ID AND
+				CR.ACTION_TYPE_ID NOT IN (45,46) AND
+				((CR.ACTION_TABLE <> 'INVOICE' AND CR.CARI_ACTION_ID = ICR.CARI_ACTION_ID) OR CR.ACTION_TABLE = 'INVOICE') AND
+				((CR.ACTION_TABLE = 'INVOICE' AND CR.DUE_DATE = ICR.DUE_DATE) OR CR.ACTION_TABLE <> 'INVOICE') AND
+				CR.OTHER_MONEY = ICR.OTHER_MONEY AND
+				ICR.CLOSED_ID <> #attributes.closed_id# AND
+				<cfif len(get_invoice_close.company_id)>
+					ICR.ACTION_ID NOT IN (SELECT ICRR.ACTION_ID FROM CARI_CLOSED_ROW ICRR,CARI_CLOSED IC WHERE IC.CLOSED_ID = #attributes.closed_id# AND ICRR.CLOSED_ID = IC.CLOSED_ID AND IC.COMPANY_ID = #get_invoice_close.company_id# AND ((CR.ACTION_TABLE <> 'INVOICE' AND CR.ACTION_TABLE <> 'EXPENSE_ITEM_PLANS' AND CR.CARI_ACTION_ID = ICRR.CARI_ACTION_ID) OR (CR.ACTION_TABLE = 'INVOICE' OR CR.ACTION_TABLE = 'EXPENSE_ITEM_PLANS')) AND (((CR.ACTION_TABLE = 'INVOICE' OR CR.ACTION_TABLE = 'EXPENSE_ITEM_PLANS') AND CR.DUE_DATE = ICRR.DUE_DATE) OR (CR.ACTION_TABLE <> 'INVOICE' AND CR.ACTION_TABLE <> 'EXPENSE_ITEM_PLANS')) AND CR.ACTION_TYPE_ID = ICRR.ACTION_TYPE_ID AND IC.OTHER_MONEY = CR.OTHER_MONEY) AND
+				<cfelseif len(get_invoice_close.consumer_id)>
+					ICR.ACTION_ID NOT IN (SELECT ICRR.ACTION_ID FROM CARI_CLOSED_ROW ICRR,CARI_CLOSED IC WHERE IC.CLOSED_ID = #attributes.closed_id# AND ICRR.CLOSED_ID = IC.CLOSED_ID AND IC.CONSUMER_ID = #get_invoice_close.consumer_id# AND ((CR.ACTION_TABLE <> 'INVOICE' AND CR.ACTION_TABLE <> 'EXPENSE_ITEM_PLANS' AND CR.CARI_ACTION_ID = ICRR.CARI_ACTION_ID) OR (CR.ACTION_TABLE = 'INVOICE' OR CR.ACTION_TABLE = 'EXPENSE_ITEM_PLANS')) AND (((CR.ACTION_TABLE = 'INVOICE' OR CR.ACTION_TABLE = 'EXPENSE_ITEM_PLANS') AND CR.DUE_DATE = ICRR.DUE_DATE) OR (CR.ACTION_TABLE <> 'INVOICE' AND CR.ACTION_TABLE <> 'EXPENSE_ITEM_PLANS')) AND CR.ACTION_TYPE_ID = ICRR.ACTION_TYPE_ID AND IC.OTHER_MONEY = CR.OTHER_MONEY) AND
+				<cfelse>
+					ICR.ACTION_ID NOT IN (SELECT ICRR.ACTION_ID FROM CARI_CLOSED_ROW ICRR,CARI_CLOSED IC WHERE IC.CLOSED_ID = #attributes.closed_id# AND ICRR.CLOSED_ID = IC.CLOSED_ID AND IC.EMPLOYEE_ID = #get_invoice_close.employee_id# AND ((CR.ACTION_TABLE <> 'INVOICE' AND CR.ACTION_TABLE <> 'EXPENSE_ITEM_PLANS' AND CR.CARI_ACTION_ID = ICRR.CARI_ACTION_ID) OR (CR.ACTION_TABLE = 'INVOICE' OR CR.ACTION_TABLE = 'EXPENSE_ITEM_PLANS')) AND (((CR.ACTION_TABLE = 'INVOICE' OR CR.ACTION_TABLE = 'EXPENSE_ITEM_PLANS') AND CR.DUE_DATE = ICRR.DUE_DATE) OR (CR.ACTION_TABLE <> 'INVOICE' AND CR.ACTION_TABLE <> 'EXPENSE_ITEM_PLANS')) AND CR.ACTION_TYPE_ID = ICRR.ACTION_TYPE_ID AND IC.OTHER_MONEY = CR.OTHER_MONEY) AND
+				</cfif>	
+				<cfif attributes.act_type eq 1><!--- Kapama İşlemi İse --->
+					ISNULL(ICR.CLOSED_AMOUNT,0)>0 AND							
+				<cfelseif attributes.act_type eq 2><!--- Ödeme talebi İse --->
+					ISNULL(ICR.PAYMENT_VALUE,0)>0 AND
+				<cfelseif attributes.act_type eq 3><!--- Ödeme emri İse --->
+					ISNULL(ICR.P_ORDER_VALUE,0)>0 AND
+				</cfif>
+				<cfif len(get_invoice_close.company_id)>
+					(TO_CMP_ID =  #get_invoice_close.company_id# OR FROM_CMP_ID = #get_invoice_close.company_id#) AND
+				<cfelseif len(get_invoice_close.consumer_id)>
+					(TO_CONSUMER_ID =  #get_invoice_close.consumer_id# OR FROM_CONSUMER_ID = #get_invoice_close.consumer_id#) AND
+				<cfelse>
+					(TO_EMPLOYEE_ID =  #get_invoice_close.employee_id# OR FROM_EMPLOYEE_ID = #get_invoice_close.employee_id#) AND
+				</cfif>
+				<cfif len(get_invoice_close.company_id)>
+					ICR.ACTION_ID IN (SELECT ICRR.ACTION_ID FROM CARI_CLOSED_ROW ICRR,CARI_CLOSED IC WHERE ICRR.CLOSED_ID = IC.CLOSED_ID AND IC.COMPANY_ID = #get_invoice_close.company_id# AND ((CR.ACTION_TABLE <> 'INVOICE' AND CR.ACTION_TABLE <> 'EXPENSE_ITEM_PLANS' AND CR.CARI_ACTION_ID = ICRR.CARI_ACTION_ID) OR (CR.ACTION_TABLE = 'INVOICE' OR CR.ACTION_TABLE = 'EXPENSE_ITEM_PLANS')) AND (((CR.ACTION_TABLE = 'INVOICE' OR CR.ACTION_TABLE = 'EXPENSE_ITEM_PLANS') AND CR.DUE_DATE = ICRR.DUE_DATE) OR (CR.ACTION_TABLE <> 'INVOICE' AND CR.ACTION_TABLE <> 'EXPENSE_ITEM_PLANS')) AND CR.ACTION_TYPE_ID = ICRR.ACTION_TYPE_ID AND IC.OTHER_MONEY = CR.OTHER_MONEY) AND
+				<cfelseif len(get_invoice_close.consumer_id)>
+					ICR.ACTION_ID IN (SELECT ICRR.ACTION_ID FROM CARI_CLOSED_ROW ICRR,CARI_CLOSED IC WHERE ICRR.CLOSED_ID = IC.CLOSED_ID AND IC.CONSUMER_ID = #get_invoice_close.consumer_id# AND ((CR.ACTION_TABLE <> 'INVOICE' AND CR.ACTION_TABLE <> 'EXPENSE_ITEM_PLANS' AND CR.CARI_ACTION_ID = ICRR.CARI_ACTION_ID) OR (CR.ACTION_TABLE = 'INVOICE' OR CR.ACTION_TABLE = 'EXPENSE_ITEM_PLANS')) AND (((CR.ACTION_TABLE = 'INVOICE' OR CR.ACTION_TABLE = 'EXPENSE_ITEM_PLANS') AND CR.DUE_DATE = ICRR.DUE_DATE) OR (CR.ACTION_TABLE <> 'INVOICE' AND CR.ACTION_TABLE <> 'EXPENSE_ITEM_PLANS')) AND CR.ACTION_TYPE_ID = ICRR.ACTION_TYPE_ID AND IC.OTHER_MONEY = CR.OTHER_MONEY) AND
+				<cfelse>
+					ICR.ACTION_ID IN (SELECT ICRR.ACTION_ID FROM CARI_CLOSED_ROW ICRR,CARI_CLOSED IC WHERE ICRR.CLOSED_ID = IC.CLOSED_ID AND IC.EMPLOYEE_ID = #get_invoice_close.employee_id# AND ((CR.ACTION_TABLE <> 'INVOICE' AND CR.ACTION_TABLE <> 'EXPENSE_ITEM_PLANS' AND CR.CARI_ACTION_ID = ICRR.CARI_ACTION_ID) OR (CR.ACTION_TABLE = 'INVOICE' OR CR.ACTION_TABLE = 'EXPENSE_ITEM_PLANS')) AND (((CR.ACTION_TABLE = 'INVOICE' OR CR.ACTION_TABLE = 'EXPENSE_ITEM_PLANS') AND CR.DUE_DATE = ICRR.DUE_DATE) OR (CR.ACTION_TABLE <> 'INVOICE' AND CR.ACTION_TABLE <> 'EXPENSE_ITEM_PLANS')) AND CR.ACTION_TYPE_ID = ICRR.ACTION_TYPE_ID AND IC.OTHER_MONEY = CR.OTHER_MONEY) AND
+				</cfif>
+					I.INVOICE_ID = CR.ACTION_ID AND
+					I.INVOICE_CAT = CR.ACTION_TYPE_ID AND
+					(I.INVOICE_ID NOT IN(SELECT INVOICE_ID FROM INVOICE_CONTROL WHERE INVOICE_ID IS NOT NULL) OR I.PURCHASE_SALES = 1) AND
+					I.IS_ACCOUNTED = 0 AND
+					I.IS_IPTAL = 0
+				<cfif isdefined("attributes.due_date1") and len(attributes.due_date1)>
+					AND (CR.DUE_DATE >= #attributes.due_date1#
+					OR CR.DUE_DATE IS NULL)
+				</cfif>
+				<cfif isdefined("attributes.due_date2") and len(attributes.due_date2)>
+					AND (CR.DUE_DATE <= #attributes.due_date2#
+					OR CR.DUE_DATE IS NULL)
+				</cfif>
+				<cfif isdefined("attributes.action_type") and len(attributes.action_type)>
+					AND CR.ACTION_TYPE_ID = #attributes.action_type#
+				</cfif>
+				<cfif isdefined("attributes.start_date") and isdefined("attributes.finish_date") and isdate(attributes.start_date) and isdate(attributes.finish_date)>
+					AND CR.ACTION_DATE BETWEEN #attributes.start_date# AND #attributes.finish_date#
+				<cfelseif isdefined("attributes.start_date") and isdate(attributes.start_date)>
+					AND CR.ACTION_DATE >= #attributes.start_date#
+				<cfelseif isdefined("attributes.finish_date") and isdate(attributes.finish_date)>
+					AND CR.ACTION_DATE <= #attributes.finish_date#
+				</cfif>
+					AND CR.OTHER_MONEY = '#get_invoice_close.other_money#'
+				<cfif isdefined("attributes.project_id") and len(attributes.project_id) and len(attributes.project_head)>
+					AND CR.PROJECT_ID = #attributes.project_id#
+				</cfif>
+			GROUP BY
+				CR.CARI_ACTION_ID,
+				CR.ACTION_TABLE,
+				CR.ACTION_NAME,
+				CR.ACTION_ID,
+				CR.PAPER_NO,
+				CR.ACTION_TYPE_ID,
+				CR.TO_CMP_ID,
+				CR.FROM_CMP_ID,
+				CR.TO_CONSUMER_ID,
+				CR.FROM_CONSUMER_ID,
+				CR.TO_EMPLOYEE_ID,
+				CR.FROM_EMPLOYEE_ID,
+				CR.ACTION_VALUE,
+				CR.ACTION_DATE,
+				CR.DUE_DATE,
+				CR.OTHER_CASH_ACT_VALUE,
+				CR.OTHER_MONEY,
+				ICR.OTHER_MONEY
+			UNION ALL
+			<!--- Açık Satış faturaları --->
+			SELECT 
+				CR.CARI_ACTION_ID,
+				CR.ACTION_TABLE,
+				CR.ACTION_NAME,
+				CR.ACTION_ID,
+				CR.PAPER_NO,
+				CR.ACTION_TYPE_ID,
+				CR.TO_CMP_ID,
+				CR.FROM_CMP_ID,
+				CR.TO_CONSUMER_ID,
+				CR.FROM_CONSUMER_ID,
+				CR.TO_EMPLOYEE_ID,
+				CR.FROM_EMPLOYEE_ID,
+				CR.ACTION_VALUE CR_ACTION_VALUE,
+				CR.ACTION_DATE,
+				CR.DUE_DATE,
+				CR.OTHER_CASH_ACT_VALUE,
+				CR.OTHER_MONEY,				
+				0 TOTAL_CLOSED_AMOUNT,
+				0 OTHER_CLOSED_AMOUNT,
+				0 TOTAL_PAYMENT_VALUE,
+				0 OTHER_PAYMENT_VALUE,
+				0 TOTAL_P_ORDER_VALUE,
+				0 OTHER_P_ORDER_VALUE,
+				'' I_OTHER_MONEY,
+				0 CLOSED_ROW_ID,
+				0 CLOSED_AMOUNT
+			FROM 
+				INVOICE I,
+				CARI_ROWS CR
+			WHERE
+			<cfif len(get_invoice_close.company_id)>
+				(TO_CMP_ID =  #get_invoice_close.company_id# OR FROM_CMP_ID =  #get_invoice_close.company_id#) AND
+			<cfelseif len(get_invoice_close.consumer_id)>
+				(TO_CONSUMER_ID =  #get_invoice_close.consumer_id# OR FROM_CONSUMER_ID =  #get_invoice_close.consumer_id#) AND
+			<cfelse>
+				(TO_EMPLOYEE_ID =  #get_invoice_close.employee_id# OR FROM_EMPLOYEE_ID =  #get_invoice_close.employee_id#) AND
+			</cfif>
+				CR.ACTION_TYPE_ID NOT IN (45,46) AND
+			<cfif len(get_invoice_close.company_id)>
+				CR.ACTION_ID NOT IN (SELECT ICRR.ACTION_ID FROM CARI_CLOSED_ROW ICRR,CARI_CLOSED IC WHERE ICRR.CLOSED_ID = IC.CLOSED_ID AND IC.COMPANY_ID = #get_invoice_close.company_id# AND ((CR.ACTION_TABLE <> 'INVOICE' AND CR.ACTION_TABLE <> 'EXPENSE_ITEM_PLANS' AND CR.CARI_ACTION_ID = ICRR.CARI_ACTION_ID) OR (CR.ACTION_TABLE = 'INVOICE' OR CR.ACTION_TABLE = 'EXPENSE_ITEM_PLANS')) AND (((CR.ACTION_TABLE = 'INVOICE' OR CR.ACTION_TABLE = 'EXPENSE_ITEM_PLANS') AND CR.DUE_DATE = ICRR.DUE_DATE) OR (CR.ACTION_TABLE <> 'INVOICE' AND CR.ACTION_TABLE <> 'EXPENSE_ITEM_PLANS')) AND CR.ACTION_TYPE_ID = ICRR.ACTION_TYPE_ID AND IC.OTHER_MONEY = CR.OTHER_MONEY) AND
+			<cfelseif len(get_invoice_close.consumer_id)>
+				CR.ACTION_ID NOT IN (SELECT ICRR.ACTION_ID FROM CARI_CLOSED_ROW ICRR,CARI_CLOSED IC WHERE ICRR.CLOSED_ID = IC.CLOSED_ID AND IC.CONSUMER_ID = #get_invoice_close.consumer_id# AND ((CR.ACTION_TABLE <> 'INVOICE' AND CR.ACTION_TABLE <> 'EXPENSE_ITEM_PLANS' AND CR.CARI_ACTION_ID = ICRR.CARI_ACTION_ID) OR (CR.ACTION_TABLE = 'INVOICE' OR CR.ACTION_TABLE = 'EXPENSE_ITEM_PLANS')) AND (((CR.ACTION_TABLE = 'INVOICE' OR CR.ACTION_TABLE = 'EXPENSE_ITEM_PLANS') AND CR.DUE_DATE = ICRR.DUE_DATE) OR (CR.ACTION_TABLE <> 'INVOICE' AND CR.ACTION_TABLE <> 'EXPENSE_ITEM_PLANS')) AND CR.ACTION_TYPE_ID = ICRR.ACTION_TYPE_ID AND IC.OTHER_MONEY = CR.OTHER_MONEY) AND
+			<cfelse>
+				CR.ACTION_ID NOT IN (SELECT ICRR.ACTION_ID FROM CARI_CLOSED_ROW ICRR,CARI_CLOSED IC WHERE ICRR.CLOSED_ID = IC.CLOSED_ID AND IC.EMPLOYEE_ID = #get_invoice_close.employee_id# AND ((CR.ACTION_TABLE <> 'INVOICE' AND CR.ACTION_TABLE <> 'EXPENSE_ITEM_PLANS' AND CR.CARI_ACTION_ID = ICRR.CARI_ACTION_ID) OR (CR.ACTION_TABLE = 'INVOICE' OR CR.ACTION_TABLE = 'EXPENSE_ITEM_PLANS')) AND (((CR.ACTION_TABLE = 'INVOICE' OR CR.ACTION_TABLE = 'EXPENSE_ITEM_PLANS') AND CR.DUE_DATE = ICRR.DUE_DATE) OR (CR.ACTION_TABLE <> 'INVOICE' AND CR.ACTION_TABLE <> 'EXPENSE_ITEM_PLANS')) AND CR.ACTION_TYPE_ID = ICRR.ACTION_TYPE_ID AND IC.OTHER_MONEY = CR.OTHER_MONEY) AND
+			</cfif>
+				I.INVOICE_ID = CR.ACTION_ID AND
+				I.INVOICE_CAT = CR.ACTION_TYPE_ID AND
+				I.IS_ACCOUNTED = 0 AND
+				(I.INVOICE_ID NOT IN(SELECT INVOICE_ID FROM INVOICE_CONTROL WHERE INVOICE_ID IS NOT NULL) OR I.PURCHASE_SALES = 1) AND
+				I.IS_IPTAL = 0		
+			<cfif isdefined("attributes.due_date1") and len(attributes.due_date1)>
+				AND (CR.DUE_DATE >= #attributes.due_date1#
+				OR CR.DUE_DATE IS NULL)
+			</cfif>
+			<cfif isdefined("attributes.due_date2") and len(attributes.due_date2)>
+				AND (CR.DUE_DATE <= #attributes.due_date2#
+				OR CR.DUE_DATE IS NULL)
+			</cfif>
+			<cfif isdefined("attributes.action_type") and len(attributes.action_type)>
+				AND CR.ACTION_TYPE_ID = #attributes.action_type#
+			</cfif>
+			<cfif isdefined("attributes.start_date") and isdefined("attributes.finish_date") and isdate(attributes.start_date) and isdate(attributes.finish_date)>
+				AND CR.ACTION_DATE BETWEEN #attributes.start_date# AND #attributes.finish_date#
+			<cfelseif isdefined("attributes.start_date") and isdate(attributes.start_date)>
+				AND CR.ACTION_DATE >= #attributes.start_date#
+			<cfelseif isdefined("attributes.finish_date") and isdate(attributes.finish_date)>
+				AND CR.ACTION_DATE <= #attributes.finish_date#
+			</cfif>
+				AND CR.OTHER_MONEY = '#get_invoice_close.other_money#'
+			<cfif isdefined("attributes.project_id") and len(attributes.project_id) and len(attributes.project_head)>
+				AND CR.PROJECT_ID = #attributes.project_id#
+			</cfif>
+			UNION ALL
+			<!--- Kısmi Kapanmış ve kontrol edilmiş Alış faturaları --->
+			SELECT 
+				CR.CARI_ACTION_ID,
+				CR.ACTION_TABLE,
+				CR.ACTION_NAME,
+				CR.ACTION_ID,
+				CR.PAPER_NO,
+				CR.ACTION_TYPE_ID,
+				CR.TO_CMP_ID,
+				CR.FROM_CMP_ID,
+				CR.TO_CONSUMER_ID,
+				CR.FROM_CONSUMER_ID,
+				CR.TO_EMPLOYEE_ID,
+				CR.FROM_EMPLOYEE_ID,
+				CR.ACTION_VALUE CR_ACTION_VALUE,
+				CR.ACTION_DATE,
+				CR.DUE_DATE,
+				CR.OTHER_CASH_ACT_VALUE,
+				CR.OTHER_MONEY,				
+				SUM(ISNULL(ICR.CLOSED_AMOUNT,0)) TOTAL_CLOSED_AMOUNT,
+				SUM(ISNULL(ICR.OTHER_CLOSED_AMOUNT,0)) OTHER_CLOSED_AMOUNT,
+				SUM(ISNULL(ICR.PAYMENT_VALUE,0)) TOTAL_PAYMENT_VALUE,
+				SUM(ISNULL(ICR.OTHER_PAYMENT_VALUE,0)) OTHER_PAYMENT_VALUE,
+				SUM(ISNULL(ICR.P_ORDER_VALUE,0)) TOTAL_P_ORDER_VALUE,
+				SUM(ISNULL(ICR.OTHER_P_ORDER_VALUE,0)) OTHER_P_ORDER_VALUE,
+				'' I_OTHER_MONEY,
+				0 CLOSED_ROW_ID,
+				0 CLOSED_AMOUNT
+			FROM 
+				INVOICE I,
+				INVOICE_CONTROL IC,
+				CARI_ROWS CR,
+				CARI_CLOSED_ROW ICR,
+				CARI_CLOSED
+			WHERE
+				CARI_CLOSED.CLOSED_ID = ICR.CLOSED_ID AND				
+				CR.ACTION_ID = ICR.ACTION_ID AND
+				CR.ACTION_TYPE_ID = ICR.ACTION_TYPE_ID AND
+				CR.ACTION_TYPE_ID NOT IN (45,46) AND
+				((CR.ACTION_TABLE <> 'INVOICE' AND CR.CARI_ACTION_ID = ICR.CARI_ACTION_ID) OR CR.ACTION_TABLE = 'INVOICE') AND
+				((CR.ACTION_TABLE = 'INVOICE' AND CR.DUE_DATE = ICR.DUE_DATE) OR CR.ACTION_TABLE <> 'INVOICE') AND
+				CR.OTHER_MONEY = ICR.OTHER_MONEY AND
+				ICR.CLOSED_ID <> #attributes.closed_id# AND
+				<cfif len(get_invoice_close.company_id)>
+					ICR.ACTION_ID NOT IN (SELECT ICRR.ACTION_ID FROM CARI_CLOSED_ROW ICRR,CARI_CLOSED IC WHERE IC.CLOSED_ID = #attributes.closed_id# AND ICRR.CLOSED_ID = IC.CLOSED_ID AND IC.COMPANY_ID = #get_invoice_close.company_id# AND ((CR.ACTION_TABLE <> 'INVOICE' AND CR.ACTION_TABLE <> 'EXPENSE_ITEM_PLANS' AND CR.CARI_ACTION_ID = ICRR.CARI_ACTION_ID) OR (CR.ACTION_TABLE = 'INVOICE' OR CR.ACTION_TABLE = 'EXPENSE_ITEM_PLANS')) AND (((CR.ACTION_TABLE = 'INVOICE' OR CR.ACTION_TABLE = 'EXPENSE_ITEM_PLANS') AND CR.DUE_DATE = ICRR.DUE_DATE) OR (CR.ACTION_TABLE <> 'INVOICE' AND CR.ACTION_TABLE <> 'EXPENSE_ITEM_PLANS')) AND CR.ACTION_TYPE_ID = ICRR.ACTION_TYPE_ID AND IC.OTHER_MONEY = CR.OTHER_MONEY) AND
+				<cfelseif len(get_invoice_close.consumer_id)>
+					ICR.ACTION_ID NOT IN (SELECT ICRR.ACTION_ID FROM CARI_CLOSED_ROW ICRR,CARI_CLOSED IC WHERE IC.CLOSED_ID = #attributes.closed_id# AND ICRR.CLOSED_ID = IC.CLOSED_ID AND IC.CONSUMER_ID = #get_invoice_close.consumer_id# AND ((CR.ACTION_TABLE <> 'INVOICE' AND CR.ACTION_TABLE <> 'EXPENSE_ITEM_PLANS' AND CR.CARI_ACTION_ID = ICRR.CARI_ACTION_ID) OR (CR.ACTION_TABLE = 'INVOICE' OR CR.ACTION_TABLE = 'EXPENSE_ITEM_PLANS')) AND (((CR.ACTION_TABLE = 'INVOICE' OR CR.ACTION_TABLE = 'EXPENSE_ITEM_PLANS') AND CR.DUE_DATE = ICRR.DUE_DATE) OR (CR.ACTION_TABLE <> 'INVOICE' AND CR.ACTION_TABLE <> 'EXPENSE_ITEM_PLANS')) AND CR.ACTION_TYPE_ID = ICRR.ACTION_TYPE_ID AND IC.OTHER_MONEY = CR.OTHER_MONEY) AND
+				<cfelse>
+					ICR.ACTION_ID NOT IN (SELECT ICRR.ACTION_ID FROM CARI_CLOSED_ROW ICRR,CARI_CLOSED IC WHERE IC.CLOSED_ID = #attributes.closed_id# AND ICRR.CLOSED_ID = IC.CLOSED_ID AND IC.EMPLOYEE_ID = #get_invoice_close.employee_id# AND ((CR.ACTION_TABLE <> 'INVOICE' AND CR.ACTION_TABLE <> 'EXPENSE_ITEM_PLANS' AND CR.CARI_ACTION_ID = ICRR.CARI_ACTION_ID) OR (CR.ACTION_TABLE = 'INVOICE' OR CR.ACTION_TABLE = 'EXPENSE_ITEM_PLANS')) AND (((CR.ACTION_TABLE = 'INVOICE' OR CR.ACTION_TABLE = 'EXPENSE_ITEM_PLANS') AND CR.DUE_DATE = ICRR.DUE_DATE) OR (CR.ACTION_TABLE <> 'INVOICE' AND CR.ACTION_TABLE <> 'EXPENSE_ITEM_PLANS')) AND CR.ACTION_TYPE_ID = ICRR.ACTION_TYPE_ID AND IC.OTHER_MONEY = CR.OTHER_MONEY) AND
+				</cfif>				
+				<cfif len(get_invoice_close.company_id)>
+					(TO_CMP_ID =  #get_invoice_close.company_id# OR FROM_CMP_ID = #get_invoice_close.company_id#) AND
+				<cfelseif len(get_invoice_close.consumer_id)>
+					(TO_CONSUMER_ID =  #get_invoice_close.consumer_id# OR FROM_CONSUMER_ID =  #get_invoice_close.consumer_id#) AND
+				<cfelse>
+					(TO_EMPLOYEE_ID =  #get_invoice_close.employee_id# OR FROM_EMPLOYEE_ID =  #get_invoice_close.employee_id#) AND
+				</cfif>
+				<cfif len(get_invoice_close.company_id)>
+					ICR.ACTION_ID IN (SELECT ICRR.ACTION_ID FROM CARI_CLOSED_ROW ICRR,CARI_CLOSED IC WHERE ICRR.CLOSED_ID = IC.CLOSED_ID AND IC.COMPANY_ID = #get_invoice_close.company_id# AND ((CR.ACTION_TABLE <> 'INVOICE' AND CR.ACTION_TABLE <> 'EXPENSE_ITEM_PLANS' AND CR.CARI_ACTION_ID = ICRR.CARI_ACTION_ID) OR (CR.ACTION_TABLE = 'INVOICE' OR CR.ACTION_TABLE = 'EXPENSE_ITEM_PLANS')) AND (((CR.ACTION_TABLE = 'INVOICE' OR CR.ACTION_TABLE = 'EXPENSE_ITEM_PLANS') AND CR.DUE_DATE = ICRR.DUE_DATE) OR (CR.ACTION_TABLE <> 'INVOICE' AND CR.ACTION_TABLE <> 'EXPENSE_ITEM_PLANS')) AND CR.ACTION_TYPE_ID = ICRR.ACTION_TYPE_ID AND IC.OTHER_MONEY = CR.OTHER_MONEY) AND
+				<cfelseif len(get_invoice_close.consumer_id)>
+					ICR.ACTION_ID IN (SELECT ICRR.ACTION_ID FROM CARI_CLOSED_ROW ICRR,CARI_CLOSED IC WHERE ICRR.CLOSED_ID = IC.CLOSED_ID AND IC.CONSUMER_ID = #get_invoice_close.consumer_id# AND ((CR.ACTION_TABLE <> 'INVOICE' AND CR.ACTION_TABLE <> 'EXPENSE_ITEM_PLANS' AND CR.CARI_ACTION_ID = ICRR.CARI_ACTION_ID) OR (CR.ACTION_TABLE = 'INVOICE' OR CR.ACTION_TABLE = 'EXPENSE_ITEM_PLANS')) AND (((CR.ACTION_TABLE = 'INVOICE' OR CR.ACTION_TABLE = 'EXPENSE_ITEM_PLANS') AND CR.DUE_DATE = ICRR.DUE_DATE) OR (CR.ACTION_TABLE <> 'INVOICE' AND CR.ACTION_TABLE <> 'EXPENSE_ITEM_PLANS')) AND CR.ACTION_TYPE_ID = ICRR.ACTION_TYPE_ID AND IC.OTHER_MONEY = CR.OTHER_MONEY) AND
+				<cfelse>
+					ICR.ACTION_ID IN (SELECT ICRR.ACTION_ID FROM CARI_CLOSED_ROW ICRR,CARI_CLOSED IC WHERE ICRR.CLOSED_ID = IC.CLOSED_ID AND IC.EMPLOYEE_ID = #get_invoice_close.employee_id# AND ((CR.ACTION_TABLE <> 'INVOICE' AND CR.ACTION_TABLE <> 'EXPENSE_ITEM_PLANS' AND CR.CARI_ACTION_ID = ICRR.CARI_ACTION_ID) OR (CR.ACTION_TABLE = 'INVOICE' OR CR.ACTION_TABLE = 'EXPENSE_ITEM_PLANS')) AND (((CR.ACTION_TABLE = 'INVOICE' OR CR.ACTION_TABLE = 'EXPENSE_ITEM_PLANS') AND CR.DUE_DATE = ICRR.DUE_DATE) OR (CR.ACTION_TABLE <> 'INVOICE' AND CR.ACTION_TABLE <> 'EXPENSE_ITEM_PLANS')) AND CR.ACTION_TYPE_ID = ICRR.ACTION_TYPE_ID AND IC.OTHER_MONEY = CR.OTHER_MONEY) AND
+				</cfif>
+				I.INVOICE_ID = CR.ACTION_ID AND
+				I.INVOICE_CAT = CR.ACTION_TYPE_ID AND
+				IC.INVOICE_ID = CR.ACTION_ID AND
+				IC.IS_CONTROL = 1 AND	
+				IC.INVOICE_ID = I.INVOICE_ID AND
+				I.IS_IPTAL = 0 AND
+				I.PURCHASE_SALES = 0
+			<cfif isdefined("attributes.due_date1") and len(attributes.due_date1)>
+				AND (CR.DUE_DATE >= #attributes.due_date1#
+				OR CR.DUE_DATE IS NULL)
+			</cfif>
+			<cfif isdefined("attributes.due_date2") and len(attributes.due_date2)>
+				AND (CR.DUE_DATE <= #attributes.due_date2#
+				OR CR.DUE_DATE IS NULL)
+			</cfif>
+			<cfif isdefined("attributes.action_type") and len(attributes.action_type)>
+				AND CR.ACTION_TYPE_ID = #attributes.action_type#
+			</cfif>
+			<cfif isdefined("attributes.start_date") and isdefined("attributes.finish_date") and isdate(attributes.start_date) and isdate(attributes.finish_date)>
+				AND CR.ACTION_DATE BETWEEN #attributes.start_date# AND #attributes.finish_date#
+			<cfelseif isdefined("attributes.start_date") and isdate(attributes.start_date)>
+				AND CR.ACTION_DATE >= #attributes.start_date#
+			<cfelseif isdefined("attributes.finish_date") and isdate(attributes.finish_date)>
+				AND CR.ACTION_DATE <= #attributes.finish_date#
+			</cfif>
+				AND CR.OTHER_MONEY = '#get_invoice_close.other_money#'
+			<cfif isdefined("attributes.project_id") and len(attributes.project_id) and len(attributes.project_head)>
+				AND CR.PROJECT_ID = #attributes.project_id#
+			</cfif>
+			<cfif isdefined("attributes.employee_id") and len(attributes.employee_id) and len(attributes.employee_name)>
+				AND IC.RECORD_EMP = #attributes.employee_id#
+			</cfif>	
+			GROUP BY
+				CR.CARI_ACTION_ID,
+				CR.ACTION_TABLE,
+				CR.ACTION_NAME,
+				CR.ACTION_ID,
+				CR.PAPER_NO,
+				CR.ACTION_TYPE_ID,
+				CR.TO_CMP_ID,
+				CR.FROM_CMP_ID,
+				CR.TO_CONSUMER_ID,
+				CR.FROM_CONSUMER_ID,
+				CR.TO_EMPLOYEE_ID,
+				CR.FROM_EMPLOYEE_ID,
+				CR.ACTION_VALUE,
+				CR.ACTION_DATE,
+				CR.DUE_DATE,
+				CR.OTHER_CASH_ACT_VALUE,
+				CR.OTHER_MONEY,
+				ICR.OTHER_MONEY
+			UNION ALL
+			<!--- Açık ve kontrol edilmiş Alış faturaları --->
+			SELECT 
+				CR.CARI_ACTION_ID,
+				CR.ACTION_TABLE,
+				CR.ACTION_NAME,
+				CR.ACTION_ID,
+				CR.PAPER_NO,
+				CR.ACTION_TYPE_ID,
+				CR.TO_CMP_ID,
+				CR.FROM_CMP_ID,
+				CR.TO_CONSUMER_ID,
+				CR.FROM_CONSUMER_ID,
+				CR.TO_EMPLOYEE_ID,
+				CR.FROM_EMPLOYEE_ID,
+				CR.ACTION_VALUE CR_ACTION_VALUE,
+				CR.ACTION_DATE,
+				CR.DUE_DATE,
+				CR.OTHER_CASH_ACT_VALUE,
+				CR.OTHER_MONEY,				
+				0 TOTAL_CLOSED_AMOUNT,
+				0 OTHER_CLOSED_AMOUNT,
+				0 TOTAL_PAYMENT_VALUE,
+				0 OTHER_PAYMENT_VALUE,
+				0 TOTAL_P_ORDER_VALUE,
+				0 OTHER_P_ORDER_VALUE,
+				'' I_OTHER_MONEY,
+				0 CLOSED_ROW_ID,
+				0 CLOSED_AMOUNT
+			FROM 
+				INVOICE I,
+				INVOICE_CONTROL IC,
+				CARI_ROWS CR
+			WHERE
+				<cfif len(get_invoice_close.company_id)>
+					(TO_CMP_ID =  #get_invoice_close.company_id# OR FROM_CMP_ID =  #get_invoice_close.company_id#) AND
+				<cfelseif len(get_invoice_close.consumer_id)>
+					(TO_CONSUMER_ID =  #get_invoice_close.consumer_id# OR FROM_CONSUMER_ID =  #get_invoice_close.consumer_id#) AND
+				<cfelse>
+					(TO_EMPLOYEE_ID =  #get_invoice_close.employee_id# OR FROM_EMPLOYEE_ID =  #get_invoice_close.employee_id#) AND
+				</cfif>
+					CR.ACTION_TYPE_ID NOT IN (45,46) AND
+				<cfif len(get_invoice_close.company_id)>
+					CR.ACTION_ID NOT IN (SELECT ICRR.ACTION_ID FROM CARI_CLOSED_ROW ICRR,CARI_CLOSED IC WHERE ICRR.CLOSED_ID = IC.CLOSED_ID AND IC.COMPANY_ID = #get_invoice_close.company_id# AND ((CR.ACTION_TABLE <> 'INVOICE' AND CR.ACTION_TABLE <> 'EXPENSE_ITEM_PLANS' AND CR.CARI_ACTION_ID = ICRR.CARI_ACTION_ID) OR (CR.ACTION_TABLE = 'INVOICE' OR CR.ACTION_TABLE = 'EXPENSE_ITEM_PLANS')) AND (((CR.ACTION_TABLE = 'INVOICE' OR CR.ACTION_TABLE = 'EXPENSE_ITEM_PLANS') AND CR.DUE_DATE = ICRR.DUE_DATE) OR (CR.ACTION_TABLE <> 'INVOICE' AND CR.ACTION_TABLE <> 'EXPENSE_ITEM_PLANS')) AND CR.ACTION_TYPE_ID = ICRR.ACTION_TYPE_ID AND IC.OTHER_MONEY = CR.OTHER_MONEY) AND
+				<cfelseif len(get_invoice_close.consumer_id)>
+					CR.ACTION_ID NOT IN (SELECT ICRR.ACTION_ID FROM CARI_CLOSED_ROW ICRR,CARI_CLOSED IC WHERE ICRR.CLOSED_ID = IC.CLOSED_ID AND IC.CONSUMER_ID = #get_invoice_close.consumer_id# AND ((CR.ACTION_TABLE <> 'INVOICE' AND CR.ACTION_TABLE <> 'EXPENSE_ITEM_PLANS' AND CR.CARI_ACTION_ID = ICRR.CARI_ACTION_ID) OR (CR.ACTION_TABLE = 'INVOICE' OR CR.ACTION_TABLE = 'EXPENSE_ITEM_PLANS')) AND (((CR.ACTION_TABLE = 'INVOICE' OR CR.ACTION_TABLE = 'EXPENSE_ITEM_PLANS') AND CR.DUE_DATE = ICRR.DUE_DATE) OR (CR.ACTION_TABLE <> 'INVOICE' AND CR.ACTION_TABLE <> 'EXPENSE_ITEM_PLANS')) AND CR.ACTION_TYPE_ID = ICRR.ACTION_TYPE_ID AND IC.OTHER_MONEY = CR.OTHER_MONEY) AND
+				<cfelse>
+					CR.ACTION_ID NOT IN (SELECT ICRR.ACTION_ID FROM CARI_CLOSED_ROW ICRR,CARI_CLOSED IC WHERE ICRR.CLOSED_ID = IC.CLOSED_ID AND IC.EMPLOYEE_ID = #get_invoice_close.employee_id# AND ((CR.ACTION_TABLE <> 'INVOICE' AND CR.ACTION_TABLE <> 'EXPENSE_ITEM_PLANS' AND CR.CARI_ACTION_ID = ICRR.CARI_ACTION_ID) OR (CR.ACTION_TABLE = 'INVOICE' OR CR.ACTION_TABLE = 'EXPENSE_ITEM_PLANS')) AND (((CR.ACTION_TABLE = 'INVOICE' OR CR.ACTION_TABLE = 'EXPENSE_ITEM_PLANS') AND CR.DUE_DATE = ICRR.DUE_DATE) OR (CR.ACTION_TABLE <> 'INVOICE' AND CR.ACTION_TABLE <> 'EXPENSE_ITEM_PLANS')) AND CR.ACTION_TYPE_ID = ICRR.ACTION_TYPE_ID AND IC.OTHER_MONEY = CR.OTHER_MONEY) AND
+				</cfif>
+				I.INVOICE_ID = CR.ACTION_ID AND
+				I.INVOICE_CAT = CR.ACTION_TYPE_ID AND
+				IC.INVOICE_ID = CR.ACTION_ID AND
+				IC.IS_CONTROL = 1 AND	
+				IC.INVOICE_ID = I.INVOICE_ID AND
+				I.IS_IPTAL = 0 AND
+				I.PURCHASE_SALES = 0
+			<cfif isdefined("attributes.due_date1") and len(attributes.due_date1)>
+				AND (CR.DUE_DATE >= #attributes.due_date1#
+				OR CR.DUE_DATE IS NULL)
+			</cfif>
+			<cfif isdefined("attributes.due_date2") and len(attributes.due_date2)>
+				AND (CR.DUE_DATE <= #attributes.due_date2#
+				OR CR.DUE_DATE IS NULL)
+			</cfif>
+			<cfif isdefined("attributes.action_type") and len(attributes.action_type)>
+				AND CR.ACTION_TYPE_ID = #attributes.action_type#
+			</cfif>
+			<cfif isdefined("attributes.start_date") and isdefined("attributes.finish_date") and isdate(attributes.start_date) and isdate(attributes.finish_date)>
+				AND CR.ACTION_DATE BETWEEN #attributes.start_date# AND #attributes.finish_date#
+			<cfelseif isdefined("attributes.start_date") and isdate(attributes.start_date)>
+				AND CR.ACTION_DATE >= #attributes.start_date#
+			<cfelseif isdefined("attributes.finish_date") and isdate(attributes.finish_date)>
+				AND CR.ACTION_DATE <= #attributes.finish_date#
+			</cfif>
+				AND CR.OTHER_MONEY = '#get_invoice_close.other_money#'
+			<cfif isdefined("attributes.project_id") and len(attributes.project_id) and len(attributes.project_head)>
+				AND CR.PROJECT_ID = #attributes.project_id#
+			</cfif>
+			<cfif isdefined("attributes.employee_id") and len(attributes.employee_id) and len(attributes.employee_name)>
+				AND IC.RECORD_EMP = #attributes.employee_id#
+			</cfif>	
+		) MAIN_GET_CLOSED
+		WHERE
+		<cfif isdefined("attributes.money_type") and len(attributes.money_type)>
+			(ROUND(OTHER_CLOSED_AMOUNT,2) < ROUND(OTHER_CASH_ACT_VALUE,2))<!--- kısmi kapamaları getirsn diye.. --->
+			<cfif attributes.act_type eq 2>
+				AND (ROUND(OTHER_PAYMENT_VALUE,2) < ROUND(OTHER_CASH_ACT_VALUE,2))
+				AND (ROUND(OTHER_P_ORDER_VALUE,2) < ROUND(OTHER_CASH_ACT_VALUE,2))
+			<cfelseif attributes.act_type eq 3>
+				AND (ROUND(OTHER_P_ORDER_VALUE,2) < ROUND(OTHER_CASH_ACT_VALUE,2))
+				AND (ROUND(OTHER_PAYMENT_VALUE,2) < ROUND(OTHER_CASH_ACT_VALUE,2))
+			</cfif>
+		<cfelse>
+			(ROUND(TOTAL_CLOSED_AMOUNT,2) < ROUND(CR_ACTION_VALUE,2))
+			<cfif attributes.act_type eq 2>
+				AND (ROUND(TOTAL_PAYMENT_VALUE,2) < ROUND(CR_ACTION_VALUE,2))
+				AND (ROUND(TOTAL_P_ORDER_VALUE,2) < ROUND(CR_ACTION_VALUE,2))
+			<cfelseif attributes.act_type eq 3>
+				AND (ROUND(TOTAL_P_ORDER_VALUE,2) < ROUND(CR_ACTION_VALUE,2))
+				AND (ROUND(TOTAL_PAYMENT_VALUE,2) < ROUND(CR_ACTION_VALUE,2))
+			</cfif>
+		</cfif>
+		ORDER BY DUE_DATE
+	</cfquery>
+<cfelse>
+	<cfset GET_CARI_CLOSED_ROW_2.recordcount = 0>
+</cfif>
+

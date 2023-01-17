@@ -1,0 +1,23 @@
+<cfquery name="GET_MONEY2" datasource="#dsn#">
+	SELECT
+		MONEY,
+		RATE1,
+		RATE2
+	FROM
+		TEXTILE_SETUP_MONEY
+	WHERE
+		PERIOD_ID = #SESSION.EP.PERIOD_ID# AND
+		MONEY_STATUS=1 AND 
+		MONEY <> '#SESSION.EP.MONEY#'
+</cfquery>
+<cfquery name="GET_MONEY" datasource="#dsn#">
+	SELECT
+		MONEY,
+		RATE1,
+		RATE2
+	FROM
+		TEXTILE_SETUP_MONEY
+	WHERE
+		PERIOD_ID = #SESSION.EP.PERIOD_ID# AND
+		MONEY_STATUS=1
+</cfquery>

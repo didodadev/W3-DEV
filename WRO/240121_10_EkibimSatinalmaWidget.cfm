@@ -1,0 +1,11 @@
+
+<!-- Description : Ekibim Satınalma Gündem Widget
+Developer : Botan Kayğan
+Company : Workcube
+Destination: Main-->
+<querytag>
+    IF NOT EXISTS(SELECT WIDGETID FROM WRK_WIDGET WHERE WIDGET_FRIENDLY_NAME = 'MyPurchaseStatus') 
+    BEGIN
+    INSERT [WRK_WIDGET] ([WIDGET_FUSEACTION], [WIDGET_TITLE], [WIDGET_NAME], [WIDGET_EVENT_TYPE], [WIDGET_VERSION], [WIDGET_STRUCTURE], [WIDGET_CODE], [WIDGET_STATUS], [WIDGET_STAGE], [WIDGET_TOOL], [WIDGET_FILE_PATH], [WIDGETSOLUTIONID], [WIDGETSOLUTION], [WIDGETFAMILYID], [WIDGETFAMILY], [WIDGETMODULEID], [WIDGETMODULENO], [WIDGETMODULE], [WIDGET_DESCRIPTION], [WIDGET_LICENSE], [WIDGET_AUTHOR], [WIDGET_DEPENDS], [RECORD_IP], [RECORD_EMP], [RECORD_DATE], [UPDATE_IP], [UPDATE_EMP], [UPDATE_DATE], [IS_PUBLIC], [IS_EMPLOYEE], [IS_COMPANY], [IS_CONSUMER], [IS_EMPLOYEE_APP], [IS_MACHINES], [IS_LIVESTOCK], [IS_TEMPLATE_WIDGET], [WIDGET_FRIENDLY_NAME], [XML_PATH], [WIDGET_TITLE_DICTIONARY_ID]) VALUES (N'myhome.myTeam', N'Satınalma Gündemi', NULL, N'dashboard', N'v19', NULL, NULL, N'Analys', N'0', N'code', N'V16/myhome/display/my_purchase_status.cfm', 1, N'ERP', 1, N'Satış-Dağıtım', 12, 12, N'Satınalma', N'<p>Myteam sayfasında satınalma gündemi widgetini temsil eder.</p>', N'1', N'Botan Kayğan', NULL, N'127.0.0.1', 8, CAST(N'2021-01-24T20:03:52.000' AS DateTime), NULL, NULL, NULL, 0, 0, 0, 0, 0, 0, 0, 0, N'MyPurchaseStatus', NULL, 61178)
+    END;
+</querytag>

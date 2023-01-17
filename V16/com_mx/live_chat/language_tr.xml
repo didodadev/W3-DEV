@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<language>
+	<liveChat>CANLI İLETİŞİM</liveChat>
+	<historyFilename>Canlı İletişim Geçmişi</historyFilename>
+	<writeHere>Mesajınızı buraya yazın..</writeHere>
+	<welcome>Merhaba %s, hoşgeldiniz!</welcome>
+	<userJoin>%s konuşmaya katıldı.</userJoin>
+	<userLeft>%s konuşmadan ayrıldı!</userLeft>
+	<error>Hata</error>
+	<connectionFailed>Bağlantı sağlanamadı! Lütfen geçerli bir adres belirtildiğinden emin olun. İlgili parametre için bkz</connectionFailed>
+	<connectionClosed>Bağlantı sonlandı!</connectionClosed>
+	<originalError>Orijinal hata</originalError>
+	<typo>%s yazıyor..</typo>
+	<youAreInvited>%s sizi Canlı İletişim 'e davet ediyor.</youAreInvited>
+	<clickToJoin>Katılmak için tıklayın</clickToJoin>
+	<join>Katıl</join>
+	<weAreSorry>Özür Dileriz</weAreSorry>
+	<visitorNotExists>Canlı İletişim talebinde bulunan ziyaretçi sistemde mevcut değil!</visitorNotExists>
+	<supportIsOffline>Görüşme yapabileceğiniz satış temsilcilerimiz şu anda çevrimdışı!</supportIsOffline>
+	<tryAgainLater>Lütfen daha sonra tekrar deneyin.</tryAgainLater>
+	<youAreTalkingTo>Şu anda %s ile görüşmektesiniz.</youAreTalkingTo>
+	<waitForSupport>Talebiniz alınmıştır, satış temsilcimiz %s en kısa sürede görüşmeye katılacaktır. Lütfen bekleyiniz..</waitForSupport>
+	<exit>Güvenli çıkış</exit>
+	<saveHistory>Sohbet geçmişini dosya olarak kaydet</saveHistory>
+	<soundAlerts>Sesli uyarılar</soundAlerts>
+	<activateWindow>Yeni mesaj alındığında pencereyi öne getir</activateWindow>
+	<loginDescription>Bizimle iletişime geçtiğiniz için teşekkür ederiz. Aşağıdaki bilgileri girerek görüşmeyi başlatabilirsiniz:</loginDescription>
+	<live>canlı</live>
+	<chat>iletişim</chat>
+	<name>İsim</name>
+	<email>E-posta</email>
+	<startChat>Görüşme Başlat</startChat>
+	<invalidName>Lütfen geçerli bir isim girin!</invalidName>
+	<invalidEmail>Lütfen geçerli bir e-posta adresi girin!</invalidEmail>
+	<send>Gönder</send>
+	<matchingFailed>Kullanıcı şu anda başka bir temsilci ile görüşüyor!</matchingFailed>
+</language>

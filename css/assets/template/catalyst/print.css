@@ -1,0 +1,11 @@
+
+table{border-collapse:collapse; border-spacing:0;}
+table tr td{padding:5px 3px;}
+table tr td img{max-width:50px;}
+.row_border{border-bottom:1px solid #c0c0c0;}
+.print_border tr th{border:1px solid #c0c0c0; padding:3px; color:#000}
+.print_border tr td{border:1px solid #c0c0c0;}
+.print_title{font-size:16px;}
+.print-head{padding:10px 0 0 0!important}
+.process-tr{background-color:#eee; border-top:1px solid #c0c0c0; border-bottom:1px solid #c0c0c0}
+.txtbold{font-weight: bold!important}

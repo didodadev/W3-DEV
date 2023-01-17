@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TYPES>
+	  <TYPE>
+		<PAGE_TYPE_ID>-1</PAGE_TYPE_ID>		  
+		<PAGE_TYPE>Kapak</PAGE_TYPE>		  
+	 </TYPE>
+	  <TYPE>
+		<PAGE_TYPE_ID>-2</PAGE_TYPE_ID>		  
+		<PAGE_TYPE>İçindekiler</PAGE_TYPE>		  
+	 </TYPE>
+	  <TYPE>
+		<PAGE_TYPE_ID>-3</PAGE_TYPE_ID>		  
+		<PAGE_TYPE>Giriş</PAGE_TYPE>		  
+	 </TYPE>
+	  <TYPE>
+		<PAGE_TYPE_ID>-4</PAGE_TYPE_ID>		  
+		<PAGE_TYPE>Yöneticiye Özet</PAGE_TYPE>		  
+	 </TYPE>
+	  <TYPE>
+		<PAGE_TYPE_ID>-5</PAGE_TYPE_ID>		  
+		<PAGE_TYPE>Koşullar</PAGE_TYPE>		  
+	 </TYPE>
+	  <TYPE>
+		<PAGE_TYPE_ID>-6</PAGE_TYPE_ID>		  
+		<PAGE_TYPE>Proje Metod</PAGE_TYPE>		  
+	 </TYPE>
+	  <TYPE>
+		<PAGE_TYPE_ID>-7</PAGE_TYPE_ID>		  
+		<PAGE_TYPE>Yatırım</PAGE_TYPE>		  
+	 </TYPE>
+	  <TYPE>
+		<PAGE_TYPE_ID>-8</PAGE_TYPE_ID>		  
+		<PAGE_TYPE>Sonuç</PAGE_TYPE>		  
+	 </TYPE>
+	  <TYPE>
+		<PAGE_TYPE_ID>-9</PAGE_TYPE_ID>		  
+		<PAGE_TYPE>Ek Sayfa</PAGE_TYPE>		  
+	 </TYPE>
+</TYPES>

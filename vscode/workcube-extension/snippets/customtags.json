@@ -1,0 +1,430 @@
+{
+    /* ana tagların tanımlandığı kısım */
+    "Workcube <cf_box>": {
+        "prefix": "wrk:cf_box",
+        "body": [
+            "<cf_box${1}>",
+            "</cf_box>"
+        ]
+    },
+    "Workcube <cf_box_elements>": {
+        "prefix": "wrk:cf_box_elements",
+        "body": [
+            "<cf_box_elements${1}>",
+            "</cf_box_elements>"
+        ]
+    },
+    "Workcube <cf_box_search>": {
+        "prefix": "wrk:cf_box_search",
+        "body": [
+            "<cf_box_search${1}>",
+            "</cf_box_search>"
+        ]
+    },
+    "Workcube <cf_box_search_detail>": {
+        "prefix": "wrk:cf_box_search_detail",
+        "body": [
+            "<cf_box_search_detail${1}>",
+            "</cf_box_search_detail>"
+        ]
+    },
+    "Workcube <cf_wrk_search_button>": {
+        "prefix": "wrk:cf_wrk_search_button",
+        "body": [
+            "<cf_wrk_search_button${1}>"
+        ]
+    },
+    "Workcube <cf_seperator>": {
+        "prefix": "wrk:cf_seperator",
+        "body": [
+            "<cf_seperator${1}>"
+        ]
+    },
+    "Workcube <cf_tab>": {
+        "prefix": "wrk:cf_tab",
+        "body": [
+            "<cf_tab${1}>",
+            "</cf_tab>"
+        ]
+    },
+    "Workcube <cf_flat_list>": {
+        "prefix": "wrk:cf_flat_list",
+        "body": [
+            "<cf_flat_list${1}>",
+            "</cf_flat_list>"
+        ]
+    },
+    "Workcube <cf_grid_list>": {
+        "prefix": "wrk:cf_grid_list",
+        "body": [
+            "<cf_grid_list${1}>",
+            "</cf_grid_list>"
+        ]
+    },
+    "Workcube <cf_paging>": {
+        "prefix": "wrk:cf_paging",
+        "body": [
+            "<cf_paging${1}>"
+        ]
+    },
+    "Workcube <cf_loader>": {
+        "prefix": "wrk:cf_loader",
+        "body": [
+            "<cf_loader append_element=\"elementid\" href=\"\" totalCount=\"\"${1}>"
+        ]
+    },
+    "Workcube <cf_box_footer>": {
+        "prefix": "wrk:cf_box_footer",
+        "body": [
+            "<cf_box_footer${1}>",
+            "</cf_box_footer>"
+        ]
+    },
+    "Workcube <cf_record_info>": {
+        "prefix": "wrk:cf_record_info",
+        "body": [
+            "<cf_record_info query_name=\"\"${1}>"
+        ]
+    },
+    "Workcube <cf_workcube_buttons>": {
+        "prefix": "wrk:cf_workcube_buttons",
+        "body": [
+            "<cf_workcube_buttons${1}>"
+        ]
+    },
+    "Workcube <cf_xml_page_edit>": {
+        "prefix": "wrk:cf_xml_page_edit",
+        "body": [
+            "<cf_xml_page_edit${1}>"
+        ]
+    },
+    "Workcube <cf_date>": {
+        "prefix": "wrk:cf_date",
+        "body": [
+            "<cf_date tarih=\"\"${1}>"
+        ]
+    },
+    "Workcube <cf_wrk_date_image>": {
+        "prefix": "wrk:cf_wrk_date_image",
+        "body": [
+            "<cf_wrk_date_image date_field=\"date2\"${1}>"
+        ]
+    },
+    "Workcube <cf_workcube_process>": {
+        "prefix": "wrk:cf_workcube_process",
+        "body": [
+            "<cf_workcube_process${1}>"
+        ]
+    },
+    "Workcube <cf_workcube_file_action>": {
+        "prefix": "wrk:cf_workcube_file_action",
+        "body": [
+            "<cf_workcube_file_action${1}>"
+        ]
+    },
+    "Workcube <cf_workcube_process_cat>": {
+        "prefix": "wrk:cf_workcube_process_cat",
+        "body": [
+            "<cf_workcube_process_cat${1}>"
+        ]
+    },
+    "Workcube <cf_papers>": {
+        "prefix": "wrk:cf_papers",
+        "body": [
+            "<cf_papers paper_type=\"\"${1}>"
+        ]
+    },
+    "Workcube <cf_get_lang>": {
+        "prefix": "wrk:cf_get_lang",
+        "body": [
+            "<cf_get_lang dictionary_id=\"\"${1}>"
+        ]
+    },
+    "Workcube <cf_add_log>": {
+        "prefix": "wrk:cf_add_log",
+        "body": [
+            "<cf_add_log log_type=\"\" action_id=\"##\" action_name=\"##\"${1}>"
+        ]
+    },
+    "Workcube <cf_wrk_grid>": {
+        "prefix": "wrk:cf_wrk_grid",
+        "body": [
+            "<cf_wrk_grid${1}>",
+            "</cf_wrk_grid>"
+        ]
+    },
+    "Workcube <cf_wrk_grid_column>": {
+        "prefix": "wrk:cf_wrk_grid_column",
+        "body": [
+            "<cf_wrk_grid_column${1} />"
+        ]
+    },
+    "Workcube <cf_language_info>": {
+        "prefix": "wrk:cf_language_info",
+        "body": [
+            "<cf_language_info${1}>"
+        ]
+    },
+    "Workcube <cf_workcube_to_cc>": {
+        "prefix": "wrk:cf_workcube_to_cc",
+        "body": [
+            "<cf_workcube_to_cc${1}>"
+        ]
+    },
+    "Workcube <cf_n2txt>": {
+        "prefix": "wrk:cf_n2txt",
+        "body": [
+            "<cf_n2txt${1}>"
+        ]
+    },
+    "Workcube <cf_wrk_combo>": {
+        "prefix": "wrk:cf_wrk_combo",
+        "body": [
+            "<cf_wrk_combo${1}>"
+        ]
+    },
+    "Workcube <cf_wrk_dynamic_params>": {
+        "prefix": "wrk:cf_wrk_dynamic_params",
+        "body": [
+            "<cf_wrk_dynamic_params${1}>"
+        ]
+    },
+    "Workcube <cf_wrk_MultiSelect>": {
+        "prefix": "wrk:cf_wrk_MultiSelect",
+        "body": [
+            "<cfsavecontent variable=\"name\"><cf_get_lang dictionary_id=''></cfsavecontent>",
+            "<cf_wrk_MultiSelect${1}>"
+        ]
+    },
+    "Workcube <cf_workcube_process_info>": {
+        "prefix": "wrk:cf_workcube_process_info",
+        "body": [
+            "<cf_workcube_process_info${1}>"
+        ]
+    },
+    "Workcube <cf_wrk_add_info>": {
+        "prefix": "wrk:cf_wrk_add_info",
+        "body": [
+            "<cf_wrk_add_info${1}>"
+        ]
+    },
+    "Workcube <cf_get_related_events>": {
+        "prefix": "wrk:cf_get_related_events",
+        "body": [
+            "<cf_get_related_events action_section=\"\" action_id=\"\"${1}>"
+        ]
+    },
+    "Workcube <cf_get_workcube_asset>": {
+        "prefix": "wrk:cf_get_workcube_asset",
+        "body": [
+            "<cf_get_workcube_asset action_section=\"\" action_id=\"\" module_id=\"\"${1}>"
+        ]
+    },
+    "Workcube <cf_get_member_analysis>": {
+        "prefix": "wrk:cf_get_member_analysis",
+        "body": [
+            "<cf_get_member_analysis action_type=\"\"${1}>"
+        ]
+    },
+    "Workcube <cf_get_workcube_note>": {
+        "prefix": "wrk:cf_get_workcube_note",
+        "body": [
+            "<cf_get_workcube_note action_section=\"\" action_id=\"\" is_delete=\"1\"${1}>"
+        ]
+    },
+    "Workcube <cf_get_workcube_domains>": {
+        "prefix": "wrk:cf_get_workcube_domains",
+        "body": [
+            "<cf_get_workcube_domains${1}>"
+        ]
+    },
+    "Workcube <cf_get_workcube_content>": {
+        "prefix": "wrk:cf_get_workcube_content",
+        "body": [
+            "<cf_get_workcube_content action_type=\"\" action_type_id=\"\" design=\"1\"${1}>"
+        ]
+    },
+    "Workcube <cf_get_workcube_bank_account>": {
+        "prefix": "wrk:cf_get_workcube_bank_account",
+        "body": [
+            "<cf_get_workcube_bank_account${1}>"
+        ]
+    },
+    "Workcube <cf_get_workcube_form_generator>": {
+        "prefix": "wrk:cf_get_workcube_form_generator",
+        "body": [
+            "<cf_get_workcube_form_generator${1}>"
+        ]
+    },
+    "Workcube <cf_duxi>": {
+        "prefix": "wrk:cf_duxi",
+        "body": [
+            "<cf_duxi${1}>"
+        ]
+    },
+    /* Buradan sonrası sub prefixlerin tanımı */
+    "cf_duxi_sub": {
+        "prefix": "wsub:cf_duxi",
+        "body": "${1| , name=\"\", type=\"text\", data_control=\"alphanumeric\", currencyname=\"\", currencyvalue=\"\", class=\"\", label=\"\", placeholder=\"\", value=\"\", option=\"\", data=\"\", autocomplete=\"\", threepoint=\"\", extra_button=\"\", extra_function=\"\", path=\"\", js=\"\", tips=\"\", gdpr=\"\"|}"
+    },
+    "cf_get_workcube_form_generator_sub": {
+        "prefix": "wsub:cf_get_workcube_form_generator",
+        "body": "${1| , action_type=\"\", action_type_id=\"\", width=\"\", style=\"1\", design=\"1\", is_add_upd=\"0\", margin_right=\"0\", xml_is_survey_add=\"0\", related_type=\"0\", project_cat_id=\"\", work_cat_id=\"\", row_count=\"99\"|}"
+    },
+    "cf_get_workcube_bank_account_sub": {
+        "prefix": "wsub:cf_get_workcube_bank_account",
+        "body": "${1| , action_type=\"\", action_id=\"\"|}"
+    },
+    "cf_get_workcube_content_sub": {
+        "prefix": "wsub:cf_get_workcube_content",
+        "body": "${1| , action_type=\"\", action_type_id=\"\", design=\"1\", is_add_upd=\"\", width=\"\", company_id=\"\", style=\"\", margin_right=\"\", come_project=\"\", keyword=\"\"|}"
+    },
+    "cf_get_workcube_domains_sub": {
+        "prefix": "wsub:cf_get_workcube_domains",
+        "body": "${1| , action_type=\"\", action_id=\"\", site_type=\"\"|}"
+    },
+    "cf_get_workcube_note_sub": {
+        "prefix": "wsub:cf_get_workcube_note",
+        "body": "${1| , action_section=\"\", action_id=\"\", is_delete=\"1\", design_id=\"\", company_id=\"\", style=\"\", is_special=\"\", action_type=\"\"|}"
+    },
+    "cf_get_member_analysis_sub": {
+        "prefix": "wsub:cf_get_member_analysis",
+        "body": "${1| , action_type=\"\", action_type_id=\"\", company_id=\"\", partner_id=\"\", consumer_id=\"\", rival_id=\"\", is_analysis_link=\"\"|}"
+    },
+    "cf_get_workcube_asset_sub": {
+        "prefix": "wsub:cf_get_workcube_asset",
+        "body": "${1| , action_section=\"\", action_id=\"\", module_id=\"\", design_id=\"1\", is_add=\"\", action_type=\"\", company_id=\"#session.ep.company_id#\", is_image=\"\", style=\"\"|}"
+    },
+    "cf_get_related_events_sub": {
+        "prefix": "wsub:cf_get_related_events",
+        "body": "${1| , action_section=\"\", action_id=\"\", company_id=\"\", member_id=\"\", member_type=\"\", design_id=\"1\", action_project_id=\"\"|}"
+    },
+    "cf_wrk_add_info_sub": {
+        "prefix": "wsub:cf_wrk_add_info",
+        "body": "${1| , upd_page=\"0\", colspan=\"\", info_type_id=\"\", assetp_catid=\"\", work_catid=\"\", product_catid1=\"\", sub_catid=\"\", sales_add_option=\"\", frame_fuseaction=\"\", is_nonpopup=\"\", asset_catid=\"\"|}"
+    },
+    "cf_workcube_process_info_sub": {
+        "prefix": "wsub:cf_workcube_process_info",
+        "body": "${1| , fusepath=\"#attributes.fuseaction#\", data_source=\"#caller.dsn#\", pathinfo=\"\"|}"
+    },
+    "cf_wrk_MultiSelect_sub": {
+        "prefix": "wsub:cf_wrk_MultiSelect",
+        "body": "${1| , width=\"150\", value=\"\", option_value=\"\", option_name=\"\", data_source=\"#caller.DSN#\", table_name=\"\", disabled=\"0\", height=\"\", onchange=\"\", is_option_text=\"0\", class=\"\", optiontext_class=\"\", sort_type=\"#attributes.option_name#\", name=\"\"|}"
+    },
+    "cf_wrk_dynamic_params_sub": {
+        "prefix": "wsub:cf_wrk_dynamic_params",
+        "body": "${1| , placeHolder=\"\", line_info=\"1\", defaultColumnList=\"\", type_id=\"\", data_id=\"\", type_name=\"\", data_type_name=\"\", data_type_id=\"\", width=\"\", listPage=\"0\", returnInputValue=\"\", returnQueryValue=\"\", compenent_name=\"get_parameters_datas\", boxwidth=\"100\", boxheight=\"100\", title=\"#attributes.type_name#\", is_parameter=\"1\"|}"
+    },
+    "cf_wrk_combo_sub": {
+        "prefix": "wsub:cf_wrk_combo",
+        "body": "${1| , name=\"\", width=\"150\", value=\"\", option_value=\"\", option_name=\"\", query_name=\"\", disabled=\"0\", multiple=\"0\", height=\"\", onchange=\"\", is_option_text=\"1\", tabindex=\"\", where=\"\"|}"
+    },
+    "cf_n2txt_sub": {
+        "prefix": "wsub:cf_n2txt",
+        "body": "${1| , para_birimi=\"#session.ep.money#\", alt_para_birimi=\"\", ing=\"\"|}"
+    },
+    "cf_workcube_to_cc_sub": {
+        "prefix": "wsub:cf_workcube_to_cc",
+        "body": "${1| , is_update=\"\", to_dsp_name=\"\", cc_dsp_name=\"\", cc2_dsp_name=\"\", form_name=\"\", str_list_param=\"\", action_dsn=\"\" str_action_names=\"\", action_table=\"\", action_id_name=\"\", action_id=\"\"|}"
+    },
+    "cf_language_info_sub": {
+        "prefix": "wsub:cf_language_info",
+        "body": "${1| , maxlength=\"50\", input_type=\"text\", class=\"\"|}"
+    },
+    "cf_wrk_grid_column_sub": {
+        "prefix": "wsub:cf_wrk_grid_column",
+        "body": "${1| , type=\"string_noCase\", header=\"Header\", name=\"Name\", select=\"Yes\", display=\"Yes\", width=\"1111\", mask=\"?\", dataalign=\"left\", auto_column=\"0\", required=\"false\", listsource=\"-\"|}"
+    },
+    "cf_wrk_grid_sub": {
+        "prefix": "wsub:cf_wrk_grid",
+        "body": "${1| , isAjax=\"\", ajax_box_page=\"\", EditGrid=\"\", search_header=\"\", grid_name=\"wrk_grid\", table_type=\"medium_list\", left_menu=\"0\", search_areas=\"\", keyword=\"\", is_insert=\"1\", is_delete=\"0\", dictionary_count=\"1\", page=\"1\"|}"
+    },
+    "cf_add_log_sub": {
+        "prefix": "wsub:cf_add_log",
+        "body": "${1| , log_type=\"\", action_id=\"##\", action_name=\"##\", process_type=\"\", process_stage=\"\", paper_no=\"\", data_source=\"\", fuseact=\"\"|}"
+    },
+    "cf_get_lang_sub": {
+        "prefix": "wsub:cf_get_lang",
+        "body": "${1| , dictionary_id=\"\"|}"
+    },
+    "cf_papers_sub": {
+        "prefix": "wsub:cf_papers",
+        "body": "${1| , paper_type=\"\", paper_code=\"\", paper_number=\"\", paper_full=\"\", paper_type2=\"\", paper_code_type=\"\", increase=\"true\"|}"
+    },
+    "cf_workcube_process_cat_sub": {
+        "prefix": "wsub:cf_workcube_process_cat",
+        "body": "${1| , slct_width=\"150\", process_cat=\"\", is_upd=\"0\", process_type_info=\"\", onclick_function=\"\", is_action_file=\"\", action_file_name=\"\", is_template_action_file=\"\", action_id=\"\", action_db_type=\"#caller.dsn3#\", kontrol_parameter=\"\", form_name=\"\", alert_message=\"\", warning_description=\"\", action_table=\"\", action_column=\"\", action_page=\"\", module_id=\"\", is_default=\"1\", wrkflow=\"\", pathinfo=\"\"|}"
+    },
+    "cf_workcube_file_action_sub": {
+        "prefix": "wsub:cf_workcube_file_action",
+        "body": "${1| , pdf=\"\", mail=\"\", doc=\"\", print=\"\", trail=\"1\", is_logo=\"0\", show_datetime=\"0\", print_type=\"\", action_id=\"\", icon_text=\"\", simple=\"0\"|}"
+    },
+    "cf_workcube_process_sub": {
+        "prefix": "wsub:cf_workcube_process",
+        "body": "${1| , caller=\"#structNew()#\", data_source=\"#caller.dsn#\", select_name=\"process_stage\", fusepath=\"#attributes.fuseaction#\", extra_process_id=\"\", action_table=\"\", action_column=\"\", action_id=\"\", action_page=\"\", onclick_function=\"\", tabindex=\"\", position_code=\"0\", mandate_position_code=\"0\", type=\"\", is_select_text=\"\", general_paper_id=\"0\", actions=\"#(isDefined('caller.attributes.actions')) ? caller.attributes.actions : ''#\", warning_id=\"#(isDefined('caller.attributes.warning_id')) ? caller.attributes.warning_id : ''#\", is_notification=\"0\", paper_no=\"\", warning_access_code=\"\", warning_password=\"\", wrkflow=\"\", pathinfo=\"\"|}"
+    },
+    "cf_wrk_date_image_sub": {
+        "prefix": "wsub:cf_wrk_date_image",
+        "body": "${1| , date_field=\"\", function_currency_type=\"\", c_position=\"Br\", readonly=\"false\", noShow=\"0\"|}"
+    },
+    "cf_date_sub": {
+        "prefix": "wsub:cf_date",
+        "body": "${1| , tarih=\"\"|}"
+    },
+    "cf_xml_page_edit_sub": {
+        "prefix": "wsub:cf_xml_page_edit",
+        "body": "${1| , fuseact=\"\"|}"
+    },
+    "cf_record_info_sub": {
+        "prefix": "wsub:cf_record_info_sub",
+        "body": "${1| , query_name=\"\", record_emp=\"RECORD_EMP\", record_date=\"RECORD_DATE\", update_emp=\"UPDATE_EMP\", update_date=\"UPDATE_DATE\", is_partner=\"0\", record_par=\"RECORD_PAR\", update_par=\"UPDATE_PAR\", is_consumer=\"0\", margin=\"0\", record_cons=\"RECORD_CONS\", update_cons=\"UPDATE_CONS\", record_other=\"\", class=\"0\", dsn=\"#caller.dsn#\"|}"
+    },
+    "cf_workcube_buttons_sub": {
+        "prefix": "wsub:cf_workcube_buttons_sub",
+        "body": "${1| , type_format=0, right=\"1\", is_disable=1, update_status=1, is_upd=0, is_cancel=1, is_reset=0, is_authority_passive=0, is_delete=1, is_insert=1, del_function=\"\", del_function_for_submit=\"\", add_function=\"\", cancel_info=\"#caller.getLang('main',50)#\", cancel_alert=\"#caller.getLang('main',122)#\", reset_info=\"#caller.getLang('main',522)#\", delete_page_url=\"\", history_table_list=\"\", history_datasource_list=\"\", history_identy=\"\", history_action_id=\"\", is_wrkId=\"\", history_act_type=\"\", class=\"\", no_show_process=0, excel_input=\"\", form_name=\"\", post_form_name=\"\", processCatControl=\"false\", extraButton=\"\", extraButtonText=\"\", extraAlert=\"\", extraFunction=\"\", extraInfo=\"\", extraButtonClass=\"\"|}"
+    },
+    "cf_loader_sub": {
+        "prefix": "wsub:cf_loader_sub",
+        "body": "${1| , data_type=\"HTML\", append_element=\"\", href=\"\", totalCount=\"0\", startrow=\"0\", maxrows=\"0\", win_scroll=\"1\"|}"
+    },
+    "cf_paging_sub": {
+        "prefix": "wsub:cf_paging_sub",
+        "body": "${1| , name=\"paging\", page=1, adres=\"home.welcome\", maxrows=20, totalrecords=1, page_type=\"1\", button_type=\"0\", isAjax=false, target=\"\", is_frame=\"0\", is_form=\"0\"|}"
+    },
+    "cf_grid_list_sub": {
+        "prefix": "wsub:cf_grid_list_sub",
+        "body": "${1| , id=\"\", sort=\"1\", class=\"form_list\", margin=\"\"|}"
+    },
+    "cf_flat_list_sub": {
+        "prefix": "wsub:cf_flat_list_sub",
+        "body": "${1| , id=\"\", sort=\"1\", style=\"\", margin=\"\"|}"
+    },
+    "cf_seperator_sub": {
+        "prefix": "wsub:cf_seperator_sub",
+        "body": "${1| , title=\"\", is_closed=\"0\", header=\"#attributes.title#\", no_line=\"0\", onClick_function=\"\", box_seperator=\"0\", close=\"0\", closeForGrid=\"0\", detailPath=\"\", class=\"\"|}"
+    },
+    "cf_tab_sub": {
+        "prefix": "wsub:cf_tab_sub",
+        "body": "${1| , divId=\"\", divLang=\"\", defaultOpen=\"\", slider=\"0\", beforeFunction=\"\", afterFunction=\"\"|}"
+    },
+    "cf_wrk_search_button_sub": {
+        "prefix": "wsub:cf_wrk_search_button_sub",
+        "body": "${1| , search_function=\"control()\", return_function=\"func()\", button_type=\"0\", value=\"\", button_name=\"\", is_excel=\"1\", is_excelbuton=\"1\", is_wordbuton=\"1\", is_pdfbuton=\"1\", is_mailbuton=\"1\", is_printbuton=\"1\", isAjax=\"false\", no_show_process=\"0\", float=\"\"|}"
+    },
+    "cf_box_search_detail_sub": {
+        "prefix": "wsub:cf_box_search_detail_sub",
+        "body": "${1| , float=\"left\", type=\"1\", search_function=\"control()\"|}"
+    },
+    "cf_box_search_sub": {
+        "prefix": "wsub:cf_box_search_sub",
+        "body": "${1| , extra=\"0\", btn_id=\"0\", more=\"1\", plus=\"1\"|}"
+    },
+    "cf_box_elements_sub": {
+        "prefix": "wsub:cf_box_elements_sub",
+        "body": "${1| , fuseaction=\"##\", vertical=\"0\", is_excel=\"1\"|}"
+    },
+    "cf_box_sub": {
+        "prefix": "wsub:cf_box_sub",
+        "body": "${1| , title=\"\", resize=\"\", copllapsable=\"\", export=\"\", hide_table_column=\"\", uidrop=\"\", dragDrop=\"0\", draggable=\"0\", class=\"\", isWidget=\"0\", edit_href=\"\", edit_href_title=\"\", add_href=\"\", add_href_2=\"\", add_href_2_size=\"wwide\", add_href_size=\"list\", add_href_title=\"\", add_href_2_title=\"\", list_href=\"\", list_href_title=\"\", lock_href=\"\", lock_href_title=\"\", unlock_href=\"\", unlock_href_title=\"\", refresh=\"1\", closable=\"0\", type==\"box\", is_blank=\"1\", widget_load=\"\", widget_parameters=\"\", box_page=\"\", collapse_href=\"javascript://\", close_href=\"javascript://\", collapsed=\"0\", body_height=\"\", style=\"box-shadow:0px 1px 15px 1px rgb(39\\, 39\\, 39\\, 0.08)\", header_style=\"\", body_style=\"\", title_style=\"\", info_href=\"\", info_href_id=\"\", info_href_2=\"\", info_href_3=\"\", info_title=\"##\", info_title_2=\"\", info_title_3=\"\", info_title_4=\"\", info_href_5=\"\", info_title_5=\"\", copyrow_href=\"\", copyrow_title=\"\", copyrow_size=\"list\", write_info=\"\", call_function=\"\", call_resize_function=\"\", unload_body=\"0\", design_type=\"0\", left_side=\"0\", scroll=\"1\", print_href=\"\", right_images=\"\", bill_href=\"\", history_href=\"\", history_title=\"\", bill_title=\"\", print_title=\"\", uniquebox_height=\"\", woc_settings=\"{ checkbox_name : ''\\, print_type : ''}\", popup_box=\"0\"|}$0"
+    }
+}
